@@ -10,7 +10,7 @@
 
 ## Latest Commit
 
-待首次提交。
+`2253478` (`chore: add GitHub collaboration workflow`)
 
 ## Current Goal
 
