@@ -2,7 +2,9 @@
 
 ## Repository
 
-未配置 GitHub remote（仓库 owner/name 待提供）。
+`brodyZhao/my-research-project`
+
+Remote：`https://github.com/brodyZhao/my-research-project.git`
 
 ## Current Branch
 
@@ -18,7 +20,7 @@
 
 ## Background
 
-当前目录是空项目目录，没有现有业务源码、Git 仓库或 GitHub remote。本次先建立长期协作规则和交接模板，后续任务可直接在独立的 `codex/<task-name>` 分支上继续。
+当前目录是空项目目录，没有现有业务源码。本次建立长期协作规则和交接模板，并将 `origin` 配置为用户提供的 GitHub 仓库，后续任务可直接在独立的 `codex/<task-name>` 分支上继续。
 
 ## Completed
 
@@ -26,6 +28,7 @@
 - 创建 Codex 与 ChatGPT Web 共用的任务交接文件 `HANDOFF.md`。
 - 约定任务分支命名格式为 `codex/<task-name>`。
 - 约定每次任务结束前更新交接信息、提交 commit，并在 remote 可用时 push。
+- 已配置 `origin` 指向 `brodyZhao/my-research-project`。
 
 ## Files Changed
 
@@ -49,13 +52,14 @@ git branch --show-current
 git remote -v
 git --git-dir=work/git-metadata --work-tree=. diff --check
 python3 -m compileall -q .
+git --git-dir=work/git-metadata --work-tree=. remote -v
 ```
 
-结果：Git 文档校验 PASS；`python3 -m compileall -q .` PASS；当前目录起初不是 Git 仓库；未配置 GitHub remote；没有业务源码或自动化测试可运行。环境没有 `python` 命令，只有 `python3`。
+结果：Git 文档校验 PASS；`python3 -m compileall -q .` PASS；`origin` 已正确显示 fetch/push 地址；没有业务源码或自动化测试可运行。环境没有 `python` 命令，只有 `python3`。
 
 ## Known Issues
 
-- 尚未提供 GitHub 仓库地址，因此无法配置 remote 或 push。
+- 尚未验证 GitHub 凭据和目标仓库的 push 权限。
 - 当前 Codex 沙箱拒绝在项目根目录创建 `.git`，标准 Git 仓库初始化因此受阻；需要在后续环境允许创建 `.git` 后重新执行 `git init`。
 - 当前目录没有业务源码和自动化测试。
 
@@ -67,10 +71,10 @@ python3 -m compileall -q .
 
 ## Questions for ChatGPT
 
-1. 请提供目标 GitHub 仓库的完整地址，以便配置 remote。
+1. 请确认当前 GitHub 账号对目标仓库具有 push 权限。
 2. 请确认后续业务源码应放入当前目录，还是应切换到另一个已有项目目录。
 3. 建立标准 `.git` 目录后，是否需要补充 CI、PR 模板或分支保护规则？
 
 ## Recommended Next Step
 
-在允许根目录创建 `.git` 后，重新初始化仓库并配置明确的 GitHub remote；随后将本分支 push 到 GitHub，再由 ChatGPT Web 读取 `AGENTS.md` 和 `HANDOFF.md` 进行后续规划或代码审查。
+在允许根目录创建标准 `.git` 后，将当前分支 push 到 `origin`；随后由 ChatGPT Web 读取 `AGENTS.md` 和 `HANDOFF.md` 进行后续规划或代码审查。
