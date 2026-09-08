@@ -12,7 +12,7 @@ Remote：`https://github.com/brodyZhao/my-research-project.git`
 
 ## Latest Commit
 
-`2253478` (`chore: add GitHub collaboration workflow`; 后续交接文档更新提交为 `ce08d1c`)
+`73f35df` (`docs: record GitHub authentication blocker`; 已与 `origin/codex/setup-github-workflow` 对齐)
 
 ## Current Goal
 
@@ -29,7 +29,9 @@ Remote：`https://github.com/brodyZhao/my-research-project.git`
 - 约定任务分支命名格式为 `codex/<task-name>`。
 - 约定每次任务结束前更新交接信息、提交 commit，并在 remote 可用时 push。
 - 已配置 `origin` 指向 `brodyZhao/my-research-project`。
-- 已验证 push 请求可以到达 GitHub，但当前环境尚未完成 GitHub CLI/SSH 认证。
+- GitHub HTTPS/PAT 认证已经成功验证。
+- `codex/setup-github-workflow` 已成功 push 到 `origin`。
+- 远程分支已经建立，本地分支正在跟踪 `origin/codex/setup-github-workflow`。
 
 ## Files Changed
 
@@ -51,20 +53,23 @@ Remote：`https://github.com/brodyZhao/my-research-project.git`
 git status
 git branch --show-current
 git remote -v
+git log --oneline -5
+git --git-dir=/Users/zhaomengchen/Documents/Codex/2026-09-08/ban/work/git-metadata --work-tree=/Users/zhaomengchen/Documents/Codex/2026-09-08/ban status --short --branch
+git --git-dir=/Users/zhaomengchen/Documents/Codex/2026-09-08/ban/work/git-metadata --work-tree=/Users/zhaomengchen/Documents/Codex/2026-09-08/ban branch --show-current
+git --git-dir=/Users/zhaomengchen/Documents/Codex/2026-09-08/ban/work/git-metadata --work-tree=/Users/zhaomengchen/Documents/Codex/2026-09-08/ban remote -v
+git --git-dir=/Users/zhaomengchen/Documents/Codex/2026-09-08/ban/work/git-metadata --work-tree=/Users/zhaomengchen/Documents/Codex/2026-09-08/ban log --oneline -5
+git --git-dir=/Users/zhaomengchen/Documents/Codex/2026-09-08/ban/work/git-metadata ls-remote --heads origin codex/setup-github-workflow
 git --git-dir=work/git-metadata --work-tree=. diff --check
 python3 -m compileall -q .
 git --git-dir=work/git-metadata --work-tree=. remote -v
-git --git-dir=work/git-metadata --work-tree=. push -u origin codex/setup-github-workflow
 ```
 
-结果：Git 文档校验 PASS；`python3 -m compileall -q .` PASS；`origin` 已正确显示 fetch/push 地址；push 已连到 GitHub，但因缺少 Username/凭据失败；没有业务源码或自动化测试可运行。环境没有 `python` 命令，只有 `python3`。
+结果：标准 `git` 命令因当前环境无法创建根目录 `.git` 而失败；使用现有 `git-dir/work-tree` 方式检查 PASS；远程分支 `codex/setup-github-workflow` 已返回 commit `73f35df`；`origin` fetch/push 地址正确；`python3 -m compileall -q .` PASS；当前没有业务源码或业务自动化测试。环境没有 `python` 命令，只有 `python3`。
 
 ## Known Issues
 
-- 尚未验证 GitHub 凭据和目标仓库的 push 权限。
-- Codex 运行环境没有 `gh`，也没有默认 SSH 公钥；网页版 ChatGPT 的 GitHub 授权不会自动提供本地 Git 凭据。
+- 当前没有业务源码和业务自动化测试。
 - 当前 Codex 沙箱拒绝在项目根目录创建 `.git`，标准 Git 仓库初始化因此受阻；需要在后续环境允许创建 `.git` 后重新执行 `git init`。
-- 当前目录没有业务源码和自动化测试。
 
 ## Decisions Made
 
@@ -74,10 +79,9 @@ git --git-dir=work/git-metadata --work-tree=. push -u origin codex/setup-github-
 
 ## Questions for ChatGPT
 
-1. 请确认当前 GitHub 账号对目标仓库具有 push 权限。
-2. 请确认后续业务源码应放入当前目录，还是应切换到另一个已有项目目录。
-3. 建立标准 `.git` 目录后，是否需要补充 CI、PR 模板或分支保护规则？
+1. 后续业务源码应继续放入当前目录，还是应切换到另一个已有项目目录？
+2. 是否需要在后续业务代码稳定后补充 CI、PR 模板或分支保护规则？
 
 ## Recommended Next Step
 
-先在 Codex 运行环境完成 GitHub HTTPS/PAT 或 SSH 认证，再将当前分支 push 到 `origin`；随后由 ChatGPT Web 读取 `AGENTS.md` 和 `HANDOFF.md` 进行后续规划或代码审查。
+由 ChatGPT Web 读取已 push 的 `AGENTS.md`、`HANDOFF.md` 和 `codex/setup-github-workflow` 分支，继续进行协作流程检查；后续业务任务从该分支或新的 `codex/<task-name>` 分支开始。
