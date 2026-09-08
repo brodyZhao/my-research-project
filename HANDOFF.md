@@ -29,6 +29,7 @@ Remote：`https://github.com/brodyZhao/my-research-project.git`
 - 约定任务分支命名格式为 `codex/<task-name>`。
 - 约定每次任务结束前更新交接信息、提交 commit，并在 remote 可用时 push。
 - 已配置 `origin` 指向 `brodyZhao/my-research-project`。
+- 已验证 push 请求可以到达 GitHub，但当前环境尚未完成 GitHub CLI/SSH 认证。
 
 ## Files Changed
 
@@ -53,13 +54,15 @@ git remote -v
 git --git-dir=work/git-metadata --work-tree=. diff --check
 python3 -m compileall -q .
 git --git-dir=work/git-metadata --work-tree=. remote -v
+git --git-dir=work/git-metadata --work-tree=. push -u origin codex/setup-github-workflow
 ```
 
-结果：Git 文档校验 PASS；`python3 -m compileall -q .` PASS；`origin` 已正确显示 fetch/push 地址；没有业务源码或自动化测试可运行。环境没有 `python` 命令，只有 `python3`。
+结果：Git 文档校验 PASS；`python3 -m compileall -q .` PASS；`origin` 已正确显示 fetch/push 地址；push 已连到 GitHub，但因缺少 Username/凭据失败；没有业务源码或自动化测试可运行。环境没有 `python` 命令，只有 `python3`。
 
 ## Known Issues
 
 - 尚未验证 GitHub 凭据和目标仓库的 push 权限。
+- Codex 运行环境没有 `gh`，也没有默认 SSH 公钥；网页版 ChatGPT 的 GitHub 授权不会自动提供本地 Git 凭据。
 - 当前 Codex 沙箱拒绝在项目根目录创建 `.git`，标准 Git 仓库初始化因此受阻；需要在后续环境允许创建 `.git` 后重新执行 `git init`。
 - 当前目录没有业务源码和自动化测试。
 
@@ -77,4 +80,4 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 
 ## Recommended Next Step
 
-在允许根目录创建标准 `.git` 后，将当前分支 push 到 `origin`；随后由 ChatGPT Web 读取 `AGENTS.md` 和 `HANDOFF.md` 进行后续规划或代码审查。
+先在 Codex 运行环境完成 GitHub HTTPS/PAT 或 SSH 认证，再将当前分支 push 到 `origin`；随后由 ChatGPT Web 读取 `AGENTS.md` 和 `HANDOFF.md` 进行后续规划或代码审查。
