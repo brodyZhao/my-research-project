@@ -1,0 +1,21 @@
+seed: 20260915
+model_name: Qwen/Qwen3-VL-4B-Instruct
+model_revision: main
+device: auto
+temperature: 0.0
+top_p: 1.0
+max_new_tokens: 256
+num_control_regions: 3
+control_iou_threshold: 0.05
+split:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+prompt_version: forensic_evidence_json_v1
+prompt: >-
+  You are a forensic image analyst. Decide whether the image is real or fake.
+  Return only one valid JSON object with keys prediction, fake_probability,
+  region, trace_type, and explanation. prediction must be real or fake.
+  fake_probability must be a number from 0 to 1. region.type must be bbox and
+  region.coordinates must be pixel coordinates [x1, y1, x2, y2] in the image.
+  Do not use markdown fences. Do not describe evidence outside the JSON object.

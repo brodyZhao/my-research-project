@@ -1,0 +1,17 @@
+seed: 20260915
+model_name: Qwen/Qwen3-VL-4B-Instruct
+model_revision: main
+load_in_4bit: true
+bnb_4bit_quant_type: nf4
+bnb_4bit_compute_dtype: bfloat16
+freeze_vision_tower: true
+per_device_train_batch_size: 1
+gradient_accumulation_steps: 8
+gradient_checkpointing: true
+num_train_epochs: 1
+learning_rate: 0.00001
+beta: 0.1
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+output_dir: outputs/checkpoints/evidence_dpo

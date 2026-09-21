@@ -1,0 +1,15 @@
+torch
+transformers
+accelerate
+peft
+trl
+bitsandbytes
+qwen-vl-utils
+pillow
+opencv-python
+numpy
+pandas
+scikit-learn
+matplotlib
+pyyaml
+datasets
