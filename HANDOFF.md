@@ -3,6 +3,7 @@
 ## 2026-09-28 test-only GPU 续跑与 GT 干预有效性复核（覆盖下方混合 split 结果）
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮开始 HEAD：`6650090`；origin：`https://github.com/brodyZhao/my-research-project.git`。
+- 本阶段实验结果记录提交：`a46d4a8`；最终交接元数据随后提交。
 - 用户授权继续实验。重新连入已重启的远端 RTX 4080 SUPER（32,760 MiB）；新增运行均写入远端独立目录 `results/stage_a3/continuation_20260928/`，没有覆盖旧结果。
 - **校正旧 test 估计**：原 249 对 Gate 0 输入是 228 train + 21 test；旧 242 行干预分数是 223 train + 19 test。下方/先前的 pooled 指标不是 held-out test 结果，不能用于研究主张。
 - 当前 checkpoint fresh Gate 0 只打分 21 test 配对（42 图）：BA=0.9286，real recall=0.8571，fake recall=1.0000，AUROC=0.9932；视频簇 bootstrap 95% CI [0.8571,1.0000]；source-video label-swap Monte Carlo 双侧 p=0.000020。仅能说这个小型 selected pilot slice 通过 Gate 0。
