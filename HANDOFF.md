@@ -1,5 +1,19 @@
 # Project Handoff
 
+## 2026-09-28 test-only GPU 续跑与 GT 干预有效性复核（覆盖下方混合 split 结果）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮开始 HEAD：`6650090`；origin：`https://github.com/brodyZhao/my-research-project.git`。
+- 用户授权继续实验。重新连入已重启的远端 RTX 4080 SUPER（32,760 MiB）；新增运行均写入远端独立目录 `results/stage_a3/continuation_20260928/`，没有覆盖旧结果。
+- **校正旧 test 估计**：原 249 对 Gate 0 输入是 228 train + 21 test；旧 242 行干预分数是 223 train + 19 test。下方/先前的 pooled 指标不是 held-out test 结果，不能用于研究主张。
+- 当前 checkpoint fresh Gate 0 只打分 21 test 配对（42 图）：BA=0.9286，real recall=0.8571，fake recall=1.0000，AUROC=0.9932；视频簇 bootstrap 95% CI [0.8571,1.0000]；source-video label-swap Monte Carlo 双侧 p=0.000020。仅能说这个小型 selected pilot slice 通过 Gate 0。
+- 对原有 test 伪造分数中有 GT 等面积控制的 9 张图重新跑了 95 个变体分数、9 个视频簇，无打分错误。claimed gap=+0.0251（SD 0.2219，video-cluster bootstrap 95% CI [−0.1066,+0.1654]，exact two-sided sign-flip p=0.7852，6 项证据效应 Holm p=1）；GT gap=−0.2571（SD 0.2043，95% CI [−0.3947,−0.1467]，p=0.0039，Holm p=0.0234）。GT restore `Δ` 反向，但不能解释成 detector 不依赖伪迹。
+- 像素审计：242 张旧反事实记录都正确 join 到配对原图，242 个 GT restore 都严格按已有 mask 实现；但在本轮 9 样本里，diff-derived mask 对 `max-channel diff>25` 像素的覆盖中位数仅 66.1%，恢复后仍有 33.9% 阈值差异像素；23 个 GT controls 无一个是 pixel-exact no-op。No-op score=0、whole-pristine Δ=+1.0385 通过分数校准，但 GT 阳性干预不合格。
+- 现阶段结论：核心“解释证据与检测器决策依据错位”仍未决。当前数据只能支持“局部 GT 测量/掩膜有效性失败，不能作忠实性因果判断”；claimed-gap 置信区间跨零，也不能支持选择性敏感或等效不敏感。停止在此数据上扩大样本和 DPO，先换独立 mask/验证恢复算子，并盲审文本 grounding。
+- 本地材料（忽略目录 `work/`）包括最新实验报告 `work/experiment_audit_20260928/README.md`、分析报告/统计附录/图目录、像素审计、test-only 当前 Gate 0 JSON、GT controls 分析 JSON/CSV、原始分数、manifest、复算脚本与 `run_provenance_test_only.json`（含模型权重和输入/输出 hash）。因干预无效，本轮未绘制科学结果图。远端完整新分数也保留在 continuation 子目录。
+- 测试/验证：test-only Gate 0 scorer 42/42 图完成；GT controls scorer 9/9 样本、95 变体分数，0 error；no-op exact；本地审计脚本 `py_compile` 通过；`python3 -B -m unittest discover -s experiments/forensic_preference_pilot/stage_a3/tests -v` 3 项通过；`git diff --check` 通过。未训练模型。
+- 遗留：无 upstream model commit；当前 checkpoint 通过本地 config/index/三个 safetensors shard hash 标识。test 只有 21 对且干预只有 9 个视频簇。后续需全 test split、人工/独立 mask、通过的像素恢复与控制门槛、盲法 claim grounding、冻结 δ 与目标 prevalence，再讨论是否开展偏好优化。
+- 建议下一位审阅者检查 `work/experiment_audit_20260928/analysis-report.md`、`stats-appendix.md` 与 `remote_recovery/effects_gt_controls_test_only.json`，尤其注意旧 pooled split 结论已明确作废。
+
 ## 2026-09-28 FakeVLM × FF++ 远端既有结果复核
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；任务开始时 HEAD：`1b617fc`；origin：`https://github.com/brodyZhao/my-research-project.git`。
