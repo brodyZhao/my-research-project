@@ -1,5 +1,14 @@
 # Project Handoff
 
+## 2026-09-28 框标注与实际操纵区域来源澄清
+
+- 用户追问 claim/伪迹区域能否用方框，以及真实区域如何得知。已在 `outputs/盲审表填写说明.md` 增补标注粒度和 mask 来源说明。
+- 文献核查到 FaceForensics++ 官方数据说明提供各操纵方法的 binary masks；其中 FaceSwap/Face2Face 区域较直观，Deepfakes mask 指 Poisson 融合区域，NeuralTextures mask 是 tracking 区域而未必覆盖实际改变的所有像素。故“操纵区域 mask”不能与“某条解释声称的可见伪迹”混为一谈。
+- 方框可用于初始 claim 粗定位并栅格化为 mask，但作为像素干预会纳入框内非证据像素；确认性分析应尽量收紧边界并用匹配控制。claim 的真实性仍需独立判断；官方 FF++ mask 可替代手画操纵区域，但不验证文本 cue。
+- 对当前实验的关键更正：此前失败的 GT mask 是由 paired image 差分派生，并非已核验的官方 FF++ mask。其小样本覆盖审计不通过；如能通过样本 ID/操纵方法/帧号关联官方 mask，应重新检查官方 mask 并单独验证干预算子。来源：FF++ 官方数据说明 https://github.com/ondyari/FaceForensics/blob/master/dataset/README.md 。
+- 测试：仅文档更新；`git diff --check` 通过。无模型运行。
+- 遗留：当前 FakeClue 目录是否包含官方 mask 未在本地数据盘核验（该数据不在工作站项目目录）；需要按原始序列名、操纵方法、帧号匹配后检查 mask 像素与图像尺寸。
+
 ## 2026-09-28 盲审表说明与精简模板
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；origin：`https://github.com/brodyZhao/my-research-project.git`。
