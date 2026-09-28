@@ -1,5 +1,14 @@
 # Project Handoff
 
+## 2026-09-29 近两周研究组会汇报写入 Obsidian
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；远端：`https://github.com/brodyZhao/my-research-project.git`；交接撰写前最新 commit：`47627659f48190ee5eb22583df1c64928666a97a`，本次交接提交后以仓库 `HEAD` 为准。
+- 用户要求把近两周全部研究进展、八篇相关论文和现有实验结果合成一份可用于 2026-09-30 组会的报告，保存在 Obsidian。已写入 `/Users/zhaomengchen/Documents/Obsidian Vault/文献阅读笔记/2026.9.14-2026.9.30/组会汇报_2026.9.14-2026.9.30.md`，同目录有两张结果图。工作区备份在 `outputs/组会汇报_2026.9.14-2026.9.30.md`，图表与可复核分析在 `work/group_meeting_20260929/`；这两个目录按仓库约定被 Git 忽略，Obsidian 原稿是用户交付件。
+- 汇报组织为：问题定义、两周时间线与工作量、八篇 CCF-A 会议论文、9/19 单类能力门修正、9/27 面积/配对/掩膜诊断、9/28 FF++ held-out 双向替换、9/29 X-AIGD × FakeVLM 主实验、结论边界、下一步和导师问答。另附 90 秒照读版。主实验 208 fake + 109 real，AUROC 0.939、balanced accuracy 0.868；原生解释 169/208 重复泛化措辞、11/208 可自动定位；追问后 18/208 可定位，同类别接地 0/18；最终 856 个变体与 208 个 no-op 复核完整。报告明确局部模糊阳性对照失败、n=8 只是探索性，不能宣布因果错位或进入 DPO/EPO 训练。
+- 主要修改文件：跟踪文件 `HANDOFF.md`；交付文件见上述 Obsidian Markdown 和两张 PNG；本地可复核材料包括 `work/group_meeting_20260929/build_analysis.py`、`analysis-output/analysis-report.md`、`stats-appendix.md`、`figure-catalog.md`、`provenance.json`、两张 PNG/PDF。未修改实验源码；未覆盖用户未跟踪的 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`。
+- 核验：图表构建脚本复核逐样本均值（解释框 n=8 为 −0.0268686；人工伪迹 n=146 为 −0.0082383），两图已目视检查；Obsidian 写入后逐文件字节比较通过；八条论文笔记链接对应的文件 8/8 存在，两个嵌入图片 2/2 存在；`git diff --check` 通过。此任务是已有数据整理与汇报撰写，未追加模型推理或训练，也未运行代码测试。
+- 遗留：真正同类别正确接地的解释样本仍为 0；X-AIGD 局部正向对照没有通过，确认性错位率不可估计。Obsidian 文稿含绝对路径指向本地项目分析资料，跨设备阅读需同步这些资料或改成本地附件。建议 ChatGPT Web 下一步检查组会稿中“已支持/未决/已撤回”的判读边界，并优先讨论可信局部干预和盲审样本的下一轮设计。
+
 ## 2026-09-29 X-AIGD × FakeVLM 解释证据错位新实验
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；远端：`origin`；本阶段结果提交：`c217323`。
