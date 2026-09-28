@@ -1,5 +1,16 @@
 # Project Handoff
 
+## 2026-09-29 X-AIGD × FakeVLM 解释证据错位新实验
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；远端：`origin`（本记录在结果提交前基于 `b57cbbb` 更新）。
+- 按用户授权在 AutoDL vGPU-32GB 上完成新鲜实验：X-AIGD 冻结 revision `92180f32030507ab54a40d6f1b88f39d6cec8178`，FakeVLM checkpoint × 208 fake + 109 SHA-256 核验 real。AUROC `0.939`（95% CI `[0.916,0.960]`），balanced accuracy `0.868`（`[0.832,0.903]`），能力门通过。
+- 直接结果：原生解释 169/208（81.3%）重复同一泛化措辞，只有 11/208 可定位；明确索要证据后 18/208 可定位，独立类别接地为 0/18。最终 v2 干预共 856 条、208 no-op 全部精确复现。可干预解释框 n=8，目标-控制假图偏好差均值 `−0.0269`，UID bootstrap 95% CI `[−0.0495,−0.0085]`，生成器 cluster CI `[−0.0543,−0.0085]`；7/8 方向与依赖解释区域相反。人类伪迹参照 n=146，主效应均值 `−0.0082`，UID CI `[−0.0232,+0.0057]`，没有通过正向特异效应门。
+- 判决：解释模板化/不可定位的较窄问题明确存在；强因果命题“已证明检测器依赖解释之外的另一组可识别证据”未确证。不得把 null 当成普遍不存在；也不建议本结果后直接训练 DPO/EPO。严格 ICLR/NeurIPS 主会尺度下，当前为单检测器 × 单基准 pilot，不能支持普遍性论文结论。
+- QA 修正：v1 的词类子串规则把 `texture` 误判为 `text`，产生一个错误类别区域。已修复并完全重建/重评分 v2；v2 排除 4 个错误条目，v1/v2 856 个有效共同分数逐项相同。该误标组未进入最终分析。
+- 交付报告：`outputs/新一轮解释与决策证据错位验证_预注册方案与结果.md`。全部脚本、冻结数据、manifest、逐样本原始输出、v1/v2 评分、日志和 v2 变体图 tar/解包副本均保存在 `work/x_aigd_decisive_study/`（git 忽略，不提交数据）。主要脚本：`build_blur_variants.py`、`score_interventions.py`、`analyze_interventions.py`。
+- 测试：三份关键 Python 脚本 `py_compile` 通过；类别回归断言通过；最终 v2 manifest/scores `856/856` 唯一键一致；v2 SHA-256 与远端归档一致；所有 856 个本地输入图存在；v1/v2 有效评分逐项一致；`git diff --check` 通过。模型推理完整在远端完成，未训练偏好模型。
+- 遗留：因 0 个解释类别与标注类别接地样本，无法估计预注册的确认性错位率；8 个局部解释框仅探索性；X-AIGD 区域干预本身没有稳定正向对照响应。下一步应先改进/验证正向干预操作并扩展独立检测器与数据来源，再考虑 Evidence Perturbation + Preference Optimization。建议 ChatGPT Web 审阅最终报告的因果判决、统计区间与类别错标修正，再决定是否开新一轮跨模型复现。
+
 ## 2026-09-28 无盲审表的自动化候选区域依赖结果
 
 - 用户明确要求当前先直接验证检测器是否依赖解释所述证据，不先填人工盲审表。核查发现此前已完成自动 GroundingDINO 整段解释定位 + 同源双向 patch-swap pilot，因此复用其 held-out test 分数和统计，不另启动不改变测量定义的重复推理。远端当下 SSH/nvidia-smi 只读连通，实验产物可访问。
