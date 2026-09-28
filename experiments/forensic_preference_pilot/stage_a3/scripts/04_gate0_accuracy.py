@@ -14,20 +14,20 @@
 三路 argmax 只作附注报告，不用于 Gate 判定。
 
 输入：baseline 输出 jsonl（FakeVLM 或 Qwen3-VL 任一格式）
-输出：Gate 0 判定 JSON，含 bootstrap 95% CI 与二项检验 p 值。
+输出：Gate 0 判定 JSON，含按类别分层的 bootstrap 95% CI 与置换检验 p 值。
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import math
 from collections import Counter
 from pathlib import Path
 
 import numpy as np
 
-POSITIVE_LABEL = 1
+FAKE_LABEL = 1
+REAL_LABEL = 0
 
 
 def read_jsonl(path: Path) -> list[dict]:
@@ -59,77 +59,185 @@ def extract_decision(row: dict) -> tuple[bool, float, str, str | None]:
             log_odds = float(likelihoods["fake"]) - float(likelihoods["real"])
             return log_odds > 0, log_odds, "qwen3vl_two_way", forced.get("verdict_argmax")
         if forced.get("p_fake") is not None:
-            log_odds = math.log(max(float(forced["p_fake"]), 1e-12) / max(1 - float(forced["p_fake"]), 1e-12))
+            p_fake = min(max(float(forced["p_fake"]), 1e-12), 1 - 1e-12)
+            log_odds = float(np.log(p_fake / (1 - p_fake)))
             return log_odds > 0, log_odds, "p_fake_two_way", forced.get("verdict_argmax")
 
-    raise ValueError(f"{row.get('sample_id')} 无法提取决策：既无 forced_verdict_mean 也无 forced_score")
+    # Stage-A scored variant records wrap the original forced-choice score.
+    original = (row.get("scores") or {}).get("original")
+    if isinstance(original, dict):
+        if original.get("log_odds_fake_real") is not None:
+            log_odds = float(original["log_odds_fake_real"])
+            return log_odds > 0, log_odds, "scores_original_log_odds", None
+        likelihoods = original.get("log_likelihoods") or {}
+        if "fake" in likelihoods and "real" in likelihoods:
+            log_odds = float(likelihoods["fake"]) - float(likelihoods["real"])
+            return log_odds > 0, log_odds, "scores_original_log_likelihoods", None
 
-
-def bootstrap_ci(values: np.ndarray, resamples: int, seed: int) -> tuple[float, float]:
-    rng = np.random.default_rng(seed)
-    means = np.asarray(
-        [rng.choice(values, size=len(values), replace=True).mean() for _ in range(resamples)]
+    raise ValueError(
+        f"{row.get('sample_id')} 无法提取决策：需要 forced_verdict_mean、forced_score "
+        "或 scores.original 的真假 log-odds"
     )
+
+
+def balanced_accuracy(labels: np.ndarray, predictions: np.ndarray) -> float:
+    real = labels == REAL_LABEL
+    fake = labels == FAKE_LABEL
+    if not real.any() or not fake.any():
+        raise ValueError("balanced accuracy 需要 real(label=0) 和 fake(label=1) 两类样本")
+    real_recall = float((predictions[real] == REAL_LABEL).mean())
+    fake_recall = float((predictions[fake] == FAKE_LABEL).mean())
+    return (real_recall + fake_recall) / 2
+
+
+def roc_auc(labels: np.ndarray, scores: np.ndarray) -> float:
+    """Mann–Whitney AUC with average ranks for ties; higher score means more fake."""
+    positives = labels == FAKE_LABEL
+    negatives = labels == REAL_LABEL
+    if not positives.any() or not negatives.any():
+        raise ValueError("AUROC 需要 real(label=0) 和 fake(label=1) 两类样本")
+    order = np.argsort(scores, kind="mergesort")
+    sorted_scores = scores[order]
+    ranks = np.empty(len(scores), dtype=float)
+    start = 0
+    while start < len(scores):
+        end = start + 1
+        while end < len(scores) and sorted_scores[end] == sorted_scores[start]:
+            end += 1
+        ranks[order[start:end]] = (start + 1 + end) / 2
+        start = end
+    n_pos = int(positives.sum())
+    n_neg = int(negatives.sum())
+    rank_sum = float(ranks[positives].sum())
+    return (rank_sum - n_pos * (n_pos + 1) / 2) / (n_pos * n_neg)
+
+
+def bootstrap_balanced_accuracy_ci(
+    labels: np.ndarray, predictions: np.ndarray, resamples: int, seed: int
+) -> tuple[float, float]:
+    """Stratified image bootstrap, retaining each class's observed sample count."""
+    real_idx = np.flatnonzero(labels == REAL_LABEL)
+    fake_idx = np.flatnonzero(labels == FAKE_LABEL)
+    if not len(real_idx) or not len(fake_idx):
+        raise ValueError("balanced accuracy bootstrap 需要 real 与 fake 两类样本")
+    rng = np.random.default_rng(seed)
+    real_draws = rng.choice(real_idx, size=(resamples, len(real_idx)), replace=True)
+    fake_draws = rng.choice(fake_idx, size=(resamples, len(fake_idx)), replace=True)
+    real_recalls = (predictions[real_draws] == REAL_LABEL).mean(axis=1)
+    fake_recalls = (predictions[fake_draws] == FAKE_LABEL).mean(axis=1)
+    means = (real_recalls + fake_recalls) / 2
     return float(np.quantile(means, 0.025)), float(np.quantile(means, 0.975))
 
 
-def binom_two_sided_p(successes: int, trials: int, p: float = 0.5) -> float:
-    if trials == 0:
-        return float("nan")
+def permutation_p_balanced_accuracy(
+    labels: np.ndarray, predictions: np.ndarray, permutations: int, seed: int
+) -> float:
+    """Upper-tail randomization test: observed balanced accuracy vs shuffled decisions."""
+    observed = balanced_accuracy(labels, predictions)
+    rng = np.random.default_rng(seed)
+    extreme = 0
+    for _ in range(permutations):
+        if balanced_accuracy(labels, rng.permutation(predictions)) >= observed - 1e-15:
+            extreme += 1
+    return float((extreme + 1) / (permutations + 1))
 
-    def pmf(k: int) -> float:
-        return math.comb(trials, k) * (p**k) * ((1 - p) ** (trials - k))
 
-    observed = pmf(successes)
-    total = sum(pmf(k) for k in range(trials + 1) if pmf(k) <= observed + 1e-12)
-    return float(min(1.0, total))
+def classification_metrics(labels: np.ndarray, predictions: np.ndarray, scores: np.ndarray) -> dict:
+    counts = Counter(int(label) for label in labels)
+    class_recalls = {}
+    for label, name in ((REAL_LABEL, "real_recall"), (FAKE_LABEL, "fake_recall")):
+        selected = labels == label
+        if selected.any():
+            class_recalls[name] = float((predictions[selected] == label).mean())
+    if set(counts) != {REAL_LABEL, FAKE_LABEL}:
+        present = sorted(counts)
+        return {
+            "status": "BLOCKED_SINGLE_CLASS",
+            "n_by_label": {str(key): value for key, value in counts.items()},
+            "accuracy": None,
+            "balanced_accuracy": None,
+            "auroc": None,
+            "available_class_recall": class_recalls,
+            "reason": "必须同时有 label=0 real 与 label=1 fake；单类 recall 不能验证真假判别能力。",
+            "always_predict_present_class_baseline_recall": 1.0 if present else None,
+        }
+    real = labels == REAL_LABEL
+    fake = labels == FAKE_LABEL
+    confusion = {
+        "true_real_pred_real": int(np.sum(real & (predictions == REAL_LABEL))),
+        "true_real_pred_fake": int(np.sum(real & (predictions == FAKE_LABEL))),
+        "true_fake_pred_real": int(np.sum(fake & (predictions == REAL_LABEL))),
+        "true_fake_pred_fake": int(np.sum(fake & (predictions == FAKE_LABEL))),
+    }
+    return {
+        "status": "COMPUTABLE",
+        "n_by_label": {str(key): value for key, value in counts.items()},
+        "confusion_matrix": confusion,
+        "accuracy": float((predictions == labels).mean()),
+        "balanced_accuracy": balanced_accuracy(labels, predictions),
+        "real_recall": class_recalls["real_recall"],
+        "fake_recall": class_recalls["fake_recall"],
+        "auroc": roc_auc(labels, scores),
+    }
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Gate 0: detection accuracy must beat chance")
+    parser = argparse.ArgumentParser(description="Gate 0: two-class balanced detection ability")
     parser.add_argument("--input", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--label", default=None, help="本次判定的标签，便于归档")
     parser.add_argument("--resamples", type=int, default=2000)
+    parser.add_argument("--permutations", type=int, default=5000)
     parser.add_argument("--seed", type=int, default=20260921)
-    parser.add_argument("--min-accuracy", type=float, default=0.65)
+    parser.add_argument("--min-balanced-accuracy", "--min-accuracy", dest="min_balanced_accuracy", type=float, default=0.65)
     args = parser.parse_args()
 
     rows = read_jsonl(Path(args.input))
     if not rows:
         raise ValueError("输入为空")
 
-    positives = [row for row in rows if int(row.get("label", POSITIVE_LABEL)) == POSITIVE_LABEL]
-    if not positives:
-        raise ValueError("没有正类（label==1）样本，无法计算准确率")
-
-    decisions, log_odds_values, sources, argmaxes = [], [], [], []
-    for row in positives:
+    labels, decisions, log_odds_values, sources, argmaxes = [], [], [], [], []
+    for row in rows:
+        if "label" not in row or row["label"] is None:
+            raise ValueError(f"{row.get('sample_id')} 缺少二分类 label；不能默认填成正类")
+        label_value = int(row["label"])
+        if label_value not in (REAL_LABEL, FAKE_LABEL):
+            raise ValueError(f"{row.get('sample_id')} 的 label={label_value}；只接受 0=real, 1=fake")
         is_fake, log_odds, source, argmax = extract_decision(row)
-        decisions.append(1.0 if is_fake else 0.0)
+        labels.append(label_value)
+        decisions.append(FAKE_LABEL if is_fake else REAL_LABEL)
         log_odds_values.append(log_odds)
         sources.append(source)
         argmaxes.append(argmax)
 
+    labels = np.asarray(labels, dtype=int)
     decisions = np.asarray(decisions)
     log_odds_arr = np.asarray(log_odds_values)
-    accuracy = float(decisions.mean())
-    ci = bootstrap_ci(decisions, args.resamples, args.seed)
-    p_value = binom_two_sided_p(int(decisions.sum()), len(decisions))
+    metrics = classification_metrics(labels, decisions, log_odds_arr)
+    if metrics["status"] == "COMPUTABLE":
+        ci = bootstrap_balanced_accuracy_ci(labels, decisions, args.resamples, args.seed)
+        p_value = permutation_p_balanced_accuracy(labels, decisions, args.permutations, args.seed + 1)
+        passed = bool(
+            ci[0] > 0.5
+            and metrics["balanced_accuracy"] >= args.min_balanced_accuracy
+            and p_value < 0.05
+        )
+    else:
+        ci, p_value, passed = None, None, False
 
-    passed = bool(ci[0] > 0.5 and accuracy >= args.min_accuracy)
     result = {
-        "gate": "Gate 0 检测准确率",
+        "gate": "Gate 0 二分类检测能力",
         "label": args.label,
         "input": str(args.input),
-        "n_positive": len(positives),
-        "decision_rule": "两路判据：log_odds(fake vs real) > 0，与 FakeVLM 的 forced_verdict_mean 等价",
+        "n": len(rows),
+        "label_mapping": {"0": "real", "1": "fake"},
+        "decision_rule": "fake iff log_odds(fake vs real) > 0",
         "decision_source": dict(Counter(sources)),
-        "two_way": {
-            "accuracy": accuracy,
-            "bootstrap_ci95": [ci[0], ci[1]],
-            "binomial_p_vs_chance": p_value,
-            "n_predicted_fake": int(decisions.sum()),
+        "metrics": metrics,
+        "balanced_accuracy_inference": {
+            "stratified_bootstrap_ci95": [ci[0], ci[1]] if ci else None,
+            "permutation_p_vs_random_association": p_value,
+            "permutations": args.permutations if p_value is not None else None,
         },
         "log_odds": {
             "mean": float(log_odds_arr.mean()),
@@ -140,16 +248,23 @@ def main() -> None:
         },
         "three_way_argmax_note": dict(Counter(a for a in argmaxes if a)),
         "criteria": {
-            "ci_lower_above_chance": bool(ci[0] > 0.5),
-            "min_accuracy": args.min_accuracy,
-            "meets_min_accuracy": bool(accuracy >= args.min_accuracy),
+            "ci_lower_above_chance": bool(ci[0] > 0.5) if ci else False,
+            "min_balanced_accuracy": args.min_balanced_accuracy,
+            "meets_min_balanced_accuracy": bool(
+                metrics.get("balanced_accuracy") is not None
+                and metrics["balanced_accuracy"] >= args.min_balanced_accuracy
+            ),
+            "permutation_p_below_0_05": bool(p_value is not None and p_value < 0.05),
         },
-        "verdict": "PASS" if passed else "FAIL",
+        "verdict": ("PASS" if passed else "FAIL") if metrics["status"] == "COMPUTABLE" else "BLOCKED",
         "interpretation": (
-            "模型在该数据集上有实际判别力，忠实性分析有意义"
+            "模型在该数据集上有可测二分类判别力，忠实性分析准入"
             if passed
-            else "模型在该数据集上接近随机或无实际判别力 —— 忠实性分析在此组合上无意义，"
-            "不得把 '不依赖证据' 解释为发现（那是平凡结论）"
+            else (
+                "输入只有一个类别，不能估计真假二分类能力；补入真实类样本后再评估"
+                if metrics["status"] != "COMPUTABLE"
+                else "模型未通过预设 balanced accuracy 门槛；不得把无效检测器的零效应解释为不依赖证据"
+            )
         ),
     }
 
