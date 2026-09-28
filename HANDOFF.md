@@ -1,5 +1,17 @@
 # Project Handoff
 
+## 2026-09-28 远端 vGPU 实例连通性复核
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮开始时远端同步 HEAD：`ce2448a`；origin：`https://github.com/brodyZhao/my-research-project.git`。
+- 用户要求连接已启动的远端 GPU 主机。本机既有 AutoDL SSH alias 可用，已成功连接；出于凭据卫生，交接记录不保存主机地址、用户指定端口或私钥信息。
+- 只读检查确认 GPU 是 NVIDIA GeForce RTX 4080 SUPER，32760 MiB 显存（检查时空闲 32229 MiB），Driver 580.105.08 / CUDA 13.0；数据盘 `/root/autodl-tmp` 为 100G，余 59G；系统盘 30G，余 17G。
+- 远端已存在约 42G 的 `/root/autodl-tmp/faithfulness_pilot`：data 约 4.9G、models 约 37G，含 FakeVLM、Qwen2.5-VL-7B 和 SDXL inpainting 等。当前本地协议指定 Qwen3-VL-8B；已检查的 `models/` 目录未见该模型，不能用 Qwen2.5-VL 静默替换。
+- 主要修改：`work/experiment_audit_20260928/README.md` 增加远端实况与下一步容量判断；该文件按项目约定留在本地忽略目录。此处交接保留硬件/磁盘摘要，不记录远端地址或端口。
+- 结论：现有 100GB 数据盘的 59GB 可用空间预计可容纳 Qwen3 权重和目标批次产物，无需马上扩盘；条件是复用现有 SDXL/数据、HF cache 指向 `/root/autodl-tmp` 并避免重复下载。传输前要核对远端 data manifest 与冻结协议。
+- 测试：SSH 连通成功；`nvidia-smi`、`df -h`、`du -sh` 均成功。未修改远端内容、未拷贝文件、未运行模型推理；`git diff --check` 将在本地交接提交前执行。
+- 遗留：运行前先检查远端数据 README/manifest 是否与当前协议一致，检查 HF cache 路径，再对 Qwen3 和 SDXL 各运行单图 smoke test；仅在容量实测不足时扩盘。
+- 建议下一步：确认目标实验使用 Qwen3-VL-8B，并从本地冻结协议的候选 manifest 核对远端现存样本；随后只同步缺失文件，避免复制已有 4.9G 数据或覆盖远端旧实验产物。
+
 ## 2026-09-28 vGPU-32GB 与数据盘容量评估
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮容量评估提交：`c3760f9`（`docs: estimate vGPU experiment storage`）；origin：`https://github.com/brodyZhao/my-research-project.git`。
