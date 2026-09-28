@@ -2,13 +2,13 @@
 
 ## 2026-09-28 vGPU-32GB 与数据盘容量评估
 
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮开始时 HEAD：`adae80b`；origin：`https://github.com/brodyZhao/my-research-project.git`。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮容量评估提交：`c3760f9`（`docs: estimate vGPU experiment storage`）；origin：`https://github.com/brodyZhao/my-research-project.git`。
 - 用户目标：判断 AutoDL `vGPU-32GB` 能否承载当前图像鉴伪证据验证，并估算要租多大的数据盘。
 - 结论：该卡可作为当前 Qwen3-VL-8B 单图推理 + SDXL fp16 单图反事实重合成的候选，但要先用 `nvidia-smi`/PyTorch 查明实例实际 GPU 与显存，并做单图 smoke test；不能假定等同或快于 RTX 4090，也未评估为偏好优化/全量微调提供算力。
 - 容量建议：当前单模型验证建议普通容器数据盘 100GB，80GB 是限制缓存/数据后的最低规划；若同盘同时留 FakeVLM、Qwen、SDXL 或重复 checkpoint/cache，建议 120GB。普通容器的系统盘与数据盘分开，Pro 仅有系统盘，需分别按 100/120GB 扩容系统盘。
 - 主要修改：`work/experiment_audit_20260928/README.md` 增加 GPU 适用边界、盘容量组成、AutoDL 与 Hugging Face 官方来源及租机前 smoke test 门槛。本 README 在 `.gitignore` 的 `work/` 目录，按项目约定留在本地，不进入 Git；本交接文件跟踪并推送。
 - 依据：AutoDL 文档将 `4080(S)-32G` 映射至 `v-32g-p`；Qwen3-VL-8B 官方仓库约 17.5GB；SDXL inpainting 仓库全量约 20.8GB，项目脚本使用 fp16 variant，所以按全量空间保守预算。数据/输出大小基于 A3/A4 项目协议，尚未在 vGPU 实例实测。
-- 测试：本轮为规格与磁盘预算核对，无可运行的 CUDA 测试；`git diff --check` 将在提交前执行。未复制数据、未创建实例、未进行 GPU 推理。
+- 测试：`git diff --check` 通过。本轮为规格与磁盘预算核对，无可运行的 CUDA 测试；未复制数据、未创建实例、未进行 GPU 推理。
 - 遗留：租到机器后先检查 `df -h /root/autodl-tmp` 与根分区，把 Hugging Face cache 指向数据盘，再运行 1 张 Qwen 图和 1 张 SDXL 重合成 smoke test，记录峰值显存与耗时后再决定批量运行。
 - 建议下一步：用户可按目标工作量选择 100GB（Qwen + SDXL 现象验证）或 120GB（再加 FakeVLM 对照）容量；拷贝时仅带协议所需子集，避免上传未用完整压缩数据。
 
