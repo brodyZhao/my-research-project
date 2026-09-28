@@ -1,5 +1,15 @@
 # Project Handoff
 
+## 2026-09-28 盲审表说明与精简模板
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；origin：`https://github.com/brodyZhao/my-research-project.git`。
+- 用户询问解释接地盲审表的填写内容、是否可跳过及其作用。已新增 `outputs/盲审表填写说明.md`，解释盲审目的、逐列填写方式、自动派生字段、跳过后的结论边界与当前实验中的 mask 质量风险。
+- 新增 A/B 两份各 19 行独立标注模板：`work/experiment_audit_20260928/human_claim_review_simple_rater_A.csv` 和 `..._B.csv`。模板保留样本元数据和解释文本，只要求标注者挑选一条具体 claim、评估真实性/可定位性、按条件标 mask、给置信度和备注。旧模板未覆盖。
+- 验证：Python CSV 读取并确认 A/B 两份各 19 行、预填只读字段一致、人工标注字段为空；`git diff --check` 通过。无模型训练或推理。
+- 遗留：远端图像路径必须对标注者可访问；实际伪迹 mask 不能默认用已审计有覆盖缺陷的 diff-derived mask 代替。人工盲审应在查看干预分数之前完成。
+- 建议下一步：先确认两位标注者可读取图像，按说明各自完成 19 行；然后汇总一致性和可定位率，再决定是否重做冻结后的 test-only 区域干预。
+
+
 ## 2026-09-28 同源 patch-swap 必要性/充分性 pilot
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本阶段开始 HEAD：`482fd31`；origin：`https://github.com/brodyZhao/my-research-project.git`。
