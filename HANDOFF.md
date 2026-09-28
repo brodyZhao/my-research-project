@@ -1,5 +1,19 @@
 # Project Handoff
 
+## 2026-09-28 FakeVLM × FF++ 远端既有结果复核
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；任务开始时 HEAD：`1b617fc`；origin：`https://github.com/brodyZhao/my-research-project.git`。
+- 用户授权继续先验证“解释证据是否真正影响鉴伪决策”的实验。此次是对远端**既有预测和干预分数**的本地重分析；没有启动新的 GPU 推理、没有修改远端文件、没有训练。
+- 真假识别 Gate 0 通过：FakeClue-FF++ 有 249 个 pristine/forged 同源配对、498 张图、196 个视频簇；FakeVLM balanced accuracy 0.9096，real/fake recall 分别 0.8233/0.9960，AUROC 0.9980，视频簇 bootstrap 95% CI [0.8846, 0.9335]。结论限于此检查点与样本的真假区分能力，不代表解释接地或忠实。
+- 干预复核：242 个有效样本、191 个视频簇。claimed 恢复效应均值 +0.0695（video-cluster bootstrap 95% CI [+0.0504,+0.0888]），面积较小的 claimed controls +0.0261（[+0.0158,+0.0368]），claimed gap +0.0434（[+0.0216,+0.0651]，video-cluster sign-flip Monte Carlo p=0.00014，未对该次聚类检验另做多重比较校正）。GT 恢复效应 −0.1354（[−0.1685,−0.1016]），与预期反向；whole-pristine +1.2415、no-op=0。当前文件没有 GT 等面积控制。
+- 发现旧 `09_measure_effects.py` 会在 GT 等面积控制缺失时退回 claimed 控制，因此旧 JSON 的 `gt_gap` 不是有效 GT 阳性对照检验，相关解释应撤回。远端 Gate 7 还报告文本高度模板化（约 99.6% 假图解释提及 mouth），目前没有双人盲审定位证据；模型 checkpoint commit 字段缺失。
+- 本阶段结论：核心“解释与检测器真实决策依据错位”仍未决。正 claimed-gap 仅是恢复算子下的敏感性，不等于解释内容事实正确或模型依赖伪迹；GT 阳性对照失败，因此不能声称支持或推翻核心现象，也不进入 DPO。
+- 主要新增/更新：本地忽略目录报告 `work/experiment_audit_20260928/README.md`；聚类复核结果 `work/experiment_audit_20260928/remote_recovery/effects_ffpp_fakevlm_cluster_rechecked.json`；本交接记录。原始复核数据和脚本仍留在本地 `work/`，不提交 Git。
+- 远端连接当前不可用：SSH alias 被关闭；按此前端口直连收到 public-key/password authentication failure。没有猜测或写入凭据。之前检查时实例为 RTX 4080 SUPER 32GB、数据盘 100GB。
+- 测试：`python3 -B -m unittest discover -s experiments/forensic_preference_pilot/stage_a3/tests -v`，3 项通过；`git diff --check` 通过；视频簇干预重分析脚本成功，输出 242/242 有效样本及 191 个视频簇；Gate 0 JSON 已核验 249 对及配对身份检查。未运行新的推理/训练。
+- 遗留/下一步：恢复远端访问后，检查逐像素 GT 恢复图与 pristine/forged 差分 mask 的一致性；补打分现有 `restore_gtcontrol_1..3`，若没有则从已验证配对重新派生。先过像素恢复/no-op/面积控制及盲法双人文本—区域核验，再判断现象；不能基于当前统计直接开始偏好优化。
+- 建议下一位审阅者重点看 `work/experiment_audit_20260928/README.md` 的“远端 FakeVLM × FF++ 结果复核”与上述有效性边界，并确认在新建/复用的唯一输出目录运行重打分，保留原始旧结果。
+
 ## 2026-09-28 远端 vGPU 实例连通性复核
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮开始时远端同步 HEAD：`ce2448a`；origin：`https://github.com/brodyZhao/my-research-project.git`。
