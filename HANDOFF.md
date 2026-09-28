@@ -1,5 +1,17 @@
 # Project Handoff
 
+## 2026-09-28 同源 patch-swap 必要性/充分性 pilot
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本阶段开始 HEAD：`482fd31`；origin：`https://github.com/brodyZhao/my-research-project.git`。
+- 用户要求寻找能判断检测器是否依赖其解释证据的方法。已重新连入远端现有 GPU 环境，只使用此前已准备的 FakeClue-FF++ test 图、FakeVLM checkpoint 和局部 mask，不覆盖旧结果。
+- 方法：对同一 source-video 的 forged/pristine 配对作双向同源 patch swap。目标/控制区都执行 forged→pristine 恢复（必要性）与 pristine→forged 移植（充分性）；分数为固定候选的 `log P(fake)-log P(real)`。目标区来自已有 GroundingDINO claim box；每样本三个 DINO/外观匹配控制区。先前 fresh Gate0 在 21 对 test 图（42 张）通过；本轮 19 张 test forged 图有完整控制，2 张因无控制按 mask 可用性规则排除。评分 19×11=209 个版本，0 error，19 个独立视频簇。
+- 结果：必要性 target-control gap `G_N` mean=+0.0568，SD=.1650，median=.0418，cluster bootstrap 95% CI [−.0156,+.1295]，exact two-sided sign-flip p=.1507，双主终点 Holm p=.3013。充分性 gap `G_S` mean=+.0291，SD=.2975，median=.0714，95% CI [−.1015,+.1580]，p=.6687，Holm p=.6687。target patch insertion 的绝对效应 +.3065、control insertion +.2773，显示局部移植普遍抬高 fake 分数，target-specific 差值不确定。no-op 精确为 0；whole-pair fake/pristine gap mean=+1.1635，95% CI [.9971,1.3242]。
+- 判读：该设计比仅看绝对删除效应更直接，但现有框是整段 explanation 的自动 grounding、并未由人盲审；最小有意义效应 `δ` 也尚未冻结。当前 pilot 不支持也不反驳“检测器不依赖解释证据”；非显著不能当等效/无依赖结论。充分性 target/control 都上升提醒编辑边界有非特异效应，target-control 比较和人审质量门必须保留。
+- 主要产物：`outputs/解释证据与检测器决策依赖的因果验证方案.md`；忽略目录 `work/experiment_audit_20260928/` 更新了 README、`build_source_swap_pilot_manifest.py`、`analyze_source_swap_pilot.py`、`human_claim_review_round1.csv`、本地原始分数、分析 JSON/CSV。远端新增目录 `results/stage_a3/continuation_20260928/source_swap_pilot_20260928/`。
+- 测试/验证：remote manifest builder 成功，test candidates=21，manifest=19，排除=2；FakeVLM score variants 19/19 成功；审计脚本 `py_compile` 通过；实验目录 10 JSON、16 JSONL 均解析通过；source-swap 结果 CSV 与盲审模板各 19 行；`python3 -B -m unittest discover -s experiments/forensic_preference_pilot/stage_a3/tests -v` 3 项通过；`git diff --check` 通过。
+- 遗留/下一步：先由两名标注者对 19 个原始解释盲审 claim 正确性、可定位性和区域，并独立画 claim/actual-artifact mask；查看分数前冻结 annotation。随后基于冻结 δ 和编辑噪声做功效分析，扩到完整 test 及更多伪造方法；只有 Gate、pair 对齐、盲审和阳性控制全部通过后才形成现象结论。此阶段不进入 DPO。
+- 建议审阅 `outputs/解释证据与检测器决策依赖的因果验证方案.md` 的判读矩阵、双向公式和本轮区间；优先检查 `remote_recovery/effects_source_swap_pilot.json` 及 19 样本盲审表。
+
 ## 2026-09-28 test-only GPU 续跑与 GT 干预有效性复核（覆盖下方混合 split 结果）
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮开始 HEAD：`6650090`；origin：`https://github.com/brodyZhao/my-research-project.git`。
