@@ -273,3 +273,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 ## Recommended Next Step
 
 由 ChatGPT Web 读取已 push 的 `AGENTS.md`、`HANDOFF.md` 和 `codex/setup-github-workflow` 分支，继续进行协作流程检查；后续业务任务从该分支或新的 `codex/<task-name>` 分支开始。
+# 2026-09-29：可定位解释模型复验准备
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本记录修改前最新 commit：`59756c8`。当前无本地 `main/master`，继续沿用此前同一研究任务分支。
+- 用户纠正上一轮 FakeVLM 实验缺少局部证据的问题，要求换用同时输出真假、定位和文字的 A 会检测器。已核查 FakeXplain (ICLR 2026)、LEGION (ICCV 2025)、SIDA (CVPR 2025)、FakeShield (ICLR 2025)。FakeXplain 指向的官方仓库当前为空；LEGION 作者说明最终检测权重遗失；故选公开 7B 解释版权重和区域真值的 SIDA 首先复验。
+- 本地交付：`outputs/可定位解释模型复验_模型审计与SIDA数据核验_2026-09-29.md`；本地代码和原始数据审计：`work/sida_probe/prepare_assets.py`、`audit_dataset.py`、`dataset_audit.json`、`score_adapter.py`、`perturb.py`、`smoke_sida.py`。`outputs/` 与 `work/` 依项目规则被 Git 忽略，不提交模型、数据或本地临时产物。未改动用户已有未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`。
+- 远程主机：`root@connect.nmb1.seetacloud.com:27002`；代码 `/root/autodl-tmp/SIDA`，验证集和下载中的模型 `/root/autodl-tmp/sida_probe`。源码 revision `6b1c3aa9097a79849ea7aae95601854763014a9d`；模型 revision `282cffe609bea1917d9d63138a4989aac7314e2a`；数据 revision `fa7a00ee2d68579630bb81d1bdcae7d3ff9c7a81`。
+- 实际数据核验：解释数据 validation 300 张，三类各 100；文字均非空；100 张局部篡改均有非零真值掩码。14 张局部篡改图像与掩码尺寸不一致；剔除这些并要求掩码面积 1%—30% 后有 49 张候选。原始统计在 `work/sida_probe/dataset_audit.json`。这只是数据审计，不是模型实验结论。
+- 测试：`python3 -m compileall -q work/sida_probe` 通过；`score_adapter` 的合成张量 smoke 通过；`perturb` 的等面积、非重叠、掩码外像素不变 smoke 通过。SIDA GPU smoke **未运行**。
+- 当前阻塞：SSH 可达，但远程无 `/dev/nvidia*`，`torch.cuda.is_available() == False`，设备数 0；已向用户请求在云平台恢复 GPU。7B 权重下载和隔离 Python 环境准备尚在进行；正式推理需完成兼容依赖安装，不能宣称已验证现象。
+- 建议 ChatGPT Web 下一步检查：先确认 GPU 及 7B 权重、独立环境可用，运行 `work/sida_probe/smoke_sida.py`，核验 logits、预测掩码和文字由同一模型产生；随后在 49 张严格候选和完整 300 张基线中执行报告里的配对反事实设计。优先检查真正 grounded 的原图判对样本数及真实掩码正对照是否有效，再判断现象。
+
+---
