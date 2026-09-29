@@ -1,5 +1,13 @@
 # Project Handoff
 
+## 2026-09-29 X-AIGD 结果与鉴伪解释基准选题澄清
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本次答疑开始时最新 commit：`911797610aaba77ce4de7dbc4823961733f82c6f`，本段提交后以仓库 `HEAD` 为准。
+- 用户询问 X-AIGD 是否为真假判断与伪迹定位基准、是否可扩展为“真假判断＋伪迹定位＋文字解释”的可靠评测基准，以及 X-AIGD 论文主要结果。本次核对 `work/x_aigd/paper.pdf` / `paper.txt`、现有逐篇笔记和 ICLR 官方论文页；未修改实验源码或 Obsidian 组会稿。
+- 源论文事实：X-AIGD 定义 AJ 与 PAD 两项任务；收集 4,000 真图及 13 生成器各 4,000 假图（52,000 假图），最终取得 3,035 张有效详细标注假图；3 层、7 类伪迹，像素级区域与类别。表 2：DRCT-ConvB AJ balanced accuracy 82.5%、归因图与伪迹 mask IoU 9.0%；AJ-only 为 89.3%，PAD-only IoU 27.2%，多任务 AJ 89.1%、PAD IoU 27.3%。附录表 13：同一多任务模型分类 Grad-CAM IoU 4.8%，AJ-only 分类归因 IoU 8.8%。表 4：伪迹区域注意力对齐使 Synthbuster 的 F1 55.9→63.2、X-AIGD F1 84.3→87.4；不能概括为所有数据集准确率均提高。附录 C.2 已定性指出 FakeVLM 模板化解释，表 10 报告 FakeVLM 真类 43.7%、假类 98.9%、平均 71.3%；与本项目不同冻结子集的 0.868 BA 不直接对比。
+- 研究判断：单独把文字解释加到 AJ/PAD 后面与 X-AIGD、FakeXplain、LEGION 重叠较大；有潜力的新增基准应明确测文字的图像特异性、事实正确性、空间接地和经有效反事实检验的决策一致性，并分别报告不可评测率。X-AIGD 作者关于“较少依赖可见伪迹”的依据主要是归因图、任务对照与训练对齐，不是对原模型的直接局部因果干预；本项目当前 169/208 模板重复是单模型/子集观察，不能宣称首次发现或领域普遍性。X-AIGD 真/假为语义配对，不是可逐像素局部修复配对。
+- 核验：查阅本地官方 PDF 提取文本中 §3.1–3.3、表 2/4、附录 C.2、D.3；用网页再次核对 ICLR 官方摘要和 FakeXplain 官方摘要。只进行文献答疑，没有运行模型或代码测试；`git diff --check` 通过。遗留：若正式立项，需进一步做系统文献查新、跨模型/数据集样本和盲审标注，先验证局部干预阳性对照。建议 ChatGPT Web 优先审阅基准的新颖性边界及最小可行标注协议。
+
 ## 2026-09-29 近两周研究组会汇报写入 Obsidian
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；远端：`https://github.com/brodyZhao/my-research-project.git`；交接撰写前最新 commit：`47627659f48190ee5eb22583df1c64928666a97a`，本次交接提交后以仓库 `HEAD` 为准。
