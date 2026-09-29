@@ -1,5 +1,15 @@
 # Project Handoff
 
+## 2026-09-29 A 会公开数据与检测器可获取性审计
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；远端：`https://github.com/brodyZhao/my-research-project.git`；任务开始时最新 commit：`6b54aebaf10f0c1da8c2be85645d4dcf2f37cf02`。
+- 用户要求核查现成 A 会图像鉴伪数据集与同时输出真假判断、解释、定位的检测器能否取得，判断是否必须自建数据集。本次只查公开会议论文、作者代码/模型卡、Hugging Face 数据卡与文件树；未下载权重/数据、未连接远程 GPU、未运行推理。
+- 交付：`outputs/A会公开数据集与鉴伪检测器可获取性审计_2026-09-29.md`（outputs 被 `.gitignore` 忽略，故为本地交付件，不提交到 Git）。审计结论：可以避免从零构建大型原始数据集；FakeShield ICLR 2025 是当前最容易取得的冻结三输出系统，SIDA CVPR 2025 有公开模型与 SID-Set（但 explanation checkpoint 模型卡要求独立验证检测/定位），Omni-Fake CVPR 2026 数据与代码已公开但当前仓库未见训练好的 adapter，X-AIGD 的真实图需重建且无模型权重，FakeXplain 论文链接仓库当前为空且作者后续数据下载端点未能从本环境确认。
+- 关键边界：有真假两类只够普通分类评测；若要把假图某块恢复为“对应原始真图”内容，必须确认 source ID 映射与像素配准。当前没有确认到这种可直接使用的一对一公开配对清单。使用区域删除/修复干预时则不一定需要 source-paired donor。FakeShield checkpoint 约 44.2 GB、其 DTE-FDM 约 27.3 GB；vGPU-32GB 的实际推理显存余量未验证。报告逐个附会议官方论文页、作者仓库和数据/模型卡链接。
+- 主要修改文件：仅本段交接记录；未触碰用户未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`。`README.md` 在仓库中缺失。
+- 验证：在线核对 ICLR/CVPR 正式主会论文页面及相关作者资源；`git diff --check` 已通过。无源码、模型或数据流程测试，因为本阶段没有运行代码/模型。
+- 遗留：在远程主机上确认 SID-Set test Google Drive 可达、检查 FakeShield/SID-Set 的分割和数据文件清单；核实 FakeShield eval 是否避开训练样本及是否存在可审计 source-pair/配准键；再对 FakeShield 做单样本显存 smoke test 后决定是否启动小规模 pilot。建议 ChatGPT Web 下一步审阅资源选择与“像素配对替换 vs. 区域删除/修复”边界。
+
 ## 2026-09-29 下午组会汇报稿
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；远端：`https://github.com/brodyZhao/my-research-project.git`；本任务开始时最新 commit：`09dabd6e5b83dff50b3df8febba0d00d91ae9b79`。
