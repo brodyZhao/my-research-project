@@ -1,5 +1,13 @@
 # Project Handoff
 
+## 2026-09-29 下午组会汇报稿
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；远端：`https://github.com/brodyZhao/my-research-project.git`；本任务开始时最新 commit：`09dabd6e5b83dff50b3df8febba0d00d91ae9b79`。
+- 用户要求生成今天下午可汇报的两周进展，突出实验选择和修正过程、读文献的启发、收获、导师问题及下一步。稿件已写入 Obsidian：`/Users/zhaomengchen/Documents/Obsidian Vault/文献阅读笔记/2026.9.14-2026.9.30/组会汇报_2026.9.29_下午版.md`；工作区副本 `outputs/组会汇报_2026.9.29_下午版.md`。
+- 稿件沿时间线解释首轮选择 SynthScars/Qwen3-VL（人工伪迹 mask、同一模型输出理由/区域；4B 未缓存，临时用 8B）、80 张全假样本的 Gate 0 错误与 blur GT 反向、SynthScars 面积/重绘剂量和数据抽取排错、FF++ held-out 双向替换、X-AIGD × FakeVLM 中模板解释复现，并写入 8 篇论文逐篇启发、SIDA 候选准备状态、导师讨论问题、下一步和 90 秒口头稿。明确区分观察与因果结论，不把尚未运行的 SIDA 准备冒充模型结果。
+- 验证：使用 Obsidian helper 写入实际 vault；Obsidian Markdown 与工作区副本字节一致；8 篇文献笔记路径均存在，2 个本地嵌图也在同文件夹且嵌入名称一致；稿件 12 个主章节；`git diff --check` 通过。未追加模型推理/训练。
+- 遗留：主因果假设仍未决；当前模板化观察限 FakeVLM 的冻结 X-AIGD 子集及提示。下一步请导师确定研究主线（解释可靠性基准或解释决策因果依赖），并优先打通 SIDA 独立 test/GPU、人工接地审阅与局部干预阳性对照。
+
 ## 2026-09-29 X-AIGD 结果与鉴伪解释基准选题澄清
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本次答疑开始时最新 commit：`911797610aaba77ce4de7dbc4823961733f82c6f`，本段提交后以仓库 `HEAD` 为准。
