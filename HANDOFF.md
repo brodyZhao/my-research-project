@@ -294,6 +294,7 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 
 ### 2026-09-29：远程实验准备状态更新
 
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮实验门槛更新 commit：`cae84bd`（本次 HANDOFF 补记前的最新 commit）。
 - SIDA-7B-description 权重已下载完成（约 16 GB）；远程独立 Python 3.10 环境的依赖安装命令已成功，含 PyTorch `2.1.2+cu121`、Transformers `4.31.0`、Accelerate `0.21.0`、DeepSpeed `0.14.0`。
 - 之后尝试复查 GPU 时，`connect.nmb1.seetacloud.com` 的 DNS 解析失败，SSH 未建立；因此无法确认设备状态或做模型导入 smoke test。此前最近一次成功 GPU 检查仍为 0 张可见 GPU。没有启动推理。
 - 当前仍需恢复主机名/SSH、核实可见 GPU、获取官方独立 `test.zip`。完成后先执行单图 smoke 和固定 30 张基线门；门槛失败即停止，不跑长实验。
