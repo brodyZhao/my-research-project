@@ -302,4 +302,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 本轮测试：`python3 -m compileall -q work/sida_probe` 通过；`python3 work/sida_probe/power_gate.py` 通过并保存 CSV，复现 `σ=0.5` 时 `n=55`、每算子功效约 0.900、双算子联合功效下界约 0.801；`git diff --check` 通过。模型推理 smoke 未运行，因为 SSH/DNS 失败且此前 GPU 检查为 0 张可见设备。
 - 最新交付仍为 `outputs/可定位解释模型复验_模型审计与SIDA数据核验_2026-09-29.md`；本次记录更新不改变实验结论边界：尚无 SIDA 推理结果，不能判定现象成立或不成立。
 
+### 2026-09-29：主实验模型选择复核
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本次修改前最新 commit：`bd4ff3a`。
+- 用户指出 SIDA 模型卡对 explanation checkpoint 的限制。已核对模型卡：`SIDA-7B-description` 为解释微调版；复现检测/定位结果应使用 `SIDA-7B`。因此 SIDA-description 不再作为论文性能代表或主确认性模型，仅保留已有下载作预研。
+- 主模型改荐 FakeShield ICLR 2025 官方 `fakeshield-v1-22b`：DTE-FDM 输出分类、位置文字与依据；MFLM 以 DTE-FDM 输出和图像生成掩码。核心因果检验必须直接读取 DTE-FDM 分类分数，不能把 MFLM 对解释文字的掩码跟随性当作分类依赖性的证据。
+- 新本地交付：`outputs/FakeShield与SIDA主模型选择复核_2026-09-29.md`。原 SIDA 方案报告开头已加撤销/后备说明。FakeShield 权重约 44.2 GB，另有 SAM 权重、测试数据和运行缓存；远端上次只余约 40 GB。远端当前 DNS 解析失败，之前最近一次成功设备检查为 0 GPU，故尚未下载 FakeShield 或运行推理。
+- 推荐候选数据为论文使用的 IMD2020 评测集（原论文表列 414 张真实、2,010 张篡改），需从原始数据源取图像与掩码并审计独立性。HF 的 MMTD-Set-34k 只有 train split，不能充当独立测试集；其中解释文字由 GPT-4o 生成，不能当作解释真实性真值。
+- 本轮只核查官方论文、模型卡、权重与数据页面并修订方案，没有模型实验。后续先恢复远端解析与 GPU、检查存储/显存；再做 FakeShield 单图 smoke 和 IMD2020 固定 pilot（15 real+15 tampered）：评分与生成标签一致≥29/30、BAcc≥0.70，且至少 5 张篡改图分类正确、掩码 IoU≥0.2、文字有明确位置，才继续。门未过就停，不跑批量反事实。
+
 ---
