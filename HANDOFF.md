@@ -208,11 +208,11 @@ Remote：`https://github.com/brodyZhao/my-research-project.git`
 
 ## Latest Commit
 
-`483bc0a` (`docs: update GitHub handoff status`)
+`39b5270` (`docs: audit FakeShield causal study identifiability`)
 
 ## Current Goal
 
-在当前项目建立 Codex、GitHub 与 ChatGPT Web 之间的稳定协作流程。
+审查图像鉴伪文字解释与检测决策证据之间的因果关系，并在理论和测量有效性通过后再启动实验。
 
 ## Background
 
@@ -318,7 +318,7 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 审计结论：旧设计理论上不能回答“检测器是否依赖解释所述证据”。修订后的窄问题可行：用官方生成真假判决的固定协议作为因变量；冻结原图文字；独立盲审文字事实和区域；对目标区、匹配控制区、独立标注的另一真实可见线索区做有效反事实；固定原图 DTG tag 的直接视觉效应与重新计算 tag 的端到端效应分开。只有目标区对控制等效且另一独立线索通过阳性门，才支持“区域级错位”；无阳性线索时只能判未决。
 - 本地新增/更新：`outputs/FakeShield因果依赖实验_理论可识别性审计_2026-09-29.md`（完整理论和方案）；`outputs/FakeShield与SIDA主模型选择复核_2026-09-29.md`（已改为撤销旧方案并保留模型候选判断）。`outputs/` 按项目规则被 Git 忽略，文件保存在本机项目目录，不提交权重或数据。
 - 本次只读核对 ICLR 2025 FakeShield 论文、官方 DTE-FDM/MFLM 代码，以及 NeurIPS 2019 忠实性论文；没有下载 FakeShield、连接远端、运行推理或产生实验结果。文献限正式 A 会主会；官方代码仅作为实现核验。
-- 检查：待本条 HANDOFF 更新后执行 `git diff --check`、Markdown/关键断言检查，并提交 HANDOFF。尚无模型实验结论。旧的 FakeShield smoke 和 IMD2020 门不得执行；`SIDA` 旧样本量也不能迁移到新因变量。
+- 检查：`git diff --check` 与审计文档关键断言检查均通过；交接记录已随 `39b5270` 提交并推送。尚无模型实验结论。旧的 FakeShield smoke 和 IMD2020 门不得执行；`SIDA` 旧样本量也不能迁移到新因变量。
 - 遗留硬门：固定 FakeShield 代码/权重 revision；确认严格独立、有合适配对的测试数据与 mask 语义；独立标注文字 claim 和可见伪迹；证明可构造有效且质量合格的局部干预；用生成真假判决重新定效应界和样本量。未过这些门之前不启动确认性推理。
 - 建议 ChatGPT Web 下一步先审查本地理论审计文档对主张、`Y`/`p_fake`、干预定义和判决规则的解释是否清楚；后续只按修订门继续，不再沿用旧 `log-odds` 与 MFLM 区域假设。
 
