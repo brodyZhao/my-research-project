@@ -285,11 +285,19 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本记录修改前最新 commit：`6605eb8`。当前无本地 `main/master`，继续沿用此前同一研究任务分支。
 - 用户纠正上一轮 FakeVLM 实验缺少局部证据的问题，要求换用同时输出真假、定位和文字的 A 会检测器。已核查 FakeXplain (ICLR 2026)、LEGION (ICCV 2025)、SIDA (CVPR 2025)、FakeShield (ICLR 2025)。FakeXplain 指向的官方仓库当前为空；LEGION 作者说明最终检测权重遗失；故选公开 7B 解释版权重和区域真值的 SIDA 首先复验。
-- 本地交付：`outputs/可定位解释模型复验_模型审计与SIDA数据核验_2026-09-29.md`；本地代码和原始数据审计：`work/sida_probe/prepare_assets.py`、`audit_dataset.py`、`dataset_audit.json`、`score_adapter.py`、`perturb.py`、`smoke_sida.py`。本轮按用户要求先固定了门控实验方案：单图 smoke → 30 张基线门 → 官方独立 test → 配对区域反事实与真实掩码正对照；需至少 36 张正确且 IoU≥0.2 的篡改图才做确认性判断。`outputs/` 与 `work/` 依项目规则被 Git 忽略，不提交模型、数据或本地临时产物。未改动用户已有未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`。
+- 本地交付：`outputs/可定位解释模型复验_模型审计与SIDA数据核验_2026-09-29.md`；本地代码和原始数据审计：`work/sida_probe/prepare_assets.py`、`audit_dataset.py`、`dataset_audit.json`、`score_adapter.py`、`perturb.py`、`smoke_sida.py`。本轮按用户要求先固定了门控实验方案：单图 smoke → validation 短基线门 → 官方独立 test → 配对区域反事实与真实掩码正对照；同次输出必须含明确位置文字和对应掩码。样本量复核后，确认性目标修正为至少 55 张正确且 IoU≥0.2 的篡改图（配对差标准差≤0.5 log-odds；方差更高则加样本）。`outputs/` 与 `work/` 依项目规则被 Git 忽略，不提交模型、数据或本地临时产物。未改动用户已有未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`。
 - 远程主机：`root@connect.nmb1.seetacloud.com:27002`；代码 `/root/autodl-tmp/SIDA`，验证集和模型 `/root/autodl-tmp/sida_probe`。模型权重现已下载完成，约 16GB；独立 Python 3.10 环境正在安装 CUDA 版 PyTorch。源码 revision `6b1c3aa9097a79849ea7aae95601854763014a9d`；模型 revision `282cffe609bea1917d9d63138a4989aac7314e2a`；数据 revision `fa7a00ee2d68579630bb81d1bdcae7d3ff9c7a81`。
 - 实际数据核验：解释数据 validation 300 张，三类各 100；文字均非空；100 张局部篡改均有非零真值掩码。14 张局部篡改图像与掩码尺寸不一致；掩码面积 0.1%—50% 且尺寸一致时有 67 张预估候选（此前更窄的 1%—30% 范围有 49 张）。原始统计在 `work/sida_probe/dataset_audit.json`。这只是数据审计，不是模型实验结论。作者的独立 `test.zip` 需经 Google Drive 获取，但远程对 Drive 的请求报网络地址分配错误，尚未下载。
 - 测试：`python3 -m compileall -q work/sida_probe` 通过；`score_adapter` 的合成张量 smoke 通过；`perturb` 的等面积、非重叠、掩码外像素不变 smoke 通过。SIDA GPU smoke **未运行**。
-- 当前阻塞：SSH 可达但远程仍无 `/dev/nvidia*`，`torch.cuda.is_available() == False`，设备数 0；用户需恢复 GPU。Google Drive 官方测试包也暂时无法从该主机访问。PyTorch CUDA 环境安装仍在进行。故没有任何 SIDA 推理结果。
-- 建议 ChatGPT Web 下一步检查：GPU 与官方 test 数据可访问后，先运行 `work/sida_probe/smoke_sida.py`；检查三输出同源、长短生成分数差≤0.01；再执行 30 张短基线门。只有 balanced accuracy≥0.70 且至少 5 个正确且 IoU≥0.2 的篡改样本时才做完整基线；确认性实验要求至少 36 张合格样本和真实掩码正对照通过。不要把现有 validation 300 张冒充独立确认性 test。
+- 当时的最近一次成功登录显示远程无 `/dev/nvidia*`，`torch.cuda.is_available() == False`，设备数 0；Google Drive 官方测试包也无法从该主机访问，独立 Python 环境仍在安装。故没有任何 SIDA 推理结果。较新的远程状态见下方更新。
+- 建议 ChatGPT Web 下一步检查：GPU 与官方 test 数据可访问后，先运行 `work/sida_probe/smoke_sida.py`；检查三输出同源、长短生成分数差≤0.01；再在公开 validation 执行 30 张短基线门。只有 balanced accuracy≥0.70 且至少 5 个正确、有位置文字且 IoU≥0.2 的篡改样本时才解封官方 test。确认性实验要求至少 55 张合格样本（配对差标准差≤0.5 时）和真实掩码正对照通过；按方差上调样本量。不要把现有 validation 300 张冒充独立确认性 test。
+
+### 2026-09-29：远程实验准备状态更新
+
+- SIDA-7B-description 权重已下载完成（约 16 GB）；远程独立 Python 3.10 环境的依赖安装命令已成功，含 PyTorch `2.1.2+cu121`、Transformers `4.31.0`、Accelerate `0.21.0`、DeepSpeed `0.14.0`。
+- 之后尝试复查 GPU 时，`connect.nmb1.seetacloud.com` 的 DNS 解析失败，SSH 未建立；因此无法确认设备状态或做模型导入 smoke test。此前最近一次成功 GPU 检查仍为 0 张可见 GPU。没有启动推理。
+- 当前仍需恢复主机名/SSH、核实可见 GPU、获取官方独立 `test.zip`。完成后先执行单图 smoke 和固定 30 张基线门；门槛失败即停止，不跑长实验。
+- 在任何模型推理前复核了统计检验：旧的 36 张对应检出非零差异，不适用于“排除≥0.2 log-odds的实质区域增益”。报告现已改为非劣效门槛：当每种扰动配对差 `σ≤0.5` 时每算子约 55 张以保证双算子联合功效约 0.80；`σ=0.6/0.7` 时目标约 79/107。主样本还必须有明确位置文字、对应掩码、预测正确且 IoU≥0.2。
+- 最新交付仍为 `outputs/可定位解释模型复验_模型审计与SIDA数据核验_2026-09-29.md`；本次记录更新不改变实验结论边界：尚无 SIDA 推理结果，不能判定现象成立或不成立。
 
 ---
