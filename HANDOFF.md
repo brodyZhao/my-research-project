@@ -208,11 +208,11 @@ Remote：`https://github.com/brodyZhao/my-research-project.git`
 
 ## Latest Commit
 
-`39b5270` (`docs: audit FakeShield causal study identifiability`)
+`1f9a050` (`docs: refresh current research handoff`)
 
 ## Current Goal
 
-审查图像鉴伪文字解释与检测决策证据之间的因果关系，并在理论和测量有效性通过后再启动实验。
+确认局部篡改图像是否具备成对反事实、独立伪迹标注与可判读检测器输出，并评估构建窄范围因果评测集的可行性。
 
 ## Background
 
@@ -321,5 +321,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 检查：`git diff --check` 与审计文档关键断言检查均通过；交接记录已随 `39b5270` 提交并推送。尚无模型实验结论。旧的 FakeShield smoke 和 IMD2020 门不得执行；`SIDA` 旧样本量也不能迁移到新因变量。
 - 遗留硬门：固定 FakeShield 代码/权重 revision；确认严格独立、有合适配对的测试数据与 mask 语义；独立标注文字 claim 和可见伪迹；证明可构造有效且质量合格的局部干预；用生成真假判决重新定效应界和样本量。未过这些门之前不启动确认性推理。
 - 建议 ChatGPT Web 下一步先审查本地理论审计文档对主张、`Y`/`p_fake`、干预定义和判决规则的解释是否清楚；后续只按修订门继续，不再沿用旧 `log-odds` 与 MFLM 区域假设。
+
+### 2026-09-29：成对数据与自建因果评测集可行性
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本阶段开始最新 commit：`1f9a050`。
+- 用户询问缺少“成对真假图 + 同一检测器的真假/解释/定位”时是模型还是数据的问题，以及能否自建数据。本次澄清：数据集不需预存模型输出，模型可冻结后对数据推理；数据负责图像标签、源图对应、编辑 mask、独立可见伪迹与 claim 标注。模型接口和数据因果配对是两个独立条件。
+- 核对 ICLR 2025 FakeShield、ICLR 2026 FakeXplain/X-AIGD、ICLR 2025 Aligned Datasets。FakeShield 最接近三输出系统，但 DTE-FDM 和 MFLM 解耦，MMTD 描述由 GPT-4o 结合图像及 mask 生成；FakeXplain 给 AI 合成图人工框/描述但不提供逐图原始源图 patch 对；X-AIGD 可作为独立人类伪迹区域参考，但不是文字 claim 真值或像素同源 donor pair。
+- 本地新增：`outputs/成对鉴伪数据与自建因果评测集可行性_2026-09-29.md`，建议先限定局部编辑鉴伪，建立小型评测集而非先训练 detector 或打造通用大数据集；明确区分源图/编辑图、编辑 mask、可见伪迹 mask、模型 claim 区域、预测定位 mask。
+- 本轮只做正式 A 会主会文献核对和方案说明，没有新建/下载数据、模型推理或人工标注。文档/链接和 HANDOFF 提交前待执行 `git diff --check` 与本地文件存在性检查。
+- 遗留：实际审计 FakeShield 公开测试样本是否逐张同源、几何对齐、mask/图像 ID 是否对应；若不满足，先构造少量可控局部编辑 pair，运行标注与 sham/控制/阳性对照可行性门。不得把整幅生成图的语义相似真图当作局部 patch donor。
 
 ---
