@@ -189,6 +189,17 @@
 
 ---
 
+### 2026-09-30：核实“被动图像取证”术语
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮开始时 HEAD：`dbb9e53`。
+- 更新本地交付 `outputs/研究方向定位_2026-09-30.md`：确认“被动图像取证”有正式文献用法。ICCV 2023 的 DRAW 论文在 related work 中用 “Passive Image Manipulation Localization” 指称既有被动篡改定位方法，并与其 proactive RAW protection 区分。来源为 ICCV 官方论文页。
+- 用词建议：可称“被动图像取证”，但研究题目应加具体对象，如“被动图像篡改检测/定位中的解释决策忠实性”；被动/主动是取证信号来源维度，不等于忠实性问题的定义。
+- 检查：`git diff --check`；未运行代码或模型实验。本轮仅核实正式会议论文术语并更新研究笔记。
+- 遗留问题：被动取证术语成立，但项目首阶段对象（局部篡改/编辑或整幅生成图）仍未定。
+- 建议 ChatGPT Web 下一步检查：结合导师习惯，选定一个带具体任务边界的课题名称；正式实验继续优先限定一类取证对象。
+
+---
+
 ### 2026-09-30：研究方向与学科分类定位
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；本轮开始时 HEAD：`15f377f`。
