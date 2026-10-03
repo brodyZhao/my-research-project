@@ -1,5 +1,16 @@
 # Project Handoff
 
+## 2026-10-04 图像鉴伪解释可靠性文献检索
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；目标远端：`https://github.com/brodyZhao/my-research-project.git`。本任务从唯一现有远端默认分支 `codex/setup-github-workflow` 创建任务分支（仓库无 main/master）；开始时 HEAD 为 `28589e46502a981cf90d14d7f774adf29e24ed70`。本交接提交前最新 commit（资料索引提交）为 `64556d0d4a2de36b85a0b8eb2c693cff14b06e4c`，交接提交后以分支 HEAD 为准。
+- 用户要求不设年份/级别限制、使用 Google Scholar 尽可能全面检索图像鉴伪可解释性的可靠性相关研究。用户完成 Scholar 人机验证后继续访问；本次记录26条检索/引用路线、66页、636个含重复的可见列表位置。已翻至终页的路线：Gowrisankar与Thing评估论文前向引用5页45个位置、Tsigos等定量评估论文前向引用5页49个位置、`"image forgery" "faithfulness"` 8页76个位置、`"AI-generated image" "explanation" "faithfulness"` 10页94个位置。多数宽查询未翻完，不能声称整个领域已穷尽或保证零遗漏。
+- 本地交付：`outputs/图像鉴伪解释可靠性文献检索_2026-10-04/` 的详细Markdown报告、分类主表CSV、扩展候选CSV/Markdown、已核验BibTeX、Scholar页次JSON、题录核验审计JSON及一致性检查JSON，共8件；另有 `outputs/图像鉴伪解释可靠性文献检索_2026-10-04.zip`。分类主表251条、扩展候选86条，合计337条去重记录；主表240条核对题名与作者、11条待核。数量含综述、方法基础和边界研究，不是337篇直接可靠性实证。BibTeX只含240条已核验题录，统一简化为@misc，投稿前仍须补正式类型/卷期/版本年份。
+- 主要修改：跟踪文件 `literature/forensic-explanation-search-20261004.md` 和本段交接；检索中间记录/核验脚本在 `work/literature_search_20261004/`。outputs与work按原有.gitignore不提交或push；ChatGPT Web只能通过Git看到简短索引和交接，无法直接读取完整本地交付件。未触碰用户未跟踪的 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`，未改模型代码、未运行推理或训练。
+- 核验来源：Scholar发现，arXiv/CVF/ACL/会议官网及出版社页面核对；Crossref只用于题录。作者综述目录读取152条，Crossref144条通过、7条题名差异、1条获取失败；目录自己的6,837/189数字不冒充本次检索数量。题名及年份版本差异、待核作者、模型裁判/主观评价与因果忠实性边界均在报告中注明。FUD是一般归因评价，Truthful or Fabricated是语言解释奖励投机研究，DEPO是医学视觉语言偏好优化，不能写成鉴伪实证。
+- 验证：`python3 work/literature_search_20261004/build_catalog.py` 完成并通过内置唯一ID/DOI格式/作者完整性/别名清理/年份断言；`python3 -m compileall -q work/literature_search_20261004` 通过。另用Python读回CSV/BibTeX/报告/ZIP，确认251主表、86候选、240引用条目及报告ID一致，BibTeX括号平衡，ZIP testzip通过且8件逐字节一致；`git diff --check` 和已暂存索引检查通过。由于仅文献检索与文档生成，无模型tensor/device测试。
+- 遗留：宽检索其余页次、所有种子的双向引文追踪、中文数据库/学位论文检索和逐篇全文质量评价尚未完成；保留11条题录待核及86条候选，不将它们当作完整审读文献。当前浏览器保留在已到终页的生成图像解释忠实性查询；CAPTCHA已解决，不是当前阻塞。没有证明检索饱和。
+- 建议 ChatGPT Web 下一步：先检查索引中的扰动评估、热图对照、JECA²联合解释攻击、X-AIGD与Defake-o3证据验证路线；区分接地、主观可信与因果忠实性，再核对本项目局部干预研究与这些先行工作的重叠。若继续全文系统综述，应取得本地完整清单，补逐篇实验与证据编码、版本关系及未遍历来源。
+
 ## 2026-09-29 A 会公开数据与检测器可获取性审计
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/setup-github-workflow`；远端：`https://github.com/brodyZhao/my-research-project.git`；任务开始时最新 commit：`6b54aebaf10f0c1da8c2be85645d4dcf2f37cf02`。
