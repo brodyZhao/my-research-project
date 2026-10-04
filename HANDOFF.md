@@ -1,5 +1,43 @@
 # Project Handoff
 
+## 2026-10-05 文献重检阶段交付（Scholar限流，未完成）
+
+- 仓库：`brodyZhao/my-research-project`；继续分支：`codex/forensic-explanation-literature`；阶段索引最新commit：`ea4506f8935d5bee0ed0cb4d30991668209141d8`，已push origin。本交接随后另作提交；最终交接提交以Git HEAD为准。先前自动审批超时不再阻挡本轮指定索引提交。
+- 用户明确要求扩大Google Scholar检索、所有结果逐条筛选日志、EFR等核心种子参考文献逐篇排查，旧目录不得再视为完整。用户回复已完成人机验证后，EFR当前被引用1条已查完；累计21路线、209个有效Scholar页面观察，其中含2个遗留cites过滤页和1个限流页。正常范围1999个结果位置，异常过滤15个位置另存，共2014条日志；15路线已观察到可见终页，6条未完成。GS007到40页仍有下一页；GS009/010/015/020未至终页；GS021在提交时返回automated queries限制，隔十分钟再提交仍受限，没显示验证码。已异步请用户手动检查是否恢复，未收到恢复回复。不得记限流为终页，亦不得声称整体重检完成。
+- 本轮成果：EFR全部56条参考文献有逐条筛选理由及出版/预印本原页或作者公开稿，非56篇全部全文质量评审；REF016原页403改核作者11页ViKI PDF，REF025压缩响应与解压证据哈希分别保存。EFR有题名/作者版本变化的条目已记录，不把TruthLens/FORGE、FakeReasoning/Toward Generalizable等同ID版本当成独立新论文。另11种子公开HTML共620个参考位置提取初筛、保留未决条目，并未完成全部被引论文原页核验。旧337条全部对照，152条在本轮主题/引文链已有匹配，185条仅旧目录补回待审；旧验证标记不继承。
+- 已人工复核28篇核心原页摘要，部分进一步核查方法/实验/局限；EFR列首，另有TriDF、Why Fake、Heatmap、DeepfakeJudge、JECA²、Gowrisankar/Tsigos系列、CDTS、不可辨识性、Mandela-Bench、ATAR、LaP、EditSleuth、REVEAL等。记录了因果忠实性/证据事实性/热图一致性/人工偏好不同终点及关键局限，例如ATAR评审额外只收到ATAR工具热图，DeepfakeJudge正文最高性能主张与Table4不一致，LaP格式率不等于文字忠实性，Heatmap方法结论依赖检测器和替换协议。当前2261条拼接候选包括噪声、背景和未决，不能当作2261篇相关文献。
+- 交付在本地 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/`：00阶段状态、01矩阵方案、02全部逐位置初筛、03EFR56条、04暂排序候选、05路线覆盖、06页记录、07EFR元数据/文件哈希、08导航异常、09种子620位置、10旧337条对照、11拼接计数、12/13核心28篇排序、14阶段计数、15原页获取尝试、16补充Web初筛、17一致性检查。ZIP为`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-05.zip`，明确阶段交付未完成。原始网页/PDF与中间脚本在`work/literature_research_20261005/`，不上传论文全文；outputs/work按仓库规则忽略。跟踪新增索引`literature/forensic-explanation-research-checkpoint-20261005.md`已提交推送，HANDOFF本段待提交。用户未跟踪实验日志及前一任务排序索引仍保留不暂存。
+- 检查：`python3 -m compileall -q work/literature_research_20261005`、`python3 work/literature_research_20261005/build_checkpoint.py`、`git diff --check`通过；EFR56条ID/理由/本地文件及SHA256相符，CSV读回计数、页码连续、限流非终页、稳定ID/核心排名唯一通过；ZIP testzip和逐文件字节比较通过。1176个候选URL获取尝试：711 HTML响应身份待核、31 PDF尚未提取、113空响应、321失败。获取成功不等于身份/结论已核验。无模型代码修改，无模型tensor/device或推理测试。
+- 继续条件与ChatGPT Web下一步：待用户确认Scholar正常搜索恢复，从日志05的实际下一页继续GS007/009/010/015/020，重启GS021并落实尚未执行的扩词矩阵；核验其余核心论文全文及全部强相关引文链，人工复审规则初筛噪声、候选版本去重与未取得摘要的条目。每次重建按export_scholar_log → build_research → enrich_catalog → build_checkpoint顺序；最后一个脚本将交付JSON压缩为元数据/哈希，原始摘要全文仍在work证据中。不要把当前28篇核心表当最终全集，不依据缺席作无先行工作结论。
+
+## 2026-10-05 EFR遗漏后的检索流程追溯
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新commit仍为`23c90379582c81317a604b291c64a55a87d8d89e`。保留此前HANDOFF、排序索引及用户实验日志的未提交状态。
+- 用户质疑高度相关的EFR遗漏及检索准确率。本轮复核原检索日志、原报告和题录审计：26条Scholar路线仅4条明确至终页，其余22条无终页确认；没有专门覆盖证据接地/取证推理/多模态篡改用语的Scholar检索路线；完整前向引用链只有2条，没有完成全部核心文献双向追踪。原报告虽说明局限，仍未达到用户要求的全面检索标准。
+- 责任判断：检索覆盖与停止/验收标准不足。现有页次级日志缺少全部结果的逐条筛选理由，不能准确定位EFR在发现、阅读或纳入哪个环节掉落；没有证据归因于Google索引延迟。一次遗漏不能量化总体准确率/召回率；240条题名作者核验也不能当作检索准确率。
+- 本地新增`outputs/检索覆盖缺口审计_2026-10-05.md`；本段更新交接。原337条目录和ZIP未改，EFR仍未补入，重检仍未执行；目录仅可作初步候选集合，不能支撑查新完整性或“没有先行工作”。
+- 验证：Python读回日志并汇总26路线/66页/636重复位置/4终页，核对审计主表251、候选86、核验240、待核11；rg检索工作原始JSON/TXT/PY无EFR题名、arXiv ID或首作者命中；`git diff --check`。没有源码或模型修改，无模型测试。
+- 遗留：补同义表达和宽查询页次、核心分支双向引用、近期期刊会议/预印本，再维护逐条发现与筛选依据、回检和停止标准。本轮只是纠错审计，不能称已修复检索覆盖。此前Git自动审批两次超时的未提交/未推送状态保持；本轮未重试Git写操作。建议ChatGPT Web优先检查这一审计，并避免依据原目录缺席作新颖性结论。
+
+## 2026-10-05 EFR论文是否收录核查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；当前最新commit仍为 `23c90379582c81317a604b291c64a55a87d8d89e`。此前排序索引及HANDOFF尚未提交，保留其未提交修改，不覆盖用户文件。
+- 用户仅询问 `Evidence-Grounded Forensic Reasoning for Detecting and Grounding Multi-Modal Media Manipulation` 是否在原目录。核查结果：原337条目录没有该论文，题名、arXiv编号 `2608.08009` 及作者 `Yichun Yeh` 均无匹配，确认是此前检索遗漏。原R115为TSAD（DOI `10.1145/3805622.3810582`，作者Wenzheng Liu等），不能用相似的题名后半段认作EFR的版本。
+- 原始来源：`https://arxiv.org/abs/2608.08009`，作者Yichun Yeh、Yiheng Li、Xiaobo Hu、Zhen Lei、Yang Yang；2026-08-08首发；作者在Comments注明accepted by ACM MM 2026。摘要讨论解释与预测位置断开、锚定验证推理链、可验证证据-结论一致性奖励和多任务优势路由。基于摘要判断与解释可靠性高度相关，但坐标一致性不能自动认定因果忠实性。
+- 主要修改仅本段核查交接；没有改原337条目录、排序名次、CSV/BibTeX或ZIP，也没有把确认论文存在写成已补录目录。测试为本地rg核查（准确题名/arXiv ID/作者均无命中）及原R115记录对照、arXiv原始页面核验、`git diff --check`；无源码或模型测试。
+- 遗留/建议下一步：若继续补全目录，应为EFR分配新的稳定编号，补原始作者/版本元数据，纳入直接相关优先档并同步所有表、BibTeX、排序和计数；当前未执行这一补录阶段。此前Git写操作的自动审核两次超时阻塞仍记录在下方；本轮不将尚未同步的文件说成远端已更新。ChatGPT Web优先检查EFR与TSAD身份及其证据一致性/因果忠实性边界。
+
+## 2026-10-04 已有文献按相关性排序
+
+- 仓库：`brodyZhao/my-research-project`；继续分支：`codex/forensic-explanation-literature`；远端：`https://github.com/brodyZhao/my-research-project.git`。当前最新commit为此前检索交接提交 `23c90379582c81317a604b291c64a55a87d8d89e`，本轮排序尚未提交；自动权限审核超时阻塞情况见下文。
+- 用户要求将已有检索文献按相关性排列。本轮不追加检索，保留全部337条记录（主表251条、候选86条）及原R/K编号，按“图像鉴伪的解释是否可信”作主题判断；未按年份、会议级别或引用量排名，也不将相关性当作论文质量或结论可靠性等级。
+- 排序分6档：直接解释评价及证据验证27条；证据接地基准、受约束解释与反事实66条；可迁移评测基础和专题综述38条；普通解释方法及人类使用103条；检测/定位/置信度/取证背景与候选101条；纯音频2条。档内前列为人工整理的阅读顺序，其他条目按已有子主题顺序稳定排列；未赋造精确分数。题录待核和扩展候选保留暂定相关性标记。
+- 本地新增交付位于 `outputs/图像鉴伪解释可靠性文献检索_2026-10-04/`：`09_文献按相关性排列.md`（含前20篇和完整337条排序理由）、`10_主表251篇_按相关性排序.csv`、`11_全部337条_按相关性排序.csv`、`12_相关性排序依据与记录.json`、`13_排序一致性检查.json`、`14_已核验题录_按相关性排序.bib`。完整ZIP已更新为14件文件；原01–08文件字节不变。BibTeX仍只有240条已核验主表记录，只重排文本顺序，引用键和字段未改。
+- 跟踪/待跟踪修改：本段HANDOFF，以及新增未跟踪 `literature/forensic-explanation-relevance-20261004.md`（排序标准和前27篇索引）。脚本在本地 `work/literature_search_20261004/rank_relevance.py`；outputs/work按现有.gitignore不上传。未修改模型代码，未覆盖用户未跟踪的 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`。
+- 验证：`python3 work/literature_search_20261004/rank_relevance.py` 通过337条ID集合不变、原题录全部字段不变、总序号/主表序号连续、档次有序、CSV读回数量、原8文件SHA-256不变、240条BibTeX字段/引用键不变，以及14件ZIP testzip和逐字节一致检查。`python3 -m py_compile work/literature_search_20261004/rank_relevance.py` 与 `git diff --check` 通过。仅文献整理，无模型tensor/device或推理测试。
+- 提交/推送阻塞：尝试 `git add literature/forensic-explanation-relevance-20261004.md` 时，自动权限审核没有在截止时间前完成，工具拒绝执行；依工具允许重试一次后再次同样超时。暂存未执行，因此本轮commit和push均未执行。超时本身不是动作不安全的判定；所有本地排序交付已完成。不要把本轮索引/HANDOFF误认为已在远端。
+- 遗留：排序基于既有题录和已整理内容，未完成所有文献的全文审读；原检索未穷尽的页次/来源、11条主表题录待核和候选筛选缺口保持不变。下一步可在权限审核恢复后仅暂存上述本轮文件、检查diff、提交并push同一任务分支；ChatGPT Web先检查前列文献是否分别覆盖干预有效性、解释攻击、证据事实性与主观解释评价，不将这些维度统称因果忠实性。
+
 ## 2026-10-04 图像鉴伪解释可靠性文献检索
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；目标远端：`https://github.com/brodyZhao/my-research-project.git`。本任务从唯一现有远端默认分支 `codex/setup-github-workflow` 创建任务分支（仓库无 main/master）；开始时 HEAD 为 `28589e46502a981cf90d14d7f774adf29e24ed70`。本交接提交前最新 commit（资料索引提交）为 `64556d0d4a2de36b85a0b8eb2c693cff14b06e4c`，交接提交后以分支 HEAD 为准。
