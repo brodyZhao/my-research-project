@@ -1,5 +1,19 @@
 # Project Handoff
 
+## 2026-10-06 中文年份补查与DDL注册参考审计（重检未完成）
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；最新索引提交`1fa5bdf68be0e06789b1df2ce0ed458961659c46`已成功推送。之前GitHub:443 TLS连接失败现已恢复；本次正常push从远端c75ade7推进到1fa5bdf，包含此前待推送提交，没有关闭TLS校验。本交接随后单独提交并推送，最终交接提交见Git HEAD。
+- 用户完成GS045第8页验证后继续：共31个有结果页面310位置，再观察两个空尾页且末页无Next。其估计1680→915/440/272，分页出现非十步链接，不当索引穷尽。GS049“图像鉴伪 解释 忠实性”≥2016互补段26个有结果页面260位置，空第27页估计138（之前654/393），也独立标索引变动风险。GS050≤2015首10位置已保存，第2页start=10实际Google reCAPTCHA及“进行人机身份验证”复选框；已通过异步问题请用户手动完成，当前没有恢复回复。不能处理为零结果/终页。互补年份不是总体年份排除。23CSV差集138个新题名位置，含噪声/重复，不是138篇新增相关文献。
+- 当前50路线、899原始页面观察（1误导航页排除）、898Scholar观察；8653正常范围+15遗留cites过滤=8668逐位置日志。48路线可见终页，45无两类已观察风险；GS007显示边界、GS045/49索引变动、GS037错误弯撇号已由GS038替代但原始宽匹配未到末页、GS050当前受阻共5条未决。22表33术语族29直接主题查询，4族未直接检索，不当整体召回率。未进入研究方案/模型实验。
+- 新核DDL: Effective and Comprehensible Interpretation Framework for Diverse Deepfake Detectors，DOI10.1109/TIFS.2025.3553803，Zekun Sun/Na Ruan/Jianhua Li，TIFS20:3601–3615、2025（注册只有年份，具体日期待核）。读取既有出版社HTML公开摘要元标签，不当全文；启发式/分割/解析、图像/频域/视频检测器与fidelity声明高度相关，但具体指标/扰动基线仍待核。区别同缩写DDL数据集。本次IEEE刷新418失败保留；Crossref主DOI题录成功，以certifi正常TLS校验获取，无关闭证书校验；不使用注册提供的出版社staging相似性检查链接。
+- DDL出版方注册52个参考位置全部逐条初筛，24CSV，非原稿全部参考/所有被引全文核验。40个有DOI记录题录请求38成功、2失败（3号DataCite arXiv DOI向Crossref查询404；22号CORE DOI请求429）保留25CSV；3号另由arXiv原页确认VAE，22号二级DOI映射+CVF官方检索题录匹配CORE，CVF原页403，映射/正文仍待核。3个GitHub/解析资源位置不当论文，仍在52行审计中保留；49个论文位置加入候选引用链。原稿参考列表是否比注册列表更多仍待核，不引用二级网站“57参考”作已核数量。
+- Pinhasov等XAI-Based Detection of Adversarial Attacks on Deepfake Detectors，arXiv2403.02955，首发2024-03-05/v2 2024-08-18，5位作者题录已核；正文§3.4–3.5/4和表3–4人工读取，解释图用于攻击检测，去图基线及保持图接近的攻击与解释敏感性相关，主要检测终点不能证明解释因果忠实。作者TMLR2024注记与HTML生成页眉2026不混作首发；正式 venue 独立核验待补。
+- 原页复核核心40条，EFR仍排序首位；DDL第15、Pinhasov第29，排序按相关性，不代表证据质量或全文全部读完。候选6557含噪声/待判，旧337本轮重匹配191。EFR56原页逐条排查保留；11种子620+Beyond33+Escalate15+中文GNN32+DDL注册52=其他752个参考位置初筛，非752篇独立相关论文或被引全文都读完。
+- 2052条候选原页/主DOI题录获取尝试记录成功/空响应/失败；DDL被引40次注册题录请求单独审计，缓存人工阅读记录不混计新获取。新Web查询结果逐块保存/16单独初筛，不充当Scholar位置。原稿/完整网页留在work，输出以题录、理由、证据哈希交付，不分发完整文章。当前outputs28件及ZIP已刷新；Git仅跟踪索引/HANDOFF，保留用户两个未跟踪文件。
+- 代码修正：readResearchPage/walkResearchPages必须检查footer，即使header-only已有摘要计数也不记终页；GS045第10页短暂加载未完已重读补齐，导出最新完整记录。build_research估计支持“获得/找到”，新增index_instability_risk与明确非穷尽解释；enrich加入DDL引用链/人工证据URL，过滤资源不作论文；build_checkpoint检查52注册位置和40请求及所有逐位置ID；refresh_phase_index正确记录GS049/50和新断点。不要仅enrich已经去掉snippet的public master，应export→build_research→enrich→build_checkpoint→build_term_coverage→refresh_phase_index。
+- 验证：export899/8672原始观察零解析错误；build/enrich/checkpoint/term/index成功；8668位置ID唯一/理由非空、EFR56 SHA、620/337/40 CSV读回、33/15/32/52引用行与源SHA、DDL38/40元数据成功、页码连续、验证非终页、核心连续排序、EFR首位和两个新核心唯一通过；06/08验证参数脱敏断言通过。28件ZIP testzip和逐字节比较通过（7794702字节）。python3 -m compileall -q work/literature_research_20261005、git diff --check通过；这些是文件/覆盖一致性验证，不证明零遗漏。没有模型修改/推理，故无模型测试。
+- ChatGPT Web下一步只继续重检：先等用户完成当前GS050第2页验证，核对正常页面后再捕获，沿实际Next继续；不要重新刷新当前挑战/自动完成CAPTCHA。剩余4个直接主题术语族为image manipulation、人类评价/用户信任、adversarial explanation/intervention、meta-evaluation，仍需执行；核心前向链/后向被引原稿/版本继续核。用户强制重检完成才能下一阶段。当前CUA浏览器2、Scholar标签1（provider browser-use:ec71204e-6c3c-46e0-8c6e-64343f4534fd），resumedScholar；已markHandoff保留，临时源页无须再下载。新运行时已重建readResearchPage/walkResearchPages/emitResearchBatch与引用缓存，walk返回最后page对象，searchResearchRoute未重建；压缩引用仅包含新运行时已输出观察，导出读取本对话既有session还原全量。若运行时再重置按文档重建，不读取隐藏浏览器状态。
+
 ## 2026-10-05 中文正式稿核查与Scholar第8页验证断点（未完成）
 
 - 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；最新索引提交`c75ade77ec063860c1b492983a5d633d0c125537`已推送。本交接随后单独提交，最终交接提交见Git HEAD。审批已正常恢复；交接提交f92b85c两次推送因GitHub:443 TLS连接错误失败，远端最后确认c75ade77ec063860c1b492983a5d633d0c125537。本地文件/提交完整，未关闭TLS校验或更改remote。
