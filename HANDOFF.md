@@ -1,5 +1,36 @@
 # Project Handoff
 
+## 2026-10-05 19:18重检继续：45条路线与新增原稿证据（仍未完成）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新检索索引提交`246deb49c63ddc09807b2af36b1f15e4c74029df`已推送origin。本交接随后单独提交，最终交接提交见Git HEAD。此前审批额度限制已经通过正常审批恢复；没有绕过审批，也没有上传原稿/work/outputs。
+- 用户18:15确认人机验证完成后，GS030第4页正常，查完6页59位置；GS020查完83页827位置。本阶段新增完成GS031/32 Beyond Accuracy题名/版本，GS033可验证性31页304位置、GS034概念瓶颈4页40位置、GS035原型忠实性9页89位置、GS036信任校准5页49位置、GS038 Escalate完整特征题名、GS039图像篡改解释不确定性34页337位置、GS041检测缺陷10页94位置、GS042正确SSRN完整题名、GS043文档解释21页208位置、GS044医学深伪6页52位置。GS045中文忠实性目前7页70位置，已观察下一页start=70；估计1680条须警惕分页上限，不能当作70条穷尽。
+- 当前快照45路线；840原始页面观察，剔除1误导航页后839个Scholar观察；正常范围8138位置+遗留cites过滤15位置=8153逐条日志。43路线到可见终页、42无显示上限风险。GS007仍有边界风险；GS037弯撇号产生7.21万宽匹配，首10条保留，已由GS038完整特征题名1条替代，不能假称该错误查询到末页。GS040近似题名漏the零命中，GS041第2页找回实际题名“Addressing the Shortcomings…”且GS042成功。当前Scholar访问正常，无受阻路线，但整体重检未完成。
+- 原页复核核心表37条：新增Beyond Accuracy（IEEE题录/全文I–VII）、CLIP Predictive Cues（arXiv方法、稳定性实验/附录）、Escalate（完整立场正文）、PIVOT（方法/实验/未来方向）、人机肖像校准、SEED、MIC（后3者当前原页摘要）。每篇明确证据范围与局限：TV平滑≠因果忠实；CLIP概念分类器≠原检测器解释；Escalate无框架实证；PIVOT仍由LLM判定且可执行数值验证是未来工作；肖像calibration摘要重点判准偏差，不等同ECE。EFR56原页与逐条排查保留，其他11种子620位置初筛外另新增Beyond33/Escalate15逐条参考初筛，19/20CSV；并非全部被引原文已读。
+- SSRN6811534已人工Scholar复核为强相关待原稿条目，不加入“原页已复核核心”计数；Web原页403、正常浏览器标签3仍安全验证。失败PDF尝试及随后成功IEEE浏览器全文证据分别保留。现2043原页获取尝试（允许同URL不同获取尝试），1223HTML身份未审、615失败、62PDF待提取、135空响应、8份单独人工复核证据；成功不覆盖失败。候选目录6141含噪声/待判，非6141篇相关论文；旧337本轮匹配189，旧验证不继承。
+- work脚本新增SSRN abstract_id身份键，防止题名小词差异分成两篇；Scholar结果人工复核与原稿人工复核分开排序。新主题清除cluster/cites/年份过滤；跨页底部守卫继续保留。build_checkpoint动态GS020/30状态和人工核心计数，19/20的33/15行与原始证据SHA256断言；获取器保留不同尝试。输出23件与ZIP已刷新，07/06/08原文/验证令牌脱敏逻辑保留。
+- 验证：export零解析错误；build_research→enrich_catalog→build_checkpoint成功；EFR56 ID/理由/SHA、620/337/8153/37计数CSV读回、33/15新增参考理由及SHA、页码连续、受阻非终页、ID唯一/排名连续通过；23件ZIP testzip与逐字节比较通过；`python3 -m compileall -q work/literature_research_20261005`、`git diff --check`通过。仅检索文档，没有模型/数据流程修改，故无模型测试。保留用户未跟踪实验日志和旧排序索引。
+- 下一步只继续重检，禁止先做研究方案或实验：从GS045已观察start=70继续；补剩余术语/核心前向链和相关后向原稿，保留限制与待核。CUA浏览器2、Scholar标签2 resumedScholar；原稿临时标签3 primaryIEEE现为SSRN安全页。readResearchPage外层有空DOM TypeError重读，walk闭包应绑定最新版reader；walk返回最后page对象而非数组。重建顺序export→build_research→enrich_catalog→build_checkpoint，然后ZIP/索引/HANDOFF刷新。当前阶段索引不得误读为最终结果。
+
+## 2026-10-05 18:15继续：事实性路线恢复，Git交接提交待完成
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新已确认提交/推送为`2e9cc80dd86b83122084a610962c42dec216856e`。上一轮HANDOFF提交未执行：自动审批报告额度限制、无法完成审批（不是不安全判定），提示17:57可重试。没有绕过审批；本地交接与后续索引修改已保留，待正常审批恢复后提交。
+- 用户要求继续后，18:09 GS030第3页正常补录10条；转第4页跳Google reCAPTCHA。已明确观察复选框并请用户手动完成，用户18:15回复已完成；第4页恢复正常，随后查完第5/6页，实际可见终页为第6页共59个结果位置。继续GS020广义splicing路线，当前已至第6页60个位置，下一页start=60；仍未进入研究方案或实验阶段。
+- 处理Google验证重定向：作为失败的Scholar请求保留请求URL和脱敏重定向页，去除网络地址/挑战参数，不能当零结果或终页。work保留本地诊断；交付的06/08不会转发验证令牌/网络地址或导航异常全文。当前新查询/页面尚在继续，计数、ZIP和最终提交须在本阶段末再次刷新。
+
+
+## 2026-10-05 再次恢复后的扩词与年份分段补查（仍未完成）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮检索索引最新提交：`2e9cc80dd86b83122084a610962c42dec216856e`，已推送origin。本段交接随后单独提交，最终交接提交见Git HEAD。只推进检索、逐位置筛选及检索内的原稿核验，未开始研究方案或实验阶段。
+- 用户确认恢复后，GS022图像拼接2页11个位置与GS010反事实81页807个位置查到可见终页。为GS007第100页显示边界补查GS023（≤2025）55页548个位置与GS024（≥2026）56页552个位置，两段均到可见终页，126个原查询未显示的题名位置另存18号CSV；不是126篇新增相关独立论文，无年份条目及索引穷尽性仍有边界风险。
+- 扩词完成GS025深度伪造/解释/fidelity共35页350个位置、GS026 forgery/explanation fidelity共4页33个位置、GS027删除/插入23页224个位置、GS028参数随机化7个位置、GS029健全性检查3页29个位置。GS030生成图像解释事实性已存前2页20个位置，第3页在2026-10-05 15:22上海时间再次返回automated queries限制，无验证码；已请用户手动确认恢复，当前无恢复回复。实际断点：`https://scholar.google.com/scholar?start=20&q=%22AI-generated+image%22+%22explanation%22+%22factuality%22&hl=zh-CN&as_sdt=0,5`。GS020原断点start=20仍待继续，其首20条含DocShield等文档取证线索，不能因splicing歧义把它整体当无关撤销。
+- 当前30条路线；原始621页面观察，剔除1个误导航页面后620个Scholar观察；正常范围6034位置、异常cites过滤15位置另存，日志合计6049，比本轮开始4078新增1971。28路线到可见终页，27条无分页边界风险；未决GS007（边界）、GS020（分页）、GS030（当前限制）。规则辅助初筛和待判不冒充全文人工复核；拼接候选4570包含噪声，不代表4570篇相关论文。旧337中183条在本轮主题/引文链已有匹配，旧验证不继承。EFR56及11种子620参考位置的证据保留。
+- 本轮新增人工原页复核DocShield（arXiv题录/完整摘要）及Quantifying Explainability with Multi-Scale Gaussian Mixture Models（作者PDF摘要、§4–7），核心表从28到30。GMM说明FF++、7检测器、4解释方法及XMGD分布相似度；不把相似性或与模型指标排序对应写成因果忠实性证明，正式日期仍待核。DocShield文档篡改、跨线索推理、RealText-V1专家解释直接相关，摘要检测提升不等于独立解释忠实性验证。DDL解释框架与DDL数据集不同，不能按缩写合并；其余新增强相关原页核验仍未完成。
+- 本轮批量公开原页获取会话40589已结束；共2035个URL尝试（含单独GMM作者稿）：1223个HTML身份待核、62个PDF待提取、134空响应、615失败，1份GMM PDF已提取人工复核。HTTP成功不等于身份确认。新线索包括MIC arXiv2609.33441、GMM作者稿、DDL方法、Anchors2022、Memory-Anchored2508.14581、人类信任/AIES作者题名版本等；逐篇/引用链仍待补。
+- 修改：work中export_scholar_log.py支持完整行/字段无损重复引用，零解析错误；build_research.py补fidelity/factuality/randomization/concept/prototype初筛用语并明确共现不等于解释可靠性；新增页面底部加载守卫。GS027第17页一度部分加载、最后一题名不完整且无下一页，已重读补齐并恢复真实下一页，未计为终页。build_checkpoint.py动态核心计数、当前受阻状态、18号分段差集；enrich_catalog.py并入单独作者PDF证据。原文只在work，本地outputs21件及ZIP已刷新；Git只跟踪索引与交接，保留用户未跟踪实验日志和旧排序索引。
+- 验证：导出621观察零解析错误；build_checkpoint的EFR56条ID/理由/SHA256、CSV读回、页码连续、受限非终页、稳定ID/核心排名连续通过；另独立断言6049位置均有理由与依据、GS027为224条且不留不完整题名、核心30条EFR列首、DocShield/GMM均存在、分段差集126条、ZIP21件testzip及逐文件字节比较通过。`python3 -m compileall -q work/literature_research_20261005`及`git diff --check`通过。没有模型代码修改或模型测试。
+- ChatGPT Web下一步：只继续重检。Scholar恢复后从GS030第3页实际断点继续，再完成GS020与尚未执行的同义词（证据可验证性、concept/prototype、人类信任与校准、医学/文档/中文等）及核心前向/后向链，核验未审原稿与版本。重建顺序export → build_research → enrich_catalog → build_checkpoint，最后刷新ZIP。CUA当前浏览器2、标签2，resumedScholar绑定；新函数应重新绑定避免闭包仍引用旧定义。readResearchPage包含页面底部守卫，searchResearchRoute使用expectNavigation，walkResearchPages须在新定义后重新绑定；空文档读页错误须先观察当前页再捕获，不能再次提交并丢失结果。不要把当前目录缺席用作新颖性依据，不声称重检完成。
+
+
 ## 2026-10-05 Scholar恢复后的续查与新限制
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮日志、索引与普通入口限制核查最新提交为`846c90ff3a419920ac9f13284ca16dec10e79c70`，已推送origin；本交接随后单独提交，最终提交以Git HEAD为准。用户确认已恢复后，直接核对现有标签2正常显示GS021的10个结果；重新绑定全部采集函数至该标签，没有依赖已失效的旧标签1。
