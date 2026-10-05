@@ -2,11 +2,11 @@
 
 ## 2026-10-05 Scholar恢复后的续查与新限制
 
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；交接前最新提交仍为`e2ce436e1c00eeeb20cf52b1d49b7ae26f31a3fe`。用户确认已恢复后，直接核对现有标签2正常显示GS021的10个结果；重新绑定全部采集函数至该标签，没有依赖已失效的旧标签1。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮日志与索引提交为`ebcc1022fa86f547fe2063a7c289ac65b702eaed`，已推送origin；本交接随后单独提交，最终提交以Git HEAD为准。用户确认已恢复后，直接核对现有标签2正常显示GS021的10个结果；重新绑定全部采集函数至该标签，没有依赖已失效的旧标签1。
 - 本轮只推进重检、逐条日志和覆盖状态，没有开始后续研究分析、方案设计或模型实验。GS021不可辨识性10条、GS015可靠性26页254个位置、GS009稳定性63页627个位置已到可见终页。GS007解释幻觉到第100页993个位置不再给下一页，但页面仍估计1130条，明确标注可能显示上限，须分段补查，不能记作所有索引结果穷尽。GS010反事实前61页610个位置已捕获，第62页在2026-10-05 13:39上海时间再次返回自动查询限制，无验证码；已请用户恢复，断点为start=610。GS020及扩词/核心引用链仍待继续。
 - 原始累计419页面观察，排除1个误导航页面后418个Scholar观察（含异常过滤和受阻页面）；有效范围4063个结果位置，异常过滤15个另存，日志合计4078条，比上阶段新增2064个位置。原始导出零解析错误；新增紧凑JSON格式仅压缩重复字段，恢复逐行所有题名/URL/题录/摘要线索/被引用链接，未省略结果位置。自有脚本显示的terminal元信息在限制页曾为true，但路线判定依据实际错误正文，受阻始终记false；不能把该元信息当成终页证据。
 - 当前拼接候选3869条包含大量无关、背景与待判，不代表3869篇相关论文。旧337条有169条在本轮主题或种子链已有匹配；旧验证标签仍不继承。人工原页复核核心仍28条；没有把本轮新发现写成已读原文。EFR56条与其他11种子620个参考位置的原排查/初筛保留。
-- 修改文件：本地work中的export_scholar_log.py增加紧凑日志和自有custom_tool_call_output读取；build_research.py增加预估计数、实际结果页、受阻观察与分页风险；build_checkpoint.py动态反映当前覆盖风险与受阻；对应outputs日志/候选/计数/状态与ZIP刷新；跟踪索引和HANDOFF本段待提交。公开交付只保存题录/哈希/摘要短摘与筛选理由，不上传论文全文。用户未跟踪实验日志、旧排序索引保持未暂存。
+- 修改文件：本地work中的export_scholar_log.py增加紧凑日志和自有custom_tool_call_output读取；build_research.py增加预估计数、实际结果页、受阻观察与分页风险；build_checkpoint.py动态反映当前覆盖风险与受阻；对应outputs日志/候选/计数/状态与ZIP刷新；跟踪索引与前一版本HANDOFF已提交推送；本段补记提交状态。公开交付只保存题录/哈希/摘要短摘与筛选理由，不上传论文全文。用户未跟踪实验日志、旧排序索引保持未暂存。
 - 验证：export_scholar_log零解析错误；build_checkpoint的EFR56条ID/理由/文件SHA256、CSV读回计数、页码连续、限流非终页、身份键生成稳定ID唯一/核心排序连续全部通过；compileall和git diff --check通过；ZIP testzip及逐文件字节比较通过。无模型代码修改，无模型测试。
 - ChatGPT Web下一步：仅继续检索；Scholar恢复后重试实际断点GS010 start=610，再完成GS020；GS007必须补充分段检索而不能只按无下一页验收。扩展术语与强相关引文链仍未完成。采集使用activeScholar、readResearchPage、walkResearchPages，重建日志按export → build_research → enrich_catalog → build_checkpoint顺序。不要依据现有目录缺席作新颖性结论，不宣称重检完成。
 
