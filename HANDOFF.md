@@ -1,5 +1,16 @@
 # Project Handoff
 
+## 2026-10-07 SSRN恢复核查与新的Scholar验证断点（重检未完成）
+
+- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；索引提交 `c9830a42e31410a705125ef23c5b867b2f2d26bf` 已推送。此交接随后单独提交/推送，最终提交见 Git HEAD。用户两个未跟踪文件保留；仅索引/HANDOFF入Git，原稿/网页/outputs留本地。
+- 用户回复“SSRN已恢复”后实际核到SSR​​N6811534正常原页：Addressing the Shortcomings of Spatial-Domain Tools in Explaining Synthetic Image Detection Models；Aditi Ramaswamy、Hana Chockler；Posted2026-05-22、41页、DOI10.2139/ssrn.6811534。题录明确预印本，未核期刊出版。原摘要直接质疑空间后验可视化是否含真假分类决策信息，高度相关，升级为原页复核核心第6；没有把摘要批评推广为所有XAI无效。
+- 展开所有公开关联41参考位置，38CSV逐条初筛；这是SSRN关联题录列表，非已取得原稿参考表完整性核验。5 Cochran1977与32 Rosenthal1991没有题名，保留身份待核，不猜题名或加入论文计数；37题名截断待核。部分作者字段混入会议编辑者，保留原串并注明。现在EFR56另计，其他参考位置1179（原1138+41），非独立相关篇数/被引全文全部已读。
+- 原页下载控件名称为“PDF iconDownload This Paper”（DOM无空格）；正常下载等待20秒无文件，浏览器公开PDF入口新临时标签实际回题录，Web同一公开PDF URL403；Downloads定向查所见文件名未找到。不能记为全文已下载/方法已核；题录成功与PDF失败分别保存，正文实验、空间/频域度量和统计协议仍待核。本次无新SSRN验证码；不要再等待SSRN恢复。
+- Google Scholar新GS070完整题名查询真正显示“请进行人机身份验证”，footer=false、rows0，虽然摘要计数显示1；captcha=true，非零命中/终页。已异步请用户完成Google验证回复“学术已恢复”，当前尚无恢复回复。Scholar标签1 resumedScholar保留当前GS070挑战，实际URL不含年份/cites过滤；SSRN原页标签2 englishPrimary正常。临时SSRN PDF标签4已关闭，旧Drive下载标签3取句柄超时未能显式关闭，未再标handoff；不要据下载页存在宣称PDF成功。两有效标签已markHandoff。
+- 当前70原始route编号、69正常范围路线；1136原始观察排除误导航1后1135Scholar观察；10844逐位置日志不变=10819正常+25过滤。66可见终页、56无已观察分页/索引风险，13未决（含GS070当前阻挡）。核心62篇，英文61含迁移基础1/中文1，英文待核335、迁移候选221；候选7743含噪声，旧337本轮重匹配206。2109原页/主题录尝试历史记录不覆盖。27英文排序、38参考表、00/14/30/索引与ZIP已更新，仍标未完成，未进入方案/实验阶段。
+- 来源选择修复：enrich此前按文件名最后覆盖同URL，导致已恢复SSRN在04主目录仍显示历史安全阻挡。现在优先人工明确证据，再选成功题录；所有历史失败仍留15审计。旧阅读evidence_path可能指原始文本而非JSON对象，初次加载失败后已修复按raw_path匹配/仅有效JSON记录读取，兼容旧记录。修复后全流水线成功，SSR​​N当前恢复状态与历史阻挡同时保留的回归断言通过，62核心/EFR首位/GS070非终页/41参考SHA与CSV读回通过。python3 -m compileall -q work/literature_research_20261005、git diff --check通过；41件ZIP testzip及逐字节比较通过（9,527,213字节）。无模型修改，无模型运行测试。
+- 下一步只继续重检：用户恢复Google后先核GS070正常结果，记录题名版本/实际引用入口，再继续原稿与强相关引用链。SSR​​N正文没有取得，不要重跑旧新增脚本覆盖后来升级的阅读范围。流水线顺序仍export→build_research→enrich→build_checkpoint→build_term_coverage→build_english_focus→build_english_partition_audit→refresh_phase_index；输出公开主表去snippet后不能单独enrich。当前安全验证来自Google，与已恢复SSR​​N区分。
+
 ## 2026-10-07 英文优先扩词、评价器与人类实验核查（重检未完成）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；最新阶段索引提交 `f6f61b22e7c9c203193dc0a132136f58d0350823` 已正常推送。交接随后另行提交/推送，最终交接提交见 Git HEAD。仅跟踪检索索引和本交接，用户两个未跟踪文件不动，work/outputs 原稿不上传。
