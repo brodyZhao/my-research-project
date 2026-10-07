@@ -1,5 +1,20 @@
 # Project Handoff
 
+## 2026-10-07 可核验/完整性扩词与JPEG、用户信任原页重检（仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；阶段索引commit `1c7c0d9756fb0838a47f7d9210b8e5730afdd7db`，随后单独提交/推送本交接，最终commit见Git HEAD。保留用户两个未跟踪文件，work/outputs与原稿不入Git。上一阶段交接候选7945为抄录错误，按该阶段工具结果应为7976；本阶段使用实际生成计数8266，不继承旧数字。
+- GS080 Dual JPEG题名4、GS081前向3、GS082 Trusting题名1；GS083英文可核验解释25页241位置（估计249→241）、GS084解释完整性16页159位置（估计162→169→159）均到可见终页。GS085 IET题名1、GS086前向2位置已记。共新增411位置，仍不当411篇独立相关论文。原始1204页/11410行，4非Scholar行排除；主日志11406位置=11381正常+25遗留过滤；85正常路线、83可见终页/73无既定两类观察风险。原12未决（显示上限/9索引风险/替代歧义/降低宽中文优先级）保留，没有宣称穷尽。
+- GS083/84全部400位置增加人工题录筛选51CSV，63保留直接/强邻域候选、177方法/背景、160排除直接目录；理由与主日志400个位置一致，仍不是全文排除。许多Academia题名为医学/历史/哲学但摘录反复带同一取证句，保留索引/串页疑点，不仅凭摘录关键词纳入。build_research新增 `manual_position_screening.json`逐result_id覆盖初筛；其他路线原始自动初筛不伪称全部人工已读。
+- JPEG arxiv2408.17106 v1首发2024-08-30、v2 2025-04-07，3作者核；原稿IV/VI/VII算法、评价限制已读。已知JPEG流程且充分搜索的不兼容证明可作为可核验依据；有限搜索未求解块也判假时不能套零误报保证。实验为块级且可翻转预测，受控小图/QF条件；完全兼容拼接和强重压缩边界保留。完整27参考（含软件资源14）逐位置初筛46CSV，未全核被引原稿。
+- Trusting the Detector IEEE11558887已在浏览器正常恢复：Lucas Kopp/Alina Lytovchenko/Robin Cohen，DOI10.1109/ICDEW71238.2026.00011；会议2026-05-04–08与入库2026-06-16分别标明。原摘要明确标签/热图/文本/混合四条件、Likert/Friedman及主观信任接受度，正文需登录，样本N/错误建议设计未核。展开公开参考时初始Getting results/另一个“not available”不能当无参考，等加载后View More全部30条已展开并初筛47；二级RG29非权威计数。升级核心但范围仅公开摘要/介绍首段/参考，不当全文人类信任校准。
+- OmniVL-Guard Pro arxiv2605.16962，2026-05-16 v1、列明10作者；核3/4/5与附录E/F的工具轨迹、Checker0/0.5/1协议，多MLLM一致判分蒸馏且仅对正确答案施过程惩罚。实际在线工具记录可审计，不等于因果忠实性验证；分类/定位改善不替代理由可靠性终点。完整32参考逐位置初筛50，已补全，本轮add_continue_round再跑会重置basis，勿覆盖后续32引用范围。
+- ForenAgent正式Springer章节 Code-in-the-Loop Forensics，DOI10.1007/978-3-032-37592-6_12，2026-09-14、ECCV LNCS17023:203–221，13作者核。GS083 Google Books错误作者不覆盖正式题录；只公开摘要，订阅正文未取得，过程奖励/评价细节待核；公开65注册参考逐条初筛49（8产品/软件/系统卡资源），原PDF参考完整性待核。35传统重采样2005等早期方法不因年代排除。
+- FakeXplain从GS083实际结果获得ICLR2026正式页及22页PDF，不依赖OpenReview才能读正式稿。48CSV保存其与2506.07045高度疑似版本关系：数据/模型/8772例相同，题名/作者顺序及Hong Yan/Yan Hong拼写不同；arxiv只有v1且未映射正式发表，作者GitHub为空库无ID映射。暂不计新增独立核心、不自动合并，也不把新正式稿偏好结果当因果忠实。OpenReview tab6原挑战仍未回复，当前不要求用户为读原文处理该验证。
+- IET From pixels to proof原页Web403，浏览器tab8持续“正在进行安全验证”，尚无正文；已异步请求用户检查恢复后回复“IET已恢复”，当前无回复。高相关待核保持manual_result优先，不因会议级别或访问失败排除。Scholar正常，本次不自动处理挑战/刷新循环/付费/联系作者。12个补充Web搜索结果另计16，不混进Scholar位置。原页记录2131，成功与失败均保留，不当独立原稿数。
+- 核心73/英文72（含通用迁移基础1）/中文1，英文待核346、方法231；候选8266含噪声，旧337本轮重匹配211。EFR全部56另计，其他种子引用位置1681=1527+27+30+65+32，非独立相关论文总数或全部被引全文核验。输出54件；ZIP testzip及每文件逐字节比较通过（10,185,257字节），所有引用表ID/理由/源SHA、400人工筛选主日志一致、核心/EFR首位断言通过；`python3 -m compileall -q work/literature_research_20261005`、`git diff --check`通过。修复ForenAgent参考解析中同一工具文本行拼接的L编号，最终65连续位置；一次脚本变量注入碰撞导致集成未执行，已改用独立ns/明确base并完整重建，不交付失败中间计数。无模型代码修改/实验，不需tensor/模型测试。
+- 浏览器2 Scholar tab5 `activeScholarTab`在GS086前向末页，继续主题查询必须先经真实学术首页清除cites。tab6 OpenReview旧挑战；tab8 `continuedPrimary`为IET安全页面。保留断点，不重选浏览器；当前helpers绑定5有效。完整流水线 export→build→enrich→checkpoint→term→English→partition→index；新引用JSON已接入enrich/checkpoint，表48/51也在索引列出。
+- 下一步只继续重检：IET实际恢复后核原稿；继续英文346候选、FakeXplain版本/正式稿引用链、ForenDeX版本、早期2013融合原文与强相关前后向链。400位置分类不代表全部11406人工全文筛过；这些文件一致性检查不证明零遗漏。不要进入方案/实验，也不要把阶段包叫最终穷尽检索。
+
 ## 2026-10-07 GS070实际恢复与英文机制/证据引用链重检（仍未完成）
 
 - 仓库 `brodyZhao/my-research-project`；当前分支 `codex/forensic-explanation-literature`。本阶段最新索引commit `f05b343f1d8fce902ba7d6235588f57f1c29ce3a`，交接随后单独提交/推送，最终commit见Git HEAD。只索引与HANDOFF入Git；两个用户未跟踪文件不修改，原稿与输出留本地。
