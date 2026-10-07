@@ -2,9 +2,9 @@
 
 用户要求Google Scholar扩大重检、逐结果位置记录筛选、排查EFR与强相关引用链。英文优先，中文低相关不计入相关阅读目录，已有日志保留。旧337条遗漏EFR，不继承旧验证或作为完整目录。
 
-重检仍未完成。现有78条无异常过滤的Scholar路线，76条观察到可见终页；正常范围10970位置，另保留25个遗留引文过滤位置，共10995条日志。位置含重复/无关/待核，不当相关论文数量。候选7976条含噪声，旧目录本轮重匹配208条。
+重检仍未完成。现有85条无异常过滤的Scholar路线，83条观察到可见终页；正常范围11381位置，另保留25个遗留引文过滤位置，共11406条日志。位置含重复/无关/待核，不当相关论文数量。候选8266条含噪声，旧目录本轮重匹配211条。
 
-人工原页核查核心69篇，英文68篇（其中1篇通用迁移基础另标），每篇注明摘要/选定正文核查范围，非全部全文质量审评。EFR按相关性列首；相关性排序不等于证据质量排名。英文待人工候选345条、可迁移方法候选224条，不计已核相关论文。
+人工原页核查核心73篇，英文72篇（其中1篇通用迁移基础另标），每篇注明摘要/选定正文核查范围，非全部全文质量审评。EFR按相关性列首；相关性排序不等于证据质量排名。英文待人工候选346条、可迁移方法候选231条，不计已核相关论文。
 
 33术语族已有代表性直接主题查询，不能当整体召回率或穷尽全部词组合。GS051篡改忠实性261位置、GS052元评估18、GS053人类评价415、GS054对抗攻击327、GS055用户信任140、GS058信任校准136到可见终页。GS054/55估计大幅变动，GS056≤2025和GS057≥2026补查170/140位置仍有索引风险，不把无Next等同无遗漏。
 
@@ -16,9 +16,9 @@ Wiley安全验证已恢复：核EAI正式五作者题录、公开摘要、全部
 
 新增ForenX/FakeXplained/AIFo/ForgeryGPT/AIGI-Holmes/鉴伪RewardBench原稿评价范围核查。RewardBench98.3%人工一致率为明确胜者子集，完整四分类68%；分类指标不混用。ForgeryGPT5人全伪图前后判断不当错误依赖校准。文字合理性、IoU、模型裁判/偏好与代理共识均不自动当因果忠实。ForenX部分提示检测大幅下降保留；强相关引用链未全部补齐。新核Look Before You Judge方法/指标/限制及完整38参考位置（39表）；其CHAIR/Hal包含空解释/漏检惩罚、分类表外主张丢弃，不能作纯解释幻觉率。DFP-Net官方接受列表题录已核，全文协议待核。ForenX前向6、RewardBench前向1位置已查。
 
-英文解释裁判GS067估计622→213，仅190实际位置后空尾页；互补GS068≥2026到201、GS069≤2025到90位置，全部保留索引变动风险。37表记录相对宽查询的新题名位置，不当新增独立相关论文。英文检索没有总体年份排除。SSRN6811534题录/摘要已恢复并核2作者、2026-05-22、DOI与41页注记，公开关联41参考初筛见38；PDF下载未返回文件、浏览入口回题录、Web403，正文仍待核。Google Scholar当前正常。新增Defake-o3、Agentic Forensics、Foundation Mechanisms选定正文方法/评价核查及70/31/64参考初筛，见43/40/41。三篇新增参考含资源与背景，不能全当直接相关论文。2013作者PDF正常TLS尝试失败，未取得正文。ESIDE正式出版页与选定解释评价章节及49参考已核（44表），扩展预印本身份由正式PDF链接直接确认；GS077题名1、GS078前向13位置已查。GS079 EvoGuard7位置，选定原稿工具调度/奖励/评价已核，完整96参考位置已初筛（45表），被引原稿待核。FakeXplain OpenReview投稿入口单独要求安全验证，其与FakeXplained版本关系暂未核实。
+英文解释裁判GS067估计622→213，仅190实际位置后空尾页；互补GS068≥2026到201、GS069≤2025到90位置，全部保留索引变动风险。37表记录相对宽查询的新题名位置，不当新增独立相关论文。英文检索没有总体年份排除。SSRN6811534题录/摘要已恢复并核2作者、2026-05-22、DOI与41页注记，公开关联41参考初筛见38；PDF下载未返回文件、浏览入口回题录、Web403，正文仍待核。Google Scholar当前正常。新增Defake-o3、Agentic Forensics、Foundation Mechanisms选定正文方法/评价核查及70/31/64参考初筛，见43/40/41。三篇新增参考含资源与背景，不能全当直接相关论文。2013作者PDF正常TLS尝试失败，未取得正文。ESIDE正式出版页与选定解释评价章节及49参考已核（44表），扩展预印本身份由正式PDF链接直接确认；GS077题名1、GS078前向13位置已查。GS079 EvoGuard7位置，选定原稿工具调度/奖励/评价已核，完整96参考位置已初筛（45表），被引原稿待核。FakeXplain正式ICLR页面与22页PDF已取得，48表保存版本疑点；无需等待OpenReview才能读正式稿，暂不计新独立核心。GS080–82为4/3/1位置；扩词GS083/84共241/159位置到可见终页，400位置人工题录筛选见51，索引摘录串页不据关键词纳入。JPEG原稿/27参考、Trusting正式摘要/30公开参考、ForenAgent正式摘要/65公开参考、OmniVL-Guard Pro裁判协议/32参考见46/47/49/50；正文范围与引用完整性限制各自标明。GS085 IET题名1及GS086前向2已查，原页Web403/安全验证待人工恢复，不排除高相关论文。
 
-2124条原页/主DOI题录获取尝试记录成功/空/失败；不等于唯一原稿数量，DDL被引40次题录另表。完整网页和原稿仅work，输出为题录/筛选/哈希；Git仅索引和交接。
+2131条原页/主DOI题录获取尝试记录成功/空/失败；不等于唯一原稿数量，DDL被引40次题录另表。完整网页和原稿仅work，输出为题录/筛选/哈希；Git仅索引和交接。
 
 当前未决路线：GS007, GS037, GS045, GS049, GS050, GS054, GS055, GS056, GS057, GS067, GS068, GS069。显示上限风险：GS007；索引变动风险：GS045, GS049, GS054, GS055, GS056, GS057, GS067, GS068, GS069。完整候选原稿、强相关前后向链与版本归并继续核查；没有开始研究方案/模型实验。
 
@@ -42,6 +42,12 @@ Wiley安全验证已恢复：核EAI正式五作者题录、公开摘要、全部
 - [43_Defake_o3全部70参考位置初筛.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/43_Defake_o3全部70参考位置初筛.csv)
 - [44_ESIDE正式出版全部49参考位置初筛.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/44_ESIDE正式出版全部49参考位置初筛.csv)
 - [45_EvoGuard全部96参考位置初筛.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/45_EvoGuard全部96参考位置初筛.csv)
+- [46_DualJPEG全部27参考位置初筛.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/46_DualJPEG全部27参考位置初筛.csv)
+- [47_TrustingDetector公开全部30参考位置初筛.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/47_TrustingDetector公开全部30参考位置初筛.csv)
+- [48_FakeXplain正式ICLR原稿与版本关系审计.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/48_FakeXplain正式ICLR原稿与版本关系审计.csv)
+- [49_ForenAgent公开全部65参考位置初筛.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/49_ForenAgent公开全部65参考位置初筛.csv)
+- [50_OmniVLGuardPro全部32参考位置初筛.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/50_OmniVLGuardPro全部32参考位置初筛.csv)
+- [51_可核验与完整性扩词400位置人工题录筛选.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/51_可核验与完整性扩词400位置人工题录筛选.csv)
 - [05_检索路线覆盖与终页核对.json](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/05_检索路线覆盖与终页核对.json)
 - [17_文件与覆盖一致性检查.json](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/17_文件与覆盖一致性检查.json)
 
