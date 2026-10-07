@@ -1,5 +1,18 @@
 # Project Handoff
 
+## 2026-10-07 GS070实际恢复与英文机制/证据引用链重检（仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`；当前分支 `codex/forensic-explanation-literature`。本阶段最新索引commit `f05b343f1d8fce902ba7d6235588f57f1c29ce3a`，交接随后单独提交/推送，最终commit见Git HEAD。只索引与HANDOFF入Git；两个用户未跟踪文件不修改，原稿与输出留本地。
+- 用户“结果已显示”后实际核GS070为正常1条SSRN6811534结果，无Next；没有可见被引按钮，不推出全球零引用。GS071由实见Related articles链接逐页10页100推荐位置，非引用/主题穷尽。GS072 ForenDeX citation-only1、GS073前向1；引用论文Foundation ref49称CVPR2026:6592–6601，原稿身份未核，不能据同七作者与ForenX归并，42CSV保留疑点。
+- GS074早期Dempster–Shafer2013题录1、GS075全部12版本位置2页到终页，版本非12独立论文；GS076 watchful forensic analyst多线索融合14位置2页到终页。Siena作者PDF curl正常TLS exit35、另urllib默认证书验证EOF失败，未取得PDF，不关闭证书校验。GS077 ESIDE精确题名1、GS078前向13位置2页、GS079 EvoGuard精确7位置均到可见终页。
+- 新增原稿人工阅读：Defake-o3 arxiv2608.16259，选定证据生成/评价/附录，70参考逐位置初筛（43）；Agentic Forensics 2609.24359，适用家族仲裁而非理由因果依赖，31参考（40）；Foundation Mechanisms 2608.12155，频段干预/反演样本选择边界，64参考（41）。完整引用列表不等于所有被引正文已读。Agentic列明作者6，不按arxiv自动文字错算9；原引用旧ForgeryGPT题录不覆盖已核v4。
+- ESIDE正式AAAI40(13):10844–10852，DOI10.1609/aaai.v40i13.38060，2026-03-14，10作者；正式9页PDF直指扩展arxiv2503.06201确认身份，选定解释模块/评价核读，49参考位置逐条初筛（44）。图文短语相似度/文本质量不证明检测决策忠实，人工剔除错误伪迹标签不等于全解释独立人工评审。shell PDF下载DNS失败，Web正式PDF章节已返回，未声称本地PDF下载成功。EvoGuard原稿3.2–3.4/4.1–4.4与讨论核读，工具共同失效可误导推理；奖励真假/格式/分析长度不证明理由忠实，完整96参考位置已逐条初筛见45，被引原稿仍待核。
+- Scholar当前健康，无Google验证待办。OpenReview FakeXplain实际跳转 `https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DUcpTOa8OnG`，显示浏览器验证；已异步请求人工恢复，尚未回复；与已核FakeXplained版本关系未核。不自动解挑战或登录，不连刷。没有进入方案/模型实验。
+- 导出1158原始页、10999原始行，4非Scholar行排除；公开日志10995位置（正常10970+遗留过滤25），78正常路线，76可见终页/66无已观察风险。12未决路线保留；显示上限GS007、9索引变动路线不作穷尽，宽中文GS050依用户指示降低优先级。33词族有代表查询，不是整体召回率。核心69，英文68（含迁移基础1）、中文1；英文待核345，方法224。候选7945含噪声、旧目录重匹配208；EFR56参考另计，其他已初筛1527位置，不当独立相关篇数。原页/主DOI获取尝试2124，含失败，不当唯一稿数。
+- 全流水线export→build→enrich→checkpoint→term→English→partition→index成功；0解析失败；新增31/64/70/49/96位置连续、理由、源SHA和CSV读回通过，核心69/EFR首位及GS070恢复断言通过。`python3 -m compileall -q work/literature_research_20261005`、`git diff --check`通过；48件ZIP testzip和逐文件字节比较通过（9,774,593字节）。只文献数据，无模型运行测试。
+- 浏览器2原标签1/2/3中途消失，listTabs空后在同浏览器建新页；参考原稿tab7已完成96位置提取，可关闭；当前Scholar tab5 `activeScholarTab`/`resumedScholar`，OpenReview tab6 `englishPrimary`。旧helpers闭包捕获tab1，赋值不足以恢复；已同cell重建 `currentRead`、`searchResearchRoute`、`walkResearchPages`绑定tab5。新页正常；无须重选浏览器。继续新查询须经实际学术首页清除遗留cites/cluster/year过滤。记录读取选定正文，不取隐藏浏览器状态。
+- ChatGPT Web下一步只继续重检：OpenReview人工恢复后核FakeXplain版本；EvoGuard全部96参考已初筛，被引原稿及英文345候选与其他强相关前后向链/早期融合原文待核。公共目录仍明确未完成；不可因增加条目或文件检查通过而称零遗漏。新增scripts `add_evidence_round.py` 重跑会重置部分阅读范围（Defake已补70引用），不要无理由覆盖；先全流水线重建再脱敏，不单独enrich去snippet后的公共master。
+
 ## 2026-10-07 学术恢复回复后核对仍受阻，继续原稿与38参考审计（未完成）
 
 - 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；索引提交 `2842e5268b0547cbec156733e2f8d076a655fee8` 已推送。交接随后单独提交/推送，最终commit见Git HEAD。两个用户未跟踪文件不修改，原稿/work/outputs不入Git。
