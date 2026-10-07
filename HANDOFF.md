@@ -1,5 +1,19 @@
 # Project Handoff
 
+## 2026-10-07 原型解释、跨数据集一致性与早期证据融合续检（仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；阶段索引commit `f5d8e13771ba58d5cec090456d5dc005550ae7d2` 已推送，交接随后单独提交/推送，最终commit见Git HEAD。只索引/HANDOFF入Git，论文原文、work/outputs和两个用户未跟踪文件不提交、不改动。
+- 原断点ExplaNET IEEE10542403参考页已正常加载20条，不是上一工具输出截断意味着网站失败。公开摘要/介绍首段核原型训练及Grad-CAM，4作者、DOI10.1109/TBIOM.2024.3407650、在线2024-05-30/期号2024-10、6(4):486–497；正文要求登录，不确认原型干预、因果忠实性、人类信任实验。全部20公开引用逐条初筛53CSV；SupCon/ICCVW被引用未标workshop的题录问题与ProtoExplorer2023预印本链接2024正式DOI保留。
+- IET用户恢复后已核 From pixels to proof，Anita Khadka/Carsten Maple，DOI10.1049/icp.2025.2976，CADE2025、2025(22):138–144；在线2025-09-18/期号2025-10-01分开。PDF实际按钮回带download=true摘要页、订阅拒绝；无全文/公开参考，不作零参考结论。原先安全验证阻挡已更新，历史Web403仍保留；从题录待核升级为公开摘要核心，tier2，摘要不足以证明解释可靠性。
+- GS087 SupCon题名1，GS088前向10页98位置到可见终页；全部98人工题录筛选54CSV与主日志一致，含重复/无关/不足题名，不称98篇相关文献。GS089 ECS精确题名查询触发“请进行人机身份验证”，显示1结果但没有可读条目，记录0已读位置/非零命中/非终页。已异步请用户手动恢复，当前尚无新回复；不能自动解验证或刷新绕过。新增99实际位置，原始1216页/11509行，4非Scholar排除；主日志11505=11480正常+25遗留过滤。88有效范围路线、85可见终页/75无既定两类观察风险，13未决包含原12与GS089。
+- SupCon官方CVF PDF正常TLS下载11页1,614,480字节、SHA c1280868e77ee6113f254c97929cf5b392e80659fbb3f4268a6e285f4db5359d。Ying Xu/Kiran Raja/Marius Pedersen，WACVW2022 XAI4B:379–389，DOI .00044由IEEE被引正式记录核，非WACV主会。选定4/5/6、图4/5热图与UMAP及评价限制已读：定性投影/热图比较后融合，不当独立忠实性验证；FaceSwap TOSC47.55/融合49.77等泛化失败保留。全部71参考按列提取，连续位置及源SHA核，52CSV初筛；6/7同题疑似重复、引用55通用可视化评价不等于本研究实际量化忠实性。不要无依据叫热图Grad-CAM。
+- GS088第85位置再次检出已有核心ECS，原页Research Square rs-10864099/v1正常，四作者 Adedayo Ayomide Adeniran/Adetayo Olaniyi Adeniran/Abiodun Ojo/Thomas Oluwaseun Onih；2026-09-21预印本未期刊同行评审。正常TLS取得33页607,706字节，SHA ab04e01c8588a5911aab9cb58dda2856044bb60e40752d498e54069606e79026。§3.5–3.6/4/5/7.1选定原稿升级，不新增独立核心计数。ECS是同图同检测器Grad-CAM与++的top15% IoU/SSIM等权组合，聚合仅正确分类图；跨域分布差异不比较不同图热图，单初始化SD非多种子。不能证明错误线索依赖或因果忠实。§4.1保留未编辑drop-path参数备注，测试视频数量措辞不清，26引用的24 SupCon写154–164/.00020错误，已保留原始错误并用正式379–389/.00044匹配。全部26位置55CSV；Ajayi参考刊名身份未核，不自动断言虚假。手稿图2借自Tsigos，不能当本实验展示。此文高度相关但证据质量限制保留。
+- 2013 Fontani作者PDF此前默认沙箱DNS/TLS失败，本次正常TLS扩展权限下载成功32页4,534,612字节，SHA50d0c26bf013c617f665d7cea3a8147ba37d6d5bc7d0efbc51d25e36c540a948。IEEE Cite This核正式TIFS8(4):593–607，2013-04，DOI10.1109/TIFS.2013.2248727及5作者。作者稿2013-02-27 DRAFT，页眉2007为模板，非最终15页期刊排版。核II/III、IV-B、V：工具可靠性折扣、疑问质量、痕迹兼容、证据独立性/重复计权/归一化冲突消失；检测ROC/可靠性扰动非现代解释忠实性。正文20次与图7标10次不一致，草稿未解析[?]且缺bibliography。IEEE公开19参考逐条初筛56CSV，不能当作者稿引用完整性；其中1976 Shafer书链接2008 IEEE记录，保留身份疑点，不以该DOI自动合并。早期1967理论等不因年代排除。
+- 核心77/英文76（含1通用迁移基础）/中文1，英文待核345、迁移方法238；候选8386含噪声，旧337本轮重匹配222。ECS旧title身份review升级为DOI后去重复当前review，仍1独立核心。EFR56另计；其他种子参考1817=1681+71+20+26+19，不当独立相关篇数或全被引全文已读。原页尝试2139含成功与历史失败；新27补充Web结果另表16，不混Scholar。公开输出59件，ZIP 10,335,051字节；CRC/testzip与每文件逐字节一致。
+- 全流水线 export→build→enrich→checkpoint→term→English→partition→index成功；引用52/53/55/56位置连续、每条理由/原列表SHA，54的98人工题录理由与02一致，旧400人工记录仍核。compileall -q work/literature_research_20261005、git diff --check通过；EFR首位、核心77排序连续断言通过，无模型代码/实验。一次新筛选脚本把原list当dict失败，未写出中间成果，改为result_id索引后重新生成验证；未交付失败状态。这些一致性检查不证明零遗漏。
+- 浏览器2复用：tab5 activeScholarTab为GS089验证断点；tab8 continuedPrimary为Fontani6470675/references，Cite This弹窗打开，正式题录已读。tab6 englishPrimary旧OpenReview挑战仍保留；无需为读正式FakeXplain要求用户处理。当前helpers绑定5；恢复后先核实际结果并记录GS089，再继续主题查询。Scholar引文查询后必须经真实首页清除cites；不要重选浏览器。
+- 新脚本 add_prototype_round.py/add_ecs_reading.py/add_fontani_restored.py与screen_supcon_forward.py只针对本阶段证据；旧add_continue_round.py不可全跑，会重置后来阅读范围。新add_prototype_round也不要在ECS升级后无理由再跑，其三review可保留但旧摘要身份审计注意去重。下一步继续GS089恢复、英文345候选/强相关前后向链，CHI情报分析员工具原稿、Sparse/ConvNext原型、捷克热图用户论文两位置高相关不因语言排除；2011前身、版本链、索引风险未闭环。不得进入方案/实验，不得宣称全面检索完成或零遗漏。
+
 ## 2026-10-07 可核验/完整性扩词与JPEG、用户信任原页重检（仍未完成）
 
 - 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；阶段索引commit `1c7c0d9756fb0838a47f7d9210b8e5730afdd7db`，随后单独提交/推送本交接，最终commit见Git HEAD。保留用户两个未跟踪文件，work/outputs与原稿不入Git。上一阶段交接候选7945为抄录错误，按该阶段工具结果应为7976；本阶段使用实际生成计数8266，不继承旧数字。
