@@ -1,5 +1,15 @@
 # Project Handoff
 
+## 2026-10-07 学术恢复回复后核对仍受阻，继续原稿与38参考审计（未完成）
+
+- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；索引提交 `2842e5268b0547cbec156733e2f8d076a655fee8` 已推送。交接随后单独提交/推送，最终commit见Git HEAD。两个用户未跟踪文件不修改，原稿/work/outputs不入Git。
+- 用户回复“学术已恢复”，但实际Scholar标签1仍显示“请进行人机身份验证”及未勾选reCAPTCHA，footer=false/rows0。确认只有一个Scholar标签后，在用户确认恢复的基础上仅重新加载一次，仍captcha=true、无论文结果。两个新观察已导出（同URL最新记录替换，独立页/位置数不增加）。已异步请用户看到结果后回复“结果已显示”，本次尚无进一步回复。不自动完成验证、不连续刷新、不能把计数1当已取得题名/零命中/终页。
+- 在等待期间继续核原稿：Look Before You Judge，arXiv2609.35536，首发2026-09-28，11名作者已核。作者HTML方法/实验、附录A/B指标及限制人工阅读；区域注意力对比是提议机制，作者明确非决策因果归因。外部LLM将解释映射预定义伪迹分类，分类表外主张被丢弃；空映射或伪图判真也记最大CHAIR/Hal惩罚，故Hal不等于纯已输出幻觉率。伪迹分数仅假样本，ACC全部真假；白盒/高频/细节保留限制明确。纳入强相关核心，完整38参考逐条初筛39CSV，Qwen3.5博客23作为资源不当独立论文。
+- DFP-Net用IAPR保存的IJCB2023官方接受列表确认题名与4作者Fatima Khalid/Ali Javed/Khalid Mahmood Malik/Aun Irtaza，纳入方法核心但范围仅官方题录；DOI原页/注册API失败，全文未取得，原型是否进入分类路径/干预/独立用户实验未知。相邻TOC的Korshunov等不误当本篇作者。未继承二级综述描述为已核实验。Union-Saliency作者公开稿网页工具失败，正常TLS curl20秒握手失败(exit35)，不关闭证书验证；其攻击对象与直接解释相关性继续待正文，不从搜索摘录作确定排除。
+- 本轮补充Web104–109各返回结果保留16初筛；4个Web原页/题录失败与Union正常TLS失败另计15审计，新人工来源2条。当前原页/主题录尝试2116，核心64/英文63（含通用迁移基础1）/中文1；英文待核333、迁移方法223；候选7763含噪声，旧337重匹配207。其他参考位置1217=原1179+Look38，EFR56另计，非独立相关篇数或被引全文全已核。Scholar正常路线69、10844位置、66可见终页/56无已观察风险、GS070当前阻挡/13未决均不变。没有开始方案/模型实验。
+- 全流水线export→build→enrich→checkpoint→term→English→partition→index成功；零解析失败，64核心/EFR首位/Look惩罚条款和DFP官方列表范围断言通过，GS070当前非终页/rows0、38参考SHA与CSV读回通过。python3 -m compileall -q work/literature_research_20261005、git diff --check通过；42件ZIP testzip及逐字节比较通过（9,551,734字节）。无模型代码修改/推理，不需模型测试。输出42件保持未完成。
+- 浏览器2，标签1 resumedScholar仍GS070验证码；标签2 englishPrimary已用于Look作者HTML并核38参考，源页可继续参考链；旧Drive下载标签3前次挂起未处理，不当文件成功。两有效标签继续markHandoff。用户真正恢复后先核结果再读引用入口/版本；不再等待已恢复的SSRN题录，SSRN正文仍缺。继续未核英文原稿/强相关前后向链；保留来源范围，不因核心数量增大宣称重检完成或零遗漏。
+
 ## 2026-10-07 SSRN恢复核查与新的Scholar验证断点（重检未完成）
 
 - 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；索引提交 `c9830a42e31410a705125ef23c5b867b2f2d26bf` 已推送。此交接随后单独提交/推送，最终提交见 Git HEAD。用户两个未跟踪文件保留；仅索引/HANDOFF入Git，原稿/网页/outputs留本地。
