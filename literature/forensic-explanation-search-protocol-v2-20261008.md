@@ -88,3 +88,12 @@ ATAR本轮重新核读作者v1的工具机制、训练消融与解释评价（84
 - 该综述Scholar cited-by结果4条逐条筛查：图文本OOD与图像OOD两篇排除，ProCoS篡改定位鲁棒性与PURE内容捷径检测保留为边界/方法候选。表见102。尚未逐篇筛完综述全部参考文献。另检出Rethinking VLMs for Image Forgery Detection and Localization（CVPR 2026 Findings）、Explaining Deepfake Detection by Analysing Image Matching（ECCV 2022）、OMNI-Fake等候选。Evidence Fusion正文仍受访问验证限制，只留候选。
 - 当前计数：107父查询、59条可见末页、13,941父查询位置；120拆分/诊断式、3,466位置、50可见末页、38满足严格完整判据；17,486总位置含重复/版本/引文，非论文数。17条历史阻断观察、当前无活动阻断。全面检索未完成。
 - 阶段交付更新：72共35项、90共33项、100共220条路线观察、102含4条前向引用筛查记录；归档包待本次阶段更新后重新验证。下一步继续综述关键引用回查、未试检的宽词/非deepfake路线、候选原稿与索引异常回检；不得声称穷尽。
+
+
+### 2026-10-08：X²-DFD直接人评与核心引用链筛查
+
+X²-DFD官方页面确认发表于NeurIPS 2025，arXiv首发2024、v4日期2025-05-29。其正文明确以解释可靠性/幻觉为动机；用feature-level balanced accuracy与人工核验筛选生成解释依据，并在DD-VQA及未标注场景采用文本相似度、人工/GPT-4o质量评分。官方补充材料检索结果记录15名20–40岁受教育程度较高参与者评100个deepfake样本，按检测能力、解释合理性和细节程度给0–5分。因此归为强相关的人评证据，但不能把质量/合理性评价等同于对原分类器的因果忠实性；目前未核到sanity/randomization、反事实依赖或使用者信任/依赖效应。样本说明仅称100个deepfake images，故尚无证据显示有真实图或假阴性对照。
+
+X²-DFD评测/相关工作链中4篇直接相关文献已逐篇记录在输出`103_X2DFD评价链相关参考文献逐条筛查.csv`：FakeShield、FFAA、Can ChatGPT Detect DeepFakes?、A Hitchhiker’s Guide to Fine-Grained Face Forgery Detection。四篇均属于任务/解释或细粒度评测强相关，但各自的检测、定位、鲁棒性、专家筛选或答案质量终点均需与解释faithfulness区分。X²-DFD已补入72优先表和90候选表，正式年限/版本与原先候选的错误2026记录已校正。
+
+用户当时打开的Scholar cited-by参数`cites=6391361178114081016`在一次读取后显示人工reCAPTCHA。该观察记入忽略目录execution_pages.json和输出`104_谷歌学术被引链断点与受阻记录.csv`；不计作空结果、零命中或末页。页面已交还用户人工恢复，并标记handoff，恢复后继续。
