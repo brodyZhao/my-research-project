@@ -1,3 +1,15 @@
+## 2026-10-08 V2细检索续检与原稿核查（整体未完成，当前学术受阻）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段索引最新commit `7bdaecfb77492ffbaba324ad959ee23e4ee92d75` 已推送；本交接随后单独提交推送，最终HEAD以Git为准。用户两个未跟踪文件未改/未提交。work/outputs仅本机保留。
+- 用户本轮恢复Scholar后逐断点继续。107父查询中52条到可见末页：F1全部15、F5全部15、F3 11、F2 8、F4 3。主查询9431位置，ForensicChat附加28位置（题名1/版本3/前向24），74共9459位置；不是独立论文数，不把1125试检再加为新增。75有107路线实际页数、偏移缺口、末页、估计数范围和风险。52中T12-F2/T08-F4大幅索引变化须拆词回检，故可见末页不当覆盖充分；55父路线未全分页，48大查询仍需拆分。
+- 最新真实阻塞：tab1 T03-F4第2页start10自动查询限制，无验证码控件；已核AX，首页10位置保存。不要对用户刚回复恢复的旧T10-F2再索取恢复。T10-F2已恢复并到第62页616位置。下一轮先复核当前页，正常后 `readV2('T03-F4', v2Plan.find(x=>x.query_id==='T03-F4').query)` 保存恢复页，再 continueFineV2；不能从末尾受阻观察的空next判断完成。用户须手动恢复，未自动验证/绕过限制。
+- 原稿：ForensicChat2509.25502作者v1指定方法/解释实验/AppendixE.3；800均假图，错误判决评分惩罚耦合；没有已核视觉干预因果协议。Counterfactual Tests2609.06704为SNLI-VE/AOKVQA迁移方法，不计直接鉴伪；编辑/识别误差与单模型重建控制边界见78。HexMIL2608.05101升级§2–5/表1–5：前向注意力、热图门控/平滑/阈值、切片结节坐标标签；架构均值池化消融不等于固定模型解释随机化；补充待核（81）。ATAR2609.39066升级§3.1/3.2/4.3/4.4.1：200图裁判、50图3人，ATAR独有额外热图裁判输入不对称；原页列MM2026 DOI，正式对应待核（84）。没有新实验或设计工作。
+- 新参考题录全部位置初筛：ForensicChat65（76）、视觉反事实48（77）、HexMIL48（80），共161；不是161被引全文已核。ForensicChat前向24已取全、逐题名人工初筛82；3版本不计3论文。既有EFR56及其他参考旧日志保留。72优先22条（旧21重审+新ForensicChat），68旧82尚61待重审；机制相关与直接评价分开，全文范围受限如实注明。
+- 原始观察 `work/search_protocol_v2/execution_pages.json`；scripts publish_execution_round.py新增CAPTCHA/自动查询/请求不符排除、有效页offset去重、连续性、索引变化风险；空阻塞不当零。pilot_records.json留原始115次试检。不要把 v2Executed 清空/重复finish已结束路线。CUA持久v2Scholar/tab1、v2Primary/tab3；恢复文档后复用。不要重跑publish_protocol/refine_protocol/finish_first_batch/add_primary_round/reassess_twelve，会重置部分新记录。执行publisher保留ATAR新增22。
+- 测试：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；74全部9459 ID唯一/理由非空；75全部107路线、52可见结束的offset连续；65/48/48参考、24前向数量与连续性检查通过。87文件ZIP14258440字节，CRC及每文件字节一致通过。文件一致性不能证明零遗漏。交付目录 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/`；ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-05.zip`。
+- 遗留：当前Scholar限流；WorldScientific DOI10.1142/S0218001426400343仍安全验证待核，未当不存在。T12-F2 start750尾页估计由约750降525并空，取得750位置；T08-F4首页估计241尾页82/92，实际100位置；需拆解释子词回检。剩余F4小路线/大路线拆分/B1B2，候选正文、版本、递归引文未完。
+- 建议ChatGPT Web首先检查75索引异常与74初筛范围；52可见结束不是完成率/召回率，22也不全部是独立忠实性实证。继续本协议细到宽，禁止在重检未收尾前进入模型实验/研究方案。
+
 ## 2026-10-08 用户要求重建检索逻辑：V2.1取代旧流程（整体仍未完成）
 
 - 仓库 `brodyZhao/my-research-project`；当前分支 `codex/forensic-explanation-literature`；最新方案commit `059d502` 已推送，交接随后另commit/push，最终hash见HEAD。主要tracked文件 literature/forensic-explanation-search-protocol-v2-20261008.md 和旧阶段索引开头的撤销继承提示；outputs/work忽略，两用户未跟踪文件不改动。
