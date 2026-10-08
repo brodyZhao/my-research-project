@@ -703,7 +703,7 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 
 ## 2026-10-09：Google Scholar恢复后窄式续检与引文补筛
 
-- 仓库：`my-research-project`；当前分支：`codex/forensic-explanation-literature`；远程：`origin https://github.com/brodyZhao/my-research-project.git`。本阶段开始HEAD为 `4be369c6b449f784dbc238f63ee75aa8fc0d1366`；检索协议已提交为 `915aafd`，本交接单独提交后HEAD哈希以Git为准。
+- 仓库：`my-research-project`；当前分支：`codex/forensic-explanation-literature`；远程：`origin https://github.com/brodyZhao/my-research-project.git`。本阶段开始HEAD为 `4be369c6b449f784dbc238f63ee75aa8fc0d1366`；检索协议的最新内容提交为 `915aafd`（完整对象哈希见 `git rev-parse 915aafd`）；本次HANDOFF单独提交为随后文档提交。
 - 用户回复“已恢复”后，IAB Scholar结果可读；Chrome扩展原标签仍落在Google reCAPTCHA，未代为操作验证码。沿既有 `"AI-generated image detection" "human evaluation" explanation` 读完7个结果页、66个可见位置，terminal页Next禁用；估计数66–77波动。逐位置结果在 `74_V2完整分页逐位置初筛.csv`，原始记录在 `work/search_protocol_v2/execution_pages.json`。题录位置含重复与无关项，不能称66篇相关论文。
 - 追查AnomReason、FakeReasoning、ForenDeX的前向引文，分别完整筛查10、8、1个Scholar位置，新表 `101_AnomReason_FakeReasoning_ForenDeX前向引用逐条筛查.csv`。已逐条区分强相关、待核/邻接、跨视频/文档边界、排除。强种子参考文献递归还未完成。
 - REVEAL作者v2 HTML已读方法、奖励、人工评价与相关附录。其证据链训练、忠实性奖励及100例/3位专家匿名解释偏好研究与题目高度相关；但小样本人类质量偏好不能证明决策的因果忠实性或普通用户的适当依赖。ForenDeX确认CVPR 2026 Findings官方记录与CVF PDF URL、Scholar精确题名及一条前向引用；官方PDF正文仍未能读取，故作为“高主题相关、原文待核”暂列优先表，未声称其可靠性指标已核。72优先表49条，90候选表50条（均非独立忠实性实证数量）。
