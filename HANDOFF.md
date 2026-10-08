@@ -708,7 +708,7 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 追查AnomReason、FakeReasoning、ForenDeX的前向引文，分别完整筛查10、8、1个Scholar位置，新表 `101_AnomReason_FakeReasoning_ForenDeX前向引用逐条筛查.csv`。已逐条区分强相关、待核/邻接、跨视频/文档边界、排除。强种子参考文献递归还未完成。
 - REVEAL作者v2 HTML已读方法、奖励、人工评价与相关附录。其证据链训练、忠实性奖励及100例/3位专家匿名解释偏好研究与题目高度相关；但小样本人类质量偏好不能证明决策的因果忠实性或普通用户的适当依赖。ForenDeX确认CVPR 2026 Findings官方记录与CVF PDF URL、Scholar精确题名及一条前向引用；官方PDF正文仍未能读取，故作为“高主题相关、原文待核”暂列优先表，未声称其可靠性指标已核。72优先表49条，90候选表50条（均非独立忠实性实证数量）。
 - 修改文件：跟踪的 `literature/forensic-explanation-search-protocol-v2-20261008.md`、本 `HANDOFF.md`；忽略输出包含72/90/101以及刷新后的阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-08.zip`（113个文件）。原始搜索日志及查询计划在忽略的`work/search_protocol_v2/`；用户原有两个未跟踪文件保持未改动、未暂存。
-- 计数：发布器报告17,597个结果位置（非独立论文数）；父查询107式/13,941位置，细分与引文路线125条/3,571位置，补充位置77；分类分项合计与总数差8个位置，待进一步查明口径，不掩盖差异。54条子路线可见终页，42条达到严格完整判据。检索没有完成，未声称覆盖零遗漏。
+- 计数：发布器报告17,597个结果位置（非独立论文数）；父查询107式/13,941位置，细分与引文路线125条/3,571位置，补充位置77；多出的8个位置已核对为两条旧补充记录：`CITEDBY-6391361178114081016` 6个位置、`GS-EXPL-TAMPERING-SURVEY` 2个位置；合并后三类分项及旧补充记录对齐17,597。54条子路线可见终页，42条达到严格完整判据。检索没有完成，未声称覆盖零遗漏。
 - 验证：`python3 work/search_protocol_v2/publish_execution_round.py`通过；`python3 work/search_protocol_v2/enrich_t02_f3_refine2.py`通过；`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过。阶段ZIP `testzip()`通过、113个文件全部与输出目录逐字节一致；当前SHA-256 `12f9072f04e929c08a4146a7dfa14c5b5bdec190c1b36eb886cec03b27deb77c`。CSV验证：72=49条连续排名，90=50条，101=19条逐项理由，74=17,597个位置。
 - 遗留：查明8个位置的汇总分项差异；读取ForenDeX官方全文；继续REVEAL等强相关论文的参考/被引链和候选原稿核对；处理剩余大规模查询和索引波动路线。下一轮仍只做检索/筛选，不进入研究方案或实验设计。
 - 建议 ChatGPT Web下一步：从101逐条表和72第13–14项复核REVEAL/ForenDeX证据等级，补齐ForenDeX原稿后确定排名；随后继续强相关种子引用链，同时追踪8位置统计差异。不要把当前阶段称为最终目录。
