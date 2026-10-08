@@ -688,3 +688,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要跟踪修改：`literature/forensic-explanation-search-protocol-v2-20261008.md`。忽略目录检索原始数据在`work/search_protocol_v2/execution_pages.json`及其execution_audit，用户交付在`outputs/图像鉴伪解释可靠性_重检_2026-10-05/`；本阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-08.zip` 含111文件，CRC及逐文件字节比较通过，SHA-256清单为`106_本次阶段包_SHA256清单.csv`。用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`保留原样，未暂存。
 - 测试：`python3 work/search_protocol_v2/publish_execution_round.py`通过；`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过；检查优先排名1–38连续、105恰有6条唯一标题、72两篇新候选排位正确、100末页20条跨快照记录有终页标签、审计为17,492位置/无活动阻断；归档testzip与文件字节比较通过。无业务源码改动，无模型测试。
 - 遗留：120细查询仍有82条未满足严格完整条件，48个大父查询须继续细拆；旧候选正文、索引波动回检、版本去重和强相关文献前后向引文递归尚未完成。ResearchSquare跨模态综述全文本轮访问失败，仅保留待核。建议下一轮继续未完整细查询和大式拆分，再核剩余强相关原稿及其参考/被引链；不可依据当前结果宣称零遗漏、目录完整或进入实验阶段。
+
+### 2026-10-08：T02-F3人类评价路线继续扩展（当前等待用户恢复Scholar）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段方案提交：`2ea75df`（待推送）；HANDOFF将在后续独立提交，origin为已配置的GitHub目标。本阶段包括可追溯的Scholar页日志和新增文献核查；页面全量记录位于忽略目录，用户已有未跟踪文件保持未触碰。
+- 继续两条Scholar查询并逐条筛首页：image manipulation/editing × explanation × human evaluation（约2,670条）；image forgery/tampering/manipulation × human study/evaluation × explanation/attribution（约3,670条）。两者规模过大、结果异质，只记录首10个位置并拆式，未声称结果完整。每个位置的筛选理由在本机输出100和`work/search_protocol_v2/execution_pages.json`。
+- 新核查/补入：ForenX（20名用户比较100图的解释质量，直接主观评价但不测因果faithfulness）；FakeXplain（ICLR 2026人工接地、定位/泛化机制，非已证实faithfulness实测）；AI-Generated Images: What Humans and Machines See…（100人、16种XAI，明确区分人类plausibility和faithfulness）；LayLens（ICMI 2025 Demo，15人自评可用性）；AIES 2025《Enhancing Image Comprehension…》（N=90上下文解释对受众影响，邻接）；ForgeryGPT（100个伪造图、5名参与者看解释前后的信心/判断，实验规模及对照不足；修正此前候选表误写“已在优先清单”的状态并加入优先清单）。详细限制和源页已写入72、90、100。
+- 统计：父查询107/13,941位置/59可见末页；子查询122/3,486位置/50可见末页，其中38通过现有严格完整条件；全日志17,512位置（包括重复版本/引文，非独立论文数）；补充位置77；19条受阻/无效观察，其中当前有一个活动阻断；优先清单44行，候选表41行；100逐位置路线表230行。检索与引文递归仍未完成。
+- 当前断点：提交`"AI-generated image detection" "human evaluation" explanation`后，Google Scholar转到自动流量限制页，无结果/无人工验证控件。原始记录标为阻断，不按零结果。用户已表示将手动恢复后回复“已恢复”。恢复后首先从此查询读取首页，判断规模，再分页筛查。
+- 本地本阶段文件：跟踪文件`literature/forensic-explanation-search-protocol-v2-20261008.md`；忽略的逐页原始JSON及生成输出在`work/search_protocol_v2/`、`outputs/图像鉴伪解释可靠性_重检_2026-10-05/`。阶段ZIP已刷新：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-08.zip`，112文件，CRC和逐文件字节比较通过；SHA-256=`ae4bb78f4e3210c417a8063b709d23bd14ec717f713d4ae87430792977c0c8f5`。
+- 检查：`python3 work/search_protocol_v2/publish_execution_round.py`通过，报告17,512位置/当前阻断链接正确；`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过。阶段归档包已重建并通过逐文件校验；未运行源码测试（仓库无业务源码变更）。
+- 遗留：等待用户恢复Scholar；继续当前REFINE2与宽式拆分；核对AI-Generated Images…正式Springer书目/全文评价细节；完成当前人类评价引文线索、候选原稿及相关种子前后向引文递归。全项目仍未完成，不能声称没有遗漏。
+- 建议 ChatGPT Web：从本地72第39–44行和90/100新记录复核“人类plausibility、解释质量、人类影响”与“模型因果faithfulness”分层；确认无误后，从活动断点继续，不重跑已记录分页。
