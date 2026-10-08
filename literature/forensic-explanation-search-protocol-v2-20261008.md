@@ -80,3 +80,11 @@ ATAR本轮重新核读作者v1的工具机制、训练消融与解释评价（84
 - 引文追踪：核对了ForgeryGPT的Scholar cited-by列表，页面显示1条，题为PDF文档编辑/伪造研究，逐条排除。TriDF页面显示6次引用，cited-by列表实际返回5条；逐条记录在89，其中EFR是TriDF的引用来源，另发现TRIDENT挑战赛和DF-CBM为待核候选，两个跨模态检测综述保留背景。EFR此前56条参考文献均已逐条做题名/摘要级核筛（55个公开页面记录+1个作者PDF，12强相关、1边界）；这不表示56篇均读完全文。此引文链把强相关种子之间的交叉引用纳入，不把引文位置误报为独立论文。
 - 最新审计：父查询107式；可见末页59式；父查询结果位置13,941。拆分/诊断子式119条、有效结果位置3,266，其中50条到可见末页、38条通过当前完整性条件（无分页缺口、无估计冲突且估计变化不超25%）。总有效结果位置17,241，包含34个附加筛查/引用位置；位置会重复，不能作为论文数。历史受阻/无效页面观察12条，目前没有活动阻断。23条优先记录含直接解释可靠性实证与核心机制两种层级，不能统称为23篇因果忠实性实证。逐页证据见忽略目录 `work/search_protocol_v2/execution_pages.json`；本地交付更新后另附ZIP。
 - 验证：`python3 work/search_protocol_v2/publish_execution_round.py` 成功；`python3 -m compileall -q work/search_protocol_v2` 与 `git diff --check` 通过。检索仍未完成；未做任何实验/方案推进。下一步继续按非deepfake领域词扩展和核候选原稿，随后围绕新增强种子参考文献与前向引用继续逐篇筛查；保留索引不稳定路线并优先用更窄任务/可靠性词复测。
+
+### 2026-10-08：人类评价路线动态回检与可解释鉴伪综述引文链
+
+- Scholar检索式`"image forgery" "human evaluation" explanation`继续复核到start=96；估算数在117、114、115、116、106间波动。自动审计为21个有效分页、200个位置，仍缺start=100，未见稳定末页。新增100个逐位置回检观察，保留重复位置；不是100篇新论文。页面原始快照在忽略目录work/search_protocol_v2/execution_pages.json，逐条记录见阶段包100。
+- 新核读《Explainable Image-Centric Forgery Detection: A Survey》（Wu等，TechRxiv 2025，DOI 10.36227/techrxiv.176101439.91738583/v1；SSRN 5691366）。该综述按定位、来源归因、判断依据整理图像鉴伪解释，明确提出解释质量、faithfulness和一致性缺少标准化评价。它是领域地图/引文挖掘种子，不是原创可靠性实验；TechRxiv标明未经同行评审。稿件引用编号存在疑似错位，全部关键参考必须回到原稿。72清单增至35项，将该文列在直接实验研究之后并标明证据层级。
+- 该综述Scholar cited-by结果4条逐条筛查：图文本OOD与图像OOD两篇排除，ProCoS篡改定位鲁棒性与PURE内容捷径检测保留为边界/方法候选。表见102。尚未逐篇筛完综述全部参考文献。另检出Rethinking VLMs for Image Forgery Detection and Localization（CVPR 2026 Findings）、Explaining Deepfake Detection by Analysing Image Matching（ECCV 2022）、OMNI-Fake等候选。Evidence Fusion正文仍受访问验证限制，只留候选。
+- 当前计数：107父查询、59条可见末页、13,941父查询位置；120拆分/诊断式、3,466位置、50可见末页、38满足严格完整判据；17,486总位置含重复/版本/引文，非论文数。17条历史阻断观察、当前无活动阻断。全面检索未完成。
+- 阶段交付更新：72共35项、90共33项、100共220条路线观察、102含4条前向引用筛查记录；归档包待本次阶段更新后重新验证。下一步继续综述关键引用回查、未试检的宽词/非deepfake路线、候选原稿与索引异常回检；不得声称穷尽。
