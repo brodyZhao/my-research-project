@@ -645,3 +645,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 测试：`python3 -m compileall -q work/search_protocol_v2` PASS；`git diff --check` PASS；归档ZIP CRC与92个文件逐字节校验 PASS。Scholar依赖用户手动完成人机验证后读取正常结果，未尝试代解。
 - 遗留：大量细分路线未执行；超大/索引变化查询需进一步拆分和复查；强相关文献原稿、版本及EFR等核心种子引文递归筛查未完成。未进入实验方案阶段。不要将本阶段标为重检完成。
 - 建议下一步：从 `T02-F2-S1` 约14,200规模触发器着手，进一步按“image forgery / tampering / splicing / copy-move / synthetic image”等具体任务词与解释表达拆分，并先做结果量可行性测试；随后完成对应分页和逐条筛选，再核原稿与强相关引文链。用户已授权继续，不需重复确认。
+
+### 2026-10-08：Scholar术语扩展与TriDF引文链续检
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；协议提交：`705cca3`（已推送）；本 HANDOFF 独立提交。
+- 主要修改文件：`literature/forensic-explanation-search-protocol-v2-20261008.md` 追加检索断点和覆盖指标。逐页 Scholar 页面、拆分式和覆盖计算留在忽略目录 `work/search_protocol_v2/`。阶段交付目录 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/` 新增候选/引文筛查记录，归档为 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-08.zip`（95个文件，CRC及逐文件字节检查通过）。用户已有未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md` 均未修改或暂存。
+- 本轮工作：完成3个篡改类型×hallucination细式的分页并记录；新增12条可靠性/任务词诊断式。精确`"image forgery" "explanation quality"`记录38位置至可见末页；精确`"image forgery" "explanation reliability"`检出TriDF。宽泛`forensic "explanation faithfulness"`估算数波动且包含大量跨域记录，标记索引不稳定。筛查TriDF cited-by页5条：其中EFR是交叉引文，TRIDENT和DF-CBM留作原稿核验候选；ForgeryGPT cited-by页1条PDF伪造研究按主题排除。新增候选的边界与来源见阶段包90，TriDF引文逐条表见89。
+- 最新审计：107父式、59父式可见末页、13,941父查询位置；119拆分/诊断式、3,266位置，其中50条可见末页、38条满足现行完整判据；总有效位置17,241（含34附加筛查/引用位置，位置会重复，非独立文献数）；12条历史受阻/无效观察、当前无活动阻断。强相关优先清单23条仍混合直接可靠性评测与核心机制两层，EFR 56条仅完成题名/摘要逐条初筛，不可表述为全部全文审阅。全面检索未完成，也未进入实验方案工作。
+- 测试：`python3 work/search_protocol_v2/publish_execution_round.py` PASS；`python3 -m compileall -q work/search_protocol_v2` PASS；`git diff --check` PASS；95文件ZIP CRC和逐文件字节核验 PASS。
+- 遗留：继续扩展非deepfake任务词组合并对索引不稳定路线拆分回检；核读新增REVEAL、证据接地deepfake、STeREx-Net、TRIDENT、DF-CBM等候选原稿；优先追踪新增强相关种子的参考文献与前向引用；完成剩余父式分页、版本去重及逐篇原稿筛选。不能宣称“一篇不漏”。
+- 建议 ChatGPT Web 下一步：从阶段ZIP的90候选表及89 TriDF引文表核查新增候选原稿与直接评价终点；再继续扩大任务术语（image editing/manipulation/localization/authentication等）与解释方法别名覆盖，并将每条完整分页与逐篇筛选理由追加日志。
