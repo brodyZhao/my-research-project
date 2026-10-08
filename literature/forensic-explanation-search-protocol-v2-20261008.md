@@ -133,3 +133,13 @@ X²-DFD评测/相关工作链中4篇直接相关文献已逐篇记录在输出`1
 - 本轮新增筛查表101共19个引文结果位置，逐项给出纳入/邻接/排除理由；旧REVEAL前向5条已在历史主逐条表中保留。本批不宣称参考文献递归完成。新录的raw citation page条目在execution_pages.json，路线计划 fine_split_queries.json。逐条表：[101_AnomReason_FakeReasoning_ForenDeX前向引用逐条筛查.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/101_AnomReason_FakeReasoning_ForenDeX前向引用逐条筛查.csv)。
 - 更新计数时注意：最新发布审计报告17,597个结果位置，存在跨查询重复，不能读作独立文献数。报告分项为107条父查询/13,941位置、125条细分与引文路线/3,571位置、补充位置77；尚有8个补充位置来自未归入上述路线分项的两条旧记录：`CITEDBY-6391361178114081016` 6个位置，以及 `GS-EXPL-TAMPERING-SURVEY` 2个位置；计入后总数对齐。54条子路线到可见终页、42条达到严格完整判据。优先目录新增2项（REVEAL原稿核读；ForenDeX官方题录已核、原文待读），整体重检继续未完成。
 - 遗留：继续强相关种子的参考文献全条目检查；优先取得/读取ForenDeX官方全文；完成剩余大规模/索引波动细查询和所有强候选原稿/版本审计。不得声称“一个不漏”或零遗漏，也不得把Scholar可见末页解释为领域穷尽。
+
+### 2026-10-09：信任校准与解释稳定性子式续检
+
+- 从断点完成`T02-F3-S2`（图像操作×appropriate reliance，5页/42位置）、新增`T02-F3-S3`（×trust calibration，6页/53位置，Scholar估算63→53）及`T02-F3-S4`（×explanation stability，2页/11位置）。三式均到可见末页；本轮S3/S4新增64个可见位置，连同S2为106个位置，均逐项记录筛选理由（输出103、102）。位置并非论文数；S3索引估算变化已标注，不能当作无波动或完整覆盖。
+- S4再次命中已在优先清单的《Beyond Accuracy》，确认其主题命中不是新论文；新发现《Explainability-Guided Deepfake Detection for High-Fidelity Facial Edits》，机构摘要描述Side-VLM多视角像素级篡改掩码、CAM对齐训练以及鲁棒性/解释faithfulness评估，加入72第51项与90候选。当前仅核对机构作者摘要、DOI和会议记录，全文中的faithfulness定义、指标、数据切分、干预和稳定性协议仍待核；没有用户依赖实验。邻接记录《Surfacing Variations…》（15位盲人/低视力用户评估图像描述不可靠陈述）与《Dynamic vs. One-Time Detection…》（120人误信息判断）均分开列入90，不当成图像鉴伪检测器解释证据。
+- 本轮所有可见位置逐项筛选结果：[102_T02-F3-S2图像操作适当依赖式逐位置筛选.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/102_T02-F3-S2图像操作适当依赖式逐位置筛选.csv)；[103_T02-F3-S3_S4信任校准与解释稳定性逐位置筛选.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/103_T02-F3-S3_S4信任校准与解释稳定性逐位置筛选.csv)。
+- 计数：累计台账17,703个结果位置（不是独立论文数）；父式107条/13,941位置/59条可见末页，细分与引文路线125条/3,677位置/57条可见末页/45条符合当前严格完整判据，补充记录77位置；历史阻断观察20条，当前`T02-F3-S1`首次试检要求人机身份验证（约2,670条估算，未获得题录）。72优先表51项、90候选表58项，均含待全文核验与机制/邻接条目，不能当成全部直接忠实性研究。
+- 完整性发现：本轮先用现存压缩执行日志重建总表，统计仅17,350，较上一阶段ZIP已核验的17,597少247；审计发现紧凑原始页文件未包含全部历史分页。立即从阶段ZIP恢复完整累计台账，并并入S2独立筛选表及本轮S3/S4记录，得到17,703；修改`publish_execution_round.py`为累积合并，避免将来重建覆盖归档过的人工筛选。已归档旧位置仍以74累计台账/阶段包为准；`execution_pages.json`并非完整历史原始页镜像，后续不能只靠它重建旧位置。
+- 验证：本批S3/S4输出64行，理由非空；S2为42行/理由非空；累计74为17,703行且ID唯一；72排名1–51连续，90共58行。`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过。整体检索与候选全文/引用递归仍未完成。
+- 下一步：先在 Scholar 完成当前`T02-F3-S1`验证后从首页继续；约2,670条过宽，需筛选较细子式并保存每个结果位置。随后继续执行T02-F3其他未试检子式及父式拆分；优先取得并核读《Explainability-Guided Deepfake Detection…》全文，特别核定faithfulness、mask alignment、稳定性和场景隔离协议；继续完成ForenDeX全文与强种子参考/前向引文递归。保留“直接解释可靠性评价、机制基准、人类信任迁移”三层，不能宣称零遗漏。
