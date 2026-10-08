@@ -1,3 +1,14 @@
+## 2026-10-08 遥感恢复、剩余小F4与细查询拆分（整体未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；索引最新commit `0e0bddc9eae05c879f31633e52413477f279b257` 已推送；交接另提交推送，最终hash见Git HEAD。仅检索协议/HANDOFF tracked修改，work/outputs本机；两用户未跟踪文件不改/不提交。
+- 本轮用户确认遥感恢复，T15-F4到可见末页765位置；T09-F4到末页797位置；T01-F4正常680位置后start680空尾页，总数从约805降538。主路线59可见结束（15 F1/15 F5/11 F3/8 F2/10 F4），其中T12-F2/T08-F4/T01-F4三条索引大幅波动需拆词回检，不当覆盖充分。48父路线未全分页。主查询13941位置，附加题名/版本/前向28，74合13969，非独立论文数；22优先/61旧待审仍未变化。
+- 新split_fine_queries.py生成85矩阵：16大细父式+3索引异常父式，19父/83子。可靠性OR逐词分配，任务、解释、其他限定保留；86逻辑并集等价，非语义完整性或总体召回保证。83子式需实际试检，若仍≥900更细拆分；当前只有首子T01-F4-S1尝试且受自动查询限制，未取得有效规模/题录（87），不能当零命中。其余82未试检。不重跑split脚本直接覆写85实际状态。
+- 最新真实阻塞 tab1 是T01-F4-S1首页（image forgery/image tampering × explanation/attribution/saliency × sanity checks），没有验证码控件，readV2保存自动查询限制。用户需手动恢复当前页；下一轮正常后 `readV2('T01-F4-S1',fineSplitPlan.find(x=>x.query_id==='T01-F4-S1').query)` 先保存，再按实际规模决定完整分页。旧遥感第14页已恢复，不再向用户要恢复旧页。
+- CUA持久新增 fineSplitPlan（读取fine_split_queries.json）、beginFineSplit(id)（goto已定义子式->readV2并打印首页），continueFineV2可直接用子ID（从execution_pages同ID找最后页，不依赖v2Plan）。不重置v2Executed。beginFineSplit首式被限流，不要重试循环。主体publisher目前子式若有正常页面会写入74，但主107覆盖统计不会算入子式；后续需增加独立子式覆盖统计/87状态，不能把子式当ForensicChat附加28。当前子式全0有效，因此主/附加计数未受影响。
+- 实际检索仍是Codex IAB tab1。前一用户询问无痕，曾误开桌面Chrome无痕窗口，已承认；IAB能力仅visibility/viewport不能切无痕。用户随后明确恢复并继续IAB检索，未迁移桌面Chrome，不关闭用户窗口。
+- 测试 `python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；74 13969 ID唯一/理由非空；75 107路线、59可见结束无offset缺页、3大变化风险；85 83唯一子ID/19父逻辑并集验证通过。90文件ZIP14811073字节，CRC和逐文件字节一致通过，非零遗漏保证。输出目录/ZIP同前；新的85/86/87为逻辑矩阵/验证/实际状态。
+- 后续先完成索引风险回检与大细子查询，再B1/B2大宽查询拆分、61旧核心和其他候选原稿、递归引文/版本。WorldScientific原稿安全验证未决保持。建议ChatGPT Web检查85–87没有把逻辑等价当检索完成，审核三条空尾页异常，重检未收尾前不做实验。
+
 ## 2026-10-08 从拼接第2页恢复：新增四条扰动评价路线（整体未完成）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段最新索引commit `290c8dde397af44158f51536db138ab895b0db41` 已推送，交接另提交推送；最终commit以Git HEAD为准。主要tracked修改仅检索协议及HANDOFF；两用户未跟踪文件未改/未提交。
