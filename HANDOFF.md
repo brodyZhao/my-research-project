@@ -635,3 +635,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 遗留：实际审计 FakeShield 公开测试样本是否逐张同源、几何对齐、mask/图像 ID 是否对应；若不满足，先构造少量可控局部编辑 pair，运行标注与 sham/控制/阳性对照可行性门。不得把整幅生成图的语义相似真图当作局部 patch donor。
 
 ---
+
+### 2026-10-08：Scholar 扩展子式续检断点
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；远程：`origin https://github.com/brodyZhao/my-research-project.git`。本条交接写入前协议提交为 `969139319464a5e0da339b1c38e8ec2311a18df7`；本 HANDOFF 另行提交。
+- 主要修改：`literature/forensic-explanation-search-protocol-v2-20261008.md` 追加本批方法、覆盖数和未完成项。原始逐页记录在忽略目录 `work/search_protocol_v2/execution_pages.json`；路线配置/输出在 `work/search_protocol_v2/fine_split_queries.json` 和 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/`，均为本地可恢复进度，不提交临时日志或数据。用户原有未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md` 未改动、未暂存。
+- 本批结果：`T08-F4-S4` 获得94位置并到可见末页；`T08-F4-S5` 149位置并到可见末页。`T02-F2-S1` 估算约14,200，只保存首屏，须继续细拆。补充窄式 `"image forgery" explainable grounding` 记录350个结果位置和空尾页；估算数646/496/300波动超过25%，必须回检，不能表述为穷尽。
+- 最新检索审计：107父查询、59条可见末页、13,941个主查询位置；84个拆分/诊断子式、866个有效位置、11条到可见末页；补充引用28位置；总有效位置14,835（位置可重复，不是独立论文数）；10条受阻或查询不匹配观察。23条优先候选不是全部都已证明为直接可靠性实证。完整逐位置筛选规则辅助记录见交付74，路线审计75、85、87，计数/受阻审计83。
+- 测试：`python3 -m compileall -q work/search_protocol_v2` PASS；`git diff --check` PASS；归档ZIP CRC与92个文件逐字节校验 PASS。Scholar依赖用户手动完成人机验证后读取正常结果，未尝试代解。
+- 遗留：大量细分路线未执行；超大/索引变化查询需进一步拆分和复查；强相关文献原稿、版本及EFR等核心种子引文递归筛查未完成。未进入实验方案阶段。不要将本阶段标为重检完成。
+- 建议下一步：从 `T02-F2-S1` 约14,200规模触发器着手，进一步按“image forgery / tampering / splicing / copy-move / synthetic image”等具体任务词与解释表达拆分，并先做结果量可行性测试；随后完成对应分页和逐条筛选，再核原稿与强相关引文链。用户已授权继续，不需重复确认。
