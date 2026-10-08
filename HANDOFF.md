@@ -1,3 +1,14 @@
+## 2026-10-08 文献重检进度汇报与年份细分续检（仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；最新阶段索引commit `e35d7aa` 已推送。交接随后单独提交并推送，最终hash见Git HEAD。仅索引与HANDOFF入Git；两个用户未跟踪文件保持原样。
+- 用户最新要求先汇报检索式、强相关数量、引用追查和剩余工作；完整本地汇报为 outputs/图像鉴伪解释可靠性_重检_2026-10-05/66_文献重检进度汇报_2026-10-08.md，附全部101有效范围路线原式。当前15,380日志=15,355正常+25遗留过滤；核心82（tier1强相关55、tier2紧密26、tier3通用1），英文81中文1；352英文候选及252迁移候选待人工边界判定，非全部相关篇数。99路线可见终页，87无既定两风险；14待结案含已分段的宽查询、GS037更正题名和低优先级中文GS050，不说14条全未检索。
+- GS096恢复后已987位置至第100页空尾页，估计1,030保留显示上限风险。更细分GS097≤2024共38页377位置、GS098仅2025共65结果页644位置均终页；GS098第59页自动查询限制用户恢复后续到末页。已有GS095≥2026共740终页。四补查相对GS094新增1,200题名位置/770规范化题名，不当新增独立相关论文。60/61记录差集，65连续性核验三条本轮路线无缺页。一次20页批次超时核重置，420–600逐页重读；曾丢失800压缩payload已重读该页。export解析审计保留1条历史不完整，不能说零解析失败；各页原始证据覆盖完整。压缩marker直接拼接会吞下一marker字母，export已插换行修复。读取自己JSONL只用LF split，PDF含U+2028。
+- Guo ICLR2026 The Value of Information in Human-AI Decision-Making官方32页PDF正常TLS获取2,069,381字节，focused_primary_GuoILIV2026记录SHA。选定§3/4/5/6.2/7、Appendix H已读；新的421名US Prolific六组解释实验为Ames房价任务，不是深伪解释干预。深伪重分析Groh2022的5,524人及7视频级特征，Brier信息价值非检测准确率/因果忠实；互补性人为构造、SHAP基础缺陷未解决。全部83参考按首行x108/悬挂118从11–16页提取并逐题录初筛62CSV，标题句段抽取可能遇姓名缩写，完整raw_citation保留；被引全文未全核。其他种子引用2052+EFR56=2108位置，不当独立相关文章。
+- GS099正式题名相近结果1；展开全部GS100共22；GS101前向26；GS102全部版本3（不计三篇）。52位置人工题录初筛63与主日志匹配；人工专题位置累计628=400+98+78+52，其他日志仍规则辅助初筛。作者目录网页转ziyangguo.com，旧题名列ICLR2026并直链33页作者稿；与arxiv2502.06152/官方32页有较强映射，仍未逐版确认或合并NeurIPS2024，64保留边界。Web原稿ref turn153view0，arxiv154、作者目录155、作者稿156。
+- 本轮scripts add_guo_information.py/finish_reliance_round.py/write_progress_report.py，加enrich_guoiliv与checkpoint83计数。完整pipeline依次export→build_research→enrich_catalog→build_checkpoint→build_term_coverage→build_english_focus→build_english_partition_audit→refresh_phase_index。最后write_progress_report补66与索引段落；若重新refresh会覆盖最后补段，需再运行报告脚本。不要单跑enrich已stripped public master；勿重跑旧add_*重置后来阅读范围。
+- 验证：pipeline主ID/理由/原证据SHA检查通过；Guo83连续参考/SHA及52人工位置↔主日志通过，65有结果；python3 -m compileall -q work/literature_research_20261005与git diff --check通过。69文件ZIP重新打包12,930,956字节，CRC和每文件字节一致通过。这里只证文件一致性，不证零遗漏或重检完成。
+- 浏览器当前用户只保留tab5，GS102三版本页面，无年份过滤。最后状态无需再恢复第59页；下步继续英文候选352及强相关引用链/原稿/版本。33术语族代表查询不等于穷尽全部组合，仍需补对抗解释/裁判索引风险，精确版本核查、正文未取得条目处理。按用户要求只做重检，未经重检收尾不进入研究方案/实验。建议ChatGPT Web先检查66汇报的计数/强相关定义是否清晰，重点看62–65证据边界与05未决原因。
+
 # Project Handoff
 
 ## 2026-10-07 专业工作流与过度依赖扩词续检（仍未完成）
