@@ -655,3 +655,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 测试：`python3 work/search_protocol_v2/publish_execution_round.py` PASS；`python3 -m compileall -q work/search_protocol_v2` PASS；`git diff --check` PASS；95文件ZIP CRC和逐文件字节核验 PASS。
 - 遗留：继续扩展非deepfake任务词组合并对索引不稳定路线拆分回检；核读新增REVEAL、证据接地deepfake、STeREx-Net、TRIDENT、DF-CBM等候选原稿；优先追踪新增强相关种子的参考文献与前向引用；完成剩余父式分页、版本去重及逐篇原稿筛选。不能宣称“一篇不漏”。
 - 建议 ChatGPT Web 下一步：从阶段ZIP的90候选表及89 TriDF引文表核查新增候选原稿与直接评价终点；再继续扩大任务术语（image editing/manipulation/localization/authentication等）与解释方法别名覆盖，并将每条完整分页与逐篇筛选理由追加日志。
+
+### 2026-10-08：人类评价路线动态回检与可解释鉴伪综述
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段开始commit：`25fec01d5d75f818e5fc2c196a806bd7daed4d07`。协议和HANDOFF按项目要求分别提交；已确认远程`origin https://github.com/brodyZhao/my-research-project.git`。
+- 修改文件：`literature/forensic-explanation-search-protocol-v2-20261008.md`、`HANDOFF.md`。忽略目录`work/search_protocol_v2/execution_pages.json`写入10页Scholar动态回检快照。阶段结果：72优先清单35项、90候选33项、100逐位置观察220条、新建102前向引用筛查4条。归档包需重建并验证。
+- 用户原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。`outputs/`、`work/`按规则忽略，不提交Git。
+- 本批回看`"image forgery" "human evaluation" explanation`从start=6到start=96，新增100个观察位置；结果估算数106–117浮动。自动审计有效21页/200位置，仍缺start=100，visible_terminal=False。检出并核读《Explainable Image-Centric Forgery Detection: A Survey》，为未经同行评审预印本，明确讨论faithfulness/consistency评价缺口，列为综述/引文种子，不算原创实证。其4条前向引用逐条筛查（2排除、2边界）。新候选含Rethinking VLMs、Explaining Deepfake Detection by Analysing Image Matching、OMNI-Fake；Evidence Fusion仍待原稿。
+- 当前审计：107父式、59末页、13,941位置；120个拆分/诊断式，3,466位置、50末页、38通过严格完整条件；共17,486个记录位置，含重复，不是论文数。17条历史受阻、当前无活动阻断。全量检索未完成。
+- 测试：`python3 work/search_protocol_v2/publish_execution_round.py`成功。提交前需重跑`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`和阶段ZIP CRC/逐文件字节检查。
+- 遗留：核查综述的核心反向参考及原稿；继续未执行检索式、非deepfake任务词、索引不稳定路线；核对新增候选原稿和引文链。直接可靠性实证、机制、综述/边界要分层，不把35项说成35篇解释faithfulness实验。
+- 建议ChatGPT Web：审阅综述引文错位判断与4条前向引用筛选，再从阶段包90/102继续综述反向参考筛查。
