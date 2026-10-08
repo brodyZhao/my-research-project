@@ -723,3 +723,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 本阶段输出：`102_T02-F3-S2图像操作适当依赖式逐位置筛选.csv`（42行）；`103_T02-F3-S3_S4信任校准与解释稳定性逐位置筛选.csv`（64行）；72优先表51项；90候选表58项；累计74为17,703行。阶段ZIP：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-08.zip`，115个文件，SHA-256=`c63f71a385cfa34908b46ebb4d632d24f1a9569e48a9ecafecaf49f475c2e2bc`。原有两个用户未跟踪文件保持原样、未暂存。
 - 主要跟踪变更：`literature/forensic-explanation-search-protocol-v2-20261008.md`。检查：`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过；74有17,703个唯一ID且所有行理由非空；72名次1–51连续；102/103理由完整；zip CRC与115个文件逐字节一致。没有业务源码或模型改动。
 - 下一步：用户完成当前Scholar的人机验证后，从T02-F3-S1首页重新记录；优先取得并全文核《Explainability-Guided Deepfake Detection…》，检查其faithfulness、mask alignment、场景划分和稳定性定义；继续ForenDeX全文、强相关参考与前向引用递归，随后处理其他未试检细式/宽式拆分。整体任务未完成，不能承诺零遗漏。
+
+### 2026-10-09：Scholar恢复后深伪解释人评细式续检
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；origin仍是`https://github.com/brodyZhao/my-research-project.git`。本handoff写入前协议提交：`679ecb0`（`docs: log resumed deepfake explanation searches`）。
+- 主要跟踪修改：`literature/forensic-explanation-search-protocol-v2-20261008.md`追加本批检索式、筛选边界、来源和统计。输出目录`outputs/图像鉴伪解释可靠性_重检_2026-10-05/`及忽略目录`work/search_protocol_v2/`保存逐位置表、累计日志、路线状态及临时脚本；这些输出不提交Git。用户已有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`保持未修改/未暂存。
+- 用户恢复Scholar后，重新尝试宽式T02-F3-S1（约2,670条、首页10位置），并测试三组深伪细式：人评广式约948（首页10）、`"deepfake detection" "human evaluation" explanation`约427（首页10）、`deepfake "human evaluation" "visual explanations"`显示估算77→67，7页67位置至Next禁用。新建筛选表104记录97个观察位置及逐条理由；其中原宽式首页10条已在旧74台账，避免重复计算，故累计台账74从17,703净增87至17,790个唯一result_id。
+- 补充候选：DDL（TIFS 2025，DOI及作者机构页核对，全文待核）、Anchors深伪取证工具（2022，机构摘要与IEEE题录核对，评测公式待核）、ECCV 2022 FST-Matching模型机制解释（已查ECVA官方页/PDF和Springer会议卷）。72优先表现为54项；90候选表64行，包含机制、综述、边界和邻接材料，不等于同数直接faithfulness实证。ResearchGate唯一来源、身份未核实的“Human-in-the-Loop Deepfake Forensics…”已在逐位置表中隔离，不计入确认文献。
+- 当前路线统计：107个父式/13,941主矩阵位置/59可见末页；细分与引文路线128式/3,764位置/58可见末页/46符合严格完整判据；总日志17,790个位置（含跨式重复，不是独立论文数）；补充位置77；历史阻断/异常观察20，当前无活动阻断。宽式、约948与427两式只读首页；整体检索、旧候选全文复核和强相关种子引文递归均未完成，不能声称零遗漏。
+- 输出交付：`104_T02-F3-S1及深伪人评拆分式逐位置筛选.csv`、更新后的`74_V2完整分页逐位置初筛.csv`、`72_V2已复核强相关优先清单.csv`、`90_本轮新增强相关候选与引文复核.csv`、`83/85/87`计数/路线状态及阶段报告。归档包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`共116个文件（含SHA清单），SHA-256=`0a351ea3386773f526b8b005edfbfd3f7951f5460368f2db6f52f878cdaac617`；CRC与116个文件逐字节校验通过。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过；74共17,790个唯一ID且筛选理由非空；104共97行且理由非空；72名次1–54连续；90共64行；85/87各128条；阶段包SHA清单及CRC/逐文件比较通过。仓库没有业务源码改动，无业务测试需要运行。
+- 遗留/建议下一步：从T02-F3-S1细式向图像拼接、copy-move、inpainting/retouching、AI生成/合成图等非deepfake任务继续扩展；查询式先做规模验证，宽式不直接长分页。优先读DDL和Anchors全文以核实fidelity/affinity指标、人评样本与任务，再核2026预印本身份与原稿；继续高相关种子参考文献和前向引用逐条排查。不可把可解释性、可读性、人类解释偏好或掩码对齐自动当成解释因果faithfulness，也不可称检索“一个不漏”。
