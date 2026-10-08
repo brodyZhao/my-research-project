@@ -1,3 +1,16 @@
+## 2026-10-08 用户要求重建检索逻辑：V2.1取代旧流程（整体仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`；当前分支 `codex/forensic-explanation-literature`；最新方案commit `059d502` 已推送，交接随后另commit/push，最终hash见HEAD。主要tracked文件 literature/forensic-explanation-search-protocol-v2-20261008.md 和旧阶段索引开头的撤销继承提示；outputs/work忽略，两用户未跟踪文件不改动。
+- 用户明确先拟全面可行检索式并自查、然后细先宽后、给强相关并重查旧目录。已完成范围重建与实际首页试检：15任务族×7分支=105式，额外2量化质量/空间频域补充，共107式；115次观察（含复测/首批重复）、114有效、1次加载读到旧query排除并重试，1125有效首页结果位置，非独立论文数。全部原始DOM可见观测保存在work/search_protocol_v2/pilot_records.json，由cua控制浏览器并本地保存；并非猜测/编造检索命中。67查询矩阵、69每位置规则初筛、70验证。48式估计≥900，必须拆别名/解释子词/年份后再次试检，不能裸查到100页当全覆盖。
+- 试检真修正：初始宽词式估计28200和synthetic宽式30300不作细入口；GAN/扩散加视觉，inpainting/document/medical/satellite加forgery/tampering/fake/authenticity/forensics；仍有参考引用/其他任务噪声，不声称100%精准。8锚点：首页回检EFR、BeyondAccuracy、Gowrisankar、Tsigos、SNIPPET、HexMIL；2022 BMVC和SSRN空间域批评原105式首页未现，补2方法分支后出现。这是自选8锚点测试而非整体召回率；所有107式语法/规模试跑不等于全部分页查完或零遗漏。
+- 时间：arxiv2210.03683原页2022-10-07、BMVC2022接收确认；2312.06627原页2023-12-08。故不能从2024截断，至少2022已有直接解释评价，不宣称2022领域第一篇。2013 Fontani是工具可靠性/证据融合历史基础，不能充当现代XAI因果忠实实验。现代主线与更早定向历史/引用链分开，无总体年份排除。
+- 冻结V2后首批细查完整可见26位置：T12-F1=2、T13-F1=6、T03-F1=7（复用已完全取得的首页避免重复翻），T04-F1两页11（真实Next至末页），完整位置/理由73CSV。新MDPI15/8/525拼接替代解释原页Web429，只有题录候选，不能报全文已核。其余路线继续按67实际规模/状态执行，首批完结不等于整体完成。
+- 旧82全部入68队列，旧55 strong标签不继承V2最终数。先按已有原页证据重审8篇主题/终点/限制：EFR、Gowrisankar、Tsigos、BMVC、BeyondAccuracy、SNIPPET、SSRN空间域、ECS，72CSV；明确没有重新全文读完82篇，其他74待审。高相关与可靠性证据强弱分开，展示热图/检测准确率/跨方法一致性不自动当因果忠实。旧15,380日志是历史主体；V2试检另存，不把1125重复位置直接相加为独立论文。
+- 文献继续用ARS inline bibliography角色规则，但用户不限级别/年份/全文可得性、细先宽后指令优先，未派subagents。新scripts refine_protocol.py/publish_protocol.py/finish_first_batch.py在work/search_protocol_v2。publish重写67/68/71，之后finish_first_batch加首批状态和tracked索引；重复finish会再次prepend旧索引提示，避免无理由重复。旧pipeline重刷会覆盖旧index，不应取代新的V2权威方案。
+- 检查：python3 -m compileall -q work/search_protocol_v2、git diff --check、CSV107/82/8/26读回计数、8锚点真实命中、26ID唯一且末页无Next通过。76文件ZIP13,069,078字节，CRC/每文件内容相同通过；不是零遗漏证明。
+- 浏览器绑定browser2当前tab1（旧tab5已不存在），copy-move细式第2页末页已markHandoff，无年份/cites过滤。当前会话helpers protocolPilot/concisePilot从UI填写每式、只首屏保存；有时input返回旧query，正常footer也不足，必须对actual==requested，已有无效观测保留。后续先取得真实当前tab，不用旧tab5变量。
+- 下一步：继续67中小规模F1/F5到末页并逐篇原稿筛选，48大式先细分再试检；按68重审其余74篇及旧352英文候选/252迁移方法候选。不要回到deepfake主导、结果数量代完成度或原样跑所有巨大宽式。不进入方案/实验。建议ChatGPT Web先查71的选题边界、107矩阵的必查/补漏逻辑、70锚点测试限制，以及72八篇是否把主题相关性与证据质量分开。
+
 ## 2026-10-08 文献重检进度汇报与年份细分续检（仍未完成）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；最新阶段索引commit `e35d7aa` 已推送。交接随后单独提交并推送，最终hash见Git HEAD。仅索引与HANDOFF入Git；两个用户未跟踪文件保持原样。
