@@ -666,3 +666,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 测试：`python3 work/search_protocol_v2/publish_execution_round.py`成功。提交前需重跑`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`和阶段ZIP CRC/逐文件字节检查。
 - 遗留：核查综述的核心反向参考及原稿；继续未执行检索式、非deepfake任务词、索引不稳定路线；核对新增候选原稿和引文链。直接可靠性实证、机制、综述/边界要分层，不把35项说成35篇解释faithfulness实验。
 - 建议ChatGPT Web：审阅综述引文错位判断与4条前向引用筛选，再从阶段包90/102继续综述反向参考筛查。
+
+
+### 2026-10-08：X²-DFD解释人评复核及其关键引文链续查（整体未完成）
+
+- 本轮开始HEAD：`c18e4683b62cf8f028e06bd4d0bb7b02116e73ad`；分支`codex/forensic-explanation-literature`，origin已配置。用户原有两个未跟踪文件保持未改、未暂存。
+- 继续核读X²-DFD（NeurIPS 2025；arXiv:2410.06126v4）。正文把解释可靠性/MLLM幻觉作为动机，并用特征级balanced accuracy筛查模型可用线索；解释评价含人工标注文本相似度和0–5人工评分。官方补充材料检索片段显示15名20–40岁受教育程度较高的参与者评100个deepfake图，维度为检测能力、解释合理性、细节程度。它是强相关直接人评文献；评分仍属主观解释质量，未检验同一模型决策的因果faithfulness、sanity/randomization或用户依赖；100样本描述均为deepfake图，不能视作真假平衡设计。候选目录已把错误的2026年份修正为NeurIPS 2025 / 首发2024，并更新强相关证据层级。
+- 沿X²-DFD的评价链逐篇查4条直接相关参考：FakeShield（作者全文，解释文本+区域mask；主要测检测/定位、CSS及图像退化稳健性）、FFAA（作者全文，解释VQA、专家筛训练标签；主要测检测/泛化/鲁棒性）、Can ChatGPT Detect DeepFakes?（CVF官方论文，提示式鉴伪和解释输出）及A Hitchhiker’s Guide…（OpenReview论文，分阶段细粒度VQA并定性评价回答）。逐篇理由、限制和原页在输出103。新增X²-DFD进入72强相关优先清单第8位、90本轮候选；103包含4条逐篇筛查。
+- 用户Chrome当前Google Scholar cited-by断点`cites=6391361178114081016`尝试读取时出现reCAPTCHA人工复选框；未尝试代替用户验证或绕过。断点逐项记录于输出104，并已在对话中请求用户完成当前页面验证。CUA tab已标记handoff。完成验证后，先读取当前页面并从该被引列表续查。
+- 当前总目录/历史覆盖计数与上一阶段相同：107父查询、59条可见末页、13,941父结果位置；120子式、3,466位置、50条可见末页/38条严格完整；累计17,486条位置（有重复，不是论文数量）。历史受阻页计数经publish脚本仍为17，因为本次用户打开的被引页不属于计划路线；新受阻单独记录在104及执行快照。全项目检索仍未完成。
+- 本轮改动：tracked `literature/forensic-explanation-search-protocol-v2-20261008.md`、`HANDOFF.md`；忽略输出包括`04`候选目录、`72`优先清单、`90`本轮候选、`103`四篇参考筛查、`104`Scholar阻断记录和输出归档ZIP；忽略工作日志execution_pages.json记录此次reCAPTCHA观察。
+- 测试：`python3 work/search_protocol_v2/publish_execution_round.py`、`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；输出ZIP需在提交前执行CRC及逐文件字节校验。
+- 建议下一步：等待当前Scholar验证完成，从此cited-by页面逐条筛查；继续X²-DFD/综述的直接相关反向引用和前向引用，登记每篇筛选理由；之后继续非deepfake任务词及未完成宽式/索引异常式。直接可靠性实证、解释机制、综述/边界论文分层，勿声称零遗漏。
