@@ -1,3 +1,13 @@
+## 2026-10-08 从拼接第2页恢复：新增四条扰动评价路线（整体未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段最新索引commit `290c8dde397af44158f51536db138ab895b0db41` 已推送，交接另提交推送；最终commit以Git HEAD为准。主要tracked修改仅检索协议及HANDOFF；两用户未跟踪文件未改/未提交。
+- 当前有效统计取代下方旧52条/9431：107父路线56到可见末页（F1 15/F5 15/F3 11/F2 8/F4 7），主查询11829结果位置，附加28位置，74总11857位置；不是独立论文数。新增T03-F4 466、T13-F4 500、T07-F4 569、T10-F4 743；T15-F4取得第1–13页130位置。优先22及旧61待重审未变化，原稿并未本轮新全读。
+- 最新真正阻塞是tab1 T15-F4第14页start130自动查询限制，没有验证码控件；已AX核实。T03-F4旧阻塞已恢复并完成47页，不再让用户恢复旧页。下一轮恢复当前页面后先 `readV2('T15-F4',v2Plan.find(x=>x.query_id==='T15-F4').query)` 保存恢复观察，再 `continueFineV2('T15-F4',8)`；不能直接从受阻末尾空next判结束。不要重置v2Executed或重复finish完成路线。
+- 51父查询未全分页；56可见结束中2条T12-F2/T08-F4索引波动风险仍需拆词回检，不当覆盖充分。48大父查询仍待拆分。小F4还T09-F4/T01-F4；后续拆异常/大F分支，然后B1/B2和候选/引文原稿/版本。整体检索未完，禁止进入实验下一阶段。
+- 输出74/75/83已由publish_execution_round.py刷新；原始execution_pages.json全保留。本轮正常与受阻观察共历史7次受阻，不把受阻当零结果。旧prototype脚本会覆写后续资料，继续使用当前publisher。
+- 测试 `python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；74全部11857 ID唯一/理由非空；75 107路线、56末页offset连续；87文件ZIP14550250字节CRC及逐文件字节一致通过。不保证零遗漏。路径与上一交接同，work/outputs仅本机。
+- 建议ChatGPT Web优先检查本次四条路线是否可见连续分页，75的索引风险与51待执行状态，不要把56/107当召回率。用户恢复Scholar后继续遥感第14页；WorldScientific原稿安全验证旧未决仍保留。
+
 ## 2026-10-08 V2细检索续检与原稿核查（整体未完成，当前学术受阻）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段索引最新commit `7bdaecfb77492ffbaba324ad959ee23e4ee92d75` 已推送；本交接随后单独提交推送，最终HEAD以Git为准。用户两个未跟踪文件未改/未提交。work/outputs仅本机保留。
