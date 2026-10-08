@@ -678,3 +678,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 本轮改动：tracked `literature/forensic-explanation-search-protocol-v2-20261008.md`、`HANDOFF.md`；忽略输出包括`04`候选目录、`72`优先清单、`90`本轮候选、`103`四篇参考筛查、`104`Scholar阻断记录和输出归档ZIP；忽略工作日志execution_pages.json记录此次reCAPTCHA观察。
 - 测试：`python3 work/search_protocol_v2/publish_execution_round.py`、`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；输出ZIP需在提交前执行CRC及逐文件字节校验。
 - 建议下一步：等待当前Scholar验证完成，从此cited-by页面逐条筛查；继续X²-DFD/综述的直接相关反向引用和前向引用，登记每篇筛选理由；之后继续非deepfake任务词及未完成宽式/索引异常式。直接可靠性实证、解释机制、综述/边界论文分层，勿声称零遗漏。
+
+## 2026-10-08 TriDF被引链续检与IAB末页复核（整体重检仍未完成）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索方案阶段commit：`fbf9901`（已推送origin）；本HANDOFF更新将单独提交，最终HEAD以Git为准。
+- 用户指出Google Scholar正常后重新核对浏览器：历史Chrome标签981694126触发验证，但Codex IAB中的TriDF被引页正常显示6条记录、无下一页。已完成逐篇筛选，详情在本机交付`105_TriDF前向引用6条逐篇筛查.csv`。EFR和DF-CBM是既有强相关/机制文献，不重复计数；新候选TRIDENT、Explainable Deepfake Detection Challenge分别加入优先清单72的第8和第9位。TRIDENT通过OpenReview PDF索引可见方法/公式片段记录CHAIR和precision-weighted F0.5，论坛页本轮未能直接打开，全文待直取；两项指标支持观测伪迹接地/幻觉评测，但都不等于模型决策因果忠实性或人类恰当依赖。另两篇检测综述记为背景/待核，不纳强相关。Chrome阻断记录104已更正为历史事件、IAB恢复成功。
+- 继续核实用户打开的`"image forgery" "human evaluation" explanation`：当前IAB显示106条、第10页(start=96)、“下一页”禁用。10个结果已更新到100逐条记录；仅“Machine Learning for Evidence in Criminal Proceedings”保留为司法/证据可靠性背景，其余排除。100共有220个跨快照位置，含重复观察，不是220篇独立论文。
+- 最新执行统计：107父查询，59条可见末页，13,941父查询位置；120细分/诊断查询，3,466位置，其中50可见末页、38满足严格完整性判据；有效结果位置总数17,492（含跨式重复、版本/引用等，不等于独立论文）；补充位置77；18个历史受阻/无效观察，当前阻断为空。优先清单38行，新增候选表36行；均混合直接可靠性研究、基准和核心机制，不能当成38篇独立因果忠实性研究。重检仍未完成。
+- 主要跟踪修改：`literature/forensic-explanation-search-protocol-v2-20261008.md`。忽略目录检索原始数据在`work/search_protocol_v2/execution_pages.json`及其execution_audit，用户交付在`outputs/图像鉴伪解释可靠性_重检_2026-10-05/`；本阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-08.zip` 含111文件，CRC及逐文件字节比较通过，SHA-256清单为`106_本次阶段包_SHA256清单.csv`。用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`保留原样，未暂存。
+- 测试：`python3 work/search_protocol_v2/publish_execution_round.py`通过；`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过；检查优先排名1–38连续、105恰有6条唯一标题、72两篇新候选排位正确、100末页20条跨快照记录有终页标签、审计为17,492位置/无活动阻断；归档testzip与文件字节比较通过。无业务源码改动，无模型测试。
+- 遗留：120细查询仍有82条未满足严格完整条件，48个大父查询须继续细拆；旧候选正文、索引波动回检、版本去重和强相关文献前后向引文递归尚未完成。ResearchSquare跨模态综述全文本轮访问失败，仅保留待核。建议下一轮继续未完整细查询和大式拆分，再核剩余强相关原稿及其参考/被引链；不可依据当前结果宣称零遗漏、目录完整或进入实验阶段。
