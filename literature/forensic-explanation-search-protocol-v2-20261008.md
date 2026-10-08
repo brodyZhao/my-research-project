@@ -97,3 +97,17 @@ X²-DFD官方页面确认发表于NeurIPS 2025，arXiv首发2024、v4日期2025-
 X²-DFD评测/相关工作链中4篇直接相关文献已逐篇记录在输出`103_X2DFD评价链相关参考文献逐条筛查.csv`：FakeShield、FFAA、Can ChatGPT Detect DeepFakes?、A Hitchhiker’s Guide to Fine-Grained Face Forgery Detection。四篇均属于任务/解释或细粒度评测强相关，但各自的检测、定位、鲁棒性、专家筛选或答案质量终点均需与解释faithfulness区分。X²-DFD已补入72优先表和90候选表，正式年限/版本与原先候选的错误2026记录已校正。
 
 用户当时打开的Scholar cited-by参数`cites=6391361178114081016`在一次读取后显示人工reCAPTCHA。该观察记入忽略目录execution_pages.json和输出`104_谷歌学术被引链断点与受阻记录.csv`；不计作空结果、零命中或末页。页面已交还用户人工恢复，并标记handoff，恢复后继续。
+
+### 2026-10-08：TriDF被引链续检及人类评价式末页复核
+
+用户指出Google Scholar页面正常后，改用当前Codex IAB重新核对，确认先前触发挑战的是Chrome标签，而IAB当前TriDF cited-by页正常。Scholar页面标示6条结果、无下一页：EFR、DF-CBM、Explainable Deepfake Detection Challenge、Deepfake Detection Beyond Benchmark Accuracy、AI-Generated Content Detection: A Cross-Modal Survey、TRIDENT。逐条筛选见输出105；EFR与DF-CBM已有原稿/评价边界记录，不重复计为新增论文。Chrome历史阻断在104中更正为已通过IAB恢复；18条历史无效/受阻观察保留为历史记录，当前没有活动阻断。
+
+新纳入优先表的两条直接评价候选：TRIDENT使用可观察伪迹标注，报告幻觉伪迹率CHAIR和偏重precision的F0.5；它检验解释说出的伪迹是否有观测真值支撑，不证明分类器因果依赖这些理由。OpenReview论坛页本轮无法直接打开，方法段落依据其PDF索引可见文本并另核ACM MM官方日程，完整PDF待直取。Explainable Deepfake Detection Challenge针对图像深伪，结合EntityScore、EvidenceScore与参考语义/可读性指标；作者把grounding评估可靠性及解释能否帮助用户行动列为未来方向，因此它是直接benchmark候选，但未证明内部决策忠实或用户恰当依赖。两条进入72的第8、9位，既有名次顺延；优先记录38条，涵盖可靠性实证和机制/基准，不是38篇独立因果忠实性实证。90新增候选表增至36行；其中行数含既有重复版本/非独立来源风险。
+
+被引页其余两篇逐条判断为边界背景：Deepfake Detection Beyond Benchmark Accuracy（Preprints.org未同行评审综述）主要综述二元检测、跨域泛化、鲁棒与复现；文中提及可解释可信取证方向，但不是解释评价综述。AI-Generated Content Detection跨模态综述本轮未能打开Research Square全文，只从Scholar题录/摘要核到宽泛检测范围，暂不纳入强相关且保持待核。不能只凭标题为该文补写解释可靠性内容。
+
+同时在用户打开的`"image forgery" "human evaluation" explanation`末页（start=96）核实：当前IAB页面显示估计106条、第10页，“下一页”禁用；10个位置逐条记录更新到100，其中仅刑事诉讼机器学习证据可靠性一条列背景边界，其余一般多模态/预测维护/电商/指令调优/bug报告/3D生成/中风预测/会议元数据等排除。末页观察不代表该查询之外或整个主题穷尽。100维持220条跨快照位置，含重复位置而非220篇论文。
+
+本次新增6个有效Scholar被引结果位置后，审计合计17,492个有效结果位置（跨式/跨页重复，不是文献数）；父查询13,941位置、可见末页59/107；细分查询3,466位置，50/120可见末页、38/120满足严格完整性条件；补充位置数77。受阻/无效历史观察18，当前阻断为空。重检仍未完成：未试检细查询、大查询拆分、其余旧候选原稿、更多强相关引文递归和版本去重仍待做。
+
+原稿证据：[Explainable Deepfake Detection Challenge作者HTML](https://arxiv.org/html/2607.21007)；[TRIDENT OpenReview PDF](https://openreview.net/pdf?id=H7hsRMzu7B)（本轮只核到索引可见方法/指标片段，论坛页验证未通过）；[Deepfake Detection Beyond Benchmark Accuracy预印本](https://www.preprints.org/manuscript/202609.1394)。
