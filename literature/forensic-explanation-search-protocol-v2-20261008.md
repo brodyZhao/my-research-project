@@ -121,3 +121,15 @@ X²-DFD评测/相关工作链中4篇直接相关文献已逐篇记录在输出`1
 - 新增窄式`T02-F3-S1-REFINE2`：`"AI-generated image detection" "human evaluation" explanation`。提交后IAB跳到Google Scholar自动流量限制页（无结果列表、无人工验证控件），已逐条保存为受阻观察；用户表示将手动恢复后告知。不得按零结果处理。待恢复后从该式继续，先核页面可行性，再决定是否逐页。
 - 更新后统计：父查询107条/13,941位置/59个可见末页；子式122条/3,486位置/50个可见末页，其中38条满足现有严格完整条件；全部日志17,512个结果位置（含重复、版本、引用，绝非独立论文数）；补充位置77；历史/当前受阻观察19，其中当前活动阻断为上述查询。100人类评价路线逐位置表230条。优先清单44行，候选表41行。全量重检仍未完成，不能承诺零遗漏。
 - 验证：`python3 work/search_protocol_v2/publish_execution_round.py`通过，统计与本段一致；`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过。阶段ZIP已重建为112个文件，CRC和逐文件字节比较通过；SHA-256为`ae4bb78f4e3210c417a8063b709d23bd14ec717f713d4ae87430792977c0c8f5`。接下来先等用户人工恢复，再从REFINE2读取结果；同时继续拆分规模仍达数千的宽式、复查索引波动与强相关文献引文链。
+
+
+## 2026-10-09 Scholar恢复后续检与优先目录纠漏
+
+- 用户回复“已恢复”后继续检索。Codex IAB的Google Scholar当前可正常读取；历史Chrome扩展标签仍显示reCAPTCHA页，本轮未替用户操作验证。对话中既有的IAB Scholar结果继续作为本批实际来源并逐页记录。
+- 继续窄式 `"AI-generated image detection" "human evaluation" explanation`：原始执行日志已保存7页、66个可见结果位置（start=0,10,…,60；终页Next禁用）；Google显示估算在66–77间变化，位置含题录噪声/重复，不能把估算数当唯一文献数。逐位置筛选见74，raw页在`work/search_protocol_v2/execution_pages.json`。
+- 沿AnomReason（10条）、FakeReasoning（8条）、ForenDeX（1条）Scholar前向引用逐位置筛查，新增输出101。三条是引文发现路线，不是完整领域检索路线。FakeReasoning链中ATAR是已知强相关；AnomReason链发现ForenDeX、GenShield、MIC及HumanForge等，后3项分别标为待核/邻接/视频边界。ForenDeX此前已出现在多个Scholar题名/引用结果及候选记录，但未进入强相关优先目录，本轮确认是目录升级遗漏，现加入72并将全文未核状态醒目标注。
+- 全文核对REVEAL作者v2 HTML：方法以8个离线专家模型构造证据和CoE，奖励联合分类、理由和多视角一致性；作者声称结构性因果解释不等于经干预证实的因果忠实。附录0.E对100图（50 real/50 synthetic）、3位研究专家匿名比较REVEAL与AIGI-Holmes解释，按多数票判优；这属于小样本专家偏好/解释质量评估，不是ordinary-user appropriate reliance实验。该文补入72高相关目录，限制与原文范围写明。
+- ForenDeX：Google Scholar精确题名命中1条，确认作者与2026 CVPR会议信息，CVF官方PDF URL与OpenReview官方CVPR 2026 Findings记录相符；Scholar前向引用页1条，指向《Understanding Why Foundation Models Work for Diffusion-Generated Image Detection》，作为机制背景筛查。当前浏览器和Web读取未取得ForenDeX PDF正文；因此纳入72仅为“主题强相关、官方全文待核”的暂定条目，不能写成人评/faithfulness结果已核。
+- 本轮新增筛查表101共19个引文结果位置，逐项给出纳入/邻接/排除理由；旧REVEAL前向5条已在历史主逐条表中保留。本批不宣称参考文献递归完成。新录的raw citation page条目在execution_pages.json，路线计划 fine_split_queries.json。逐条表：[101_AnomReason_FakeReasoning_ForenDeX前向引用逐条筛查.csv](/Users/zhaomengchen/research/faithfulness/my-research-project/outputs/图像鉴伪解释可靠性_重检_2026-10-05/101_AnomReason_FakeReasoning_ForenDeX前向引用逐条筛查.csv)。
+- 更新计数时注意：最新发布审计报告17,597个结果位置，存在跨查询重复，不能读作独立文献数。报告分项为107条父查询/13,941位置、125条细分与引文路线/3,571位置、补充位置77；三类分项合计与总数有8个位置差，待查明统计口径/剩余记录来源，现不掩盖此差异。54条子路线到可见终页、42条达到严格完整判据。优先目录新增2项（REVEAL原稿核读；ForenDeX官方题录已核、原文待读），整体重检继续未完成。
+- 遗留：继续强相关种子的参考文献全条目检查；优先取得/读取ForenDeX官方全文；完成剩余大规模/索引波动细查询和所有强候选原稿/版本审计。不得声称“一个不漏”或零遗漏，也不得把Scholar可见末页解释为领域穷尽。
