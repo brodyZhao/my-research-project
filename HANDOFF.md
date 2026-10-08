@@ -712,3 +712,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：`python3 work/search_protocol_v2/publish_execution_round.py`通过；`python3 work/search_protocol_v2/enrich_t02_f3_refine2.py`通过；`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过。阶段ZIP `testzip()`通过、113个文件全部与输出目录逐字节一致；当前SHA-256 `12f9072f04e929c08a4146a7dfa14c5b5bdec190c1b36eb886cec03b27deb77c`。CSV验证：72=49条连续排名，90=50条，101=19条逐项理由，74=17,597个位置。
 - 遗留：查明8个位置的汇总分项差异；读取ForenDeX官方全文；继续REVEAL等强相关论文的参考/被引链和候选原稿核对；处理剩余大规模查询和索引波动路线。下一轮仍只做检索/筛选，不进入研究方案或实验设计。
 - 建议 ChatGPT Web下一步：从101逐条表和72第13–14项复核REVEAL/ForenDeX证据等级，补齐ForenDeX原稿后确定排名；随后继续强相关种子引用链，同时追踪8位置统计差异。不要把当前阶段称为最终目录。
+
+## 2026-10-09：T02-F3依赖/稳定性子式和新候选（仍在检索）
+
+- 仓库：`my-research-project`；分支：`codex/forensic-explanation-literature`；远程：`origin https://github.com/brodyZhao/my-research-project.git`。本阶段内容提交：`8977a43ba8deb85a65d7ead4062c38bc74c8f2f6`；本段HANDOFF另行提交，最终HEAD见Git。
+- 完成T02-F3-S2/S3/S4：S2 appropriate reliance 42位置；S3 trust calibration 53位置/6页，Scholar估算63变53；S4 explanation stability 11位置/2页。三条均见终页。每个位置的人工题录/摘要筛选记录在102、103及总台账74。S4命中已知《Beyond Accuracy》并新检出《Explainability-Guided Deepfake Detection for High-Fidelity Facial Edits》；后者以Side-VLM、像素级篡改掩码和CAM对齐评估解释faithfulness，暂列强相关优先表第51项，但当前仅核机构作者摘要、DOI与会议记录，全文协议还未检查。Surfacing Variations与Dynamic vs. One-Time作为人类可靠性/误信息判断邻接证据列入90，不计直接图像鉴伪解释实证。
+- 计数：累计筛选台账17,703个结果位置，跨查询含重复，不是论文数。107条父式13,941位置/59可见末页；125条细分与引文路线3,677位置/57可见末页/45符合现有严格完整条件；另有77个补充位置。优先表51项、候选表58项，不代表51篇经全文确认的直接忠实性研究。
+- 重要记录限制：raw `execution_pages.json`不含全部历史页面；重建器曾把累计台账由归档的17,597错误压到17,350。现已从上一ZIP恢复累计表，合并S2的42条及S3/S4的64条；本机`publish_execution_round.py`已改为保留历史筛选行并合并新结果。此行为`work/`中的临时脚本，不提交。旧页以累计74和阶段ZIP为准；不能把当前raw文件当作完整历史镜像。
+- 当前阻断：新试检T02-F3-S1人类评价宽式估计约2,670条，立即跳出人机验证页，未取得结果列表；已记录为第20条历史阻断，绝非零命中/末页。当前Scholar URL见`83_V2本批计数与受阻观察审计.json`。手动恢复后应从首页重试，先按可靠性/任务同义词拆分，避免宽式直接分页。
+- 本阶段输出：`102_T02-F3-S2图像操作适当依赖式逐位置筛选.csv`（42行）；`103_T02-F3-S3_S4信任校准与解释稳定性逐位置筛选.csv`（64行）；72优先表51项；90候选表58项；累计74为17,703行。阶段ZIP：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-08.zip`，115个文件，SHA-256=`024a764b2ed5937bbd021b75445a79d316125c4b05cd721e0ac60128233c741d`。原有两个用户未跟踪文件保持原样、未暂存。
+- 主要跟踪变更：`literature/forensic-explanation-search-protocol-v2-20261008.md`。检查：`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过；74有17,703个唯一ID且所有行理由非空；72名次1–51连续；102/103理由完整；zip CRC与115个文件逐字节一致。没有业务源码或模型改动。
+- 下一步：用户完成当前Scholar的人机验证后，从T02-F3-S1首页重新记录；优先取得并全文核《Explainability-Guided Deepfake Detection…》，检查其faithfulness、mask alignment、场景划分和稳定性定义；继续ForenDeX全文、强相关参考与前向引用递归，随后处理其他未试检细式/宽式拆分。整体任务未完成，不能承诺零遗漏。
