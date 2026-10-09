@@ -850,3 +850,10 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - `Dissecting Deepfake Artifacts via Multimodal Explanations` Springer正式页已读取摘要及40条参考文献，显示核心引文链入口（定量评估XAI深伪检测、Forensics-Bench、FakeShield、SIDA等）；应下一步建40条逐篇筛查并深读关键引文。其它宽式页中的相邻方法论文已在页面日志说明为何只作方法迁移背景。
 - 测试/检查：累计74行数、唯一ID、非空理由通过；229–237每表10条；83/87计数更新；归档ZIP CRC通过。完成`python3 -m compileall -q work/search_protocol_v2`和`git diff --check`后提交并push本分支。没有模型/业务代码修改。用户自有未跟踪文件继续保留且不暂存。
 - 后续：从当前Chrome Scholar标签的start=840继续；批量复核新增候选原文；展开新Springer强相关论文40条参考文献和前向引用；所有剩余式、跨式去重及原稿效度复核仍未完成。ChatGPT Web建议先抽查候选题名与方法学边界，再继续start=840。
+
+### 2026-10-09：V109宽式续检至第91页（未完成；断点start=910）
+
+- 当前仓库`brodyZhao/my-research-project`、分支`codex/forensic-explanation-literature`。上一个提交`dc613c2`已推送；本检查点新增页面238–244、每页10条，全部合并到总账74。累计74共19,566位置，ID唯一且筛选理由无空值。用户自有两份未跟踪文档未暂存。
+- V109 Google Scholar宽式约20,900条，已筛第1–91页/910位置，下一页`start=910`；搜索整体仍未完成。新强候选待核：`OmniVL-Guard`；`Enhanced CNN architecture… AI-generated image detection`；2009综述`Image forgery detection`（前史线索）；`TrueFake`及DCNN似然比分值法证评价作为相邻背景。第89页WireLLM条目虽出现FakeShield专家评价引用片段，标题任务是无线资源管理，已标为Scholar引用摘要噪声并保留FakeShield追踪线索。
+- 83/87总计更新：累计19,566，域外补充706；V109 91页/910位；归档ZIP 289成员CRC通过，SHA-256 `ffce10b78a116778981507a3805050e54921361e256edd7bd8b2de8edbbb5f35`。检查通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`、74唯一ID/非空理由。
+- 后续立即从Scholar start=910继续，优先核查OmniVL-Guard原文；建立并完成`Dissecting Deepfake Artifacts via Multimodal Explanations`40条参考文献逐篇筛查，再围绕Ref.19、FakeShield、SIDA、Forensics-Bench等扩大前后向引文链。其余检索路线、去重与强候选原稿效度核实仍未完成。

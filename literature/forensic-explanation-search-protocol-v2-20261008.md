@@ -219,3 +219,11 @@ X²-DFD评测/相关工作链中4篇直接相关文献已逐篇记录在输出`1
 - 已在Springer出版社页面复核`Dissecting Deepfake Artifacts via Multimodal Explanations`书目信息、摘要及40条参考文献：明确发现Ref.19 `Towards Quantitative Evaluation of Explainable AI Methods for Deepfake Detection`，及Forensics-Bench、FakeShield、SIDA、Face forensic解释等强相关源。下一阶段应建立40条引用逐篇题录筛查记录，并优先核读这些强相关论文，再对关键条目继续前后向引用闭包。Springer摘要显示FakeArti含1,414图和4,170像素级伪迹掩码，但仍需全文核实解释评价的构念效度。
 - 计数与断点：累计74为19,496个位置，ID唯一、筛选理由齐全；V109覆盖84页/840位置，下一页`start=840`。父路线107/13,941、子/引文149/4,837、补充82保持此前口径；路线外补充位置636。历史Scholar阻断观察保留；本次恢复后当前无活动阻断；总任务`complete=false`。
 - 验证：累计74检查19,496行、19,496个唯一ID、筛选理由无空；页面表229–237每表10行；更新83/87审计和输出归档ZIP。仍须续搜而非将大宽式分页当成已完成任务。
+
+### 2026-10-09：V109宽式续检至第91页（未完成；下一页start=910）
+
+- 延续Google Scholar宽式V109，从start=840筛查至start=900，第85–91页共70个新增位置，逐条表238–244已经并入74。Scholar约20,900条估算不变，尚无末页；V109累计910位置，下一页start=910。
+- 本批新增优先原文核验对象：`OmniVL-Guard: Towards Unified Vision-Language Forgery Detection and Grounding via Balanced RL`（摘要含图像篡改定位任务和physical interpretability）；`Enhanced CNN architecture with residual blocks and regularization for AI-generated image detection`（摘要同时称使用XAI）；`A forensic evaluation method for DeepFake detection using DCNN-based facial similarity scores`（法证证据分值评价而非归因解释）；`TrueFake`（真实场景合成图数据集，作为泛化样本邻接）；`Image forgery detection`（2009年早期综述，作为概念和术语前史）。OmniVL-Guard优先级最高；其余依摘要证据分类，待全文确认后再定。
+- Scholar对其他近似词条产生大量噪声：通用模型output fidelity、文本到图像生成quality、图像编辑image fidelity、医学/出版伦理图像操纵、多模态假新闻、人脸社会知觉和交互式图像操作均逐项注明排除/邻接理由。第89页的WireLLM条目摘要只引用FakeShield，按标题和实际任务排除，同时把其FakeShield引文作为引用追踪线索，避免把引用上下文误当成该文自身结果。
+- 计数更新：总账74为19,566位置观察且ID唯一、理由完整；父107/13,941，子149/4,837，补充82，域外逐位置日志706。V109第1–91页/910位置；下一页start=910；整体complete=false。累计数字包括多路线重复版本/引用卡片，不等于独立论文。
+- 检查：74累计行数与唯一ID均19,566、筛选理由零空值；单页表238–244各10条；83/87更新；归档ZIP 289个文件成员、CRC通过，SHA-256=`ffce10b78a116778981507a3805050e54921361e256edd7bd8b2de8edbbb5f35`；`python3 -m compileall -q work/search_protocol_v2`和`git diff --check`通过。仍需续检与闭合强相关论文的参考/被引链。
