@@ -902,3 +902,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - Scholar位置计数未变化：累计74仍20,781个结果位置（ID唯一），跨式位置不等于独立论文数；总体状态仍`complete=false`。V110主式已有100页/994位置、start=1000为空容器但估算仍高；V109路线和引用链仍有受限断点，不能称穷尽。AnomReason Cited-by CAPTCHA为后台独立标签，用户看不到时不再要求其寻找隐藏页。
 - 验证及归档：102共97条且编号连续、理由齐全；72共82篇且题名/排名唯一连续；90共223篇且题名唯一；74共20,781个位置ID唯一且筛选理由非空。`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过。阶段ZIP含338个文件，CRC与逐文件字节比对通过，SHA-256=`3a06f154b622c0a893a64df244d16b5b31419468b4f66f8a3df0edb04c57b242`。没有源码或模型改动，不需模型测试。按仓库规则本应只提交HANDOFF，但本地`git add`因沙箱将`.git`设为只读而失败；申请提升权限后，自动审批拒绝commit/push，理由是现有证据不足以证明配置的GitHub remote为用户信任的目标。未提交、未推送；当前HEAD仍为`9ebfab8a24d96f7493deb9b52dcad9f3ca7f1882`。两个用户未跟踪文件未暂存。阶段输出包已本地生成，待用户明确授权该remote后再完成交接提交与推送。
 - 后续优先沿其他已核强相关种子前后向引文继续；已见标题先查crosswalk复用既有结论，只为未见标题和缺失原稿投入新阅读。ChatGPT Web下一步检查M2F2引文表的97行连续性及复用记录，再推进V109/V110可用断点与剩余独立引文链。
+
+# 2026-10-09 合成图信任校准闭合与深伪接地/幻觉首屏续检（仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段延续此前检索，不改业务源码。用户现有两个未跟踪文件未改动、未暂存。Google Scholar 使用 Codex IAB 页面；用户此前授权继续检索和推送。
+- 完成精确子式 T06-F3-S3：`("synthetic image" OR "generated image") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("trust calibration")`。Scholar显示121条；记录13页/121位置，start=120只有1条且Next禁用，按当时可见索引记录为终端闭合（不代表主题穷尽）。逐位置题录初筛记录在 `113_T06-F3-S3_trust-calibration逐位置筛查.csv`；121条位置均有题名、页码、决定、理由和查询页链接。该专表为本轮人工转录题名，不逐条保存目标文献URL；能匹配到的候选以既有稳定URL为准。前向/反向引用与全文仍未覆盖。
+- T06结果去重后，加入/补齐优先清单的邻接项：`Believing without Seeing`（ACL 2026，VLM解释质量/用户可靠性判断）、`Effect of AI Performance...`（深伪检测中的人类依赖，但未操纵解释）、`Surfacing Variations...`（图像描述可靠性人因研究）。三者清楚标记为方法/人因近邻，不作为解释faithfulness直接证据。`72`现87个连续rank；增补项暂按低优先级顺序放在末端。
+- 继续试检T11深伪解释子式。S1 `... (grounding)` 首屏10/约11,400，S2 `... (hallucination)` 首屏10/约4,830；均未到末页或完成分页。日志分别为 `114_T11-F2-S1_deepfake_grounding_首屏逐位置筛选.csv`、`115_T11-F2-S2_deepfake_hallucination_首屏逐位置筛选.csv`。10+10位置都与已有目录交叉匹配；保留重复位置审计且复用原稿核查，未重复全文。新加候选Fake-in-Facext（arXiv:2510.20531，待全文核验）和ExDDV（WACV 2026，视频邻接候选、待核全文/标注构念）。T11-S1/S2仍待续页或拆分。
+- `74_V2完整分页逐位置初筛.csv`现20,922行，result_id唯一、理由无空；其中新追加位置141条（T06 121 + T11-S1/S2各10）。请勿把位置数说成独立文献数；路线表按有效页/位置汇总与主表会有历史路由计数差异，不应将不同汇总字段相加推导独立论文数。`87`现150条子查询，状态表位置数重新汇总6,573；全局`complete=false`。当前另有大量未试检子式、受限路线、全局去重以及强相关论文引文链未完成。
+- 阶段ZIP已重建为 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`；应以本次执行的成员数/字节数/SHA校验结果为准。验证 `python3 -m compileall -q work/search_protocol_v2`、`git diff --check`，主表ID唯一/理由非空、T06位置1–121连续、T11首屏各10位连续、72优先rank连续均通过。无模型或源码测试需求。
+- 建议下一步优先：1) 按高相关性拆分T11 grounding/hallucination，而不是继续宽式重复分页；2) 全文核验Fake-in-Facext与ExDDV；3) 沿EFR、TriDF、X²-DFD、FakeReasoning、ForenDeX、PRPO、FakeBench等核心种子的双向引文链；4) 最后完成候选版本去重和统一相关性排序。不能承诺Google Scholar“一个不漏”。
