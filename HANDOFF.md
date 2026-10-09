@@ -734,3 +734,29 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 输出交付：`104_T02-F3-S1及深伪人评拆分式逐位置筛选.csv`、更新后的`74_V2完整分页逐位置初筛.csv`、`72_V2已复核强相关优先清单.csv`、`90_本轮新增强相关候选与引文复核.csv`、`83/85/87`计数/路线状态及阶段报告。归档包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`共116个文件（含SHA清单），SHA-256=`0a351ea3386773f526b8b005edfbfd3f7951f5460368f2db6f52f878cdaac617`；CRC与116个文件逐字节校验通过。
 - 验证：`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过；74共17,790个唯一ID且筛选理由非空；104共97行且理由非空；72名次1–54连续；90共64行；85/87各128条；阶段包SHA清单及CRC/逐文件比较通过。仓库没有业务源码改动，无业务测试需要运行。
 - 遗留/建议下一步：从T02-F3-S1细式向图像拼接、copy-move、inpainting/retouching、AI生成/合成图等非deepfake任务继续扩展；查询式先做规模验证，宽式不直接长分页。优先读DDL和Anchors全文以核实fidelity/affinity指标、人评样本与任务，再核2026预印本身份与原稿；继续高相关种子参考文献和前向引用逐条排查。不可把可解释性、可读性、人类解释偏好或掩码对齐自动当成解释因果faithfulness，也不可称检索“一个不漏”。
+
+
+### 2026-10-09：文献重检继续（末页核对、来源审计、非deepfake术语受阻）
+
+- 仓库：`my-research-project`；分支：`codex/forensic-explanation-literature`；远程：`origin https://github.com/brodyZhao/my-research-project.git`。本段更新前HEAD见Git；本段完成后协议与HANDOFF按项目规则分别提交并推送。
+- 主要跟踪修改：`literature/forensic-explanation-search-protocol-v2-20261008.md`。本地忽略输出新增`108_DDL与Anchors原始证据和访问状态核查.csv`，并更新72、83、85、87；忽略的`work/search_protocol_v2/fine_split_queries.json`更新查询计划。
+- 继续核实Scholar `deepfake "human evaluation" "visual explanations"`第7页确有67估算、7条末页结果、Next禁用；既有104已逐条记录这些条目，本次只复核终页、不重复加计。校正路线状态：REFINE=1页/10位置、约3,670估算、未分页；REFINE2=7页/66位置、末页Next禁用，之前的85/87“未执行”标记与74累计台账矛盾，现已更正。
+- 新式 `("image forgery" OR "image tampering" OR "image splicing" OR "copy-move forgery") ("explanation faithfulness" OR "explanation fidelity" OR "sanity check" OR "parameter randomization")` 试检立即跳Google验证页，没有结果列表；用户需手动完成验证后再从首页续查。此次当前阻断记录在83及85/87，不作零命中处理。
+- DDL与Anchors来源审计见108。DDL核实到TIFS 2025题录/摘要，但IEEE全文未读，Fidelity等评测方法与人评设计都待原文核实。Anchors核实到IEEE题录及莫拉图瓦大学会议摘要，实际公开条目类型为Conference-Abstract；70.23% anchor affinity已核，公式/人评未知。另有综述转述的89.58% fidelity未回原稿核实，不能与70.23%混同。IIT学位论文有PDF条目但本次下载超时。72优先表据此更新证据边界。
+- 统计：结果位置累计维持17,790（重复路线位置，不是论文数）；父查询107式/13,941位置/59末页；子式与引文路线129式/3,764位置/58末页/46严格完整；补充77；历史受阻观察21、当前有一个新Scholar验证阻断。72优先项54条，不等同于54篇直接faithfulness实证。
+- 测试：检查85/87与74路线状态对齐；校验74唯一ID和筛选理由、CSV列数、83状态字段；`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；更新阶段ZIP后执行CRC与逐文件比对。
+- 用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`保持未修改、未暂存。
+- 遗留：待用户手动恢复Scholar后从新窄式首页继续；另有两个深伪human-evaluation宽式仅首页；继续扩充非deepfake任务表达，核DDL/Anchors及旧候选原文，沿强种子参考与前向引文逐篇筛查，做版本去重。全面重检仍未完成；不能声称“一个不漏”。
+- 建议 ChatGPT Web 下一步：从受阻窄式T01-F2-IMAGE-FORENSIC-RELIABILITY首页续分页，每页逐条筛选；随后对其命中论文分别核原稿，并跟进DDL全文获取和Anchors指标定义。
+
+## 2026-10-09 Scholar恢复后：图像伪造忠实性式与证据一致性式（仍未完成）
+
+- 仓库：`my-research-project`；分支：`codex/forensic-explanation-literature`；远程：`origin https://github.com/brodyZhao/my-research-project.git`。检索协议阶段提交：`747ba1959b2a5a12cfd70b36e97ddb1959c8604d`；本段交接提交后最终HEAD另记。
+- 主要tracked修改：`literature/forensic-explanation-search-protocol-v2-20261008.md`。已提交。用户的两个未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`与`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
+- 用户恢复Scholar后续检索T01-F2-IMAGE-FORENSIC-RELIABILITY：检索式以image forgery/tampering/splicing/copy-move替代deepfake，18页、179个可见结果位置、估算186–198；末页Next禁用但start=150跳至167，标为可见末页/索引缺口，不算严格完整。179条尚未逐行转录到累计74，须优先补齐。
+- 完成T06-F2-S3（synthetic/generated image × explanation terms × “evidence consistency”）：26位置到可见末页，估算36→26（波动27.8%），索引不稳定，不算严格完整。逐位置行与理由已保存于`110_T06-F2-S3合成图证据一致性逐位置筛选.csv`并并入74。候选增加METER、INSIGHT、From Evidence to Verdict、VIGIL、STeREx-Net等；72优先表57项，90候选表74项。STeREx-Net身份/来源与原稿时间线待核，隔离不计确认文献。FakeBench及HAVE/PAVE已补入72，SGEVL仍待核Springer章节全文。
+- 统计口径：74当前17,816行，含唯一ID且理由非空；另有T01-F2 179个页面可见位置已记于87路线状态但未导出至74。子式129条、实际路线结果3,969位置（含以上待导出179）、60条到可见末页、46条严格完整；父式107条/13,941位置/59条到可见末页；补充77位置。位置数不是去重论文数；任务仍未完成，不承诺零遗漏。
+- 输出包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`，120个文件；CRC及逐文件字节比对通过，SHA-256=`5170c438fe2a6ed1939f678a1305560b20b400aacd8dd79f30d472cbef2a65b8`。本地忽略输出目录包含新110表、更新后的74/72/83/85/87/90及111清单。
+- 验证命令：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；CSV/JSON审计通过（74 17,816行唯一；110 26行；72排名1–57连续；90 74行；87 129式；83子式实际位置3,969）；ZIP CRC及逐文件一致通过。无业务源码修改。
+- 后续优先工作：从浏览器已保存断点T06-F2-S3末页继续计划中的核心原文/引文链；先将T01-F2的179个可见题录逐条写入74并按原摘要筛选，然后补查start=160跳页/稳定性；复测T06-F2-S3并阅读全文核METER/INSIGHT/SGEVL等强候选。不要把工具解释、证据一致性或区域接地自动等同决策因果忠实性。
+- 建议ChatGPT Web下一步：复核110中METER与AIFo的边界分类，并检查SGEVL原文是否实际给出了证据子图依赖检验；继续时先补齐T01-F2未导出的179行，再推进未完成强相关引文链。当前Scholar用户标签保留在T06-F2-S3 start=20末页。
