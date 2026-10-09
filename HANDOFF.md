@@ -1022,3 +1022,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 第38页start=370访问立即触发Google reCAPTCHA，未读取任何结果；不能记成空页或查询终止。当前需用户在Chrome手动恢复后从该页继续。主台账74累计23,256个唯一位置ID、筛选理由非空；125本路线累计370位置。候选表90为454个标题精确去重观察（含邻接及待核），不代表独立强相关篇数。全局检索complete=false。
 - 检查：`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过；阶段ZIP 526个成员、CRC通过、按107清单逐文件SHA/字节校验通过；归档SHA-256 `46e71526c54132091799d37f75c60cd9f2bb22b8ddde56309a1c95dfccab28e8`。本轮不改源码，无模型测试需求。
 - 下一步：完成当前reCAPTCHA后直接检查start=370；按题名复用已筛记录，仅新增候选做原文/引文核验；接下来续完未闭合检索和核心种子引文，最终去重排序后再汇报。不得宣称零遗漏。
+
+## 2026-10-09：T06-F3-S1-AUTH-SYNTH续筛至第50页检查点
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；阶段归档提交 `c052293` 已推送；HANDOFF提交为随后同步。既有两个未跟踪用户文档未修改、未暂存。
+- 从第37页恢复后，Scholar第38–50页（start=370–490）逐页筛查，共130条新增位置。全路线当前50页/500条，页面估算约606并仍有下一页，未完成；下一断点start=500。第38页挑战经用户恢复后正常续查。没有将验证码页或结果估算误判为末页。
+- 74主表现23,386条位置记录，ID唯一、筛选理由无空项；125 T06路线500条位置，0–490每页10项；90候选题名463项且精确题名唯一，包含邻接/待核/排除性观察，不是463篇直接强相关论文。审计83的child_query_positions更新为8,577，global complete=false。
+- 相关边界线索：Deep Learning for Fashion and Forensics (UMD, 2018)仅作为早期篡改脸/拼接人像检测领域背景；SSRN的T2I综述只凭Scholar摘要列为高相关待核（平台全文无法读取）；其它新增方法邻接项均不等于鉴伪解释faithfulness证据。所有逐位置判断在74与125，候选状态在90。
+- 阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 含526成员，CRC通过，107清单内每个成员的字节数及SHA-256校验通过；归档SHA-256 `bc60329d1f7913d6c44f6f5bc1dee9fba49edd9862bcd94b1311c1b158f68609`。`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过；路由分页、逐位置ID、筛选理由、候选题名唯一性断言通过。无源码改动。
+- 下一步：从Scholar `start=500`继续；遇到重复标题复用旧判断，只核新候选或此前未解决的原文证据。剩余检索式、EFR/强相关种子引文链、全文核验及最终相关性排序仍未完成，禁止声称“一个不漏”。
