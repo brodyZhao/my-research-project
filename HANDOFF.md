@@ -1,3 +1,13 @@
+# 2026-10-09 Google Scholar 生成图像解释人评分支续检（未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段起点 commit `985c7b7672036f38245b2367d276e9bf9f5d3f30`。工作区保留两个既有未跟踪文件，未改动、未暂存。检索表和原始页在忽略目录 `outputs/`、`work/`。
+- 按任务术语OR项拆分继续 `T06-F3-S1-AUTH`。父式约2,830；`"synthetic image" ... ("human evaluation") ...` 子式约621，已逐条记录首页10项，未分页。平行 `"generated image" ...` 子式约2,510；已读start=0/10/20共30项。该分支过宽，保持未完成，并加入解释词OR四分支 `E1`–`E4` 待试检；不得将部分页面描述为完整覆盖。
+- 为优先检验直接图像伪造语境，另跑两条明确标作高精度交叉检索（不是父式逻辑等价替代）：`"generated image" explanation "human evaluation" "image forgery"`，估数52→42，start=0/10/20/30/40逐条记录位置1–42，Next禁用并直接查start=42空；`"synthetic image" explanation "human evaluation" "image forgery"`，估数36→26，逐条记录位置1–26，Next禁用并直接查start=26空。只代表Scholar当时的窄式可见索引闭合，不能外推为领域穷尽。
+- 累计筛选表 `74_V2完整分页逐位置初筛.csv` 目前18,549个结果位置观察，result_id唯一、每行均有筛选理由；它们不是18,549篇独立文献。子式状态表有143条，细查询累计位置数按该表当前值为4,275；全局审计仍 `complete=false`，独立文献去重、原稿终点核验、强相关引文链和其他待试检子式都未完成。此前累计值与细状态表重新汇总有差异，本阶段以表内明细重新计算并在83审计记录校正，不将其解释为新召回下降。
+- 新逐条专表：`126_T06-F3-S1-AUTH-GENERATED_生成图解释人评逐位置筛选.csv`（宽式前30个位置，部分）；`127_T06-F3-S1-AUTH-GENERATED-EXPLAIN-FORGERY_精确式逐位置筛选.csv`（42个位置）；`128_T06-F3-S1-AUTH-SYNTH-EXPLAIN-FORGERY_逐位置筛选.csv`（26个位置）。新检索线索包括XPlainVerse、ForgeryGPT、HierForge、Agentic Tool-Augmented Reasoning、FACT、ForensicZoom、X2-DFD、So-fake、From Masks to Pixels and Meaning、OmniVL-Guard、GenShield、MedForge、Toward Generalizable Forgery Detection and Reasoning等；目录已有重复版本时按题名合并。筛选记录严格区分解释质量/证据真实性、检测准确率人评、生成图质量人评和异常严重度评价。
+- 原始页与拆分计划在 `work/search_protocol_v2/execution_pages.json`、`fine_split_queries.json`；路线状态和计数在87/83表。已重建 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`，137个成员、15,628,331字节，CRC和每个ZIP成员逐字节比对通过。修复重复追加的90条相同观察后，74主日志18,549行且result_id唯一、筛选理由非空；126/127/128专表分别30/42/26行且理由非空。`python3 -m compileall -q work/search_protocol_v2` 与 `git diff --check` 均通过。无业务代码或模型修改，无模型实验测试。
+- 后续从E1–E4实际试检继续；如果仍然过宽，沿解释概念或取证背景递归拆分，并保留OR覆盖关系。随后继续精确查询、其他未试检分支、EFR及强相关候选的逐篇参考/被引链、版本去重与原稿核查。ChatGPT Web优先抽查42/26页终端边界、候选人评构念分层，以及审计计数从旧汇总重算的口径。当前Scholar标签保留在合成图精确交叉检索末页边界。
+
 ## 2026-10-09 图像伪造解释人评检索续检（未完成；断点 start=70）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本轮起点commit `4571c4aa6d3a3df5f0a7cc35248aaf0ed3952d8d`，交接提交后以Git HEAD为准。仅修改HANDOFF为tracked变更；检索明细写入忽略目录 `outputs/` 和 `work/`。用户两个未跟踪文件保留且未暂存。
