@@ -1,6 +1,6 @@
 # 2026-10-09 Scholar T02-F2-RELIABILITY 续检（第62页检查点，仍未完成）
 
-- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`，origin `https://github.com/brodyZhao/my-research-project.git`。本轮从上一已推送HEAD `e7e35e3` 继续；本次改动待提交。两个既有用户未跟踪文件保持未改、未暂存。
+- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`，origin `https://github.com/brodyZhao/my-research-project.git`。本轮从上一已推送HEAD `e7e35e3` 继续；检索日志和阶段ZIP检查点已提交并推送，commit `11e6083`。两个既有用户未跟踪文件保持未改、未暂存。
 - 用户恢复第45页验证后，沿Google Scholar精确宽式 `"image forgery" explanation reliability` 连续完成第45–62页，覆盖`start=440–610`共180个结果位置；前50页已有记录；当前路线累计62页/620个可见位置、下一页`start=620`。Scholar约10,800仅为动态估算，路由与全局状态都保持`complete=false`。
 - 本次恢复后新增的120个位置（第51–62页）均写入`74_V2完整分页逐位置初筛.csv`及逐页sidecar。主账现22,516行，候选观察表`90`现401项（含重复、邻接和待核，不是独立强相关篇数）；第62页审计和路线状态已同步。第53/54页分页偏移经校正后分别对应start=520/530，位置521–540连续无缺。
 - 新线索：UDIS（ICLR 2026匿名under-review稿）摘要将IFL可解释性描述为region/user-query-driven explanations，并使用evidence-aware模块对齐解释文本与定位能力；已列直接相关候选，然而完整正文被OpenReview browser challenge拦截，当前只按摘要标记，可靠性终点（忠实度、稳定性、事实性、人评/依赖）未核。Weng 2026的YOLOv5图像伪造论文摘要提到prototype-based解释，待核是否本研究真正实现/评估。另已登记Guillaro 2024博士论文置信图邻接线索、图像法证书目入口，以及重新评定法律证据XAI论文不能以SHA链完整性代替解释可靠性；官方Springer页面确认page52中一篇检测综述已撤稿。
