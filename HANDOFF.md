@@ -1,6 +1,15 @@
+# 2026-10-10 FakeVLM-R1解释完整性与76条参考文献逐项初筛
+
+- Scholar广式“图像伪造/操纵 × explanation/attribution/saliency × sufficiency/comprehensiveness/completeness”估数约3,590；首页10项逐条记录后拆为精确式 `"image forgery" "explanation completeness"`。唯一命中FakeVLM-R1，官方arXiv全文已核。
+- FakeVLM-R1的解释相关性/逻辑性/完整性由Gemini-2.5-Pro盲评；FakeClue++报告95.1/91.9/77.7，LOKI表III为98.53/94.80/80.83。其checklist用human-in-the-loop流程构造，不能表述成人类评审；不存在已核因果解释依赖/必要充分/适当依赖实验。已升级原candidate并更新优先表rank 140，未重复加标题。效度详细见172。
+- 其正式参考文献1–76逐条筛选见`T02-F2-FAKEVLM-R1-76_REFERENCES_逐篇主题初筛_20261010.csv`。清楚标出直接解释论文/基准、一般检测与生成背景、工具模型、跨任务邻接；已全文核过的FakeShield、FakeBench、ForgeryGPT等复用记录。此为题录层筛查，不是全部引用全文核验。FakeVLM-R1当前Scholar被引2项也已逐条筛查；Veritas++全文审读确认其强化感知而非直接优化解释，MAD-Guard复用旧核读，见CIT-FAKEVLMR1-FWD_被引论文逐条筛查_20261010.csv与172。
+- 74主账增广式首页10项和精确式1项；87记录广式停止与精确式闭合。更新前统计24,644位置、648候选、197排序、56效度核读；验证通过：`python3 -m compileall -q work/search_protocol_v2`、CRLF-aware `git diff --check`；主账24,646行结果ID唯一且理由非空；76条参考与2条前向引用行数通过断言。当前ZIP 608成员/607源文件，SHA-256 `bd815a23c34d33467de2adab9dfaf372f8d9db493b4215ad48bc82ab8097d26d`。全局仍未完成。
+
+---
+
 # 2026-10-10 explanation stability 查询补查：发现ViT-Xplain邻接证据
 
-- 延续用户已授权的文献重检，当前分支 `codex/forensic-explanation-literature`；上一数据点推送为 `d9760d0`，交接更新推送为 `76d71c2`；当前补记稳定性式候选合并及最新归档。
+- 延续用户已授权的文献重检，当前分支 `codex/forensic-explanation-literature`；上一推送检查点为 `2b7fbdf`；当前补记FakeVLM-R1完整性式、76条参考和2条被引。
 - Scholar查询 `("image forgery" OR "image manipulation" OR "image tampering") ("explanation stability" OR "attribution stability" OR "explanation robustness" OR "saliency stability")` 的两页14项逐条筛完，74主账累计24,633结果位置；路线87新增该子式，见专表`T02-F2-EXPL-STABILITY_解释稳定性鲁棒性_逐位置筛选_20261010.csv`。
 - ViT-Xplain (IEEE TCE 72(1), 2026; DOI 10.1109/TCE.2025.3643884)已存在于90和rank 70；本次只是合并新发现、补强官方摘要证据。官方摘要确认任务是深伪视频检测，报告注意力图与脸部重合、熵/清晰度/信任分数；这些仅是稳定性/区域对齐代理，因果faithfulness/真实claim支持及用户适当依赖未证，全文待核。其余13项逐条区分为已核旧候选、通用XAI/图像编辑、生成源归属、文件/金融欺诈或章节索引噪声。
 - 待本阶段重建ZIP并验；候选表应为649唯一题名、优先198唯一rank、原文效度核读55。全局仍未完成，不保证零遗漏。下一步优先补查其他未闭合高精度解释稳定、扰动/删插和强候选引文链，复用已核论文。
@@ -1149,3 +1158,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 最新输出包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，550个成员（含校验清单），ZIP CRC和549个源文件大小/SHA256逐项校验通过；SHA256 `5029f19bdd1b3c5df2968b0a2a5f25c96a18da7524fcff35c0256f5cb6f87566`。本轮已将这一交付ZIP作为单一归档文件随分支推送，原始outputs目录仍按.gitignore保留为本地生成物。主台账74现有24,063行且result_id唯一、筛选理由完整；候选表90为550个标题唯一的候选/邻接观察，优先表72为189篇，原文效度表172为42篇；这些数量各自口径不同，不能互相当作强相关篇数或总文献数。
 - 测试：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；另验证74主表ID唯一、筛选理由非空，90/72/172题名唯一，第18页恰有10条，输出包CRC与清单哈希全部通过。未修改业务源码，无模型测试需求。
 - 未完成：Scholar剩余查询路线/分页、EFR及其他强相关种子的引文追踪、最终统一去重和排序均未结束。下一步先完成人机验证后续查该式第19页；每页复用已核标题的记录，不重复做原文审查；新直接相关项只查原文与引文链。任何情况下都不把动态结果估算或某个检索式终页说成“领域零遗漏”。建议ChatGPT Web从Scholar `start=180`继续。
+
+## 2026-10-10：FakeVLM-R1解释完整性与引文链检查点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本次提交哈希将在提交后补记。用户已授权推送至已配置的origin。原有两个未跟踪用户文件保持未修改、未暂存。
+- 新增逐位置筛选：窄式因果解释faithfulness从第4–9页补58项，当前快照0–87共88个位置；解释稳定性式14项；宽式sufficiency/completeness首屏10项；精确式`"image forgery" "explanation completeness"`命中FakeVLM-R1。72/90均复用既有题名与排序，不新增重复条目；FakeVLM-R1仍是候选与优先rank 140。
+- FakeVLM-R1官方参考文献76条完成题录/主题级逐条筛查；其当前Scholar前向引用2项逐条筛查。FakeVLM-R1与Veritas++原稿判断补入172，MAD-Guard复用已有全文判断。参考表仅代表题录级筛选，不表示每篇全文核验。明细见`T02-F2-FAKEVLM-R1-76_REFERENCES_逐篇主题初筛_20261010.csv`和`CIT-FAKEVLMR1-FWD_被引论文逐条筛查_20261010.csv`。
+- 当前计数：74主账24,646个唯一位置；90候选648个唯一题名；72优先197项；172效度核读57项；87路线172条。阶段ZIP有608个成员且CRC通过，SHA-256=`bd815a23c34d33467de2adab9dfaf372f8d9db493b4215ad48bc82ab8097d26d`。验证：`python3 -m compileall -q work/search_protocol_v2`、`git -c core.whitespace=cr-at-eol diff --check`通过；主账/候选/优先/核读计数和ZIP CRC核验通过。无业务源码改动。
+- 遗留：整个领域检索未完成，不能保证零遗漏；待执行拆分式、核心论文引文链、候选全文核查和最终相关性统一排序仍有工作。建议继续从当前Scholar的`"deepfake detection" "human evaluation" explanation`检查断点`start=180`；但先核对路线账128显示此式已有0–410的闭合记录，若结果仍重复则转查未完成的高精度子式，避免重复翻页。

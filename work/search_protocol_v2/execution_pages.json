@@ -4753,5 +4753,152 @@
         "screen_reason": "非独立研究论文，命中由卷册索引/章节引文产生；该卷中视觉/图像解释需按具体章节题名检索，不把卷册计为相关文献。"
       }
     ]
+  },
+  {
+    "query_id": "T02-F2-SUFFICIENCY-BROAD-20261010",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪解释完整性/充分性",
+    "query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\") (explanation OR attribution OR saliency) (sufficiency OR comprehensiveness OR completeness)",
+    "start": 0,
+    "page_number": 1,
+    "url": "https://scholar.google.com/scholar?q=%28%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22%29+%28explanation+OR+attribution+OR+saliency%29+%28sufficiency+OR+comprehensiveness+OR+completeness%29&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "Scholar显示约3590项；当前页逐条筛查10项。",
+    "phase": "解释质量/完整性检索",
+    "footer": false,
+    "next": [
+      10
+    ],
+    "blocked": false,
+    "estimated_results": 3590,
+    "rows": [
+      {
+        "title": "FakeBench: Probing Explainable Fake Image Detection via Large Multimodal Models",
+        "metadata": "Y Li et al.; IEEE TIFS, 2025",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11124461/",
+        "screen_decision": "直接相关：复用已核",
+        "screen_reason": "图像伪造解释基准，完整性是可见摘要中的解释评价维度；全文既有核读复用。"
+      },
+      {
+        "title": "ForenX: Towards Explainable AI-Generated Image Detection with Multimodal Large Language Models",
+        "metadata": "C Tan et al.; arXiv:2508.01402, 2025",
+        "url": "https://arxiv.org/abs/2508.01402",
+        "screen_decision": "直接相关候选：复用已有条目",
+        "screen_reason": "20名用户评价准确性、相关性、合理性、完整性等维度；已在旧候选中出现，复用。"
+      },
+      {
+        "title": "Beyond Accuracy: Auditing Image Forgery Localization via Scene-Disjoint Evaluation and XAI Faithfulness",
+        "metadata": "S Aoudi et al.; IEEE Access, 2026",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11471733/",
+        "screen_decision": "直接相关：复用已核",
+        "screen_reason": "静态图像伪造定位faithfulness研究，已有原文核读。"
+      },
+      {
+        "title": "INSIGHT: An Interpretable Neural Vision-Language Framework for Reasoning of Generative Artifacts",
+        "metadata": "A Bagaria; arXiv:2511.22351, 2025",
+        "url": "https://arxiv.org/abs/2511.22351",
+        "screen_decision": "直接相关候选：复用已有条目",
+        "screen_reason": "AIGI解释事实性/幻觉与稳健性研究，已登记候选。"
+      },
+      {
+        "title": "ManipShield: A Unified Framework for Image Manipulation Detection, Localization and Explanation",
+        "metadata": "Z Xu et al.; arXiv:2511.14259, 2025",
+        "url": "https://arxiv.org/abs/2511.14259",
+        "screen_decision": "直接相关候选：待核原稿/复用题名",
+        "screen_reason": "静态篡改检测定位与解释直接候选；查询发现，需查版本是否已收录并核解释评价。"
+      },
+      {
+        "title": "Semantic Attention and Progressive Training for Image Authenticity Assessment and Tampered Region Highlighting",
+        "metadata": "Y Ren et al.; Information Sciences, 2026",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0020025526006304",
+        "screen_decision": "待核低优先：篡改区域高亮",
+        "screen_reason": "检测/区域高亮，当前片段未见解释可靠性测试；此前在causal query记录为待核候选。"
+      },
+      {
+        "title": "Explainable Multi-Granularity Attribution Reasoning Framework for Fake News Detection",
+        "metadata": "W Ji et al.; npj Artificial Intelligence, 2026",
+        "url": "https://www.nature.com/articles/s44387-026-00093-3",
+        "screen_decision": "排除：新闻多模态任务",
+        "screen_reason": "图像篡改只作虚假新闻线索模块，主体是新闻归因，不是图像鉴伪解释可靠性。"
+      },
+      {
+        "title": "Explainable Deepfake Detection with Feature-Robust Augmentation and Evidence-Grounded Explanation Optimization",
+        "metadata": "Z Xu et al.; arXiv:2608.20913, 2026",
+        "url": "https://arxiv.org/abs/2608.20913",
+        "screen_decision": "直接相关：复用已核",
+        "screen_reason": "解释grounding、准确性/完整性评估，已在核心表复核。"
+      },
+      {
+        "title": "Boosting Non-Causal Semantic Elimination: An Unconventional Harnessing of LVM for Open-World Deepfake Interpretation",
+        "metadata": "Z Li et al.; ACM MM, 2024",
+        "url": "https://dl.acm.org/doi/10.1145/3664647.3680737",
+        "screen_decision": "邻接：深伪解释机制",
+        "screen_reason": "提出非因果语义消除的深伪解释，非图像编辑取证解释的faithfulness评估；按视频/通用深伪邻接筛选。"
+      },
+      {
+        "title": "Towards Human Explainable Digital Forensics Generating Human Interpretable Evidence for Semantic Understanding in Manipulated Images and Text",
+        "metadata": "Y Chen; dissertation, 2025",
+        "url": "https://scholar.google.com/scholar?q=%22Towards+Human+Explainable+Digital+Forensics%22",
+        "screen_decision": "直接相关邻接：学位论文候选",
+        "screen_reason": "题名涉及操纵图像的可理解取证证据；来源摘要不显示解释可靠性实证，需核全文/版本。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-IMAGEFORGERY-COMPLETENESS-20261010",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪解释完整性/充分性",
+    "query": "\"image forgery\" \"explanation completeness\"",
+    "start": 0,
+    "page_number": 1,
+    "url": "https://scholar.google.com/scholar?q=%22image+forgery%22+%22explanation+completeness%22&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "精确式唯一结果FakeVLM-R1全文核读；其76条参考逐篇主题筛查。",
+    "phase": "解释质量/完整性检索",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "estimated_results": 1,
+    "rows": [
+      {
+        "title": "FakeVLM-R1: Internalizing Physical Laws via CoT for Synthetic Image Detection",
+        "metadata": "L Zhu et al.; arXiv:2605.30062v1, 2026",
+        "url": "https://arxiv.org/abs/2605.30062",
+        "screen_decision": "直接强相关：解释质量/完整性自动评测；因果faithfulness未证",
+        "screen_reason": "静态合成图检测并产生取证解释；Gemini-2.5-Pro盲评器按人工参与设计的清单打相关性/逻辑性/完整性，FakeClue++为95.1/91.9/77.7，LOKI为98.53/94.80/80.83。非人工独立判真，自动judge有模型偏差；未用反事实/必要充分/参数随机化或实际依赖评测。全文核读及76条参考筛查见172与专表。"
+      }
+    ]
+  },
+  {
+    "query_id": "CIT-FAKEVLMR1-FWD-20261010",
+    "parent_id": "T02-F2-FAKEVLM-R1-REFS",
+    "task_family": "FakeVLM-R1前向引用",
+    "query": "Cited by: FakeVLM-R1: Internalizing Physical Laws via CoT for Synthetic Image Detection",
+    "start": 0,
+    "page_number": 1,
+    "url": "https://scholar.google.com/scholar?cites=6823621447106054774&as_sdt=2005&sciodt=0,5&hl=zh-CN",
+    "captured_at": "2026-10-10",
+    "summary": "Google Scholar精确被引列表显示2项；两条逐项筛选，其中Veritas++官方全文核读。",
+    "phase": "种子论文前后向引文追踪",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "estimated_results": 2,
+    "rows": [
+      {
+        "title": "Veritas++: Value-Aware On-Policy Distillation for Perception-Enhanced AIGI Detection",
+        "metadata": "H Tan, J Lan, Z Tan, A Liu, Z Yu, C Song et al.; arXiv:2607.27113v1, 2026",
+        "url": "https://arxiv.org/abs/2607.27113",
+        "screen_decision": "直接任务、邻接解释可靠性；全文复核后不列为解释质量实证",
+        "screen_reason": "AIGI解释型检测并有人工标注artifact cold-start；全文明确方法不是直接优化explanatory ability，而是强化细粒度感知/定位/分类。GPT-5.1用于筛核改写后的reasoning与原人工标注一致；无解释事实性/faithfulness或appropriate reliance评测。复用候选与优先表唯一记录。"
+      },
+      {
+        "title": "MAD-Guard: Controlled Study of Autoregressive Generation versus Direct Decision Interfaces for Closed Multimodal Forensic Tasks",
+        "metadata": "H Chen; arXiv:2609.33683v1, 2026",
+        "url": "https://arxiv.org/abs/2609.33683",
+        "screen_decision": "邻接：取证判决概率校准；复用已核",
+        "screen_reason": "比较多模态取证生成式/直接判决接口及ECE、性能与延迟；已在172核读。概率校准不等于解释忠实性，复用唯一记录。"
+      }
+    ]
   }
 ]
