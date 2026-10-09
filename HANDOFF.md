@@ -1,6 +1,6 @@
 # 2026-10-09 图像鉴伪解释可靠性重检续查（未完成）
 
-- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段开始于 HEAD `47104e7`（HANDOFF更新提交后记录最新hash）。工作区原有两个未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md` 和 `literature/forensic-explanation-relevance-20261004.md` 未改动、未暂存。
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段检查点提交 `75dd64c`；随后仅有本HANDOFF记录提交。工作区原有两个未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md` 和 `literature/forensic-explanation-relevance-20261004.md` 未改动、未暂存。
 - 继续检查用户所给 `"image forgery" "human evaluation" explanation` 断点：此前记录覆盖活动可见位置1–106；本轮复核start=80/90/100与start=106空页，未发现新题录，末页仍Next禁用。Google Chrome实际当前标签是Google Scholar异常流量/验证页（不是正常结果页），没有将其记成零结果或完成；本阶段转向可读的一手论文页面继续核对。
 - 原先总账 `74_V2完整分页逐位置初筛.csv` 现有18,656条位置观察，result_id唯一且筛选理由无空值；这些不是独立文献数。重算审计 `83`：107主路线，59条记录到可见末页；主路线13,941位置，149个拆分计划条目/路线当前交叉命中4,625位置、其中68可见末页且55标记覆盖完成；82条ForensicChat前向引用位置；另有90条不属于当前主/细分计划的题名或引用补充记录。全局 `complete=false`，去重、未试检拆分路线、全文和递归引文仍未结束。计数口径区分已写入83审计文件。
 - 更新PRPO原稿核验 `137_PRPO原稿解释可靠性与人评效度复核.csv`：确认ICML 2026正式出版（PMLR 306:92466–92496）；作者v3有8名评审、每人5张图、CAC/EGIA/RQ/CC/CU五项评分。该人评能支撑解释质量/证据接地，但评审间一致性未报告，不能推成因果忠实性测试。PRPO的CLIP图文相似奖励与段落/最终判决多数一致奖励是代理构念；稀疏伪影多数票失败局限已记录。
