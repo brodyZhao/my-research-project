@@ -893,3 +893,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 变更后复核仍待执行，并刷新ignored阶段ZIP；所有Scholar结果位置不变（74仍20,781），全局检索仍未完成。当前用户所见V110标签正常；另一个后台AnomReason Cited-by标签仍显示验证码，已不要求用户切换去寻找该隐藏标签，引用链暂记独立阻断。
 
 - 补记验证：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；90共221条且题名唯一、72共82条、101编号1–57连续唯一、74共20,781条唯一位置ID。ZIP 337个文件，CRC及逐文件比对通过，SHA-256=`5568ff72aaa14947bf51f94322d0031a0adf221d185b29934953d73b932b451f`。本补记前HEAD=`26f621d`。
+
+### 2026-10-09：按M2F2-Det的97条参考文献去重筛查与复用既有全文结果（检索仍未完成）
+
+- 仓库`my-research-project`；分支`codex/forensic-explanation-literature`；本轮开始HEAD=`9ebfab8a24d96f7493deb9b52dcad9f3ca7f1882`。输出位于忽略目录`outputs/图像鉴伪解释可靠性_重检_2026-10-05/`；用户原有两个未跟踪文件继续未修改、未暂存。
+- 对M2F2-Det原稿References逐项筛查97条，并新建`102_M2F2-Det全部97条参考文献逐篇筛查.csv`。标题/版本交叉匹配发现：Can ChatGPT Detect DeepFakes? 已在EFR参考链及全文证据中核过；Common Sense Reasoning for Deepfake Detection已有100全文效度记录；HiFi-Net、HiFi-Net++、PSCC-Net也已有题录/方法记录。本次只在候选90和优先72补充两篇统一索引及M2F2-ref来源，明确复用既有全文结论，不重复获取或重读。优先清单现82篇（原84条中两篇同题重复记录已合并，保留全文核查和第二次发现来源，rank唯一连续）；候选90现223条且题名唯一。
+- 新审的M2F2 Ref.76 `Cheap-fake Detection with LLM using Prompt Engineering` 官方arXiv摘要显示研究真实照片与误导图注构成的out-of-context误用，以GPT-3.5提取caption关系特征进行cheap-fake检测；不是模型生成鉴伪解释，也没有解释事实性、因果faithfulness或依赖校准终点，因此仅作低/中邻接，不进强相关核心。其他检测算法、基准数据和通用BLEU/CIDEr等评价工具均逐项标成任务邻接、数据或指标背景。
+- Scholar位置计数未变化：累计74仍20,781个结果位置（ID唯一），跨式位置不等于独立论文数；总体状态仍`complete=false`。V110主式已有100页/994位置、start=1000为空容器但估算仍高；V109路线和引用链仍有受限断点，不能称穷尽。AnomReason Cited-by CAPTCHA为后台独立标签，用户看不到时不再要求其寻找隐藏页。
+- 验证及归档：102共97条且编号连续、理由齐全；72共82篇且题名/排名唯一连续；90共223篇且题名唯一；74共20,781个位置ID唯一且筛选理由非空。`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过。阶段ZIP含338个文件，CRC与逐文件字节比对通过，SHA-256=`3a06f154b622c0a893a64df244d16b5b31419468b4f66f8a3df0edb04c57b242`。没有源码或模型改动，不需模型测试。按仓库规则本应只提交HANDOFF，但本地`git add`因沙箱将`.git`设为只读而失败；申请提升权限后，自动审批拒绝commit/push，理由是现有证据不足以证明配置的GitHub remote为用户信任的目标。未提交、未推送；当前HEAD仍为`9ebfab8a24d96f7493deb9b52dcad9f3ca7f1882`。两个用户未跟踪文件未暂存。阶段输出包已本地生成，待用户明确授权该remote后再完成交接提交与推送。
+- 后续优先沿其他已核强相关种子前后向引文继续；已见标题先查crosswalk复用既有结论，只为未见标题和缺失原稿投入新阅读。ChatGPT Web下一步检查M2F2引文表的97行连续性及复用记录，再推进V109/V110可用断点与剩余独立引文链。
