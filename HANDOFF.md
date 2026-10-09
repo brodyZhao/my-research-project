@@ -1065,3 +1065,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要修改文件在输出包中的`00_重检阶段报告_未完成.md`、`72_V2已复核强相关优先清单.csv`、`83_V2本批计数与受阻观察审计.json`、`87_V2细查询子式实际试检状态.csv`、`90_本轮新增强相关候选与引文复核.csv`、`101_AnomReason_FakeReasoning_ForenDeX前向引用逐条筛查.csv`、`125_T06-F3-S1-AUTH-SYNTH_合成图解释人评逐位置筛选.csv`、`172_强相关核心及邻接论文原文解释可靠性效度核读.csv`及107 SHA256清单；根目录更新本文件。
 - 检查：`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过；脚本断言606唯一offset/736条含复查观察、路线终页、引文页计数、主账唯一ID与非空筛选理由、90/72题名唯一、归档CRC和SHA256均通过。无业务源码变更。两个既有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`保持未修改且未暂存。
 - 遗留：重检仍未完成，审计`complete=false`。Google Scholar部分宽式受100页分页上限、动态估算与索引变化影响；T02/T05/T06/T11等尚有未执行拆分式，多个强相关候选全文/References待核，最终跨库去重与统一相关性排序未完成。不可宣称一个不漏。建议下一步优先推进已命中直接解释faithfulness论文的高精度式和核心种子前向/后向引文；按候选90标题去重，复用已经读过的原稿判断。仅当前阶段ZIP已提交；需要依次提交本HANDOFF更新并推送分支。
+
+## 2026-10-10：Scholar 深伪人评检索第18页与MAD解释可靠性引文链
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本次提交及推送记录以本段后续提交为准。origin为已配置的GitHub仓库。两个既有用户未跟踪文档保持未修改、未暂存。
+- Google Scholar 检索式：`"deepfake detection" "human evaluation" explanation`。从上次已恢复断点续查第18页（`start=170`），10个位置逐项筛选并写入总位置账74、路线拆分账104、单页日志；本路线累计18页/180个位置，Scholar约427为动态估计且Next仍可用。翻到第19页（`start=180`）即触发人机验证，当前实际页未读取任何论文结果，不将验证页计为空结果。用户需在Chrome完成验证后从`start=180`续查。
+- 第18页识别并区别三类证据：`Evidence Fusion for Analyzing Multimodal Image Manipulation`是直接鉴伪/定位候选，Scholar摘要提示解释质量没有人评，出版方全文本次受安全页限制；FACT (arXiv:2609.05876) 主文已核，正文只称补充材料有人评而未披露解释忠实性协议；`ChatGPT Encounters Morphing Attack Detection`全文证明同图/提示重复5轮、报告检测分数稳定性与解释定性查图，承认解释非确定性/伪迹提示偏差，未做人评解释或因果faithfulness。不同可靠性构念不混写。音频、文本和普通目标检测结果按条目原因排除。
+- 由该MAD论文相关参考文献与近邻路线扩展的6项逐篇筛查记于`108_MAD解释稳定性种子论文引文链逐篇核查.csv`。补入`Feature Focus` (2021)：官方全文显示使用partial morph指定篡改区域作解释空间接地参照，Feature Focus+FLRP在测试设置下平均94%、最差83.3%的相关性落在伪造区域；普通LRP/其他架构也会指向未篡改区域。它属于直接空间接地证据，不等价因果忠实性或人类效用。其余引文候选包括2022/2023可视化、2025 CLIP文本解释、FX-MAD频域解释、469/410名观察者的人脸鉴伪研究。
+- 最新输出包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，550个成员（含校验清单），ZIP CRC和549个源文件大小/SHA256逐项校验通过；SHA256 `5029f19bdd1b3c5df2968b0a2a5f25c96a18da7524fcff35c0256f5cb6f87566`。主台账74现有24,063行且result_id唯一、筛选理由完整；候选表90为550个标题唯一的候选/邻接观察，优先表72为189篇，原文效度表172为42篇；这些数量各自口径不同，不能互相当作强相关篇数或总文献数。
+- 测试：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；另验证74主表ID唯一、筛选理由非空，90/72/172题名唯一，第18页恰有10条，输出包CRC与清单哈希全部通过。未修改业务源码，无模型测试需求。
+- 未完成：Scholar剩余查询路线/分页、EFR及其他强相关种子的引文追踪、最终统一去重和排序均未结束。下一步先完成人机验证后续查该式第19页；每页复用已核标题的记录，不重复做原文审查；新直接相关项只查原文与引文链。任何情况下都不把动态结果估算或某个检索式终页说成“领域零遗漏”。建议ChatGPT Web从Scholar `start=180`继续。
