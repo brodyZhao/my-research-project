@@ -930,3 +930,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 来源核对：官方Springer说明该V&V综述讨论falsification/evaluation、verification、runtime monitoring，并明确其重点范围不包含fake-image detection；官方Bristol库提供2025年论文全文（217页），摘要确认其研究在线误导、人类/LLM标注和视觉特征，仍需区分社媒语境与取证解释；Springer 2026面人伪造视频论文直接指出超分会产生类似伪造痕迹的伪迹，并提出时空字典恢复，但不是解释方法。链接见候选表90和逐位置表74。
 - 检查通过：主表21,812行/result_id唯一/理由齐全；第77–90页每页10行且位置761–900无缺；87中T11-F2-S2记90页/900位置、next=`start=900`、complete=false；83总位置21,812、子查询位置7,003与主表对齐。校正第77、78页捕获时间为当时实际UTC记录，未改原筛选依据。
 - 本阶段无源码/模型更改；计划继续Scholar到下一个验证码/页面断点，然后按仓库Git规则推送当前分支。下一步优先从`start=900`继续，但对新题名先查候选/已核记录复用，再将精力留给新出现的强候选原稿和EFR/其他强相关种子的未闭合前后向引文；不要把这条4,800条宽式90页误称为完成或零遗漏。
+
+
+### 2026-10-09：T11-F2-S2 宽式筛至 Scholar 第100页并确认分页截断（继续检索）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本检查点起始已推送提交为 `3c37105`。当前应将本次HANDOFF更新作为独立提交推送。两份既有用户未跟踪文档保持未修改、未暂存。
+- 查询 `(deepfake OR "face forgery" OR "facial manipulation") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination)` 已从第91页继续到可见第100页。91–99页90条、100页4条共新增94个可见结果位置，逐项筛选日志为 `T11-F2-S2_20261009_第91页逐位置筛选.csv` 至 `第100页`，并追加至总台账74；全表现21,906行，result_id唯一、每项有题名和筛选理由。位置数包含引用卡和同文多版本，不等于唯一论文数。
+- Scholar仍显示约4,800条估计结果，但第100页Next禁用；直查start=1000显示第101页空结果容器且没有题录卡片。因此本宽式标记为分页截断/未闭合，不能据此宣布该查询或整项检索完成。87记第1–100页共994个可见结果位置，coverage_complete=false；下一步优先跑更窄的T11 grounding/faithfulness子式并补强相关种子的前后向引文。
+- 91–100页新增没有新的直接强相关题名。第95页命中 `Improving the Perturbation-Based Explanation of Deepfake Detectors Through the Use of Adversarially-Generated Samples`，该WACV 2025论文早已在旧Web初筛表16登记，已去重复用；不重复全文核查。第97页再次命中RIT 2025博士论文 `DeFaking Deepfakes`，其机构库摘要补充确认透明/可解释证据、记者情境评估及自动化/确认偏误；该论文和其CHI 2024 `Dungeons & Deepfakes`前序研究已存在候选表90、优先表72与引文台账，沿用既有范围判断，不重复计算。另有捷克数字法证硕士论文及俄语法证神经网络论文列为邻接候选，不算核心图像解释可靠性证据。候选表90已补入来源摘要/范围边界。
+- 审计83的累计位置数同步为21,906，子路线位置数7,097；当前路线区间前100页/994条，start=1000为空且估数冲突，整体`complete=false`。此前人工恢复的屏蔽查询不算作零结果，也没有把引用卡片计为独立论文。
+- 已验证：74总表21,906条、ID唯一、理由完整；第91–99页每页10项，第100页4项；87/83记分页边界冲突；`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过。无源码/模型改动。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`已同步更新，CRC需以本轮执行结果为准。
+- 下一步：转到未完成的细式，不再重复翻这条已碰到100页上限的宽式；优先T11-F2-S1（grounding）、图像伪造解释fidelity/sanity、AI生成图像人评/适当依赖；对第94页法证expertology论文、第95页捷克数字法证论文只做范围判断和必要引文追查。继续逐条筛结果并复用已筛条目；提交/推送阶段记录；直到细式、核心种子引文链与统一去重排序均有可核证边界，才可汇报完成。
