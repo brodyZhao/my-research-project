@@ -1183,3 +1183,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 输出统计更新：74主账24,766个唯一位置ID、筛选理由全非空；候选/邻接表90为653个唯一题名；优先表72为200项；原稿/摘要效度表172为62项；路线表87为179条。数量定义不同，不代表强相关文献篇数。阶段报告已追加本轮说明，整体检索仍未完成，不能保证零遗漏。用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`与`literature/forensic-explanation-relevance-20261004.md`保持未修改、未暂存。
 - 验证待本次完成后记录：`python3 -m compileall -q work/search_protocol_v2`、主账ID/筛选理由、候选和排名题名唯一、逐位置/参考记录数、ZIP CRC与清单SHA256；无业务源码修改。
 - ChatGPT Web下一步建议：优先扩展当前筛出的直接解释可靠性文献及高相关引文链，全文不可访问的候选（VeriChain、GenText挑战）待有源全文/正式版本再核；继续未闭合查询时按标题复用记录，避免重复筛读。
+
+## 2026-10-10：EFR参考条目对账与SIDA/VLForgery全文复核
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交：`09d8ef5`（本HANDOFF同步提交随后更新）；远端：`origin` 已配置。用户已授权推送本轮检索结果。
+- 对账EFR原始参考列表03（56条）与旧主题表162（55行），确认唯一漏行是EFR-REF019 “ROUGE: A Package for Automatic Evaluation of Summaries”；其余按序一一对应，包括TruthLens→FORGE题名更新、DGM4/HAMMER++条目。逐项对照文件：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T14_EFR56条原始参考文献与旧55项筛查表逐条对照_20261010.csv`。旧表不再被描述为覆盖全部56条。
+- EFR参考链中VLForgery和SIDA的全文边界补入169与172。VLForgery的1000例人工检查针对PSCC-Net基线定位mask，不是文本解释人评；未发现claim支持、faithfulness或appropriate-reliance评测。SIDA的5名专家审查3000条GPT-4o训练描述，确认准确性/图像对齐/清晰度/一致性；这不是对推理期模型输出解释的独立盲评。详细字段见169、172、90。
+- Scholar SIDA精确题名查询触发验证码，未看到结果卡片；已在87和05中记录为未完成路线（0已读位置，不表示0命中），第85标签作为恢复断点。EFR当前Cited by仅一项MAD-Guard，已有旧日志及全文审查，不重复计数。
+- 当前计数：74主账24,766个唯一结果位置、90候选653个去重题名、72排序200项、172原稿/摘要效度核读64项、87路线180条。口径各自不同，不能当作强相关文献篇数。阶段ZIP重建与校验通过，613成员；SHA-256 `a8bcdfdbb9d9eba2ba7a51c28344d44b39edd34f59f8c6e723dcf5dcd9af1a24`。
+- 测试：`python3 -m compileall -q work/search_protocol_v2` 通过；`git -c core.whitespace=cr-at-eol diff --cached --check` 通过；断言确认EFR 56/55/56对账、唯一缺项、核读64篇唯一、候选653唯一、路线180、阶段ZIP CRC及新增交叉表成员均通过。无业务源码改动。
+- 遗留：整体领域搜索仍未完成，不承诺零遗漏；SIDA Scholar精确题名和Cited-by链待用户完成验证后继续；后续优先完成可恢复的高精度检索与种子引文链，避免重查已核论文，最终再统一排序。
+- 原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
+- 建议ChatGPT Web下一步：在SIDA精确题名查询恢复后读取卡片的Cited by列表，逐项筛选；此后用当前已有身份/版本映射合并候选，优先核查新出现的直接解释可靠性原稿。
