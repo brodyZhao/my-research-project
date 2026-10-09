@@ -1,0 +1,50 @@
+﻿reference_no,cited_title,topic_screen,source_url,decision,screen_basis,dedup_note
+1,Security AI Challenger Program,数据集/竞赛资源；与模型解释无直接关系,arXiv:2411.14823v2 References,排除核心：资源记录,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+2,Qwen2.5-VL Technical Report,通用视觉语言模型基座；非图像鉴伪解释研究,https://arxiv.org/abs/2502.13923,排除核心：模型底座,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+3,A Statistical Global Feature Extraction Method for Optical Font Recognition,字体识别方法；不涉及篡改解释,arXiv:2411.14823v2 References,排除核心：不同任务,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+4,RRU-Net: The Ringed Residual U-Net for Image Splicing Forgery Detection,拼接伪造检测/分割基线；无自然语言解释评价,arXiv:2411.14823v2 References,方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+5,InternVL: Scaling Up Vision Foundation Models and Aligning for Generic Visual-Linguistic Tasks,通用VLM；无取证解释评估,arXiv:2411.14823v2 References,排除核心：模型底座,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+6,MVSS-Net: Multi-View Multi-Scale Supervised Networks for Image Manipulation Detection,图像篡改检测/定位基线；不评解释,arXiv:2411.14823v2 References,方法背景,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+7,CASIA Image Tampering Detection Evaluation Database,数据集；不评价模型解释,arXiv:2411.14823v2 References,排除核心：数据资源,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+8,Robust Text Image Tampering Localization via Forgery Traces Enhancement and Multiscale Attention,文档/文字篡改定位方法；未见解释输出或评估,arXiv:2411.14823v2 References,定位方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+9,MFC Datasets: Large-Scale Benchmark Datasets for Media Forensic Challenge Evaluation,媒体取证挑战数据集；非解释质量研究,arXiv:2411.14823v2 References,背景/数据集,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+10,TruFor: Leveraging All-Round Clues for Trustworthy Image Forgery Detection and Localization,图像取证定位及可信线索/置信图；不是自然语言解释faithfulness实证,arXiv:2411.14823v2 References,可信检测邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+11,Hierarchical Fine-Grained Image Forgery Detection and Localization,图像伪造检测定位并含语言引导说明；需区分生成解释和可靠性验证,arXiv:2411.14823v2 References,直接任务方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+12,MultiTask-CenterNet: Efficient and Diverse MultiTask Learning Using an Anchor Free Approach,通用多任务检测架构；非伪造解释,arXiv:2411.14823v2 References,排除核心：通用方法,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+13,LoRA: Low-Rank Adaptation of Large Language Models,通用训练方法；非取证解释评估,arXiv:2411.14823v2 References,排除核心：通用方法,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+14,"SIDA: Social Media Image Deepfake Detection, Localization and Explanation with Large Multimodal Model",直接鉴伪解释系统；需看解释评价构念与测量独立性，已在总候选/阅读账,https://arxiv.org/abs/2412.04292,直接强相关；复用原记录,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+15,FFAA: Multimodal Large Language Model Based Explainable Open-World Face Forgery Analysis Assistant,直接面部伪造解释系统；其解释评测边界复用已有全文记录,https://arxiv.org/abs/2408.10072,直接强相关；复用原记录,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+16,AutoSplice: A Text-Prompt Manipulated Image Dataset for Media Forensics,伪造数据集；支持任务评测但不评解释,arXiv:2411.14823v2 References,数据集邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+17,Learning JPEG Compression Artifacts for Image Manipulation Detection and Localization,检测定位特征方法；不评价解释,arXiv:2411.14823v2 References,方法背景,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+18,LISA: Reasoning Segmentation via Large Language Model,通用推理分割基座；未评取证解释,arXiv:2411.14823v2 References,通用方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+19,OpenForensics: Large-Scale Challenging Dataset for Multi-Face Forgery Detection and Segmentation in-the-Wild,深伪/人脸伪造数据集；非解释质量研究,arXiv:2411.14823v2 References,数据集邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+20,UnionFormer: Unified-Learning Transformer with Multi-View Representation for Image Manipulation Detection and Localization,图像伪造检测定位方法；无解释效度,arXiv:2411.14823v2 References,方法背景,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+21,Feature Pyramid Networks for Object Detection,通用计算机视觉架构；非本题,arXiv:2411.14823v2 References,排除核心：通用方法,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+22,Microsoft COCO: Common Objects in Context,通用视觉数据集；非伪造解释,arXiv:2411.14823v2 References,排除核心：数据资源,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+23,Explicit Visual Prompting for Low-Level Structure Segmentations,低层视觉分割提示；可作方法背景，不研究取证解释可靠性,arXiv:2411.14823v2 References,弱方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+24,PSCC-Net: Progressive Spatio-Channel Correlation Network for Image Manipulation Detection and Localization,图像伪造检测/定位方法；无语言解释评价,arXiv:2411.14823v2 References,方法背景,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+25,DA-HFNet: Progressive Fine-Grained Forgery Image Detection and Localization Based on Dual Attention,伪造检测定位方法；非解释可靠性,https://arxiv.org/abs/2406.01489,方法背景,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+26,A ConvNet for the 2020s,通用视觉骨干网络；非本题,arXiv:2411.14823v2 References,排除核心：通用方法,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+27,Decoupled Weight Decay Regularization,通用优化方法；非本题,arXiv:2411.14823v2 References,排除核心：通用方法,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+28,DeepSeek-VL: Towards Real-World Vision-Language Understanding,通用VLM基座；非取证解释效度研究,https://arxiv.org/abs/2403.05525,排除核心：模型底座,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+29,IMDL-BENCO: A Comprehensive Benchmark and Codebase for Image Manipulation Detection & Localization,检测定位基准；不直接评价语言解释可靠性,arXiv:2411.14823v2 References,基准邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+30,Advances in Pre-Training Distributed Word Representations,通用词向量技术；与取证解释评估构念无关,arXiv:2411.14823v2 References,排除核心：通用工具,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+31,IMD2020: A Large-Scale Annotated Dataset Tailored for Detecting Manipulated Images,伪造图像数据集；非解释评测,arXiv:2411.14823v2 References,数据集邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+32,Towards Robust Tampered Text Detection in Document Image: New Dataset and New Solution,文本篡改检测/数据集；直接任务邻接但不测解释,arXiv:2411.14823v2 References,任务方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+33,Revisiting Tampered Scene Text Detection in the Era of Generative AI,场景文字篡改检测方法；不直接测解释效度,arXiv:2411.14823v2 References,任务方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+34,Towards Modern Image Manipulation Localization: A Large-Scale Dataset and Novel Methods,图像篡改定位基准与方法；解释可靠性非焦点,arXiv:2411.14823v2 References,方法/数据邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+35,Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks,通用目标检测框架；非本题,arXiv:2411.14823v2 References,排除核心：通用方法,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+36,SAFL-Net: Semantic-Agnostic Feature Learning Network with Auxiliary Plugins for Image Manipulation Detection,伪造检测方法；不评价解释,arXiv:2411.14823v2 References,方法背景,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+37,Text-Line Examination for Document Forgery Detection,经典文档取证/文本行检查；人类取证线索但非AI解释评估,arXiv:2411.14823v2 References,历史方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+38,ObjectFormer for Image Manipulation Detection and Localization,图像篡改检测定位基线；不评解释可靠性,arXiv:2411.14823v2 References,方法背景,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+39,Detecting Tampered Scene Text in the Wild,场景文字篡改检测方法；非解释效度研究,arXiv:2411.14823v2 References,任务方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+40,COVERAGE: A Novel Database for Copy-Move Forgery Detection,copy-move数据集；无解释研究,arXiv:2411.14823v2 References,数据集邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+41,Robust Image Forgery Detection over Online Social Network Shared Images,图像伪造检测鲁棒性方法；未评生成解释,arXiv:2411.14823v2 References,鲁棒检测邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+42,ManTra-Net: Manipulation Tracing Network for Detection and Localization of Image Forgeries with Anomalous Features,篡改线索与区域定位方法；视觉异常图不等于自然语言解释,arXiv:2411.14823v2 References,定位/线索邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+43,GSVA: Generalized Segmentation via Multimodal Large Language Models,通用分割方法；非取证解释可靠性,arXiv:2411.14823v2 References,弱方法邻接,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+44,FakeShield: Explainable Image Forgery Detection and Localization via Multi-Modal Large Language Models,直接图像伪造解释/定位系统，已有全篇效度核读；不重复计入,https://arxiv.org/abs/2410.02761,直接强相关；复用原记录,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+45,MiniCPM-V: A GPT-4V Level MLLM on Your Phone,通用VLM基座；非本题,arXiv:2411.14823v2 References,排除核心：模型底座,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+46,DiffForensics: Leveraging Diffusion Prior to Image Forgery Detection and Localization,图像伪造检测定位方法；非语言解释评价,arXiv:2411.14823v2 References,方法背景,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+47,ICDAR 2019 Robust Reading Challenge on Reading Chinese Text on Signboard,OCR评测任务；非篡改解释,arXiv:2411.14823v2 References,排除核心：通用OCR评测,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+48,Pyramid Scene Parsing Network,通用场景分割方法；非本题,arXiv:2411.14823v2 References,排除核心：通用方法,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
+49,Scene Parsing Through ADE20K Dataset,通用场景解析数据集；非本题,arXiv:2411.14823v2 References,排除核心：通用数据集,作者公开全文参考文献题名/出版信息与研究任务逐篇初筛；不等于对所引论文全文复核。,已有论文按候选/原文表唯一标题复用；本表保留引用位置审计。
