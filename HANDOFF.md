@@ -1195,3 +1195,16 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 遗留：整体领域搜索仍未完成，不承诺零遗漏；SIDA Scholar精确题名和Cited-by链待用户完成验证后继续；后续优先完成可恢复的高精度检索与种子引文链，避免重查已核论文，最终再统一排序。
 - 原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
 - 建议ChatGPT Web下一步：在SIDA精确题名查询恢复后读取卡片的Cited by列表，逐项筛选；此后用当前已有身份/版本映射合并候选，优先核查新出现的直接解释可靠性原稿。
+
+
+## 2026-10-10续：Dissecting Deepfake Artifacts参考链检查点
+
+- 已核Springer正式章节页：*Dissecting Deepfake Artifacts via Multimodal Explanations*（MMM 2026, DOI 10.1007/978-981-95-6950-2_3）。页面摘要报告FakeArti（1,414张deepfake图像、4,170个pixel-level artifact masks）及ADAD视觉接地文本解释；章节正文订阅受限，172仅标注摘要级证据。40条publisher references逐篇主题筛查见`T15_DISSECTING-FAKEARTI-40_REFERENCES_逐篇主题初筛_20261010.csv`；第6/15为同篇重复引用位置。
+- 本轮增加后计数：172效度核读65项、87细路线181项、90候选653题名、74主账24,766位置。阶段ZIP 614个成员，SHA-256 `0a7e7b59bf3c6502fce6fbe5b5c234906a59166db93c2b03cbdd96e5d913a5b4`。`python3 -m compileall -q work/search_protocol_v2`、EFR 56/55对账、候选/原稿身份唯一、ZIP CRC校验通过。
+- 待办仍含SIDA Scholar精确题名/Cited-by验证码恢复、章节全文获取后评测协议核查、其他未闭合路线和最终相关性总排序。不得宣称全领域穷尽。
+
+## 2026-10-10续：FakeArti/FakeArti references checkpoint
+
+- 新增*Dissecting Deepfake Artifacts via Multimodal Explanations*出版商摘要级审查；Springer全文访问受限。其可见参考文献1–40已逐篇主题筛查，报告文件`T15_DISSECTING-FAKEARTI-40_REFERENCES_逐篇主题初筛_20261010.csv`，第6与15条同篇重复。新增172和90边界结论及87路线记录；未增加主检索位置。
+- 数据提交：`b7c3b8a`；预计本HANDOFF提交后为最新hash。最终分支仍为`codex/forensic-explanation-literature`，远端`origin`。ZIP为614成员，SHA-256 `0a7e7b59bf3c6502fce6fbe5b5c234906a59166db93c2b03cbdd96e5d913a5b4`。验证：Python compileall、EFR 56/55对账、40条引用记录、65篇唯一核读、181条路线、ZIP CRC均通过。Git diff检查需采用`git -c core.whitespace=cr-at-eol diff --check`以容许Excel兼容CSV的CRLF行尾。
+- 待办：SIDA Scholar精确题名/Cited-by仍卡在第85标签的人机验证；章节正文尚未获得。继续其他高精度路线时复用已核身份并停止低价值重复翻页。总体检索未完成，不能保证零遗漏。
