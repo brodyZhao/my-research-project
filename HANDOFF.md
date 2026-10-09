@@ -876,3 +876,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - V109 Google Scholar宽式约20,900条，已筛第1–91页/910位置，下一页`start=910`；搜索整体仍未完成。新强候选待核：`OmniVL-Guard`；`Enhanced CNN architecture… AI-generated image detection`；2009综述`Image forgery detection`（前史线索）；`TrueFake`及DCNN似然比分值法证评价作为相邻背景。第89页WireLLM条目虽出现FakeShield专家评价引用片段，标题任务是无线资源管理，已标为Scholar引用摘要噪声并保留FakeShield追踪线索。
 - 83/87总计更新：累计19,566，域外补充706；V109 91页/910位；归档ZIP 289成员CRC通过，SHA-256 `ffce10b78a116778981507a3805050e54921361e256edd7bd8b2de8edbbb5f35`。检查通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`、74唯一ID/非空理由。
 - 后续立即从Scholar start=910继续，优先核查OmniVL-Guard原文；建立并完成`Dissecting Deepfake Artifacts via Multimodal Explanations`40条参考文献逐篇筛查，再围绕Ref.19、FakeShield、SIDA、Forensics-Bench等扩大前后向引文链。其余检索路线、去重与强候选原稿效度核实仍未完成。
+
+### 2026-10-09：按论文级去重并完成 AnomReason 全文及57条参考文献筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；远程：`origin https://github.com/brodyZhao/my-research-project.git`。本阶段开始HEAD=`db9a9f1c7a71d38455fd530eea73c8c081daa8d3`。用户原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`与`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
+- 为减少重复工作，按规范化精确题名审计候选表90，发现AnomReason此前有两条不同检索命中的重复论文记录；已合并为一条并保留两个检索来源。候选90由221条降至220条，标题全唯一；72中rank64更新为全文复核证据。
+- 全文核读AnomReason（Tan et al., ICLR 2026, arXiv:2510.10231）§§3.2–4.2、附录B/E和ICLR官方记录。确认其AnomReason-Deepfake用结构化异常现象/理由与人工筛选真值匹配，并设置仅在分类正确时计分的CSemAP/CSemF1；这是直接的语义解释接地/联合有效性评测证据，但不代表内部特征因果忠实度。数据注释由单名训练标注员逐候选accept/reject/unsure，未报告IAA；1,000图对比未见解释真实性盲评或用户依赖研究。AnomReason的57条参考文献均逐条筛入忽略输出`outputs/图像鉴伪解释可靠性_重检_2026-10-05/101_AnomReason全部57条参考文献逐篇筛查.csv`；其中直接取证解释链与评估方法背景逐级区分，既有论文复用表90/72判定。
+- Google Scholar V110在此前已筛至第100页/994个可见位置，`start=1000`空结果容器但仍显示估算结果；本阶段不重复翻页。单独的AnomReason Cited-by 10页面经用户报告恢复后重新载入仍显示reCAPTCHA；没有读取或记为零，被引路线仍待手动恢复。审计JSON继续记录总位置20,781、complete=false；计数为跨式结果位置，不是唯一论文数。
+- 修改/生成文件：ignored outputs中的72、90、101、83和阶段ZIP；tracked文件`HANDOFF.md`。验证通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；90共220条且题名唯一；101共57条、参考编号1–57连续唯一、理由齐全；74共20,781个唯一结果位置ID；阶段ZIP含337个文件、CRC和逐文件字节比对通过，SHA-256=`be253cd7f0d27f175aad2e8b17331257ea1ff66700d5e957f1c9bca05c4abfee`。仅提交HANDOFF，不暂存两份用户文件。
+- 遗留：整体检索尚未完成；V109宽式与其他多条细式存在分页上限、索引漂移或验证码断点；AnomReason前向引用列表、EFR及其他强相关种子的引文递归闭包未完成。建议继续时从尚未完成且未重复筛过的高精度路线推进；遇到已见题名直接复用90/72的原判定，只核新原稿和未读引文链。
