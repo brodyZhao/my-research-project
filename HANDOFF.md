@@ -1014,3 +1014,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要新候选：IVT-Guard、OmniVL-Guard、NeurIPS 2025 Epistemic Uncertainty for Generated Image Detection，以及人类对齐可解释性、法证虹膜判断、人机深伪检测、眼动系统综述等邻接研究。摘要层直接候选仍待核原稿的解释真实性/因果忠实度/稳定性/人类依赖终点；位置数与候选行数均不是最终强相关篇数。此前两个用户未跟踪文件未修改、未暂存。
 - 检查通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`、74唯一ID/筛选理由、125连续分页和每页10位置、90唯一题名、83/87断点计数。
 - 遗留：检索总体仍未完成，不能承诺零遗漏；其余未闭合拆分式和EFR/其他强相关种子的引文链、候选原稿核验及最终相关性排序待做。下一步从当前Chrome Scholar start=320继续同一式；先按90题名去重，再将仅新条目登记/核原文。用户已授权推送，继续在本分支checkpoint并push。
+
+## 2026-10-09：T06-F3-S1-AUTH-SYNTH 第37页检查点（第38页验证阻断）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；阶段归档提交 `670bca5` 已推送到origin。两个原有未跟踪用户文件未修改、未暂存。
+- 从第36页断点继续，Scholar第37页（start=360）10个结果位置逐项记录在125与74。新增 *Skill-Aligned Annotation for Reliable Evaluation in Text-to-Image Generation* 已核arXiv官方题录/摘要，作为一般人评一致性/稳定性方法邻接候选；该文不是图像鉴伪解释可靠性直接证据。第37页其余结果按非鉴伪/非解释任务排除。
+- 第38页start=370访问立即触发Google reCAPTCHA，未读取任何结果；不能记成空页或查询终止。当前需用户在Chrome手动恢复后从该页继续。主台账74累计23,256个唯一位置ID、筛选理由非空；125本路线累计370位置。候选表90为454个标题精确去重观察（含邻接及待核），不代表独立强相关篇数。全局检索complete=false。
+- 检查：`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过；阶段ZIP 526个成员、CRC通过、按107清单逐文件SHA/字节校验通过；归档SHA-256 `46e71526c54132091799d37f75c60cd9f2bb22b8ddde56309a1c95dfccab28e8`。本轮不改源码，无模型测试需求。
+- 下一步：完成当前reCAPTCHA后直接检查start=370；按题名复用已筛记录，仅新增候选做原文/引文核验；接下来续完未闭合检索和核心种子引文，最终去重排序后再汇报。不得宣称零遗漏。
