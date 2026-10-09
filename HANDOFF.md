@@ -1,3 +1,11 @@
+# 2026-10-10 图像鉴伪因果解释/faithfulness窄式（第1–2页）
+
+- Google Scholar query `("image forgery detection" OR "image manipulation detection") ("causal explanation" OR "counterfactual explanation" OR faithfulness)`估算98；start=0/10共20个位置逐条筛查，见74和`T02-F2-CAUSAL-EXPL_图像鉴伪因果解释Faithfulness_首2页逐位置筛选_20261010.csv`。路线仍未闭合，下一页start=20。已核题名复用原审查，避免重复全文工作。
+- 第2页新发现Kamat et al. (2024)护肤广告面部伪造检测：600图，比较CAM方法并报告Average Drop/Increase置信指标。纳入强相关、低证据等级候选：这些分数变化不能独立证明因果忠实，无随机化sanity或人类依赖测试，见172/90/72。
+- 更新后主账24,551位置、候选647个去重题名、优先清单196项、原文/摘要效度核读54项；口径不同且不能当作领域总篇数。阶段包602成员，SHA-256 `731f0473e463a0dbb96e2a1225f6d077bce68eda86aea15b0fe4693c9c9b295b`。用户原有未跟踪文件保持不变。全局未完成。
+
+---
+
 # 2026-10-10 图像操纵/编辑接地宽式精度抽查
 
 - Google Scholar宽式第2页逐项筛查10项，总账74与专表`T02-F2-S1_图像操纵或编辑接地_第2页逐位置筛选_20261010.csv`已更新。约14,200条且领域混杂；FakeXplain版本复用已核记录。路线标为未闭合/转拆分，不进行低效机械翻页。
