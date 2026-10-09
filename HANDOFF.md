@@ -1005,3 +1005,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 新发现线索：第89页ResearchGate结果 “VeriPress: Evidence-Grounded Multi-Agent Reasoning for Interpretable Multimodal News Classification” 表面高度相关，但作者上传稿明确称generated research manuscript，结果数字为illustrative targets，已在90隔离，未列为可信研究。第97页命中Kadam等人2021年综述，但该项已在90记录并有官方IJECE原始页及DOI核验，复用已有记录。
 - 阶段包 outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip 含525个文件，17,601,516字节，SHA-256=27268363213ddd3eec4325dc0d283a21c78e1cd4177900e7b5fbea1a4ec644eb；CRC及目录与压缩包逐文件字节比对通过。python3 -m compileall -q work/search_protocol_v2、git diff --check、主账唯一ID/理由非空及第86–100页每页10位置断言均通过。无业务源码修改，无需模型测试。
 - 建议下一步：优先完成英文高精度人评/接地/忠实性拆分式（例如未闭合T06 synthetic/generated-image + human-evaluation路线），随后继续EFR及图像鉴伪解释核心种子的前后向引文。先按标题crosswalk查重，复用已有全文筛查；只为新增或证据缺口条目核查原稿和References。最终统一去重/相关性排序仍未完成，不能宣称零遗漏或总体穷尽。
+
+### 2026-10-09：T06-F3-S1-AUTH-SYNTH续检至Google Scholar第32页（仍未完成）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段内容提交：`d971d86`，已推送`origin`。
+- 从已有第21页/start=200断点继续Google Scholar查询`"synthetic image" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("human evaluation") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)`，完成第22–32页/start=210–310共110个位置。第32页正常，下一页start=320；估算606–618动态变化，coverage_complete=false。
+- 更新输出：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/74_V2完整分页逐位置初筛.csv`、`125_T06-F3-S1-AUTH-SYNTH_合成图解释人评逐位置筛选.csv`、`90_本轮新增强相关候选与引文复核.csv`、`87_V2细查询子式实际试检状态.csv`、`83_V2本批计数与受阻观察审计.json`、`00_重检阶段报告_未完成.md`及阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`。主账23,206位置唯一ID/非空理由；该路线320位置，候选表448个精确题名唯一项。阶段包526个文件，CRC及清单内逐文件SHA校验通过，ZIP SHA-256=`fc9aff15713076f07eed948fb97045216fb33689d227e407b904cdc638b9c57b`。
+- 主要新候选：IVT-Guard、OmniVL-Guard、NeurIPS 2025 Epistemic Uncertainty for Generated Image Detection，以及人类对齐可解释性、法证虹膜判断、人机深伪检测、眼动系统综述等邻接研究。摘要层直接候选仍待核原稿的解释真实性/因果忠实度/稳定性/人类依赖终点；位置数与候选行数均不是最终强相关篇数。此前两个用户未跟踪文件未修改、未暂存。
+- 检查通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`、74唯一ID/筛选理由、125连续分页和每页10位置、90唯一题名、83/87断点计数。
+- 遗留：检索总体仍未完成，不能承诺零遗漏；其余未闭合拆分式和EFR/其他强相关种子的引文链、候选原稿核验及最终相关性排序待做。下一步从当前Chrome Scholar start=320继续同一式；先按90题名去重，再将仅新条目登记/核原文。用户已授权推送，继续在本分支checkpoint并push。
