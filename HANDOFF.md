@@ -1,9 +1,9 @@
 # 2026-10-10 因果/反事实 faithfulness式：当前索引88项闭合
 
-- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本轮基于此前推送检查点 `4eba157277ea8a8f2228a8c096dc44bd908b618f`，更新后需按本任务既有授权提交并推送。用户原有两个未跟踪文件保持原样。
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本轮数据检查点 `d9760d0` 已提交并推送；本交接增补了4项精确式去重结果，随后提交推送。用户原有两个未跟踪文件保持原样。
 - 用户恢复 Scholar 第19页后，续查高精度式 `("image forgery detection" OR "image manipulation detection") ("causal explanation" OR "counterfactual explanation" OR faithfulness)`。页面start=0–80共9页、88个连续位置已逐项筛查；查询估算由约98变88，start=80共8项且Next禁用。该路线对当前可见索引闭合，但带索引波动风险，不证明全领域穷尽。结果见74及专表 `T02-F2-CAUSAL-EXPL_图像鉴伪因果解释Faithfulness_逐位置筛选_20261010.csv`；87状态已更新。
-- 新增尾页58条筛选逐项保存，主要是跨任务“faithfulness”引文噪声。PRPO、EditSleuth、Pixels Don't Lie、OmniVL-Guard等复用已有文献身份/原文核读；无重复全文阅读。DeepDect、Kamat等现有评估边界仍按质量/有用性指标与因果faithfulness分开。没有新结果可确认为因果faithfulness原稿实证。
-- 验证通过：`python3 -m compileall -q work/search_protocol_v2`、CRLF-aware `git diff --check`；主账24,619行ID唯一且筛选理由非空，causal sidecar 88项、offset 0–87连续，候选648去重、优先197唯一rank、核读55；阶段ZIP CRC通过，603成员/602源文件，SHA-256 `ea8a8fff44239509d8a6d10f72b7891ef7d299a200ea5e4a8fa32ddeeb25cd8a`。这些不是独立强相关篇数。
+- 新增尾页58条筛选逐项保存，主要是跨任务“faithfulness”引文噪声。PRPO、EditSleuth、Pixels Don't Lie、OmniVL-Guard等复用已有文献身份/原文核读；无重复全文阅读。另回查精确式 `"image forgery" "faithful explanation"` 4项：ForgeryGPT、STeREx-Net、Explaining AI-Image Detection复用全文记录；Reliability-Aware Multi-Representation Fusion确认为检测器融合鲁棒性而非解释可靠性，按范围排除。DeepDect、Kamat等评估边界仍按质量/有用性与因果faithfulness分开。没有尾页新结果可确认为因果faithfulness原稿实证。
+- 验证通过：`python3 -m compileall -q work/search_protocol_v2`、CRLF-aware `git diff --check`；主账24,619行ID唯一且筛选理由非空，causal sidecar 88项、offset 0–87连续，候选648去重、优先197唯一rank、核读55；阶段ZIP CRC通过，603成员/602源文件，SHA-256 `4f8ce36103c092b18f79a1072be2109d6b54f51f85e6512b2eafdd5721cdeab7`。这些不是独立强相关篇数。
 - 后续优先从87中未闭合的高信号精确子式继续，并对新强候选按已有题名/版本映射复用核读，再做其参考/被引链；不要继续机械翻扫低精度跨领域噪声页。全局未完成、不可声称零遗漏。建议ChatGPT Web复核start=80无下一页记录及筛选分类的构念边界。
 
 ---
