@@ -1,3 +1,14 @@
+# 2026-10-10 Scholar查询恢复：图像鉴伪解释人评精确式闭合
+
+- 仓库 `brodyZhao/my-research-project`；当前分支 `codex/forensic-explanation-literature`；本轮开始基于已推送提交 `5c77ae3`，本轮最新提交见Git HEAD。远端 `origin` 已确认。用户两个未跟踪文件仍原样保留、未暂存。
+- 用户恢复Scholar后继续精确式 `("image forgery" OR "image tampering" OR "image manipulation") ("explanation quality" OR "explanation correctness" OR "explanation accuracy") ("human evaluation" OR "expert evaluation" OR "human study")`。Scholar估算由约44动态降为34；`start=0/10/20/30`筛34条，`start=40`空尾页且Next禁用。只对该查询快照闭合，不代表领域穷尽。每条有筛选理由：74总账及`T02-F3-S1-IMAGEFORGERY-QUALITY-HUMAN_20261010_逐位置筛选.csv`；路线状态见87和`work/search_protocol_v2/execution_pages.json`。
+- *Defake-o3*（arXiv:2608.16259v1）官方arXiv全文核读后，加入原稿评价记录172：每条局部证据由3人按visual grounding与artifact specificity独立判断；89.43%证据三人全体一致；FakeFrontier抽200张假图，解释质量/说服由3个MLLM评审。作为直接强相关证据可靠性候选，需与人类依赖、因果faithfulness分开。90与72沿用既有唯一题名记录，避免重复。
+- 当前日志规模：主账24,514条位置记录（非独立论文）；候选645个去重题名；优先193项；原稿/摘要效度核读50项。全局检索仍未完成。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip` 共599成员，CRC/逐文件哈希校验通过；SHA-256 `07fb6bd3ad6b2dd320bf4debe02e8708817e11fba25e8adb7f68dcb80e175dab`。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`、34个结果位置连续且理由非空、总账ID唯一、候选/优先/原稿表去重、ZIP CRC与逐文件校验通过。无源码修改；用户两个未跟踪文件不加入提交。
+- 遗留：整体任务仍未完成；继续未闭合英文精确/拆分式、重要候选的前后向引文链和版本合并，始终复用已核论文。不可宣称没有遗漏。建议下一轮优先核Defake-o3参考中已列为直接方法的FakeXplain/IVY-FAKE/AIGI-Holmes等是否已在90/172中完成效度核查，再继续未闭合路线。
+
+---
+
 # 2026-10-10 Scholar restored checkpoint: direct-candidate review and citation-chain audit
 
 - Repository: `brodyZhao/my-research-project`; branch `codex/forensic-explanation-literature`; latest code/data checkpoint before this commit: `5fb3d39`; remote `origin` is the confirmed GitHub repository. This stage is being committed and pushed per the user's explicit instruction.
