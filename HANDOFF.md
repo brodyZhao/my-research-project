@@ -1055,3 +1055,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 相关边界线索：Deep Learning for Fashion and Forensics (UMD, 2018)仅作为早期篡改脸/拼接人像检测领域背景；SSRN的T2I综述只凭Scholar摘要列为高相关待核（平台全文无法读取）；其它新增方法邻接项均不等于鉴伪解释faithfulness证据。所有逐位置判断在74与125，候选状态在90。
 - 阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 含526成员，CRC通过，107清单内每个成员的字节数及SHA-256校验通过；归档SHA-256 `bc60329d1f7913d6c44f6f5bc1dee9fba49edd9862bcd94b1311c1b158f68609`。`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过；路由分页、逐位置ID、筛选理由、候选题名唯一性断言通过。无源码改动。
 - 下一步：从Scholar `start=500`继续；遇到重复标题复用旧判断，只核新候选或此前未解决的原文证据。剩余检索式、EFR/强相关种子引文链、全文核验及最终相关性排序仍未完成，禁止声称“一个不漏”。
+
+## 2026-10-09 恢复 Scholar 后续检查点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；阶段归档 ZIP checkpoint commit：`a85c019`（本条 HANDOFF 更新后会再生成一个同步 commit）。
+- 主要交付：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`；压缩包内完整检索台账、逐位置筛选、候选表、原文效度审查、终页与路线状态、SHA256文件清单。当前归档含540个由清单校验的源文件；ZIP成员CRC、540项大小与SHA256核验均通过。ZIP SHA-256：`e76190731c0ded835d6e6cf84a887a61d1420d3654932a896a4622c76b60677f`。
+- 已核 Google Scholar `T06-F3-S1-AUTH-SYNTH` 当前快照：start=0到600共606个唯一分页位置；末页6项且Next禁用。历史第38–50页存在130条重复页复查记录，均保留审计轨迹、未按唯一offset重复计数。74主台账共23,893行，`result_id`全唯一、筛选理由无空项。候选表90为538个精确题名唯一观察项；优先排序表72为181个题名唯一项目；完整原稿解释效度表172为25项。候选/位置行数不等于强相关独立论文篇数。
+- 已恢复且不重复录入的引文页：AnomReason Cited by 10条、FakeReasoning 8条、ForenDeX 1条，与`101_AnomReason_FakeReasoning_ForenDeX前向引用逐条筛查.csv`已有记录逐条对照。另新核EFR唯一Cited by条目MAD-Guard全文；其ECE衡量判决概率校准，不是解释faithfulness/人类依赖。ForenDeX唯一当前被引的 *Understanding Why Foundation Models Work for Diffusion-Generated Image Detection* 已读官方arXiv全文，属于机制/检测器行为分析，不是解释faithfulness实证。2026中文综述 *Deepfake detection in the era of large models* 作为高相关引文挖掘种子，未计入英文直接实证核心。
+- 主要修改文件在输出包中的`00_重检阶段报告_未完成.md`、`72_V2已复核强相关优先清单.csv`、`83_V2本批计数与受阻观察审计.json`、`87_V2细查询子式实际试检状态.csv`、`90_本轮新增强相关候选与引文复核.csv`、`101_AnomReason_FakeReasoning_ForenDeX前向引用逐条筛查.csv`、`125_T06-F3-S1-AUTH-SYNTH_合成图解释人评逐位置筛选.csv`、`172_强相关核心及邻接论文原文解释可靠性效度核读.csv`及107 SHA256清单；根目录更新本文件。
+- 检查：`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过；脚本断言606唯一offset/736条含复查观察、路线终页、引文页计数、主账唯一ID与非空筛选理由、90/72题名唯一、归档CRC和SHA256均通过。无业务源码变更。两个既有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`保持未修改且未暂存。
+- 遗留：重检仍未完成，审计`complete=false`。Google Scholar部分宽式受100页分页上限、动态估算与索引变化影响；T02/T05/T06/T11等尚有未执行拆分式，多个强相关候选全文/References待核，最终跨库去重与统一相关性排序未完成。不可宣称一个不漏。建议下一步优先推进已命中直接解释faithfulness论文的高精度式和核心种子前向/后向引文；按候选90标题去重，复用已经读过的原稿判断。仅当前阶段ZIP已提交；需要依次提交本HANDOFF更新并推送分支。
