@@ -842,3 +842,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 83更新至总位置19,406（父107/13,941；子149/4,837；补充82；其他546），V109为75页/750位置；历史阻断23，当前无阻断，整体complete=false。单页日志224–228及候选90记录新发现。
 - 下一步：从V109 start=750继续，并建立Dissecting Deepfake Artifacts正式参考文献逐条审查表。优先取原文核查FakeArti标注、解释事实性/一致性和ADAD指标；沿其参考文献追查FakeShield/SIDA和定量解释评价。继续至分页/检索末端，并回头做不同检索路线和EFR的引文闭包。
 - 本阶段验证已通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；累计74共19,406行且ID唯一、理由与位置齐全；216–228各10行；83/87断点对齐。阶段ZIP含235个文件，CRC通过，SHA-256=`31e1b3e3a55aba7a0993e895b3047f68c410fdc609e4887fc6aad75abfa1cf92`。本阶段仅提交HANDOFF和检索协议；两份用户未跟踪文档未触碰。
+
+### 2026-10-09：V109宽式续检至第84页（未完成；断点start=840）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`。本阶段在V109从start=750连续筛查至start=830，新增90条逐位置记录，页面表229–237；总账74现19,496条、result_id均唯一、筛选理由均非空。输出归档`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`已更新，282成员、CRC通过、SHA-256 `5796144b281ebceef1f4c00f1ffd7f51d647b6b9e2004b736a996075b89aca69`。这些是结果位置，不是去重论文数。
+- V109 Scholar估算约20,900，84页/840位置已筛，尚未到末页；下一页start=840。强相关候选待核名单新增：Detection of AI-generated synthetic images with a lightweight CNN；Reliability map estimation for CNN-based camera model attribution；From Sharp Eyes to Expert Mind；Score-based Likelihood Ratios for Deepfake Image Evidence；DGR-Net；Forged anomaly detection using advanced deep learning；BioForensNet；DiffSeg。不能仅凭摘要提升为已验证强相关。
+- `Dissecting Deepfake Artifacts via Multimodal Explanations` Springer正式页已读取摘要及40条参考文献，显示核心引文链入口（定量评估XAI深伪检测、Forensics-Bench、FakeShield、SIDA等）；应下一步建40条逐篇筛查并深读关键引文。其它宽式页中的相邻方法论文已在页面日志说明为何只作方法迁移背景。
+- 测试/检查：累计74行数、唯一ID、非空理由通过；229–237每表10条；83/87计数更新；归档ZIP CRC通过。完成`python3 -m compileall -q work/search_protocol_v2`和`git diff --check`后提交并push本分支。没有模型/业务代码修改。用户自有未跟踪文件继续保留且不暂存。
+- 后续：从当前Chrome Scholar标签的start=840继续；批量复核新增候选原文；展开新Springer强相关论文40条参考文献和前向引用；所有剩余式、跨式去重及原稿效度复核仍未完成。ChatGPT Web建议先抽查候选题名与方法学边界，再继续start=840。

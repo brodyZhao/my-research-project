@@ -210,3 +210,12 @@ X²-DFD评测/相关工作链中4篇直接相关文献已逐篇记录在输出`1
 - 83/87更新：父路线107/13,941、子/引文149/4,837、补充82不变；其他路线外逐位置记录546；合计19,406。V109为75页/750位置，next start=750；历史验证码阻断23、当前无活动阻断。overall complete=false。
 - 已验证：Scholar台账页71–75逐条筛查；Springer章节官方摘要/书目信息/参考文献；CVF Skyra官方页；IEEE/Wiley新候选摘要题录。新候选仍待全文，不应写成解释可靠性已验证结果。
 - 验证：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；74累计19,406行且ID唯一/理由和result_position齐全，本批13页日志各10行，83/87对齐。阶段ZIP含235个文件、CRC通过，SHA-256=`31e1b3e3a55aba7a0993e895b3047f68c410fdc609e4887fc6aad75abfa1cf92`。
+
+### 2026-10-09：V109宽式续检至第84页（未完成；下一页start=840）
+
+- Google Scholar宽式V109继续逐页筛查第76–84页（start=750–830），共新增90个结果位置。页面逐条专表229–237并入累计74。检索估算仍约20,900条，尚未到可见末页，不能视为全面覆盖完成或独立论文篇数。
+- 新增高优先全文核查候选：`Detection of AI-generated synthetic images with a lightweight CNN`（摘要称讨论方法解释）；`Reliability map estimation for CNN-based camera model attribution`（像素级相机来源归因可靠性图）；`From Sharp Eyes to Expert Mind: Internalizing Expert Knowledge in MLLMs for Tampered Text Detection`（篡改图像文本的视觉接地/定位）；`Score-based Likelihood Ratios for Deepfake Image Evidence`（法证似然比解释）；`DGR-Net: Depth Information Guided Reconstruction Network for Interpretable Generated Image Detection`；`Forged anomaly detection using advanced deep learning`（摘要点明可解释性限制）；`BioForensNet`（科学图像像素级复制移动检测，摘要称可解释）；`DiffSeg`（扩散修补攻击检测和多特征可解释分割）。以上均为摘要筛查候选，只有全文核实解释构念、faithfulness/稳定性评估和数据/评审效度后才可提升为强相关结论。
+- 纳入边界审查的邻近方法论文包括`Non-semantic evaluation of image forensics tools`、`FACT`、`MedEBench`、X-Detect、自动驾驶解释综述、PRNU相机归因稳健性等；这些提供可迁移的扰动稳健性、接地或解释保真度方案，但不是图像伪造解释核心实证。对image fidelity（生成图像质量）、似然比校准可靠性、文本/视频鉴伪也分别标明，不与视觉解释忠实性混为一谈。
+- 已在Springer出版社页面复核`Dissecting Deepfake Artifacts via Multimodal Explanations`书目信息、摘要及40条参考文献：明确发现Ref.19 `Towards Quantitative Evaluation of Explainable AI Methods for Deepfake Detection`，及Forensics-Bench、FakeShield、SIDA、Face forensic解释等强相关源。下一阶段应建立40条引用逐篇题录筛查记录，并优先核读这些强相关论文，再对关键条目继续前后向引用闭包。Springer摘要显示FakeArti含1,414图和4,170像素级伪迹掩码，但仍需全文核实解释评价的构念效度。
+- 计数与断点：累计74为19,496个位置，ID唯一、筛选理由齐全；V109覆盖84页/840位置，下一页`start=840`。父路线107/13,941、子/引文149/4,837、补充82保持此前口径；路线外补充位置636。历史Scholar阻断观察保留；本次恢复后当前无活动阻断；总任务`complete=false`。
+- 验证：累计74检查19,496行、19,496个唯一ID、筛选理由无空；页面表229–237每表10行；更新83/87审计和输出归档ZIP。仍须续搜而非将大宽式分页当成已完成任务。
