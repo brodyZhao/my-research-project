@@ -1,3 +1,14 @@
+## 2026-10-09 图像伪造解释人评检索续检（未完成；断点 start=70）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本轮起点commit `4571c4aa6d3a3df5f0a7cc35248aaf0ed3952d8d`，交接提交后以Git HEAD为准。仅修改HANDOFF为tracked变更；检索明细写入忽略目录 `outputs/` 和 `work/`。用户两个未跟踪文件保留且未暂存。
+- 继续T06-F2-S2精确短语子式 `("AI-generated image" OR "synthetic image") ("hallucinated explanation" OR "explanation faithfulness") (forensic OR detection)`：记录第2页位置11–13；Scholar总数约13，直接查start=20为空且Next禁用。当前子式可见索引位置1–13连续，87状态标作该路线可见索引完成，不等于主题穷尽。
+- 执行之前待跑的 `T02-F3-IMAGEFORGERY-HUMAN`：`"image forgery" "human evaluation" explanation`。旧74主日志其实已有该式270个页面位置观察（20种不同偏移），覆盖结果位置1–106且有重叠；旧87状态曾误标“未试检”，本轮已修正为历史+本轮刷新两阶段。Scholar估算约117，start=30降114、start=40回115，显示索引估数动态；本轮start=0至70按10步分页重查，连续覆盖位置1–79（第8页显示9条），未到末页。最新Scholar估算116；下一步从start=80继续。不能仅以估算115就认定12页/末页，必须逐页观察并核对偏移/Next状态。
+- 每页逐条记录在 `74_V2完整分页逐位置初筛.csv` 和专表 `123_T02-F3-IMAGEFORGERY-HUMAN_图像伪造人评细式逐位置筛选.csv`；page0–70共79条。强相关新增/确认线索包含ForgeryGPT版本、XPlainVerse、Toward Generalizable Forgery Detection and Reasoning、So-fake、Agentic Tool-Augmented Reasoning、HierForge、ForgeReason、ForensicZoom、Rethinking VLMs、Evidence Fusion、From Masks to Pixels and Meaning、OMNI-fake、GenShield、FACT、Veritas、OmniVL-Guard、PRPO、IDRetracor等。候选表按论文题名去重；部分ResearchSquare / Scholar结果URL仍需确认稳定来源和版本关系。
+- 筛选严格区分图像/视频伪造解释、解释质量人评、检测准确率人评、图像质量人评、通用多模态推理。人评解释有用/连贯不能直接算faithfulness；候选中仅摘要声称测hallucination或证据对齐的须全文核实指标、样本、标注协议、真值与干预测试。相邻视频、医学、化学、新闻分类及版本记录均标注边界/排除理由。
+- 更新raw `work/search_protocol_v2/execution_pages.json`、`fine_split_queries.json`、87路线状态、83计数及90候选表。经修正审计：74全日志18,385个结果位置（非独立论文）；细查询子式136条、其中位置4,528；52条子式标记当前可见索引已核完；全局 `complete=false`，受阻观察21。保留任何大查询拆分、索引漂移、原稿/引用链待核事项，不声称完整穷尽。
+- 新阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 重建后以本轮最终校验值为准。验证：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；检查CSV主ID唯一、无空筛选理由、T02本轮路线位置1–79齐全；ZIP CRC与每个成员和源文件逐字节比对。无业务源码/模型代码修改，无模型运行测试。
+- 后续只继续文献检索及候选全文/版本/引文核查；先从当前Scholar `start=80`继续T02-F3精确人评式，并记录动态估数、分页缺口和每条排除理由。全局主题检索仍未完成，不进入研究方案/实验阶段。建议ChatGPT Web优先复核123专表与90候选中“人评解释质量≠解释忠实性”的分层，以及ResearchSquare来源/论文版本映射。
+
 ## 2026-10-09 T01-F2图像伪造解释忠实性路线续检（本查询可见索引完成；全任务未完成）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本轮起点commit `39671f790c716192182d373769875cf95ffa8bc3`，本交接提交后以Git HEAD为准。仅修改本交接；检索CSV/原始页面/ZIP在本机 `outputs/`、`work/` 忽略目录。用户两个未跟踪文件继续保留且未暂存。
