@@ -4017,7 +4017,81 @@
         "url": "https://arxiv.org/abs/2603.29736",
         "screen_decision": "排除：生成图像编辑任务",
         "screen_reason": "faithfulness指图像编辑是否遵循用户指令，不是伪造检测解释faithfulness。"
+      },
+      {
+        "title": "Trustworthy Image Authentication Using Forensic Knowledge Graphs",
+        "metadata": "T D Nguyen, M C Stamm; ECCV 2026 chapter",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37020-4_3",
+        "screen_decision": "保留：直接相关，复用已核",
+        "screen_reason": "图像真实性核验报告与人类信任评价，详见既有172；复用结果。"
+      },
+      {
+        "title": "Exploring Trustworthy Concerns in Computer Vision: From Deterministic to Generative Domains",
+        "metadata": "Z Kou; doctoral dissertation, 2024",
+        "url": "https://search.proquest.com/openview/9dfae9419a0c1fb63384d4f5f98068e3/1",
+        "screen_decision": "背景邻接：学位论文",
+        "screen_reason": "计算机视觉可信问题广泛综述/议题，含多模态错误信息解释忠实性目标；非图像鉴伪XAI直接实证，题录级保留作引文入口。"
+      },
+      {
+        "title": "STeREx-Net: Diffusion-Residual Evidence Fusion for Explainable Three-Class Synthetic-Media Forensics",
+        "metadata": "A M Alqurashi et al.; Technologies 14(9), 2026",
+        "url": "https://www.mdpi.com/2227-7080/14/9/545",
+        "screen_decision": "直接强相关；全文复用",
+        "screen_reason": "三类合成媒体鉴伪并测faithfulness/consistency；复用原文核读和评价边界。"
+      },
+      {
+        "title": "Dissecting Deepfake Artifacts",
+        "metadata": "Y Bai et al.; Springer book chapter, 2026",
+        "url": "https://books.google.com/books?id=",
+        "screen_decision": "邻接：解释数据/背景章节",
+        "screen_reason": "摘要片段称强调文本解释与图像faithfulness，但当前结果是聚合书目记录，需书目身份/章节内容核实；不作为实证候选计数。"
+      },
+      {
+        "title": "JECA²: Judgment-Explanation Consistent Adversarial Attack against Forensic Vision-Language Models",
+        "metadata": "J Qian; arXiv:2605.28609, 2026",
+        "url": "https://arxiv.org/abs/2605.28609",
+        "screen_decision": "直接强相关；原文复用",
+        "screen_reason": "展示错误判决可与自洽/可信表象解释并存；直接反证单纯解释一致性等于正确faithfulness，复用172原文核读。"
+      },
+      {
+        "title": "DeepDect: An Explainable AI Platform for Face Swapping and Face Generation DeepFake Detection",
+        "metadata": "F Castro, V Gattulli, D Impedovo, A Monaco; Multimedia Tools and Applications 85:500, 2026",
+        "url": "https://link.springer.com/article/10.1007/s11042-026-21672-1",
+        "screen_decision": "强相关邻接：解释有用性与人类检测研究",
+        "screen_reason": "同行评审图像深伪平台研究；108人参与单图人工判断并评价系统图/文解释有用性。全文核读：未测解释faithfulness，也无解释增益/适当依赖对照。"
+      },
+      {
+        "title": "HexMIL: Hierarchical Attention MIL for Ante-Hoc Explainable Detection of AI-Manipulated CT Volumes",
+        "metadata": "O Pontorno et al.; arXiv:2608.05101, 2026",
+        "url": "https://arxiv.org/abs/2608.05101",
+        "screen_decision": "邻接：医疗影像deepfake",
+        "screen_reason": "解释性AI篡改CT体积检测，属医学影像垂直领域；非普通图像媒体鉴伪，候选级保留。"
+      },
+      {
+        "title": "Deepfake Detection Beyond Benchmark Accuracy: Generalization, Robustness, and Reproducibility",
+        "metadata": "M Xu et al.; preprints.org 2026",
+        "url": "https://preprints.org/manuscript/202609.1394",
+        "screen_decision": "邻接综述/研究；与解释faithfulness边界待核",
+        "screen_reason": "宽域deepfake detection robustness/reproducibility记录；摘要未表明解释质量/faithfulness研究，维持邻接候选。"
+      },
+      {
+        "title": "Cultivating Forensic Reasoning for Generalizable Multimodal Manipulation Detection",
+        "metadata": "Y Zhang et al.; ACL 2026",
+        "url": "https://aclanthology.org/2026.acl-long.1316/",
+        "screen_decision": "强相关系统候选；复用已有记录",
+        "screen_reason": "多模态篡改检测与取证推理，属于直接鉴伪解释系统；复用候选记录，需依既有原文核读标注效度边界。"
+      },
+      {
+        "title": "LaP-Forensics: Latent-Pixel Consistency Guided Multimodal Reasoning for Deepfake Detection",
+        "metadata": "C Wang et al.; arXiv:2607.25962, 2026",
+        "url": "https://arxiv.org/abs/2607.25962",
+        "screen_decision": "强相关候选；全文复用",
+        "screen_reason": "以潜变量与像素证据一致性提升多模态深伪理由，复用已有全文审查。"
       }
+    ],
+    "status": "前三页30位置筛查；第3页新识别DeepDect人因邻接；查询估算98，后续start=30",
+    "starts_screened": [
+      20
     ]
   }
 ]

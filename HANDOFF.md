@@ -1,3 +1,10 @@
+# 2026-10-10 因果解释窄式第3页：DeepDect人因研究核读
+
+- Scholar第3页（start=20）10项已逐条筛入总账74及因果faithfulness sidecar。新增DeepDect（Springer, 2026）官方全文核读：108名参与者各判断一张人脸图，随后评价系统图文解释有用性，Likert众数4/5；原文同时报告热图可能误导、文字解释细节不足。该结果是有用性/可理解性评价，不测模型faithfulness、解释准确性或适当依赖，详见172/90/72。
+- 本查询累计30个位置，下一页start=30；全局未完成。更新后主账24,561位置、候选648个去重题名、优先清单197项、效度核读55项。阶段包603成员，SHA-256 `2f811df278dbb7f28ce44b2f77a76a6986787ac8c931d50e0fb00c2a06e1d19a`；全局未完成。
+
+---
+
 # 2026-10-10 图像鉴伪因果解释/faithfulness窄式（第1–2页）
 
 - Google Scholar query `("image forgery detection" OR "image manipulation detection") ("causal explanation" OR "counterfactual explanation" OR faithfulness)`估算98；start=0/10共20个位置逐条筛查，见74和`T02-F2-CAUSAL-EXPL_图像鉴伪因果解释Faithfulness_首2页逐位置筛选_20261010.csv`。路线仍未闭合，下一页start=20。已核题名复用原审查，避免重复全文工作。
