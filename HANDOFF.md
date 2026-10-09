@@ -979,3 +979,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 审计83的累计位置数同步为21,906，子路线位置数7,097；当前路线区间前100页/994条，start=1000为空且估数冲突，整体`complete=false`。此前人工恢复的屏蔽查询不算作零结果，也没有把引用卡片计为独立论文。
 - 已验证：74总表21,906条、ID唯一、理由完整；第91–99页每页10项，第100页4项；87/83记分页边界冲突；`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过。无源码/模型改动。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`已同步更新，CRC需以本轮执行结果为准。
 - 下一步：转到未完成的细式，不再重复翻这条已碰到100页上限的宽式；优先T11-F2-S1（grounding）、图像伪造解释fidelity/sanity、AI生成图像人评/适当依赖；对第94页法证expertology论文、第95页捷克数字法证论文只做范围判断和必要引文追查。继续逐条筛结果并复用已筛条目；提交/推送阶段记录；直到细式、核心种子引文链与统一去重排序均有可核证边界，才可汇报完成。
+
+## 2026-10-09：T02-F2-RELIABILITY 检索检查点（第69–74页，仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本检查点阶段包提交 `373d1abed38da2cd0c29a86ec54f812624101110`。origin仍为已配置的项目仓库。用户两个既有未跟踪文件未改、未暂存。
+- Google Scholar精确宽式 `"image forgery" explanation reliability` 从验证码恢复后的`start=680`逐页完成第69–74页，共60个结果位置，下一页`start=740`。Scholar动态估数约10,800，明显含大量检测方法噪声；宽式和全局检索均保持未完成，不能声称穷尽。
+- `74_V2完整分页逐位置初筛.csv`累计22,636个结果位置，ID唯一且筛选理由非空；本次每页10条的详细筛选在`T02-F2-RELIABILITY_20261009_第69–74页逐位置筛选.csv`。`90`新增候选观察表403行，含邻接、重复/待核记录，不是独立文献数。`87`记录当前路线74页/740位置、下一页start=740、coverage_complete=false；`83`全局complete=false。
+- 第69页新候选VeriChain（ACPR 2025）摘要称使用空间接地推理链和forensic fidelity奖励；第70页新候选FOCA（ICASSP 2026）摘要称生成空间/频率双域解释。二者已有出版社/官方摘要层核验，但正文的解释忠实性、稳定性、幻觉率和人评指标尚未核，暂不列作“可靠性验证已成立”的核心证据。第71–74页没有新增直接候选；注意将检测器reliability、attention map、篡改定位mask与模型解释可靠性分开。
+- 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`含500个文件，17,537,533字节，SHA-256 `764a05494164e4f7a3e7fbc38c4aace531f1cd680f08a011d787a1c90454d684`；ZIP CRC及包内每个文件与输出目录字节比对通过。测试：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；主账唯一ID/非空理由、69–74每页10条与连续位置、候选登记、路线/计数审计均通过。未修改业务源码或模型，不需模型测试。
+- 继续工作：从Scholar start=740筛页75；遇到重复题名直接复用已核记录，对新直接相关论文核全文、参考文献和前后向引用；然后继续未完成细查询和强相关种子引文链。最终全库去重与相关性排序尚未完成。
+- ChatGPT Web建议检查：VeriChain/FOCA正文是否提供可复现的解释可靠性终点；并从当前Scholar `start=740`继续。不要将估计结果数、页面位置数或摘要中“explainability”提升写成领域覆盖/解释可靠性已证明。
