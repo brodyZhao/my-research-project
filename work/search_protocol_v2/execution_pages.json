@@ -1,0 +1,3775 @@
+[
+  {
+    "query_id": "T02-F2-S1",
+    "parent_id": "T02-F2",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "原式首页约14,200；任务OR拆分子查询仍为6,740/9,620，已各筛首页，须继续解释词族和取证上下文递归细分，不作完成覆盖。"
+  },
+  {
+    "query_id": "T02-F2-S2",
+    "parent_id": "T02-F2",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "有效试检/分页已有；继续分页或进一步拆分；规模仍大，需继续拆分"
+  },
+  {
+    "query_id": "T02-F2-S3",
+    "parent_id": "T02-F2",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"evidence consistency\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-S4",
+    "parent_id": "T02-F2",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation consistency\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F3-S1",
+    "parent_id": "T02-F3",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "已恢复并取得首页10位置；估计约2,670，过宽，未分页；转按任务族细分。"
+  },
+  {
+    "query_id": "T02-F3-S2",
+    "parent_id": "T02-F3",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"appropriate reliance\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "可见末页已记录；逐位置筛选完成；估计数52→42有索引变化，不能当领域穷尽"
+  },
+  {
+    "query_id": "T02-F3-S3",
+    "parent_id": "T02-F3",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"trust calibration\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "可见末页已记录；逐位置筛选完成；估计数63→53波动，原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F3-S4",
+    "parent_id": "T02-F3",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation stability\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "可见末页已记录；逐位置筛选完成；原稿筛选待核"
+  },
+  {
+    "query_id": "T05-F2-S1",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图",
+    "query": "(\"AI-generated image\" OR \"AI generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "有效试检/分页已有；继续分页或进一步拆分；规模仍大，需继续拆分"
+  },
+  {
+    "query_id": "T05-F2-S2",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图",
+    "query": "(\"AI-generated image\" OR \"AI generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检；部分分页结果区为空但估算数仍高于offset，分页完整性未确认"
+  },
+  {
+    "query_id": "T05-F2-S3",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图",
+    "query": "(\"AI-generated image\" OR \"AI generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"evidence consistency\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T05-F2-S4",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图",
+    "query": "(\"AI-generated image\" OR \"AI generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation consistency\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T06-F2-S1",
+    "parent_id": "T06-F2",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "首页约15,500，筛前10；在T06-F2-GROUND-FAITHFUL建立高精度嵌套式，不能替代本宽式，宽式仍待拆分。"
+  },
+  {
+    "query_id": "T06-F2-S2",
+    "parent_id": "T06-F2",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "首页约7,620，筛前10；过宽，按明确取证与解释可靠性词族进一步拆分。"
+  },
+  {
+    "query_id": "T06-F2-S3",
+    "parent_id": "T06-F2",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"evidence consistency\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "3页到达可见末页（Next禁用），逐位置筛选26条；估计由36降至26（差27.8%），超过索引稳定阈值，需复测/拆词，不能列严格完整。"
+  },
+  {
+    "query_id": "T06-F2-S4",
+    "parent_id": "T06-F2",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation consistency\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "可见末页已记录；题录筛查已完成，强相关原稿仍待核；估算数41降至31，变化24.4%，未达到既定>25%或>30条拆分阈值"
+  },
+  {
+    "query_id": "T06-F3-S1",
+    "parent_id": "T06-F3",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "首页试检约3,920条，仅记录10条并按鉴伪任务边界细分；未分页"
+  },
+  {
+    "query_id": "T06-F3-S2",
+    "parent_id": "T06-F3",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"appropriate reliance\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T06-F3-S3",
+    "parent_id": "T06-F3",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"trust calibration\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "已到Scholar可见末页；121个位置逐条题录初筛完成",
+    "actual_trials": 1,
+    "valid_pages": 13,
+    "valid_positions": 121,
+    "visible_terminal": true,
+    "source_url": "https://scholar.google.com/scholar?start=0&q=(%22synthetic+image%22+OR+%22generated+image%22)+(explanation+OR+explainable+OR+interpretability+OR+interpretable+OR+attribution+OR+saliency+OR+rationale+OR+reasoning)+(%22trust+calibration%22)&hl=zh-CN&as_sdt=0,5",
+    "next_url": "",
+    "coverage_claim": "当时Scholar可见索引闭合，不代表主题穷尽。"
+  },
+  {
+    "query_id": "T06-F3-S4",
+    "parent_id": "T06-F3",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation stability\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F2-S1",
+    "parent_id": "T11-F2",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "首屏已逐条筛；约11,400条，继续分页/拆分",
+    "actual_trials": 1,
+    "valid_pages": 1,
+    "valid_positions": 10,
+    "source_url": "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=%28deepfake+OR+%22face+forgery%22+OR+%22facial+manipulation%22%29+%28explanation+OR+explainable+OR+interpretability+OR+interpretable+OR+attribution+OR+saliency+OR+rationale+OR+reasoning%29+%28grounding%29&btnG=",
+    "next_url": "start=10"
+  },
+  {
+    "query_id": "T11-F2-S2",
+    "parent_id": "T11-F2",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "已逐条筛前30页300条；start=290 reCAPTCHA已由用户恢复；动态估数约4,790，继续分页/拆分，未完成。",
+    "actual_trials": 1,
+    "valid_pages": 30,
+    "valid_positions": 300,
+    "source_url": "https://scholar.google.com/scholar?hl=zh-CN&as_sdt=0%2C5&q=%28deepfake+OR+%22face+forgery%22+OR+%22facial+manipulation%22%29+%28explanation+OR+explainable+OR+interpretability+OR+interpretable+OR+attribution+OR+saliency+OR+rationale+OR+reasoning%29+%28hallucination%29&btnG=",
+    "next_url": "start=300",
+    "estimate_min": 4790,
+    "estimate_max": 4790
+  },
+  {
+    "query_id": "T11-F2-S3",
+    "parent_id": "T11-F2",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"evidence consistency\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F2-S4",
+    "parent_id": "T11-F2",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation consistency\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F3-S1",
+    "parent_id": "T11-F3",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F3-S2",
+    "parent_id": "T11-F3",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"appropriate reliance\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F3-S3",
+    "parent_id": "T11-F3",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"trust calibration\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F3-S4",
+    "parent_id": "T11-F3",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation stability\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T12-F2-S1",
+    "parent_id": "T12-F2",
+    "task_family": "局部编辑与修补",
+    "query": "(\"image inpainting\" OR \"image retouching\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding) (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T12-F2-S2",
+    "parent_id": "T12-F2",
+    "task_family": "局部编辑与修补",
+    "query": "(\"image inpainting\" OR \"image retouching\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination) (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T12-F2-S3",
+    "parent_id": "T12-F2",
+    "task_family": "局部编辑与修补",
+    "query": "(\"image inpainting\" OR \"image retouching\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"evidence consistency\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T12-F2-S4",
+    "parent_id": "T12-F2",
+    "task_family": "局部编辑与修补",
+    "query": "(\"image inpainting\" OR \"image retouching\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation consistency\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T13-F2-S1",
+    "parent_id": "T13-F2",
+    "task_family": "文档图像",
+    "query": "(\"document image\" OR \"document forgery\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding) (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T13-F2-S2",
+    "parent_id": "T13-F2",
+    "task_family": "文档图像",
+    "query": "(\"document image\" OR \"document forgery\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination) (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T13-F2-S3",
+    "parent_id": "T13-F2",
+    "task_family": "文档图像",
+    "query": "(\"document image\" OR \"document forgery\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"evidence consistency\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T13-F2-S4",
+    "parent_id": "T13-F2",
+    "task_family": "文档图像",
+    "query": "(\"document image\" OR \"document forgery\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation consistency\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F2-S1",
+    "parent_id": "T14-F2",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding) (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F2-S2",
+    "parent_id": "T14-F2",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination) (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F2-S3",
+    "parent_id": "T14-F2",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"evidence consistency\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F2-S4",
+    "parent_id": "T14-F2",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation consistency\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F3-S1",
+    "parent_id": "T14-F3",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F3-S2",
+    "parent_id": "T14-F3",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"appropriate reliance\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F3-S3",
+    "parent_id": "T14-F3",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"trust calibration\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F3-S4",
+    "parent_id": "T14-F3",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation stability\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T15-F2-S1",
+    "parent_id": "T15-F2",
+    "task_family": "遥感图像",
+    "query": "(\"satellite image\" OR \"remote sensing image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding) (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T15-F2-S2",
+    "parent_id": "T15-F2",
+    "task_family": "遥感图像",
+    "query": "(\"satellite image\" OR \"remote sensing image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination) (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T15-F2-S3",
+    "parent_id": "T15-F2",
+    "task_family": "遥感图像",
+    "query": "(\"satellite image\" OR \"remote sensing image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"evidence consistency\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T15-F2-S4",
+    "parent_id": "T15-F2",
+    "task_family": "遥感图像",
+    "query": "(\"satellite image\" OR \"remote sensing image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"explanation consistency\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T01-F4-S1",
+    "parent_id": "T01-F4",
+    "task_family": "传统图像伪造",
+    "query": "(\"image forgery\" OR \"image tampering\") (explanation OR attribution OR saliency) (\"sanity checks\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T01-F4-S2",
+    "parent_id": "T01-F4",
+    "task_family": "传统图像伪造",
+    "query": "(\"image forgery\" OR \"image tampering\") (explanation OR attribution OR saliency) (\"parameter randomization\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T01-F4-S3",
+    "parent_id": "T01-F4",
+    "task_family": "传统图像伪造",
+    "query": "(\"image forgery\" OR \"image tampering\") (explanation OR attribution OR saliency) (\"adversarial evaluation\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T01-F4-S4",
+    "parent_id": "T01-F4",
+    "task_family": "传统图像伪造",
+    "query": "(\"image forgery\" OR \"image tampering\") (explanation OR attribution OR saliency) (\"deletion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检；部分分页结果区为空但估算数仍高于offset，分页完整性未确认"
+  },
+  {
+    "query_id": "T01-F4-S5",
+    "parent_id": "T01-F4",
+    "task_family": "传统图像伪造",
+    "query": "(\"image forgery\" OR \"image tampering\") (explanation OR attribution OR saliency) (\"insertion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检；部分分页结果区为空但估算数仍高于offset，分页完整性未确认"
+  },
+  {
+    "query_id": "T02-F4-S1",
+    "parent_id": "T02-F4",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR attribution OR saliency) (\"sanity checks\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T02-F4-S2",
+    "parent_id": "T02-F4",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR attribution OR saliency) (\"parameter randomization\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T02-F4-S3",
+    "parent_id": "T02-F4",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR attribution OR saliency) (\"adversarial evaluation\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T02-F4-S4",
+    "parent_id": "T02-F4",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR attribution OR saliency) (\"deletion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T02-F4-S5",
+    "parent_id": "T02-F4",
+    "task_family": "图像操纵",
+    "query": "(\"image manipulation\" OR \"image editing\") (explanation OR attribution OR saliency) (\"insertion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T04-F4-S1",
+    "parent_id": "T04-F4",
+    "task_family": "复制移动",
+    "query": "(\"copy-move\" OR \"copy move\") (explanation OR attribution OR saliency) (\"sanity checks\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T04-F4-S2",
+    "parent_id": "T04-F4",
+    "task_family": "复制移动",
+    "query": "(\"copy-move\" OR \"copy move\") (explanation OR attribution OR saliency) (\"parameter randomization\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T04-F4-S3",
+    "parent_id": "T04-F4",
+    "task_family": "复制移动",
+    "query": "(\"copy-move\" OR \"copy move\") (explanation OR attribution OR saliency) (\"adversarial evaluation\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T04-F4-S4",
+    "parent_id": "T04-F4",
+    "task_family": "复制移动",
+    "query": "(\"copy-move\" OR \"copy move\") (explanation OR attribution OR saliency) (\"deletion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T04-F4-S5",
+    "parent_id": "T04-F4",
+    "task_family": "复制移动",
+    "query": "(\"copy-move\" OR \"copy move\") (explanation OR attribution OR saliency) (\"insertion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T06-F4-S1",
+    "parent_id": "T06-F4",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR attribution OR saliency) (\"sanity checks\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T06-F4-S2",
+    "parent_id": "T06-F4",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR attribution OR saliency) (\"parameter randomization\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T06-F4-S3",
+    "parent_id": "T06-F4",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR attribution OR saliency) (\"adversarial evaluation\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T06-F4-S4",
+    "parent_id": "T06-F4",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR attribution OR saliency) (\"deletion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T06-F4-S5",
+    "parent_id": "T06-F4",
+    "task_family": "合成图",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR attribution OR saliency) (\"insertion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T08-F4-S1",
+    "parent_id": "T08-F4",
+    "task_family": "扩散图",
+    "query": "(\"diffusion-generated\" OR \"diffusion generated\") (explanation OR attribution OR saliency) (\"sanity checks\") (image OR images OR visual)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T08-F4-S2",
+    "parent_id": "T08-F4",
+    "task_family": "扩散图",
+    "query": "(\"diffusion-generated\" OR \"diffusion generated\") (explanation OR attribution OR saliency) (\"parameter randomization\") (image OR images OR visual)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T08-F4-S3",
+    "parent_id": "T08-F4",
+    "task_family": "扩散图",
+    "query": "(\"diffusion-generated\" OR \"diffusion generated\") (explanation OR attribution OR saliency) (\"adversarial evaluation\") (image OR images OR visual)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T08-F4-S4",
+    "parent_id": "T08-F4",
+    "task_family": "扩散图",
+    "query": "(\"diffusion-generated\" OR \"diffusion generated\") (explanation OR attribution OR saliency) (\"deletion\") (image OR images OR visual)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T08-F4-S5",
+    "parent_id": "T08-F4",
+    "task_family": "扩散图",
+    "query": "(\"diffusion-generated\" OR \"diffusion generated\") (explanation OR attribution OR saliency) (\"insertion\") (image OR images OR visual)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "索引估计大幅变化/空尾页风险回检",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T11-F4-S1",
+    "parent_id": "T11-F4",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR attribution OR saliency) (\"sanity checks\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F4-S2",
+    "parent_id": "T11-F4",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR attribution OR saliency) (\"parameter randomization\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F4-S3",
+    "parent_id": "T11-F4",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR attribution OR saliency) (\"adversarial evaluation\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F4-S4",
+    "parent_id": "T11-F4",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR attribution OR saliency) (\"deletion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T11-F4-S5",
+    "parent_id": "T11-F4",
+    "task_family": "人脸与深伪",
+    "query": "(deepfake OR \"face forgery\" OR \"facial manipulation\") (explanation OR attribution OR saliency) (\"insertion\")",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F4-S1",
+    "parent_id": "T14-F4",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR attribution OR saliency) (\"sanity checks\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F4-S2",
+    "parent_id": "T14-F4",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR attribution OR saliency) (\"parameter randomization\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F4-S3",
+    "parent_id": "T14-F4",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR attribution OR saliency) (\"adversarial evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F4-S4",
+    "parent_id": "T14-F4",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR attribution OR saliency) (\"deletion\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T14-F4-S5",
+    "parent_id": "T14-F4",
+    "task_family": "医学图像",
+    "query": "(\"medical image\" OR \"CT volume\") (explanation OR attribution OR saliency) (\"insertion\") (forgery OR tampering OR fake OR authenticity OR forensics)",
+    "split_axis": "可靠性子词OR逐项分配；任务、解释词与其他限定不删减",
+    "date_scope": "不设年份下限",
+    "reason": "大查询显示上限风险",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T02-F2-S1A",
+    "parent_id": "T02-F2",
+    "task_family": "图像伪造（窄化复核式）",
+    "query": "\"image forgery\" explainable grounding",
+    "split_axis": "观测到原宽式约14,200条后，将任务对象窄化为精确短语image forgery及解释/接地词，作为可执行性诊断；此式不替代原覆盖矩阵",
+    "date_scope": "不设年份下限",
+    "reason": "验证具体鉴伪任务短语能否降低过宽子式规模；索引估计不稳定",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检"
+  },
+  {
+    "query_id": "T02-F2-TAMPER",
+    "parent_id": "T02-F2",
+    "task_family": "图像篡改",
+    "query": "\"image tampering\" explainable grounding",
+    "split_axis": "精确任务表达 × 单一可靠性表达；用于实际规模与召回线索检查",
+    "date_scope": "不设年份下限",
+    "reason": "原宽式过大或任务术语覆盖需补充，精确式试检规模可逐页核查",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检"
+  },
+  {
+    "query_id": "T02-F2-SPLICE",
+    "parent_id": "T02-F2",
+    "task_family": "图像拼接",
+    "query": "\"image splicing\" explainable grounding",
+    "split_axis": "精确任务表达 × 单一可靠性表达；用于实际规模与召回线索检查",
+    "date_scope": "不设年份下限",
+    "reason": "原宽式过大或任务术语覆盖需补充，精确式试检规模可逐页核查",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-COPYMOVE",
+    "parent_id": "T02-F2",
+    "task_family": "图像copy-move伪造",
+    "query": "\"copy-move forgery\" explainable grounding",
+    "split_axis": "精确任务表达 × 单一可靠性表达；用于实际规模与召回线索检查",
+    "date_scope": "不设年份下限",
+    "reason": "原宽式过大或任务术语覆盖需补充，精确式试检规模可逐页核查",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T05-F2-SYNTHETIC",
+    "parent_id": "T05-F2",
+    "task_family": "合成图像检测",
+    "query": "\"synthetic image detection\" explainable grounding",
+    "split_axis": "精确任务表达 × 单一可靠性表达；用于实际规模与召回线索检查",
+    "date_scope": "不设年份下限",
+    "reason": "原宽式过大或任务术语覆盖需补充，精确式试检规模可逐页核查",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T05-F2-AIGEN",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图像检测",
+    "query": "\"AI-generated image detection\" explainable grounding",
+    "split_axis": "精确任务表达 × 单一可靠性表达；用于实际规模与召回线索检查",
+    "date_scope": "不设年份下限",
+    "reason": "原宽式过大或任务术语覆盖需补充，精确式试检规模可逐页核查",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-GROUND-EC",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"image forgery\" \"evidence consistency\"",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-GROUND-HALL",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"image forgery\" hallucination",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检"
+  },
+  {
+    "query_id": "T02-F2-FAITH",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"image forgery\" \"explanation faithfulness\"",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-TAMPER-CONSIST",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"image tampering\" \"explanation consistency\"",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T05-F2-SYN-HALL",
+    "parent_id": "T05-F2",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"synthetic image detection\" hallucination",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T05-F2-AIGEN-FAITH",
+    "parent_id": "T05-F2",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"AI-generated image detection\" \"explanation faithfulness\"",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T05-F2-AIGEN-CONSIST",
+    "parent_id": "T05-F2",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"AI-generated image detection\" \"explanation consistency\"",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F3-HUMAN",
+    "parent_id": "T02-F3",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"image forgery\" \"human evaluation\" explanation",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检"
+  },
+  {
+    "query_id": "T02-F3-RELIANCE",
+    "parent_id": "T02-F3",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"image forgery\" \"appropriate reliance\" explanation",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F4-SANITY",
+    "parent_id": "T02-F4",
+    "task_family": "图像鉴伪解释可靠性窄式",
+    "query": "\"image forgery\" \"sanity checks\" explanation",
+    "split_axis": "具体任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "补足接地/幻觉/忠实性/人评/合理依赖/合理性检查专门术语，先实测规模",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T05-F2-AIGEN-REASON",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图像检测",
+    "query": "\"AI-generated image detection\" reasoning grounding",
+    "split_axis": "单一解释表达 × grounding",
+    "date_scope": "不设年份下限",
+    "reason": "将过宽解释词OR进一步逐词拆分，测试覆盖与结果规模",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检"
+  },
+  {
+    "query_id": "T05-F2-AIGEN-EXPL",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图像检测",
+    "query": "\"AI-generated image detection\" explanation grounding",
+    "split_axis": "单一解释表达 × grounding",
+    "date_scope": "不设年份下限",
+    "reason": "将过宽解释词OR进一步逐词拆分，测试覆盖与结果规模",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检；部分分页结果区为空但估算数仍高于offset，分页完整性未确认"
+  },
+  {
+    "query_id": "T05-F2-AIGEN-ATTR",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图像检测",
+    "query": "\"AI-generated image detection\" attribution grounding",
+    "split_axis": "单一解释表达 × grounding",
+    "date_scope": "不设年份下限",
+    "reason": "将过宽解释词OR进一步逐词拆分，测试覆盖与结果规模",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检"
+  },
+  {
+    "query_id": "T05-F2-AIGEN-SALIENCY",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图像检测",
+    "query": "\"AI-generated image detection\" saliency grounding",
+    "split_axis": "单一解释表达 × grounding",
+    "date_scope": "不设年份下限",
+    "reason": "将过宽解释词OR进一步逐词拆分，测试覆盖与结果规模",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T05-F2-AIGEN-INTERP",
+    "parent_id": "T05-F2",
+    "task_family": "AI生成图像检测",
+    "query": "\"AI-generated image detection\" interpretability grounding",
+    "split_axis": "单一解释表达 × grounding",
+    "date_scope": "不设年份下限",
+    "reason": "将过宽解释词OR进一步逐词拆分，测试覆盖与结果规模",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检"
+  },
+  {
+    "query_id": "T02-F2-TAMPER-HALL",
+    "parent_id": "T02-F2",
+    "task_family": "image tampering × hallucination",
+    "query": "\"image tampering\" hallucination",
+    "split_axis": "图像篡改任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-SPLICE-HALL",
+    "parent_id": "T02-F2",
+    "task_family": "image splicing × hallucination",
+    "query": "\"image splicing\" hallucination",
+    "split_axis": "图像拼接任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-COPYMOVE-HALL",
+    "parent_id": "T02-F2",
+    "task_family": "copy-move × hallucination",
+    "query": "\"copy-move forgery\" hallucination",
+    "split_axis": "copy-move任务短语 × 单一可靠性表达",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-RELIABILITY",
+    "parent_id": "T02-F2",
+    "task_family": "image forgery × explanation reliability",
+    "query": "\"image forgery\" explanation reliability",
+    "split_axis": "核心概念探索式；必须拆词，单页不能穷尽",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "有效试检/分页已有；继续分页或进一步拆分；规模仍大，需继续拆分"
+  },
+  {
+    "query_id": "T02-F2-EXPL-RELIABILITY",
+    "parent_id": "T02-F2",
+    "task_family": "image forgery × exact explanation reliability",
+    "query": "\"image forgery\" \"explanation reliability\"",
+    "split_axis": "精确短语可行性测试",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-EXPL-ACCURACY",
+    "parent_id": "T02-F2",
+    "task_family": "image forgery × explanation accuracy",
+    "query": "\"image forgery\" \"explanation accuracy\"",
+    "split_axis": "逐一扩展质量/准确度词项",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-EXPL-QUALITY",
+    "parent_id": "T02-F2",
+    "task_family": "image forgery × explanation quality",
+    "query": "\"image forgery\" \"explanation quality\"",
+    "split_axis": "逐一扩展质量/准确度词项；记录完整分页及索引变化",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-EXPL-BIAS",
+    "parent_id": "T02-F2",
+    "task_family": "image forgery × explanation bias",
+    "query": "\"image forgery\" \"explanation bias\"",
+    "split_axis": "逐一扩展偏差/错误词项；零命中需注明",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-EXPL-ERROR",
+    "parent_id": "T02-F2",
+    "task_family": "image forgery × explanation error",
+    "query": "\"image forgery\" \"explanation error\"",
+    "split_axis": "逐一扩展偏差/错误词项；零命中需注明",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-EXPL-ROBUST",
+    "parent_id": "T02-F2",
+    "task_family": "image forgery × explanation robustness",
+    "query": "\"image forgery\" \"explanation robustness\"",
+    "split_axis": "逐一扩展稳健性词项",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-EXPL-FAITHFUL",
+    "parent_id": "T02-F2",
+    "task_family": "image forgery × faithful explanation",
+    "query": "\"image forgery\" \"faithful explanation\"",
+    "split_axis": "忠实性表达变体",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-EXPL-COMPLETENESS",
+    "parent_id": "T02-F2",
+    "task_family": "image forgery × explanation completeness",
+    "query": "\"image forgery\" \"explanation completeness\"",
+    "split_axis": "解释完整性表达变体",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F2-FORENSIC-FAITH",
+    "parent_id": "T02-F2",
+    "task_family": "forensic × explanation faithfulness",
+    "query": "forensic \"explanation faithfulness\"",
+    "split_axis": "用forensic替换deepfake/image forgery检验领域词覆盖；本查询过宽，需逐条筛选",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核；估算变化超过25%，列为索引不稳定，需回检"
+  },
+  {
+    "query_id": "T02-F2-IM-MANIP-FAITH",
+    "parent_id": "T02-F2",
+    "task_family": "image manipulation × faithful explanation",
+    "query": "\"image manipulation\" \"faithful explanation\"",
+    "split_axis": "image manipulation任务词 × 忠实解释",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T10-F2-FORENSIC-FAITH",
+    "parent_id": "T10-F2",
+    "task_family": "media forensics × explanation faithfulness",
+    "query": "\"media forensics\" \"explanation faithfulness\"",
+    "split_axis": "媒体取证领域词 × 忠实解释",
+    "date_scope": "不设年份下限",
+    "reason": "为避免仅依赖deepfake一词，按任务领域词与解释可靠性词项分别测试；须去重并核原稿",
+    "status": "可见末页已记录；原稿筛选待核"
+  },
+  {
+    "query_id": "T02-F3-IMAGEFORGERY-HUMAN",
+    "parent_id": "T02-F3",
+    "task_family": "图像伪造/人类评价",
+    "query": "\"image forgery\" \"human evaluation\" explanation",
+    "split_axis": "使用 image forgery 任务限定并固定 human evaluation + explanation；不要求 deepfake",
+    "date_scope": "不设年份下限",
+    "reason": "检验用户反馈中的人类效用/解释评价覆盖，并对T02-F3宽式进一步限域",
+    "status": "当前Scholar可见索引完成：1–106连续；start79/96边界核实，start106空且Next禁用。估计116→106，已记录索引动态风险。"
+  },
+  {
+    "query_id": "T02-F3-S1-REFINE",
+    "parent_id": "T02-F3-S1",
+    "task_family": "图像操纵/取证限定诊断",
+    "query": "(\"image forgery\" OR \"image tampering\" OR \"image manipulation\") (\"human evaluation\" OR \"human study\" OR \"user study\") (explanation OR explainable OR rationale OR attribution OR saliency)",
+    "split_axis": "首页2670条宽式显示编辑生成噪声；增加取证任务词并拆解释/人评表述，先测规模",
+    "date_scope": "不设年份下限",
+    "reason": "T02-F3-S1首页结果过大且泛图像编辑噪声高",
+    "status": "首页10位置已筛选；估算约3,670，结果仍过宽，未分页。"
+  },
+  {
+    "query_id": "T02-F3-S1-REFINE2",
+    "parent_id": "T02-F3-S1",
+    "task_family": "AI生成图检测×解释人评（窄式试检）",
+    "query": "\"AI-generated image detection\" \"human evaluation\" explanation",
+    "split_axis": "限定AI生成图像检测任务并使用精确人评词组；核对量级与相关性后再决定分页",
+    "date_scope": "不设年份下限",
+    "reason": "宽式约3,670条且结果混有系统、基准、上下文解释与AI检测人评研究，需按具体任务收窄",
+    "status": "7页共66位置；第7页Next禁用，估算66–77波动；完成可见分页，保留索引漂移限制。"
+  },
+  {
+    "query_id": "CIT-ANOMREASON-FWD-20261009",
+    "parent_id": "citation-chasing",
+    "task_family": "强相关候选前向引文链",
+    "query": "Cited by: Semantic Visual Anomaly Detection and Reasoning in AI-Generated Images (AnomReason)",
+    "date_scope": "截至Scholar当前索引，无年份限制",
+    "reason": "对强相关种子逐项筛查前向引用；引文命中仅作为候选发现，不自动纳入直接证据。",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "CIT-FAKEREASONING-FWD-20261009",
+    "parent_id": "citation-chasing",
+    "task_family": "强相关候选前向引文链",
+    "query": "Cited by: Toward Generalizable Forgery Detection and Reasoning (FakeReasoning)",
+    "date_scope": "截至Scholar当前索引，无年份限制",
+    "reason": "对强相关种子逐项筛查前向引用；引文命中仅作为候选发现，不自动纳入直接证据。",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "CIT-FORENDEX-FWD-20261009",
+    "parent_id": "citation-chasing",
+    "task_family": "强相关候选前向引文链",
+    "query": "Cited by: ForenDeX: Unlocking Forensic Insights for Explainable AI-Generated Image Detection",
+    "date_scope": "截至Scholar当前索引，无年份限制",
+    "reason": "对强相关种子逐项筛查前向引用；引文命中仅作为候选发现，不自动纳入直接证据。",
+    "status": "实际试检未执行"
+  },
+  {
+    "query_id": "T02-F3-S1-DEEPFAKE-HUMAN",
+    "parent_id": "T02-F3-S1",
+    "task_family": "deepfake/face forgery",
+    "query": "(\"deepfake detection\" OR \"face forgery detection\" OR \"facial manipulation detection\") (\"human evaluation\" OR \"human study\" OR \"user study\") (explanation OR explainable OR rationale OR attribution OR saliency)",
+    "split_axis": "把宽式拆到深伪/人脸鉴伪任务，同时保留人评与解释词",
+    "date_scope": "不限年份",
+    "reason": "T02-F3-S1首页约2670条且生成/编辑任务噪声明显；按任务族拆分并测规模",
+    "status": "首页10位置；估计约948，首屏初筛完成，未分页；结果混合直接解释、仅人评和跨模态，需拆分。"
+  },
+  {
+    "query_id": "T02-F3-S1-DEEPFAKE-EVAL",
+    "parent_id": "T02-F3-S1-DEEPFAKE-HUMAN",
+    "task_family": "deepfake/face forgery",
+    "query": "\"deepfake detection\" \"human evaluation\" explanation",
+    "split_axis": "人类评价表达窄化为human evaluation；解释词保留",
+    "date_scope": "不限年份",
+    "reason": "同任务族复合子式近千条；先用精确phrase验证规模",
+    "status": "首页10位置；估计约427，首屏初筛完成，未分页；用于回收直接候选。"
+  },
+  {
+    "query_id": "T02-F3-S1-DEEPFAKE-VISUAL-HUMAN",
+    "parent_id": "T02-F3-S1-DEEPFAKE-EVAL",
+    "task_family": "图像/视频深伪视觉解释人评",
+    "query": "deepfake \"human evaluation\" \"visual explanations\"",
+    "split_axis": "限定视觉解释与human evaluation精确短语，排除文本/audio检测",
+    "date_scope": "不限年份",
+    "reason": "human-evaluation子式估算427条且混入文本/音频；用评价对象拆细",
+    "status": "7页共67位置；第7页下一页禁用；估计77到67波动，完成可见分页，需保留索引漂移限制。"
+  },
+  {
+    "query_id": "T01-F2-IMAGE-FORENSIC-RELIABILITY",
+    "parent_id": "T01-F2",
+    "task_family": "图像伪造/篡改 × faithfulness/fidelity/sanity",
+    "query": "(\"image forgery\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"explanation fidelity\" OR \"sanity check\" OR \"parameter randomization\")",
+    "split_axis": "并列覆盖篡改/拼接/copy-move任务表达和解释忠实/保真/随机化检验",
+    "date_scope": "不设年份下限",
+    "reason": "补足不含deepfake术语的解释可靠性直接表达",
+    "status": "已恢复并到达可见末页（start=177，Next禁用）；记录179个位置。页码从start=150跳到167，估计186–198且末页只显示第18页；有位置/索引缺口，需单独补查后才能判充分。"
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH",
+    "parent_id": "T06-F3-S1",
+    "task_family": "合成图人类评价/鉴伪",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "split_axis": "增加取证/真实性任务锚点以剔除生成质量评测噪声",
+    "date_scope": "不设年份下限",
+    "reason": "人类评价父式规模估算约3,920，超过Scholar索引上限；按任务边界细化",
+    "status": "细式待实际试检"
+  },
+  {
+    "query_id": "T06-F3-S1-AIGEN",
+    "parent_id": "T06-F3-S1",
+    "task_family": "AI-generated image detection × human evaluation",
+    "query": "\"AI-generated image detection\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\" OR \"human study\" OR \"user study\")",
+    "split_axis": "使用明确检测任务短语；保留完整解释词OR与human evaluation/study/user study",
+    "date_scope": "不设年份下限",
+    "reason": "合成图人类评价宽式约3,920条；准确检测任务细式估算134条，可完整分页",
+    "status": "首页已记录10条/约134估算，正在分页；该细式不代表更宽合成图检索已经完成"
+  },
+  {
+    "query_id": "T06-F2-GROUND-FAITHFUL",
+    "parent_id": "T06-F2-S1",
+    "task_family": "合成图取证 × explanation faithfulness × evidence grounding",
+    "query": "(\"synthetic image\" OR \"generated image\") (\"explanation faithfulness\" OR \"faithful explanation\") (grounded OR grounding)",
+    "split_axis": "从宽grounding式中继续加入明确忠实性短语；窄式补充，不替代宽式",
+    "date_scope": "不设年份下限",
+    "reason": "宽式约15,500条；在不丢失更宽检索的前提下测高精度子式",
+    "status": "首页10项已筛；约51条，开始完整分页；比宽式更高精度，不能独自代表主题全集"
+  },
+  {
+    "query_id": "T02-F2-S1-MANIPULATION",
+    "parent_id": "T02-F2-S1",
+    "task_family": "图像操纵 × explanation/grounding",
+    "query": "\"image manipulation\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding)",
+    "split_axis": "将原式任务OR拆为image manipulation单项；其余OR与grounding限定保留",
+    "date_scope": "不设年份下限",
+    "reason": "原式估计约14,200；实际拆开两个任务词后分别试规模",
+    "status": "首页约6,740；首页10条已筛，过宽，需继续按解释词族拆分"
+  },
+  {
+    "query_id": "T02-F2-S1-EDITING",
+    "parent_id": "T02-F2-S1",
+    "task_family": "图像编辑 × explanation/grounding",
+    "query": "\"image editing\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding)",
+    "split_axis": "将原式任务OR拆为image editing单项；其余OR与grounding限定保留",
+    "date_scope": "不设年份下限",
+    "reason": "原式估计约14,200；实际拆开两个任务词后分别试规模",
+    "status": "首页约9,620；首页10条已筛，生成式编辑噪声多，需加取证上下文并递归细分"
+  },
+  {
+    "query_id": "T06-F2-S2-FORENSIC",
+    "parent_id": "T06-F2-S2",
+    "task_family": "合成图取证 × explanation hallucination",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination) (forensic OR forgery OR authenticity OR detection)",
+    "split_axis": "在宽hallucination式中增加forensic/forgery/authenticity/detection域约束",
+    "date_scope": "不设年份下限",
+    "reason": "宽式首页约7,620；增加取证域词后仍需观察实际规模与精度",
+    "status": "首页估计约6,230，前10直接相关候选已筛；仍过宽，继续递归细分"
+  },
+  {
+    "query_id": "T06-F2-S2-EXPL-FAITH",
+    "parent_id": "T06-F2-S2",
+    "task_family": "合成图取证 × hallucinated explanation/explanation faithfulness",
+    "query": "(\"AI-generated image\" OR \"synthetic image\") (\"hallucinated explanation\" OR \"explanation faithfulness\") (forensic OR detection)",
+    "split_axis": "限制为明确幻觉/忠实性短语+取证/检测上下文的高精度子式",
+    "date_scope": "不设年份下限",
+    "reason": "宽式约7,620、加入域约束仍约6,230；建立精确短语细式检查高相关结果",
+    "status": "当前 Scholar 可见索引完整检查：start=0/10连续13项，直接start=20为空且Next禁用；不代表语义穷尽，不替代宽式。",
+    "coverage_claim": "当前可见索引位置1–13已逐条筛选；start=20为空，范围仅限本式当前索引。"
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH",
+    "parent_id": "T06-F3-S1",
+    "requested_query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "query": "(\"synthetic image\" OR \"generated image\") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "url": "https://scholar.google.com/scholar?q=(%22synthetic+image%22+OR+%22generated+image%22)+(explanation+OR+explainable+OR+interpretability+OR+interpretable+OR+attribution+OR+saliency+OR+rationale+OR+reasoning)+(%22human+evaluation%22)+(forgery+OR+tampering+OR+fake+OR+authenticity+OR+forensics+OR+detection)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:03:16+08:00",
+    "summary": "首页估计约2,830条，仍过宽；首10项逐条筛选且强相关候选密集，包括AnomReason、X2-DFD、So-fake、FakeReasoning、归因报告、XPlainVerse、视觉信任与Agentic reasoning。下一步需按人评目标/检测任务或明确解释可靠性词递归拆分，暂不全量翻页。",
+    "phase": "广式规模评估/首页逐位置筛选",
+    "footer": true,
+    "next": [
+      "拆分human evaluation类型（faithfulness/factuality/consistency/usefulness/trust）并规模试检"
+    ],
+    "rows": [
+      {
+        "position": 1,
+        "title": "Semantic visual anomaly detection and reasoning in AI-generated images",
+        "metadata": "C Tan, X Ming, J Wang, R Tao, B Li et al. - ICLR, 2026",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
+        "screen_decision": "强相关候选/已登记",
+        "screen_reason": "合成图语义异常检测与推理，摘要有人工评判异常严重程度的变化；需全文确认评的是异常定位/解释正确性还是仅严重度标签。"
+      },
+      {
+        "position": 2,
+        "title": "X2-DFD: A framework for explainable and extendable deepfake detection",
+        "metadata": "Y Chen, Z Yan, G Cheng, K Zhao et al. - NeurIPS, 2025",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/78a2ed8e7da1829d64fb3561adbd706b-Abstract-Conference.html",
+        "screen_decision": "强相关候选/已登记",
+        "screen_reason": "可解释深伪检测，面向伪造线索解释；需核对人评是否测试证据准确/忠实，还是可读性/描述覆盖。"
+      },
+      {
+        "position": 3,
+        "title": "So-fake: Benchmarking and explaining social media image forgery detection",
+        "metadata": "Z Huang, T Li, X Li, H Wen, Y He, J Zhang, H Fei et al. - arXiv:2505.18660, 2025",
+        "url": "https://arxiv.org/abs/2505.18660",
+        "screen_decision": "强相关核心候选/已登记",
+        "screen_reason": "社会媒体图像伪造检测、定位和解释基准，5位专家参与human evaluation；需全文检查评分维度、专家一致性及证据真值。"
+      },
+      {
+        "position": 4,
+        "title": "Toward generalizable forgery detection and reasoning",
+        "metadata": "Y Gao, D Chang, B Yu, H Qin, M Diao et al. - IEEE TIP, 2026",
+        "url": "https://arxiv.org/abs/2503.21210",
+        "screen_decision": "强相关核心候选/已登记",
+        "screen_reason": "定义Forgery Reasoning Task并进行人评；对检测解释/推理可靠性直接相关，全文需核查评审者、依据真值与一致性。"
+      },
+      {
+        "position": 5,
+        "title": "MedForge: Interpretable Medical Deepfake Detection via Forgery-aware Reasoning",
+        "metadata": "Z Chen, K He, Q Lei, B Pu, J Zhang, Y Xu et al. - ACL, 2026",
+        "url": "https://aclanthology.org/2026.acl-long.1177/",
+        "screen_decision": "邻近候选/已登记",
+        "screen_reason": "医疗影像deepfake检测与推理，2位标注者人评；适合作跨域例子，不能不加区分并入一般自然图像鉴伪。"
+      },
+      {
+        "position": 6,
+        "title": "Generating attribution reports for manipulated facial images: A dataset and baseline",
+        "metadata": "J Lian, L Liu, Y Wang, Y Wu, L Wu, L Zhu et al. - ACL, 2026",
+        "url": "https://aclanthology.org/2026.acl-long.1405/",
+        "screen_decision": "强相关候选/已登记",
+        "screen_reason": "篡改人脸归因报告数据集与baseline，对非专家报告utility有定向人评；需进一步看是否验证报告与真实篡改/证据一致。"
+      },
+      {
+        "position": 7,
+        "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+        "metadata": "A Narang, K Kuckreja, S Ghosh, MH Khan, J Cai et al. - arXiv:2607.03562, 2026",
+        "url": "https://arxiv.org/abs/2607.03562",
+        "screen_decision": "强相关候选/已登记",
+        "screen_reason": "大规模可解释deepfake评测，含人工评价；检查具体是过滤图像质量、解释可用性还是事实忠实度。"
+      },
+      {
+        "position": 8,
+        "title": "Explainable Image-Centric Forgery Detection: A Survey",
+        "metadata": "X Wu, X Chen, D Li, Z Chen, Y He, C Zhao et al. - SSRN, 2025",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5691366",
+        "screen_decision": "解释评价方法背景/已登记",
+        "screen_reason": "图像中心伪造可解释性综述，适合递归追查引用；不是直接人评或faithfulness实证。"
+      },
+      {
+        "position": 9,
+        "title": "AI-generated Images Challenge Visual Trust in High-risk Scenarios",
+        "metadata": "YZ Wang, Y Xiao, L Yue, W Gao, Y Du, P Fang et al. - arXiv:2607.22745, 2026",
+        "url": "https://arxiv.org/abs/2607.22745",
+        "screen_decision": "强相关候选",
+        "screen_reason": "研究AI生成图在高风险情境下对视觉信任的挑战，并开展人工评价；需区分检测者判断、依赖决策与解释披露效应。"
+      },
+      {
+        "position": 10,
+        "title": "Agentic Tool-Augmented Reasoning for Explainable Image Forgery Detection",
+        "metadata": "Z Tan, J Huang, C Miao, L Tan, X Zhang et al. - arXiv:2609.39066, 2026",
+        "url": "https://arxiv.org/abs/2609.39066",
+        "screen_decision": "强相关核心候选/已登记",
+        "screen_reason": "工具增强图像伪造解释；摘要直接报告人为评估虚构主张率，适合核查真实伪证率、协议和置信区间。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-SYNTH",
+    "parent_id": "T06-F3-S1-AUTH",
+    "requested_query": "\"synthetic image\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "query": "\"synthetic image\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "url": "https://scholar.google.com/scholar?q=%22synthetic+image%22+(explanation+OR+explainable+OR+interpretability+OR+interpretable+OR+attribution+OR+saliency+OR+rationale+OR+reasoning)+(%22human+evaluation%22)+(forgery+OR+tampering+OR+fake+OR+authenticity+OR+forensics+OR+detection)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:04:19+08:00",
+    "summary": "任务词OR拆分子式synthetic image，估计621条；首页10项逐条筛查，发现So-fake、AnomReason、Face Forgery Common Sense、FakeReasoning、解释报告、X2-DFD、XPlainVerse、AI-generated visual trust等。估算低于900但仍需决定进一步拆解指标/逐页覆盖。",
+    "phase": "任务词OR拆分规模试检/首页逐位置筛选",
+    "footer": true,
+    "next": [
+      "测试generated image同构子式规模；比较两子式是否适合继续分页/解释词族拆分"
+    ],
+    "rows": [
+      {
+        "position": 1,
+        "title": "So-fake: Benchmarking and explaining social media image forgery detection",
+        "metadata": "Z Huang, T Li, X Li, H Wen, Y He, J Zhang, H Fei et al. - arXiv:2505.18660, 2025",
+        "url": "https://arxiv.org/abs/2505.18660",
+        "screen_decision": "强相关核心候选/版本已登记",
+        "screen_reason": "图像伪造检测、定位与解释基准；5位专家人评。需核查评分对解释事实正确、区域对应和易读性分别测了什么。"
+      },
+      {
+        "position": 2,
+        "title": "Semantic visual anomaly detection and reasoning in AI-generated images",
+        "metadata": "C Tan, X Ming, J Wang, R Tao, B Li et al. - ICLR, 2026",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
+        "screen_decision": "强相关候选/已登记",
+        "screen_reason": "人评异常严重度变化及语义推理；检查人评究竟评解释证据还是只评异常程度。"
+      },
+      {
+        "position": 3,
+        "title": "A Hitchhiker's Guide to Fine-Grained Face Forgery Detection Using Common Sense Reasoning",
+        "metadata": "NM Foteinopoulou, E Ghorbel - NeurIPS, 2024",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/059d2b9188cdb7ae00f4d78cc9469704-Abstract-Datasets_and_Benchmarks_Track.html",
+        "screen_decision": "强相关候选",
+        "screen_reason": "细粒度人脸伪造检测与常识推理，含人类评估研究；需检查推理解释的真值标注和人评对象。"
+      },
+      {
+        "position": 4,
+        "title": "Toward generalizable forgery detection and reasoning",
+        "metadata": "Y Gao, D Chang, B Yu, H Qin, M Diao et al. - IEEE TIP, 2026",
+        "url": "https://arxiv.org/abs/2503.21210",
+        "screen_decision": "强相关核心候选/版本已登记",
+        "screen_reason": "合成图检测并定义伪造推理任务，有显式human evaluation；需核对证据定位与解释评分定义。"
+      },
+      {
+        "position": 5,
+        "title": "Generating attribution reports for manipulated facial images: A dataset and baseline",
+        "metadata": "J Lian, L Liu, Y Wang, Y Wu, L Wu, L Zhu et al. - ACL, 2026",
+        "url": "https://aclanthology.org/2026.acl-long.1405/",
+        "screen_decision": "强相关候选/已登记",
+        "screen_reason": "操纵人脸归因报告并评价非专家实用性；人评有用性需与事实忠实度分离。"
+      },
+      {
+        "position": 6,
+        "title": "X2-DFD: A framework for explainable and extendable deepfake detection",
+        "metadata": "Y Chen, Z Yan, G Cheng, K Zhao et al. - NeurIPS, 2025",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/78a2ed8e7da1829d64fb3561adbd706b-Abstract-Conference.html",
+        "screen_decision": "强相关候选/已登记",
+        "screen_reason": "深伪检测解释框架；核查是否包含独立人评和解释证据真值测试。"
+      },
+      {
+        "position": 7,
+        "title": "MedForge: Interpretable Medical Deepfake Detection via Forgery-aware Reasoning",
+        "metadata": "Z Chen, K He, Q Lei, B Pu, J Zhang, Y Xu et al. - ACL, 2026",
+        "url": "https://aclanthology.org/2026.acl-long.1177/",
+        "screen_decision": "邻近候选/已登记",
+        "screen_reason": "医疗图像deepfake解释，双标注者人评；跨域相关但应用条件与自然图像不同。"
+      },
+      {
+        "position": 8,
+        "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+        "metadata": "A Narang, K Kuckreja, S Ghosh, MH Khan, J Cai et al. - arXiv:2607.03562, 2026",
+        "url": "https://arxiv.org/abs/2607.03562",
+        "screen_decision": "强相关候选/已登记",
+        "screen_reason": "可解释深伪大规模benchmark，含人工评估；需核实过滤质量、解释准确性与信任效应各自指标。"
+      },
+      {
+        "position": 9,
+        "title": "Explainable Image-Centric Forgery Detection: A Survey",
+        "metadata": "X Wu, X Chen, D Li, Z Chen, Y He, C Zhao et al. - SSRN, 2025",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5691366",
+        "screen_decision": "解释评价方法背景/版本已登记",
+        "screen_reason": "图像伪造解释综述，主要用于检查参考文献链，不作为直接实证。"
+      },
+      {
+        "position": 10,
+        "title": "AI-generated Images Challenge Visual Trust in High-risk Scenarios",
+        "metadata": "YZ Wang, Y Xiao, L Yue, W Gao, Y Du, P Fang et al. - arXiv:2607.22745, 2026",
+        "url": "https://arxiv.org/abs/2607.22745",
+        "screen_decision": "强相关候选/已登记",
+        "screen_reason": "评估高风险情境下的AI生成图识别及人类信任判断；需区分识别准确率与解释披露对依赖/信任的影响。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED",
+    "parent_id": "T06-F3-S1-AUTH",
+    "requested_query": "\"generated image\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "query": "\"generated image\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "url": "https://scholar.google.com/scholar?start=0&q=%22generated+image%22+%28explanation+OR+explainable+OR+interpretability+OR+interpretable+OR+attribution+OR+saliency+OR+rationale+OR+reasoning%29+%28%22human+evaluation%22%29+%28forgery+OR+tampering+OR+fake+OR+authenticity+OR+forensics+OR+detection%29&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Google Scholar显示约2,510条；读取start=0页面全部10个可见结果，当前索引过宽，未标记完成。",
+    "phase": "任务词OR拆分后的generated image分支试检",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 2510,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": 1,
+        "title": "Semantic visual anomaly detection and reasoning in AI-generated images",
+        "metadata": "C Tan, X Ming, J Wang, R Tao, B Li et al. - ICLR, 2026. Snippet: human evaluation shifts anomaly severity ratings; semantic anomaly detection and reasoning.",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
+        "screen_decision": "邻接候选：人评异常严重度，不等于解释可靠性",
+        "screen_reason": "AI生成图像异常检测与推理，含人类严重度判断；目前摘要没有解释事实性、证据接地或因果忠实性评价。保留相邻边界候选，避免把对图像风险的评级误当解释人评。"
+      },
+      {
+        "position": 2,
+        "title": "So-fake: Benchmarking and explaining social media image forgery detection",
+        "metadata": "Z Huang, T Li, X Li, H Wen, Y He, J Zhang, H Fei et al. - arXiv:2505.18660, 2025. Snippet: five expert reviewers assess detection, localization, and explanation tasks.",
+        "url": "https://arxiv.org/abs/2505.18660",
+        "screen_decision": "强相关候选（版本已登记）",
+        "screen_reason": "社交媒体图像伪造检测、定位与解释基准，有5位专家评价解释；需原稿确认评分维度是否测事实正确、区域一致与忠实度。"
+      },
+      {
+        "position": 3,
+        "title": "X2-DFD: A framework for explainable and extendable deepfake detection",
+        "metadata": "Y Chen, Z Yan, G Cheng, K Zhao et al. - NeurIPS 2025. Snippet: explainability gap in visual forgery detection; annotators/LLMs describe cues.",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/78a2ed8e7da1829d64fb3561adbd706b-Abstract-Conference.html",
+        "screen_decision": "强相关候选（解释质量终点待核）",
+        "screen_reason": "视觉伪造检测解释框架，题名和摘要直接命中；尚须区分人工/LLM描述的解释可读性与证据正确性、模型因果忠实性。"
+      },
+      {
+        "position": 4,
+        "title": "Toward generalizable forgery detection and reasoning",
+        "metadata": "Y Gao, D Chang, B Yu, H Qin, M Diao et al. - IEEE TIP, 2026; arXiv:2503.21210. Snippet: synthetic image detection and human evaluation on forgery reasoning.",
+        "url": "https://arxiv.org/abs/2503.21210",
+        "screen_decision": "强相关候选（既有版本待合并）",
+        "screen_reason": "图像伪造检测与推理任务，摘要明确有伪造推理人评；核查测试者是否逐项验证局部图像证据和理由的真值。"
+      },
+      {
+        "position": 5,
+        "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+        "metadata": "A Narang, K Kuckreja, S Ghosh, MH Khan, J Cai et al. - arXiv:2607.03562, 2026. Snippet: explainable detection dataset/benchmark; human evaluation.",
+        "url": "https://arxiv.org/abs/2607.03562",
+        "screen_decision": "强相关候选（基准/评价终点待核）",
+        "screen_reason": "解释型深伪检测基准并有人工评价；需查看人工标注是过滤图像质量、可读性还是证据正确性。"
+      },
+      {
+        "position": 6,
+        "title": "Explainable Image-Centric Forgery Detection: A Survey",
+        "metadata": "X Wu, X Chen, X Wu, D Li, Z Chen, Y He, C Zhao - 2025. Snippet: review of image-centric forgery explanation tasks.",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6811534",
+        "screen_decision": "强相关综述/引文种子（SSRN原文尚待访问）",
+        "screen_reason": "图像中心鉴伪可解释性综述，可追查术语与引用链；不是原创人评证据，SSRN原稿访问状态仍需确认。"
+      },
+      {
+        "position": 7,
+        "title": "AI-generated Images Challenge Visual Trust in High-risk Scenarios",
+        "metadata": "YZ Wang, Y Xiao, L Yue, W Gao, Y Du, P Fang et al. - arXiv:2607.22745, 2026. Snippet: human evaluation of detection rates in high-risk scenarios.",
+        "url": "https://arxiv.org/abs/2607.22745",
+        "screen_decision": "邻接候选：检测/信任人评",
+        "screen_reason": "研究合成图检测和高风险场景下的人类识别/信任；题录未显示AI解释披露或解释忠实性操纵，不能直接计入解释可靠性。"
+      },
+      {
+        "position": 8,
+        "title": "DeepGuard: Identification and attribution of AI-generated synthetic images",
+        "metadata": "Y Namani, I Reghioua, G Bendiab, MA Labiod - Electronics, 2025. Snippet: human expertise combined with automated detection.",
+        "url": "https://www.mdpi.com/2079-9292/14/4/665",
+        "screen_decision": "邻接/排除：检测者融合而非解释人评",
+        "screen_reason": "AI生成图识别和来源归因，片段中的human evaluation指人机检测协同；未见检测器解释可靠性评价。"
+      },
+      {
+        "position": 9,
+        "title": "Agentic Tool-Augmented Reasoning for Explainable Image Forgery Detection",
+        "metadata": "Z Tan, J Huang, C Miao, L Tan, X Zhang et al. - arXiv:2609.39066, 2026. Snippet: explainable image forgery; human evaluation.",
+        "url": "https://arxiv.org/abs/2609.39066",
+        "screen_decision": "强相关核心候选（已登记，原稿指标待核）",
+        "screen_reason": "工具增强图像伪造推理，摘要含人为评估虚构主张率；检查样本、专家资格、证据真值与置信区间。"
+      },
+      {
+        "position": 10,
+        "title": "Verifying Artificial Intelligence-Generated Images: Socio-Technical Approaches to Authenticity",
+        "metadata": "MM Willie - Computing and Artificial Intelligence, 2025. Scholar links ResearchGate copy; snippet says review/case analysis.",
+        "url": "https://doi.org/10.61838/kman.cai.3.4.3893",
+        "screen_decision": "邻接综述/来源待核",
+        "screen_reason": "讨论生成图真实性核验及人类判断，但非解释方法可靠性研究；当前结果链接是ResearchGate副本，出版身份需独立核实。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED",
+    "parent_id": "T06-F3-S1-AUTH",
+    "requested_query": "\"generated image\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "query": "\"generated image\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "url": "https://scholar.google.com/scholar?start=10&q=%22generated+image%22+%28explanation+OR+explainable+OR+interpretability+OR+interpretable+OR+attribution+OR+saliency+OR+rationale+OR+reasoning%29+%28%22human+evaluation%22%29+%28forgery+OR+tampering+OR+fake+OR+authenticity+OR+forensics+OR+detection%29&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Google Scholar显示约2,510条；读取start=10页面全部10个可见结果，当前索引过宽，未标记完成。",
+    "phase": "任务词OR拆分后的generated image分支试检",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 10,
+    "estimated_results": 2510,
+    "page_number": 2,
+    "rows": [
+      {
+        "position": 1,
+        "title": "Qualitative failures of image generation models and their application in detecting deepfakes",
+        "metadata": "A Borji - Image and Vision Computing, 2023. Snippet: visual failure modes of generated images, human evaluation, distinguishing real/fake.",
+        "url": "https://doi.org/10.1016/j.imavis.2023.104692",
+        "screen_decision": "邻接：生成伪迹/人类检测前史",
+        "screen_reason": "研究生成器的视觉失败模式与深伪检测，不是检测器的解释可靠性；作为领域任务背景，不计直接证据。"
+      },
+      {
+        "position": 2,
+        "title": "Towards a unified evaluation framework: integrating human perception and metrics for AI-generated images",
+        "metadata": "M Aziz, U Rehman, MU Danish, S Ali, AZ Abbasi - Multimedia Systems, 2025.",
+        "url": "https://link.springer.com/article/10.1007/s00530-025-01769-7",
+        "screen_decision": "排除直接相关：生成图质量评价",
+        "screen_reason": "将人类感知与指标用于生成图质量评估，未见伪造检测器解释或解释可靠性终点。"
+      },
+      {
+        "position": 3,
+        "title": "HierForge: A Multi-Modal Hierarchical Framework for Image Forgery Detection via Forensic-Semantic Fusion and Explainable Ensemble",
+        "metadata": "S Gora, B Dervishi, A Leka - Research Square, 2026. Snippet: human evaluation of explanations; three experts assess 200 detections.",
+        "url": "https://assets-eu.researchsquare.com/files/rs-10009709/v1_covered_7897210a-3632-4ab3-8daa-522ea61d5a58.pdf",
+        "screen_decision": "强相关候选（预印本；来源与评测待核）",
+        "screen_reason": "图像伪造解释并直接评价解释质量，三位专家评200项；须核作者、版本/来源和评分协议是否有解释真值或仅主观质量。"
+      },
+      {
+        "position": 4,
+        "title": "Explainable AI-Driven Multi-Scale Spatial-Temporal Analysis for Source Attribution and Generative Model Fingerprinting in Audio-Visual Deepfakes",
+        "metadata": "N Joe, G Fernandes, A Okunola, R Gayle, T Shyanne et al. - 2026, ResearchGate copy. Snippet reports XAI-quality human evaluation.",
+        "url": "https://www.researchgate.net/publication/410791947_Explainable_AI_XAI-Driven_Multi-Scale_Spatial-Temporal_Analysis_for_Source_Attribution_and_Generative_Model_Fingerprinting_in_Audio-Visual_Deepfakes",
+        "screen_decision": "邻接待核：视听深伪且来源待核",
+        "screen_reason": "解释质量人评线索有价值，但题名是音视频多媒体且来源为ResearchGate副本；先查独立出版/预印本身份，不能混同静态图像证据。"
+      },
+      {
+        "position": 5,
+        "title": "Semi-Truths: A large-scale dataset of AI-augmented images for evaluating robustness of AI-generated image detectors",
+        "metadata": "A Pal, J Kruk, M Phute, M Bhattaram et al. - NeurIPS, 2024.",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/d5cdf7e56422f2a229c497dd89c3b995-Abstract-Datasets_and_Benchmarks_Track.html",
+        "screen_decision": "邻接：检测器鲁棒性基准",
+        "screen_reason": "评估生成图检测器面对AI编辑图的鲁棒性；当前题录无解释或解释人评，作为检测可靠性背景，不计解释可靠性。"
+      },
+      {
+        "position": 6,
+        "title": "Seeing Is Not Always Believing: Benchmarking Human and Model Perception of AI-Generated Images",
+        "metadata": "Z Lu, D Huang, L Bai, J Qu, C Wu et al. - NeurIPS, 2023.",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/505df5ea30f630661074145149274af0-Abstract-Datasets_and_Benchmarks.html",
+        "screen_decision": "邻接：人类与模型识别基线",
+        "screen_reason": "比较人和模型对生成图/假图的识别，研究对象是判断能力而非机器解释；用作用户研究与任务背景。"
+      },
+      {
+        "position": 7,
+        "title": "An Explainable AI Framework for Image Analytics and Synthetic Image Creation Using CNN and GAN Architectures",
+        "metadata": "G Shekhar - 2025? Academia.edu result; incomplete metadata.",
+        "url": "https://www.academia.edu/download/132045692/IJCSE_V13I2P101_1_.pdf",
+        "screen_decision": "隔离待核：题录与来源不足",
+        "screen_reason": "片段混合图像分析、合成及XAI词汇，缺可靠出版身份和明确鉴伪解释评估；不纳入确认文献，待独立来源确认。"
+      },
+      {
+        "position": 8,
+        "title": "A Human-Factors Approach for Evaluating AI-Generated Images",
+        "metadata": "K Combs, TJ Bihl, A Gadre et al. - ACM, 2024.",
+        "url": "https://doi.org/10.1145/3632634.3655849",
+        "screen_decision": "排除直接相关：人因/生成图评价方法",
+        "screen_reason": "研究生成图评价的人因与质量评价方法，不涉及鉴伪检测器解释可靠性。"
+      },
+      {
+        "position": 9,
+        "title": "Bridging the Gap Between Ideal and Real-World Evaluation: Benchmarking AI-Generated Image Detection in Challenging Scenarios",
+        "metadata": "C Li, X Wang, M Li, B Miao, P Sun et al. - IEEE/CVF, 2025. Snippet: 192 participants, detection benchmark.",
+        "url": "https://arxiv.org/abs/2509.09172",
+        "screen_decision": "邻接：检测准确率人评",
+        "screen_reason": "真实场景的生成图检测基准含192人类参与者，但评价的是人和模型识别性能，不是AI解释可信度。"
+      },
+      {
+        "position": 10,
+        "title": "Evaluating Text-to-Image Generative Models: An Empirical Study on Human Image Synthesis",
+        "metadata": "M Chen, Y Liu, J Yi, C Xu, Q Lai, H Wang et al. - arXiv, 2024.",
+        "url": "https://arxiv.org/abs/2403.05125",
+        "screen_decision": "排除直接相关：图像生成模型评价",
+        "screen_reason": "研究文本到图像生成质量及人类评价，不是伪造检测器的解释研究。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED",
+    "parent_id": "T06-F3-S1-AUTH",
+    "requested_query": "\"generated image\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "query": "\"generated image\" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (\"human evaluation\") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "url": "https://scholar.google.com/scholar?start=20&q=%22generated+image%22+%28explanation+OR+explainable+OR+interpretability+OR+interpretable+OR+attribution+OR+saliency+OR+rationale+OR+reasoning%29+%28%22human+evaluation%22%29+%28forgery+OR+tampering+OR+fake+OR+authenticity+OR+forensics+OR+detection%29&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Google Scholar显示约2,510条；读取start=20页面全部10个可见结果，当前索引过宽，未标记完成。",
+    "phase": "任务词OR拆分后的generated image分支试检",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 20,
+    "estimated_results": 2510,
+    "page_number": 3,
+    "rows": [
+      {
+        "position": 1,
+        "title": "HandEval: Taking the First Step Towards Hand Quality Evaluation in Generated Images",
+        "metadata": "Z Wang, B Peng, S Yang, Z Tang, J Dong - arXiv, 2025.",
+        "url": "https://arxiv.org/abs/2510.08978",
+        "screen_decision": "排除直接相关：生成内容局部质量",
+        "screen_reason": "生成图手部质量评估，虽提及检测线索但不研究伪造解释。"
+      },
+      {
+        "position": 2,
+        "title": "Learning to Evaluate the Artness of AI-Generated Images",
+        "metadata": "J Chen, J An, H Lyu, C Kanan - IEEE Transactions on Multimedia, 2024.",
+        "url": "https://doi.org/10.1109/TMM.2024.3402311",
+        "screen_decision": "排除直接相关：生成艺术质量",
+        "screen_reason": "人评AI生成艺术质量/艺术性，未涉及鉴伪检测器解释。"
+      },
+      {
+        "position": 3,
+        "title": "ForensicZoom: Adaptive Visual Inspection with Multimodal LLMs for Industrial-Grade Face Forgery Detection",
+        "metadata": "H Zhou, Y Tang, K Yu, Q Zhu, M Li, W Wen - arXiv:2609.31661, 2026.",
+        "url": "https://arxiv.org/abs/2609.31661",
+        "screen_decision": "强相关候选（局部证据对齐待核）",
+        "screen_reason": "面部伪造检测、多模态可解释推理与视觉检查直接相关；此页摘要未显示人评，需检查区域文本与伪造证据的匹配真值。"
+      },
+      {
+        "position": 4,
+        "title": "Multi-metric Plagiarism Scale for AI Paintings",
+        "metadata": "B Choi - ISRGJAHSS, 2026.",
+        "url": "https://isrgpublishers.com/wp-content/uploads/2026/07/ISRGJAHSS1007492026.pdf",
+        "screen_decision": "排除直接相关：AI艺术相似/抄袭指标",
+        "screen_reason": "面向AI绘画相似和人评，非图像伪造鉴定解释。"
+      },
+      {
+        "position": 5,
+        "title": "Exploring the Naturalness of AI-Generated Images",
+        "metadata": "Z Chen, W Sun, H Wu, Z Zhang, J Jia, Z Ji et al. - arXiv, 2023.",
+        "url": "https://arxiv.org/abs/2312.05476",
+        "screen_decision": "排除直接相关：自然度感知评价",
+        "screen_reason": "研究生成图自然度与感知评价，明确不聚焦检测过程。"
+      },
+      {
+        "position": 6,
+        "title": "Unraveling the Impact of Explainability of Artificial Intelligence-Generated Content on Design Style Transfer Effects",
+        "metadata": "Z Ren, X Qin, B Wang - ACM, 2023.",
+        "url": "https://doi.org/10.1145/3638884.3638910",
+        "screen_decision": "排除直接相关：生成设计工作流",
+        "screen_reason": "生成内容设计风格迁移中的解释效果与用户感知，不是取证或鉴伪解释可靠性。"
+      },
+      {
+        "position": 7,
+        "title": "Explainable Prompt-Based Image Generation: Developing Transparent Generative Models",
+        "metadata": "P Fasouli, WV Kambale, K Kyamakya - Springer, 2024.",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-031-98697-0_20",
+        "screen_decision": "排除直接相关：生成模型本身透明度",
+        "screen_reason": "通过提示解释生成模型特征，不是对伪造检测器解释的可靠性评价。"
+      },
+      {
+        "position": 8,
+        "title": "Explainable AI for Cyberscam Prevention: A Survey of Multimodal Scam Detection, Evaluation, and Human-Centered Training",
+        "metadata": "H An, H Salemi, Q Zhang, H Purohit et al. - SSRN, 2026.",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7345758",
+        "screen_decision": "排除直接相关：网络诈骗检测综述",
+        "screen_reason": "多模态诈骗检测与XAI人评综述，但并非图像鉴伪任务；当前题录也未显示图像取证专门章节。"
+      },
+      {
+        "position": 9,
+        "title": "Image Generation Evaluation: A Comprehensive Survey of Human and Automatic Evaluations",
+        "metadata": "Q Liu, S Yang, Z Li, L Hou, C Meng, Y Zhang et al. - Frontiers of Information Technology & Electronic Engineering, 2025.",
+        "url": "https://doi.org/10.1631/FITEE.2400904",
+        "screen_decision": "排除直接相关：生成图评价综述",
+        "screen_reason": "系统总结图像生成的人评与自动评价，不是图像伪造检测解释可靠性研究。"
+      },
+      {
+        "position": 10,
+        "title": "Adversarial Imagery: A Gamified Evaluation Tool for AI-Generated Images",
+        "metadata": "P Valente, J Domingues, N Correia et al. - ACM, 2026.",
+        "url": "https://doi.org/10.1145/3772363.3799274",
+        "screen_decision": "邻接：生成图真实性人评工具",
+        "screen_reason": "以游戏化方式测AI生成图辨识/真实性判断，未涉及机器解释或解释对依赖决策的作用。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-GENERATED",
+    "requested_query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=0&q=%22generated+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Google Scholar估数动态：52→42；start=0，本页逐条读取10项。",
+    "phase": "高精度诊断式；非OR等价完整覆盖式",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 52,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": 1,
+        "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+        "metadata": "A Narang et al. - arXiv, 2026; human evaluation reports reliability of retained images and explanations.",
+        "url": "https://arxiv.org/abs/2607.03562",
+        "screen_decision": "强相关候选（基准）",
+        "screen_reason": "解释型深伪检测基准且有人工评价解释可靠性的表述；原稿需核验信度定义、标注协议和评价与真值的关系。"
+      },
+      {
+        "position": 2,
+        "title": "Toward Generalizable Forgery Detection and Reasoning",
+        "metadata": "Y Gao et al. - IEEE TIP, 2026 / arXiv:2503.21210; human evaluation on forgery reasoning.",
+        "url": "https://arxiv.org/abs/2503.21210",
+        "screen_decision": "强相关核心候选",
+        "screen_reason": "图像伪造推理、人评并涉及可信线索；需核实推理理由是否对齐真实篡改证据。"
+      },
+      {
+        "position": 3,
+        "title": "So-fake: Benchmarking and Explaining Social Media Image Forgery Detection",
+        "metadata": "Z Huang et al. - arXiv, 2025; five experts rated generated samples realism/consistency/appropriateness.",
+        "url": "https://arxiv.org/abs/2505.18660",
+        "screen_decision": "强相关候选（人评对象分层）",
+        "screen_reason": "题名直接涉及图像伪造解释和人评，但可见评分主要是生成样本真实性/一致性/适当性；不能未经原文就当作解释忠实性证据。"
+      },
+      {
+        "position": 4,
+        "title": "Semantic Visual Anomaly Detection and Reasoning in AI-Generated Images",
+        "metadata": "C Tan et al. - ICLR, 2026; anomaly severity shifts after human evaluation.",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
+        "screen_decision": "邻接候选：异常严重度人评",
+        "screen_reason": "生成图异常推理，含严重度评级而非解释事实性/faithfulness测验。"
+      },
+      {
+        "position": 5,
+        "title": "Characterizing Photorealism and Artifacts in Diffusion Model-Generated Images",
+        "metadata": "N Kamali, K Nakamura, A Kumar et al. - ACM, 2025; human detection accuracy.",
+        "url": "https://doi.org/10.1145/3706598.3713962",
+        "screen_decision": "邻接：人类真实性判断",
+        "screen_reason": "比较合成图与人类判断的真实感，不评AI解释。"
+      },
+      {
+        "position": 6,
+        "title": "GenShield: Unified Detection and Artifact Correction for AI-Generated Images",
+        "metadata": "Z Xu, X Zhang, Y Xu et al. - arXiv, 2026; human evaluation and AI-image forensics.",
+        "url": "https://arxiv.org/abs/2605.16122",
+        "screen_decision": "相关候选（原稿核查解释终点）",
+        "screen_reason": "生成图取证检测与伪迹修复，含人评；需确认评价对象是修复/检测表现还是解释。"
+      },
+      {
+        "position": 7,
+        "title": "X2-DFD: A Framework for Explainable and Extendable Deepfake Detection",
+        "metadata": "Y Chen et al. - NeurIPS, 2025/2026.",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/78a2ed8e7da1829d64fb3561adbd706b-Abstract-Conference.html",
+        "screen_decision": "强相关候选",
+        "screen_reason": "视觉伪造检测解释框架；人类标注解释伪造线索的生成过程需核对证据真实性评价。"
+      },
+      {
+        "position": 8,
+        "title": "So-Fake: Benchmarking Social Media Image Forgery Detection",
+        "metadata": "Z Huang et al. - OpenReview version, 2025.",
+        "url": "https://openreview.net/forum?id=joMMVDbM0BUJ",
+        "screen_decision": "重复版本（So-fake）",
+        "screen_reason": "与So-fake/arXiv记录标题及作者相同，保留检索位置并在论文级合并。"
+      },
+      {
+        "position": 9,
+        "title": "GenFace: A Large-Scale Fine-Grained Face Forgery Benchmark and Cross Appearance-Edge Learning",
+        "metadata": "Y Zhang, Z Yu, T Wang et al. - IEEE TIFS, 2024; human assessment of model inference.",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10681109/",
+        "screen_decision": "邻接：检测推断信任人评",
+        "screen_reason": "面部伪造基准和模型/人类判断精度，题录未显示自然语言/显著图解释可靠性评价。"
+      },
+      {
+        "position": 10,
+        "title": "Detecting Multimedia Generated by Large AI Models: A Survey",
+        "metadata": "L Lin et al. - arXiv, 2024.",
+        "url": "https://arxiv.org/abs/2402.00045",
+        "screen_decision": "邻接综述",
+        "screen_reason": "多媒体生成内容检测综述，可为术语背景，但非图像取证解释可靠性研究。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-GENERATED",
+    "requested_query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=10&q=%22generated+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Google Scholar估数动态：52→42；start=10，本页逐条读取10项。",
+    "phase": "高精度诊断式；非OR等价完整覆盖式",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 10,
+    "estimated_results": 52,
+    "page_number": 2,
+    "rows": [
+      {
+        "position": 1,
+        "title": "HierForge: A Multi-Modal Hierarchical Framework for Image Forgery Detection via Forensic-Semantic Fusion and Explainable Ensemble",
+        "metadata": "S Gora, B Dervishi, A Leka - Research Square, 2026; three experts evaluate 200 explanations.",
+        "url": "https://assets-eu.researchsquare.com/files/rs-10009709/v1_covered_7897210a-3632-4ab3-8daa-522ea61d5a58.pdf",
+        "screen_decision": "强相关候选（预印本待核）",
+        "screen_reason": "图像伪造解释且专门开展解释人评；需核查来源、样本、评分效度及是否使用证据真值。"
+      },
+      {
+        "position": 2,
+        "title": "Agentic Tool-Augmented Reasoning for Explainable Image Forgery Detection",
+        "metadata": "Z Tan et al. - arXiv, 2026; human judicial expert study of fabricated claims.",
+        "url": "https://arxiv.org/abs/2609.39066",
+        "screen_decision": "强相关核心候选（原稿指标待核）",
+        "screen_reason": "工具增强图像伪造推理，报告解释中虚构主张比例并有人类评估；与解释可靠性高度相关。"
+      },
+      {
+        "position": 3,
+        "title": "Diffusion Facial Forgery Detection",
+        "metadata": "H Cheng et al. - ACM, 2024.",
+        "url": "https://doi.org/10.1145/3664647.3680797",
+        "screen_decision": "排除直接相关：检测器方法",
+        "screen_reason": "研究扩散人脸伪造检测，当前摘要未见解释/解释人评。"
+      },
+      {
+        "position": 4,
+        "title": "FACT: A Forensic Agent with Compiled Tool-Use Trajectories for AI-Generated Image Detection",
+        "metadata": "J Chen, B Hu, J Hu, K Zhou, Q Zhang, Z Liu - arXiv, 2026; case analyses/traces/human evaluation.",
+        "url": "https://arxiv.org/abs/2609.05876",
+        "screen_decision": "强相关邻接候选（代理轨迹/人评待核）",
+        "screen_reason": "生成图取证agent提供工具轨迹并有人评；需核人工评的是检测还是解释/轨迹证据忠实性。"
+      },
+      {
+        "position": 5,
+        "title": "An Investigation into the Generation and Detection of Forged Visual Content",
+        "metadata": "Y Chen - PhD thesis, UWA, 2025.",
+        "url": "https://research-repository.uwa.edu.au/files/602204559/THESIS_-_DOCTOR_OF_PHILOSOPHY_-_CHEN_Yunzhuo_-_2025.pdf",
+        "screen_decision": "边界候选（学位论文待核）",
+        "screen_reason": "覆盖伪造内容生成检测及主观人评，可能含解释前史；逐章检查后再确定相关章节。"
+      },
+      {
+        "position": 6,
+        "title": "Explainable Image-Centric Forgery Detection: A Survey",
+        "metadata": "X Wu et al. - SSRN, 2025.",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5691366",
+        "screen_decision": "强相关综述/引文种子（SSRN访问待核）",
+        "screen_reason": "主题高度吻合，作为关键术语/参考链起点，不作为原创实验。"
+      },
+      {
+        "position": 7,
+        "title": "Detecting Handcrafted Facial Image Manipulations and GAN-Generated Facial Images Using Shallow-FakeFaceNet",
+        "metadata": "S Lee, S Tariq, Y Shin, SS Woo - Applied Soft Computing, 2021.",
+        "url": "https://doi.org/10.1016/j.asoc.2021.107741",
+        "screen_decision": "邻接：检测人评",
+        "screen_reason": "比较检测系统，摘要中human evaluation不是解释评价。"
+      },
+      {
+        "position": 8,
+        "title": "ForensicZoom: Adaptive Visual Inspection with Multimodal LLMs for Industrial-Grade Face Forgery Detection",
+        "metadata": "H Zhou et al. - arXiv, 2026.",
+        "url": "https://arxiv.org/abs/2609.31661",
+        "screen_decision": "强相关候选",
+        "screen_reason": "自适应视觉检查和面部伪造解释相关；需核区域证据接地及评分真值。"
+      },
+      {
+        "position": 9,
+        "title": "Responsible Image Generation",
+        "metadata": "A Jain - dissertation, 2025.",
+        "url": "https://search.proquest.com/openview/88afe982becb05dce2519447c7983806/1?pq-origsite=gscholar&cbl=18750&diss=y",
+        "screen_decision": "排除直接相关：生成过程研究",
+        "screen_reason": "讨论扩散生成过程/记忆，不是鉴伪检测解释。"
+      },
+      {
+        "position": 10,
+        "title": "Evidence Fusion for Analyzing Multimodal Image Manipulation",
+        "metadata": "MR Aliabadi, N Zhang, FY Shih - IJPR, 2026; snippet states no human evaluation of explanation quality.",
+        "url": "https://www.worldscientific.com/doi/abs/10.1142/S0218001426400380",
+        "screen_decision": "邻接机制候选（人评明确缺失）",
+        "screen_reason": "图像操纵多模态取证分析直接相关，但摘要明确指出未做人评解释质量；对研究缺口很有价值，不算解释人评证据。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-GENERATED",
+    "requested_query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=20&q=%22generated+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Google Scholar估数动态：52→42；start=20，本页逐条读取10项。",
+    "phase": "高精度诊断式；非OR等价完整覆盖式",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 20,
+    "estimated_results": 52,
+    "page_number": 3,
+    "rows": [
+      {
+        "position": 1,
+        "title": "Towards Generalizable Detector for Generated Image",
+        "metadata": "Q Cai, C Wu, Y Zhang, J Yu et al. - NeurIPS, 2025.",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/87f5d94a4234e93e7854b45ebd04d2ad-Abstract-Conference.html",
+        "screen_decision": "排除解释直接性不足：检测器基线",
+        "screen_reason": "生成图检测与图像伪造相关，但未见解释方法或解释人评。"
+      },
+      {
+        "position": 2,
+        "title": "From Masks to Pixels and Meaning: A New Taxonomy, Benchmark, and Metrics for VLM Image Tampering",
+        "metadata": "X Shang, Y Tang, J Cui et al. - Springer, 2026.",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37314-4_32",
+        "screen_decision": "强相关候选（语义/定位评估待核）",
+        "screen_reason": "VLM图像篡改基准与语义评价直接涉及理由/证据说明，需确认是否含解释一致性实验。"
+      },
+      {
+        "position": 3,
+        "title": "How Effective Are Publicly Accessible Deepfake Detection Tools? A Comparative Evaluation of Open-Source and Free-to-Use Platforms",
+        "metadata": "M Rettinger, B Beaumont, NA Le-Khac - arXiv, 2026.",
+        "url": "https://arxiv.org/abs/2603.04456",
+        "screen_decision": "邻接：人类检测基线",
+        "screen_reason": "人类基线与深伪检测工具比较，未显示机器解释评价。"
+      },
+      {
+        "position": 4,
+        "title": "GPT4o-Receipt: A Dataset and Human Study for AI-Generated Document Forensics",
+        "metadata": "Y Zhang, S Ren, A Raj, E Wei, D Ng, A Shen - arXiv, 2026.",
+        "url": "https://arxiv.org/abs/2603.11442",
+        "screen_decision": "跨域取证邻接",
+        "screen_reason": "票据/文档图像生成取证含人评；不是自然图像伪造解释研究，但可作多模态取证邻接。"
+      },
+      {
+        "position": 5,
+        "title": "OMNI-Fake: Benchmarking Unified Multimodal Social Media Deepfake Detection",
+        "metadata": "T Li, Z Huang, H Wen, Y He, X Li et al. - CVPR, 2026.",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Omni-Fake_Benchmarking_Unified_Multimodal_Social_Media_Deepfake_Detection_CVPR_2026_paper.html",
+        "screen_decision": "邻接基准（需核解释输出）",
+        "screen_reason": "多模态深伪检测基准有人评，但题名/摘要重点是检测性能，不足以证明解释可靠性。"
+      },
+      {
+        "position": 6,
+        "title": "VidGuard-R1: AI-Generated Video Detection and Explanation via Reasoning MLLMs and RL",
+        "metadata": "K Park et al. - ICLR, 2026.",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b00ef390dcd5f147fd7c5c2bb35f09be-Abstract-Conference.html",
+        "screen_decision": "视频邻接（不纳静态图像强相关）",
+        "screen_reason": "视频检测理由和人评可能提供跨媒体对照，但用户当前主题聚焦图像。"
+      },
+      {
+        "position": 7,
+        "title": "ImgEdit: A Unified Image Editing Dataset and Benchmark",
+        "metadata": "Y Ye et al. - NeurIPS, 2025.",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/bec783f119b969772c35243b1c801090-Abstract-Datasets_and_Benchmarks.html",
+        "screen_decision": "邻接：图像编辑检测基准",
+        "screen_reason": "含fake score与编辑图人评，核心是编辑生成评价而非解释可靠性。"
+      },
+      {
+        "position": 8,
+        "title": "Beyond the Brush: Fully-Automated Crafting of Realistic Inpainted Images",
+        "metadata": "G Bertazzini, C Albisani, D Baracchi et al. - WIFS, 2024.",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10810722/",
+        "screen_decision": "邻接：篡改合成图质量人评",
+        "screen_reason": "图像修补/伪造样本合成，人工评价图像质量；未见检测器解释评估。"
+      },
+      {
+        "position": 9,
+        "title": "VERITAS: Generalizable Deepfake Detection via Pattern-Aware Reasoning",
+        "metadata": "H Tan, Z Tan, S Shi, A Liu, C Song et al. - ICLR, 2026.",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/6d13e085b79d454da5910e4ca82a3d9d-Abstract-Conference.html",
+        "screen_decision": "强相关候选（推理解释终点待核）",
+        "screen_reason": "深伪检测与模式感知推理直接相关；需核它是否输出可检查理由及是否验证理由忠实性。"
+      },
+      {
+        "position": 10,
+        "title": "Automated Artifact Retouching in Morphed Images with Attention Maps",
+        "metadata": "G Borghi, A Franco, G Graffieti, D Maltoni - IEEE Access, 2021.",
+        "url": "https://ieeexplore.ieee.org/abstract/document/9558766/",
+        "screen_decision": "邻接：注意图/伪迹修复",
+        "screen_reason": "关注morph图伪迹修复和注意图，非检测解释可靠性评价。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-GENERATED",
+    "requested_query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=30&q=%22generated+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Google Scholar估数动态：52→42；start=30，本页逐条读取10项。",
+    "phase": "高精度诊断式；非OR等价完整覆盖式",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 30,
+    "estimated_results": 42,
+    "page_number": 4,
+    "rows": [
+      {
+        "position": 1,
+        "title": "Fine-Grained Human Pose Editing Assessment via Layer-Selective MLLMs",
+        "metadata": "N Sun et al. - arXiv, 2026.",
+        "url": "https://arxiv.org/abs/2601.10369",
+        "screen_decision": "排除：人体姿态编辑评价",
+        "screen_reason": "研究姿态编辑质量，与图像鉴伪解释无关；参考文献提到Fakeshield不足以纳入。"
+      },
+      {
+        "position": 2,
+        "title": "Beyond the Brush++: A Flexible Pipeline for Fully Automated Generation of Realistic Inpainted Images",
+        "metadata": "G Bertazzini et al. - Journal on Information Security, 2026.",
+        "url": "https://link.springer.com/article/10.1186/s13635-026-00237-7",
+        "screen_decision": "邻接：伪造样本生成",
+        "screen_reason": "自动生成修补图并人评生成质量，不是检测解释研究。"
+      },
+      {
+        "position": 3,
+        "title": "OmniVL-Guard: Towards Unified Vision-Language Forgery Detection and Grounding via Balanced RL",
+        "metadata": "J Shen, J Wu, Y Wang, L Cheng, S Tang, T Hui et al. - arXiv, 2026.",
+        "url": "https://arxiv.org/abs/2602.10687",
+        "screen_decision": "强相关候选（grounding奖励待核）",
+        "screen_reason": "图像伪造检测与视觉语言接地，适合核查证据区域—理由一致性，但摘要未显示直接人工解释评估。"
+      },
+      {
+        "position": 4,
+        "title": "Common Inpainted Objects In-N-Out of Context",
+        "metadata": "T Yang, T Jordan, R Sun, N Liu et al. - CVPR, 2026.",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Yang_Common_Inpainted_Objects_In-N-Out_of_Context_CVPR_2026_paper.html",
+        "screen_decision": "邻接：修补对象与人类判断",
+        "screen_reason": "研究修补对象上下文及人评争议，不是鉴伪解释本身。"
+      },
+      {
+        "position": 5,
+        "title": "Towards Unified Multimodal Misinformation Detection in Social Media: A Benchmark Dataset and Baseline",
+        "metadata": "H Li et al. - arXiv, 2025.",
+        "url": "https://arxiv.org/abs/2509.25991",
+        "screen_decision": "邻接：社媒误信息基准",
+        "screen_reason": "多模态误信息/图像检测中的人类基准，但缺解释可靠性证据。"
+      },
+      {
+        "position": 6,
+        "title": "Latent Event Graphs for Authenticated Histories of Prompt Driven Image Modification and Scalable Media Provenance Audits",
+        "metadata": "A Farouk, M Nassar, K Elshenawy - RMSTAR, 2026.",
+        "url": "https://archesience.com/index.php/RMSTAR/article/view/LatentEventGraphsforAuthenticatedHistories",
+        "screen_decision": "边界候选：图像来源审计",
+        "screen_reason": "图像修订溯源与真实性审计，但摘要明确人评不是重点，且需核出版质量/来源。"
+      },
+      {
+        "position": 7,
+        "title": "VIF-Bench: Evaluating Visual Instruction Following in Multi-Reference Image Generation",
+        "metadata": "Y Oshima et al. - arXiv, 2026.",
+        "url": "https://arxiv.org/abs/2609.37709",
+        "screen_decision": "排除：图像生成指令跟随",
+        "screen_reason": "多参考图生成评估，与取证解释无关。"
+      },
+      {
+        "position": 8,
+        "title": "WireLLM: LLM-Driven Intelligent Resource Management for Next-Generation Wireless Networks",
+        "metadata": "M Gu, S Zhang, W Feng, J Yan, N Jiang - 2026; ResearchGate copy.",
+        "url": "https://www.researchgate.net/publication/407143499_WireLLM_LLM-Driven_Intelligent_Resource_Management_for_Next-Generation_Wireless_Networks",
+        "screen_decision": "排除：无关领域/索引污染",
+        "screen_reason": "无线网络论文摘要/参考文献中包含GenShield/FakeShield导致共词命中，论文任务不相关。"
+      },
+      {
+        "position": 9,
+        "title": "Deepfake Detection in the Era of Large Models",
+        "metadata": "C Peng, J Li, D Liu, N Wang, R Hu, X Gao - 2026 Chinese survey.",
+        "url": "https://sciengine.com/doi/pdf/CF66898575B54BEDB1F8316B7C7286EC",
+        "screen_decision": "中文邻接综述（低优先）",
+        "screen_reason": "深伪检测大模型综述，主要中文文献；按用户偏好仅作边界记录，不纳英文强相关。"
+      },
+      {
+        "position": 10,
+        "title": "Made by and for Humans? The Issue of Aesthetic Alignment",
+        "metadata": "E Arielli - Artificial Aesthetics, 2024.",
+        "url": "https://www.academia.edu/download/119180713/arielli_artificial_aesthetics.chapter_9.pdf",
+        "screen_decision": "排除：生成艺术美学",
+        "screen_reason": "讨论生成艺术审美对齐，人类评价及文献共引与鉴伪解释无关。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-GENERATED",
+    "requested_query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=40&q=%22generated+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Google Scholar估数动态：52→42；start=40，本页逐条读取2项。",
+    "phase": "高精度诊断式；非OR等价完整覆盖式",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "start": 40,
+    "estimated_results": 42,
+    "page_number": 5,
+    "rows": [
+      {
+        "position": 1,
+        "title": "Person Identification Based on Facial Aging Forensics Analysis Using Deep Neural Networks",
+        "metadata": "MHA Hashm - 2023; institutional PDF.",
+        "url": "https://uokerbala.edu.iq/wp-content/uploads/2023/03/Rp_Person-Identification-Based-On-Facial-Aging-Forensics-Analysis-Using-Deep-Neural-Networks.pdf",
+        "screen_decision": "排除：年龄/身份识别与索引共词",
+        "screen_reason": "医学/生物识别研究，生成图与human evaluation仅在方法语境中共现，不涉及伪造解释。"
+      },
+      {
+        "position": 2,
+        "title": "Bridging Perception and Reasoning in Multimodal Models",
+        "metadata": "X Fu - PhD dissertation, 2025.",
+        "url": "https://search.proquest.com/openview/ced588c1617c91d412fe4d357e891de2/1?pq-origsite=gscholar&cbl=18750&diss=y",
+        "screen_decision": "邻接待核：多模态推理学位论文",
+        "screen_reason": "题录与可见摘要未证实鉴伪解释评价，作为后续章节检索候选；非确认强相关。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-GENERATED",
+    "requested_query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"generated image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=42&q=%22generated+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09",
+    "summary": "直接查start=42无题录；在start=40页Next已禁用，边界一致。",
+    "phase": "末页边界核对",
+    "footer": false,
+    "next": [],
+    "blocked": false,
+    "start": 42,
+    "estimated_results": 42,
+    "page_number": 6,
+    "rows": []
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-SYNTH-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-SYNTH",
+    "requested_query": "\"synthetic image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"synthetic image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=0&q=%22synthetic+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Scholar估数36→26；start=0记录本页全部10条。",
+    "phase": "高精度cross-check",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 36,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": 1,
+        "title": "So-fake: Benchmarking and Explaining Social Media Image Forgery Detection",
+        "metadata": "Scholar 结果位置 1",
+        "url": "https://arxiv.org/abs/2505.18660",
+        "screen_decision": "强相关候选",
+        "screen_reason": "有解释和五位专家评价；页面摘要提到的是生成样本真实感/一致性/适当性，原文须核是否直接评价解释。"
+      },
+      {
+        "position": 2,
+        "title": "OMNI-Fake: Benchmarking Unified Multimodal Social Media Deepfake Detection",
+        "metadata": "Scholar 结果位置 2",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026/html/Li_Omni-Fake_Benchmarking_Unified_Multimodal_Social_Media_Deepfake_Detection_CVPR_2026_paper.html",
+        "screen_decision": "邻接候选",
+        "screen_reason": "多模态深伪检测和人评，但当前没有解释忠实性终点。"
+      },
+      {
+        "position": 3,
+        "title": "Toward Generalizable Forgery Detection and Reasoning",
+        "metadata": "Scholar 结果位置 3",
+        "url": "https://arxiv.org/abs/2503.21210",
+        "screen_decision": "强相关核心候选",
+        "screen_reason": "图像伪造检测推理、人评和可信线索直接吻合，需全文核验证据—理由一致性。"
+      },
+      {
+        "position": 4,
+        "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+        "metadata": "Scholar 结果位置 4",
+        "url": "https://arxiv.org/abs/2607.03562",
+        "screen_decision": "强相关候选",
+        "screen_reason": "摘要声称人工评价图像和解释可靠性，需核可靠性定义、盲评和真值来源。"
+      },
+      {
+        "position": 5,
+        "title": "Semantic Visual Anomaly Detection and Reasoning in AI-Generated Images",
+        "metadata": "Scholar 结果位置 5",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
+        "screen_decision": "邻接候选",
+        "screen_reason": "人类对异常严重度打分，不等于评价模型解释。"
+      },
+      {
+        "position": 6,
+        "title": "GenShield: Unified Detection and Artifact Correction for AI-Generated Images",
+        "metadata": "Scholar 结果位置 6",
+        "url": "https://arxiv.org/abs/2605.16122",
+        "screen_decision": "待核邻接候选",
+        "screen_reason": "取证检测/伪迹纠正有人评；需确认被评对象及有无解释输出。"
+      },
+      {
+        "position": 7,
+        "title": "ForgeryGPT: A Multimodal LLM for Interpretable Image Forgery Detection and Localization",
+        "metadata": "Scholar 结果位置 7",
+        "url": "https://arxiv.org/abs/2410.10238",
+        "screen_decision": "强相关核心候选（已登记）",
+        "screen_reason": "摘要直接说人评其解释揭示图像中的 misinformation 的有效性；核查“有效性”是否有像素证据真值。"
+      },
+      {
+        "position": 8,
+        "title": "MedForge: Interpretable Medical Deepfake Detection via Forgery-aware Reasoning",
+        "metadata": "Scholar 结果位置 8",
+        "url": "https://aclanthology.org/2026.acl-long.1177/",
+        "screen_decision": "跨域强相关候选",
+        "screen_reason": "医疗图像深伪解释与双标注者人评；领域条件不同，需单独分层，不直接代表自然图像。"
+      },
+      {
+        "position": 9,
+        "title": "X2-DFD: A Framework for Explainable and Extendable Deepfake Detection",
+        "metadata": "Scholar 结果位置 9",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/78a2ed8e7da1829d64fb3561adbd706b-Abstract-Conference.html",
+        "screen_decision": "强相关候选",
+        "screen_reason": "伪造解释框架；核人类描述证据的正确性及因果忠实性。"
+      },
+      {
+        "position": 10,
+        "title": "Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline",
+        "metadata": "Scholar 结果位置 10",
+        "url": "https://aclanthology.org/2026.acl-long.1405/",
+        "screen_decision": "强相关候选（效用与忠实性区分）",
+        "screen_reason": "人评非专家实用性；需核报告是否匹配篡改来源/证据，而非只评可用性。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-SYNTH-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-SYNTH",
+    "requested_query": "\"synthetic image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"synthetic image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=10&q=%22synthetic+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Scholar估数36→26；start=10记录本页全部10条。",
+    "phase": "高精度cross-check",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 10,
+    "estimated_results": 36,
+    "page_number": 2,
+    "rows": [
+      {
+        "position": 1,
+        "title": "Diffusion Facial Forgery Detection",
+        "metadata": "Scholar 结果位置 11",
+        "url": "https://doi.org/10.1145/3664647.3680797",
+        "screen_decision": "排除直接相关",
+        "screen_reason": "扩散人脸伪造检测方法，摘要未见解释/人评解释。"
+      },
+      {
+        "position": 2,
+        "title": "So-Fake: Benchmarking Social Media Image Forgery Detection",
+        "metadata": "Scholar 结果位置 12",
+        "url": "https://openreview.net/forum?id=joMMVDbM0BUJ",
+        "screen_decision": "重复版本",
+        "screen_reason": "So-fake同一论文正式/预印本版本，结果行保留，文献层面合并。"
+      },
+      {
+        "position": 3,
+        "title": "Explainable Image-Centric Forgery Detection: A Survey",
+        "metadata": "Scholar 结果位置 13",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5691366",
+        "screen_decision": "强相关综述/引文种子",
+        "screen_reason": "核心综述，需继续核对原稿并逐条追查参考文献；非原创人评。"
+      },
+      {
+        "position": 4,
+        "title": "VERITAS: Generalizable Deepfake Detection via Pattern-Aware Reasoning",
+        "metadata": "Scholar 结果位置 14",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/6d13e085b79d454da5910e4ca82a3d9d-Abstract-Conference.html",
+        "screen_decision": "强相关机制候选",
+        "screen_reason": "模式感知推理直接相关，需确认解释形式和对证据真值的验证。"
+      },
+      {
+        "position": 5,
+        "title": "Detecting Multimedia Generated by Large AI Models: A Survey",
+        "metadata": "Scholar 结果位置 15",
+        "url": "https://arxiv.org/abs/2402.00045",
+        "screen_decision": "邻接综述",
+        "screen_reason": "多媒体生成检测和社会媒体背景，不等于图像鉴伪解释可靠性综述。"
+      },
+      {
+        "position": 6,
+        "title": "FACT: A Forensic Agent with Compiled Tool-Use Trajectories for AI-Generated Image Detection",
+        "metadata": "Scholar 结果位置 16",
+        "url": "https://arxiv.org/abs/2609.05876",
+        "screen_decision": "强相关邻接候选",
+        "screen_reason": "生成图取证Agent有人评和完整轨迹；要核人工终点评价的是检测还是理由/证据轨迹。"
+      },
+      {
+        "position": 7,
+        "title": "From Masks to Pixels and Meaning: A New Taxonomy, Benchmark, and Metrics for VLM Image Tampering",
+        "metadata": "Scholar 结果位置 17",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37314-4_32",
+        "screen_decision": "强相关候选",
+        "screen_reason": "VLM图像篡改、像素到语义评价及人工筛选，需查有无解释证据对齐测量。"
+      },
+      {
+        "position": 8,
+        "title": "ForensicZoom: Adaptive Visual Inspection with Multimodal LLMs for Industrial-Grade Face Forgery Detection",
+        "metadata": "Scholar 结果位置 18",
+        "url": "https://arxiv.org/abs/2609.31661",
+        "screen_decision": "强相关候选",
+        "screen_reason": "局部视觉检查和人脸伪造推理直接相关，需核证据接地与可靠性真值。"
+      },
+      {
+        "position": 9,
+        "title": "Evidence Fusion for Analyzing Multimodal Image Manipulation",
+        "metadata": "Scholar 结果位置 19",
+        "url": "https://www.worldscientific.com/doi/abs/10.1142/S0218001426400380",
+        "screen_decision": "机制相关但无解释人评",
+        "screen_reason": "明确未做解释质量量化/人评，对研究缺口重要。"
+      },
+      {
+        "position": 10,
+        "title": "Responsible Image Generation",
+        "metadata": "Scholar 结果位置 20",
+        "url": "https://search.proquest.com/openview/88afe982becb05dce2519447c7983806/1?pq-origsite=gscholar&cbl=18750&diss=y",
+        "screen_decision": "排除直接相关",
+        "screen_reason": "生成过程和记忆，不是鉴伪解释评价。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-SYNTH-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-SYNTH",
+    "requested_query": "\"synthetic image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"synthetic image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=20&q=%22synthetic+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Scholar估数36→26；start=20记录本页全部6条。",
+    "phase": "高精度cross-check",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "start": 20,
+    "estimated_results": 26,
+    "page_number": 3,
+    "rows": [
+      {
+        "position": 1,
+        "title": "OmniVL-Guard: Towards Unified Vision-Language Forgery Detection and Grounding via Balanced RL",
+        "metadata": "Scholar 结果位置 21",
+        "url": "https://arxiv.org/abs/2602.10687",
+        "screen_decision": "强相关机制候选",
+        "screen_reason": "视觉语言取证与grounding相关，需核文本证据区域对齐指标；未见人评解释。"
+      },
+      {
+        "position": 2,
+        "title": "Latent Event Graphs for Authenticated Histories of Prompt Driven Image Modification and Scalable Media Provenance Audits",
+        "metadata": "Scholar 结果位置 22",
+        "url": "https://archesience.com/index.php/RMSTAR/article/view/LatentEventGraphsforAuthenticatedHistories",
+        "screen_decision": "边界候选/来源待核",
+        "screen_reason": "图像溯源和鉴真相关，但摘要称人评不是重点，需核出版身份。"
+      },
+      {
+        "position": 3,
+        "title": "Deepfake Detection in the Era of Large Models",
+        "metadata": "Scholar 结果位置 23",
+        "url": "https://sciengine.com/doi/pdf/CF66898575B54BEDB1F8316B7C7286EC",
+        "screen_decision": "中文邻接综述（低优先）",
+        "screen_reason": "中文大模型深伪检测综述，按用户要求低相关中文不计入英文强相关。"
+      },
+      {
+        "position": 4,
+        "title": "VIF-Bench: Evaluating Visual Instruction Following in Multi-Reference Image Generation",
+        "metadata": "Scholar 结果位置 24",
+        "url": "https://arxiv.org/abs/2609.37709",
+        "screen_decision": "排除直接相关",
+        "screen_reason": "多参考图生成指令跟随，不是鉴伪解释。"
+      },
+      {
+        "position": 5,
+        "title": "MMMMM: A Unified Taxonomy for Investigating the Mechanisms of Multilingual Multimodal Misinformation",
+        "metadata": "Scholar 结果位置 25",
+        "url": "https://arxiv.org/abs/2608.29681",
+        "screen_decision": "邻接背景",
+        "screen_reason": "多模态误信息与生成图语境，但未见伪造检测器解释可靠性。"
+      },
+      {
+        "position": 6,
+        "title": "Bridging Perception and Reasoning in Multimodal Models",
+        "metadata": "Scholar 结果位置 26",
+        "url": "https://search.proquest.com/openview/ced588c1617c91d412fe4d357e891de2/1?pq-origsite=gscholar&cbl=18750&diss=y",
+        "screen_decision": "邻接待核学位论文",
+        "screen_reason": "多模态感知/推理学位论文，当前可见信息不能证明鉴伪解释实证。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-SYNTH-EXPLAIN-FORGERY",
+    "parent_id": "T06-F3-S1-AUTH-SYNTH",
+    "requested_query": "\"synthetic image\" explanation \"human evaluation\" \"image forgery\"",
+    "query": "\"synthetic image\" explanation \"human evaluation\" \"image forgery\"",
+    "url": "https://scholar.google.com/scholar?start=26&q=%22synthetic+image%22+explanation+%22human+evaluation%22+%22image+forgery%22&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09",
+    "summary": "start20仅6条且Next禁用；直接查start26空，末端一致。",
+    "phase": "末页边界核查",
+    "footer": false,
+    "next": [],
+    "blocked": false,
+    "start": 26,
+    "estimated_results": 26,
+    "page_number": 3,
+    "rows": []
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-RELIABILITY-TERMS",
+    "parent_id": "T06-F3-S1-AUTH",
+    "requested_query": "(\"generated image\" OR \"synthetic image\") (\"explanation faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\") (\"image forgery\" OR \"image tampering\" OR forensics)",
+    "query": "(\"generated image\" OR \"synthetic image\") (\"explanation faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\") (\"image forgery\" OR \"image tampering\" OR forensics)",
+    "url": "https://scholar.google.com/scholar?start=0&q=%28%22generated+image%22+OR+%22synthetic+image%22%29+%28%22explanation+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22%29+%28%22image+forgery%22+OR+%22image+tampering%22+OR+forensics%29&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Scholar估数20；start=0本页10条全记。",
+    "phase": "解释faithfulness/fidelity/consistency精确检索",
+    "footer": true,
+    "next": [
+      "enabled"
+    ],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 20,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": 1,
+        "title": "REVEAL: Reasoning-Enhanced Forensic Evidence Analysis for Explainable AI-Generated Image Detection",
+        "metadata": "Google Scholar位置1; 估数20",
+        "url": "https://doi.org/10.1007/978-3-032-37520-9_31",
+        "screen_decision": "强相关核心候选（需核新近正式版本）",
+        "screen_reason": "题录摘要直接提到解释忠实性、跨域泛化和证据接地推理；核对忠实性指标定义、因果测试和真实篡改证据。"
+      },
+      {
+        "position": 2,
+        "title": "LaP-Forensics: Latent-Pixel Consistency Guided Multimodal Reasoning for Deepfake Detection",
+        "metadata": "Google Scholar位置2; 估数20",
+        "url": "https://arxiv.org/abs/2607.25962",
+        "screen_decision": "强相关机制候选（作者自述边界）",
+        "screen_reason": " latent-pixel一致性与取证解释相关；片段明言一致不保证faithfulness，适合检验“稳定/一致≠忠实”。"
+      },
+      {
+        "position": 3,
+        "title": "Design of an Integrated Model Combining Vision Transformer, Multi-Modal Fusion, and Proximal Policy Optimization for Synthetic AI-Generated Image Detection",
+        "metadata": "Google Scholar位置3; 估数20",
+        "url": "https://doi.org/10.1007/s11042-026-21530-0",
+        "screen_decision": "待核来源/方法候选",
+        "screen_reason": "摘要声称解释fidelity和扰动稳定性，但题名泛化且方法描述异常；需核原刊、指标定义、是否真正取证数据。"
+      },
+      {
+        "position": 4,
+        "title": "Grounding and Explaining Visual Evidence for AI-Generated Image Detection in Human-Centric Scenes",
+        "metadata": "Google Scholar位置4; 估数20",
+        "url": "https://arxiv.org/abs/2608.01988",
+        "screen_decision": "强相关核心候选（PAVE区域一致性）",
+        "screen_reason": "提出PAVE judge-guided alignment reward，评估区域—解释一致性；需查自动裁判偏差和独立人类/证据真值验证。"
+      },
+      {
+        "position": 5,
+        "title": "Domain-Tag Guided Multimodal Explanations for Trustworthy Image Authentication in the Social Internet of Things",
+        "metadata": "Google Scholar位置5; 估数20",
+        "url": "https://www.mdpi.com/1999-5903/18/8/390",
+        "screen_decision": "强相关候选（原稿待核）",
+        "screen_reason": "图像认证、可解释及consistency相关；摘要暗示解释一致性仅作为副产物且缺少图像取证基准，需确认实际任务/评价。"
+      },
+      {
+        "position": 6,
+        "title": "DocShield: Towards AI Document Safety via Evidence-Grounded Agentic Reasoning",
+        "metadata": "Google Scholar位置6; 估数20",
+        "url": "https://arxiv.org/abs/2604.02694",
+        "screen_decision": "跨域邻接候选（文档图像取证）",
+        "screen_reason": "文档安全/取证agent提到grounding与解释fidelity；与自然图像伪造有迁移边界，单列文档图像。"
+      },
+      {
+        "position": 7,
+        "title": "Spot and Explain Public Trust: Large Multimodal Model-Based Forensic Reasoning for Synthetic Image Detection",
+        "metadata": "Google Scholar位置7; 估数20",
+        "url": "https://www.researchsquare.com/article/rs-11159071/latest",
+        "screen_decision": "强相关候选（预印本待核）",
+        "screen_reason": "公开信任/合成图取证推理，明确指出当前faithfulness和grounding缺口；需验证研究的证据与人评设计。"
+      },
+      {
+        "position": 8,
+        "title": "SGEVL-Forensics: LLM-Guided Scene Graph Reasoning for Faithful Image Manipulation Detection",
+        "metadata": "Google Scholar位置8; 估数20",
+        "url": "https://doi.org/10.1007/978-3-032-38407-2_55",
+        "screen_decision": "强相关候选（证据语义层）",
+        "screen_reason": "图像操纵检测、场景图推理与faithful措辞直接相关；需原文确认faithful定义与对照干预实验。"
+      },
+      {
+        "position": 9,
+        "title": "MoFAIR: Self-Improving Post-Training for Robust and Explainable AIGC Forensics with Lightweight Reward Distillation",
+        "metadata": "Google Scholar位置9; 估数20",
+        "url": "https://link.springer.com/",
+        "screen_decision": "强相关机制候选（出版标识待核）",
+        "screen_reason": "AIGC取证解释并讨论分布偏移下判断—解释一致性；需补DOI/正式页面并查指标是否只是内部一致性。"
+      },
+      {
+        "position": 10,
+        "title": "Literature Survey of Image Forgery Detection Using Machine Learning",
+        "metadata": "Google Scholar位置10; 估数20",
+        "url": "https://www.theseus.fi/",
+        "screen_decision": "排除/低优先综述",
+        "screen_reason": "广义图像伪造检测综述，题录没有解释忠实性专题；仅记录学位/灰色文献边界。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-RELIABILITY-TERMS",
+    "parent_id": "T06-F3-S1-AUTH",
+    "requested_query": "(\"generated image\" OR \"synthetic image\") (\"explanation faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\") (\"image forgery\" OR \"image tampering\" OR forensics)",
+    "query": "(\"generated image\" OR \"synthetic image\") (\"explanation faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\") (\"image forgery\" OR \"image tampering\" OR forensics)",
+    "url": "https://scholar.google.com/scholar?start=10&q=%28%22generated+image%22+OR+%22synthetic+image%22%29+%28%22explanation+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22%29+%28%22image+forgery%22+OR+%22image+tampering%22+OR+forensics%29&hl=zh-CN&as_sdt=0%2C5",
+    "captured_at": "2026-10-09",
+    "summary": "Scholar估数20；start=10本页10条全记。",
+    "phase": "解释faithfulness/fidelity/consistency精确检索",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "start": 10,
+    "estimated_results": 20,
+    "page_number": 2,
+    "rows": [
+      {
+        "position": 1,
+        "title": "A Bayesian Approach for Explainable and Uncertain Generative Model Attribution",
+        "metadata": "Google Scholar位置11; 估数20",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5991194",
+        "screen_decision": "强相关邻接候选（来源需验证）",
+        "screen_reason": "合成图来源归因、预测不确定性并声称有faithfulness正则项；检查出版身份、解释目标和faithfulness是否由扰动/真值验证。"
+      },
+      {
+        "position": 2,
+        "title": "Evidence Fusion for Analyzing Multimodal Image Manipulation",
+        "metadata": "Google Scholar位置12; 估数20",
+        "url": "https://www.worldscientific.com/doi/abs/10.1142/S0218001426400380",
+        "screen_decision": "机制相关/解释评价缺口",
+        "screen_reason": "图像取证自然语言解释直接相关，摘要明确没有解释faithfulness量化/用户评价，是方法与评价缺口线索。"
+      },
+      {
+        "position": 3,
+        "title": "Explainable AI for Cyberscam Prevention: A Survey of Multimodal Scam Detection, Evaluation, and Human-Centered Training",
+        "metadata": "Google Scholar位置13; 估数20",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7345758",
+        "screen_decision": "排除直接相关：跨领域综述",
+        "screen_reason": "通用多模态诈骗XAI综述，不是图像伪造任务；可供trust/faithfulness用语背景，不计强相关。"
+      },
+      {
+        "position": 4,
+        "title": "Why Fake? Unveiling the Semantic Vocabulary of Deepfake Detectors",
+        "metadata": "Google Scholar位置14; 估数20",
+        "url": "https://arxiv.org/abs/2607.07216",
+        "screen_decision": "强相关机制候选",
+        "screen_reason": "分析深伪检测器内部语义词汇，有助判断解释与模型决策概念是否对应；需核是否实测解释faithfulness。"
+      },
+      {
+        "position": 5,
+        "title": "VideoVeritas: AI-Generated Video Detection via Perception Pretext Reinforcement Learning",
+        "metadata": "Google Scholar位置15; 估数20",
+        "url": "https://arxiv.org/abs/2602.08828",
+        "screen_decision": "视频邻接（排除静态图像主集）",
+        "screen_reason": "视频合成检测，非图像伪造解释。"
+      },
+      {
+        "position": 6,
+        "title": "JECA²: Judgment-Explanation Consistent Adversarial Attack against Forensic Vision-Language Models",
+        "metadata": "Google Scholar位置16; 估数20",
+        "url": "https://arxiv.org/abs/2605.28609",
+        "screen_decision": "强相关核心候选（对抗一致性压力测试）",
+        "screen_reason": "直接面向取证VLM并优化判断—解释一致性的对抗攻击；可用于检验一致性是否可靠/可被共同操纵，需读原文评测。"
+      },
+      {
+        "position": 7,
+        "title": "VERITAS: Verifiable Explainable Intelligence for Resilient Autonomy in Contested Scenarios",
+        "metadata": "Google Scholar位置17; 估数20",
+        "url": "https://journal.uob.edu.bh/items/7ab61f8e-8dd5-49fc-82c6-b5f32da7095c",
+        "screen_decision": "排除直接相关/自主系统背景",
+        "screen_reason": "通用 contested autonomy 的解释保真/信任度，图像检测仅为背景举例。"
+      },
+      {
+        "position": 8,
+        "title": "Non-Identifiability of Explanations from Model Behavior in Deep Networks of Image Authenticity Judgments",
+        "metadata": "Google Scholar位置18; 估数20",
+        "url": "https://arxiv.org/abs/2604.07254",
+        "screen_decision": "强相关核心机制候选",
+        "screen_reason": "直接讨论图像真实性判断网络中解释不可识别性与解释一致性/人类判断关系；与解释可靠性理论基础高度相关。"
+      },
+      {
+        "position": 9,
+        "title": "Attention-Guided Cross-Connected Filters CNN with Surrogate-Based Interpretability for Image Splicing Forgery Detection",
+        "metadata": "Google Scholar位置19; 估数20",
+        "url": "https://www.mdpi.com/2073-431X/15/8/525",
+        "screen_decision": "强相关候选（解释机制待核）",
+        "screen_reason": "图像拼接检测并用surrogate interpretability；需核忠实性、参数随机化/扰动测试以及解释是否参与决策。"
+      },
+      {
+        "position": 10,
+        "title": "Towards Explaining Classification Models in Security with Sparse Autoencoders",
+        "metadata": "Google Scholar位置20; 估数20",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11631915/",
+        "screen_decision": "排除直接相关：通用安全/LLM机制",
+        "screen_reason": "稀疏自编码器解释LLM分类模型，当前摘要没有图像鉴伪任务。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-RELIABILITY-TERMS",
+    "parent_id": "T06-F3-S1-AUTH",
+    "requested_query": "(\"generated image\" OR \"synthetic image\") (\"explanation faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\") (\"image forgery\" OR \"image tampering\" OR forensics)",
+    "query": "(\"generated image\" OR \"synthetic image\") (\"explanation faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\") (\"image forgery\" OR \"image tampering\" OR forensics)",
+    "url": "https://scholar.google.com/scholar?start=20&q=(%22generated+image%22+OR+%22synthetic+image%22)+(%22explanation+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)+(%22image+forgery%22+OR+%22image+tampering%22+OR+forensics)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09",
+    "summary": "第2页20条估数、Next禁用；start=20空，边界一致。",
+    "phase": "末页边界核对",
+    "footer": false,
+    "next": [],
+    "blocked": false,
+    "start": 20,
+    "estimated_results": 20,
+    "page_number": 3,
+    "rows": []
+  },
+  {
+    "query_id": "FC-REVEAL-CITED",
+    "parent_id": "REVEAL",
+    "requested_query": "cites:8943841695335902427 (REVEAL: Reasoning-Enhanced Forensic Evidence Analysis for Explainable AI-Generated Image Detection)",
+    "query": "cites:8943841695335902427 (REVEAL: Reasoning-Enhanced Forensic Evidence Analysis for Explainable AI-Generated Image Detection)",
+    "url": "https://scholar.google.com/scholar?cites=8943841695335902427&as_sdt=2005&sciodt=0,5&hl=zh-CN",
+    "captured_at": "2026-10-09",
+    "summary": "Scholar显示5篇前向引用；5条逐篇初筛，非引文数即相关文献数。",
+    "phase": "强相关种子前向引文追踪",
+    "footer": false,
+    "next": [],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 5,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": 1,
+        "title": "VKnowU: Evaluating Visual Knowledge Understanding in Multimodal LLMs",
+        "metadata": "T Jiang, S Xia, Y Xu et al. - arXiv, 2025",
+        "url": "https://arxiv.org/abs/2511.20272",
+        "screen_decision": "排除直接相关：通用视觉知识基准",
+        "screen_reason": "评价通用多模态视觉知识理解；当前题录未涉及图像伪造、解释忠实性或取证证据。"
+      },
+      {
+        "position": 2,
+        "title": "Veritas++: Value-Aware On-Policy Distillation for Perception-Enhanced AIGI Detection",
+        "metadata": "H Tan, J Lan, Z Tan, A Liu, Z Yu, C Song et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2607.27113",
+        "screen_decision": "邻接候选：生成图检测可靠性",
+        "screen_reason": "生成图检测/感知增强相关，但题录未见解释faithfulness评价；后续仅在原稿出现解释性终点时升级。"
+      },
+      {
+        "position": 3,
+        "title": "Trustworthy Image Authentication Using Forensic Knowledge Graphs",
+        "metadata": "TD Nguyen, MC Stamm - ECCV, 2026",
+        "url": "https://doi.org/10.1007/978-3-032-37020-4_3",
+        "screen_decision": "强相关邻接候选（知识图谱解释/来源核验）",
+        "screen_reason": "图像认证和法证知识图谱，可能提供可追溯证据结构；需查是否评价解释忠实度或证据链完整性。"
+      },
+      {
+        "position": 4,
+        "title": "TRACE: Trajectory Representation and Consistency Estimation for AI-Generated Video Detection",
+        "metadata": "H Cao, S Yu, X Ding, J Dong, Y Wang - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2609.25775",
+        "screen_decision": "视频邻接（不纳静态图像主集）",
+        "screen_reason": "合成视频检测与轨迹一致性，非静态图像伪造解释。"
+      },
+      {
+        "position": 5,
+        "title": "Deepfake Detection Beyond Benchmark Accuracy: Generalization, Robustness, and Reproducibility",
+        "metadata": "M Xu, X Shen, Y Cheng, E Traister, T Duong et al. - Preprints.org, 2026",
+        "url": "https://preprints.org/manuscript/202609.1394",
+        "screen_decision": "邻接综述/检测可靠性背景",
+        "screen_reason": "检测器泛化/稳健性/复现性可能相关总体可信度，但没有解释评价证据。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED-E1",
+    "parent_id": "T06-F3-S1-AUTH-GENERATED",
+    "requested_query": "\"generated image\" (explanation OR explainable) \"human evaluation\" (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "query": "\"generated image\" (explanation OR explainable) \"human evaluation\" (forgery OR tampering OR fake OR authenticity OR forensics OR detection)",
+    "url": "https://scholar.google.com/scholar?q=%22generated+image%22+(explanation+OR+explainable)+%22human+evaluation%22+(forgery+OR+tampering+OR+fake+OR+authenticity+OR+forensics+OR+detection)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:15:06+08:00",
+    "summary": "首页显示约2,500条，10个位置逐条初筛；直接相关候选密集，规模远超分页全查门槛，需递归细分。",
+    "phase": "生成图像 × 解释/可解释 × 人工评价 × 取证语境（解释术语E1拆分）",
+    "footer": true,
+    "next": [
+      "start=10"
+    ],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 2500,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": "1",
+        "title": "Semantic Visual Anomaly Detection and Reasoning in AI-Generated Images",
+        "metadata": "C Tan, X Ming, J Wang, R Tao, B Li et al. - ICLR, 2026",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/b5b4d92374323c53c24bbbc8ee0e715c-Abstract-Conference.html",
+        "screen_decision": "强相关候选/待核全文",
+        "screen_reason": "题名与图像真实性判断、reasoning直接相关；检索片段出现人评，但需核验人评对象是否为解释而非异常严重度/检测结果。"
+      },
+      {
+        "position": "2",
+        "title": "X2-DFD: A Framework for Explainable and Extendable Deepfake Detection",
+        "metadata": "Y Chen, Z Yan, G Cheng, K Zhao et al. - NeurIPS, 2025",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2025/hash/78a2ed8e7da1829d64fb3561adbd706b-Abstract-Conference.html",
+        "screen_decision": "强相关候选/待核全文",
+        "screen_reason": "直接研究可解释伪造检测，摘要片段讨论人类标注者或LLM描述伪造；需核验是否有人类评价解释质量/忠实性。"
+      },
+      {
+        "position": "3",
+        "title": "Toward Generalizable Forgery Detection and Reasoning",
+        "metadata": "Y Gao, D Chang, B Yu, H Qin, M Diao et al. - IEEE TIP, 2026（Scholar记录）",
+        "url": "https://arxiv.org/abs/2503.21210",
+        "screen_decision": "强相关候选/待核全文",
+        "screen_reason": "图像伪造检测与解释/推理任务同框，片段明确提到human evaluation；要区分评测检测/推理可读性与证据忠实性。"
+      },
+      {
+        "position": "4",
+        "title": "So-fake: Benchmarking and Explaining Social Media Image Forgery Detection",
+        "metadata": "Z Huang, T Li, X Li, H Wen, Y He, J Zhang, H Fei et al. - arXiv, 2025",
+        "url": "https://arxiv.org/abs/2505.18660",
+        "screen_decision": "强相关候选/待核全文",
+        "screen_reason": "社会媒体图像伪造检测与解释基准，专家评阅生成解释；需核查评分维度、真实性标准及因果干预/faithfulness指标。"
+      },
+      {
+        "position": "5",
+        "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+        "metadata": "A Narang, K Kuckreja, S Ghosh, MH Khan, J Cai et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2607.03562",
+        "screen_decision": "强相关候选/待核全文",
+        "screen_reason": "可解释伪造检测数据/基准且含人评；人评可能是样本筛选或图像编辑质量，需辨析其是否评价解释可靠性。"
+      },
+      {
+        "position": "6",
+        "title": "Explainable Image-Centric Forgery Detection: A Survey",
+        "metadata": "X Wu, X Chen, X Wu, D Li, Z Chen, Y He, C Zhao - 2025（Scholar SSRN记录）",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm",
+        "screen_decision": "核心综述线索/需确认版本",
+        "screen_reason": "直接覆盖图像中心伪造可解释检测，重现了EFR结果；当前Scholar结果链接缺少稳定稿件ID，回到已记录EFR原稿和引文链归并版本，不当新论文重复计数。"
+      },
+      {
+        "position": "7",
+        "title": "Seeing Is Not Always Believing: Benchmarking Human and Model Perception of AI-Generated Images",
+        "metadata": "Z Lu, D Huang, L Bai, J Qu, C Wu et al. - NeurIPS Datasets and Benchmarks, 2023",
+        "url": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/505df5ea30f630661074145149274af0-Abstract-Datasets_and_Benchmarks.html",
+        "screen_decision": "邻接方法背景",
+        "screen_reason": "人评的是人和模型识别生成图的能力，不是模型解释；可支撑检测基线或人机差异，排除解释可靠性核心集。"
+      },
+      {
+        "position": "8",
+        "title": "AI-generated Images Challenge Visual Trust in High-risk Scenarios",
+        "metadata": "YZ Wang, Y Xiao, L Yue, W Gao, Y Du, P Fang et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2607.22745",
+        "screen_decision": "邻接候选/待核",
+        "screen_reason": "涉及高风险场景的视觉信任与人评，可能研究用户判断但当前片段未显示解释；需核正文后决定是否作为恰当依赖背景。"
+      },
+      {
+        "position": "9",
+        "title": "DeepGuard: Identification and Attribution of AI-generated Synthetic Images",
+        "metadata": "Y Namani, I Reghioua, G Bendiab, MA Labiod et al. - Electronics, 2025",
+        "url": "https://www.mdpi.com/2079-9292/14/4/665",
+        "screen_decision": "邻接方法背景",
+        "screen_reason": "生成图识别/来源归因中的“attribution”可能是生成模型来源归属而非XAI解释；human evaluation片段亦未指向解释评分，暂不纳入核心。"
+      },
+      {
+        "position": "10",
+        "title": "FraudBench: A Multimodal Benchmark for Detecting AI-Generated Fraudulent Refund Evidence",
+        "metadata": "X Yan, B Chen, J Zhang, T Wu, HX Tae, Y Hao et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2605.08820",
+        "screen_decision": "邻接应用候选",
+        "screen_reason": "伪造退款证据/生成图检测与小规模人评相关，但目前看人评是检测准确率，不是解释可靠性；留作应用背景。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED-RELIABILITY",
+    "parent_id": "T06-F3-S1-AUTH-GENERATED",
+    "requested_query": "\"generated image\" \"human evaluation\" (\"explanation faithfulness\" OR \"explanation consistency\" OR \"evidence grounding\" OR \"explanation hallucination\") (forgery OR forensic OR detection)",
+    "query": "\"generated image\" \"human evaluation\" (\"explanation faithfulness\" OR \"explanation consistency\" OR \"evidence grounding\" OR \"explanation hallucination\") (forgery OR forensic OR detection)",
+    "url": "https://scholar.google.com/scholar?q=%22generated+image%22+%22human+evaluation%22+(%22explanation+faithfulness%22+OR+%22explanation+consistency%22+OR+%22evidence+grounding%22+OR+%22explanation+hallucination%22)+(forgery+OR+forensic+OR+detection)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:15:59+08:00",
+    "summary": "Scholar估算19条；start=0逐位置筛选10条。下一页存在。",
+    "phase": "窄式解释可靠性检索（仅“generated image”变体）",
+    "footer": true,
+    "next": [
+      "https://scholar.google.com/scholar?start=10&q=%22generated+image%22+%22human+evaluation%22+(%22explanation+faithfulness%22+OR+%22explanation+consistency%22+OR+%22evidence+grounding%22+OR+%22explanation+hallucination%22)+(forgery+OR+forensic+OR+detection)&hl=zh-CN&as_sdt=0,5"
+    ],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 19,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": "1",
+        "title": "RW-Post: Auditable Evidence-Grounded Multimodal Fact-Checking in the Wild",
+        "metadata": "D Xu, S Fan, H Cheng et al. - CVPR Workshops, 2026",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026W/PPMisDet/html/Xu_RW-Post_Auditable_Evidence-Grounded_Multimodal_Fact-Checking_in_the_Wild_CVPRW_2026_paper.html",
+        "screen_decision": "邻接方法候选",
+        "screen_reason": "多模态证据接地与事实核验、有人评；不以图像伪造检测为对象，适合追踪证据支持与接地的人评方法。"
+      },
+      {
+        "position": "2",
+        "title": "Explainable AI for Cyberscam Prevention: A Survey of Multimodal Scam Detection, Evaluation, and Human-Centered Training",
+        "metadata": "H An, H Salemi, Q Zhang, H Purohit et al. - SSRN, 2026",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6949158",
+        "screen_decision": "邻接综述候选/待核",
+        "screen_reason": "跨模态诈骗检测综述提及解释忠实性和纵向人评；非图像鉴伪专门研究，且SSRN摘要/稿件稳定性需核。"
+      },
+      {
+        "position": "3",
+        "title": "Evidence Fusion for Analyzing Multimodal Image Manipulation",
+        "metadata": "MR Aliabadi, N Zhang, FY Shih - International Journal of Pattern Recognition and Artificial Intelligence, 2026",
+        "url": "https://doi.org/10.1142/S0218001426400380",
+        "screen_decision": "强相关核心候选/优先核全文",
+        "screen_reason": "标题直接针对多模态图像篡改与证据融合；Scholar摘要片段同时提到解释质量人评及faithfulness主张的边界，需读取原文确认具体措辞、数据和评价终点。"
+      },
+      {
+        "position": "4",
+        "title": "On Semiotic-Grounded Interpretive Evaluation of Generative Art",
+        "metadata": "R Jiang, C Chen - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2604.08641",
+        "screen_decision": "排除核心/方法邻接",
+        "screen_reason": "人评grounding解释艺术语义而非真实性/伪造，跨域方法可借鉴但不计入图像鉴伪核心。"
+      },
+      {
+        "position": "5",
+        "title": "Risk-Decoupled Diffusion Virtual Try-On with Evidence-Grounded Purchase-Risk Explanation for Fashion E-Commerce",
+        "metadata": "X Li - IEEE Access, 2026",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11666877/",
+        "screen_decision": "排除",
+        "screen_reason": "生成图试穿和购买风险解释，不涉及图像鉴伪或真实性判断。"
+      },
+      {
+        "position": "6",
+        "title": "Geometry-Aware Representation Denoising for Robust Multi-view 3D Reconstruction",
+        "metadata": "JH Kim, J Lee, C Kim, K Oh, PH Cho, J Min et al. - arXiv, 2026",
+        "url": "https://arxiv.org/catchup/cs.CV/2026-05-27?abs=True&page=1",
+        "screen_decision": "排除",
+        "screen_reason": "多视角三维重建与医学检测片段误匹配，非解释可靠性或图像伪造。"
+      },
+      {
+        "position": "7",
+        "title": "On the Robustness of Model Edits under Fine-Tuning in Text-to-Image Models",
+        "metadata": "F He, Z Liu, M Valentino, Z Zhao - OpenReview",
+        "url": "https://openreview.net/forum?id=wKHYMUDaWO",
+        "screen_decision": "排除核心/方法邻接",
+        "screen_reason": "检索词因生成图安全和解释忠实性共现而命中；研究模型编辑鲁棒性，不是鉴伪检测解释评测。"
+      },
+      {
+        "position": "8",
+        "title": "Towards Human-Aligned Vision-Language Models",
+        "metadata": "Y Lu - dissertation, 2025",
+        "url": "https://escholarship.org/uc/item/",
+        "screen_decision": "邻接待核/暂不纳核心",
+        "screen_reason": "学位论文片段讨论一般视觉语言模型与接地评价，没有图像伪造研究证据。"
+      },
+      {
+        "position": "9",
+        "title": "Visual and Algorithmic Explanations to Fortify AI Safety",
+        "metadata": "S Lee - Georgia Tech dissertation, 2026",
+        "url": "https://repository.gatech.edu/",
+        "screen_decision": "邻接待核/暂不纳核心",
+        "screen_reason": "AI安全和解释评价相关，但当前题录片段没有媒体取证或图像篡改场景。"
+      },
+      {
+        "position": "10",
+        "title": "CopyrightMeter: Revisiting Copyright Protection in Text-to-Image Models",
+        "metadata": "N Xu, C Li, T Du, M Li, W Luo, J Liang, Y Li et al. - arXiv, 2024",
+        "url": "https://arxiv.org/",
+        "screen_decision": "排除",
+        "screen_reason": "文本生成图模型版权保护/水印规避，虽有生成图和检测词，不是图像鉴伪解释。"
+      }
+    ]
+  },
+  {
+    "query_id": "T06-F3-S1-AUTH-GENERATED-RELIABILITY",
+    "parent_id": "T06-F3-S1-AUTH-GENERATED",
+    "requested_query": "\"generated image\" \"human evaluation\" (\"explanation faithfulness\" OR \"explanation consistency\" OR \"evidence grounding\" OR \"explanation hallucination\") (forgery OR forensic OR detection)",
+    "query": "\"generated image\" \"human evaluation\" (\"explanation faithfulness\" OR \"explanation consistency\" OR \"evidence grounding\" OR \"explanation hallucination\") (forgery OR forensic OR detection)",
+    "url": "https://scholar.google.com/scholar?start=10&q=%22generated+image%22+%22human+evaluation%22+(%22explanation+faithfulness%22+OR+%22explanation+consistency%22+OR+%22evidence+grounding%22+OR+%22explanation+hallucination%22)+(forgery+OR+forensic+OR+detection)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:15:59+08:00",
+    "summary": "Scholar估算19条；start=10逐位置筛选9条。末页，Next禁用。",
+    "phase": "窄式解释可靠性检索（仅“generated image”变体）",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "start": 10,
+    "estimated_results": 19,
+    "page_number": 2,
+    "rows": [
+      {
+        "position": "1",
+        "title": "AesCanvas: A Large-Scale Dataset and Benchmark for Aesthetic Critique and Contextual Suitability",
+        "metadata": "X Hu, H Dong, K Wu, T Liu, J Gao et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2608.26713",
+        "screen_decision": "排除",
+        "screen_reason": "审美批评和适配性基准，不涉及真实性或解释忠实性。"
+      },
+      {
+        "position": "2",
+        "title": "M-NLE: Knowledge-Augmented Multitask Learning for Offensive Meme Detection and Explanation Generation",
+        "metadata": "D Bandyopadhyay, B Gain, S Mukherjee et al. - IEEE Access, 2026",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11677009/",
+        "screen_decision": "邻接方法候选",
+        "screen_reason": "图像宏观内容/有害性检测并生成解释，片段明确比较faithfulness与plausibility及人评；目标不是伪造，但可用于解释评价构念和人工协议追踪。"
+      },
+      {
+        "position": "3",
+        "title": "Explainability of Language Models (XAI and LLM)",
+        "metadata": "A Di Cecco, L Gianfagna - Explainable AI with Python, Springer, 2025",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-031-92229-9_8",
+        "screen_decision": "排除核心/方法背景",
+        "screen_reason": "一般语言模型可解释性教材章节，检索词片段非图像鉴伪研究。"
+      },
+      {
+        "position": "4",
+        "title": "A Review of Generative Models in Generating Synthetic Attack Data for Cybersecurity",
+        "metadata": "G Agrawal, A Kaur, S Myneni et al. - Electronics, 2024",
+        "url": "https://www.mdpi.com/2079-3197/14/6/125",
+        "screen_decision": "排除核心/待校书目",
+        "screen_reason": "网络安全合成攻击数据综述，片段未指向图像伪造解释；Scholar呈现卷期与路径的书目信息疑似异常，不能据此收入。"
+      },
+      {
+        "position": "5",
+        "title": "SingGuard: A Policy-Adaptive Multimodal LLM Guardrail with Dynamic Reasoning",
+        "metadata": "SG Team - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2606.22873",
+        "screen_decision": "排除",
+        "screen_reason": "内容安全护栏与解释一致性，非取证或图像真实性判断。"
+      },
+      {
+        "position": "6",
+        "title": "Multimodal Modeling of Chest X-rays",
+        "metadata": "D Blasko - dissertation, 2024",
+        "url": "https://repositum.tuwien.at/handle/20.500.12708/209509",
+        "screen_decision": "排除",
+        "screen_reason": "医学影像多模态建模；跨页引用造成生成图/faithfulness词共现，非鉴伪。"
+      },
+      {
+        "position": "7",
+        "title": "Natural Language Rationales with Sub-QAE Prompting: World Knowledge Discovery through Self-Questioning Architecture",
+        "metadata": "H Wang, X Wei, J Hu - IEEE conference, 2025",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11343595/",
+        "screen_decision": "排除核心/方法邻接",
+        "screen_reason": "一般多模态自然语言理由和证据接地、人评，不是图像篡改/真实性任务。"
+      },
+      {
+        "position": "8",
+        "title": "A Comprehensive Survey and Guide to Multimodal Large Language Models in Vision-Language Tasks",
+        "metadata": "CX Liang, P Tian, CH Yin et al. - Computation, 2026",
+        "url": "https://www.mdpi.com/2227-7390/14/6/125",
+        "screen_decision": "排除核心/背景",
+        "screen_reason": "通用MLLM综述；检索片段没有具体图像鉴伪或解释faithfulness证据。"
+      },
+      {
+        "position": "9",
+        "title": "GTA-2: Benchmarking General Tool Agents from Atomic Tool-Use to Open-Ended Workflows",
+        "metadata": "J Wang, X Liu, Y Li, S Zhang, Y Wang, Z Shan et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2604.15715",
+        "screen_decision": "排除",
+        "screen_reason": "通用工具智能体评测；人评与生成输出来源比较不涉及鉴伪。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-RELIABILITY-REFRESH-20261009",
+    "parent_id": "T02-F2-RELIABILITY",
+    "requested_query": "\"image forgery\" explanation reliability",
+    "query": "\"image forgery\" explanation reliability",
+    "url": "https://scholar.google.com/scholar?q=%22image+forgery%22+explanation+reliability&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:17:30+08:00",
+    "summary": "估算约10,800条；首页10位置逐条筛查，发现直接强相关线索但过宽，停止全量分页并转精确拆分。",
+    "phase": "解释可靠性直连词补查",
+    "footer": true,
+    "next": [
+      "start=10 or narrower splits"
+    ],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 10800,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": "1",
+        "title": "FakeBench: Probing Explainable Fake Image Detection via Large Multimodal Models",
+        "metadata": "Y Li, X Liu, X Wang, BS Lee, S Wang et al. - IEEE Transactions, 2025; arXiv:2404.13306",
+        "url": "https://arxiv.org/abs/2404.13306",
+        "screen_decision": "强相关候选/待核全文",
+        "screen_reason": "明确研究可解释假图检测；题录片段涉及按人类感知的伪造显著程度分难度，但需核解释准确性/忠实性是否被独立评价。"
+      },
+      {
+        "position": "2",
+        "title": "So-fake: Benchmarking and Explaining Social Media Image Forgery Detection",
+        "metadata": "Z Huang, T Li, X Li, H Wen, Y He, J Zhang, H Fei et al. - arXiv, 2025",
+        "url": "https://arxiv.org/abs/2505.18660",
+        "screen_decision": "强相关候选/待核全文",
+        "screen_reason": "图像伪造检测解释基准，原有线索含专家评阅生成解释；需区分数据集标注可靠性、人评可读性和解释忠实性。"
+      },
+      {
+        "position": "3",
+        "title": "FakeShield: Explainable Image Forgery Detection and Localization via Multi-modal Large Language Models",
+        "metadata": "Z Xu, X Zhang, R Li, Z Tang, Q Huang et al. - ICLR, 2025",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/4d4e0ab9d8ff180bf5b95c258842d16e-Abstract-Conference.html",
+        "screen_decision": "强相关候选/待核评价效度",
+        "screen_reason": "直接面向图像伪造检测与定位的多模态解释系统；需审计人评协议、定位真值与解释忠实性的对应关系。"
+      },
+      {
+        "position": "4",
+        "title": "ForgeryGPT: A Multimodal LLM for Interpretable Image Forgery Detection and Localization",
+        "metadata": "F Zhang, J Liu, J Zhu, E Sun, Q Zhang et al. - IEEE Transactions, 2026",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11709464/",
+        "screen_decision": "强相关候选/待核原稿",
+        "screen_reason": "题名直接覆盖图像伪造检测和解释/定位；需核解释是否基于可验证取证证据、评估是否含反事实/因果检验。"
+      },
+      {
+        "position": "5",
+        "title": "Explainable Deep Learning for Digital Image Forgery Detection: A Systematic and Critical Review",
+        "metadata": "IM Qasim, FA Obaid - 2026 conference paper",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11467619/",
+        "screen_decision": "强相关综述候选/待核",
+        "screen_reason": "新系统综述自述纳入2019年以来40余项；应检查其覆盖是否含解释评价可靠性、方法与数据库，并与EFR版本归并。"
+      },
+      {
+        "position": "6",
+        "title": "Beyond Accuracy: Auditing Image Forgery Localization via Scene-Disjoint Evaluation and XAI Faithfulness",
+        "metadata": "S Aoudi, AP Saleel, N Al Barghuthi, O Alamir - IEEE Access, 2026",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11471733/",
+        "screen_decision": "强相关核心候选/最高优先核原稿",
+        "screen_reason": "题名直接提出定位层面的XAI faithfulness与场景隔离评估，正中可靠性主题；需验证论文、作者、出版状态及faithfulness度量实现。"
+      },
+      {
+        "position": "7",
+        "title": "Image Forgery Detection with Interpretability",
+        "metadata": "A Katiyar, A Bhavsar - arXiv, 2022",
+        "url": "https://arxiv.org/abs/2202.00908",
+        "screen_decision": "早期方法背景候选",
+        "screen_reason": "早期解释型图像伪造检测工作，摘要将分析与可靠性联系；应核其解释只是可视化/直觉，不能与后来因果faithfulness评价混为一类。"
+      },
+      {
+        "position": "8",
+        "title": "Trustworthiness and Authenticity in the Age of AI: Evidence-Oriented and Reliability-Aware Framework for Image Forgery Detection",
+        "metadata": "M Shopon, PSP Wang, M Gavrilova - International Journal of Pattern Recognition and Artificial Intelligence, 2026",
+        "url": "https://doi.org/10.1142/S0218001426400343",
+        "screen_decision": "强相关概念候选/待核原稿",
+        "screen_reason": "题名聚焦证据导向与可靠性感知图像伪造检测，摘要出现多证据融合、不确定性和证据报告；需查是否有解释可靠性实证或仅框架主张。"
+      },
+      {
+        "position": "9",
+        "title": "Image Forgery Detection: Comprehensive Review of Digital Forensics Approaches",
+        "metadata": "S Singh, R Kumar - Journal of Computational Social Science, 2024",
+        "url": "https://link.springer.com/article/10.1007/s42001-024-00265-8",
+        "screen_decision": "邻接综述背景",
+        "screen_reason": "图像伪造检测综合综述；当前摘要未指向XAI质量验证，候选仅用于追踪其引用中的解释评估工作。"
+      },
+      {
+        "position": "10",
+        "title": "Where and Why in Image Forgery: A Benchmark for Joint Localization and Explanation",
+        "metadata": "J Lian, L Liu, Y Wang, Y Wu, L Zhu, Z Zheng et al. - OpenReview (year/status to verify)",
+        "url": "https://openreview.net/forum",
+        "screen_decision": "强相关候选/标注可靠性优先核验",
+        "screen_reason": "联合图像伪造定位和自然语言解释基准，片段提到description reliability与质量控制；需查ground-truth解释如何标注/验证及评价是否直接测模型解释忠实性。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-WHEREWHY-TITLE",
+    "parent_id": "T02-F2-RELIABILITY",
+    "requested_query": "\"Where and Why in Image Forgery: A Benchmark for Joint Localization and Explanation\"",
+    "query": "\"Where and Why in Image Forgery: A Benchmark for Joint Localization and Explanation\"",
+    "url": "https://scholar.google.com/scholar?q=%22Where+and+Why+in+Image+Forgery%3A+A+Benchmark+for+Joint+Localization+and+Explanation%22&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:18:26+08:00",
+    "summary": "Scholar exact-title query 1 result. Official OpenReview PDF indexed text confirms joint forgery localization/explanation benchmark and annotation design; abstract reports CIDEr/IoU, not direct faithfulness testing.",
+    "phase": "强相关候选题录/原稿摘要核对",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 1,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": 1,
+        "title": "Where and Why in Image Forgery: A Benchmark for Joint Localization and Explanation",
+        "metadata": "Scholar lists J. Lian, L. Liu, Y. Wang, Y. Wu, L. Zhu, Z. Zheng; OpenReview PDF says anonymous, under double-blind ICLR 2026 review.",
+        "url": "https://openreview.net/forum?id=13bCB5VnDy",
+        "screen_decision": "强相关基准候选/全文摘要已核，可靠性终点待评",
+        "screen_reason": "官方OpenReview PDF摘要：提出人脸伪造定位与基于编辑过程的文本解释联合任务；MMTT含152,217样本、过程生成mask和人工撰写描述。摘要报告CIDEr与IoU，没有报告解释faithfulness/忠实性的人评或因果干预，故是强相关任务/基准，不等同直接可靠性验证。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-IMAGE-RELIABILITY-COMBINED",
+    "parent_id": "T02-F2-RELIABILITY",
+    "requested_query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "url": "https://scholar.google.com/scholar?q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:19:55+08:00",
+    "summary": "结果位置1–10逐条初筛；估数由约52动态变为42。",
+    "phase": "图像伪造 × 解释忠实/保真/一致性直接检索",
+    "footer": true,
+    "next": [
+      "https://scholar.google.com/scholar?start=10&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5"
+    ],
+    "blocked": false,
+    "start": 0,
+    "estimated_results": 52,
+    "page_number": 1,
+    "rows": [
+      {
+        "position": "1",
+        "title": "Literature Survey of Image Forgery Detection Using Machine Learning",
+        "metadata": "S Bipasha - 2025 - Theseus (master thesis)",
+        "url": "https://theseus.fi/handle/10024/883366",
+        "screen_decision": "邻接综述/排除核心",
+        "screen_reason": "图像伪造检测综述但未见解释faithfulness评价；学生学位论文，参考文献可作补查线索。"
+      },
+      {
+        "position": "2",
+        "title": "SGEVL-Forensics: LLM-Guided Scene Graph Reasoning for Faithful Image Manipulation Detection",
+        "metadata": "T Bao, M Zhang, J Zhao, Z Wu, H Cao, C Qian et al. - Springer chapter, 2026",
+        "url": "https://doi.org/10.1007/978-3-032-38407-2_55",
+        "screen_decision": "强相关候选/待核原稿",
+        "screen_reason": "题名直接主张faithful image manipulation detection，需核“faithful”是否有干预/定位对应指标，还是仅架构描述。"
+      },
+      {
+        "position": "3",
+        "title": "JECA²: Judgment-Explanation Consistent Adversarial Attack against Forensic Vision-Language Models",
+        "metadata": "J Qian - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2605.28609",
+        "screen_decision": "强相关直接压力测试候选",
+        "screen_reason": "对法证VLM构造判决—解释一致性攻击，能测试两者脆弱性与一致性；需核测量是否等同证据忠实性。"
+      },
+      {
+        "position": "4",
+        "title": "REVEAL: Reasoning-Enhanced Forensic Evidence Analysis for Explainable AI-Generated Image Detection",
+        "metadata": "H Cao, Q Mei, Z Li, Y Li, Z Meng, Y Zhang, C Li et al. - Springer, 2026; arXiv:2511.23158",
+        "url": "https://arxiv.org/abs/2511.23158",
+        "screen_decision": "强相关核心候选/已入种子链",
+        "screen_reason": "题录片段明确提出explanation faithfulness/fidelity并与取证证据分析结合；需沿已有引用链核基线和具体评价。"
+      },
+      {
+        "position": "5",
+        "title": "Explainable Deepfake Detection with Feature-Robust Augmentation and Evidence-Grounded Explanation Optimization",
+        "metadata": "Z Xu, J Tang, P Chen, Y Peng, Y Liu - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2608.20913",
+        "screen_decision": "强相关候选/待核原稿",
+        "screen_reason": "直接优化证据接地解释和解释faithfulness，同时关注检测稳健性；需核faithfulness公式、证据真值和评估独立性。"
+      },
+      {
+        "position": "6",
+        "title": "Beyond Accuracy: Auditing Image Forgery Localization via Scene-Disjoint Evaluation and XAI Faithfulness",
+        "metadata": "S Aoudi, AP Saleel, N Al Barghuthi, O Alamir - IEEE Access, 2026",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11471733/",
+        "screen_decision": "强相关核心候选/优先核全文",
+        "screen_reason": "题名直接评估图像伪造定位中的XAI faithfulness与场景隔离，摘要称pixel指标可能掩盖模型依赖错误；须核具体faithfulness测量。"
+      },
+      {
+        "position": "7",
+        "title": "Domain-Tag Guided Multimodal Explanations for Trustworthy Image Authentication in the Social Internet of Things",
+        "metadata": "J Akram, A Anaissi, J Zhang - Future Internet, 2026",
+        "url": "https://www.mdpi.com/1999-5903/18/8/390",
+        "screen_decision": "强相关候选/评价效度需审计",
+        "screen_reason": "图像真实性检测、掩码与文本解释同框，使用文本重合/语义相似度和人类语义相似评价；这些并不自动证明解释忠实于模型决策或图像证据。"
+      },
+      {
+        "position": "8",
+        "title": "Memory-Anchored Multimodal Reasoning for Explainable Video Forensics",
+        "metadata": "C Chen, R Li, Z Zhang, P Zhao, F Zhou, L Wang et al. - arXiv, 2025",
+        "url": "https://arxiv.org/abs/2508.14581",
+        "screen_decision": "视频邻接候选",
+        "screen_reason": "视频取证解释、细粒度篡改及解释fidelity相关；静态图像主集不纳入，但在多媒体边界集保留。"
+      },
+      {
+        "position": "9",
+        "title": "LaP-Forensics: Latent-Pixel Consistency Guided Multimodal Reasoning for Deepfake Detection",
+        "metadata": "C Wang, Y Wang, Y Cao, C Xiao, F Shen et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2607.25962",
+        "screen_decision": "强相关候选/待核faithfulness主张",
+        "screen_reason": "将潜在/像素一致性与取证推理相连；此前摘要提及一致性并不保证解释忠实，需核原文具体评价。"
+      },
+      {
+        "position": "10",
+        "title": "Design of an Integrated Model Combining Vision Transformer, Multi-modal Fusion, and PPO for Synthetic AI-Generated Image Detection",
+        "metadata": "NM Yawale, NN Khalsa, SP Akarte et al. - Multimedia Tools and Applications, 2026",
+        "url": "https://link.springer.com/article/10.1007/s11042-026-21530-0",
+        "screen_decision": "邻接候选/术语误用待核",
+        "screen_reason": "题录称SHAP归因图“explanation fidelity 0.88”；需查该数如何定义、是否是图像/模型决策忠实性，不能只凭术语计为可靠性证据。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-IMAGE-RELIABILITY-COMBINED",
+    "parent_id": "T02-F2-RELIABILITY",
+    "requested_query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "url": "https://scholar.google.com/scholar?start=10&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:19:55+08:00",
+    "summary": "结果位置11–20逐条初筛；估数由约52动态变为42。",
+    "phase": "图像伪造 × 解释忠实/保真/一致性直接检索",
+    "footer": true,
+    "next": [
+      "https://scholar.google.com/scholar?start=20&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5"
+    ],
+    "blocked": false,
+    "start": 10,
+    "estimated_results": 52,
+    "page_number": 2,
+    "rows": [
+      {
+        "position": "1",
+        "title": "Evidence Fusion for Analyzing Multimodal Image Manipulation",
+        "metadata": "MR Aliabadi, N Zhang, FY Shih - International Journal of Pattern Recognition and Artificial Intelligence, 2026",
+        "url": "https://doi.org/10.1142/S0218001426400380",
+        "screen_decision": "降级/邻接篡改检测，不计解释可靠性核心",
+        "screen_reason": "精确题名Scholar摘要只确认图像真实性检测与定位；先前宽式片段中的解释质量/faithfulness未获精确摘要支持，出版方原页受Cloudflare保护。"
+      },
+      {
+        "position": "2",
+        "title": "Grounding and Explaining Visual Evidence for AI-Generated Image Detection in Human-Centric Scenes",
+        "metadata": "K Guo, Y Yang, H Wang, Q Ying, S Li, Z Qian et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2608.01988",
+        "screen_decision": "强相关候选/待核原稿",
+        "screen_reason": "PAVE以裁判引导奖励评估区域—解释一致性和证据有效性；需查裁判可靠性、对照真值及人评方案。"
+      },
+      {
+        "position": "3",
+        "title": "Spot and Explain Public Trust: Large Multimodal Model-Based Forensic Reasoning for Synthetic Image Detection",
+        "metadata": "AU Haque, MR Ahammed, S Pramanik, SA Khushbu et al. - Research Square, 2026",
+        "url": "https://researchsquare.com/article/rs-11159071/latest",
+        "screen_decision": "强相关候选/预印本待核",
+        "screen_reason": "摘要明确指出现有系统faithfulness与grounding不足，构成直接问题定义；需核其方法/指标和版本/同行评审状态。"
+      },
+      {
+        "position": "4",
+        "title": "Attention-Guided Cross-Connected Filters CNN with Surrogate-Based Interpretability for Image Splicing Forgery Detection",
+        "metadata": "A Srinivasan, S Narayan, AS Deshmukh - Computers, 2026",
+        "url": "https://www.mdpi.com/2073-431X/15/8/525",
+        "screen_decision": "相关方法/可靠性待核",
+        "screen_reason": "图像拼接伪造检测并提供surrogate解释，但题录无faithfulness证据；适合作为解释型检测对照，不计直接可靠性研究。"
+      },
+      {
+        "position": "5",
+        "title": "Faithfulness of Natural Language Explanations for Vision Language Models: An Automated Test Framework",
+        "metadata": "M Süss - University of Vienna thesis, 2026",
+        "url": "https://repositum.tuwien.at/handle/20.500.12708/226904",
+        "screen_decision": "相邻方法候选",
+        "screen_reason": "研究VLM自然语言解释faithfulness自动化测试，但不是伪造/取证任务；可借鉴测试范式。"
+      },
+      {
+        "position": "6",
+        "title": "Semantic Enrichment of Forensic Artifacts: Using XAI-Generated Feature Attributions to Enhance Cognitive AI Knowledge Graphs",
+        "metadata": "EA Okonkwo, MT Chen, SJ Williams - 2025（ResearchGate索引）",
+        "url": "https://www.researchgate.net/",
+        "screen_decision": "隔离/来源与领域待核",
+        "screen_reason": "片段提及图像伪造与XAI fidelity，但来源为ResearchGate PDF且题录身份不充分；不得作为可靠正式文献，暂不纳核心。"
+      },
+      {
+        "position": "7",
+        "title": "Interpretable Fake News Detection",
+        "metadata": "SK Pentyala - 2019 dissertation",
+        "url": "https://oaktrust.library.tamu.edu/items/8c1293bc-c6dc-4dac-9824-368be066c07d",
+        "screen_decision": "排除核心/邻接新闻检测",
+        "screen_reason": "假新闻可解释分类而非图像鉴伪；保留为交叉模态噪声记录。"
+      },
+      {
+        "position": "8",
+        "title": "Advanced Artificial Intelligence Architectures for the Proactive Search and Classification of Manipulative Information in Digital Ecosystems",
+        "metadata": "M Hnatyshyn, O Nedashkivskyi - 2026",
+        "url": "https://journals.dut.edu.ua/",
+        "screen_decision": "排除核心/邻接媒体信息",
+        "screen_reason": "数字生态操纵信息搜索分类，当前题录未显示图像取证任务。"
+      },
+      {
+        "position": "9",
+        "title": "Multi-XAI and SHAP-Guided Feature Pruning for Explainable File Fragment Classification in Cyber Forensics",
+        "metadata": "R Ibrahim, AMA Ahmad - Springer conference chapter, 2025",
+        "url": "https://link.springer.com/",
+        "screen_decision": "排除核心/数字取证邻接",
+        "screen_reason": "文件碎片分类，不是图像伪造；“forensics”术语造成召回。"
+      },
+      {
+        "position": "10",
+        "title": "Pruning for Explainable File Fragment Classification in Cyber Forensics",
+        "metadata": "R Ibrahim, AMA Ahmad - book chapter, 2026",
+        "url": "https://books.google.com/",
+        "screen_decision": "排除/疑似上一条版本扩展",
+        "screen_reason": "文件碎片分类而非图像；与前一篇作者/主题高度重复，需做版本/书章归并。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-IMAGE-RELIABILITY-COMBINED",
+    "parent_id": "T02-F2-RELIABILITY",
+    "requested_query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "url": "https://scholar.google.com/scholar?start=20&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:19:55+08:00",
+    "summary": "结果位置21–30逐条初筛；估数由约52动态变为42。",
+    "phase": "图像伪造 × 解释忠实/保真/一致性直接检索",
+    "footer": true,
+    "next": [
+      "https://scholar.google.com/scholar?start=30&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5"
+    ],
+    "blocked": false,
+    "start": 20,
+    "estimated_results": 52,
+    "page_number": 3,
+    "rows": [
+      {
+        "position": "1",
+        "title": "What Words Drive the Edit? IE-SMILE for Model-Agnostic Explainability of Instruction-Based Image Editing",
+        "metadata": "Z Dehghani, K Aslansefat, H Daneshvar et al. - SSRN, 2026",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm",
+        "screen_decision": "图像编辑邻接候选",
+        "screen_reason": "面向图像编辑指令解释fidelity与稳定性，但任务为解释编辑模型而非检测伪造；可作跨域方法，不计核心。"
+      },
+      {
+        "position": "2",
+        "title": "Integrating Visual XAI and LLMs for Interpretable Medical Image Analysis",
+        "metadata": "XH Lor, CH Lim - APSIPA, 2025",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11249220/",
+        "screen_decision": "排除/医学影像邻接",
+        "screen_reason": "医学影像解释fidelity与人评，非图像真实性/篡改。"
+      },
+      {
+        "position": "3",
+        "title": "A Critical Analysis of Deepfake Detection Software: Emerging Challenges and Quality Assurance",
+        "metadata": "IN Rana, IA Sumra, S Shan-e-Zahra - 2026",
+        "url": "https://grsh.org/journal1/index.php/ijeet/article/view/149",
+        "screen_decision": "邻接深伪检测软件QA",
+        "screen_reason": "软件质量保证/检测系统综述，未见解释可靠性指标，期刊质量和内容尚需核验。"
+      },
+      {
+        "position": "4",
+        "title": "DocShield: Towards AI Document Safety via Evidence-Grounded Agentic Reasoning",
+        "metadata": "F Zeng, C Miao, J Huang, Z Tan, S Gong, X Yu et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2604.02694",
+        "screen_decision": "文档取证邻接/排除核心",
+        "screen_reason": "证据接地与解释faithfulness应用于文档安全，不是视觉图像伪造；可借鉴空间接地方法。"
+      },
+      {
+        "position": "5",
+        "title": "MoFAIR: Self-Improving Post-Training for Robust and Explainable AIGC Forensics with Lightweight Reward Distillation",
+        "metadata": "Q Liu, X Zhao, Z Xue, H Shi, W Lin, J Si, Z Ji - Springer, 2026",
+        "url": "https://doi.org/10.1007/978-981-92-3429-5_44",
+        "screen_decision": "强相关核心候选/待核原稿",
+        "screen_reason": "AIGC取证解释质量优化，并明确关注分布偏移下决策—解释一致性，是本题直接候选；须核一致性定义与验证是否因果。"
+      },
+      {
+        "position": "6",
+        "title": "Going Beyond XAI: A Systematic Survey for Explanation-Guided Learning",
+        "metadata": "Y Gao, S Gu, J Jiang, SR Hong, D Yu, L Zhao - ACM Computing Surveys, 2024",
+        "url": "https://doi.org/10.1145/3644073",
+        "screen_decision": "方法综述背景/排除核心",
+        "screen_reason": "通用解释引导学习综述，引用到sufficiency/comprehensiveness等faithfulness测量；无图像鉴伪专门内容。"
+      },
+      {
+        "position": "7",
+        "title": "Explainable AI Models for Real-Time Decision Support Systems",
+        "metadata": "B Priya, P Singh - 2026",
+        "url": "https://ijeetr.com/index.php/ijeetr/article/view/304",
+        "screen_decision": "排除/质量需核",
+        "screen_reason": "通用决策支持解释fidelity与信任评分，非取证图像。"
+      },
+      {
+        "position": "8",
+        "title": "Novel Meta-Fusion Framework for Interpretable Fashion Recommendations",
+        "metadata": "KN Bhoyar - 2026",
+        "url": "https://jidmis.org/index.php/jidmis/article/view/3114",
+        "screen_decision": "排除",
+        "screen_reason": "时尚推荐系统解释faithfulness，非视觉真实性取证。"
+      },
+      {
+        "position": "9",
+        "title": "SAFE-MR: Evidence Sufficiency Learning for Selective Multimodal Rumor Detection",
+        "metadata": "S Ni - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2610.06708",
+        "screen_decision": "媒体真实性邻接/解释终点被作者排除",
+        "screen_reason": "多模态谣言检测，摘要明确说量化评价是分类/选择而非语义解释faithfulness；非图像伪造核心。"
+      },
+      {
+        "position": "10",
+        "title": "Toward Explainable Multimodal Fake News Detection: A Fusion of Prompt Learning and Automated Machine Learning",
+        "metadata": "TMH Gedara, R Gaeta, S Tomasiello et al. - IEEE Access, 2025",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11222107/",
+        "screen_decision": "邻接多模态错误信息",
+        "screen_reason": "解释多模态假新闻，不等同图像伪造/篡改；仅作为边界邻接。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-IMAGE-RELIABILITY-COMBINED",
+    "parent_id": "T02-F2-RELIABILITY",
+    "requested_query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "url": "https://scholar.google.com/scholar?start=30&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:19:55+08:00",
+    "summary": "结果位置31–40逐条初筛；估数由约52动态变为42。",
+    "phase": "图像伪造 × 解释忠实/保真/一致性直接检索",
+    "footer": true,
+    "next": [
+      "https://scholar.google.com/scholar?start=40&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5"
+    ],
+    "blocked": false,
+    "start": 30,
+    "estimated_results": 42,
+    "page_number": 4,
+    "rows": [
+      {
+        "position": "1",
+        "title": "Foreground or Background? Visual Interpretability and Robustness Analysis of CLIP",
+        "metadata": "A Agarwal, S Karanam, V Gandhi - OpenReview",
+        "url": "https://openreview.net/",
+        "screen_decision": "方法学邻接",
+        "screen_reason": "分析视觉模型背景捷径与可解释性稳健性，可借鉴shortcut/robustness测试，但无取证任务。"
+      },
+      {
+        "position": "2",
+        "title": "PRPO: Paragraph-Level Policy Optimization for Vision-Language Deepfake Detection",
+        "metadata": "T Nguyen, N Khan, K Tran, NH Phan, I Khalil - arXiv, 2025",
+        "url": "https://arxiv.org/abs/2509.26272",
+        "screen_decision": "强相关候选/待核解释忠实性方法",
+        "screen_reason": "深伪检测的段落级解释优化，摘要声称提升解释faithfulness；需核faithfulness的操作化及定位/证据真值。"
+      },
+      {
+        "position": "3",
+        "title": "Leveraging Large Language Models to Generate Natural Language Explanations of AI Systems: A Framework for Natural Language Explanations",
+        "metadata": "LI Holmberg - thesis, 2024",
+        "url": "https://gupea.ub.gu.se/items/e3a59663-4d00-4667-a2f9-b35ffbae939a",
+        "screen_decision": "通用解释生成邻接",
+        "screen_reason": "一般XAI自然语言说明框架，不是图像鉴伪。"
+      },
+      {
+        "position": "4",
+        "title": "Digital Forensics in the Age of Artificial Intelligence: Methods, Frameworks, and Challenges",
+        "metadata": "HR Gantla, N Sultana, A Vattoli et al. - IGI Global chapter, 2026",
+        "url": "https://www.igi-global.com/chapter/digital-forensics-in-the-age-of-artificial-intelligence/412615",
+        "screen_decision": "邻接数字取证方法背景",
+        "screen_reason": "数字取证框架章节中提到一致性测试，但不是图像解释研究。"
+      },
+      {
+        "position": "5",
+        "title": "SA-GGCoT: Social-Aware Graph-Grounded Chain-of-Thought for Multimodal Claim Verification under Bounded Evidence",
+        "metadata": "Y Zhang, W Jiang, H Jin, Y Xu, Y Wang, B Wei et al. - 2026",
+        "url": "https://link.springer.com/article/10.1007/s44443-026-01072-z",
+        "screen_decision": "媒体核验邻接/排除核心",
+        "screen_reason": "多模态主张核验而非图像伪造检测，视觉证据grounding方法可作邻接。"
+      },
+      {
+        "position": "6",
+        "title": "A Systematic Review of Explainable AI in B5G/6G Wireless Networks",
+        "metadata": "HAM Deenmahomed, V Bassoo - 2026",
+        "url": "https://iopscience.iop.org/article/10.1088/2631-8695/aeafb2/meta",
+        "screen_decision": "排除",
+        "screen_reason": "通信网络XAI综述，非图像取证。"
+      },
+      {
+        "position": "7",
+        "title": "VideoVeritas: AI-Generated Video Detection via Perception Pretext Reinforcement Learning",
+        "metadata": "H Tan, J Lan, S Shi, Z Tan, Z Yu, H Zhu et al. - arXiv, 2026",
+        "url": "https://arxiv.org/abs/2602.08828",
+        "screen_decision": "视频邻接/排除静态图像",
+        "screen_reason": "AI生成视频检测与解释相关；主集不纳静态图像任务。"
+      },
+      {
+        "position": "8",
+        "title": "Securing the Future of GenAI: Policy and Technology",
+        "metadata": "M Christodorescu, R Craven, S Feizi, N Gong et al. - arXiv, 2024",
+        "url": "https://arxiv.org/abs/2407.12999",
+        "screen_decision": "政策/概念邻接",
+        "screen_reason": "广义GenAI政策论文提及解释faithfulness，不含专门图像鉴伪评测。"
+      },
+      {
+        "position": "9",
+        "title": "CounterFair: Mitigating Demographic Bias through StyleGAN3-Based Counterfactual Data Augmentation",
+        "metadata": "T Vu, H Nguyen, Q Dang, C Tran et al. - IEEE Access, 2026",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11589269/",
+        "screen_decision": "排除/公平性邻接",
+        "screen_reason": "生成对抗反事实数据以减轻人脸分类偏差，不是解释可靠性。"
+      },
+      {
+        "position": "10",
+        "title": "Interpretable Bilevel Additive Taylor Model for Datasets with Noisy Labels and Imbalanced Classes",
+        "metadata": "W Zhou, C Xu, L Peng, X Zhang - IEEE conference, 2025",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11323060/",
+        "screen_decision": "排除",
+        "screen_reason": "一般可解释模型，引用图像篡改工作不代表自身属于图像取证。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-IMAGE-RELIABILITY-COMBINED",
+    "parent_id": "T02-F2-RELIABILITY",
+    "requested_query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "url": "https://scholar.google.com/scholar?start=40&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:19:55+08:00",
+    "summary": "结果位置41–42逐条初筛；估数由约52动态变为42。",
+    "phase": "图像伪造 × 解释忠实/保真/一致性直接检索",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "start": 40,
+    "estimated_results": 42,
+    "page_number": 5,
+    "rows": [
+      {
+        "position": "1",
+        "title": "Використання методів штучного інтелекту для автоматичного пошуку маніпулятивної інформації",
+        "metadata": "М Гнатишин, О Недашківський - Зв’язок, 2026",
+        "url": "https://con.duikt.edu.ua/communication/article/view/3011",
+        "screen_decision": "邻接/非图像篡改",
+        "screen_reason": "乌克兰语数字操纵信息分类，片段定义解释fidelity但没有证据表明是图像伪造定位。"
+      },
+      {
+        "position": "2",
+        "title": "The 11th International Conference on Behavioural and Social Computing (BESC-2024)",
+        "metadata": "J Ma et al. - proceedings record, 2024",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10780727/",
+        "screen_decision": "排除/会议录聚合记录",
+        "screen_reason": "并非单篇文章；片段混有不同会议论文，不能按相关研究计数。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-IMAGE-RELIABILITY-COMBINED",
+    "parent_id": "T02-F2-RELIABILITY",
+    "requested_query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\" OR \"image splicing\" OR \"copy-move forgery\") (\"explanation faithfulness\" OR \"XAI faithfulness\" OR \"explanation fidelity\" OR \"explanation consistency\")",
+    "url": "https://scholar.google.com/scholar?start=42&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22XAI+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+consistency%22)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-09T11:19:55+08:00",
+    "summary": "空尾页；估计42且Next禁用。",
+    "phase": "图像伪造 × 解释忠实/保真/一致性直接检索",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "start": 42,
+    "estimated_results": 42,
+    "page_number": 5,
+    "rows": []
+  },
+  {
+    "query_id": "T02-F3-S1-IMAGEFORGERY-QUALITY-HUMAN-20261010",
+    "parent_id": "T02-F3-S1",
+    "task_family": "图像伪造/篡改解释质量与人评",
+    "query": "(\"image forgery\" OR \"image tampering\" OR \"image manipulation\") (\"explanation quality\" OR \"explanation correctness\" OR \"explanation accuracy\") (\"human evaluation\" OR \"expert evaluation\" OR \"human study\")",
+    "split_axis": "优先高精度词组组合；在宽式前先验证人评解释质量直达记录",
+    "date_scope": "不设年份下限",
+    "reason": "检查解释质量/正确性/准确性是否存在图像鉴伪领域人工/专家评价直接证据",
+    "status": "当前可见分页闭合：4页34位置；Scholar估算约44后动态降至34；start=40空尾页。结果逐条记录于74与专表。"
+  },
+  {
+    "query_id": "CIT-FAKEXPLAIN-FWD-20261010",
+    "parent_id": "CIT-FAKEXPLAIN",
+    "task_family": "图像鉴伪解释可靠性强相关文献前向引文追踪",
+    "query": "Cited by: FakeXplain: AI-Generated Image Detection via Human-Aligned Grounded Reasoning",
+    "split_axis": "Google Scholar cited-by list",
+    "date_scope": "截至2026-10-10",
+    "reason": "追踪FakeXplain后续接地解释/可靠性研究",
+    "status": "当前引用页6条均已筛查；仅当前快照闭合。"
+  },
+  {
+    "query_id": "CIT-SPARED-FWD-20261010",
+    "parent_id": "CIT-FAKEXPLAIN-FWD-20261010",
+    "task_family": "图像鉴伪解释可靠性强相关文献前向引文追踪",
+    "query": "\"SPARED: Reasoning-Based AI-Generated Image Detection via Adversarially Edited Data\"",
+    "split_axis": "Google Scholar exact-title search / forward-citation availability",
+    "date_scope": "截至2026-10-10",
+    "reason": "核查新全文候选SPARED是否已有可筛前向引文",
+    "status": "精确题名单条命中自身记录、没有显示Cited by；当前快照暂未发现前向被引。全文已核读并记录在172。"
+  }
+]

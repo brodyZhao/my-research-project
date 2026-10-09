@@ -1,8 +1,8 @@
 # 2026-10-10 FakeXplain前向引文链续接
 
 - 继续当前检索分支；上一推送检查点`5e12287`。FakeXplain精确题名Cited-by显示6项，当前列表无分页；6篇逐条筛选记录于74、`CIT-FAKEXPLAIN-FWD_20261010_逐条引文筛选.csv`和87。
-- 新全文核读EditSleuth：257,725编辑triplet形成可溯源reasoning chain，但作者明示运行时模型生成数字未重算，artifact-relative supervision不等于实际faithfulness。FakeXplain正式论文也已完整核读；1,525非中性人类偏好票评估区域-caption对齐，评审人数/IAA未报告。SPARED先列待核，不把摘要主张当验证结果。
-- 当前日志规模24,520结果位置、647去重候选、优先194项、52项原稿/摘要效度核读；不是全领域独立论文数。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip` 共600成员，CRC与源文件哈希一致，SHA-256 `c72f52f682e24ba34885795325144280748ca165eccaf747c088bbd813a4a7c3`。运行总账唯一、逐条筛选理由、6条引文连续、标题去重、ZIP CRC/逐文件哈希、compileall、git diff --check。全局仍未完成；两个用户未跟踪文件保持未修改未提交。
+- 新全文核读EditSleuth：257,725编辑triplet形成可溯源reasoning chain，但作者明示运行时模型生成数字未重算，artifact-relative supervision不等于实际faithfulness。FakeXplain正式论文也已完整核读；1,525非中性人类偏好票评估区域-caption对齐，评审人数/IAA未报告。SPARED已核官方原文：accuracy-only训练后AnomReason-Deepfake的CSemAP-Full 0.4927升至0.5207；这是语义匹配指标，不证明因果faithfulness/人类依赖。Scholar精确题名未显示Cited by链接，当前快照未发现前向引用。
+- 当前日志规模24,521结果位置、647去重候选、优先195项、53项原稿/摘要效度核读；不是全领域独立论文数。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip` 共600成员，CRC与源文件哈希一致；SHA-256 `a224621f5d0c778d58e3a352d3be786ee0f2a8a2c14c56dbbc282e4879c15444`。运行总账唯一、逐条筛选理由、6条引文连续、标题去重、ZIP CRC/逐文件哈希、compileall、git diff --check。当前提交`a56207f`推送后，本阶段SPARED更新需再次提交。全局仍未完成；两个用户未跟踪文件保持未修改未提交。
 
 ---
 
