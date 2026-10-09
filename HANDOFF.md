@@ -1,3 +1,15 @@
+# 2026-10-09 E4 高相关精确式与原文审读续接（仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；GitHub remote `origin`。检索阶段包提交 `42a7d64` 已推送；当前交接文件修改尚待单独提交。原有两个用户未跟踪文件保持未改、未暂存。
+- 本轮Scholar三式逐位置筛查：`"image authenticity" explanation faithfulness` 首页10条（估算158，宽式未闭合）；`"image authenticity" "explanation faithfulness"` 当前索引4条全部筛完；`("image forgery" OR "image manipulation") "explanation faithfulness"` 两页17条全部筛完。共新增31个位置，包含跨式复现。主表`74`共23,582个唯一位置、每条screen_reason非空；`83`总计已同步，child_query_positions=8,773，global complete=false；`87`中R3=10且未闭合，R4=4/4、R5=17/17仅限各精确式可见索引闭合。`90`候选观察473行，按题名暂有30个标题标“强相关核心”，仍需正式版本合并/证据分级，禁止称最终强相关数量。
+- `172`原文/摘要效度审读表新增到16项。新核全文：`Rethinking VLMs for Image Forgery Detection and Localization`（50人、40图偏好，GPT-5六维评分和CSS；指标不是因果faithfulness/适当依赖）；`Explainable Deepfake Detection with Feature-robust Augmentation...`（Evidence omission与hallucination，DPO及Entity/Claim F1，直接核心；ACM MM会期晚于当前日期，现按公开arXiv/挑战结果记录）；`LaP-Forensics`和`FakeScope`复用先前已核全文。Springer摘要级直相关候选`SGEVL-Forensics`提出scene-graph grounding和证据冲突拒答，但没看到解释质量独立效度验证；`Spot and Explain Public Trust`的SSRN/Research Square条目可能是同一版本，摘要没有信任量表/适当依赖实测。`Evidence Fusion for Analyzing Multimodal Image Manipulation`是新增直接任务候选，faithfulness在Scholar片段呈现为“仍待验证”的限制陈述；World Scientific页出现安全服务等待页面，全文未核、未绕过。
+- 主要日志：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/173_...R3...csv`、`174_...R4...csv`、`175_...R5...csv`、`90_本轮新增强相关候选与引文复核.csv`、`172_强相关核心及邻接论文原文解释可靠性效度核读.csv`、`00_重检阶段报告_未完成.md`。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`有537成员；SHA-256 `9746c9a659bf49125da51f2e15963c632624b8a8dd33a8b895af45e302c01ef3`；CRC与归档逐文件字节比对通过。
+- 测试：主账唯一ID/筛选理由、三条路线位置计数、审计汇总计数、ZIP CRC/逐文件字节比较通过；`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过。无源码/模型修改。
+- 遗留：Scholar整体及未完成的其它英文术语/任务子式、EFR种子引用前后向闭环、候选全文复核、版本合并和最终相关性排序都未完成。下一阶段先围绕新直接候选的高信号引文扩展并按题名去重；读取SGEVL公开15条参考并筛主题；检索/核对EDD的XPlainVerse挑战论文与数据/评测指标来源；比较Spot and Explain的SSRN与Research Square版本；寻找Evidence Fusion可核全文。若需读取当前Cloudflare阻断的SSRN全文，由用户在当前页面手动完成安全验证后交还页面，代理不会代解。
+- 建议ChatGPT Web下一步：在浏览器Scholar标签从精确图像真实性/faithfulness路线继续题名去重后的引用扩展；SSRN安全等待页需要用户接管处理后再尝试读取。
+
+---
+
 # 2026-10-09 Scholar T06-F3-S1-AUTH-SYNTH 可见终页检查点（全局未完成）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；remote `origin` 为已配置目标GitHub仓库。此检查点接续已推送工作，不改源码；已有两个用户未跟踪文件未改动、未暂存。阶段包提交commit为`def4698`（已推送）；本交接随后单独提交。
