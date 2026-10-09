@@ -1215,3 +1215,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 构念边界：该文是直接强相关的图像伪造定位XAI faithfulness审计，使用Grad-CAM++/IG、Saliency TV和参数随机化。TV更低表明空间连贯性proxy，randomization敏感性说明归因依赖已训练权重；单独都不足以建立因果忠实性。旧全文审阅也未发现删除/插入、对抗扰动、跨数据集或appropriate-reliance评测。
 - 计数：74主账24,766位置，90候选653篇，72排序200篇，172唯一原稿/摘要核读66项，87路线181条。ZIP 614成员，SHA-256 `46f938f8aecadda7ee4632fef5f53373198e84ba095de56014890a78c7446f11`。`compileall`、唯一性断言和ZIP CRC通过。
 - 遗留：SIDA Scholar验证页仍在第85标签，用户手工完成后继续题名与Cited-by链；全文受限的FakeArti章节待全文取得。整个领域搜索仍未完成，也不能承诺零遗漏。分支`codex/forensic-explanation-literature`；推送至`origin`已授权。
+
+## 2026-10-10续：FORGE全文效度核读与83条参考文献对照
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；远端`origin`已配置并获用户授权推送。开始时HEAD为`9d26e91`。此前两个用户未跟踪文件未修改、未暂存。
+- 以排名第1的FORGE（官方arXiv v4，https://arxiv.org/html/2503.15867v4）完成全文附录核查并加入172。其人评含300个图像-解释对、3名盲评者、faithfulness/specificity/helpfulness三维、Krippendorff α 0.68–0.74；另有RHR/AHR/FP及GPT-4o claim抽取器200样本专家校验（precision 96.4%, recall 94.1%）。归类为强直接解释事实接地/人评信实性证据；不将区域/属性标签一致性说成内部因果faithfulness，也没有适当依赖实验。
+- 官方参考目录83项均有逐位置题录筛选记录，见`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T16_FORGE_83条参考文献逐条主题筛查_20261010.csv`。其中80项匹配已存在筛查、候选或原稿核读记录；13项直接伪造解释/可解释取证标题已在旧候选账，不新增独立强相关标题。引文“位置”不可当独立文献数。
+- 阶段统计：74主位置账24,766；90候选653个去重题名；72相关排序200项；172原稿/摘要效度核读67项；87检索路线181条。计数口径不同，整体检索仍未完成。Scholar SIDA精确题名标签85仍是人机验证页，未读取结果，不记录成0命中。
+- 测试：`python3 -m compileall -q work/search_protocol_v2`通过；FORGE引文83行/唯一ID、172核读67篇/唯一题名断言通过；阶段ZIP CRC通过。新阶段ZIP 615成员，SHA-256 `f2670551d2174487d0d6cb426fe259d0e156a0a630d6b38e5227ef88cf22fb64`。无业务源码修改。
+- 主要修改：阶段报告`00_重检阶段报告_未完成.md`、效度核读表`172_...csv`、新侧表`T16_FORGE_...csv`、阶段ZIP及本文件。
+- 遗留：SIDA Scholar页面需人工解除验证后继续精确题名与前向引用；总体查询尚未闭合、不能保证零遗漏。下一步优先从SIDA验证页恢复后读结果与Cited-by，同时继续复用82篇以内已核种子与身份映射，跳过已筛标题。
+- ChatGPT Web下一步检查：核对FORGE的人评faithfulness定义与标注接地指标在最终相关性分层中的位置；验证解除后续查SIDA Scholar。
