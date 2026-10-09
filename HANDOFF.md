@@ -1,3 +1,16 @@
+# 2026-10-09 Scholar T02-F2-RELIABILITY 续检（第36页检查点；仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；本检查点基于上一已推送交接 `db4f082`，后续交接同步提交会记录本次检索检查点commit。远端origin仍为 `https://github.com/brodyZhao/my-research-project.git`。原有两个未跟踪用户文件未修改、未暂存。
+- 用户恢复后续查Google Scholar查询式 `"image forgery" explanation reliability`。已从第29页`start=280`连续逐条筛到第36页`start=350`，第29–36页共80个可见结果位置；路线累计第1–36页/360位置，下一步`start=360`。页面正常，估算约10,800为动态数；查询仍未闭合，不能把结果估数或360位置当独立文献总数/穷尽证明。
+- 主位置账`74_V2完整分页逐位置初筛.csv`现22,256行，result_id均唯一、筛选理由均非空；本路线累计360位置；`83`中的child_query_positions=7,447、all_logged_positions=22,256，global complete=false。候选观察表`90`现395行；这是候选记录/题录观察数，含重复、邻接和待核条目，非395篇独立强相关论文。第29–36页专表每页10条，标题复现既有记录时标明复用旧核查。
+- 第30页新增Springer章节 *Future Directions in Digital Image Forgery Detection Research*（V Tyagi，2025；DOI 10.1007/978-981-95-3004-5_7）为待核概念线索：Scholar摘要将鉴伪检测系统robustness/reliability与explainability联系起来。当前仅题录/摘要，未核章节是否给出解释可靠性度量或实证，暂不计实证强相关。第31页视觉语言协同推理定位框架仅作待审邻接候选；题录无faithfulness或用户依赖终点。第29–36页其余多为传统检测模型/综述、检测性能可靠性，按解释忠实性、人类依赖、算法可靠性分别筛开；两条旧论文复现和此前多篇重复记录均复用既有判断。
+- 第29–36页日志文件为`T02-F2-RELIABILITY_20261009_第29页逐位置筛选.csv`至`第36页`；路线表`87_V2细查询子式实际试检状态.csv`和受阻审计`83_V2本批计数与受阻观察审计.json`已更新。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 已重建，462个成员，CRC通过，SHA-256 `3514423e32c546ce409e36ea2dca3ca907b4745c57735b2b443f8d6b38814770`。
+- 验证：主表22,256行/唯一ID/筛选理由完整；本路线36页/360位置；第10–36页专表逐页各10条；状态断点`start=360`且complete=false；`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过；ZIP CRC通过。本阶段没有源码/模型改动，无需推理测试。
+- 遗留：继续Scholar分页与其它未完主题/同义词拆分和引用链，优先核读上述Springer章节原文及参考文献；处理Direct strong candidates的原文、版本合并与解释效度边界；最后按相关性和证据质量统一排序。当前宽式高噪声且远未覆盖动态估算结果，不能宣称完成或“一个不漏”。
+- ChatGPT Web下一步建议：从Google Scholar `start=360` 继续；先标题去重，只有新候选做全文核查；第37–46页完成后再做下一次阶段快照与交接。阶段检索commit和随后HANDOFF同步提交以Git HEAD为准。
+
+---
+
 # 2026-10-09 Google Scholar T02-F2-RELIABILITY 续检（未完成）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；origin 为 `https://github.com/brodyZhao/my-research-project.git`。本检查点仅更新交接记录；未改源码，也未触碰原有两个未跟踪用户文件。
