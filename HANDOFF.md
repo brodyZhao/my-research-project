@@ -1,3 +1,15 @@
+# 2026-10-09 Scholar T06-F3-S1-AUTH-SYNTH 可见终页检查点（全局未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；remote `origin` 为已配置目标GitHub仓库。此检查点接续已推送工作，不改源码；已有两个用户未跟踪文件未改动、未暂存。阶段包提交commit为`def4698`（已推送）；本交接随后单独提交。
+- 查询式为 `"synthetic image" (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("human evaluation") (forgery OR tampering OR fake OR authenticity OR forensics OR detection)`。Scholar第1–61页可见结果606个位置均已逐条筛选；末页只有6条且Next禁用。本查询可见终页闭合，但不等于领域穷尽。
+- 新增第51–61页106个位置记录至`74_V2完整分页逐位置初筛.csv`与`125_T06-F3-S1-AUTH-SYNTH_合成图解释人评逐位置筛选.csv`；侧表606条。`90`候选观察表465行（有重复、邻接和待核，非独立强相关数），`83`总审计位置23,492、child positions 8,683且complete=false；路线终页见`87`。
+- 新增需核全文候选ASAP 2024与其2026 Information Visualization稿（arXiv:2404.02990、2609.27371；后者相关DOI 10.1177/14738716261481077），摘要直接涉及生成图像真实性归因和用户研究，但忠实性证据未核。另记录DeeptraceReward/arXiv:2509.22646为视频伪造痕迹人工解释/定位邻接；不混入静态图像核心。
+- 本地重检目录`outputs/图像鉴伪解释可靠性_重检_2026-10-05/`及阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`已重建；逐文件清单、ZIP成员、CRC和文件字节相同检查通过。总账唯一ID/理由、路线606位置断言、`python3 -m compileall -q work/search_protocol_v2`和`git diff --check`均已通过。本地outputs/ignored files不随Git推送。
+- 遗留：继续其他未完成细查询和强相关文献的原文效度/引文链闭环；最后全局去重和相关性排序。不能声称全领域零遗漏。
+- 建议下一步：读取`87_V2细查询子式实际试检状态.csv`中未完成的直接图像伪造/篡改解释与忠实性/接地路线，优先已查过首页、减少宽噪声分页的子式；对ASAP两版读取全文并确认版本关系及用户研究设计，再检查其参考文献和Scholar前向引用。
+
+---
+
 # 2026-10-09 Scholar T02-F2-RELIABILITY 续检（第62页检查点，仍未完成）
 
 - 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`，origin `https://github.com/brodyZhao/my-research-project.git`。本轮从上一已推送HEAD `e7e35e3` 继续；检索日志和阶段ZIP检查点已提交并推送，commit `11e6083`。两个既有用户未跟踪文件保持未改、未暂存。
