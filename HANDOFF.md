@@ -1,6 +1,6 @@
 # 2026-10-09 Scholar T02-F2-RELIABILITY 续检（第45页验证码阻断，仍未完成）
 
-- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`，origin `https://github.com/brodyZhao/my-research-project.git`；从上一已推送检查点 `0e37306` 继续。用户原有两个未跟踪文件保持未改动、未暂存。检索原始账本/阶段ZIP位于忽略目录 `outputs/`，不会通过Git push上传。
+- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`，origin `https://github.com/brodyZhao/my-research-project.git`；从上一已推送检查点 `0e37306` 继续；本次检索检查点提交为 `9e4e696`，随后有HANDOFF同步提交。用户原有两个未跟踪文件保持未改动、未暂存。检索原始账本/阶段ZIP位于忽略目录 `outputs/`，不会通过Git push上传。
 - Google Scholar 查询式 `"image forgery" explanation reliability` 已逐条筛至第44页（start=430），累计本路线44页/440个可见位置；Scholar约10,800是动态估计，查询未闭合。第45页 `start=440` 出现 reCAPTCHA，未取得结果，已保存阻断与断点；等待用户手动完成验证后续查。
 - 第44页新增 Kasra、Shen、O’Brien 的 *Seeing is believing: How people fail to identify fake images on the web*（CHI 2018 Extended Abstracts，DOI 10.1145/3170427.3188604）。作者公开页面和题录摘要确认研究人们判断网络配图真实性、即使讨论过图像伪造仍可能无法识别精心操纵图像，且使用非图像线索判断可信度；它不评估AI模型解释或解释faithfulness，因此作为人类判断背景/引文追踪候选，不列为强相关核心。其余9项为传统copy-move检测、检测综述或检测性能可靠性，逐项理由见第44页专表。
 - `74_V2完整分页逐位置初筛.csv` 现22,336条，result_id唯一、筛选理由非空；`90_本轮新增强相关候选与引文复核.csv` 现396条候选观察，包含重复/邻接/待核，不是独立强相关论文数量。路线表`87`标第1–44页、440位置，下一页`start=440`；审计`83`已记当前验证码，`complete=false`。第44页日志为 `T02-F2-RELIABILITY_20261009_第44页逐位置筛选.csv`。
