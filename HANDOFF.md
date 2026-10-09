@@ -812,3 +812,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 新增原稿证据：BusterX++ 5名法证专家对100条图/视频样本做双盲成对解释偏好评估（模型胜82%），另100条正确fake样本中87%所述伪迹经专家确认可见；LaP-Forensics对246例的一致性图输入进行zero/donor反事实替换，mask mIoU 0.721降至0.604/0.611，但仅证明空间mask依赖，作者明确不外推为自由文本语义faithfulness。TextSleuth、TextShield-R1、IDseq逐篇加入90并区分自动推理分数/定位指标/数据质控与独立解释忠实度研究。输出72新增3项；90新增候选记录；153新增3项证据条目。
 - 检查：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；CSV列数/字段、累计ID唯一性、筛选理由非空和V109连续页数需在提交前再次执行。没有业务代码或模型改动。
 - 遗留：Scholar当前异常流量阻断等待用户恢复；V109仅完成310/约20,900估算结果位置，其他并行路线、去重、候选原文、EFR/其他强相关种子引文递归都未完成。建议ChatGPT Web恢复后从V109 start=310继续，并优先沿EFR原文直接引文[43],[46]–[54],[61]–[63]及BusterX++专家评价/接地研究相关文献追查。
+
+### 2026-10-09：V109分页续检到第46页，start=460再次触发验证（当前断点）
+
+- 仓库：`my-research-project`；当前分支：`codex/forensic-explanation-literature`；origin为`https://github.com/brodyZhao/my-research-project.git`。本阶段开始HEAD为`aaf7b80`，包含本次tracked修改文件`literature/forensic-explanation-search-protocol-v2-20261008.md`与`HANDOFF.md`；之后待提交的最新hash以Git为准。用户现有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`均未触碰、未暂存。
+- Google Scholar V109宽式在用户恢复start=310后，已逐条登记第32–46页（150个新位置），总覆盖1–460；每个位置有筛选决定和理由。第41–46页单页文件为输出194–199，并已追加进74总台账。74当前19,116行/唯一结果ID/非空理由；这表示查询结果位置，含跨式重复，不表示独立论文数。87中V109记46页/460位置，当前下一步start=460；Scholar估算仍约20,900，因此远未完成。
+- 第47页`start=460`跳转到Google reCAPTCHA，页面没有结果题录；没有记作零命中或末页。阻断已写进83，历史阻断观察累计23，当前活动阻断明确为V109 start=460。已在对话请求用户完成当前验证。恢复后从同一页读取并继续。
+- 新全文候选：DocShield（arXiv:2604.02694v2）和Can GPT…（IH&MMSec 2025/arXiv:2504.11686）已按§节、表格、效度限制加入72/90/153。DocShield的文本相似度和IoU、代理生成/审核注释不等于人评或因果faithfulness；Can GPT的GPT-4V-as-judge测定位/可读性/完整性，不能替代解释理由真实性的人评或反事实干预。其它邻接项包括Going Beyond XAI、ManTraNet、通用LVLM长回答幻觉、Frontiers多模态假新闻人评，均按任务边界降级。详细证据见tracked检索协议与忽略输出194–199、72、74、83、87、90、153、199。
+- EFR的56条参考文献已有03/162逐条题名初筛、7条强相关引文169做原文核读；本轮未完成全部前后向引文闭包。候选优先清单75行（含标题行，即74项），不等同74篇直接因果解释faithfulness实证。整体检索继续进行，不能承诺绝对零遗漏。
+- 检查：待提交前执行`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`、CSV唯一ID/空理由/路线断点检查；本阶段尚未运行这些最终检查。工作区仅两份用户未跟踪文件应保持原状。完成后仅暂存tracked协议与HANDOFF，按AGENTS.md提交并push当前分支，不merge主分支。
+- 建议下一步：用户完成start=460验证后先筛查第47页10个结果；继续第48页与V109宽式，其后处理非deepfake术语覆盖和强种子引文递归。若验证迟迟未完成，可继续候选论文/参考文献的独立来源核查。
