@@ -803,3 +803,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证命令：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；CSV/JSON审计通过（74 17,816行唯一；110 26行；72排名1–57连续；90 74行；87 129式；83子式实际位置3,969）；ZIP CRC及逐文件一致通过。无业务源码修改。
 - 后续优先工作：从浏览器已保存断点T06-F2-S3末页继续计划中的核心原文/引文链；先将T01-F2的179个可见题录逐条写入74并按原摘要筛选，然后补查start=160跳页/稳定性；复测T06-F2-S3并阅读全文核METER/INSIGHT/SGEVL等强候选。不要把工具解释、证据一致性或区域接地自动等同决策因果忠实性。
 - 建议ChatGPT Web下一步：复核110中METER与AIFo的边界分类，并检查SGEVL原文是否实际给出了证据子图依赖检验；继续时先补齐T01-F2未导出的179行，再推进未完成强相关引文链。当前Scholar用户标签保留在T06-F2-S3 start=20末页。
+
+### 2026-10-09：V109继续至第31页；第32页遇Scholar异常流量限制（未完成）
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`。本批检索协议更新见`literature/forensic-explanation-search-protocol-v2-20261008.md`。用户现有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未更改、未暂存。
+- V109主式估算约20,900条，已逐条完成前31页/310个结果位置；新增页日志`184_V109_image_forgery_xai_faithfulness_page31_10位置逐条初筛.csv`，并入忽略目录累计74。原有前30页日志（170–183）已保存。Scholar第32页start=310出现Google异常流量页，尚无结果，已在83审计中记为阻断；必须由用户手动恢复后从start=310续检，不能按零结果或末页记载。
+- 新发现EFR（arXiv:2608.08009v1/ACM MM 2026元数据）在原稿§§3.2–3.3.1提出图文篡改证据anchor绑定和五项可验证reward；纳入72/90/153并标注边界：条件GT推理训练、定位/文本跨度一致不等于解释自然语言因果忠实性，也没有独立盲评/IAA。其56条引文此前逐条题名筛查，强相关引文若干已全文核读；递归引文闭包尚未完成。
+- 新增原稿证据：BusterX++ 5名法证专家对100条图/视频样本做双盲成对解释偏好评估（模型胜82%），另100条正确fake样本中87%所述伪迹经专家确认可见；LaP-Forensics对246例的一致性图输入进行zero/donor反事实替换，mask mIoU 0.721降至0.604/0.611，但仅证明空间mask依赖，作者明确不外推为自由文本语义faithfulness。TextSleuth、TextShield-R1、IDseq逐篇加入90并区分自动推理分数/定位指标/数据质控与独立解释忠实度研究。输出72新增3项；90新增候选记录；153新增3项证据条目。
+- 检查：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；CSV列数/字段、累计ID唯一性、筛选理由非空和V109连续页数需在提交前再次执行。没有业务代码或模型改动。
+- 遗留：Scholar当前异常流量阻断等待用户恢复；V109仅完成310/约20,900估算结果位置，其他并行路线、去重、候选原文、EFR/其他强相关种子引文递归都未完成。建议ChatGPT Web恢复后从V109 start=310继续，并优先沿EFR原文直接引文[43],[46]–[54],[61]–[63]及BusterX++专家评价/接地研究相关文献追查。
