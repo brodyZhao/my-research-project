@@ -989,3 +989,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`含500个文件，17,537,533字节，SHA-256 `764a05494164e4f7a3e7fbc38c4aace531f1cd680f08a011d787a1c90454d684`；ZIP CRC及包内每个文件与输出目录字节比对通过。测试：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；主账唯一ID/非空理由、69–74每页10条与连续位置、候选登记、路线/计数审计均通过。未修改业务源码或模型，不需模型测试。
 - 继续工作：从Scholar start=740筛页75；遇到重复题名直接复用已核记录，对新直接相关论文核全文、参考文献和前后向引用；然后继续未完成细查询和强相关种子引文链。最终全库去重与相关性排序尚未完成。
 - ChatGPT Web建议检查：VeriChain/FOCA正文是否提供可复现的解释可靠性终点；并从当前Scholar `start=740`继续。不要将估计结果数、页面位置数或摘要中“explainability”提升写成领域覆盖/解释可靠性已证明。
+
+## 2026-10-09：T02-F2-RELIABILITY 续检检查点（第75–80页）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；阶段包提交 `144a8b4913607e573f97186454ce3f07b8cb58f2`。两个用户既有未跟踪文件未修改、未暂存。
+- Scholar `"image forgery" explanation reliability` 已续筛第75–80页；本路线80页/800可见位置，断点start=800。主位置账74为22,696个ID唯一且理由非空的位置；90候选观察406行（不是独立论文数）；全局complete=false。
+- 新候选边界复核：Reliability Map Estimation（WACV 2018）是相机指纹patch适用性/可靠性map；RADAR（NeurIPS 2025）是扩散编辑检测与跨生成器泛化可靠性；均不评价XAI解释faithfulness。PromptForge-350k的prompt引导定位也不等于解释输出。未新增直接解释候选。正文与证据边界记入逐位置表/候选表。
+- 阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 含506个文件，17,559,455字节，SHA-256 `50bf391cfb5ee233c142417e9235e53ea73afa4af4c04e48823bca6891650d03`；CRC和包内逐文件字节校验通过。`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`及逐页10项连续位置、全表唯一ID/理由、候选与路线计数断言通过。
+- 下一步继续 Scholar start=800；先对照90候选去重，只对新强相关条目核正文和引文。检索/去重/统一相关性排序仍未完成。
