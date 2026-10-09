@@ -885,3 +885,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - Google Scholar V110在此前已筛至第100页/994个可见位置，`start=1000`空结果容器但仍显示估算结果；本阶段不重复翻页。单独的AnomReason Cited-by 10页面经用户报告恢复后重新载入仍显示reCAPTCHA；没有读取或记为零，被引路线仍待手动恢复。审计JSON继续记录总位置20,781、complete=false；计数为跨式结果位置，不是唯一论文数。
 - 修改/生成文件：ignored outputs中的72、90、101、83和阶段ZIP；tracked文件`HANDOFF.md`。验证通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；90共220条且题名唯一；101共57条、参考编号1–57连续唯一、理由齐全；74共20,781个唯一结果位置ID；阶段ZIP含337个文件、CRC和逐文件字节比对通过，SHA-256=`be253cd7f0d27f175aad2e8b17331257ea1ff66700d5e957f1c9bca05c4abfee`。仅提交HANDOFF，不暂存两份用户文件。
 - 遗留：整体检索尚未完成；V109宽式与其他多条细式存在分页上限、索引漂移或验证码断点；AnomReason前向引用列表、EFR及其他强相关种子的引文递归闭包未完成。建议继续时从尚未完成且未重复筛过的高精度路线推进；遇到已见题名直接复用90/72的原判定，只核新原稿和未读引文链。
+
+#### 同日补记：AnomReason引文再发现一篇遗漏的直接论文
+
+- 对57条参考文献与候选总表做标题/变体交叉匹配时，发现Ref.49 `Rethinking Vision-Language Model in Face Forensics: Multi-Modal Interpretable Forged Face Detector`（M2F2-Det, CVPR 2025, arXiv:2503.20188）此前没有入表。已核读原稿§§3–4：它同时输出检测分数、文本解释和伪造attention map；解释文字按DD-VQA答案计算BLEU-4、CIDEr、ROUGE-L、METEOR、SPICE。故属直接强相关的解释生成/自动文本质量评价论文，但这些分数不是因果faithfulness；正文未见解释盲评或appropriate-reliance实验。已补入72（rank79）和90；90目前221篇且题名唯一，72目前82条。
+- AnomReason Ref.50 `X2-DFD`与表90既有`X²-DFD`为题名字符变体，复用原筛查，不重复核读。Ref.49/50匹配状态已更正至101。官方来源：[CVF Open Access](https://openaccess.thecvf.com/content/CVPR2025/html/Guo_Rethinking_Vision-Language_Model_in_Face_Forensics_Multi-Modal_Interpretable_Forged_Face_CVPR_2025_paper.html)、[arXiv全文](https://arxiv.org/html/2503.20188)。
+- 变更后复核仍待执行，并刷新ignored阶段ZIP；所有Scholar结果位置不变（74仍20,781），全局检索仍未完成。当前用户所见V110标签正常；另一个后台AnomReason Cited-by标签仍显示验证码，已不要求用户切换去寻找该隐藏标签，引用链暂记独立阻断。
+
+- 补记验证：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；90共221条且题名唯一、72共82条、101编号1–57连续唯一、74共20,781条唯一位置ID。ZIP 337个文件，CRC及逐文件比对通过，SHA-256=`5568ff72aaa14947bf51f94322d0031a0adf221d185b29934953d73b932b451f`。本补记前HEAD=`26f621d`。
