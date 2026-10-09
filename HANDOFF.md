@@ -1,3 +1,13 @@
+## 2026-10-09 T01-F2图像伪造解释忠实性路线续检（本查询可见索引完成；全任务未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本轮起点commit `39671f790c716192182d373769875cf95ffa8bc3`，本交接提交后以Git HEAD为准。仅修改本交接；检索CSV/原始页面/ZIP在本机 `outputs/`、`work/` 忽略目录。用户两个未跟踪文件继续保留且未暂存。
+- 按用户恢复指示继续Scholar查询 `T01-F2-IMAGE-FORENSIC-RELIABILITY`：`(“image forgery” OR “image tampering” OR “image splicing” OR “copy-move forgery”) × (“explanation faithfulness” OR “explanation fidelity” OR “sanity check” OR “parameter randomization”)`。Scholar估计数在186–198间波动；标准分页start=150后跳到167，已直接查start=160补足，再查start=170/176/180确认可见结果序列。start=180显示约186条、第19页、Next禁用。结果位置1–186无缺号，206条页面观察含20条跨偏移重复；这只证明本查询当前Scholar可见索引连续，不是主题召回率/零遗漏保证。
+- 逐条观察写入 `74_V2完整分页逐位置初筛.csv` 及专表 `114_T01-F2-IMAGE-FORENSIC-RELIABILITY逐位置筛选.csv`；该专表206行、186个不同位置。对分页尾端的技术、医学、图书/版本、视频和非视觉研究逐项记录排除/背景理由。页17邻近候选 SalArt-VQA 已加入90候选表，状态仍为待全文核验；不计作直接忠实性证据。候选90共87行，含已有候选，不等于87篇核心文献。
+- 更新87子式状态：本路线21个页面/偏移观察，206观察位置、186个连续唯一位置，标记“该查询可见索引完成”；此前150→167偏移异常由160核对。更新83审计：74共18203观察位置、细查询4346观察位置、63条子路线曾见末页、50条子路线当前标记覆盖完成；全局 `complete=false`，去重和强相关原稿筛选仍未完成。结果数均是观察位置/子路线统计，不是独立论文数。
+- 下一待执行细式 `T02-F2-S1`（图像操纵 × 解释术语 × grounding）首页估计约14,200条，过宽，不能顺页当作可完成覆盖；按矩阵方法递归拆词并先试规模。之后还有大量未执行细式、异常索引回检、强相关全文与递归引文链。用户最初提出的全面重检未完成，不得称“一个文献都没漏”或进入研究方案下一步。
+- 交付快照 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 已从当前输出目录重建：124文件，15,485,202字节；CRC/testzip与ZIP中每个文件逐字节匹配通过。验证命令：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；74/114 result_id唯一且筛选理由非空；114独立位置连续为1–186。
+- 后续建议：从14,200条的T02-F2-S1做递归细分和实际规模试检；检索正常时保留分页与偏移复核日志；再完成其他未试细式、大查询拆分、候选原稿评价终点核查和引文前后向追踪。ChatGPT Web可优先复核本次start=160/167/170/176/180的重复映射和T02-F2-S1拆分逻辑。没有修改模型代码，无模型/实验测试事项。
+
 ## 2026-10-08 遥感恢复、剩余小F4与细查询拆分（整体未完成）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；索引最新commit `0e0bddc9eae05c879f31633e52413477f279b257` 已推送；交接另提交推送，最终hash见Git HEAD。仅检索协议/HANDOFF tracked修改，work/outputs本机；两用户未跟踪文件不改/不提交。
