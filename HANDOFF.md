@@ -1208,3 +1208,10 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 新增*Dissecting Deepfake Artifacts via Multimodal Explanations*出版商摘要级审查；Springer全文访问受限。其可见参考文献1–40已逐篇主题筛查，报告文件`T15_DISSECTING-FAKEARTI-40_REFERENCES_逐篇主题初筛_20261010.csv`，第6与15条同篇重复。新增172和90边界结论及87路线记录；未增加主检索位置。
 - 数据提交：`b7c3b8a`；预计本HANDOFF提交后为最新hash。最终分支仍为`codex/forensic-explanation-literature`，远端`origin`。ZIP为614成员，SHA-256 `0a7e7b59bf3c6502fce6fbe5b5c234906a59166db93c2b03cbdd96e5d913a5b4`。验证：Python compileall、EFR 56/55对账、40条引用记录、65篇唯一核读、181条路线、ZIP CRC均通过。Git diff检查需采用`git -c core.whitespace=cr-at-eol diff --check`以容许Excel兼容CSV的CRLF行尾。
 - 待办：SIDA Scholar精确题名/Cited-by仍卡在第85标签的人机验证；章节正文尚未获得。继续其他高精度路线时复用已核身份并停止低价值重复翻页。总体检索未完成，不能保证零遗漏。
+
+## 2026-10-10续：Beyond Accuracy正式身份与效度边界复核
+
+- 数据提交：`83c3ed3`；HANDOFF同步后为最新提交。*Beyond Accuracy: Auditing Image Forgery Localization via Scene-Disjoint Evaluation and XAI Faithfulness*旧记录的IEEE document-number链接不正确，已核正为IEEE Access 14 (2026), 53101–53115，DOI `10.1109/ACCESS.2026.3680143`。作者正式出版目录、DBLP元数据和作者代码仓库README交叉核验。90/72/172已更新；复用优先表原有全文评审及表19的33项参考筛查，不重复计数。
+- 构念边界：该文是直接强相关的图像伪造定位XAI faithfulness审计，使用Grad-CAM++/IG、Saliency TV和参数随机化。TV更低表明空间连贯性proxy，randomization敏感性说明归因依赖已训练权重；单独都不足以建立因果忠实性。旧全文审阅也未发现删除/插入、对抗扰动、跨数据集或appropriate-reliance评测。
+- 计数：74主账24,766位置，90候选653篇，72排序200篇，172唯一原稿/摘要核读66项，87路线181条。ZIP 614成员，SHA-256 `46f938f8aecadda7ee4632fef5f53373198e84ba095de56014890a78c7446f11`。`compileall`、唯一性断言和ZIP CRC通过。
+- 遗留：SIDA Scholar验证页仍在第85标签，用户手工完成后继续题名与Cited-by链；全文受限的FakeArti章节待全文取得。整个领域搜索仍未完成，也不能承诺零遗漏。分支`codex/forensic-explanation-literature`；推送至`origin`已授权。
