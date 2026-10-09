@@ -153,3 +153,22 @@ X²-DFD评测/相关工作链中4篇直接相关文献已逐篇记录在输出`1
 - Scholar题录还出现只由ResearchGate上传的《Human-in-the-Loop Deepfake Forensics: Evaluating Expert Detection Performance Assisted by Multi-Scale Heatmap Explanations from DenseNet Architectures》。缺独立确认的作者机构、DOI或正式出版记录，可见文本存在需要查证的不一致，故在104逐位置表中隔离，不计入确认文献。非deepfake图像编辑/生成评估、纯检测准确率人评、音频/视频/文本工作分别标作排除或邻接，不冒充静态图像解释可靠性。
 - 逐位置台账校验：输出104包含97个本批观察位置，每行有决定与理由；累计74为17,790个唯一位置。85/87扩展到128条细分与引文路线；细分/子式结果3,764位置、58条到可见终页、46条符合当前严格完整判据。107条父式、13,941主矩阵位置和59条可见终页不变；补充位置77；20条历史受阻/异常观察仍保留，当前活动阻断为空。72优先表54项，90候选表64项；均含机制/综述/待核或邻接证据，不能解释为同样数量的直接faithfulness实证。
 - 本批更新来源状态、位置筛选和估计变化见输出72、74、83、85、87、90、104及`work/search_protocol_v2/fine_split_queries.json`。本轮只完成若干查询子式，整体检索和强相关种子引文递归未完成；不能据Google Scholar可见末页、估算数或结果位置承诺领域“一个不漏”。
+
+
+### 2026-10-09：末页复核、优先候选来源审计与非 deepfake 术语新试检
+
+- 从Google Scholar当前IAB断点核实 `deepfake "human evaluation" "visual explanations"`：页面明确显示第7页、总估算67，start=60页有7条，Next禁用。该页跨领域/词语偶然共现记录逐条排除；总路线已在输出104保留67条逐位置筛选，本次仅重新确认终页，不重复增加累计台账。
+- 对两条优先候选做来源级证据审计。DDL（Sun, Ruan, Li, TIFS 2025, DOI 10.1109/TIFS.2025.3553803）：交叉核实作者、卷页和公开摘要；摘要将fidelity、intelligibility、applicability列作评测维度，但本轮未获得IEEE全文，指标定义、扰动/随机化协议、人评样本与任务仍未知，故仍为“题录+摘要级强相关候选”，不作为已验证faithfulness证据。Anchors/XAIVIER（Jayakumar & Skandhakumar, IEEE ICITR 2022, DOI 10.1109/ICITR57877.2022.9993294）：IEEE题录与莫拉图瓦大学机构库交叉核实；该机构库条目实际类型为Conference-Abstract，公开摘要报告70.23% anchor affinity、检测准确率91.92%。IIT另列2022硕士论文PDF但本轮下载超时。无法核实anchor-affinity分母/公式、任何人评任务与样本；后续综述出现的89.58%“fidelity”说法未回原文核实，禁止与70.23%混同或解释为模型决策因果忠实。逐条来源状态和限制见输出108，72优先表已修正。
+- 新增非deepfake精确术语式 `("image forgery" OR "image tampering" OR "image splicing" OR "copy-move forgery") ("explanation faithfulness" OR "explanation fidelity" OR "sanity check" OR "parameter randomization")`。导航即进入Google人机验证，未看到结果列表；记录为一次受阻试检，而不是零命中或可见末页。请求用户手动恢复后从首页继续。输出83/85/87、fine_split_queries.json已记当前阻断。
+- 发现并纠正历史路线状态不一致：`T02-F3-S1-REFINE`在累计74实际有1页/10位置，约3,670估算、未分页；`T02-F3-S1-REFINE2`实际有7页/66位置至末页，而85/87仍标为未执行。本次将85/87和本地计划与逐位置台账对齐。累计位置数不变：17,790条跨路线位置，不能按论文篇数解释。子式/引文路线现为129条、3,764个结果位置、58条可见末页、46条达严格完整判据；新路线未获任何结果。父式107条/13,941位置/59条末页，补充位置77。历史阻断观察21，当前活动阻断为新非deepfake窄式。
+- 检索仍未完成；人评宽式与deepfake人评宽式尚未分页，旧候选原稿仍有缺口，强相关参考/被引递归及版本去重未完成。不得承诺“一个不漏”。
+
+
+### 2026-10-09：恢复非 deepfake 术语式并检索合成图证据一致性（仍未完成）
+
+- 用户恢复 Google Scholar 后，检索式 `("image forgery" OR "image tampering" OR "image splicing" OR "copy-move forgery") ("explanation faithfulness" OR "explanation fidelity" OR "sanity check" OR "parameter randomization")` 到第18页，Next禁用，Scholar估算186条；实际可见179个题录位置。分页从start=150跳至167，末页估计186–198波动；标为“可见末页、索引/题录计数缺口待查”，不计严格完整。查询状态及分页断点见87/85。本次179条已累计到路线位置统计，但逐题名记录尚未写入74；汇总口径因此区分：累计74有17,816条已导出逐位置筛选记录；另有该路线179条可见位置待转录入74。不能把未导出记录说成逐条日志已完成。
+- 第二条既定细式T06-F2-S3：`("synthetic image" OR "generated image") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("evidence consistency")`。连续检索start=0/10/20到第3页Next禁用，观察26位置；Scholar估算从36降到26，变化27.8%，超过25%阈值。全部26位置已逐题名、摘要片段记录于110并并入74。路线虽到可见末页，仍因估算不稳定标为待复测/拆词，严格完整计数不增加。
+- 新增候选并明确终点边界：METER（arXiv 2025）是多模态伪造解释/证据链基准，报告空间/时间IoU、伪造类型追踪和evidence consistency；这些指标不自动证明对检测决策的因果faithfulness。INSIGHT（arXiv 2025）用G-Eval/VLM judge作解释事实性核验，需审计评价器与标注来源。From Evidence to Verdict（arXiv 2025）分析多源取证工具可靠度/覆盖度及证据冲突，属程序性取证相邻工作。FakeBench（TIFS 2025）和HAVE/PAVE（arXiv 2026）已加优先表；SGEVL-Forensics在Scholar摘要明确提出解释是否依赖被引用证据子图，候选仍须读Springer章节原文。EFR在新式重复命中，沿用既有ID，不重复当新论文。
+- STeREx-Net题录（Scholar指向MDPI Technologies 2026）暂隔离：检索片段中的特定实验叙述与本研究项目上下文高度相近，且本轮原始页面打开失败。先核正式元数据、作者/版本/出版历史与全文，验证前不纳入确认文献或强相关目录。
+- 更新结果文件：110（26个逐位置审查记录）、74、72、83、85、87、90及`work/search_protocol_v2/fine_split_queries.json`。目前子式129条、路线观察60条到可见末页、严格完整46条；路线实际结果位置3,969（含未逐条导出的179条），可导出累计74为17,816个位置；父式13,941位置、补充77位置。179个T01-F2可见位置记录在路线审计但逐条筛选表尚待补齐，勿与已导出数混写；所有数都是检索位置/记录，不是去重论文数。整体重检、引文链递归、强候选原文审核仍在进行，不承诺零遗漏。
+- 主要原始来源：SGEVL-Forensics Springer卷目录 `https://link.springer.com/book/10.1007/978-3-032-38407-2`；HAVE/PAVE arXiv `https://arxiv.org/abs/2608.01988`；FakeBench作者机构页 `https://scholars.cityu.edu.hk/en/publications/fakebench-probing-explainable-fake-image-detection-via-large-mult/`；METER `https://arxiv.org/abs/2507.16206`；INSIGHT `https://arxiv.org/abs/2511.22351`；AIFo `https://arxiv.org/abs/2511.00181`。页面摘要/目录级核查不代表这些全部阅读全文。
