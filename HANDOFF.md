@@ -1226,3 +1226,4 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要修改：阶段报告`00_重检阶段报告_未完成.md`、效度核读表`172_...csv`、新侧表`T16_FORGE_...csv`、阶段ZIP及本文件。
 - 遗留：SIDA Scholar页面需人工解除验证后继续精确题名与前向引用；总体查询尚未闭合、不能保证零遗漏。下一步优先从SIDA验证页恢复后读结果与Cited-by，同时继续复用82篇以内已核种子与身份映射，跳过已筛标题。
 - ChatGPT Web下一步检查：核对FORGE的人评faithfulness定义与标注接地指标在最终相关性分层中的位置；验证解除后续查SIDA Scholar。
+- 本阶段数据与日志检查点已提交：`ce0bba8`（`docs: audit FORGE citation chain and explanation validity`）；交接文件需在最终同步提交后再列出最终HEAD。
