@@ -1161,7 +1161,7 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 
 ## 2026-10-10：FakeVLM-R1解释完整性与引文链检查点
 
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本次提交哈希将在提交后补记。用户已授权推送至已配置的origin。原有两个未跟踪用户文件保持未修改、未暂存。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索数据检查点提交：`0271783`，本HANDOFF同步提交随后完成。用户已授权推送至已配置的origin。原有两个未跟踪用户文件保持未修改、未暂存。
 - 新增逐位置筛选：窄式因果解释faithfulness从第4–9页补58项，当前快照0–87共88个位置；解释稳定性式14项；宽式sufficiency/completeness首屏10项；精确式`"image forgery" "explanation completeness"`命中FakeVLM-R1。72/90均复用既有题名与排序，不新增重复条目；FakeVLM-R1仍是候选与优先rank 140。
 - FakeVLM-R1官方参考文献76条完成题录/主题级逐条筛查；其当前Scholar前向引用2项逐条筛查。FakeVLM-R1与Veritas++原稿判断补入172，MAD-Guard复用已有全文判断。参考表仅代表题录级筛选，不表示每篇全文核验。明细见`T02-F2-FAKEVLM-R1-76_REFERENCES_逐篇主题初筛_20261010.csv`和`CIT-FAKEVLMR1-FWD_被引论文逐条筛查_20261010.csv`。
 - 当前计数：74主账24,646个唯一位置；90候选648个唯一题名；72优先197项；172效度核读57项；87路线172条。阶段ZIP有608个成员且CRC通过，SHA-256=`bd815a23c34d33467de2adab9dfaf372f8d9db493b4215ad48bc82ab8097d26d`。验证：`python3 -m compileall -q work/search_protocol_v2`、`git -c core.whitespace=cr-at-eol diff --check`通过；主账/候选/优先/核读计数和ZIP CRC核验通过。无业务源码改动。
