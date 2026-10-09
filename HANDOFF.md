@@ -2,7 +2,7 @@
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；上次已推送检查点commit `e8acb06 docs: record Scholar search checkpoint`，本轮完成后会更新交接并推送。只更新忽略目录下检索记录与handoff，不改业务源码；用户原有两个未跟踪文件保持未修改、未暂存。
 - Google Scholar路线 `T11-F2-S2` 查询式：`(deepfake OR "face forgery" OR "facial manipulation") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination)`。恢复后核第30页`start=290`正常，继续第31页`start=300`并逐项筛录位置301–310；点击第32页后`start=310`被Google异常流量页拦截，未把阻断页当空结果/末页。当前等待用户恢复；恢复后从`start=310`续查。
-- 全局逐位置主表`74_V2完整分页逐位置初筛.csv`现21,222个位置观察，result_id唯一、筛选理由齐全；`90_本轮新增强相关候选与引文复核.csv`296条候选观察；`72_V2已复核强相关优先清单.csv`159个有序条目（临时序列，非最终统一相关性排序）。这些数都不是独立论文数或最终纳入数。第31页的FakeScope、Show Me the Work等是目录已有论文，明确标记复用旧核查，不重复阅读全文；新增《The age of synthetic realities》只列邻接背景/引文枢纽，须查原文引文后再决定是否保留。
+- 全局逐位置主表`74_V2完整分页逐位置初筛.csv`现21,222个位置观察，result_id唯一、筛选理由齐全；`90_本轮新增强相关候选与引文复核.csv`296条候选观察；`72_V2已复核强相关优先清单.csv`159个有序条目（临时序列，非最终统一相关性排序）。这些数都不是独立论文数或最终纳入数。第31页的FakeScope、Show Me the Work等是目录已有论文，明确标记复用旧核查，不重复阅读全文；新增《The age of synthetic realities》已核作者arXiv HTML §7.1.3：明确陈述深伪图像检测不够可解释、需提供理由，属于早期领域缺口背景/引文枢纽；没有解释忠实性或人因依赖测量。其紧邻引用[241][242]是检测/泛化论文，不应误认作解释可靠性证据。
 - 第31页还排除了通用元宇宙、指纹识别威胁、音频深伪、影响策略、远程脉搏、GeoAI、CLIP检索幻觉及纯检测模型，理由均逐条记录在`145_T11-F2-S2_deepfake_hallucination_第31页逐位置筛选.csv`。该宽式仍高噪声；Scholar估算约4,790不代表有效文献数或覆盖完备。全局`complete=false`，多个主题子式/引用链及去重全文筛选仍未完成，不承诺零遗漏。
 - 输出目录中检索账本被`.gitignore`忽略，不会因push HANDOFF而自动入Git；阶段ZIP须同步更新，用户可从本地`outputs/`查看。`83`审计已记当前受阻断点，`87`路线表记第31页310位置和下一步start=310。
 - 建议下一步：用户恢复后继续`start=310`；每页先用题名去重旧目录，只对新强相关候选做原稿/引文审查；阶段性复建压缩包、做唯一ID/空理由/状态一致性和CRC校验；再交接并推送。
