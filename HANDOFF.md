@@ -1,3 +1,16 @@
+# 2026-10-09 Scholar T02-F2-RELIABILITY 续检（第45页验证码阻断，仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`，origin `https://github.com/brodyZhao/my-research-project.git`；从上一已推送检查点 `0e37306` 继续。用户原有两个未跟踪文件保持未改动、未暂存。检索原始账本/阶段ZIP位于忽略目录 `outputs/`，不会通过Git push上传。
+- Google Scholar 查询式 `"image forgery" explanation reliability` 已逐条筛至第44页（start=430），累计本路线44页/440个可见位置；Scholar约10,800是动态估计，查询未闭合。第45页 `start=440` 出现 reCAPTCHA，未取得结果，已保存阻断与断点；等待用户手动完成验证后续查。
+- 第44页新增 Kasra、Shen、O’Brien 的 *Seeing is believing: How people fail to identify fake images on the web*（CHI 2018 Extended Abstracts，DOI 10.1145/3170427.3188604）。作者公开页面和题录摘要确认研究人们判断网络配图真实性、即使讨论过图像伪造仍可能无法识别精心操纵图像，且使用非图像线索判断可信度；它不评估AI模型解释或解释faithfulness，因此作为人类判断背景/引文追踪候选，不列为强相关核心。其余9项为传统copy-move检测、检测综述或检测性能可靠性，逐项理由见第44页专表。
+- `74_V2完整分页逐位置初筛.csv` 现22,336条，result_id唯一、筛选理由非空；`90_本轮新增强相关候选与引文复核.csv` 现396条候选观察，包含重复/邻接/待核，不是独立强相关论文数量。路线表`87`标第1–44页、440位置，下一页`start=440`；审计`83`已记当前验证码，`complete=false`。第44页日志为 `T02-F2-RELIABILITY_20261009_第44页逐位置筛选.csv`。
+- 阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 已重建为470个成员，ZIP CRC通过，SHA-256 `006b697244dc31035564a8dde3a59152793947e34e332ae9931b2dc2f9e27fa1`。检索日志保留在本地outputs，不在Git仓库内。
+- 验证：逐位置记录22,336条、唯一ID及筛选理由完整；第44页专表10条；路线第1–44页/440位置与验证码断点断言通过；ZIP CRC通过；`python3 -m compileall -q work/search_protocol_v2`和`git diff --check`通过。未修改模型或业务源码，无需模型测试。
+- 遗留：用户恢复Scholar后从 `start=440` 接续；逐条标题匹配旧候选，已核原稿复用既有结论；再推进Scholar后续分页和未完成主题/引用链。强相关原文与引用闭环、最终排序仍未完成，不能宣称“一个不漏”。
+- ChatGPT Web下一步：恢复同一Scholar查询 `https://scholar.google.com/scholar?start=440&q=%22image+forgery%22+explanation+reliability&hl=zh-CN&as_sdt=0,5` 后从第45页继续；自动化分页/输出不把异常页记成空结果或终页。
+
+---
+
 # 2026-10-09 Scholar T02-F2-RELIABILITY 续检（第36页检查点；仍未完成）
 
 - 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；本检查点基于上一已推送交接 `db4f082`，后续交接同步提交会记录本次检索检查点commit。远端origin仍为 `https://github.com/brodyZhao/my-research-project.git`。原有两个未跟踪用户文件未修改、未暂存。
