@@ -832,3 +832,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 审计83总结果位置更新为19,356；父路线107/13,941、子/引文路线149/4,837、补充82、其他独立补充位置496；当前无活动验证码阻断，历史阻断观察仍23。V109状态在87记录为70页/700位置，下一页start=700；complete=false。
 - 验证已通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；74共19,356条、ID唯一、筛选理由齐全，216–223各10行，83/87计数对齐。阶段ZIP含230个文件且CRC通过，SHA-256=`5d2de22cd6bd59ef14c058a65caa2ae9197badbdd80a80f67b0e779465c2c908`。仅暂存本交接文件和检索协议；两份用户未跟踪文件保持未触碰。
 - 下一步：继续Scholar start=700的每页筛查；优先取得并核读Kadam 2021综述、Lin et al. 2023、MoFAIR、OMNI-fake、ForgerySpotter等原稿，记录解释可靠性评估协议和边界；随后沿强相关种子的前后向引文继续扩展，尤其完整闭合EFR引文链。不能把当前高召回日志宣称为零遗漏完成版。
+
+### 2026-10-09：V109续检到第75页，新发现解释基准论文（仍在进行）
+
+- 本分支：`codex/forensic-explanation-literature`；origin为项目GitHub远程。Tracked阶段文件：检索协议与HANDOFF。用户两份未跟踪文件保持未修改、未暂存。
+- V109宽式从start=700继续筛查第71–75页50个结果位置，新增输出224–228，全部写入累计74。累计Scholar位置台账现为19,406条，ID唯一、筛选理由非空；结果位置会重复，不是唯一论文数。V109共75页/750位置，Scholar约20,900，下一断点start=750；搜索尚未完成。
+- 重大候选纠漏：已从Springer原文确认《Dissecting Deepfake Artifacts via Multimodal Explanations》（Bai et al., MMM 2026, DOI 10.1007/978-981-95-6950-2_3），其摘要提出FakeArti数据集/解释评价benchmark、1,414张深伪图、4,170个像素级伪迹mask，且明确提到接地难与相互矛盾输出会损害解释可靠性。列为极高优先全文审查对象。其40条参考文献应单独逐篇筛，优先直接读参考19（deepfake XAI量化评价）、25 FakeShield、26 SIDA、24 Forensics-Bench等；不要把解释benchmark/定位精度直接当成faithfulness证明。
+- 其他高优先候选：Skyra（CVPR 2026视频伪迹grounding与人工注释），NVMS-Net（图像处理操纵检测并声称model explainability），Journal of Forensic Sciences 2026 Stable Diffusion法证似然比和解释可视化。均需核原稿；像素定位、检测分数校准、文本可读性与解释忠实性应分开评估。人类心理物理deepfake检测工作记为人类任务邻接，不视作XAI用户研究。
+- 83更新至总位置19,406（父107/13,941；子149/4,837；补充82；其他546），V109为75页/750位置；历史阻断23，当前无阻断，整体complete=false。单页日志224–228及候选90记录新发现。
+- 下一步：从V109 start=750继续，并建立Dissecting Deepfake Artifacts正式参考文献逐条审查表。优先取原文核查FakeArti标注、解释事实性/一致性和ADAD指标；沿其参考文献追查FakeShield/SIDA和定量解释评价。继续至分页/检索末端，并回头做不同检索路线和EFR的引文闭包。
+- 本阶段验证已通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；累计74共19,406行且ID唯一、理由与位置齐全；216–228各10行；83/87断点对齐。阶段ZIP含235个文件，CRC通过，SHA-256=`31e1b3e3a55aba7a0993e895b3047f68c410fdc609e4887fc6aad75abfa1cf92`。本阶段仅提交HANDOFF和检索协议；两份用户未跟踪文档未触碰。

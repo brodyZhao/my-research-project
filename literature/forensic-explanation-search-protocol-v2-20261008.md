@@ -200,3 +200,13 @@ X²-DFD评测/相关工作链中4篇直接相关文献已逐篇记录在输出`1
 - 已核来源：MoFAIR的Springer DOI/ICIC卷册元数据与摘要检索结果；2021综述期刊原始页/DOI；遗传编程论文IEEE DOI及会议目录；Forensic Self-Descriptions的CVF作者版确认其self-description并非自然语言解释；LLM生成艺术解释的CEUR原文；被篡改图像/视频法证分析的MDPI原文。其余无全文可访问项继续保持待核，不能把Scholar摘要作为全文效度结论。
 - 后续从V109 `start=700`继续逐页筛查，同时优先全文审查新发现的2021综述与2023遗传编程论文并沿其参考文献/被引关系检索；之后完成剩余细式、跨路线去重和EFR强种子的递归引文链。不得承诺字面意义“一个不漏”或把20,900条估算等同论文总数。
 - 验证：`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过；累计74共19,356条，ID无重复且筛选理由齐全；本批8份页面表各10条；83/87计数和断点对齐。阶段ZIP重建为230个文件，CRC通过，SHA-256=`5d2de22cd6bd59ef14c058a65caa2ae9197badbdd80a80f67b0e779465c2c908`。
+
+### 2026-10-09：V109宽式续检至第75页，命中多模态解释评测新核心文献（未完成）
+
+- 延续V109从start=700检索并逐项筛查第71–75页，共50个新结果位置；单页表224–228并入累计74。V109累计第1–75页/750位置；Scholar估算仍约20,900、尚未到可见末页；断点start=750。累计台账现有19,406位置ID，均非空理由且唯一，包含不同查询交叉命中/版本/引文卡片，不等于独立论文数量。
+- 重要新直接命中：Scholar将《Dissecting Deepfake Artifacts via Multimodal Explanations》标题缩短显示；已核Springer正式章节页：Bai et al., MMM 2026, LNCS 16412, pp.32–45, DOI `10.1007/978-981-95-6950-2_3`。出版商摘要写明：解释存在视觉接地困难和相互矛盾输出；FakeArti包含1,414张深伪图和4,170个像素级伪迹掩码，作为深伪解释评价基准；ADAD输出视觉伪迹定位和文本解释。这是本题直接核心候选。全文还需核benchmark的ground truth、解释正确性/faithfulness指标和评估效度，不能把benchmark存在等同因果解释faithfulness已证实。其参考文献含《Towards Quantitative Evaluation of Explainable AI Methods for Deepfake Detection》、FakeShield、SIDA、Forensics-Bench等，下一步应建独立参考文献逐条筛查并优先读这些强相关条目。
+- 第71页另命中Skyra（CVPR 2026）：CVF官方摘要说明人工伪迹注释、视频伪迹接地推理与解释benchmark；按强相关视频邻接单列。第75页新候选NVMS-Net（摘要同时提通用图像操纵检测与model explainability）以及Journal of Forensic Sciences 2026的Stable Diffusion生成图像似然比法证评价（摘要提解释可视化与校准判据），均加入90候选表；需看原文验证解释定义、解释评估与检测分数校准的区别。第74页《Psychophysical evaluation of human performance in detecting digital face image manipulations》作为人类识别基线邻接，不冒充AI解释研究。
+- 页面筛选边界继续区分：普通区域分割/注意力门不自动等于解释；synthetic attribution不等于XAI attribution；image fidelity可能指生成图像逼真度；医学图像伪造、假新闻/脱离语境、一般图像编辑作为邻接或排除项标注。
+- 83/87更新：父路线107/13,941、子/引文149/4,837、补充82不变；其他路线外逐位置记录546；合计19,406。V109为75页/750位置，next start=750；历史验证码阻断23、当前无活动阻断。overall complete=false。
+- 已验证：Scholar台账页71–75逐条筛查；Springer章节官方摘要/书目信息/参考文献；CVF Skyra官方页；IEEE/Wiley新候选摘要题录。新候选仍待全文，不应写成解释可靠性已验证结果。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`通过；74累计19,406行且ID唯一/理由和result_position齐全，本批13页日志各10行，83/87对齐。阶段ZIP含235个文件、CRC通过，SHA-256=`31e1b3e3a55aba7a0993e895b3047f68c410fdc609e4887fc6aad75abfa1cf92`。
