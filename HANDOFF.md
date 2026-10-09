@@ -997,3 +997,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 新候选边界复核：Reliability Map Estimation（WACV 2018）是相机指纹patch适用性/可靠性map；RADAR（NeurIPS 2025）是扩散编辑检测与跨生成器泛化可靠性；均不评价XAI解释faithfulness。PromptForge-350k的prompt引导定位也不等于解释输出。未新增直接解释候选。正文与证据边界记入逐位置表/候选表。
 - 阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 含506个文件，17,559,455字节，SHA-256 `50bf391cfb5ee233c142417e9235e53ea73afa4af4c04e48823bca6891650d03`；CRC和包内逐文件字节校验通过。`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`及逐页10项连续位置、全表唯一ID/理由、候选与路线计数断言通过。
 - 下一步继续 Scholar start=800；先对照90候选去重，只对新强相关条目核正文和引文。检索/去重/统一相关性排序仍未完成。
+## 2026-10-09：图像伪造解释可靠性宽式筛查至 Google Scholar 第100页（仍未完成）
+
+- 仓库：my-research-project；当前分支：codex/forensic-explanation-literature；本阶段归档提交：9f9716c。origin为已配置的项目GitHub仓库；用户此前明确授权继续检索并推送。两个既有未跟踪文件 faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md 与 literature/forensic-explanation-relevance-20261004.md 未修改、未暂存。
+- 查询 "image forgery" explanation reliability 从第86页续查至第100页，新增150个逐位置筛选记录；日志位于归档目录 outputs/图像鉴伪解释可靠性_重检_2026-10-05/T02-F2-RELIABILITY_20261009_第86页逐位置筛选.csv 至 第100页。主台账74累计22,896个结果位置，ID唯一且理由非空；跨检索位置含引用卡/重复论文，不等于唯一论文数。
+- 第100页Next禁用，直查start=1000显示第101页及约10,800条估算值，但没有题录结果卡片。路线87记录前100页/1000位置已筛，分页受限且coverage_complete=false；审计83仍为complete=false。宽式不能视为闭合，下一步转到未完成高精度英文子式和强相关论文的引文链。
+- 新发现线索：第89页ResearchGate结果 “VeriPress: Evidence-Grounded Multi-Agent Reasoning for Interpretable Multimodal News Classification” 表面高度相关，但作者上传稿明确称generated research manuscript，结果数字为illustrative targets，已在90隔离，未列为可信研究。第97页命中Kadam等人2021年综述，但该项已在90记录并有官方IJECE原始页及DOI核验，复用已有记录。
+- 阶段包 outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip 含525个文件，17,601,516字节，SHA-256=27268363213ddd3eec4325dc0d283a21c78e1cd4177900e7b5fbea1a4ec644eb；CRC及目录与压缩包逐文件字节比对通过。python3 -m compileall -q work/search_protocol_v2、git diff --check、主账唯一ID/理由非空及第86–100页每页10位置断言均通过。无业务源码修改，无需模型测试。
+- 建议下一步：优先完成英文高精度人评/接地/忠实性拆分式（例如未闭合T06 synthetic/generated-image + human-evaluation路线），随后继续EFR及图像鉴伪解释核心种子的前后向引文。先按标题crosswalk查重，复用已有全文筛查；只为新增或证据缺口条目核查原稿和References。最终统一去重/相关性排序仍未完成，不能宣称零遗漏或总体穷尽。
