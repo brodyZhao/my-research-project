@@ -4093,5 +4093,529 @@
     "starts_screened": [
       20
     ]
+  },
+  {
+    "query_id": "T02-F2-CAUSAL-EXPL",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪×因果解释/反事实解释/faithfulness",
+    "query": "(\"image forgery detection\" OR \"image manipulation detection\") (\"causal explanation\" OR \"counterfactual explanation\" OR faithfulness)",
+    "start": 30,
+    "page_number": 4,
+    "url": "https://scholar.google.com/scholar?start=30&q=(\"image%20forgery%20detection\"%20OR%20\"image%20manipulation%20detection\")%20(\"causal%20explanation\"%20OR%20\"counterfactual%20explanation\"%20OR%20faithfulness)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "Scholar实时显示第4页逐位置筛查；估计数随分页由约98波动至88，已保留全部可见条目。",
+    "phase": "窄式因果解释faithfulness检索",
+    "footer": false,
+    "next": [
+      40
+    ],
+    "blocked": false,
+    "estimated_results": 98,
+    "rows": [
+      {
+        "title": "Semantic attention and progressive training for image authenticity assessment and tampered region highlighting",
+        "metadata": "Y Ren et al.; Information Sciences, 2026",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0020025526006304",
+        "screen_decision": "待核低优先候选：篡改定位/注意区域",
+        "screen_reason": "Scholar题名摘要表明是图像真实性检测及篡改区域高亮；页面未显示解释忠实性验证。暂留待核线索，不列强相关。"
+      },
+      {
+        "title": "Semantic Enrichment of Forensic Artifacts: Using XAI-Generated Feature Attributions to Enhance Cognitive AI Knowledge Graphs",
+        "metadata": "EA Okonkwo, MT Chen, SJ Williams; ResearchGate, 2025 (identity unverified)",
+        "url": "https://www.researchgate.net/publication/408316104_Semantic_Enrichment_of_Forensic_Artifacts_Using_XAI-Generated_Feature_Attributions_to_Enhance_Cognitive_AI_Knowledge_Graphs",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "VeriPress: Evidence-Grounded Multi-Agent Reasoning for Interpretable Multimodal News Classification",
+        "metadata": "X Cui et al.; ResearchGate manuscript (identity/status unverified)",
+        "url": "https://www.researchgate.net/publication/412918955_VeriPress_Evidence-Grounded_Multi-Agent_Reasoning_for_Interpretable_Multimodal_News_Classification",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Towards Reliable Forgery Detection Techniques for Remote Sensing Images: Parametric Evaluation and Open Challenges",
+        "metadata": "D Patole et al.; Multimedia Tools and Applications, 2026",
+        "url": "https://link.springer.com/article/10.1007/s11042-026-21389-1",
+        "screen_decision": "跨任务邻接或排除",
+        "screen_reason": "命中来自视频/医学/社交媒体/生成编辑/检测系统等相邻任务；摘要未表明评价图像鉴伪解释可靠性，按边界记录，不列强相关。"
+      },
+      {
+        "title": "EditSleuth: A Dataset of Grounded Reasoning Chains for Image-Edit Forensics",
+        "metadata": "VL Nguyen et al.; arXiv:2605.08695, 2026",
+        "url": "https://arxiv.org/abs/2605.08695",
+        "screen_decision": "直接/强相关候选：复用现有记录",
+        "screen_reason": "结果涉及图像/多模态伪造检测、定位或grounded reasoning；按唯一论文题名复用既有筛选/原文记录，避免重复计篇。"
+      },
+      {
+        "title": "Pixels Don't Lie (But Your Detector Might): Bootstrapping MLLM-as-a-Judge for Trustworthy Deepfake Detection and Reasoning Supervision",
+        "metadata": "K Kuckreja et al.; arXiv:2602.19715, 2026",
+        "url": "https://arxiv.org/abs/2602.19715",
+        "screen_decision": "直接/强相关候选：复用现有记录",
+        "screen_reason": "结果涉及图像/多模态伪造检测、定位或grounded reasoning；按唯一论文题名复用既有筛选/原文记录，避免重复计篇。"
+      },
+      {
+        "title": "Generalizable and privacy-preserving multimedia forgery detection via semantically disentangled and temporally-aware deep learning architectures",
+        "metadata": "S Jadhav, M Bartere; International Journal of Information Technology, 2025",
+        "url": "https://link.springer.com/article/10.1007/s41870-025-02978-z",
+        "screen_decision": "跨任务邻接或排除",
+        "screen_reason": "命中来自视频/医学/社交媒体/生成编辑/检测系统等相邻任务；摘要未表明评价图像鉴伪解释可靠性，按边界记录，不列强相关。"
+      },
+      {
+        "title": "Diffusion-based Evidence-Anchored Purification for Adversarially Robust Image Manipulation Localization",
+        "metadata": "A Li, J Zhang, S Li; 2025 conference paper (IEEE record)",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11333824/",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Editing on the Generative Manifold: A Theoretical and Empirical Study of General Diffusion-Based Image Editing Trade-offs",
+        "metadata": "Y Hu et al.; arXiv:2603.29736, 2026",
+        "url": "https://arxiv.org/abs/2603.29736",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Exploring and Distilling Multi-Dimensional Clues for Interpretable Social Bot Detection",
+        "metadata": "Y Han et al.; ACL 2026",
+        "url": "https://aclanthology.org/2026.acl-long.1338/",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-CAUSAL-EXPL",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪×因果解释/反事实解释/faithfulness",
+    "query": "(\"image forgery detection\" OR \"image manipulation detection\") (\"causal explanation\" OR \"counterfactual explanation\" OR faithfulness)",
+    "start": 40,
+    "page_number": 5,
+    "url": "https://scholar.google.com/scholar?start=40&q=(\"image%20forgery%20detection\"%20OR%20\"image%20manipulation%20detection\")%20(\"causal%20explanation\"%20OR%20\"counterfactual%20explanation\"%20OR%20faithfulness)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "Scholar实时显示第5页逐位置筛查；估计数随分页由约98波动至88，已保留全部可见条目。",
+    "phase": "窄式因果解释faithfulness检索",
+    "footer": false,
+    "next": [
+      50
+    ],
+    "blocked": false,
+    "estimated_results": 98,
+    "rows": [
+      {
+        "title": "DocShield: Towards AI Document Safety via Evidence-Grounded Agentic Reasoning",
+        "metadata": "F Zeng et al.; arXiv:2604.02694, 2026",
+        "url": "https://arxiv.org/abs/2604.02694",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Multimodal deep learning framework for detection and attribution of adversarial information operations on social media platforms",
+        "metadata": "NHM Silalahi, J Manurung; Journal of Defense Technology and Engineering, 2026",
+        "url": "https://research.idu.ac.id/index.php/jdte/article/view/17",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "PRPO: Paragraph-level Policy Optimization for Vision-Language Deepfake Detection",
+        "metadata": "T Nguyen et al.; arXiv:2509.26272 / ICML 2026 PMLR",
+        "url": "https://proceedings.mlr.press/v306/nguyen26f.html",
+        "screen_decision": "强相关直接研究：复用全文核读",
+        "screen_reason": "深伪检测的解释faithfulness/grounding与人评直接相关；全文、限制及引用筛查已在现有唯一记录中，不重复核读或计篇。"
+      },
+      {
+        "title": "From Advertised Improvements to Measured Capabilities: Evaluating ChatGPT Images 2.5 on Forgery Tasks",
+        "metadata": "A Raj et al.; arXiv:2609.13617, 2026",
+        "url": "https://arxiv.org/abs/2609.13617",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "FaceOracle: Chat with a Face Image Oracle",
+        "metadata": "W Kabbani, K Raja, R Ramachandra; ECCV Workshops, 2024",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-031-92089-9_14",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "TRIDENT: Tri-modal Deepfake Perception, Detection, and Hallucination Grand Challenge",
+        "metadata": "WH Cheng et al.; OpenReview, 2026",
+        "url": "https://openreview.net/forum",
+        "screen_decision": "邻接：视频深伪解释幻觉",
+        "screen_reason": "视频多模态深伪解释的faithfulness/幻觉评测邻接图像任务；不能据标题视为图像鉴伪直接证据。"
+      },
+      {
+        "title": "Deep Learning Based Computer Generated Face Identification Using Convolutional Neural Network",
+        "metadata": "LM Dang et al.; Applied Sciences 8(12), 2018",
+        "url": "https://www.mdpi.com/2076-3417/8/12/2610",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Region duplication detection in digital images based on Centroid Linkage Clustering of key-points and graph similarity matching",
+        "metadata": "R Dixit, R Naskar; Multimedia Tools and Applications, 2019",
+        "url": "https://link.springer.com/article/10.1007/s11042-018-6666-1",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "A Survey of Generative Video Models as Visual Reasoners",
+        "metadata": "A Hoxha et al.; TechRxiv, 2026",
+        "url": "https://www.techrxiv.org/doi/full/10.36227/techrxiv.176857888.84304881/v1",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "UC-VLM: Consistency-Driven Learning for AI-Generated Image Detection with Vision-Language Large Models",
+        "metadata": "L Tan et al.; ECCV 2026 chapter / arXiv:2608.15238",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-37023-5_10",
+        "screen_decision": "直接/强相关候选：复用现有记录",
+        "screen_reason": "结果涉及图像/多模态伪造检测、定位或grounded reasoning；按唯一论文题名复用既有筛选/原文记录，避免重复计篇。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-CAUSAL-EXPL",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪×因果解释/反事实解释/faithfulness",
+    "query": "(\"image forgery detection\" OR \"image manipulation detection\") (\"causal explanation\" OR \"counterfactual explanation\" OR faithfulness)",
+    "start": 50,
+    "page_number": 6,
+    "url": "https://scholar.google.com/scholar?start=50&q=(\"image%20forgery%20detection\"%20OR%20\"image%20manipulation%20detection\")%20(\"causal%20explanation\"%20OR%20\"counterfactual%20explanation\"%20OR%20faithfulness)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "Scholar实时显示第6页逐位置筛查；估计数随分页由约98波动至88，已保留全部可见条目。",
+    "phase": "窄式因果解释faithfulness检索",
+    "footer": false,
+    "next": [
+      60
+    ],
+    "blocked": false,
+    "estimated_results": 98,
+    "rows": [
+      {
+        "title": "Back-in-time diffusion: Unsupervised detection of medical deepfakes",
+        "metadata": "FM Grabovski et al.; ACM Transactions on Multimedia Computing, Communications, and Applications, 2025",
+        "url": "https://dl.acm.org/doi/10.1145/3744656",
+        "screen_decision": "跨任务邻接或排除",
+        "screen_reason": "命中来自视频/医学/社交媒体/生成编辑/检测系统等相邻任务；摘要未表明评价图像鉴伪解释可靠性，按边界记录，不列强相关。"
+      },
+      {
+        "title": "ASAP: Interpretable Analysis and Summarization of AI-Generated Image Patterns at Scale",
+        "metadata": "J Huang et al.; arXiv:2404.02990, 2024",
+        "url": "https://arxiv.org/abs/2404.02990",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "OmniVL-Guard: Towards Unified Vision-Language Forgery Detection and Grounding via Balanced RL",
+        "metadata": "J Shen et al.; arXiv:2602.10687, 2026",
+        "url": "https://arxiv.org/abs/2602.10687",
+        "screen_decision": "直接/强相关候选：复用现有记录",
+        "screen_reason": "结果涉及图像/多模态伪造检测、定位或grounded reasoning；按唯一论文题名复用既有筛选/原文记录，避免重复计篇。"
+      },
+      {
+        "title": "ASAP: Visual Analytics for Identifying and Analyzing Image Patterns in AI-Generated Images",
+        "metadata": "J Huang et al.; Information Visualization, 2026",
+        "url": "https://journals.sagepub.com/doi/abs/10.1177/14738716261481077",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "VeriScene: Reconstructing Crime Scenes from Legal Evidence via World-Model Agent",
+        "metadata": "KC Fu et al.; arXiv:2609.08342, 2026",
+        "url": "https://arxiv.org/abs/2609.08342",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "VideoVeritas: AI-Generated Video Detection via Perception Pretext Reinforcement Learning",
+        "metadata": "H Tan et al.; arXiv:2602.08828, 2026",
+        "url": "https://arxiv.org/abs/2602.08828",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Large Language Models for Multimodal Fact-Checking: Methodological Advances and Persistent Challenges",
+        "metadata": "T Zhu et al.; SSRN, 2026",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "SA-GGCoT: Social-Aware Graph-Grounded Chain-of-Thought for Multimodal Claim Verification under Bounded Evidence",
+        "metadata": "Y Zhang et al.; Journal of King Saud University, 2026",
+        "url": "https://link.springer.com/article/10.1007/s44443-026-01072-z",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "AI-Powered Fake News Detection Using LLMs and Knowledge Graphs",
+        "metadata": "M Shah et al.; 2026 conference paper, IEEE Xplore",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11629972/",
+        "screen_decision": "跨任务邻接或排除",
+        "screen_reason": "命中来自视频/医学/社交媒体/生成编辑/检测系统等相邻任务；摘要未表明评价图像鉴伪解释可靠性，按边界记录，不列强相关。"
+      },
+      {
+        "title": "Source Code Vulnerability Detection Based on Deep Learning: A Review",
+        "metadata": "H Su et al.; Cybersecurity, 2026",
+        "url": "https://link.springer.com/article/10.1186/s42400-025-00518-7",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-CAUSAL-EXPL",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪×因果解释/反事实解释/faithfulness",
+    "query": "(\"image forgery detection\" OR \"image manipulation detection\") (\"causal explanation\" OR \"counterfactual explanation\" OR faithfulness)",
+    "start": 60,
+    "page_number": 7,
+    "url": "https://scholar.google.com/scholar?start=60&q=(\"image%20forgery%20detection\"%20OR%20\"image%20manipulation%20detection\")%20(\"causal%20explanation\"%20OR%20\"counterfactual%20explanation\"%20OR%20faithfulness)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "Scholar实时显示第7页逐位置筛查；估计数随分页由约98波动至88，已保留全部可见条目。",
+    "phase": "窄式因果解释faithfulness检索",
+    "footer": false,
+    "next": [
+      70
+    ],
+    "blocked": false,
+    "estimated_results": 98,
+    "rows": [
+      {
+        "title": "Digital Image Forensic Techniques with Attacks: A Review",
+        "metadata": "G Singh et al.; book chapter, 2024",
+        "url": "https://books.google.com/books",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "ConsciousDriver: A Context-Aware Multimodal Personalized Autonomous Driving System",
+        "metadata": "N Fang, S Ali; Preprints.org, 2026",
+        "url": "https://preprints.org/manuscript/202601.1454",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Routing Matters in MoE: Scaling Diffusion Transformers with Explicit Routing Guidance",
+        "metadata": "Y Wei et al.; ICLR 2026",
+        "url": "https://proceedings.iclr.cc/paper_files/paper/2026/hash/2847043899e1171183ceadf86bdbb280-Abstract-Conference.html",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Bridging Perception and Reasoning in Multimodal Models",
+        "metadata": "X Fu; dissertation, 2025",
+        "url": "https://search.proquest.com/openview/ced588c1617c91d412fe4d357e891de2/1",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Re-compressed Based JPEG Forgery Detection and Localization through Automated Quality Factor Investigation",
+        "metadata": "DB Tariang, R Naskar; 2016 conference paper",
+        "url": "https://ieeexplore.ieee.org/abstract/document/7566113/",
+        "screen_decision": "跨任务邻接或排除",
+        "screen_reason": "命中来自视频/医学/社交媒体/生成编辑/检测系统等相邻任务；摘要未表明评价图像鉴伪解释可靠性，按边界记录，不列强相关。"
+      },
+      {
+        "title": "A Comprehensive Review of Digital Video Watermarking Techniques in Spatial, Frequency, and Compressed Domain",
+        "metadata": "Riddhi, P Garg, V Sharma; Archives of Computational Methods in Engineering, 2026",
+        "url": "https://link.springer.com/article/10.1007/s11831-025-10443-0",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Sustainable Development Goal 14: Explainable AI (XAI) for Ocean Health",
+        "metadata": "W Shafik; book chapter, 2024",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-031-64642-3_8",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Weaponized Deepfakes: A Low-Resourced Attacker Threat Assessment",
+        "metadata": "JD LaBelle; dissertation, 2025",
+        "url": "https://search.proquest.com/openview/005457c8a3ca2eb6ceddefe60913b27d/1",
+        "screen_decision": "跨任务邻接或排除",
+        "screen_reason": "命中来自视频/医学/社交媒体/生成编辑/检测系统等相邻任务；摘要未表明评价图像鉴伪解释可靠性，按边界记录，不列强相关。"
+      },
+      {
+        "title": "Chain-of-Action: Faithful and Multimodal Question Answering through Large Language Models",
+        "metadata": "Z Pan et al.; ICLR 2025",
+        "url": "https://openreview.net/forum?id=Y7C2Dx5VxG",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Low-Rank Adaptation Strategies for Efficient Customization of Generative Image Editors",
+        "metadata": "MFB Khalili, NASB Mazlan; Journal of Theoretical and Applied Electronic Commerce Research? 2025 (source as Scholar card)",
+        "url": "https://bluebellcenter.com/index.php/JTESA/article/view/Khalili2025",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-CAUSAL-EXPL",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪×因果解释/反事实解释/faithfulness",
+    "query": "(\"image forgery detection\" OR \"image manipulation detection\") (\"causal explanation\" OR \"counterfactual explanation\" OR faithfulness)",
+    "start": 70,
+    "page_number": 8,
+    "url": "https://scholar.google.com/scholar?start=70&q=(\"image%20forgery%20detection\"%20OR%20\"image%20manipulation%20detection\")%20(\"causal%20explanation\"%20OR%20\"counterfactual%20explanation\"%20OR%20faithfulness)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "Scholar实时显示第8页逐位置筛查；估计数随分页由约98波动至88，已保留全部可见条目。",
+    "phase": "窄式因果解释faithfulness检索",
+    "footer": false,
+    "next": [
+      80
+    ],
+    "blocked": false,
+    "estimated_results": 98,
+    "rows": [
+      {
+        "title": "MonkeyOCRv2: A Visual-Text Foundation Model for Document AI",
+        "metadata": "Y Liu et al.; arXiv:2607.11562, 2026",
+        "url": "https://arxiv.org/abs/2607.11562",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "VIF-Bench: Evaluating Visual Instruction Following in Multi-Reference Image Generation",
+        "metadata": "Y Oshima et al.; arXiv:2609.37709, 2026",
+        "url": "https://arxiv.org/abs/2609.37709",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Think with Structured Grounding: Perceptual Reinforcement Learning for Chart and Visual-Tabular Understanding",
+        "metadata": "C Jiang et al.; arXiv:2608.22429, 2026",
+        "url": "https://arxiv.org/abs/2608.22429",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "50 Years of Automated Face Recognition",
+        "metadata": "M Kim et al.; IEEE TPAMI, 2026",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11395540/",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Face Modeling Under Diverse Illuminations",
+        "metadata": "A Hou; dissertation/book, 2025",
+        "url": "https://search.proquest.com/openview/4efa87ee296d7c4f4c63ef167d550224/1",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Semantic Robustness Certification for Vision-Language Models",
+        "metadata": "P Yang et al.; arXiv:2606.18839, 2026",
+        "url": "https://arxiv.org/abs/2606.18839",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "PixelArena: A Benchmark for Pixel-Precision Visual Intelligence",
+        "metadata": "F Liang et al.; arXiv:2512.16303, 2025",
+        "url": "https://arxiv.org/abs/2512.16303",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Media Meets Communication in 6G: Fundamentals, Key Technologies, and Applications",
+        "metadata": "B Xie et al.; arXiv:2608.05184, 2026",
+        "url": "https://arxiv.org/abs/2608.05184",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "TacitFlow: Learning Workflow Representations for Tacit-Knowledge-Grounded Machine Learning Engineering Agents",
+        "metadata": "Y Jiang et al.; 2026",
+        "url": "https://usail-hkust.github.io/aidatasci/assets/papers/tacitflow.pdf",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Tertiary Review on Explainable Artificial Intelligence: Where Do We Stand?",
+        "metadata": "F Van Mourik et al.; Machine Learning and Knowledge Extraction, 2024",
+        "url": "https://www.mdpi.com/2504-4990/6/3/98",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-CAUSAL-EXPL",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪×因果解释/反事实解释/faithfulness",
+    "query": "(\"image forgery detection\" OR \"image manipulation detection\") (\"causal explanation\" OR \"counterfactual explanation\" OR faithfulness)",
+    "start": 80,
+    "page_number": 9,
+    "url": "https://scholar.google.com/scholar?start=80&q=(\"image%20forgery%20detection\"%20OR%20\"image%20manipulation%20detection\")%20(\"causal%20explanation\"%20OR%20\"counterfactual%20explanation\"%20OR%20faithfulness)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "Scholar实时显示第9页逐位置筛查；估计数随分页由约98波动至88，已保留全部可见条目。",
+    "phase": "窄式因果解释faithfulness检索",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "estimated_results": 88,
+    "rows": [
+      {
+        "title": "Towards Reliable AI Data Scientists: Data Agents with Workflow Harnesses",
+        "metadata": "H Zhou et al.; arXiv:2609.35255, 2026",
+        "url": "https://arxiv.org/abs/2609.35255",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Generalized Update: Belief Change in Dynamic Settings",
+        "metadata": "C Boutilier; IJCAI 1995",
+        "url": "https://www.ijcai.org/Proceedings/95-1/Papers/008.pdf",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Advanced Deep Learning Techniques for Lung Tumor Classification",
+        "metadata": "R Johnson et al.; ResearchGate, 2025",
+        "url": "https://www.researchgate.net/publication/388960170_Advanced_Deep_Learning_Techniques_for_Lung_Tumor_Classification",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Pastoral Accommodation of Same-Sex Relationships: A Critique in Light of 1 Corinthians 5-6",
+        "metadata": "CL Irons; 2019",
+        "url": "https://www.academia.edu/download/59505111/Irons-Pastoral-Accommodation-Critique-2019.pdf",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Perception of School and University Students of Ideal Teacher Behaviours (II). Pilot Study",
+        "metadata": "L Ciascai; Acta Didactica Napocensia, 2014",
+        "url": "https://www.academia.edu/download/92418739/EJ1053277.pdf",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "CVPR 2023 proceedings page (Scholar indexed proceedings item)",
+        "metadata": "A Pediredla et al.; CVPR 2023 proceedings index",
+        "url": "https://computer.org/csdl/proceedings-article/cvpr/2023/012900z005/1POSlaji01y",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "CVPR 2024 proceedings page (Scholar indexed proceedings item)",
+        "metadata": "S Saini, PJ Narayanan, J Lu; CVPR 2024 proceedings index",
+        "url": "https://computer.org/csdl/proceedings-article/cvpr/2024/530000z005/20hROhwVenu",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      },
+      {
+        "title": "Phylogenetic Diversity of Dominant Bacterial Communities During Bioremediation of Crude Oil-Polluted Soil",
+        "metadata": "E Cloete; Ambiente e Agua, 2011",
+        "url": "https://www.academia.edu/download/75914661/7984bfa0e237471cd043e003a9a2d4918333.pdf",
+        "screen_decision": "排除：语境噪声/任务不符",
+        "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
+      }
+    ]
   }
 ]
