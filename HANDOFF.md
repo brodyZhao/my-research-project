@@ -1166,3 +1166,20 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - FakeVLM-R1官方参考文献76条完成题录/主题级逐条筛查；其当前Scholar前向引用2项逐条筛查。FakeVLM-R1与Veritas++原稿判断补入172，MAD-Guard复用已有全文判断。参考表仅代表题录级筛选，不表示每篇全文核验。明细见`T02-F2-FAKEVLM-R1-76_REFERENCES_逐篇主题初筛_20261010.csv`和`CIT-FAKEVLMR1-FWD_被引论文逐条筛查_20261010.csv`。
 - 当前计数：74主账24,646个唯一位置；90候选648个唯一题名；72优先197项；172效度核读57项；87路线172条。阶段ZIP有608个成员且CRC通过，SHA-256=`bd815a23c34d33467de2adab9dfaf372f8d9db493b4215ad48bc82ab8097d26d`。验证：`python3 -m compileall -q work/search_protocol_v2`、`git -c core.whitespace=cr-at-eol diff --check`通过；主账/候选/优先/核读计数和ZIP CRC核验通过。无业务源码改动。
 - 遗留：整个领域检索未完成，不能保证零遗漏；待执行拆分式、核心论文引文链、候选全文核查和最终相关性统一排序仍有工作。建议继续从当前Scholar的`"deepfake detection" "human evaluation" explanation`检查断点`start=180`；但先核对路线账128显示此式已有0–410的闭合记录，若结果仍重复则转查未完成的高精度子式，避免重复翻页。
+
+
+## 2026-10-10：LogicLens前向引文与充分性检索检查点
+
+- 从已恢复的Scholar `start=180`复核深伪人评式第19页；结果与74中181–190十条完全一致，避免重复登记。
+- 两条宽式首屏各10条逐项筛查，停止高噪声机械分页；发现LogicLens（arXiv:2512.21482v1），全文核读其文本相似解释指标和区域接地指标。官方参考[1]–[52]题录/主题逐篇筛查见`T02-F2-LOGICLENS-52_REFERENCES-逐篇主题初筛_20261010.csv`。
+- LogicLens两条当前Scholar前向引文均筛查：GenText-Forensics挑战与Team MSU技术报告。后者包含LLM评分factuality/reasoning/completeness，直接相关但仍缺人类独立评审/因果faithfulness证据。表见`CIT-LOGICLENS-FWD_被引论文逐条筛查_20261010.csv`。
+- 本阶段更新候选/优先/原文表；测试并重建阶段ZIP以结果日志与归档统计为准。用户未跟踪的两个本地文件未触碰。总体重检尚未完成；下步优先核验GenText challenge正式评测细则、检索新近text-centric forensic explanation评测，并继续未闭合子式与强相关种子引文。
+
+## 2026-10-10：text-centric解释可靠性检索与Omni-IML后向引用检查点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；remote：`origin`（`https://github.com/brodyZhao/my-research-project.git`）。检索数据/报告提交：`5883e60`；本HANDOFF同步提交随后记录。用户已明确授权push；继续在本分支推送。
+- Google Scholar式`("text-centric forgery" OR "tampered text detection" OR "document image forgery") (explanation OR reasoning OR grounding) (factuality OR reliability OR robustness OR evaluation)`：start=0–90十个有结果页共97个逐项筛选位置，start=100空页确认当前快照末页。Scholar起始估值约107与后续页面97条不一致，已将差异记录在路线表，不宣称主题穷尽。逐项文件：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T02-F3-TEXTCENTRIC-EXPL-RELIABILITY_97项逐位置筛选_20261010.csv`。
+- Omni-IML(arXiv:2411.14823v2)全文核读并修订其解释质量构念：OCR/位置准确率与ROUGE/BLEU/余弦参照文本匹配不是独立事实核验或因果faithfulness；49条参考逐篇题名/主题初筛文件为`T13-OMNIIML-49_REFERENCES_逐篇主题初筛_20261010.csv`。FakeShield、SIDA、FFAA沿用既有原稿判断。VeriChain仅可访问Springer出版商摘要，记为直接候选但全文评测细节未核，不把“forensic fidelity”作者表述等同独立人评证据。ATAR已有全文核读，当前论文在arXiv标注ACM MM 2026、会议日程为2026-11；其200例LLM judge/50例3人验证信息和评测输入不对称继续保留限制。
+- 输出统计更新：74主账24,766个唯一位置ID、筛选理由全非空；候选/邻接表90为653个唯一题名；优先表72为200项；原稿/摘要效度表172为62项；路线表87为179条。数量定义不同，不代表强相关文献篇数。阶段报告已追加本轮说明，整体检索仍未完成，不能保证零遗漏。用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`与`literature/forensic-explanation-relevance-20261004.md`保持未修改、未暂存。
+- 验证待本次完成后记录：`python3 -m compileall -q work/search_protocol_v2`、主账ID/筛选理由、候选和排名题名唯一、逐位置/参考记录数、ZIP CRC与清单SHA256；无业务源码修改。
+- ChatGPT Web下一步建议：优先扩展当前筛出的直接解释可靠性文献及高相关引文链，全文不可访问的候选（VeriChain、GenText挑战）待有源全文/正式版本再核；继续未闭合查询时按标题复用记录，避免重复筛读。
