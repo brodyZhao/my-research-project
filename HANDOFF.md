@@ -4,11 +4,11 @@
 - 继续检查用户所给 `"image forgery" "human evaluation" explanation` 断点：此前记录覆盖活动可见位置1–106；本轮复核start=80/90/100与start=106空页，未发现新题录，末页仍Next禁用。Google Chrome实际当前标签是Google Scholar异常流量/验证页（不是正常结果页），没有将其记成零结果或完成；本阶段转向可读的一手论文页面继续核对。
 - 原先总账 `74_V2完整分页逐位置初筛.csv` 现有18,656条位置观察，result_id唯一且筛选理由无空值；这些不是独立文献数。重算审计 `83`：107主路线，59条记录到可见末页；主路线13,941位置，149个拆分计划条目/路线当前交叉命中4,625位置、其中68可见末页且55标记覆盖完成；82条ForensicChat前向引用位置；另有90条不属于当前主/细分计划的题名或引用补充记录。全局 `complete=false`，去重、未试检拆分路线、全文和递归引文仍未结束。计数口径区分已写入83审计文件。
 - 更新PRPO原稿核验 `137_PRPO原稿解释可靠性与人评效度复核.csv`：确认ICML 2026正式出版（PMLR 306:92466–92496）；作者v3有8名评审、每人5张图、CAC/EGIA/RQ/CC/CU五项评分。该人评能支撑解释质量/证据接地，但评审间一致性未报告，不能推成因果忠实性测试。PRPO的CLIP图文相似奖励与段落/最终判决多数一致奖励是代理构念；稀疏伪影多数票失败局限已记录。
-- PRPO关键相关引文回溯见 `138_PRPO强相关引文逐篇初筛.csv`（6项）：X²-DFD、FFAA、SIDA、FakeBench、FakeShield、Common Sense Reasoning for Deep Fake Detection。逐项确认题名身份，区分全文核读与摘要待核；X²-DFD的PRPO引用年份与NeurIPS官方出版年份冲突，保留为待解版本元数据问题，未猜填预印本链接。
+- PRPO的76条参考文献均已在 `142_PRPO全部76条参考文献逐条题录筛选.csv` 按题名/引用上下文逐条初筛；其中直接解释可靠性相关的核心小组见 `138_PRPO强相关引文逐篇初筛.csv`（6项）：X²-DFD、FFAA、SIDA、FakeBench、FakeShield、Common Sense Reasoning for Deep Fake Detection。逐项确认题名身份，区分全文核读与摘要待核；X²-DFD的PRPO引用年份与NeurIPS官方出版年份冲突，保留为待解版本元数据问题，未猜填预印本链接。
 - `139_X2-DFD原稿与人评效度复核.csv`记录NeurIPS 2025 / arXiv v4 §4.3评价与人评维度：检测能力、解释合理性、细节程度；补充材料检索片段报告15名参与者和100个样本，OpenReview直开验证页受阻，故样本分配等完整细节待核。`141_FakeBench原文解释评价构念复核.csv`记录其人参与线索描述标注，而模型评价主要由文本指标/GPT辅助完成；论文中的“causal investigation”是双向问答任务，不是删除/插入等证据干预测试。`140_EFR原文空间接地与可靠性边界复核.csv`确认EFR ACM MM 2026 DOI，并记录50K条件生成样本、坐标/文本接地奖励与标注筛选边界；原有56条EFR参考文献初筛表仍在。
-- 候选与引文表 `90_本轮新增强相关候选与引文复核.csv`现有131条候选观察/题录记录（不等于131篇去重论文）；PRPO、X²-DFD、EFR等已写入构念分层，新增FFAA/SIDA。专表137–141与改动的90字段均核对CSV结构；Scholar页位置观察未因引用核读而重复计数。原始页继续在`work/search_protocol_v2/execution_pages.json`与既有拆分计划。
-- 阶段交付快照：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`已按149个输出文件重建，CRC与每个成员字节比对通过；正文不承诺零遗漏。验证命令：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；本阶段CSV唯一键/非空筛选理由以及zip成员将再次校验。无业务代码或模型实验改动。
-- 遗留：Google Scholar Chrome当前受自动流量验证影响；PRPO全部参考文献尚未逐篇完成，仅先核与解释可靠性直接相关引文；EFR引用前后向链、候选版本合并、宽查询拆分和剩余主/子路线均未完成。下一步若Scholar恢复，从断点/待执行子式续分页；与此同时沿PRPO/X²-DFD/FakeBench/EFR高相关引文做原稿检查，并维护位置日志。ChatGPT Web优先复核137–141中“人评质量、人工标注、证据接地、因果faithfulness”四种构念分层。
+- FakeBench引文回溯新增三条早期/标注可靠性线索，记录在 `143_FakeBench引文发现的早期解释与标注可靠性论文.csv`；其中CVPR 2025 Face Forgery Text Generator论文指出人类和MLLM描述都可能幻觉，使用伪造mask约束线索生成。候选与引文表 `90_本轮新增强相关候选与引文复核.csv`现有133条候选观察/题录记录（未按所有预印本/版本完全去重）；PRPO、X²-DFD、EFR等已写入构念分层，新增FFAA/SIDA。专表137–141与改动的90字段均核对CSV结构；Scholar页位置观察未因引用核读而重复计数。原始页继续在`work/search_protocol_v2/execution_pages.json`与既有拆分计划。
+- 阶段交付快照：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`已按151个输出文件重建，CRC与每个成员字节比对通过；正文不承诺零遗漏。验证命令：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；74主账唯一键和理由非空、PRPO参考位置1–76连续、候选表133条、151个ZIP成员逐字节校验均通过。无业务代码或模型实验改动。
+- 遗留：Google Scholar Chrome当前受自动流量验证影响；PRPO全部参考文献尚未逐篇完成，仅先核与解释可靠性直接相关引文；EFR引用前后向链、候选版本合并、宽查询拆分和剩余主/子路线均未完成。下一步若Scholar恢复，从断点/待执行子式续分页；与此同时沿PRPO/X²-DFD/FakeBench/EFR高相关引文做原稿检查，并维护位置日志。ChatGPT Web优先复核137–143中“人评质量、人工标注、证据接地、因果faithfulness”四种构念分层。
 
 # 2026-10-09 Google Scholar 生成图像解释人评分支续检（未完成）
 
