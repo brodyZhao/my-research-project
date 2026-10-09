@@ -822,3 +822,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - EFR的56条参考文献已有03/162逐条题名初筛、7条强相关引文169做原文核读；本轮未完成全部前后向引文闭包。候选优先清单75行（含标题行，即74项），不等同74篇直接因果解释faithfulness实证。整体检索继续进行，不能承诺绝对零遗漏。
 - 检查：待提交前执行`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`、CSV唯一ID/空理由/路线断点检查；本阶段尚未运行这些最终检查。工作区仅两份用户未跟踪文件应保持原状。完成后仅暂存tracked协议与HANDOFF，按AGENTS.md提交并push当前分支，不merge主分支。
 - 建议下一步：用户完成start=460验证后先筛查第47页10个结果；继续第48页与V109宽式，其后处理非deepfake术语覆盖和强种子引文递归。若验证迟迟未完成，可继续候选论文/参考文献的独立来源核查。
+
+### 2026-10-09：V109恢复后续筛至Scholar第70页（继续进行）
+
+- 仓库：`my-research-project`；分支：`codex/forensic-explanation-literature`；远程：`origin https://github.com/brodyZhao/my-research-project.git`。本阶段修改tracked文件为检索协议和本交接文件。用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`及`literature/forensic-explanation-relevance-20261004.md`保持原样、未暂存。
+- Google Scholar宽式V109已在用户恢复后从start=460继续并筛至第70页/700个结果位置，Scholar估算约20,900，下一页断点start=700。第63–70页新增80位置，逐项记录在输出216–223，并并入累计74。累计台账当前19,356行数据、ID唯一、逐项筛选理由已填写；位置数含重复/多版本/引文卡片，不是独立文献数。整体检索仍未完成。
+- 新的直接或强邻接候选包括：MoFAIR（AIGC取证解释并关注幻觉解释）、Kadam等2021年图像伪造检测与XAI综述、Lin等2023年遗传编程AI生成图像检测解释、OMNI-fake（检测/定位/解释benchmark）、ForgerySpotter、LLM+Grad-CAM解释AI生成艺术、图像/视频篡改法证分析等。部分只到摘要级；可靠性是否得到有效验证需继续核全文，分清解释保真、定位/热图质量、自然语言可读性、准确率及人类偏好等不同终点。
+- 候选表90新增/核对记录；来源核查确认2021综述与2023遗传编程论文的题录/摘要为直接主题命中。此外确认CVPR 2025 Forensic Self-Descriptions是由残差得到的图像表征，并非自然语言解释；相应保留为方法邻接。完整筛选理由与分层见输出216–223、候选表90及检索协议。
+- 审计83总结果位置更新为19,356；父路线107/13,941、子/引文路线149/4,837、补充82、其他独立补充位置496；当前无活动验证码阻断，历史阻断观察仍23。V109状态在87记录为70页/700位置，下一页start=700；complete=false。
+- 验证已通过：`python3 -m compileall -q work/search_protocol_v2`、`git diff --check`；74共19,356条、ID唯一、筛选理由齐全，216–223各10行，83/87计数对齐。阶段ZIP含230个文件且CRC通过，SHA-256=`5d2de22cd6bd59ef14c058a65caa2ae9197badbdd80a80f67b0e779465c2c908`。仅暂存本交接文件和检索协议；两份用户未跟踪文件保持未触碰。
+- 下一步：继续Scholar start=700的每页筛查；优先取得并核读Kadam 2021综述、Lin et al. 2023、MoFAIR、OMNI-fake、ForgerySpotter等原稿，记录解释可靠性评估协议和边界；随后沿强相关种子的前后向引文继续扩展，尤其完整闭合EFR引文链。不能把当前高召回日志宣称为零遗漏完成版。

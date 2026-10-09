@@ -189,3 +189,14 @@ X²-DFD评测/相关工作链中4篇直接相关文献已逐篇记录在输出`1
 - 已检查EFR全部56条参考文献的既有题名初筛（03/162）与7条强相关引文原文核读（169）；本批未宣称EFR前后向引文闭包完成。下一步仍需沿EFR和其他强种子的参考/被引关系继续递归，并继续宽式分页与非deepfake术语拆分。
 - 当前Scholar断点：`https://scholar.google.com/scholar?start=460&q=(%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22)+(explainable+OR+explanation+OR+interpretability+OR+attribution)+(faithfulness+OR+fidelity+OR+grounding+OR+hallucination+OR+%22sanity+check%22+OR+evaluation)&hl=zh-CN&as_sdt=0,5` 转入reCAPTCHA；当前未看到第47页结果。已请求用户在当前Google Scholar页完成验证，从start=460继续。
 - 下一步恢复后先读当前页面并将可见10条逐项筛查，再检查第48页；用户此前强调非deepfake图像术语要充分覆盖，之后继续其它未完成的细式和强种子引文链。全项目仍未完成，不能承诺“一个不漏”。
+
+### 2026-10-09：Google Scholar V109 宽式恢复后续筛查至第70页（未完成）
+
+- 用户恢复Google Scholar后，从已有断点继续宽式V109：`("image forgery" OR "image manipulation" OR "image tampering") (explainable OR explanation OR interpretability OR attribution) (faithfulness OR fidelity OR grounding OR hallucination OR "sanity check" OR evaluation)`。第63–70页逐页筛查80个可见题录位置，单页记录为输出216–223，全部逐项写入累计台账74。当前V109累计第1–70页/700个位置，Scholar仍估算约20,900条；下一页为start=700，尚远未到可见末页。结果位置含重复、版本和引文卡片，不是独立论文篇数。
+- 新候选优先线索：MoFAIR（ICIC 2026/LNCS，检测—解释统一并针对幻觉解释）、2021年《AHP validated literature review of forgery type dependent passive image forgery detection with explainable AI》、2023年《Enhancing Interpretability in AI-Generated Image Detection with Genetic Programming》、OMNI-fake（CVPR 2026，检测/定位/解释基准）、ForgerySpotter（多尺度证据定位）、《Using LLMs to explain AI-generated art classification via Grad-CAM heatmaps》及《Forensic Analysis of Manipulated Images and Videos》。其中2021综述与2023遗传编程论文在原始出版/作者来源查到直接主题证据；其余候选按领域核心/视频或艺术邻接分别标记。以上还不等于已证明忠实性：需逐篇阅读全文，核查解释输出定义、证据标注、因果/扰动评价、人评和效度局限。
+- 边界复核：将“forensic self-description”区分为多尺度取证残差图像表示，而非自然语言理由；将source attribution与XAI attribution区分；注意普通分割定位、注意力图和视觉热图本身不证明模型解释faithfulness。将通用解释评价（What sketch explainability really means、AlignFace、反对抗归因图）作为方法学邻接，不并入图像鉴伪核心文献。
+- 新候选与引文追查表90补录MoFAIR、ForgeryPrompting、OMNI-fake、2021图像伪造XAI综述、2023遗传编程解释检测、LLM解释AI生成艺术、视频伪造解释等条目，并明确摘要证据与待核效度之间的区别。页面逐条筛选表216–223保存到忽略输出目录并入74。
+- 计数审计83更新：父路线107条/13,941位置、149条子路线/4,837位置、补充82位置不变；域外/独立补充日志增至496位置；合计19,356个结果位置。该数与累计74唯一ID数对齐。历史验证码阻断仍记23次；当前没有活动阻断。87中V109更新为70页/700位置，下一页start=700；整体complete仍为false。
+- 已核来源：MoFAIR的Springer DOI/ICIC卷册元数据与摘要检索结果；2021综述期刊原始页/DOI；遗传编程论文IEEE DOI及会议目录；Forensic Self-Descriptions的CVF作者版确认其self-description并非自然语言解释；LLM生成艺术解释的CEUR原文；被篡改图像/视频法证分析的MDPI原文。其余无全文可访问项继续保持待核，不能把Scholar摘要作为全文效度结论。
+- 后续从V109 `start=700`继续逐页筛查，同时优先全文审查新发现的2021综述与2023遗传编程论文并沿其参考文献/被引关系检索；之后完成剩余细式、跨路线去重和EFR强种子的递归引文链。不得承诺字面意义“一个不漏”或把20,900条估算等同论文总数。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`通过；累计74共19,356条，ID无重复且筛选理由齐全；本批8份页面表各10条；83/87计数和断点对齐。阶段ZIP重建为230个文件，CRC通过，SHA-256=`5d2de22cd6bd59ef14c058a65caa2ae9197badbdd80a80f67b0e779465c2c908`。
