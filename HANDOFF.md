@@ -1,3 +1,16 @@
+# 2026-10-09 Google Scholar T02-F2-RELIABILITY 续检（未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；origin 为 `https://github.com/brodyZhao/my-research-project.git`。本检查点仅更新交接记录；未改源码，也未触碰原有两个未跟踪用户文件。
+- 用户恢复验证后，从 Scholar 检索式 `"image forgery" explanation reliability` 的 `start=90` 继续。第10–22页（start=90–210）各10条，已逐条筛查并同步分页专表与主总账；路线目前累计22页、220个可见结果位置，下一步 `start=220`。Scholar估算约10,800条是动态估计，检索没有闭合。不得把此查询的220条或Scholar估数解释为独立论文总量/领域穷尽。
+- `74_V2完整分页逐位置初筛.csv` 现22,116条位置记录，`result_id`唯一、每条筛选理由非空；`90_本轮新增强相关候选与引文复核.csv` 现393条候选观察。两者都包含重复命中与邻接/排除项目，不是独立文献数。`87`记录T02当前22页/220条、下页`start=220`、`coverage_complete=false`；`83`总审计也保持`complete=false`。
+- 新增重点核查线索：HierForge（Research Square 2026预印本）报告3位专家评200张图像解释的正确性/信息量/可解释性，但没有评分规程、盲法细节、评审一致性或不确定性；可见参考文献含明显跨领域条目，故标为直接主题命中、实验与引用质量存疑，不能作为已验证可靠性证据。另记录了待核全文的“interpretable defense systems”学位论文、科研图像DINOv2人工复核式检测、图像伪造×XAI文献计量条目，以及指出explainability/evidentiary utility缺口的2026年IFDL综述作为引文种子。候选与理由均在90表和第12–13页专表。
+- 分别标记检测器泛化/鲁棒性、证据融合、mask/标签可视化、自然语言解释人评，避免把检测性能等同解释faithfulness。已核正文/摘要的新邻接记录有TriFor、GIFTBench、ForensicFormer、Detective SAM、MDPI双模块检测框架；重复的TriFor复用既有原稿记录。核心仍需对直接相关候选逐篇完成原文与效度审查、版本合并、参考文献和前后向引文闭环。
+- 阶段快照 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 已重建：448个成员，CRC通过；SHA-256 `726312f2077bd45d6d1d8710e6d6a55a12aecc1c1ee77167e5dbbf7bef8f0ea1`。忽略目录的账本与ZIP不会随Git提交推送，用户可从本地outputs查看。
+- 验证：CSV逐位置唯一ID、非空筛选理由、T02路线页数/位置数、10–22页专表各10条、断点与`complete=false`断言均通过；`python3 -m compileall -q work/search_protocol_v2`通过；`git diff --check`通过；ZIP CRC通过。本轮不涉及模型代码或推理测试。
+- 最新提交hash以本次交接提交为准；本次按项目规则只提交/推送`HANDOFF.md`，不暂存用户未跟踪文件。下一步从 Scholar `start=220` 继续，遇验证页仍待用户手动恢复；同时核验已标记全文线索并从2026 IFDL/遥感综述追溯解释质量、人类使用和证据可靠性研究。完成剩余查询和引文链前不得声称“一个不漏”。
+
+---
+
 # 2026-10-09 T11-F2-S2 扩展分页续查（第32页验证阻断，仍未完成）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；上次已推送检查点commit `e8acb06 docs: record Scholar search checkpoint`，本轮完成后会更新交接并推送。只更新忽略目录下检索记录与handoff，不改业务源码；用户原有两个未跟踪文件保持未修改、未暂存。
