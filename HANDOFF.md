@@ -1,3 +1,12 @@
+# 2026-10-09 T11-F2-S2 扩展分页续查（reCAPTCHA断点，仍未完成）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本交接提交前HEAD为`379aaf1c95623526bb79a116f2c12c42f62d093c`；完成后补入最终提交哈希。本阶段只更新忽略目录下的检索记录和交接，不改业务源码。`README.md`不存在；已检查`AGENTS.md`、`HANDOFF.md`、git状态、分支和origin。原有两个用户未跟踪文件保持未修改、未暂存。
+- 按用户“推送，完成剩余检索”继续 Google Scholar 路线 `T11-F2-S2`：`(deepfake OR "face forgery" OR "facial manipulation") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (hallucination)`。从前次已筛第12页/120位置的断点继续，第13–29页逐页筛录170个题录位置；第30页`start=290`触发reCAPTCHA。第1–29页累计290位置已逐项写标题、元数据、来源页、初筛决定和理由；验证码页未作为零结果/空页/末页处理。Scholar估数在约4,790–4,810波动，只是索引估值，且这条宽式噪声高，远未穷尽。
+- 主位置表`74_V2完整分页逐位置初筛.csv`累计21,202行，result_id唯一且筛选理由不空；`90_本轮新增强相关候选与引文复核.csv`292条候选观察；`72_V2已复核强相关优先清单.csv`158行待统一重排的优先/邻接条目。三者均不能直接解释为独立文献数或最终纳入数。重点新候选/需原文核实项包括：RewardBench、ForensicZoom、Agent4FaceForgery、FakeVLM-R1、ForgeryVCR、Thinking Like a Forensic Expert、MFVLR、MoFAIR、VERITAS、Exploring Vision-Language Models for Digital and Multimedia Forensics综述、记者使用deepfake检测工具等；反复命中的EFR、ForgeryGPT、AIGI-Holmes等仅做去重标记，复用既有全文/引文核查，不重复审读。很多候选只基于Scholar题录/摘要，不代表解释忠实性已获证明，尤其“降低幻觉”须与faithfulness指标区分。
+- 审计`83`及细路线状态`87`已记第30页验证阻断；全局`complete=false`。T11-F2-S2动态估数不能作为检索穷尽证据。下一步等用户完成当前Scholar reCAPTCHA后从`start=290`继续；同时可核查新候选的原稿与引文链，并继续未完成的其他拆分路线。不要承诺“一个不漏”。
+- 阶段快照 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip` 已重建，369个成员CRC校验和逐字节回读均通过；CSV检查通过：21,202条位置ID无重复、空理由0、优先行数158；`python3 -m compileall -q work/search_protocol_v2`与`git diff --check`待本次提交前复跑。检索日志与快照位于被忽略的`outputs/`中，不会由本次handoff commit推送到Git；本地可通过上述归档交付，状态边界在本文件同步。
+- 建议ChatGPT Web下一步：用户恢复Scholar后从本次reCAPTCHA断点续查；保持跨页题名去重，只有新论文才做深入原稿核验；优先完成直接图像取证解释的faithfulness/真实性grounding证据审计，再处理大噪声的深伪宽式。
+
 # 2026-10-09 Scholar恢复复核与EFR效度边界续查（仍未完成）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；交接前HEAD `51d420204813d30f52b9366722b27827184417d8`。输出日志在忽略目录 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/`，阶段归档 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-09.zip`。
