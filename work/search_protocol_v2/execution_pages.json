@@ -4617,5 +4617,141 @@
         "screen_reason": "命中词位于引文、跨领域讨论或无关任务；题名摘要不研究图像鉴伪解释可靠性，排除直接相关集合。"
       }
     ]
+  },
+  {
+    "query_id": "T02-F2-EXPL-STABILITY-20261010",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪解释稳定性/归因鲁棒性",
+    "query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\") (\"explanation stability\" OR \"attribution stability\" OR \"explanation robustness\" OR \"saliency stability\")",
+    "start": 0,
+    "page_number": 1,
+    "url": "https://scholar.google.com/scholar?q=%28%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22%29+%28%22explanation+stability%22+OR+%22attribution+stability%22+OR+%22explanation+robustness%22+OR+%22saliency+stability%22)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "Google Scholar精确稳定性/鲁棒性交叉式，14项可见结果；逐项筛查，第二页末页。",
+    "phase": "图像鉴伪解释可靠性检索",
+    "footer": false,
+    "next": [
+      10
+    ],
+    "blocked": false,
+    "estimated_results": 14,
+    "rows": [
+      {
+        "title": "INSIGHT: An Interpretable Neural Vision-Language Framework for Reasoning of Generative Artifacts",
+        "metadata": "A Bagaria; arXiv:2511.22351, 2025",
+        "url": "https://arxiv.org/abs/2511.22351",
+        "screen_decision": "保留：生成图像取证解释稳定性邻接；复用候选记录",
+        "screen_reason": "生成伪造图像识别/取证线索与saliency stability相关；已有候选记录认为其G-Eval/VLM judge事实性评价不等同因果faithfulness，复用。"
+      },
+      {
+        "title": "Beyond Accuracy: Auditing Image Forgery Localization via Scene-Disjoint Evaluation and XAI Faithfulness",
+        "metadata": "S Aoudi et al.; IEEE Access, 2026",
+        "url": "https://ieeexplore.ieee.org/abstract/document/11471733/",
+        "screen_decision": "直接强相关：复用全文核读",
+        "screen_reason": "静态图像伪造定位并直接审计XAI faithfulness；已有全文及评测局限记录，复用不重复计篇。"
+      },
+      {
+        "title": "What Words Drive the Edit? IE-SMILE for Model-Agnostic Explainability of Instruction-Based Image Editing",
+        "metadata": "Z Dehghani et al.; SSRN preprint",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm",
+        "screen_decision": "邻接：生成式编辑模型解释稳定性",
+        "screen_reason": "测图像编辑指令词归因准确性/稳定性/一致性/代理保真；任务是生成编辑解释，不是鉴伪检测解释。"
+      },
+      {
+        "title": "Leveraging Energy, Entropy, and Expertise for Trustworthy AI",
+        "metadata": "J Piland; dissertation/book, 2026",
+        "url": "https://curate.nd.edu/ndownloader/files/64122058/1",
+        "screen_decision": "邻接背景：通用可信AI",
+        "screen_reason": "命中解释稳定/对抗可靠性通用术语，题录片段未显示图像伪造任务；不列直接证据。"
+      },
+      {
+        "title": "ViT-Xplain: A Transparent Deepfake Detector for Consumer Electronics Based on Attention and Explainable AI",
+        "metadata": "G Husnain et al.; IEEE Transactions on Consumer Electronics 72(1), 2026; DOI 10.1109/TCE.2025.3643884",
+        "url": "https://ieeexplore.ieee.org/document/11300282/",
+        "screen_decision": "强相关邻接：视频深伪解释稳定性；待全文补核",
+        "screen_reason": "官方摘要确认视频深伪ViT系统，报告attention-to-face overlap、熵集中度、clarity和trust score，attention map平均重合0.575并与置信相关。支持解释区域对齐/稳定性代理；不证明归因因果faithfulness或人类依赖，视频任务，全文待核。"
+      },
+      {
+        "title": "Mapping the Mind of an Instruction-Based Image Editing Using SMILE",
+        "metadata": "Z Dehghani et al.; arXiv:2412.16277, 2024",
+        "url": "https://arxiv.org/abs/2412.16277",
+        "screen_decision": "邻接：图像编辑解释方法",
+        "screen_reason": "是指令图像编辑模型的解释，提供稳定性/透明度术语；非取证检测任务。"
+      },
+      {
+        "title": "DNA: Dual-Stage Native Attribution for Generated Image Source Tracing",
+        "metadata": "C Wang et al.; arXiv:2607.13685, 2026",
+        "url": "https://arxiv.org/abs/2607.13685",
+        "screen_decision": "邻接：图像来源追踪/归属",
+        "screen_reason": "研究可疑图像的生成模型来源归因， attribution是来源判定而非解释模型预测；不纳入解释faithfulness核心。"
+      },
+      {
+        "title": "Detecting Adversarial Examples Using Cross-Modal Semantic Embeddings from Images and Text",
+        "metadata": "S Park et al.; IEEE Access, 2025",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10891646/",
+        "screen_decision": "方法邻接：通用图像模型解释鲁棒性",
+        "screen_reason": "摘要提及图像扰动及EXPLAINER测解释鲁棒性，但研究目标是通用对抗样本检测，不是图像伪造或深伪解释；可作方法学背景。"
+      },
+      {
+        "title": "Digital Forensics in the Age of Artificial Intelligence: Methods, Frameworks, and Challenges",
+        "metadata": "HR Gantla, N Sultana, A Vattoli et al.; IGI Global chapter, 2026",
+        "url": "https://www.igi-global.com/chapter/digital-forensics-in-the-age-of-artificial-intelligence/412615",
+        "screen_decision": "邻接综述/框架：题录层",
+        "screen_reason": "数字取证通用章节提到解释稳定性和置信估计，当前片段未显示视觉鉴伪解释具体评测；只保留题录邻接。"
+      },
+      {
+        "title": "Going Beyond XAI: A Systematic Survey for Explanation-Guided Learning",
+        "metadata": "Y Gao et al.; ACM Computing Surveys, 2024",
+        "url": "https://dl.acm.org/doi/10.1145/3644073",
+        "screen_decision": "方法综述邻接：非鉴伪",
+        "screen_reason": "通用解释引导学习综述，讨论稳健性/充分性指标；可提供方法背景，不是图像鉴伪实证。"
+      }
+    ]
+  },
+  {
+    "query_id": "T02-F2-EXPL-STABILITY-20261010",
+    "parent_id": "T02-F2",
+    "task_family": "图像鉴伪解释稳定性/归因鲁棒性",
+    "query": "(\"image forgery\" OR \"image manipulation\" OR \"image tampering\") (\"explanation stability\" OR \"attribution stability\" OR \"explanation robustness\" OR \"saliency stability\")",
+    "start": 10,
+    "page_number": 2,
+    "url": "https://scholar.google.com/scholar?start=10&q=%28%22image+forgery%22+OR+%22image+manipulation%22+OR+%22image+tampering%22%29+%28%22explanation+stability%22+OR+%22attribution+stability%22+OR+%22explanation+robustness%22+OR+%22saliency+stability%22)&hl=zh-CN&as_sdt=0,5",
+    "captured_at": "2026-10-10",
+    "summary": "Google Scholar精确稳定性/鲁棒性交叉式，14项可见结果；逐项筛查，第二页末页。",
+    "phase": "图像鉴伪解释可靠性检索",
+    "footer": true,
+    "next": [],
+    "blocked": false,
+    "estimated_results": 14,
+    "rows": [
+      {
+        "title": "Pruning for Explainable File Fragment Classification in Cyber Forensics",
+        "metadata": "R Ibrahim, AMA Ahmad; 2026 book chapter",
+        "url": "https://books.google.com/books",
+        "screen_decision": "排除：文件片段分类",
+        "screen_reason": "数字文件碎片/网络取证，不是图像鉴伪；稳定性仅见引文片段。"
+      },
+      {
+        "title": "Multi-XAI and SHAP-Guided Feature Pruning for Explainable File Fragment Classification in Cyber Forensics",
+        "metadata": "R Ibrahim, AMA Ahmad; Springer chapter, 2025",
+        "url": "https://link.springer.com/chapter/10.1007/978-3-032-39783-6_17",
+        "screen_decision": "排除：文件片段分类",
+        "screen_reason": "与上一条题名和作者高度对应的早期/会议版本，均为文件片段分类；同版本族，非视觉取证解释。"
+      },
+      {
+        "title": "Explainable Federated Learning Framework for Financial Fraud Detection",
+        "metadata": "SS Abdul-Jabbar; 2026",
+        "url": "https://journal.uob.edu.bh/",
+        "screen_decision": "排除：金融欺诈",
+        "screen_reason": "解释稳定性与金融欺诈有关，与图像/媒体伪造无关。"
+      },
+      {
+        "title": "Artificial Neural Networks and Machine Learning – ICANN 2025",
+        "metadata": "W Senn et al., eds.; Springer proceedings volume, 2025",
+        "url": "https://link.springer.com/book/10.1007/978-3-032-39783-6",
+        "screen_decision": "排除：会议论文集聚合记录",
+        "screen_reason": "非独立研究论文，命中由卷册索引/章节引文产生；该卷中视觉/图像解释需按具体章节题名检索，不把卷册计为相关文献。"
+      }
+    ]
   }
 ]
