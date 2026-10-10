@@ -1558,3 +1558,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 试检路线`T06-F3-S4`：`("synthetic image" OR "generated image") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("explanation stability")`。Scholar页眉估计约16项，但题录区在显示结果卡前进入reCAPTCHA，实际可筛位置为0；87与阶段报告已记录拦截和恢复URL，不误记为0结果或完成查询。
 - 最新ZIP 639成员/638来源文件，SHA-256 `37f5e6fd80e74ff2525e34ddf483d983c05b9c84c7763b4d83377e05929d48f9`；验证：T06路线状态断言、package checkpoint、compileall、CRLF-aware diff check、ZIP CRC均通过。
 - 最新可恢复断点：IAB标签143（Pino Cited-by exact-title）与标签144（T06 stability窄式）等待人工验证。恢复后先筛T06当前16项（如果页眉变化则据实调整），再回到Pino Cited-by；任何候选先对照90/72/172去重。总体重检仍未完成。
+
+## 2026-10-10续：恢复并筛完T06解释稳定性查询
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`9560141`；远端：`origin https://github.com/brodyZhao/my-research-project.git`。用户既有的两个未跟踪文件保持原样、未暂存。
+- Google Scholar恢复后，`T06-F3-S4`查询显示16条、两页（start 0/10各10条、6条）；16/16位置筛查和逐条理由已写入74主账，路线87闭合该次Scholar快照。直接鉴伪解释评测论文为Li et al. (2026), DOI 10.1111/exsy.70222；复用原文献主表R022（rank 7）及此前的141条参考位置筛查，不重复建立候选或重读全文。此前公开摘要/元数据已核，订阅全文未能取得，仍不声称全文效度核读完成。
+- 其余记录归为生成编辑解释/通用faithfulness稳定性/通用XAI方法邻接，或医学影像、社交网络、航天运维等跨域排除。未新增90候选、72排序或172效度核读身份。
+- 当前统计：74=25,695位置；90=716唯一题名；72=223项；172=116个唯一核读身份；87=202条路线。阶段ZIP 639成员（638来源文件），SHA-256 `ff1cc993d7da31ea3a5a842e138f244da602b62bff73816942e5a5637c9feab2`。
+- 主要文件：阶段报告00、SHA-256清单112、逐位置主账74、路线表87及阶段ZIP。记录脚本为忽略的本地文件`work/search_protocol_v2/record_t06_stability_20261010.py`，未提交。
+- 测试：`python3 work/search_protocol_v2/record_t06_stability_20261010.py`执行后，断言T06 16项连续、理由/依据非空；全局result_id唯一；路线状态16/16；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`python3 -m compileall -q work/search_protocol_v2`、`git -c core.whitespace=cr-at-eol diff --check`及ZIP CRC检查通过。
+- 遗留/下一步：T06-F3-S4断点已解除；Pino深伪视频解释论文的Cited-by链仍未筛。继续前先看87路线与90/72/172复用旧身份，不重复已闭合的引用位置或已核正文。宽查询分页上限及索引波动仍限制召回；总检索未完成，不能承诺零遗漏。ChatGPT Web后续可从已保存的Pino Scholar引用链断点继续。
