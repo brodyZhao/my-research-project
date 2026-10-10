@@ -1,3 +1,14 @@
+# 2026-10-10 X-AIGD、VL-FFD、ESIDE三篇全文效度核读检查点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；成果提交：`3131fee`；origin：`https://github.com/brodyZhao/my-research-project.git`。本交接提交后推送。原有两个用户未跟踪文件保持未改动、未暂存。
+- 本轮三个新全文身份：X-AIGD（arXiv:2601.19430v1）是静态AI生成图像伪影像素级接地基准，18,202实例/3,035张标注fake图；三轮relay人工掩码和attention alignment结果都不能替代固定模型的因果faithfulness。VL-FFD/FFTG（CVPR 2025）在面部伪造帧上用成对图与mask评价自然语言提及区域，解释区域precision/recall 88.07/55.30；它并未核验具体artifact claims或决策因果。ESIDE（AAAI-26）公开GenExplain 54,210条，CLIP区域相似度用于短语迭代；GPT-4o初始图像/缺陷标签被人工筛除30.1%–67.4%，但筛查协议未充分报告。三者已去重写入172/90/72；每份原文效度边界均写明。
+- 此前同批新增的Specialist-Generalist（arXiv:2605.31192v2）记录含3名CV专家评分和50例 cited-region masking；当前172为85个唯一全文核读。候选观察90为678条，优先排序表72为203条（非独立入选数）。T19/T20分别为ForenDeX 57位置/56作品及Locate-Then-Examine 56位置逐条题录筛查。
+- 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`共620成员，SHA-256 `4cbd6e70bffb285f06b0898d4e1daf544616191e945b8e8325fd61641dd3ba15`。验证：三个专项更新脚本、package checkpoint、`python3 -m compileall -q work/search_protocol_v2`、85条核读身份唯一、T19/T20行数、CSV计数、ZIP CRC及`git -c core.whitespace=cr-at-eol diff --check`均通过。
+- 任务仍未完成：Scholar查询大量受页数上限、动态索引和验证影响；已建路线不能证明领域穷尽。继续按87路线、74逐位置日志和实际浏览器URL接检；复用所有核过的论文身份与引文，不重复筛查。下一批优先处理未核的高相关优先论文及强种子参考/被引链，最后统一去重与证据质量排序，不能承诺“一个不漏”。
+- ChatGPT Web下一步：先核对当前Google Scholar实际页面与87/74账本中的query_id和page_start；如果已登记，直接去下一页；验证码阻断时保留准确查询和offset，未加载结果不可记作零命中。
+
+---
+
 # 2026-10-10 X-AIGD全文核读后阶段检查点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；当前成果数据提交：`06ada85`；origin：`https://github.com/brodyZhao/my-research-project.git`。本交接更新后推送。两个既有用户未跟踪文件未修改、未暂存。
