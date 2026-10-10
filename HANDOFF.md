@@ -1671,3 +1671,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 统计：74主账27,583位置；90候选789个唯一题名；72优先清单253项；172全文/摘要核读188个唯一身份；87路线248条。口径各异，不代表独立强相关论文总数。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip` 共705成员（704来源文件+manifest），SHA-256 `77c12a09d2894ae7195d7b473c57704e37340009d6d7e599116a6dad4677668b`。
 - 验证通过：`python3 work/search_protocol_v2/record_t101_visual_evidence_necessity_20261011.py`；`python3 work/search_protocol_v2/record_dgrnet_access_20261011.py`；`python3 work/search_protocol_v2/record_t11_f3_s2_captcha_20261011.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；CRLF-aware `git diff --check`；主账ID/理由、候选/优先/核读身份、路线ID、T101–T103逐位置及ZIP CRC/manifest检查通过。数据变更已提交并推送。
 - 遗留：Google Scholar T11-F3-S2未拿到任何题录卡，等待人工验证后继续；DGR-Net全文及参考文献仍无法访问；主题总检索未闭合，不能声称零遗漏。ChatGPT Web建议只从tab237已保存URL继续，核对当时的实际结果总数与末页，再沿新的高相关论文引文链前向/后向筛查；复用已有身份记录，不重复完整度已闭合的查询位置。
+
+## 2026-10-11续：HCXAI解释人因论文与引文链审查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；文献数据提交：`1f66f8cc9d8d664f132ff7e9ac8202d8a4d188c1`。README.md不存在；本轮遵循AGENTS.md。origin仍为配置的目标GitHub仓库。
+- 新增并全文核读HCXAI 2026论文《Understanding the Role of Visual Explanations in Human-AI Collaborations in Deepfake Image Detection》（Min Zhang et al., DOI 10.5281/zenodo.19700249）。381名有效UK成人，在深伪脸图任务中比较AI-only与AI+SHAP/ELA/Noise Analysis；作者报告解释增加信任/建议接受，却未改善appropriate reliance：错误AI过度依赖指标0.861→1.121（p=.0135），信任3.317→3.441（p=.044）。该论文测用户依赖结果，不测解释事实真值或因果faithfulness。已加入90/72/172。
+- 其官方Zenodo PDF References [1]–[40]逐项题名/主题筛查记录在忽略目录内T106，并同步主账74与路线87。#22和#40按已有DOI/题名复用；#5 Bharati et al. 2026面部深伪解释系统使用Open Research Online正式全文核读，加入90/72/172。另将17篇直接涉及解释评价、适当依赖、信任校准或过度依赖的跨任务方法邻接作品加入90，均标注未在本轮独立全文核读。T106/T105侧表随阶段ZIP归档，未强制添加忽略文件。
+- #5全文边界：论文声称评估解释fidelity，但正文主要报告SHAP显著区域的人工检查、特征出现比例及Bayes特征规则；100幅脸图分析、3名评审只对首20样例交叉核验后由一人继续、10位安全专家对整体参赛系统打2.0/5；20张测试脸图上的85%是检测准确率。没有独立claim真值/篡改区域真值或因果解释忠实性评测。
+- Scholar的T11-F3-S2窄式在收到用户“已恢复”后实查仍显示reCAPTCHA，结果卡未加载；以访问阻断记账，0位置不代表0结果。`T105_T11-F3-S2_appropriate-reliance_initial-CAPTCHA_20261011.csv`和87路线表记录断点。下一步只在同一URL正常显示Scholar结果后从start=0开始；不重复HCXAI全文、T106四十条引文或已审核身份。
+- 当前统计：74主账27,623位置；90候选808个唯一题名；72优先255项；172原文/摘要效度核读190个唯一身份；87路线249条。T106含40条逐项记录。阶段ZIP 706成员（705源文件），SHA-256 `cbb2df7b80d45fc47666d0318d38146c23ba76371d42f99b2d3d2ab4be05d79c`。统计口径不同，不等于强相关独立论文数或检索穷尽。
+- 修改文件：阶段报告00、主账74、路线87、候选90、排序72、效度核读172、SHA清单112、阶段ZIP；T105/T106作为忽略目录侧表归入ZIP。两个原有用户未跟踪文件未改动/未暂存。
+- 测试通过：`python3 work/search_protocol_v2/record_hcxai2026_reference_chain_20261011.py`（40项和身份复用逻辑）；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；自定义断言检查T106编号1–40及字段、主账追加40项、90/72/172唯一性、T11阻断状态和ZIP含T105/T106；`git -c core.whitespace=cr-at-eol diff --check`。无业务代码修改。两个已有用户未跟踪文件保持未触碰。
+- 遗留：T11 Scholar验证码仍待页面实际解除；DGR-Net全文/39条参考目前因SSRN/Cloudflare访问限制未核；全领域英文检索仍未闭合，不作零遗漏承诺。建议ChatGPT Web先确认tab237能否看到正常结果卡；恢复后从原查询start=0开始，同时按90/72/172身份去重。不要重刷已完成的T106或#5/HCXAI原文。
