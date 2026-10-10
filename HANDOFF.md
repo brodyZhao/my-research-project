@@ -1,3 +1,11 @@
+# 2026-10-10 SIDA链RAIDX原文效度核读
+
+- 沿SIDA被引链复核 *RAIDX: A Retrieval-Augmented Generation and GRPO Reinforcement Learning Framework for Explainable Deepfake Detection*（ACM MM 2025；DOI 10.1145/3746027.3754798）。arXiv官方全文§4.3报告随机100张合成图的人评；每个输出由10名模型身份盲化的领域专家独立评分，RAIDX 82.50 (95% CI 79.85–85.15)，SIDA 67.15 (64.89–69.41)，SFT 22.5 (20.15–24.85)。直接纳入解释质量人评证据。
+- 效度边界：量表维度/评分者分配/一致性未充分报告，不支持解释claim事实准确的结论。GRPO reward只有检测准确性和格式，没有解释正确/证据grounding项；attention rollout不构成因果faithfulness；扰动鲁棒性测的是分类，不能替代解释稳定性。评测只用真实/整图合成，Tampered子集被作者明确排除；人类依赖未测。已并入唯一记录172/90/72，不重复计数。
+- 最新包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip` 为617成员，SHA-256 `89b407ef5bb71c1f71739f4c22a289f59f8115a8c59826c66d56ab638b47101a`；验证 `python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`python3 -m compileall -q work/search_protocol_v2`、CRLF-aware `git diff --check`，主账ID/理由唯一有效，candidate 676去重、priority 201唯一rank、full-text review 73唯一、ZIP CRC及逐文件清单通过。整体重检仍未完成；后续继续从SIDA 225条中待核的直接候选原文与高相关引文链推进，复用已核身份。
+
+---
+
 # 2026-10-10 SIDA后续：两篇直接接地评测论文全文核读
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；上一检查点为 `13f22f3`。Scholar安全验证恢复后继续，用户未跟踪的两个既有文件保持原样。
