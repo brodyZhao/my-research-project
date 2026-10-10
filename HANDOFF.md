@@ -1,4 +1,11 @@
 
+## 当前检查点
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；文献数据阶段提交：`b6937c9dcd6b062e2bb9dad2e59d4eb1eea67bb2`。
+- 本阶段文件：主账74、候选90、强相关排序72、全文效度表172、路线表87、T32单位置侧表、未完成报告、阶段ZIP。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`通过；自定义CSV唯一身份/非空检查通过；ZIP CRC通过，SHA-256=`2d3edb7da9bce6601901871566707e0e615e8791756118683e2b93a98957dd57`；`git diff --check`通过。
+- 遗留：TechRxiv v1参考表180个编号位置，目前核完#85一项；SSRN 5691366官方PDF访问403，需后续复核是否同版/177或其他数量。总体检索仍未完成。
+- ChatGPT Web下一步：从Survey的参考编号[73]–[92]继续，逐项筛题名/摘要并按90/72/172去重；已有核读只补对应引文位置。
+
 ## 2026-10-10续：TechRxiv综述参考位置与#85全文核读
 - Scholar验证后复核FORGE精确题名查询，正常结果页显示无匹配；既有arXiv:2503.15867身份已覆盖该引文，不新增作品。SIDA Cited-by此前已完成225/225可见位置（23页），当前末页与台账一致，跳过重复页面。
 - 对TechRxiv官方作者PDF核实该v1稿（2025-10-21，24页，未同行评审）参考文献编号[1]–[180]。原交接中“177条”不适用于TechRxiv v1；SSRN 5691366摘要页标注23页，但PDF访问返回403，本轮尚不能确认其参考表数量。
