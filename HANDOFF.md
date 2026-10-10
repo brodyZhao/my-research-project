@@ -1,3 +1,15 @@
+## 2026-10-10续：图像修补×接地×鉴伪英文细式首屏
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；T31数据提交 `e6d3c0d`。
+- 路线T12-F2-S1实际查询 `("image inpainting" OR "image retouching") × explanation-family × grounding × forensic-context`，Scholar估算约1,080。仅筛start=0首页10项，逐位置理由见74与`T31_T12图像修补接地鉴伪_Scholar首页10条逐位置筛查_20261010.csv`；已把87路线改成1页/10位置、未闭合，start=10仍未筛。宽式停翻页，后续追高相关标题与引用链。
+- So-fake、ForgeryGPT两版本、ForgyTalker ACL 2026、Explainable Image-Centric Forgery Survey、FakeShield和Shopon等可靠性综述均按旧身份复用。AAAI EARG-Net只做篡改检测/定位，不评解释，已逐条排除。Albany官方仓储确认Yuwei Chen 2025博士论文，已更新90/72；完整章节仍待核。现有Survey的177条参考文献仍未逐篇筛完。
+- ACL ForgeryTalker 官方全文此前已在172核读；当前回到其ACL 2026正式版确认人评为5名独立评审盲评100张随机测试图，Faithfulness/Helpfulness分别4.3/4.4（1–5分）；未报告评分者一致性/分数分布，helpfulness不等于适当依赖。既有作品身份复用，不新增篇数。
+- 当前统计：74=25,272个结果位置；90=708个去重题名；72=218项；172=102个唯一效度核读身份；87=196条路线。T12首页10位置不代表整条宽式闭合。阶段ZIP含631成员，SHA-256 `21fd4f21a6ae9eb5645064c4b773204b21d4bd962c4070934a964a640d5b16a7`。
+- 验证通过：`python3 -m compileall -q work/search_protocol_v2`；主账唯一ID/理由非空、候选题名/排序rank/核读身份/路线ID唯一；T30 18条与T31 10条均连续且逐项理由非空；阶段ZIP CRC与哈希；`git -c core.whitespace=cr-at-eol diff --check`。用户两个未跟踪文件未触碰。
+- 下一步：优先继续T31发现的Shopon et al.可靠性综述/框架原文及其参考链；同步从SSR​​N/TechRxiv直接主题综述中核对177条参考位置，先按90/72/172复用身份。T12其余宽式页暂不机械翻完；总体检索仍未结束，不声称零遗漏。ChatGPT Web先核对T31与T12路线状态再继续。
+
+---
+
 ## 2026-10-10续：Repetto 18条Cited-by及FORGE精确题名状态
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；文献数据提交 `297b2d3`；`origin` 已配置，用户此前授权推送当前检索分支。
