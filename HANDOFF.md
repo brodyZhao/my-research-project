@@ -1543,3 +1543,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 更新后：74主账25,679位置；90候选716个唯一标题；72优先表223行（已修复一处原有重复名次：SEED调至29.5，保持排序次序）；172效度核读116个唯一作品身份；87路线202条。阶段ZIP 639成员/638个来源文件，SHA-256 `8982ab8aa9ff368f89f03cf3b916ecb5b4324ad24fb245b25855bcc349928790`。
 - 验证通过：`python3 work/search_protocol_v2/record_pino_references_20261010.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；`git -c core.whitespace=cr-at-eol diff --check`；T39位置1–39连续且理由非空；主账ID、候选标题、数值名次、核读身份、路线ID唯一；ZIP CRC通过。
 - 本轮主要修改：阶段报告00、SHA-256清单112、效度核读172、优先表72、主账74、路线表87、候选表90、T39逐条表和阶段ZIP。待提交本HANDOFF变更并推送。全局重检尚未完成；恢复Scholar后从Pino Cited-by断点继续，先用90/72/172去重。
+
+## 2026-10-10续：T05精确式解释faithfulness位置补筛
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`de1a115`；前一数据检查点：`e8e1086`；origin为目标仓库。原有两个用户未跟踪文件保持未修改。
+- 复查Scholar已保存路线`T05-F2-AIGEN-FAITH`，精确查询`"AI-generated image detection" "explanation faithfulness"`当前结果为6条。沿74原result_id逐条补上具体筛选结论，未重建作品身份：REVEAL、LaP-Forensics、Why Fake复用90/172已核全文；Spot and Explain Public Trust保留为直接相关、SSRN摘要级且全文仍403的预印本；Evidence Fusion保留为“解释faithfulness主张仍未验证”的负面案例候选（出版方全文仍待取）；ACL整册论文集结果排除为容器/索引噪声。路线87改为该当前快照6/6已筛。
+- 最新统计：74=25,679位置；90=716候选题名；72=223优先记录；172=116唯一原文/摘要核读；87=202条路线。阶段ZIP 639成员、638来源文件，SHA-256 `425e68d76e59dec09107de5628fb378d63e8294e37c84898ce7527b0f56b3c7e`。
+- 验证：`python3 work/search_protocol_v2/record_t05_aigen_faith_screen_20261010.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；`git -c core.whitespace=cr-at-eol diff --check`；T05六项均有逐条理由，主账result_id唯一，ZIP CRC通过。
+- 主要变更是阶段报告00、清单112、主账74、路线87、阶段ZIP。当前 Scholar 标签143的Pino Cited-by查询仍显示reCAPTCHA；用户需在该标签手动恢复后，本任务可直接从其Cited-by页继续。整体重检仍未完成，不得声称零遗漏。
