@@ -1568,3 +1568,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要文件：阶段报告00、SHA-256清单112、逐位置主账74、路线表87及阶段ZIP。记录脚本为忽略的本地文件`work/search_protocol_v2/record_t06_stability_20261010.py`，未提交。
 - 测试：`python3 work/search_protocol_v2/record_t06_stability_20261010.py`执行后，断言T06 16项连续、理由/依据非空；全局result_id唯一；路线状态16/16；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`python3 -m compileall -q work/search_protocol_v2`、`git -c core.whitespace=cr-at-eol diff --check`及ZIP CRC检查通过。
 - 遗留/下一步：T06-F3-S4断点已解除；Pino深伪视频解释论文的Cited-by链仍未筛。继续前先看87路线与90/72/172复用旧身份，不重复已闭合的引用位置或已核正文。宽查询分页上限及索引波动仍限制召回；总检索未完成，不能承诺零遗漏。ChatGPT Web后续可从已保存的Pino Scholar引用链断点继续。
+
+## 2026-10-10续：T11证据一致性检索闭合当前快照
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`5f49b44`；远端：`origin https://github.com/brodyZhao/my-research-project.git`。
+- 按子式`(deepfake OR "face forgery" OR "facial manipulation") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("evidence consistency")`检查Scholar start=0/10/20共30个结果位置，主账74逐项记录；专表T44逐条给出筛选理由。后续直接请求start=30，页眉显示总数30/第4页但结果区为空、无下一页入口。因此本轮按当前索引快照30/30闭合；早期约40的估数留作索引波动记录，未虚构额外10条。路线87记录这一差异及空页URL。
+- 新增或统一核读的唯一身份：INSIGHT、EDVD-LLaMA、METER、SA-GGCoT、Fact or Fake、From Evidence to Verdict/AIFo、OmniVL-Guard Pro；既有VIGIL、EFR、STeREx-Net等复用原候选/核读。METER的两种题名字形已在90/72合并。ResearchGate单条音视频XAI搜索题录及缺正式机构原文的过度自信条目均未列为确认强相关论文。
+- 当前计数：主账74=25,829个位置；90候选729个唯一题名；优先表72=238项；172=133篇唯一原文/摘要效度核读；87=206条查询/引文路线。阶段ZIP为644个成员（643源文件），SHA-256 `c812ac1e12046322e6465732393c9630518fbf246cc6f924db1029cbd02170a3`。计数口径不等于强相关独立论文数。
+- 主要变更：阶段报告00、主账74、路线87、候选90、优先表72、原文核读172、T44逐条筛选表、SHA-256清单112及阶段ZIP。忽略目录中的记录脚本未提交。两个已有用户未跟踪文件未改动。
+- 测试：`python3 work/search_protocol_v2/record_t11_evidence_consistency_20261010.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；T11位置/理由、METER身份合并、候选/排序/核读/路线唯一性、ZIP成员及逐文件哈希断言；`git -c core.whitespace=cr-at-eol diff --check`。均通过。
+- 遗留/下一步：主题级重检仍未完成，不承诺零遗漏。当前用户恢复的FakeXplain Cited-by页对应六条已记录且已筛的快照，不重复添加；之后应从87选择未试检且信号较高的子式，或继续仍待恢复的Pino Cited-by链，并先用90/72/172去重。ChatGPT Web先检查当前Scholar页面身份与状态，再按路线账本续查。
