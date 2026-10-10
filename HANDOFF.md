@@ -1649,3 +1649,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要修改：阶段报告00、主账74、候选90、排序72、效度核读172、路线87、SHA清单112、阶段ZIP；T89/T90处于被忽略的outputs树中并收录在已跟踪阶段ZIP。两个既有用户未跟踪文件未修改/未暂存。无源码修改。
 - 遗留：总体重检仍未闭合，不能保证零遗漏。下一步可以沿GPT4o-Receipt当前Scholar的3条Cited-by快照继续前向筛查，再选87中高信号而未闭合的窄式；所有作品先对照90/72/172复用身份。不要重新筛已闭合的T88、CSIAD这3条被引或其40条参考位置。
 - ChatGPT Web建议：核对CSIAD相对于EFR及Can GPT Tell Us Why的构念边界；其中自动LLM评分/解释接地指标不要改写为独立事实核验或人类恰当依赖。
+
+## 2026-10-11续：证据充分性窄式、ForeAgent全文与Scholar版本链
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；文献数据提交：`ffa49c9`，已推送至 `origin`。两个已有用户未跟踪文件未修改、未暂存。
+- Google Scholar新窄式 `"image forgery detection" ("evidence sufficiency" OR "evidence necessity" OR "evidence completeness") (explanation OR reasoning)` 当前快照3/3位置逐项筛查。OmniVL-Guard Pro、ForensicZoom身份复用旧核读；ForeAgent由摘要级升级为官方arXiv全文核读。T96–T100见74主账、87路线表及阶段ZIP。
+- ForeAgent（arXiv:2606.26552v1）正文§III-B3用Gemini-3-Flash-Preview评2,000条推理，报告质量分5.35、逻辑一致75.6%、因果清晰76.1%、证据充分38.4%。它是直接相关的LLM judge解释/推理质量评估，不是人类解释真值、反事实因果faithfulness或appropriate reliance证据；抽样描述“GPT5 prediction file”与多模型比较的样本关系仍有复现歧义。候选rank由182调整为18.5，核读新增至172。
+- ForeAgent原稿参考文献[1]–[30]逐条题录/主题初筛（T97）；Scholar Cited-by当前1/1为既有MAD-Guard身份（T98）。PAVE精确题名1/1及All versions簇2/2（arXiv+NASA ADS同一作品）已记录（T99/T100）；Scholar两个页面均无Cited-by入口，标记为前向引文不可判定，不记作零引用。
+- 本阶段文件：报告00、主账74、路线87、候选90、排序72、效度核读172、SHA清单112、阶段ZIP。74主账27,576位置；87路线244条；候选90共788个题名；排序72共252项；172共187篇唯一核读。阶段ZIP700成员，SHA-256=`749e620d00aa806510bc83478a99380629484202fbfa46a83237bafe0f5366c5`。T96–T100逐位置侧表因`outputs/`被.gitignore忽略，随ZIP交付。
+- 验证通过：`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；主账唯一位置ID且理由非空，候选/排序/核读身份唯一，路线ID唯一；T96=3、T97=30、T98=1、T99=1、T100=2；ZIP CRC/SHA-256；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
+- 遗留：World Scientific 的《Evidence Fusion for Analyzing Multimodal Image Manipulation》出版社页显示Cloudflare安全验证，全文未核实；候选保持待核，不计作已验证解释可靠性证据。总体文献重检仍未闭合，不作零遗漏承诺。下一步优先处理该全文访问限制，同时从87选择尚未覆盖、精度较高的子式与强相关论文引文链；先按候选90/排序72/核读172复用身份，不重筛旧位置。
+- ChatGPT Web建议：重点复查ForeAgent的LLM judge评估与证据充分38.4%边界；随后追查Evidence Fusion的完整方法/解释定义，并继续未闭合的窄式。不要重筛T75四条、ForeAgent三条窄式结果、30条参考文献或已闭合的PAVE版本簇。
