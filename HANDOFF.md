@@ -1,3 +1,14 @@
+# 2026-10-10 FORGE/TruthLens Scholar身份及引文链检查点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新数据提交：`8b7b09b`（已推送至origin）。
+- Google Scholar精确现题名FORGE无命中；改用同作品arXiv号`2503.15867`，3页25个结果逐位置题录筛查见`T22_FORGE_arXiv身份号Scholar_25条逐位置题录筛查_20261010.csv`。Scholar显示的多个TruthLens旧题名均按同一arXiv作品与既有FORGE全文记录、T16参考文献筛查复用。FORGE Cited-by可见2项：EFR、VIGIL；二者已核全文，逐条见`T23_FORGE_TruthLens被引作品_2条逐项筛查_20261010.csv`。
+- SIDA前向引文核读的Grad-CAM多模态检测与语义鉴伪/溯源相邻作品之外，本轮仅新增2条邻接候选；不将检测器校准、题名中的trustworthy或区域热图自动视为解释faithfulness证据。当前74主日志25,048个位置，87路线189条，90候选680条观察，72排序204项，172全文效度核读85篇唯一作品。观察/排序条目数不是独立纳入论文数。
+- 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`含623成员，SHA-256：`ba49461af44f400a6215776327a3883d9c1ba5cf75189dd13024001438632169`。已通过：`python3 -m compileall -q work/search_protocol_v2`、package checkpoint、CSV行数与result_id唯一性断言、T22/T23逐条理由检查、ZIP CRC、`git -c core.whitespace=cr-at-eol diff --check`。
+- 遗留：总体检索和新增候选全文核读未结束；当前FORGE/TruthLens Scholar快照仅2条Cited-by并不代表其他版本聚类/数据库穷尽。下一步继续实际Scholar未覆盖查询，检查90中尚无172身份的高相关作品；各查询断点按74/87匹配，已筛作品身份必须复用。
+- 建议ChatGPT Web：当前Chrome/IAB新增标签100–103记录了`2503.15867`的三页结果与FORGE的2条Cited-by页面。继续前对照T22/T23和74，避免重复。
+
+---
+
 # 2026-10-10 Side-VLM出版商参考链检查点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`fe65ecd`（已推送至origin）。本次只触碰登记的文献账本、阶段包和专用记录脚本；原有两个用户未跟踪文件保持未修改、未暂存。
