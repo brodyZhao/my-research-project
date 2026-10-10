@@ -1246,3 +1246,4 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 统计：74位置24,774；90去重题名655；72排序201；172全文/摘要审读70；87路线183。阶段ZIP 617成员，SHA-256 `e217f8863fc2968f106b734217606cdb833a3f2a79b346beb43e1020785627e9`。编译、T18两项、位置唯一ID、候选/排序/核读/路线计数及ZIP CRC均通过。整体搜索仍不完整，不保证零遗漏。
 - 主要修改：报告00、主账74、路线87、候选90、排序72、效度核读172、T18引文审筛表、阶段ZIP及HANDOFF。无业务源码改动；两个既存用户未跟踪文件不变。
 - 后续：若当前Scholar页仍可用，优先追踪刚确认的高相关新seed的前向引用/版本记录；先用90/72/172复用已筛题名。SIDA仍是独立未确认状态，勿将FakeXplain/Veritas结果误记为SIDA。
+- 本轮数据提交：`0ebb872`（Veritas++引用及文字攻击鲁棒性邻接审查）；已更新阶段包，待HANDOFF同步提交后推送至`origin/codex/forensic-explanation-literature`。
