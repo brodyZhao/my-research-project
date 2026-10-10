@@ -1,3 +1,16 @@
+## 2026-10-10续：Repetto 18条Cited-by及FORGE精确题名状态
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；文献数据提交 `297b2d3`；`origin` 已配置，用户此前授权推送当前检索分支。
+- Repetto et al.（DOI `10.1007/s10994-025-06919-6`）Google Scholar Cited-by簇 `14191153887963043416` 的两页18个可见位置已逐项筛查，见74主账与T30。第二页第1项为种子作品自身/版本卡片，保留位置但不计新施引身份。路线87标为当前快照18/18，不表示完整引文网络。
+- Repetto开放全文核读范围更新到172和优先rank 207：3个MedMNIST数据集、8种CNN/ViT、10种解释方法；像素L2、SSIM、卷积密度/JSD空间一致性；对抗扰动保持预测不变，另测JPEG/对比度/散斑。明确稳定性不等于证据真实性、因果faithfulness或appropriate reliance。
+- 新增4篇跨域方法/综述邻接至90、72和172：Zhang等普通图像解释自然损坏稳健性（出版商摘要；全文受限）；Ji的“Stability Does Not Imply Evidence”（Scholar摘要+作者公开受控MRI材料；正式全文待核）；Masood等分布漂移解释审计（Springer开放全文）；Ouazza等AML/XAI综述（MDPI访问返回429，依据Scholar摘要/出版社索引片段）。四者都不是图像鉴伪域的直接实证。候选表708、排序表216、172效度核读102篇唯一身份、87路线196条、74主账25,262个位置。
+- 用户完成安全验证后，Scholar精确查询 `"FORGE: Forensic Reasoning with Grounded Evidence"` 显示0结果；仅更新对应87路线状态并复用arXiv `2503.15867`、T22/T23身份。
+- 阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`：630成员；SHA-256 `4371fcd4b7699e82874472ea410cf0f482c75954db0f3501b4a158160cc0db89`。验证：`python3 -m compileall -q work/search_protocol_v2`、CSV行数/唯一ID/唯一题名/逐条理由断言、T30位置1–18连续检查、ZIP CRC与哈希、`git -c core.whitespace=cr-at-eol diff --check`均通过。
+- 主要文件：阶段报告00、主账74、路线87、候选90、排序72、效度核读172、T30侧表和阶段ZIP。两个已有用户未跟踪文件未修改/未暂存。无业务源码变更。
+- 遗留：Google Scholar动态索引、版本聚类及少数直连受限来源仍有覆盖/核验风险；总体重检未结束，不作“零遗漏”声明。下一步继续英语窄式中未闭合路线，按90/72/172的身份记录复用已审作品，再追新强相关种子的前后向引文；优先补取Zhang全文和Ji正式全文。ChatGPT Web可先对照T30与87，避免重复筛Repetto这18个位置。
+
+---
+
 ## 2026-10-10续：DDL（TIFS）官方参考文献[1]–[52]逐项筛查
 
 - 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；数据检查点`8be2b01`；remote `origin`；用户已授权推送。
