@@ -1638,3 +1638,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：`git -c core.whitespace=cr-at-eol diff --cached --check`通过；Markdown 共 85 个链接（64 个唯一目标），3 个本地链接均存在；只改研究文档，没有业务代码，import/compileall/模型 smoke test 不适用。原有文献账本未提交改动和两个未跟踪文件未暂存。
 - 遗留：V2.1 检索仍未闭合；Side-VLM、DDL、Hybrid CLIP-Diffusion、Anchors 取证工具、SSRN 空间域解释批评和 ACM 篡改解释论文的完整评价协议仍待获取正文。不能据当前证据断言零遗漏或全部 250 篇均已通读全文。
 - 建议 ChatGPT Web：优先核对上述受限全文的 faithfulness 操作定义；审阅正文第 6 节的 EFR/Hopf/Side-VLM/DDL 重合边界，以及第 7–8 节的正对照和编辑有效性门槛，然后再冻结开题主张。
+
+## 2026-10-11续：CSIAD专家评价检索与引文链检查点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`d9937e65c5da10e63049056a1dcaac48840b3053`；`origin`为已确认的GitHub仓库，本次提交待推送。
+- T88 专家验证式的85/85位置维持闭合；更正AEGIS的专家参与是数据质量/标注流程，不是盲评解释；移除GoldFormer错误URL。未重新筛查已记录页面。
+- 新增CSIAD (ACL 2025)的全文效度核读、优先排序rank 28.5和候选记录。对其Scholar Cited-by 3/3位置逐项筛查，并对ACL正式版参考文献1–40逐位置做题名/主题筛查：侧表T89/T90随阶段ZIP存档，主账74和路线87同步。CSIAD细粒度解释比较由LLM judge对照专家人工标注；限制为金融文档图像、109异常案例、未报告解释评审者一致性/校准，且没有解释因果faithfulness或用户适当依赖评估。
+- 作品核读表172新增6条唯一作品记录：CSIAD、AEGIS、分析员工具用户研究、DGR-Net摘要级核对、AniPrO、Can GPT Tell Us Why；GPT4o-Receipt如此前已有候选身份则沿用。DGR-Net的SSRN PDF返回403，状态明确标为摘要级而非全文核读。候选90=783题名，排序72=252项，效度表172=181项，路线87=234项，主账74=27,470位置。以上口径不能当作独立强相关篇数。
+- 数据阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`为690个成员（689个来源文件及manifest），SHA-256 `86f8748eaca9c9e0fbf1d98cc94292708b1210155128f217dae36b57720f93a9`。验证通过：`python3 work/search_protocol_v2/record_csiad_chain_20261011.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；主账位置ID/理由、候选标题、优先标题与rank、全文核读身份、路线ID唯一；T89=3、T90=40且参考位置1–40连续；ZIP成员及SHA-256校验；`git -c core.whitespace=cr-at-eol diff --check`。
+- 主要修改：阶段报告00、主账74、候选90、排序72、效度核读172、路线87、SHA清单112、阶段ZIP；T89/T90处于被忽略的outputs树中并收录在已跟踪阶段ZIP。两个既有用户未跟踪文件未修改/未暂存。无源码修改。
+- 遗留：总体重检仍未闭合，不能保证零遗漏。下一步可以沿GPT4o-Receipt当前Scholar的3条Cited-by快照继续前向筛查，再选87中高信号而未闭合的窄式；所有作品先对照90/72/172复用身份。不要重新筛已闭合的T88、CSIAD这3条被引或其40条参考位置。
+- ChatGPT Web建议：核对CSIAD相对于EFR及Can GPT Tell Us Why的构念边界；其中自动LLM评分/解释接地指标不要改写为独立事实核验或人类恰当依赖。
