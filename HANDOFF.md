@@ -1,3 +1,15 @@
+## 2026-10-10续：DDL（TIFS）官方参考文献[1]–[52]逐项筛查
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；数据检查点`8be2b01`；remote `origin`；用户已授权推送。
+- IEEE Xplore的DDL references页面展开至第52条DeepfakeBench；52条引用均逐项做题名/主题初筛，记录在74主账、路线87和`T26_DDL_IEEE_TIFS_52条参考文献逐项主题筛查_20261010.csv`。该路线52/52 publisher-visible references闭合；不是52篇全文阅读。
+- 识别出可继续追踪的线索：face-manipulation survey (#4)、deepfake detection security/robustness (#30–31)、XAI-based detection of adversarial attacks on deepfake detectors (#36)、attribution baseline sensitivity (#41)、DeepfakeBench (#52)。候选表90对身份规范化去重后为688个唯一题名；新线索仅为题录级，不误标成取证解释可靠性实证。
+- DDL前向引文T25已修正两条Scholar题录的源链接/元数据：一条Emerald页面的丛书系列在Scholar被截断；一条SSRN结果未暴露abstract_id，改留站点记录入口并标明定位受限。
+- 当前统计：74=25,122个唯一位置；90=688个候选/邻接身份；72=204项优先记录；172=85篇原文/摘要效度核读；87=192条检索/引用路线。阶段ZIP 626成员，SHA-256 `59f098c1c77d97caa643f70d7bf7e8978a27404b66a7353c2b45c40ee3adb11d`。口径各异，不能据此表示独立强相关篇数或零遗漏。
+- 验证通过：`python3 -m compileall -q work/search_protocol_v2`、主账位置ID唯一与理由非空、90题名唯一、52条路线闭合、T25/T26计数与归档成员、ZIP CRC、`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
+- 遗留：DDL正文仍需订阅，无法核验全文指标和user study；总体检索仍未完成。下一步按T26识别的线索检查90/72/172去重状态，再筛未核的对抗/XAI引文链。
+
+---
+
 ## 2026-10-10续：DDL的Google Scholar前向引用21项逐条筛查
 
 - 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；数据检查点`3d9bf45`；remote `origin`已配置且用户已授权推送。
