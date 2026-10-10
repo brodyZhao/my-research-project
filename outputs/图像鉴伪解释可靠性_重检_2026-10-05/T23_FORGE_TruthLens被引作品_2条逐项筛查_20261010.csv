@@ -1,0 +1,3 @@
+﻿result_position,citing_title,screen_decision,screen_reason,identity_reuse
+1,Evidence-Grounded Forensic Reasoning for Detecting and Grounding Multi-Modal Media Manipulation,直接核心/复用EFR身份,Scholar Cited by: TruthLens/FORGE明确显示该引用；EFR已全文核读并与FORGE引文链建立身份映射。,沿已存在EFR-CITEDBY-20261009及172身份复用，不重复审查。
+2,VIGIL: Part-Grounded Structured Reasoning for Generalizable Deepfake Detection,直接强相关/复用VIGIL身份,Scholar Cited by: TruthLens/FORGE明确显示该引用；90/172已有VIGIL身份。,复用已记录VIGIL全文核读，不重复计篇。

@@ -1,0 +1,26 @@
+﻿result_position,page_start,position_on_page,scholar_title,screen_decision,screen_reason,identity_reuse
+1,0,1,SFDM-ViCapsNet: using SSIM-guided frame selection and statistical fusion dynamic margin cropping to detect fake faces in videos,检测背景/排除,视频伪造检测方法，结果卡片未显示解释评价。,单纯检测身份，不纳入强相关候选。
+2,0,2,TruthLens: Visual Grounding for Universal DeepFake Reasoning,直接核心/复用FORGE身份,同一arXiv:2503.15867作品的旧标题版本；复用FORGE既有全文核读、83条参考题录筛查及优先身份，不重复计篇。,与FORGE同一作品；此处仅记Scholar别名结果位置。
+3,0,3,AIGI-Holmes: Towards Explainable and Generalizable AI-Generated Image Detection via Multimodal Large Language Models,直接强相关/复用既有身份,AI生成图像鉴伪并明确包含explainability；90/172均有既有身份，复用核读。,复用AIGI-Holmes既有身份与全文记录。
+4,0,4,Fine-grained DINO Tuning with Dual Supervision for Face Forgery Detection,检测背景/排除,脸部伪造检测，结果卡片没有解释可靠性终点。,只有检测证据不足以纳入本题解释可靠性。
+5,0,5,EvolveReason: Self-Evolving Reasoning Paradigm for Explainable Deepfake Facial Image Identification,直接强相关/复用候选,明确面向深伪人脸图像解释识别；候选90已有身份，沿现有全文待核状态推进。,复用EvolveReason身份，不重复建立候选。
+6,0,6,Memory-Anchored Multimodal Reasoning for Explainable Video Forensics,视频解释邻接/复用候选,解释型多模态视频取证，与图像直接核心分开；90已有身份。,复用既有视频邻接身份，不计图像直接核心。
+7,0,7,EXPDF: Adversarially Robust Spatiotemporal Deepfake Detection Using Temporal-Aware Attention Fusion And Evolutionary Hyperparameter Optimization,检测背景/排除,视频检测与时空鲁棒性，卡片未显示解释评估。,attention/鲁棒检测本身不构成解释可靠性证据。
+8,0,8,Evidence-Grounded Forensic Reasoning for Detecting and Grounding Multi-Modal Media Manipulation,直接核心/复用EFR身份,用户指定高相关作品，已在90/172核读；Scholar结果本轮复用已核身份。,复用EFR身份及已完成全文核读。
+9,0,9,VRAG-DFD: Verifiable Retrieval-Augmentation for MLLM-based Deepfake Detection,直接强相关/复用候选,可验证检索增强的深伪MLLM检测；90已有候选，按原文待核/已核状态复用。,复用VRAG-DFD候选身份。
+10,0,10,Além do Desempenho: Um Estudo da Confiabilidade de Detectores de Deepfakes,检测可靠性邻接,主题是检测器可靠性，但当前卡片未显示XAI或解释评价；作为测量邻接记录，不列解释强相关。,仅分类器可靠性，非解释可靠性。
+11,10,1,Explainable Deep Learning for Digital Image Forgery Detection: A Systematic and Critical Review,强相关综述/复用候选,直接聚焦图像伪造检测解释；90已有候选身份，题录重复发现不重复计篇。,复用既有综述身份，全文状态单独追踪。
+12,10,2,From Survey to Solution: Lightweight and Interpretable Multimodal Deepfake Detection Using CNNs and Grad-CAM,解释方法邻接/新候选,深伪检测中使用Grad-CAM的多模态框架；结果卡片未呈现faithfulness、人评或稳定性协议，保留为低优先方法邻接。,方法应用相关，但未见解释可靠性评价终点。
+13,10,3,PViT: A Hybrid Model for Deepfake Face Detection Using Patch Vision Transformers and Deep Learning,检测背景/排除,检测架构论文，结果卡片未显示解释评价。,无解释可靠性证据。
+14,10,4,DeepFake Face Detection Using SE-Enhanced 1D-CNN with Improved Calibration and Classification Performance,分类校准邻接,分类概率校准/性能是可靠性相邻维度，但未显示解释对象或解释效度。,单独分类校准不等同解释忠实性。
+15,10,5,Beyond Artifacts: Semantic Deepfake Detection and Digital Provenance Tracking with Multimodal Large Language Models,取证推理/溯源邻接，新候选待复核,多模态语义鉴伪与来源追踪方向相邻；卡片未见解释faithfulness终点，暂入邻接候选。,题名摘要级筛查，需读全文才可判断解释证据。
+16,10,6,Controlled Benchmarking of CNN Architectures for Fake Face Classification under Standardized Synthetic Conditions,检测基准背景/排除,标准化合成条件下分类器比较；未呈现解释评价。,检测基准不等于解释可靠性评价。
+17,10,7,MADL: Towards Dependable Image Forgery Detection Via Multi-Agent Forensic Reasoning,直接图像鉴伪/复用全文身份,图像伪造多智能体取证推理；90/172已有身份并完成核读，复用效度边界。,复用MADL身份和已完成全文核读。
+18,10,8,Explainable Image-Centric Forgery Detection: A Survey,强相关综述/复用候选,图像中心伪造检测解释综述；90已有身份，复用身份并待按既定计划核全文。,复用既有综述身份，不重复登记。
+19,10,9,TruthLens: Explainable DeepFake Detection for Face Manipulated and Fully Synthetic Data,直接核心/复用FORGE身份,同一arXiv:2503.15867历史题名/聚类记录，复用FORGE的172、T16及72身份。,同一作品的Scholar重复版本，不重复计篇。
+20,10,10,Towards Trustworthy AI: A Transformer-Driven Adaptive Framework for Robust Deepfake Detection in Digital Forensics,信任/鲁棒邻接/复用候选,已有90身份；题名涵盖深伪检测与鲁棒性，暂按邻接处理，不将trustworthy标题当作解释faithfulness证据。,复用候选身份；需全文检查是否存在解释指标。
+21,20,1,VIGIL: Part-Grounded Structured Reasoning for Generalizable Deepfake Detection,直接强相关/复用全文身份,部件级接地结构化深伪推理；90/172已有身份，复用全文边界。,复用VIGIL身份和已完成全文核读。
+22,20,2,Deepfake Face Detection and Adversarial Attack Defense Method Based on Multi-Feature Decision Fusion,检测/对抗防御背景,多特征融合检测与防御，标题未体现解释评估。,无解释可靠性终点。
+23,20,3,"Photos, Charts and Video Must Explain Quickly",主题排除,通用视觉传播/说明章节，非取证检测解释研究。,非本题范围。
+24,20,4,Towards Trustworthy AI: A Transformer-Driven Adaptive Framework for Robust Deepfake Detection in Digital Forensics,信任/鲁棒邻接/重复版本,Scholar末页重复显示该条目，候选身份与位置观察应合并。,同一作品的重复检索结果，复用第20项身份。
+25,20,5,TruthLens: Explainable DeepFake Detection for Face Manipulated and Fully Synthetic Data,直接核心/复用FORGE身份/重复版本,Scholar第三页再次显示FORGE同一arXiv作品旧标题。,同一作品第三个标题变体，不重复计篇。
