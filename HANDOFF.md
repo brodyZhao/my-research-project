@@ -1237,3 +1237,4 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 统计：74主账24,772个唯一位置；90候选654个去重题名；72排序200项；172全文/摘要效度核读69项；87路线182条。ZIP 616 members，SHA-256 `b7b1dad4a77884c21eb1abd69e997167c23ad6c7c3fcd2f85fa93d7d8c00beb2`。检查：`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`python3 -m compileall -q work/search_protocol_v2`、6条引文/74唯一ID/候选/核读/路线计数断言及ZIP CRC均通过；`git -c core.whitespace=cr-at-eol diff --check`待提交前执行。
 - 主要修改文件：阶段报告00、主账74、路线表87、候选表90、效度核读表172、T17六项引文筛查、阶段ZIP、本HANDOFF。无业务源码修改。
 - 遗留：SIDA查询仍需确认该专属标签是否恢复；总体搜索未完成，不承诺零遗漏。建议下一步先识别恢复后的Scholar标签对应哪条seed/query，按页面真实内容续查；复用既有论文核读，避免把FakeXplain结果误标为SIDA。
+- 本轮数据检查点提交：`22ffd49`（FakeXplain cited-by 六项筛查）；交接文件同步后推送至`origin/codex/forensic-explanation-literature`。
