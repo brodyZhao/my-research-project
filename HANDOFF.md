@@ -1,3 +1,15 @@
+# 2026-10-10 SIDA后续：两篇直接接地评测论文全文核读
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；上一检查点为 `13f22f3`。Scholar安全验证恢复后继续，用户未跟踪的两个既有文件保持原样。
+- Google Scholar exact-title 检查 *Look Before You Judge: Training-Free Region Mining for Grounded and Explainable Deepfake Detection* 得1条题名结果，结果卡未显示Cited by入口；74登记该条，87标明“无法据此推断零引用”。该候选和 *Explainable Deepfake Detection Challenge* 的作者arXiv全文现已核读并写入172/90/72，未重复已有论文的全文审查。
+- Look Before You Judge (arXiv:2609.35536v1)在TriDF/MMTD-Set评测区域覆盖、不支持artifact claim和分类；以InternVL-3.5-8B为例，TriDF Coverage 0.0270→0.2239、CHAIR 0.9745→0.6407、Hal 1.0000→0.7875、准确率0.4176→0.5458。作者明确注意力只提议证据区域，不是决定的因果归因；分数依赖外部LLM映射至artifact taxonomy，未能映射的claim会丢弃，Hal只标有/无不支持claim。未见人类claim复核/IAA、删除插入必要充分或appropriate-reliance研究；白盒、高频细节、压缩/低频篡改局限已记录。
+- Explainable Deepfake Detection Challenge (arXiv:2607.21007v1)基于XPlainVerse（450K训练、110K验证、200K隐藏测试），同时评分类别、双受众解释、LLM entity/evidence grounding。隐藏集有5支最终队伍；grounding直接区分实体与视觉证据，但LLM按参赛/参考解释的语义结构互相支持进行计分，文中未报告独立人评校准、IAA或像素层证据核验，也未测因果faithfulness/适当依赖；作者把grounding评分可靠性和用户是否据此验证/行动列为未来工作。最终会议版待后续核。
+- EFR cited-by快照重新抽查仍为1项MAD-Guard，复用已存在的101逐条记录、172全文核读及87路线记录，不再重复登记/计数。SIDA cited-by快照225/225已闭合，整体检索仍未完成。
+- 本次阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`：617成员；最新SHA-256 `8aa42de6b893764df99b316c681c2c94a96f466098d3f031a9c3b1b319a742f1`。校验通过：package_checkpoint_20261010.py、`python3 -m compileall -q work/search_protocol_v2`、CRLF-aware `git diff --check`；主账25,000行ID唯一且筛选理由非空；90候选676题名唯一、72优先201唯一rank、172全文效度核读72篇唯一、ZIP CRC及清单逐文件哈希检查通过。数字是观察位置/题名/核读记录数，不是独立领域论文数。
+- 后续从SIDA被引末页后，继续审核225条链中尚未核读的直接强候选原文及其新引文；复用已核身份和效度记录。不可宣称文献检索已穷尽或零遗漏。建议ChatGPT Web复核两篇的“接地代理≠因果faithfulness/适当依赖”构念边界。
+
+---
+
 # 2026-10-10 FakeVLM-R1解释完整性与76条参考文献逐项初筛
 
 - Scholar广式“图像伪造/操纵 × explanation/attribution/saliency × sufficiency/comprehensiveness/completeness”估数约3,590；首页10项逐条记录后拆为精确式 `"image forgery" "explanation completeness"`。唯一命中FakeVLM-R1，官方arXiv全文已核。
