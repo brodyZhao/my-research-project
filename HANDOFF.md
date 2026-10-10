@@ -1,3 +1,15 @@
+## 2026-10-10续：DDL的Google Scholar前向引用21项逐条筛查
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；数据检查点`3d9bf45`；remote `origin`已配置且用户已授权推送。
+- DDL（IEEE TIFS 2025, DOI 10.1109/TIFS.2025.3553803）精确题名页显示Cited by 21。`start=0/10/20`共21个可见结果已逐项筛查，记录于主账74、路线87和`T25_DDL_21条CitedBy逐项筛查_20261010.csv`。Scholar引用快照完成21/21，不等于完整引用图谱。
+- IEEE官方页显示13 Cites in Papers，Google Scholar显示21项；按不同数据库索引快照保留口径差异。IEEE正文受订阅限制，目前只核公开摘要和Introduction首段，未把摘要声称的fidelity当成独立忠实性验证。
+- 21项大多是检测模型/综述/跨域噪声。90新增两个题录级综述引文入口（深伪检测/基准综述；图像视频识别定位综述），并未当作解释可靠性实证。其余逐条区分检测器、预测不确定性邻接、视频检测以及文本/诈骗/日志等排除项；同一Springer图像伪造书的书目与PDF版本合并。
+- 计数：74=25,070个唯一Scholar/引文位置；90=682个唯一候选/邻接身份；72=204项优先表；172=85篇原文/摘要效度核读；87=191条路线。计数口径不同，不能解读为强相关文献总数。阶段ZIP 625成员，SHA-256 `e9540a123a22cc6957ccbf49ed29a8ff1c800da617718609400497d680e7a1b0`。
+- 检查通过：`python3 -m compileall -q work/search_protocol_v2`；CSV行数、主账位置ID唯一及逐条理由非空、候选题名唯一、21项路线闭合、T25入包与ZIP CRC；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码更改。
+- 后续优先继续尚未全文核验的直接相关种子及其参考文献链；已有论文先按唯一身份复用。全局检索仍未完成，不能承诺零遗漏。
+
+---
+
 ## 2026-10-10续：EvolveReason前向引文复用ForensicZoom核读
 
 - 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；本检查点数据提交`883ea78`；remote `origin` 已配置，用户此前已授权推送本分支。原有两个用户未跟踪文件未修改、未暂存。
