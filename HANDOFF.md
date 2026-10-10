@@ -1,3 +1,12 @@
+# 2026-10-10 RAIDX引文递归：LEGION核读与82条参考筛查
+
+- 继续由RAIDX强相关人评研究递归参考文献。根据arXiv v1正式References逐项建立82行题名级筛选表：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T02-F2-RAIDX_参考文献逐篇主题初筛_20261010.csv`。其中9项列为直接/邻接：SIDA、So-Fake、LEGION有已核唯一全文可复用；解释系统/基准等另外6项仅题录级保留、全文待核。其余分类为检测/数据背景或通用模型/工具/生成背景。题名初筛不等于其余引文全文排查。
+- RAIDX参考引文 *LEGION: Learning to Ground and Explain for Synthetic Image Detection* 现按ICCV 2025正式版核读并合并到已有唯一候选：SynthScars 12,236张全合成图的专家标注包括像素伪影、解释文本及类别；解释比较报告ROUGE-L/CSS参考文本对齐。标注专家不是模型输出的盲评员；ROUGE/CSS不证明claim级事实性或因果忠实；HPS图像偏好与解释评价无关。已列强相关优先rank 18，官方会议信息修正为ICCV 2025。
+- 当前阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip` 共618成员，SHA-256 `574d566dc7a717fdaa36a3eb022a32dd6d96fdeea51238f50afefed66fb6a2ac`。通过package脚本、compileall、CRLF-aware diff check；主账25,000位置ID唯一且理由非空，候选676题名唯一、优先202名次连续、效度核读74题唯一、RAIDX refs位置1–82连续、ZIP CRC/源清单通过。
+- 整体检索未完成；当前高收益下一步是继续RAIDX直接/邻接未核引用（ForgeryGPT、ForgerySleuth、BusterX/BusterX++、Lian等），并继续SIDA 225篇被引中待核原文。复用SIDA/So-Fake/LEGION旧核读，不重复读取。
+
+---
+
 # 2026-10-10 SIDA链RAIDX原文效度核读
 
 - 沿SIDA被引链复核 *RAIDX: A Retrieval-Augmented Generation and GRPO Reinforcement Learning Framework for Explainable Deepfake Detection*（ACM MM 2025；DOI 10.1145/3746027.3754798）。arXiv官方全文§4.3报告随机100张合成图的人评；每个输出由10名模型身份盲化的领域专家独立评分，RAIDX 82.50 (95% CI 79.85–85.15)，SIDA 67.15 (64.89–69.41)，SFT 22.5 (20.15–24.85)。直接纳入解释质量人评证据。
