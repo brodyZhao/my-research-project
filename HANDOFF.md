@@ -1425,4 +1425,4 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - Gowrisankar & Thing (2024)已存在90/72，本轮只补官方PDF全文核读至172。它是深伪解释的任务特定区域决策影响/对抗充分性代理；依赖匹配真实与伪造图，不能等同一般因果faithfulness。Tamam et al. (2023)通用图像分类解释对抗操纵全文核读后加入90/72/172，作为方法学邻接；Baniecki & Biecek综述列方法学邻接；Govindu音频解释列跨模态候选。Pinhasov的36个前向引用沿用T27，未重录。
 - 当前数据计数：74=25,220个位置；90=694个唯一标题；72=205项；172=88篇唯一原文/摘要核读；87=194条路线。阶段ZIP 628成员、627源文件，SHA-256 `db6b6beaf961f887314d797d4d988262009d4034b845ce6b853fc2cc45aea1ee`。总检索仍未结束，不承诺零遗漏。
 - 本阶段报告已追加证据和范围边界；FORGE题名验证后仍未命中，已完成的2503.15867三页25项与2项被引筛查见T22/T23，无需重复。下一步优先沿Tamam Cited-by或其他高相关解释攻击种子，先用90/72/172按身份去重，再查Scholar快照。
-- 检查脚本：`work/search_protocol_v2/record_pinhasov_references_20261010.py`及`package_checkpoint_20261010.py`。验证通过：compileall；T28位置与74逐条记录均62条；主账ID唯一、候选标题/优先排名/核读作品去重；路线记录62位置闭合；阶段ZIP 628成员CRC与逐文件校验；`git diff --check`。当前提交待完成后补入commit hash。
+- 检查脚本：`work/search_protocol_v2/record_pinhasov_references_20261010.py`及`package_checkpoint_20261010.py`。验证通过：compileall；T28位置与74逐条记录均62条；主账ID唯一、候选标题/优先排名/核读作品去重；路线记录62位置闭合；阶段ZIP 628成员CRC与逐文件校验；`git diff --check`。本阶段数据提交`82f9f82`。
