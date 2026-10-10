@@ -1683,3 +1683,16 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 修改文件：阶段报告00、主账74、路线87、候选90、排序72、效度核读172、SHA清单112、阶段ZIP；T105/T106作为忽略目录侧表归入ZIP。两个原有用户未跟踪文件未改动/未暂存。
 - 测试通过：`python3 work/search_protocol_v2/record_hcxai2026_reference_chain_20261011.py`（40项和身份复用逻辑）；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；自定义断言检查T106编号1–40及字段、主账追加40项、90/72/172唯一性、T11阻断状态和ZIP含T105/T106；`git -c core.whitespace=cr-at-eol diff --check`。无业务代码修改。两个已有用户未跟踪文件保持未触碰。
 - 遗留：T11 Scholar验证码仍待页面实际解除；DGR-Net全文/39条参考目前因SSRN/Cloudflare访问限制未核；全领域英文检索仍未闭合，不作零遗漏承诺。建议ChatGPT Web先确认tab237能否看到正常结果卡；恢复后从原查询start=0开始，同时按90/72/172身份去重。不要重刷已完成的T106或#5/HCXAI原文。
+
+
+## 2026-10-11续：图像拼接解释系统与Tamper-Guided Attention引文链
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段研究数据/账本提交：`422c1d1`。此后追加本交接记录；origin为已确认的目标仓库。两个既有用户未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md` 和 `literature/forensic-explanation-relevance-20261004.md` 未修改、未暂存。
+- 当前 Scholar 检索断点T11-F3-S2：用户报告“已恢复窄式检索”后，IAB实际页面仍显示未勾选reCAPTCHA、约141条页眉但没有结果卡；不记为0结果或完成。87中保留从start=0开始的断点，等待页面实际呈现结果卡后才筛位置。
+- 官方MDPI全文将《Attention-Guided Cross-Connected Filters Convolutional Neural Network with Surrogate-Based Interpretability for Image Splicing Forgery Detection》从摘要级升级为全文核读：surrogate heatmap、主模型拟合/一致性和mask定位指标已记录；作者明确承认没有采用既有interpretability metrics评价explanation faithfulness，因此将其列为直接领域系统与评测缺口案例，而不是已验证faithfulness证据。
+- 沿MDPI正式参考表[1]–[52]逐位置题名/主题筛查，侧表T109；选中引用[28]后核读Wiley全文《Image Forgery Detection Using Tamper-Guided Dual Self-Attention Network with Multiresolution Hybrid Feature》，并对其参考表[1]–[40]逐项筛查，侧表T110。TDSA用tamper mask训练期监督内部position-attention map，评估像素定位/图像分类、消融及常见图像变换鲁棒性，但没有独立解释faithfulness、人类效用或appropriate-reliance评估。两条参考链一共92个印刷位置，均只完成题名/主题级筛查（非92篇全文核读）；TDSA是其中一篇独立全文核读。
+- 账本更新：候选90=809唯一标题（TDSA新加一项；MDPI既有身份原位升级）；优先表72=262项（新增MDPI与TDSA）；原文效度表172=196个唯一身份（MDPI原位升级，TDSA新增）；路线87=253条。主Scholar分页账本74=27,623条位置，当前轮未新增Scholar位置。候选、优先、全文核读及书目位置数口径不同，不等于强相关论文总数。
+- 主要修改文件：阶段报告00、候选90、排序72、路线87、效度核读172、阶段SHA清单112、阶段ZIP；T109和T110侧表被outputs忽略规则排除于单独Git跟踪，但由阶段ZIP完整归档。当前阶段ZIP SHA-256=`d377a0ec60fa3c64d567975699c53f8d3be778b7ee88600bfe765f1f24337c8c`，709个成员（708个来源文件+manifest）。
+- 测试通过：`python3 work/search_protocol_v2/record_t109_t110_forensic_refs_20261011.py`（T109 52/52、T110 40/40连续位置；候选/优先/核读/路线身份唯一）；`python3 -m compileall -q work/search_protocol_v2`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（zip CRC及成员哈希；主账位置ID/理由、候选/优先/核读唯一性）；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
+- 遗留：T11-F3-S2 Scholar结果卡等待验证码实际解除；DGR-Net正文与39条引文仍受SSRN 403/Cloudflare限制；主题英文检索与引文网络仍未闭合，不能承诺零遗漏。下一步建议：在可见正常结果卡后从T11-F3-S2 start=0继续；同时优先追查书目链中明确的篡改区域定位/attention邻居与新的解释评测文献，只在90/72/172身份去重后补新作品，不重复已核的T106/T107、T109/T110位置或已全文核读文献。
+- ChatGPT Web下一步检查：核对T11-F3-S2页面实际是否解除reCAPTCHA并显示结果卡；若仍被拦截，不要重试同一已记录位置，先切换到87中未完成且不重复的高精度子式。
