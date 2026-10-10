@@ -1551,3 +1551,10 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 最新统计：74=25,679位置；90=716候选题名；72=223优先记录；172=116唯一原文/摘要核读；87=202条路线。阶段ZIP 639成员、638来源文件，SHA-256 `425e68d76e59dec09107de5628fb378d63e8294e37c84898ce7527b0f56b3c7e`。
 - 验证：`python3 work/search_protocol_v2/record_t05_aigen_faith_screen_20261010.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；`git -c core.whitespace=cr-at-eol diff --check`；T05六项均有逐条理由，主账result_id唯一，ZIP CRC通过。
 - 主要变更是阶段报告00、清单112、主账74、路线87、阶段ZIP。当前 Scholar 标签143的Pino Cited-by查询仍显示reCAPTCHA；用户需在该标签手动恢复后，本任务可直接从其Cited-by页继续。整体重检仍未完成，不得声称零遗漏。
+
+## 2026-10-10续：T06解释稳定性查询验证页断点
+
+- 仓库`brodyZhao/my-research-project`，分支`codex/forensic-explanation-literature`，数据提交`a7acff0`，上一检查点`de1a115`。原有两个未跟踪文件未改动。
+- 试检路线`T06-F3-S4`：`("synthetic image" OR "generated image") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("explanation stability")`。Scholar页眉估计约16项，但题录区在显示结果卡前进入reCAPTCHA，实际可筛位置为0；87与阶段报告已记录拦截和恢复URL，不误记为0结果或完成查询。
+- 最新ZIP 639成员/638来源文件，SHA-256 `37f5e6fd80e74ff2525e34ddf483d983c05b9c84c7763b4d83377e05929d48f9`；验证：T06路线状态断言、package checkpoint、compileall、CRLF-aware diff check、ZIP CRC均通过。
+- 最新可恢复断点：IAB标签143（Pino Cited-by exact-title）与标签144（T06 stability窄式）等待人工验证。恢复后先筛T06当前16项（如果页眉变化则据实调整），再回到Pino Cited-by；任何候选先对照90/72/172去重。总体重检仍未完成。
