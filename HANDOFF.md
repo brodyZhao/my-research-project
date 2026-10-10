@@ -1533,3 +1533,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 校验通过：`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；T37 5项、T38 40项偏移连续且理由非空；主账位置ID唯一、候选标题/优先标题/全文核读身份/路线ID唯一；ZIP CRC通过；`git -c core.whitespace=cr-at-eol diff --check`通过。
 - 最新主要文件：阶段报告00、主账74、优先72、候选90、效度核读172、路线87、T37、T38、阶段结果ZIP与manifest。
 - 遗留：总体重检继续进行；多条宽式尚未闭合，Scholar快照与数据库覆盖有限，不能保证绝对零遗漏。建议ChatGPT Web先按87中仍未闭合/仅首屏的高信号路线继续，再筛90中未核的直接候选及其引用；复用90/72/172身份，避免重筛已闭合引用链和已读全文。
+
+## 2026-10-10续：Pino视频深伪解释论文参考文献链筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；文献数据提交：`e8e1086`；远端：`origin`。本轮只触及项目输出/检索日志，原有两个用户未跟踪文件未修改、未暂存。
+- 对 *What’s Wrong with This Video? Comparing Explainers for Deepfake Detection*（arXiv:2105.05902v1）官方PDF参考文献[1]–[39]逐位置筛选；侧表`T39_Pino深伪视频解释论文_39条参考文献逐条主题筛查_20261010.csv`，结果同步主账74和路线87。它是题录/主题初筛，不能说成39篇均全文核读。
+- 新纳入90/72/172的三篇方法/人因邻接：Buhrmester et al. (2021)视觉XAI评价综述；Santhanam et al. *On Evaluating Explainability Algorithms*（OpenReview/ICLR 2020稿，参考表写2019）；Sohrawardi et al. (SOUPS 2020)记者需求小型研究。三者分别提供评价构念背景、通用解释指标方法、取证工作流中的解释需求；均不构成图像鉴伪faithfulness或appropriate-reliance直接验证。其余引文位置逐项分类，已存在作品复用旧身份。
+- Scholar标签143的Pino Cited-by精确题名查询仍在reCAPTCHA页，待手动恢复；标签93的FORGE精确题名查询在人机验证后显示0条匹配，沿用已知FORGE身份，无新增记录。
+- 更新后：74主账25,679位置；90候选716个唯一标题；72优先表223行（已修复一处原有重复名次：SEED调至29.5，保持排序次序）；172效度核读116个唯一作品身份；87路线202条。阶段ZIP 639成员/638个来源文件，SHA-256 `8982ab8aa9ff368f89f03cf3b916ecb5b4324ad24fb245b25855bcc349928790`。
+- 验证通过：`python3 work/search_protocol_v2/record_pino_references_20261010.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；`git -c core.whitespace=cr-at-eol diff --check`；T39位置1–39连续且理由非空；主账ID、候选标题、数值名次、核读身份、路线ID唯一；ZIP CRC通过。
+- 本轮主要修改：阶段报告00、SHA-256清单112、效度核读172、优先表72、主账74、路线表87、候选表90、T39逐条表和阶段ZIP。待提交本HANDOFF变更并推送。全局重检尚未完成；恢复Scholar后从Pino Cited-by断点继续，先用90/72/172去重。
