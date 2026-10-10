@@ -2,7 +2,7 @@
 
 - RAIDX第42条ForgeryGPT原已在90/rank31完成全文/人类信心变化审查，本轮复用旧记录、核对官方arXiv全文§IV-E/V并纳入统一172，未新增计篇。只测100张伪造图、5人前后判断；误判改判/置信增强说明解释有说服影响，无法证明适当依赖；作者承认幻觉风险。
 - 第38条2024旧题名与ACL 2026论文《Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline》确认为同一版本链。正式ACL论文报告5名盲评者、100样本及Faithfulness 4.3/5和Helpfulness 4.4/5，属直接解释质量人评；评分者一致性/分布与适当依赖仍缺证。修正RAIDX引文状态并补进172。
-- 本轮修改文件：172、RAIDX 82条参考筛查表、阶段报告、`HANDOFF.md`和核读脚本。验证通过：package checkpoint、compileall、主账/候选/优先/172/82条引文唯一性断言、`git diff --check`及ZIP CRC/清单；阶段包618成员，SHA-256 `4d93fd4d6e568507968e0c49bc61a967316c3f6ea76f1178ac36b432478627d8`。总体重检仍未完成。
+- 本轮修改文件：172、RAIDX 82条参考筛查表、阶段报告、`HANDOFF.md`和核读脚本。验证通过：package checkpoint、compileall、主账/候选/优先/172/82条引文唯一性断言、`git diff --check`及ZIP CRC/清单；阶段包618成员，SHA-256 `4d93fd4d6e568507968e0c49bc61a967316c3f6ea76f1178ac36b432478627d8`。成果提交 `58b74e6`。总体重检仍未完成。
 
 # 2026-10-10 ForgerySleuth引文核读统一入账
 
