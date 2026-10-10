@@ -2,7 +2,7 @@
 
 - 沿RAIDX第63条参考引文复核发现ForgerySleuth早有NeurIPS补充材料评测证据（153、rank 25），但未并入统一原文效度核读总表172。本次复用既有审读并与官方arXiv v2全文§5.3、附录A.3/A.4、D.3、E.2交叉核验，向172补入一条，保持标题去重；90和72更新为全文已核，RAIDX引用表修正待核状态及正式出版年。
 - 论文有直接人评：14名志愿者各评30个随机样本；解释正确性、相关性、细节和召回均有记录，GPT-4与STS作补充评估。志愿者专业背景、分配/重叠及IAA未报告；GPT-4/STS局限由作者承认，幻觉量化列为未来工作。它支持解释内容质量评估，但不是因果faithfulness或适当依赖证据。
-- 本轮变更文件：172、90、72、`T02-F2-RAIDX_参考文献逐篇主题初筛_20261010.csv`、阶段报告、`HANDOFF.md`及本次核读脚本。验证通过：package checkpoint、`python3 -m compileall -q work/search_protocol_v2`、CSV唯一性/主账25,000条非空理由断言、`git diff --check`及ZIP CRC/清单。阶段包618成员，SHA-256 `c76bf0296cf83f3c1a8bc1cd0c3a4dcf2b6f75de9c230b34d02b38aba64e83da`。
+- 本轮变更文件：172、90、72、`T02-F2-RAIDX_参考文献逐篇主题初筛_20261010.csv`、阶段报告、`HANDOFF.md`及本次核读脚本。验证通过：package checkpoint、`python3 -m compileall -q work/search_protocol_v2`、CSV唯一性/主账25,000条非空理由断言、`git diff --check`及ZIP CRC/清单。阶段包618成员，SHA-256 `c76bf0296cf83f3c1a8bc1cd0c3a4dcf2b6f75de9c230b34d02b38aba64e83da`。成果提交 `aaea3e6`，位于 `codex/forensic-explanation-literature`。
 - 全局文献重检仍未完成；继续RAIDX直接/邻接引文的全文审核，并复用既有paper ID与原文记录。
 
 # 2026-10-10 RAIDX引文递归：LEGION核读与82条参考筛查
