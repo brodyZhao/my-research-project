@@ -1629,3 +1629,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 可行性结论为有条件可行。既有 FF++ 小试验的完整篡改恢复正对照未达预期，应先做配对数据与操作有效性试点；不能以已有小试验宣布模型解释失真。建议从局部可配准篡改开始，整图合成和真实图像理由暂设独立扩展赛道。
 - 核查：新文档 80 行、17 个外部论文链接，引用的三份本地协议/审计文件存在；无行尾空白；`git diff --cached --check` 在文档提交前通过。仅新增研究文档，未改动业务代码、数据或模型，因此 import/compileall/运行测试不适用。仓库中已有的文献账本未提交修改及两个未跟踪文件未触碰。
 - 遗留问题：总体检索仍未闭合，不能承诺零遗漏；EFR及其他论文正式版本需在开题/投稿前再核；数据许可、盲标一致性、编辑算子伪迹和正对照成功率尚待实测。建议 ChatGPT Web 下一步优先审阅本综述的 EFR/Hopf/X-AIGD 重合判断，并据此确定第一版数据域和试点门槛。
+
+## 2026-10-11：综述重写与文献覆盖审查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；综述修订提交：`0f6c78c4e778c2cf33a83823797672a2f593fb7d`，已推送至 `origin`。主要修改：`literature/forensic-explanation-benchmark-review-feasibility-20261011.md`。
+- 依据 250 条优先记录的阅读范围与当时 167 条原文/摘要效度记录，重写为面向非本领域读者的研究发展脉络：热图与定位、扰动和仪器效度、文字接地与主张事实性、自述证据行为依赖、人类使用效果。逐条记录不是逐篇全文；检索候选仍在增补。
+- 在 EFR、FORGE、Hopf 等之外，补入 Side-VLM、DDL、Inpainting Exchange、XPlainVerse 数据集及挑战、MMTT、AIGI-Holmes、Agentic Tool-Augmented Reasoning、IFM-AIGCSPOTTER 等直接或关键邻接工作；核正 XPlainVerse 两篇论文的身份。近邻比较明确了已经存在的局部编辑掩膜、跨检测器解释评测和自述区域遮挡，不再声称这些单项首次提出。
+- 验证：`git -c core.whitespace=cr-at-eol diff --cached --check`通过；Markdown 共 85 个链接（64 个唯一目标），3 个本地链接均存在；只改研究文档，没有业务代码，import/compileall/模型 smoke test 不适用。原有文献账本未提交改动和两个未跟踪文件未暂存。
+- 遗留：V2.1 检索仍未闭合；Side-VLM、DDL、Hybrid CLIP-Diffusion、Anchors 取证工具、SSRN 空间域解释批评和 ACM 篡改解释论文的完整评价协议仍待获取正文。不能据当前证据断言零遗漏或全部 250 篇均已通读全文。
+- 建议 ChatGPT Web：优先核对上述受限全文的 faithfulness 操作定义；审阅正文第 6 节的 EFR/Hopf/Side-VLM/DDL 重合边界，以及第 7–8 节的正对照和编辑有效性门槛，然后再冻结开题主张。
