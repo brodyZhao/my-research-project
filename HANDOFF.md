@@ -1696,3 +1696,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 测试通过：`python3 work/search_protocol_v2/record_t109_t110_forensic_refs_20261011.py`（T109 52/52、T110 40/40连续位置；候选/优先/核读/路线身份唯一）；`python3 -m compileall -q work/search_protocol_v2`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（zip CRC及成员哈希；主账位置ID/理由、候选/优先/核读唯一性）；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
 - 遗留：T11-F3-S2 Scholar结果卡等待验证码实际解除；DGR-Net正文与39条引文仍受SSRN 403/Cloudflare限制；主题英文检索与引文网络仍未闭合，不能承诺零遗漏。下一步建议：在可见正常结果卡后从T11-F3-S2 start=0继续；同时优先追查书目链中明确的篡改区域定位/attention邻居与新的解释评测文献，只在90/72/172身份去重后补新作品，不重复已核的T106/T107、T109/T110位置或已全文核读文献。
 - ChatGPT Web下一步检查：核对T11-F3-S2页面实际是否解除reCAPTCHA并显示结果卡；若仍被拦截，不要重试同一已记录位置，先切换到87中未完成且不重复的高精度子式。
+
+## 2026-10-11续：LaP-Forensics参考链、ManipShield全文与Scholar前向引文断点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段文献数据提交：`cfe06c173edf01bca85332626fd8854bd72caea4`（已推送至origin）。
+- LaP-Forensics（arXiv:2607.25962）官方References [1]–[57]全部完成逐位置题名/主题筛查，逐条理由在主账74和`T111_LaP-Forensics_57条参考文献逐位置主题筛查_20261011.csv`；直接解释相关的SIDA、Locate-then-examine、FakeXplain、LEGION、Seeing Before Reasoning、Towards General Visual-Linguistic Face Forgery Detection复用既有身份和审读，不重复全文筛查。仅声称57个书目位置已筛，未声称57篇均全文核读。
+- ManipShield（arXiv:2511.14259v3）官方全文已加入候选90既有身份、优先表72和效度表172。确认其报告InternVL3.5嵌入CSS解释相似度（整体0.815），因此不能说未评价解释；但该指标不核验解释claim真值、因果faithfulness或appropriate reliance。20位标注者流程是数据集标注，不是生成解释盲评；未报告标注者一致性。Scholar精确题名卡显示Cited by 3；Cited-by页面触发reCAPTCHA、3条卡片未加载，87的`CIT-MANIPSHIELD-FWD-20261011`为未闭合断点，0条施引文献已筛。另有T11-F3-S2 appropriate-reliance窄式仍为reCAPTCHA/无结果卡。
+- 当前记录数：主账74为27,681位置（含本次57书目位置和1条Scholar精确题名卡；不计未加载的3篇被引）；90为809个唯一候选；72为263个优先记录；172为197个唯一效度审读身份；87为255条路线。计数口径不同，不能当成强相关独立论文总数或穷尽证明。
+- 主要改动：阶段报告00、主账74、路线87、候选90、优先表72、效度表172、SHA清单112和阶段ZIP。归档包路径：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，SHA-256=`25bc4bfb8cec1a4ee9b7bf7fb9ac2dbc253d4489d4e6247b65c71825110ebbc2`；包内包括T111逐篇筛查侧表。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`通过；阶段打包脚本通过（709源文件、710 ZIP成员、CRC与清单哈希校验）；主账位置ID唯一/理由非空、候选题名唯一、优先rank唯一、172作品身份唯一、87路线ID唯一；`git -c core.whitespace=cr-at-eol diff --check`通过；推送后本地HEAD与origin分支一致。原有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
+- 遗留与下一步：用户完成ManipShield Cited-by页面验证后，从当前`cites=5005560726217256151`断点逐条筛3项；然后按唯一身份匹配90/72/172。T11-F3-S2仅在结果卡实际加载后从start=0开始。继续未闭合高精度英文路线；整体重检未完成，不作零遗漏声明。
+- 建议ChatGPT Web下一步：先对照`CIT-MANIPSHIELD-FWD-20261011`的当前页，验证后仅新增3个实际可见施引位置；复用已审身份，并复核ManipShield的CSS/reference-target限制，不重复T111或现有宽式页面。
