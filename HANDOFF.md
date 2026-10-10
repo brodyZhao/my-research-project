@@ -1,10 +1,11 @@
 # 2026-10-10 Side-VLM出版商参考链检查点
 
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`2714611`（已推送至origin）。本次只触碰登记的文献账本、阶段包和专用记录脚本；原有两个用户未跟踪文件保持未修改、未暂存。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`fe65ecd`（已推送至origin）。本次只触碰登记的文献账本、阶段包和专用记录脚本；原有两个用户未跟踪文件保持未修改、未暂存。
 - 对ICPR 2026《Explainability-Guided Deepfake Detection for High-Fidelity Facial Edits》Springer页面逐条筛查21条参考文献位置，见`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T21_SIDE-VLM_21条出版商参考文献逐位置筛查_20261010.csv`。其中Can ChatGPT Detect DeepFakes与SHIELD复用90表的既有身份，不重复计篇；其他条目逐项区分解释方法、检测方法、数据/威胁场景、生成质量与水印背景。章节全文受订阅限制，摘要中的mask对齐和faithfulness结论仍属待全文核验。
-- 已修正主逐位置日志和路线表CSV行尾，避免把整表格式转换计成无关改动；主日志实际增加21个参考位置，路线表增加1条出版商引文链路线。当前主筛选日志25,021位置、90候选678条观察、72排序203项、172全文效度核读85篇唯一作品、87路线186条。观察/排序条数不等于独立纳入论文数。
-- 阶段ZIP`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`含621成员，SHA-256：`1301f583231682c3097ebd071806cb52459e23a8d8c6997b2143688129966a69`。验证通过：`python3 -m compileall -q work/search_protocol_v2`、package checkpoint、CSV解析/计数、ZIP CRC、`git -c core.whitespace=cr-at-eol diff --check`；`git show --numstat`确认74表净增21行、87表净增1行。
+- 已修正主逐位置日志和路线表CSV行尾，避免把整表格式转换计成无关改动；主日志实际增加21个参考位置，路线表增加1条出版商引文链路线。当前主筛选日志25,021位置、90候选678条观察、72排序204项、172全文效度核读85篇唯一作品、87路线186条。观察/排序条数不等于独立纳入论文数。
+- 阶段ZIP`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`含621成员，SHA-256：`5efb5a2e145154f22dd2c761116c85ae40dcee46b62fddcd3847a692421c2852`。验证通过：`python3 -m compileall -q work/search_protocol_v2`、package checkpoint、CSV解析/计数、ZIP CRC、`git -c core.whitespace=cr-at-eol diff --check`；`git show --numstat`确认74表净增21行、87表净增1行。
 - 遗留：系统检索及引文链尚未完成；Side-VLM全文实验效度仍待可访问全文；Scholar分页/动态索引不能支持“零遗漏”结论。下一步从实际Scholar断点和已标记的未核强相关身份继续，先查候选90/排序72是否已在172审过，再筛新候选及其参考/被引链。
+- 后续检查Scholar标签89确认SIDA Cited-by末页start=220为第23页、225/225闭合，位置221–225在74已有逐条记录，不重复登记。末页的Hybrid CLIP-Diffusion候选书目已由SAFE@CVPR 2026 Workshop目录核对，Fraunhofer项目页提供系统级解释流程说明；CVF论文链接当前404，正文和解释效度仍待核。候选90元数据已校正，72新增rank 11.5的全文待核条目；172不增加未读全文。阶段ZIP本次更新SHA-256：`5efb5a2e145154f22dd2c761116c85ae40dcee46b62fddcd3847a692421c2852`。
 - 建议ChatGPT Web：继续使用已恢复的Scholar标签页，从当前实际URL定位下一页；按query_id和page_start对照74/87账本，复用已审论文身份。优先尝试获取Side-VLM作者稿；若不可用，转向下一篇未全文核读的直接候选。
 
 ---
