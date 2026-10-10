@@ -1513,3 +1513,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要修改：阶段报告00、主账74、路线87、候选90、效度核读172、T32位置侧表、阶段结果ZIP、本HANDOFF。无业务源码改动。
 - 遗留：整体多路线检索仍在进行；若要继续，应从87路线中未闭合或仅首屏试检的不同主题词路线取高信号子式，优先核读90中未处理的直接候选，并按90/72/172身份表复用旧结果。不得重复机械翻查已闭合的T32参考列表、SIDA 225项或其他已闭合快照。没有证据支持“一个文献都不漏”的绝对保证。
 - 下一步供ChatGPT Web：继续宽覆盖词族与强相关seed引文链，先查阅87/90/72/172状态；如需Scholar人工验证，只在当前具体断点要求用户处理。
+
+## 2026-10-10续：T13窄式与ATAR引用表检查点
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段文献数据提交：`605f4d9`；此前检查点：`f19e643`。
+- 本阶段完成：Scholar验证后复查FORGE精确题名（正常页0匹配，身份仍复用arXiv:2503.15867）；T13文档图像 hallucination/evidence-consistency/explanation-consistency查询共13个位置筛查；ATAR arXiv:2609.39066v1官方参考76条题名逐条筛查；精确题名结果1条当前无Cited-by入口。新发现并核读NeurIPS 2025 *Toward Real-world Text Image Forgery Localization*，标为数据/定位邻接，不作为模型解释可靠性实证。
+- 更新文件：主账74、候选90、优先表72、原文效度表172、路线87；新增T35（13个Scholar结果位置）与T36（ATAR 76条参考位置）；阶段报告00、阶段ZIP。
+- 当前计数：74=25,595个结果/引用位置；90=711个规范化候选题名；72=219条优先排序记录；172=110个唯一效度核读身份；87=199条查询/引文路线。T13 hallucination宽式仅首页10/估算969，不完整；两条精确一致性式分别2/2和1/1当前快照闭合；ATAR参考表76/76题录筛查闭合，不代表全文阅读。不可将计数解读为独立强相关论文数或全局召回率。
+- 测试与校验：运行 `python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；检验CSV ID/题名/身份唯一及筛选理由非空、T35/T36行数和偏移连续、ZIP CRC与成员哈希；运行 `git -c core.whitespace=cr-at-eol diff --check`。结果应在最终提交时复核记录。
+- 未解决：总体检索仍未完成；T13-S2及多个主题宽式未闭合；Scholar当前无ATAR cited-by链接，不能推断零引用；SSRN 5691366 PDF先前403，版本/参考数未确认。ChatGPT Web下一步先对照87路线与90/72/172，沿新直接强候选和尚未闭合引文链前进，复用已核作品，勿重复全文核读。用户两个未跟踪文件保持未修改、未暂存。
