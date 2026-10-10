@@ -1,3 +1,14 @@
+## 2026-10-10续：EvolveReason前向引文复用ForensicZoom核读
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；本检查点数据提交`883ea78`；remote `origin` 已配置，用户此前已授权推送本分支。原有两个用户未跟踪文件未修改、未暂存。
+- Google Scholar EvolveReason Cited-by当前快照仅1项，为ForensicZoom（arXiv:2609.31661v1）。该论文此前已出现在多条查询中，90候选、172全文核读、72优先表均已有唯一身份。本次在74新增一个前向引文位置、87新增一条1/1已筛路线，并在T24逐项筛查；未增加候选身份或全文核读数量。
+- 更新72中ForensicZoom过时的“仅题录/摘要待核”描述。复核原文：3名专家评价200个告警案例，Fleiss κ=0.71；评分维度为证据完整性、逻辑连贯性和可操作性。该评测反映归因报告的感知质量，不证明证据事实正确或因果faithfulness；attention区域KL对齐只是训练约束；工业身份数据私有，未测appropriate reliance。
+- 数据计数：74=25,049个唯一位置；候选90=680个唯一题名；优先表72=204项；原文/摘要效度核读172=85篇；路线87=190条。均为不同统计口径，不代表强相关篇数或穷尽证明。阶段ZIP有624成员，SHA-256 `33ce50fc264757503fde15e9b5d36cc3e81781399a5453e8d370ff9a425746a7`。
+- 验证通过：`python3 -m compileall -q work/search_protocol_v2`；CSV计数、74的结果ID唯一与理由非空、候选题名去重、T24归档成员与ZIP CRC；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码改动。
+- 遗留：总体文献检索仍未完成，不作零遗漏承诺；后续应继续未闭合的高相关引文/参考链，并先复用90/72/172中既有身份，避免重复筛读。
+
+---
+
 # 2026-10-10 FORGE/TruthLens Scholar身份及引文链检查点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新数据提交：`8b7b09b`（已推送至origin）。
