@@ -1,3 +1,14 @@
+# 2026-10-10 X-AIGD全文核读后阶段检查点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；当前成果数据提交：`06ada85`；origin：`https://github.com/brodyZhao/my-research-project.git`。本交接更新后推送。两个既有用户未跟踪文件未修改、未暂存。
+- 在上一检查点之后，继续全文核读X-AIGD（arXiv:2601.19430v1），并将其标为直接强相关的像素级视觉接地/线索依赖证据。基准含13个生成器、7类伪影、18,202实例；12人以三轮relay方式补充掩码，另3人逐实例独立打置信分。模型解释热图与伪影mask重合弱；分类准确率不随伪影比率显著变化。artifact-mask注意力训练对照改善解释空间重合和跨域检测，但不等于固定模型的因果忠实性。作者将human alignment列为未来评测。
+- 同一阶段新增并入Specialist-Generalist（arXiv:2605.31192v2）：3名CV专家评分及50例引用伪迹区域对比遮挡结果；局限、LLM裁判与人评边界已分开记载。ForenDeX和Locate-Then-Examine已在前一交接全表记录；T19/T20仍分别是57位置/56篇作品及56位置的逐条题录主题筛查。
+- 当前状态：172共83篇唯一全文效度核读；90表678条候选观察；72表203个排序条目（后两者均不等于独立纳入论文数）。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`有620成员，SHA-256 `a39299fa838470cff73a8b9db932ffb3259bee3a7189ac185a132b7ad4648d50`。验证：专项更新脚本、package checkpoint、`python3 -m compileall -q work/search_protocol_v2`、全表唯一性及计数断言、T19/T20位置数、ZIP CRC、CRLF-aware diff check均通过。
+- 遗留：总体检索未完成，Scholar动态索引/分页上限与大量未执行拆分使得不能声称零遗漏；继续按`87`查询路线和`74`逐位置日志从实际Scholar断点推进，逐条复用既核身份，优先完成强相关种子引文链、候选全文效度核读，最后再做全局去重与相关性/证据质量排序。
+- ChatGPT Web下一步：检查已恢复的Scholar页面URL并与`87`路线状态、`74`位置账核对；如果页码和身份已入账，不要重复记录，从页面真实下一页继续，遇到验证后保留准确断点。
+
+---
+
 # 2026-10-10 Specialist-Generalist核读与CVPR 2026图像解释论文阶段检查点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；成果数据提交：`efedc76`（随后本文件单独提交并推送）。origin为`https://github.com/brodyZhao/my-research-project.git`。两个原有用户未跟踪文件未修改、未暂存。
