@@ -1588,3 +1588,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 最新计数：74主账26,197位置；90候选740题名；72优先245行；172效度核读154项；87路线219条。FakeXplain恢复页当前6条与T17记录相同，无重复追加。阶段ZIP 658成员（657来源文件+manifest），SHA-256 `c5f19613e31980cb2871da8298ec00fd1d253865dc24d40a1f989372ff9c9a41`。
 - 校验：T58编号连续1–108、主账108行和必填筛选字段齐全；关键题名别名/重复位置断言通过；运行`python3 -m py_compile work/search_protocol_v2/record_aigiholmes_references_20261010.py work/search_protocol_v2/package_checkpoint_20261010.py`及`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；包内成员校验与ZIP CRC通过；`git -c core.whitespace=cr-at-eol diff --check`通过。忽略目录的脚本未提交。用户已有两个未跟踪文件保持未改动、未暂存。
 - 遗留/下一步：主题检索尚未完成，不承诺零遗漏。应从87挑选未闭合的直接解释/可靠性子式或高相关种子的前后向链；搜索前检查分页状态，候选按90/72/172复用，优先对直接强相关且尚未全文核读的工作补原文。不要重复筛T17 FakeXplain 6项、T57 AIGI-Holmes 81项或T58同一参考表。
+
+## 2026-10-11续：Google Scholar T02-F2分页检查点
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；本阶段文献数据提交：cd07bdb。Remote origin 指向已配置的目标仓库。README.md不存在；依照AGENTS.md维护本交接。
+- Google Scholar检索式："fake image detection" (explanation OR explainable) (faithfulness OR hallucination OR grounding OR consistency)。此前第1–30页300个位置已存档；本次恢复后逐页查看第31–38页（start=300–370），新增80个逐位置筛选记录，位置301–380完整见T81，主账74已接续。Scholar估算约931条，下一断点start=380；当前路线仍未完成。
+- 新核读《Misleading Deep-Fake Detection with GAN Fingerprints》（Wesselkamp et al., 2022）：arXiv官方HTML核实LRP用于分析不同GAN/数据集的频谱归因变化；研究核心是指纹移除攻击规避检测，并未验证LRP解释faithfulness。已新增至90/72/172，定位为强邻接，构念边界写入表内。SynthGuard（CVPRW 2026）作为解释型取证平台线索新增至90；CVF官方页和PDF均返回403，全文与可靠性评价待核；LOKI复用既有身份。
+- 主要修改文件：阶段报告00、主账74、路线87、候选90、优先72、效度核读172、T81侧表、阶段SHA清单112、阶段ZIP。临时执行脚本位于work/search_protocol_v2并按规则不提交。项目原有两个用户未跟踪文件未触碰。
+- 验证命令：python3 work/search_protocol_v2/record_t81_fake_image_pages31_38_20261011.py（80行、位置301–380、路线累计380断言通过）；python3 work/search_protocol_v2/package_checkpoint_20261010.py（全局CSV唯一性/理由断言与ZIP/manifest校验通过；SHA-256 1493b62dceb68940c0f750bd85ef200d3523165e5d0583808ab6b514587b014b）；python3 -m compileall -q work/search_protocol_v2 通过；git -c core.whitespace=cr-at-eol diff --cached --check 通过。
+- 遗留问题：整条查询尚有后续Scholar分页未筛，不能声称零遗漏。下一步从T02-F2的start=380续查，优先记录新强相关候选；按90/72/172复用已核作品，避免重复全文审读。待CVF正文恢复可访问时再核SynthGuard。建议ChatGPT Web先看T81末页位置与87断点，然后继续同一查询。
