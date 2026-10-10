@@ -1247,3 +1247,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要修改：报告00、主账74、路线87、候选90、排序72、效度核读172、T18引文审筛表、阶段ZIP及HANDOFF。无业务源码改动；两个既存用户未跟踪文件不变。
 - 后续：若当前Scholar页仍可用，优先追踪刚确认的高相关新seed的前向引用/版本记录；先用90/72/172复用已筛题名。SIDA仍是独立未确认状态，勿将FakeXplain/Veritas结果误记为SIDA。
 - 本轮数据提交：`0ebb872`（Veritas++引用及文字攻击鲁棒性邻接审查）；已更新阶段包，待HANDOFF同步提交后推送至`origin/codex/forensic-explanation-literature`。
+
+## 2026-10-10续：SIDA前向引用225个位置筛查闭环
+
+- 用户完成SIDA Scholar安全恢复后，进入SIDA引文簇`16430844593300956743`，分页逐条筛查第1至23页；前22页各10条、末页5条，225/225个可见位置已补到74主账，均含页码、标题、决定、理由与回链。补录时发现初版首100行的决定/理由列偏移，现已对齐并通过逐行非空断言。既有Spot the Fake、LEGION、AIGI-Holmes、Veritas、ForgeryGPT、EditSleuth等按题名身份复用原记录，没有重复全文核读。87路线将SIDA cited-by标为当前快照闭合，明确不表示版本聚类/全领域引文穷尽。此前报告中的“仍待验证码”状态由本记录覆盖。
+- 新题录核心候选在90表。优先全文核读：TriDF（感知/检测/幻觉评测）、REVEAL、MARE、ForensicZip、RAIDx、Explainable Deepfake Detection Challenge、Look Before You Judge、Evidence-Guided Detection, Localization and Explanation for Text-Centric Image Forensics、JECA²、FOCA、Explaining AI-Image Detection、ForenDeX、Hybrid CLIP-Diffusion Explainability Evaluation。另有MoFAIR、PATE-Forensics、Agentic Tool-Augmented Reasoning、STeREx-Net等。筛选理由已逐项保存，尚未全部核全文；区分了解释接地、幻觉、解释一致性/攻击稳健性、用户理解等不同构念。
+- 官方arXiv摘要已核两项：Look Before You Judge `https://arxiv.org/abs/2609.35536`提出局部区域证据获取，摘要报告TriDF/MMTD-Set上检测准确率最多+12.8%、CHAIR最多降低33.4%、幻觉率最多降低21.3%；Explainable Deepfake Detection Challenge `https://arxiv.org/abs/2607.21007`将图像真假分类与分用户层级的解释生成联合评测，并列出intent-aware grounding指标。当前只作为题录/摘要依据，完整效度仍待原文核读。
+- 数量：74主账24,999唯一位置；90去重候选676；72优先清单201；172原稿/摘要解释效度核读70；87路线184。阶段ZIP 617成员、SHA-256 `e718c274d83a8a62618240b6872a2990a0797ff9ba3c22291fd39eb8674142e7`。验证：225条新位置、result_id唯一、SIDA路线23页/225项终页闭合；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`python3 -m compileall -q work/search_protocol_v2`、`git -c core.whitespace=cr-at-eol diff --check`均通过。整体多路线检索未完成，不能保证零遗漏。
+- 主要修改：阶段报告00、主账74、路线87、候选90、阶段ZIP、本HANDOFF。没有业务源码更改。两个用户未跟踪文件原样保留。
+- 下一步从候选90的身份去重集合中，优先全文核读直接核心标题，再检查这批核心新seed的Scholar前向/反向引用；旧核读按身份复用，避免重复。
