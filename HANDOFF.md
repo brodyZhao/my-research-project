@@ -1,3 +1,14 @@
+# 2026-10-10 Specialist-Generalist核读与CVPR 2026图像解释论文阶段检查点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；成果数据提交：`efedc76`（随后本文件单独提交并推送）。origin为`https://github.com/brodyZhao/my-research-project.git`。两个原有用户未跟踪文件未修改、未暂存。
+- 新完成 *Specialist-Generalist Fusion with Outcome-Supervised Rationales for Deepfake Detection*（arXiv:2605.31192v2）全文/附录核读并去重写入172/90/72：3名CV专家各评10条模型和10条DD-VQA解释，模型伪迹存在性得分3.57±1.10 vs 3.83±0.99；研究仅包含正确预测且未报IAA。Gemini对20条解释的claim支持判断与40图重合幻觉率均单独标作模型裁判，不作独立人类真值。50例引用区域遮挡与匹配未引用区域对照导致45%更大错误增幅，记为有限局部因果接地证据；不扩张为充分性、完整faithfulness或适当依赖证明。
+- 本阶段也纳入前一数据检查点的ForenDeX及Locate-Then-Examine全文核读。CVF官方参考表逐位置筛查：T19为57个ForenDeX引用位置/56篇作品（重复项已标识）；T20为Locate-Then-Examine的56项。题名级参考文献分类与全文核读分开记录；已查身份复用、不重复全文劳动。Locate-Then-Examine相关的HEIE只作为生成图像implausibility邻接项。
+- 阶段包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，619源文件/620 ZIP成员，SHA-256 `0e34f79e8660d78e59e332d35252502374b21378256f80e4ef50f46caa8e0c1d`。172现82篇唯一全文核读；90为678候选观察，72为203条排序观察（都不是独立纳入强相关论文数）。T19/T20分别为57/56行。测试：运行Specialist-Generalist更新脚本；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；`git -c core.whitespace=cr-at-eol diff --check`；CSV去重/计数及ZIP CRC/清单校验均通过。
+- 遗留：领域系统检索尚未完成，动态Scholar结果和高噪声宽式不能证明零遗漏；继续现有断点并记录逐位置筛选，核读新的直接候选，优先闭合强相关种子的参考/被引链，再做全局去重与相关性重排。已核题名/身份继续复用，避免重复筛查。不得声称“一个不漏”。
+- ChatGPT Web下一步：从当前已恢复的Google Scholar断点继续；先检查页面/查询身份，再按既有路线表87和位置日志74核对是否已记录，避免重复翻页。若网页状态与账本断点不一致，先以最新路线表和页面实际结果修正断点后再继续。
+
+---
+
 # 2026-10-10 ForenDeX全文评估与参考文献筛查
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；remote：`origin`（用户此前已授权推送）。成果提交：`dcc20ec`；本交接同步提交随后更新。
