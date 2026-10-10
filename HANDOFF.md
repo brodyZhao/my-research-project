@@ -1415,3 +1415,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 数量：74主账24,999唯一位置；90去重候选676；72优先清单201；172原稿/摘要解释效度核读70；87路线184。阶段ZIP 617成员、SHA-256 `e718c274d83a8a62618240b6872a2990a0797ff9ba3c22291fd39eb8674142e7`。验证：225条新位置、result_id唯一、SIDA路线23页/225项终页闭合；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`python3 -m compileall -q work/search_protocol_v2`、`git -c core.whitespace=cr-at-eol diff --check`均通过。整体多路线检索未完成，不能保证零遗漏。
 - 主要修改：阶段报告00、主账74、路线87、候选90、阶段ZIP、本HANDOFF。没有业务源码更改。两个用户未跟踪文件原样保留。
 - 下一步从候选90的身份去重集合中，优先全文核读直接核心标题，再检查这批核心新seed的Scholar前向/反向引用；旧核读按身份复用，避免重复。 本次数据检查点提交为`9e86783`；交接文档需同步提交后推送。
+
+---
+
+## 2026-10-10续：Pinhasov参考文献链62项主题筛查
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；基于已推送检查点`1690746`；远端`origin`已确认。原有两个用户未跟踪文件未修改、未暂存。
+- Pinhasov et al.（arXiv:2403.02955v2）官方参考文献62个位置逐项筛查，详见`T28_Pinhasov_XAI深伪对抗检测论文_62条参考文献逐项筛查_20261010.csv`及74主账、87路线。序号是引用位置而非独立相关论文数；预印本/正式版按作品身份去重。
+- Gowrisankar & Thing (2024)已存在90/72，本轮只补官方PDF全文核读至172。它是深伪解释的任务特定区域决策影响/对抗充分性代理；依赖匹配真实与伪造图，不能等同一般因果faithfulness。Tamam et al. (2023)通用图像分类解释对抗操纵全文核读后加入90/72/172，作为方法学邻接；Baniecki & Biecek综述列方法学邻接；Govindu音频解释列跨模态候选。Pinhasov的36个前向引用沿用T27，未重录。
+- 当前数据计数：74=25,220个位置；90=694个唯一标题；72=205项；172=88篇唯一原文/摘要核读；87=194条路线。阶段ZIP 628成员、627源文件，SHA-256 `db6b6beaf961f887314d797d4d988262009d4034b845ce6b853fc2cc45aea1ee`。总检索仍未结束，不承诺零遗漏。
+- 本阶段报告已追加证据和范围边界；FORGE题名验证后仍未命中，已完成的2503.15867三页25项与2项被引筛查见T22/T23，无需重复。下一步优先沿Tamam Cited-by或其他高相关解释攻击种子，先用90/72/172按身份去重，再查Scholar快照。
+- 检查脚本：`work/search_protocol_v2/record_pinhasov_references_20261010.py`及`package_checkpoint_20261010.py`。验证通过：compileall；T28位置与74逐条记录均62条；主账ID唯一、候选标题/优先排名/核读作品去重；路线记录62位置闭合；阶段ZIP 628成员CRC与逐文件校验；`git diff --check`。当前提交待完成后补入commit hash。
