@@ -1255,4 +1255,4 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 官方arXiv摘要已核两项：Look Before You Judge `https://arxiv.org/abs/2609.35536`提出局部区域证据获取，摘要报告TriDF/MMTD-Set上检测准确率最多+12.8%、CHAIR最多降低33.4%、幻觉率最多降低21.3%；Explainable Deepfake Detection Challenge `https://arxiv.org/abs/2607.21007`将图像真假分类与分用户层级的解释生成联合评测，并列出intent-aware grounding指标。当前只作为题录/摘要依据，完整效度仍待原文核读。
 - 数量：74主账24,999唯一位置；90去重候选676；72优先清单201；172原稿/摘要解释效度核读70；87路线184。阶段ZIP 617成员、SHA-256 `e718c274d83a8a62618240b6872a2990a0797ff9ba3c22291fd39eb8674142e7`。验证：225条新位置、result_id唯一、SIDA路线23页/225项终页闭合；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`python3 -m compileall -q work/search_protocol_v2`、`git -c core.whitespace=cr-at-eol diff --check`均通过。整体多路线检索未完成，不能保证零遗漏。
 - 主要修改：阶段报告00、主账74、路线87、候选90、阶段ZIP、本HANDOFF。没有业务源码更改。两个用户未跟踪文件原样保留。
-- 下一步从候选90的身份去重集合中，优先全文核读直接核心标题，再检查这批核心新seed的Scholar前向/反向引用；旧核读按身份复用，避免重复。
+- 下一步从候选90的身份去重集合中，优先全文核读直接核心标题，再检查这批核心新seed的Scholar前向/反向引用；旧核读按身份复用，避免重复。 本次数据检查点提交为`9e86783`；交接文档需同步提交后推送。
