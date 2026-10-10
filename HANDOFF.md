@@ -1578,3 +1578,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要变更：阶段报告00、主账74、路线87、候选90、优先表72、原文核读172、T44逐条筛选表、SHA-256清单112及阶段ZIP。忽略目录中的记录脚本未提交。两个已有用户未跟踪文件未改动。
 - 测试：`python3 work/search_protocol_v2/record_t11_evidence_consistency_20261010.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；T11位置/理由、METER身份合并、候选/排序/核读/路线唯一性、ZIP成员及逐文件哈希断言；`git -c core.whitespace=cr-at-eol diff --check`。均通过。
 - 遗留/下一步：主题级重检仍未完成，不承诺零遗漏。当前用户恢复的FakeXplain Cited-by页对应六条已记录且已筛的快照，不重复添加；之后应从87选择未试检且信号较高的子式，或继续仍待恢复的Pino Cited-by链，并先用90/72/172去重。ChatGPT Web先检查当前Scholar页面身份与状态，再按路线账本续查。
+
+## 2026-10-10续：AIGI-Holmes 参考文献链逐位置筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`8dddfcf30bf9bead0d269b2d62f336c2166ac15d`；已推送至`origin`。
+- AIGI-Holmes arXiv:2507.02664v2作者稿References编号#1–#108已逐项做题录/主题筛查，T58记录每一位置的题名、筛选类别、理由、去重身份和来源锚点，并同步74主账。14个直接解释/取证位置、5个解释/评估邻接位置、2个人类感知背景位置，其余标为检测器邻接或方法背景。位置筛查并非108篇全文核读。
+- #52旧题名与arXiv:2412.19685现行ACL 2026《Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline》合并，复用既有人评Faithfulness/Helpfulness全文核读。#67旧题名按arXiv:2412.14816与TextSleuth合并；多处重复/版本位置保留在T58、作品按身份复用。新补#38人类AI图像辨认指南、#66 MLLM人脸伪造图文配对训练为摘要级邻接候选，未进优先清单。
+- Google Scholar对#38/#66的合并OR题名核验页约68条混合结果，两个精确题名分别在首屏第10、第5位；此页只用于核对已知书目身份，没有当作主题查询或据此声称结果集已筛全。
+- 最新计数：74主账26,197位置；90候选740题名；72优先245行；172效度核读154项；87路线219条。FakeXplain恢复页当前6条与T17记录相同，无重复追加。阶段ZIP 658成员（657来源文件+manifest），SHA-256 `c5f19613e31980cb2871da8298ec00fd1d253865dc24d40a1f989372ff9c9a41`。
+- 校验：T58编号连续1–108、主账108行和必填筛选字段齐全；关键题名别名/重复位置断言通过；运行`python3 -m py_compile work/search_protocol_v2/record_aigiholmes_references_20261010.py work/search_protocol_v2/package_checkpoint_20261010.py`及`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；包内成员校验与ZIP CRC通过；`git -c core.whitespace=cr-at-eol diff --check`通过。忽略目录的脚本未提交。用户已有两个未跟踪文件保持未改动、未暂存。
+- 遗留/下一步：主题检索尚未完成，不承诺零遗漏。应从87挑选未闭合的直接解释/可靠性子式或高相关种子的前后向链；搜索前检查分页状态，候选按90/72/172复用，优先对直接强相关且尚未全文核读的工作补原文。不要重复筛T17 FakeXplain 6项、T57 AIGI-Holmes 81项或T58同一参考表。
