@@ -1437,4 +1437,5 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 统计：74=25,244；90=704个唯一标题；72=212项；172=98篇唯一核读作品；87=195条路线。总体检索未完成，不作零遗漏承诺。
 - 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`为629个成员（628个源文件），SHA-256 `b674206c8b1c854aeccb7afc6f6b07be5ae23952cd2d73439fe13a1f726cc3b8`。
 - 验证通过：`python3 -m compileall -q work/search_protocol_v2`；T29位置1–24连续且理由非空，74新增位置24条、全局result_id唯一；90题名、72排名、172作品身份唯一；87记录3页/24项快照闭合；ZIP CRC及逐文件哈希校验；`git -c core.whitespace=cr-at-eol diff --check`。工作脚本为`work/search_protocol_v2/record_tamam_citedby_20261010.py`和`package_checkpoint_20261010.py`。
+- 本阶段数据提交：`bbd5172`。
 - 下一步优先复核Repetto et al. (2026)解释稳定性攻击/指标细节和Williams et al. (TMLR 2025)黑盒解释攻击全文边界；已审Tamam聚类不再重复。
