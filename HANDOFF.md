@@ -1614,3 +1614,10 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 测试/核查：`git -c core.whitespace=cr-at-eol diff --cached --check`通过；本次只写文献判断，未修改业务代码或数据流程，不适用import/compileall/模型smoke test。原有两个用户未跟踪文件未修改、未暂存。
 - 遗留：V2.1检索路线未全部闭合；DDL、Side-VLM等受限全文的faithfulness操作化待核；实验须先通过两类判别力、干预有效性与GT阳性对照，再考虑错位检验和DPO。
 - 建议ChatGPT Web：先复查备忘录中的高重合论文和未核全文，再将拟投稿主张压缩成可证伪的一个主问题；避免将解释事实性、人类偏好、信任和模型因果依赖混为一项指标。
+
+## 2026-10-11：EFR重合度更正
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；备忘录修正提交：`c3969a520cff7c809181a5219d035265d44ca46f`，已推送。修改文件：`literature/forensic-explanation-novelty-assessment-20261011.md`及本交接。
+- 用户指出上轮选题判断漏列EFR。复核EFR arXiv:2608.08009原文§3/4.4及现有140/153/72台账后，更正为首要直接竞争工作：图文鉴伪、结构化解释、证据与预测锚点绑定、可验证奖励训练与项目整体高度接近；项目若仅做证据框对齐/一致性奖励则创新性弱。EFR未呈现经过外部事实核验的自述证据干预、阳性对照及正确解释与决策依赖错位率；此为待验证的区别，不是已完成贡献。
+- 校验：原文与现有核读记录逐项核对；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。本次仅修订文献判断，不涉及代码，不适用import/compileall或实验smoke test。
+- 遗留：总体检索未完成；EFR正式最终版本及附录仍须投稿前复核。建议ChatGPT Web后续以EFR为首要直接基线，另以Hopf等作为自述区域干预基线，不再沿用漏列EFR的旧比较表。
