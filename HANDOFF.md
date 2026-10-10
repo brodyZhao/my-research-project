@@ -1597,3 +1597,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要修改文件：阶段报告00、主账74、路线87、候选90、优先72、效度核读172、T81侧表、阶段SHA清单112、阶段ZIP。临时执行脚本位于work/search_protocol_v2并按规则不提交。项目原有两个用户未跟踪文件未触碰。
 - 验证命令：python3 work/search_protocol_v2/record_t81_fake_image_pages31_38_20261011.py（80行、位置301–380、路线累计380断言通过）；python3 work/search_protocol_v2/package_checkpoint_20261010.py（全局CSV唯一性/理由断言与ZIP/manifest校验通过；SHA-256 1493b62dceb68940c0f750bd85ef200d3523165e5d0583808ab6b514587b014b）；python3 -m compileall -q work/search_protocol_v2 通过；git -c core.whitespace=cr-at-eol diff --cached --check 通过。
 - 遗留问题：整条查询尚有后续Scholar分页未筛，不能声称零遗漏。下一步从T02-F2的start=380续查，优先记录新强相关候选；按90/72/172复用已核作品，避免重复全文审读。待CVF正文恢复可访问时再核SynthGuard。建议ChatGPT Web先看T81末页位置与87断点，然后继续同一查询。
+
+## 2026-10-11续：Google Scholar T02-F2扩展到第48页
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；本轮文献数据提交：cc805f0；origin仍指向目标仓库。README.md不存在，已遵循AGENTS.md。
+- Google Scholar式仍为 "fake image detection" (explanation OR explainable) (faithfulness OR hallucination OR grounding OR consistency)。本轮第39–48页/start=380–470共100个位置逐条写入74与T82；前48页累计480个位置。下一断点start=480；Scholar动态估算约931，本路线仍未完成。
+- 新核读并新增到90/72/172的《Learning Pairwise Interaction for Generalizable DeepFake Detection》（WACV 2023）：用t-SNE及多种CAM显示深伪检测器特征/激活，属解释方法邻接；没有faithfulness或人类效度测试。M4FC经arXiv官方v4全文核实为多模态事实核查数据邻接（专业机构核验图像，含操纵/AI图）；它不评价模型解释可靠性。FLODA新增为caption辅助检测系统线索；正文评价待核。ForgeryVCR、SEED和其他既有作品复用已有身份。TrueSight相似截断题名在本式中去重；T81的position358重复项也已在主账和侧表同步标注。
+- 修改文件：阶段报告00、74主账、87路线、90候选、72优先表、172核读、T81修正、T82新增、112 SHA清单和阶段ZIP。当前计数：74=26,872位置；90=769候选题名；72=250项；172=166唯一核读身份。
+- 验证：T82 100位置连续性与筛选字段检查；T81位置358双表重复标记一致；python3 work/search_protocol_v2/package_checkpoint_20261010.py通过（ZIP CRC/成员和SHA检查，全局CSV唯一性/理由断言；归档SHA-256 e6c9d9da62fabe29adbead921e5cf27df19b6cf511583afd71c0a9ac46a1c220）；python3 -m compileall -q work/search_protocol_v2通过；git -c core.whitespace=cr-at-eol diff --check通过。
+- 遗留：检索仍未完结；继续前往同一式start=480，按90/72/172复用唯一身份。两个用户未跟踪文件未触碰。建议ChatGPT Web检查T82末页与87断点后继续。
