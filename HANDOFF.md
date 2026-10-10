@@ -1228,3 +1228,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - ChatGPT Web下一步检查：核对FORGE的人评faithfulness定义与标注接地指标在最终相关性分层中的位置；验证解除后续查SIDA Scholar。
 - 本阶段数据与日志检查点已提交：`ce0bba8`（`docs: audit FORGE citation chain and explanation validity`）；交接文件需在最终同步提交后再列出最终HEAD。
 - 最终交接同步提交：`02b7802`；已推送到`origin/codex/forensic-explanation-literature`。工作区仅保留原有两个用户未跟踪文件。
+
+## 2026-10-10续：FakeXplain cited-by 六项恢复检查点
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；remote `origin`；开始时HEAD `b667d2d`，此前用户已授权推送。原有用户未跟踪文件保持未改动、未暂存。
+- 浏览器恢复后实际显示FakeXplain: AI-Generated Image Detection via Human-Aligned Grounded Reasoning 的Google Scholar cited-by页面（cites ID `593369253125788082`），共6项。结果逐项登记于`T17_FakeXplain_CitedBy_6条前向引文逐篇筛查_20261010.csv`并进入74主账。Veritas++、Defake-o3、EditSleuth、SPARED的既有172核读已复用。新增核查FraudBench官方arXiv v2全文：索赔证据/多模态/提示稳定性强邻接，rationale faithfulness尚未评测且作者明确留作未来工作；Q-REAL Springer正式摘要显示是AIGC图像质量归因/定位，不是鉴伪解释效度研究，全文订阅受限。二者加入90和172，层级为邻接证据。
+- 此6项页面快照完成不代表整个引用图谱或领域穷尽。之前SIDA精确题名查询和本次FakeXplain cited-by是不同路线；当前恢复页验证的是后者。
+- 统计：74主账24,772个唯一位置；90候选654个去重题名；72排序200项；172全文/摘要效度核读69项；87路线182条。ZIP 616 members，SHA-256 `b7b1dad4a77884c21eb1abd69e997167c23ad6c7c3fcd2f85fa93d7d8c00beb2`。检查：`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`python3 -m compileall -q work/search_protocol_v2`、6条引文/74唯一ID/候选/核读/路线计数断言及ZIP CRC均通过；`git -c core.whitespace=cr-at-eol diff --check`待提交前执行。
+- 主要修改文件：阶段报告00、主账74、路线表87、候选表90、效度核读表172、T17六项引文筛查、阶段ZIP、本HANDOFF。无业务源码修改。
+- 遗留：SIDA查询仍需确认该专属标签是否恢复；总体搜索未完成，不承诺零遗漏。建议下一步先识别恢复后的Scholar标签对应哪条seed/query，按页面真实内容续查；复用既有论文核读，避免把FakeXplain结果误标为SIDA。
