@@ -1606,3 +1606,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 修改文件：阶段报告00、74主账、87路线、90候选、72优先表、172核读、T81修正、T82新增、112 SHA清单和阶段ZIP。当前计数：74=26,872位置；90=769候选题名；72=250项；172=166唯一核读身份。
 - 验证：T82 100位置连续性与筛选字段检查；T81位置358双表重复标记一致；python3 work/search_protocol_v2/package_checkpoint_20261010.py通过（ZIP CRC/成员和SHA检查，全局CSV唯一性/理由断言；归档SHA-256 e6c9d9da62fabe29adbead921e5cf27df19b6cf511583afd71c0a9ac46a1c220）；python3 -m compileall -q work/search_protocol_v2通过；git -c core.whitespace=cr-at-eol diff --check通过。
 - 遗留：检索仍未完结；继续前往同一式start=480，按90/72/172复用唯一身份。两个用户未跟踪文件未触碰。建议ChatGPT Web检查T82末页与87断点后继续。
+## 2026-10-11：图像鉴伪解释可靠性选题重合度判断
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；本阶段研究备忘录提交：`5237d3711608b86a258e3cedcece1fcc38538b6d`。主要新增文件：`literature/forensic-explanation-novelty-assessment-20261011.md`；本段为交接更新。
+- 对现有72/172文献账本、A4实验协议及Hopf等、Kuturin等、EDCT、Menzat等、FORGE等原文作定向复核。结论：已有论文覆盖自述区域遮挡与匹配对照、反事实解释测试、事实接地和信任评分；不能声称这些元素单独首创。截至本次可核原文，尚未发现完全同时覆盖“经核事实的自由文本证据×有效的鉴伪专用干预×真实伪迹阳性对照×错位发生率×独立修复评估”的同一研究，但检索未闭合，不能排除未读全文中的高度重合。
+- 最主要的方法风险：A4 SDXL修补会引入生成痕迹，不能仅假定其在claimed与control区域中同量抵消。项目此前单类Gate 0、GT阳性对照反向和盲法grounding缺口仍在；目前无可靠实验证据证明“正确解释与决策依赖错位”。
+- 测试/核查：`git -c core.whitespace=cr-at-eol diff --cached --check`通过；本次只写文献判断，未修改业务代码或数据流程，不适用import/compileall/模型smoke test。原有两个用户未跟踪文件未修改、未暂存。
+- 遗留：V2.1检索路线未全部闭合；DDL、Side-VLM等受限全文的faithfulness操作化待核；实验须先通过两类判别力、干预有效性与GT阳性对照，再考虑错位检验和DPO。
+- 建议ChatGPT Web：先复查备忘录中的高重合论文和未核全文，再将拟投稿主张压缩成可证伪的一个主问题；避免将解释事实性、人类偏好、信任和模型因果依赖混为一项指标。
