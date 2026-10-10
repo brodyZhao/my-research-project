@@ -1238,3 +1238,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要修改文件：阶段报告00、主账74、路线表87、候选表90、效度核读表172、T17六项引文筛查、阶段ZIP、本HANDOFF。无业务源码修改。
 - 遗留：SIDA查询仍需确认该专属标签是否恢复；总体搜索未完成，不承诺零遗漏。建议下一步先识别恢复后的Scholar标签对应哪条seed/query，按页面真实内容续查；复用既有论文核读，避免把FakeXplain结果误标为SIDA。
 - 本轮数据检查点提交：`22ffd49`（FakeXplain cited-by 六项筛查）；交接文件同步后推送至`origin/codex/forensic-explanation-literature`。
+
+## 2026-10-10续：Veritas++ cited-by与文字攻击鲁棒性邻接文献
+
+- Google Scholar的FakeXplain前向结果中Veritas++有2条cited-by；实际读取显示`Think with Structured Grounding`（图表/表格理解，排除）与*Typographic Attack against VLM-based AI-generated Image Detection*（arXiv:2609.39662v1）。两条逐项记录在`T18_VeritasPlusPlus_CitedBy_2条前向引文逐篇筛查_20261010.csv`并进入74主账。
+- 新文献全文已核：其对Ivy-Fake、GenImage测试图中文字的真假标签/指令/文件路径/logo攻击，比较直接与推理模式、多个模型，并测图像压缩、降采样、多语言与typo稳健性。48组配对中42组推理模式攻击成功率更高。归为强鉴伪决策鲁棒性邻接，而非解释faithfulness实证；无解释claim事实核查或用户适当依赖测量。该文新加入90、72排名201、172。
+- 统计：74位置24,774；90去重题名655；72排序201；172全文/摘要审读70；87路线183。阶段ZIP 617成员，SHA-256 `e217f8863fc2968f106b734217606cdb833a3f2a79b346beb43e1020785627e9`。编译、T18两项、位置唯一ID、候选/排序/核读/路线计数及ZIP CRC均通过。整体搜索仍不完整，不保证零遗漏。
+- 主要修改：报告00、主账74、路线87、候选90、排序72、效度核读172、T18引文审筛表、阶段ZIP及HANDOFF。无业务源码改动；两个既存用户未跟踪文件不变。
+- 后续：若当前Scholar页仍可用，优先追踪刚确认的高相关新seed的前向引用/版本记录；先用90/72/172复用已筛题名。SIDA仍是独立未确认状态，勿将FakeXplain/Veritas结果误记为SIDA。
