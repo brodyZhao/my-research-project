@@ -1,3 +1,12 @@
+# 2026-10-10 ForenDeX全文评估与参考文献筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；remote：`origin`（用户此前已授权推送）。成果提交：`dcc20ec`；本交接同步提交随后更新。
+- ForenDeX（CVPR 2026 Findings）已从题录待核升级为直接强相关全文核读，正式来源为CVF 10页PDF。确认20名用户盲序比较100张Midjourney/Flux图上的ForenDeX与LLaVA-FT解释，按五点评accuracy/relevance/reasonableness/completeness/overall；属于人类解释感知质量证据。正文未报告用户背景、IAA、区间/显著性检验或独立claim真值校准。2,215张人工框注图经GPT-4V总结主要作为训练参考；GPT-4o reference-based分数不等于因果faithfulness。没有适当依赖实验或对决策的因果解释干预。
+- CVF官方参考文献表57个引用位置逐条主题筛查，按作品身份56篇；REF042/048为同一篇Learning on Gradients。逐位置决定、理由和既有身份关联见`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T19_FORENDEX_57条参考文献逐位置主题筛查_20261010.csv`。SIDA、AnomReason、FakeShield既有身份复用；Sniffer作为跨域解释邻接。题名筛查不声称已全文审完每篇引用。
+- 更新文件：阶段报告00、候选90、优先表72、全文效度表172、T19引用筛查表、阶段ZIP及`work/search_protocol_v2/record_forendex_full_review_20261010.py`。ZIP 619成员，SHA-256 `fdc627c01c90c4af76eaef80497b2fdf457fea7af4a40731214a79f123e1ea0e`。验证：Python compileall、ForenDeX记录唯一性、T19 57位置/56作品与非空逐行理由断言、ZIP CRC、`git -c core.whitespace=cr-at-eol diff --check`通过。
+- 下一步：继续从已去重候选90/排序72选取未有172全文记录的直接核心论文（例如XPlainVerse、FACT/FOCA、ForenX等），并沿高相关全文种子逐篇核引文；每次先匹配现有身份账，避免重复全文检查。总体检索仍未完成，不能承诺领域零遗漏。
+- 用户原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`及`literature/forensic-explanation-relevance-20261004.md`未改动、未暂存。
+
 # 2026-10-10 RAIDX视频/跨模态引文筛查
 
 - 第74项BusterX全文核读后新增为视频邻接候选90/172：Wild track解释由Gemini依grounding/逻辑/事实性评估，另有5位深伪专家评分；专家均分78.7，与Gemini秩相关ρ=.64。只对正确预测视频评价，专家间一致性、评审规模和盲法不足，不等同图像直接faithfulness证据。
