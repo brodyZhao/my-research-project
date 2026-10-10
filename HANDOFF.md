@@ -1387,6 +1387,17 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 遗留：SIDA查询仍需确认该专属标签是否恢复；总体搜索未完成，不承诺零遗漏。建议下一步先识别恢复后的Scholar标签对应哪条seed/query，按页面真实内容续查；复用既有论文核读，避免把FakeXplain结果误标为SIDA。
 - 本轮数据检查点提交：`22ffd49`（FakeXplain cited-by 六项筛查）；交接文件同步后推送至`origin/codex/forensic-explanation-literature`。
 
+## 2026-10-10续：XAI深伪对抗检测论文的Scholar前向引文36项
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；开始HEAD `0a91b21`；origin已配置，用户此前已授权推送。
+- 用户完成Google Scholar验证后，Scholar簇`cites=14861955642867421187`的4页36项Cited-by位置均逐条筛查，记录于`T27_XAI对抗检测深伪论文_GScholar_CitedBy36条逐项筛查_20261010.csv`及主账74；路线87标为当前快照36/36闭合。复用90/172/72已有的JECA²、From Prediction to Explanation、DDL等身份，不重复核读。
+- Pinhasov et al. (arXiv:2403.02955v2)全文已加入172：在FF++视频和两个检测骨干上，把IG/Saliency/Input×Gradient/Guided Backprop图作为输入攻击检测器特征，测试多种攻击并报告XAI置黑消融。该研究测的是检测归因图能否帮助发现输入攻击，不测解释自身faithfulness、事实正确或appropriate reliance；列方法邻接，未升级72优先强相关排名。
+- 新增90候选3题名：可解释深伪检测综述（题录级待全文与正式元数据核验）、XAI偏差缓解论文（出版商摘要级，未见独立效度指标）、GenAI Mirage（人类取证偏差背景，非XAI效度研究）。候选不能解释成强相关实证数量。
+- 当前计数：74=25,158位置；90=691个去重题名；72=204项；172=86篇唯一原稿/摘要核读；87=193条路线。ZIP 627成员，SHA-256 `4846620309f6bcd38dd4fef6deb321d0687fd8acd818b2a16f885ef4b5c907b1`。`python3 -m compileall -q work/search_protocol_v2`、阶段打包脚本、唯一性/36项分页与路线断言、ZIP成员/CRC核验、`git -c core.whitespace=cr-at-eol diff --check`均通过。
+- 主要修改：阶段报告00、主账74、路线87、候选90、原文效度核读172、新侧表T27、阶段ZIP及本HANDOFF。未改业务源码；既有两个用户未跟踪文件保持原样。
+- 下一步：沿该论文参考文献优先复核Gowrisankar & Thing (2024)和Tamam et al. (2023)，先对照90/172去重并补齐引文边；随后核查新发现的可解释深伪检测综述是否可读全文。总体检索仍未完成，不承诺零遗漏。
+- ChatGPT Web检查：重点审阅“XAI图用于对抗攻击检测”与“解释可靠性实证”的构念边界，并确认综述题录核验状态。
+
 ## 2026-10-10续：Veritas++ cited-by与文字攻击鲁棒性邻接文献
 
 - Google Scholar的FakeXplain前向结果中Veritas++有2条cited-by；实际读取显示`Think with Structured Grounding`（图表/表格理解，排除）与*Typographic Attack against VLM-based AI-generated Image Detection*（arXiv:2609.39662v1）。两条逐项记录在`T18_VeritasPlusPlus_CitedBy_2条前向引文逐篇筛查_20261010.csv`并进入74主账。
