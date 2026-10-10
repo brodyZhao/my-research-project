@@ -1521,3 +1521,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 当前计数：74=25,595个结果/引用位置；90=711个规范化候选题名；72=219条优先排序记录；172=110个唯一效度核读身份；87=199条查询/引文路线。T13 hallucination宽式仅首页10/估算969，不完整；两条精确一致性式分别2/2和1/1当前快照闭合；ATAR参考表76/76题录筛查闭合，不代表全文阅读。不可将计数解读为独立强相关论文数或全局召回率。
 - 测试与校验：运行 `python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；检验CSV ID/题名/身份唯一及筛选理由非空、T35/T36行数和偏移连续、ZIP CRC与成员哈希；运行 `git -c core.whitespace=cr-at-eol diff --check`。结果应在最终提交时复核记录。
 - 未解决：总体检索仍未完成；T13-S2及多个主题宽式未闭合；Scholar当前无ATAR cited-by链接，不能推断零引用；SSRN 5691366 PDF先前403，版本/参考数未确认。ChatGPT Web下一步先对照87路线与90/72/172，沿新直接强候选和尚未闭合引文链前进，复用已核作品，勿重复全文核读。用户两个未跟踪文件保持未修改、未暂存。
+
+## 2026-10-10续：REVEAL前向引文、解释扰动论文及40条参考筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`594b843`；远端：`origin`。用户既有的两个未跟踪文件保持原样、未暂存。
+- 本阶段沿REVEAL的Google Scholar Cited-by单页筛查5项，新增T37逐项记录。Veritas++与ECCV 2026 forensic-knowledge-graph论文复用旧身份/全文，不重复审读；VKnowU与TRACE按视频/通用视觉知识范围排除；系统综述 *Deepfake Detection Beyond Benchmark Accuracy* 已存在候选身份，本次补核其§3.10解释挑战，标明未同行评审及综述不等于原始证据。
+- 沿高相关参考链核读WACV Workshop 2025 *Improving the Perturbation-Based Explanation of Deepfake Detectors Through the Use of Adversarially-Generated Samples*（arXiv:2502.03957）。其NES top-k区域攻击、检测准确率变化和“sufficiency”是直接的解释评测方法，但受单一FF++面部伪造数据/检测器及攻击代理构念限制；无解释事实性人工核验或适当依赖评测。该唯一身份并入90/72/172。
+- 该论文arXiv v1的40条参考文献逐位置题录/主题筛查见T38；Gowrisankar等已核身份复用。参考文献#26引出的 *What’s Wrong with This Video? Comparing Explainers for Deepfake Detection* 已全文核读：报告视频解释方差、帧内/帧间一致性、集中度及67人主观偏好问卷，作为早期稳定性/用户效用邻接；不等同因果faithfulness或适当依赖。T37与T38逐位置表均已入主账74。
+- 两条 Scholar 快照状态已依据可见末页修正：`T02-F3-S1-DEEPFAKE-EVAL` 为415/415（此前误估427）；`T06-F2-S3` 为26/26（此前26–36）。仅表示当前索引快照闭合，不表示领域穷尽。
+- 当前计数：主账74=25,640个唯一检索/引用位置；候选90=713个唯一题名；优先72=220行；172=113篇唯一作品核读；路线87=201条。阶段包有638成员（637个源文件），SHA-256 `66f5668f1f85e8513df5dbbf79ff735de0f521aba2648c04c0e0ad50c60430ec`。以上不同口径不能互换为强相关独立论文数。
+- 校验通过：`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；T37 5项、T38 40项偏移连续且理由非空；主账位置ID唯一、候选标题/优先标题/全文核读身份/路线ID唯一；ZIP CRC通过；`git -c core.whitespace=cr-at-eol diff --check`通过。
+- 最新主要文件：阶段报告00、主账74、优先72、候选90、效度核读172、路线87、T37、T38、阶段结果ZIP与manifest。
+- 遗留：总体重检继续进行；多条宽式尚未闭合，Scholar快照与数据库覆盖有限，不能保证绝对零遗漏。建议ChatGPT Web先按87中仍未闭合/仅首屏的高信号路线继续，再筛90中未核的直接候选及其引用；复用90/72/172身份，避免重筛已闭合引用链和已读全文。
