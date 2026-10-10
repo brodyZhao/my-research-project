@@ -1426,3 +1426,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 当前数据计数：74=25,220个位置；90=694个唯一标题；72=205项；172=88篇唯一原文/摘要核读；87=194条路线。阶段ZIP 628成员、627源文件，SHA-256 `db6b6beaf961f887314d797d4d988262009d4034b845ce6b853fc2cc45aea1ee`。总检索仍未结束，不承诺零遗漏。
 - 本阶段报告已追加证据和范围边界；FORGE题名验证后仍未命中，已完成的2503.15867三页25项与2项被引筛查见T22/T23，无需重复。下一步优先沿Tamam Cited-by或其他高相关解释攻击种子，先用90/72/172按身份去重，再查Scholar快照。
 - 检查脚本：`work/search_protocol_v2/record_pinhasov_references_20261010.py`及`package_checkpoint_20261010.py`。验证通过：compileall；T28位置与74逐条记录均62条；主账ID唯一、候选标题/优先排名/核读作品去重；路线记录62位置闭合；阶段ZIP 628成员CRC与逐文件校验；`git diff --check`。本阶段数据提交`82f9f82`。
+
+---
+
+## 2026-10-10续：Tamam XAI攻击论文的24条前向引用筛查
+
+- 延续本分支已推送检查点`a0faa5e`；当前任务仍只改文献日志和阶段材料，原有用户的两个未跟踪文件没有触碰。
+- Tamam et al.（arXiv:2211.14860）Google Scholar Cited-by聚类`3776028939479434688`当前显示24项；3页（start 0/10/20）24/24逐位置筛查已登记74、87和`T29_Tamam_FoilingExplanations_CitedBy_24条逐位置筛查_20261010.csv`。此为本次Scholar快照闭合，不是全版本/全数据库穷尽。
+- 复用已有Baniecki、Pinhasov记录及Pinhasov T27/T28；合并Patch of Invisibility版本。两条Scholar错误/冲突元数据卡保留在T29并标明，不当作新作品。新增10个唯一方法/人因候选到90，其中7篇低优先邻接到72；新增10篇全文/摘要效度核读到172。各构念边界见阶段报告。
+- 统计：74=25,244；90=704个唯一标题；72=212项；172=98篇唯一核读作品；87=195条路线。总体检索未完成，不作零遗漏承诺。
+- 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`为629个成员（628个源文件），SHA-256 `b674206c8b1c854aeccb7afc6f6b07be5ae23952cd2d73439fe13a1f726cc3b8`。
+- 验证通过：`python3 -m compileall -q work/search_protocol_v2`；T29位置1–24连续且理由非空，74新增位置24条、全局result_id唯一；90题名、72排名、172作品身份唯一；87记录3页/24项快照闭合；ZIP CRC及逐文件哈希校验；`git -c core.whitespace=cr-at-eol diff --check`。工作脚本为`work/search_protocol_v2/record_tamam_citedby_20261010.py`和`package_checkpoint_20261010.py`。
+- 下一步优先复核Repetto et al. (2026)解释稳定性攻击/指标细节和Williams et al. (TMLR 2025)黑盒解释攻击全文边界；已审Tamam聚类不再重复。
