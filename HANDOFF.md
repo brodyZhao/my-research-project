@@ -1660,3 +1660,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证通过：`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；主账唯一位置ID且理由非空，候选/排序/核读身份唯一，路线ID唯一；T96=3、T97=30、T98=1、T99=1、T100=2；ZIP CRC/SHA-256；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
 - 遗留：World Scientific 的《Evidence Fusion for Analyzing Multimodal Image Manipulation》出版社页显示Cloudflare安全验证，全文未核实；候选保持待核，不计作已验证解释可靠性证据。总体文献重检仍未闭合，不作零遗漏承诺。下一步优先处理该全文访问限制，同时从87选择尚未覆盖、精度较高的子式与强相关论文引文链；先按候选90/排序72/核读172复用身份，不重筛旧位置。
 - ChatGPT Web建议：重点复查ForeAgent的LLM judge评估与证据充分38.4%边界；随后追查Evidence Fusion的完整方法/解释定义，并继续未闭合的窄式。不要重筛T75四条、ForeAgent三条窄式结果、30条参考文献或已闭合的PAVE版本簇。
+
+
+## 2026-10-11续：图像操纵证据充分性窄式、DGR-Net访问状态与待恢复路线
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；文献数据提交：`2707e6b`（已推送至 `origin`）。README.md不存在；依照AGENTS.md维护本交接。用户既有的两个未跟踪文件保持原样、未暂存。
+- Scholar式 `"image manipulation detection" ("evidence sufficiency" OR "evidence necessity" OR "evidence completeness") (explanation OR rationale OR reasoning)` 当前快照4/4逐位置筛查，见T101。新候选AMuFC（arXiv:2604.04692v3）完成官方HTML核读：112例双人视觉必要性标注Krippendorff α=.809，必要性分类macro-F1=.721；属于多模态事实核查方法邻接，不是图像鉴伪解释可靠性实证。其当前Scholar Cited-by 1/1命中Fact or Fake，既有90/72/172身份复用（T102）；版本簇arXiv/NASA ADS 2/2为同一工作（T103）。新增7个观察位置，只增加1个唯一邻接作品。
+- DGR-Net（SSRN 7203638）补核官方书目/摘要：4名作者、2026-07-30发布、29页、39条参考；摘要称在ForenSynths/GenImage/CSAIID评测，并以spatial information entropy作可解释性指标。SSRN正文/PDF分别返回403，IAB显示Cloudflare验证；正文可靠性评价及39条参考均未核，候选仍标摘要级待全文。AniPrO已有arXiv官方全文记录，复用身份、不重复阅读。DGR-Net访问断点见T104。
+- 下一条T11-F3-S2 `deepfake/face forgery/facial manipulation × explanation × appropriate reliance` 查询首页页眉估约141项，结果卡显示前即遇reCAPTCHA；尚未筛任何结果、不能记作零结果。断点及原始URL见T105与87；用户已被请求在当前Scholar标签237手动恢复。解锁后直接检查该页，从start=0登记结果，先按90/72/172去重。
+- 统计：74主账27,583位置；90候选789个唯一题名；72优先清单253项；172全文/摘要核读188个唯一身份；87路线248条。口径各异，不代表独立强相关论文总数。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip` 共705成员（704来源文件+manifest），SHA-256 `77c12a09d2894ae7195d7b473c57704e37340009d6d7e599116a6dad4677668b`。
+- 验证通过：`python3 work/search_protocol_v2/record_t101_visual_evidence_necessity_20261011.py`；`python3 work/search_protocol_v2/record_dgrnet_access_20261011.py`；`python3 work/search_protocol_v2/record_t11_f3_s2_captcha_20261011.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；CRLF-aware `git diff --check`；主账ID/理由、候选/优先/核读身份、路线ID、T101–T103逐位置及ZIP CRC/manifest检查通过。数据变更已提交并推送。
+- 遗留：Google Scholar T11-F3-S2未拿到任何题录卡，等待人工验证后继续；DGR-Net全文及参考文献仍无法访问；主题总检索未闭合，不能声称零遗漏。ChatGPT Web建议只从tab237已保存URL继续，核对当时的实际结果总数与末页，再沿新的高相关论文引文链前向/后向筛查；复用已有身份记录，不重复完整度已闭合的查询位置。
