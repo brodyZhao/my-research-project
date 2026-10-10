@@ -2,7 +2,7 @@
 
 - 第74项BusterX全文核读后新增为视频邻接候选90/172：Wild track解释由Gemini依grounding/逻辑/事实性评估，另有5位深伪专家评分；专家均分78.7，与Gemini秩相关ρ=.64。只对正确预测视频评价，专家间一致性、评审规模和盲法不足，不等同图像直接faithfulness证据。
 - 第75项BusterX++此前已在90/rank89核读；官方v4核后复用身份补进172：5位评审对100个图视频混合样本相对GPT-5.2盲评，82%多数票偏好；另对100个正确fake样本核视觉伪迹，87%被多数专家确认。未报IAA，且排除失败预测；不测适当依赖。
-- 第58项DE-FAKE全文概念核查后定为源生成模型归因，不是理由解释，降为主题邻接/不纳入直接候选。更新RAIDX refs、90与172。验证通过：package checkpoint、compileall、主账/候选/优先/172/82条引文唯一性断言、diff check与ZIP CRC/源清单；包618成员，SHA-256 `da3e3f959afc6d521e3a44d1366585d0c8f8327bcbd3367bb3e761d323295a11`。总体检索未完成。
+- 第58项DE-FAKE全文概念核查后定为源生成模型归因，不是理由解释，降为主题邻接/不纳入直接候选。更新RAIDX refs、90与172。验证通过：package checkpoint、compileall、主账/候选/优先/172/82条引文唯一性断言、diff check与ZIP CRC/源清单；包618成员，SHA-256 `da3e3f959afc6d521e3a44d1366585d0c8f8327bcbd3367bb3e761d323295a11`。成果提交 `c78549f`。总体检索未完成。
 
 # 2026-10-10 RAIDX引文后续：ForgeryGPT与ForgeryTalker版本核对
 
