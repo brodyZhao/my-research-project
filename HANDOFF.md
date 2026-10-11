@@ -1762,3 +1762,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 当前计数：74=28,160条结果/引文位置；90=836个唯一候选题名；72=281项排序记录；13原页核心目录=84项；172=209个唯一效度核读身份；87=265条路线。单位不同，不可换算为强相关论文篇数或零遗漏证明。
 - 验证通过：`python3 work/search_protocol_v2/record_katiyar_citedby_20261011.py`重复运行不增行；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；T129连续8位置/筛选理由/身份处理字段、主账ID、路线8/8、90/72/172唯一性、阶段ZIP 726成员CRC及T129侧表成员断言；`git -c core.whitespace=cr-at-eol diff --check`。ZIP SHA-256=`59ddb2c96c3883e78165d3fc634336e850361f548af4ecbf1472f5359707e0aa`。
 - 后续优先：逐篇差分Momin综述的42项纳入研究和解释评测引文，先与90/72/172去重；继续未闭合的英文高精度路线。不重复T129已筛的位置，不把其42项综述纳入项当作已在本轮全文复核。
+
+## 2026-10-11续：Momin综述Cited-by快照逐项筛查（T130）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`8bbed14e2b3e65de5270812e8f9a1349b7220124`。origin为已确认GitHub目标；用户此前明确授权推送本分支。
+- Scholar实际页面核查显示无验证码，Momin et al.（DOI `10.1016/j.imavis.2025.105738`）Cited-by簇四页共33张可见卡（10+10+10+3，末页Next禁用），已33/33逐位置记录到主账74、路线87及侧表`T130_Momin_CitedBy_33条逐位置筛查_20261011.csv`。当前快照闭合不代表版本簇/其他数据库引文网络穷尽。
+- 新候选进入90共8条（含PRISM从既有72/172身份补齐90的一次目录修复）；新增72排序6条、172摘要/指定段落效度核读6篇。发现线索包括Armağan多模态XAI、ASTAR注意力稳定性、Tamiazzo音频XAI、Rajathi深伪XAI章节、Chaurasia多视角解释、XFakeDetect待核和IDC假脸XAI题录。EDDC、Don't Guess Escalate、Kempanna、Momin前向链中的Human-Centered XAI综述等复用既有身份。全文与摘要证据层级逐条标注；不把attention稳定、Grad-CAM/SHAP/LIME输出或作者信任声明等同因果faithfulness/恰当依赖。
+- 当前计数：74=28,193位置；90=844唯一题名；72=287排序身份；172=215效度核读身份；87=266条路线。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip` 为727成员（726源文件+SHA清单），SHA-256=`658aed74c44524221f610186c4c725acb86c5f0f91730186f81c6eaa7cc65cf2`。
+- 主要文件：阶段报告00、主账74、路线87、候选90、优先表72、效度表172、SHA清单112、阶段ZIP；T130逐条侧表在忽略目录中并纳入ZIP。忽略目录脚本`work/search_protocol_v2/record_momin_citedby_20261011.py`重复运行不增行。
+- 验证通过：T130位置1–33连续、分页数为10/10/10/3、每项理由和身份处置非空、路线33/33、主账ID及候选/排序/效度身份唯一；脚本重复运行一致；`python3 -m compileall -q work/search_protocol_v2`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（727 ZIP成员/CRC/源文件哈希）；`git -c core.whitespace=cr-at-eol diff --check`。未修改业务源码。
+- 遗留：Momin综述的42项纳入研究尚未逐篇差分；XFakeDetect及IDC假脸XAI身份/全文待核；更多未闭合英文高精度检索/引文链仍在，不能宣称零遗漏。下一步先从本轮新增直接XAI候选逐篇核身份与效度，所有旧身份按90/72/172复用，再继续未闭合检索。
+- ChatGPT Web下一步：T130侧表已记录当前Scholar快照所有33项，无需重刷；优先开Springer页`Towards Secure Media Deepfake Detection Using Explainable AI`核可见参考链中直接XAI工作，或继续Momin综述42篇纳入研究的身份差分。
+- 两个既有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`保持未修改、未暂存。
