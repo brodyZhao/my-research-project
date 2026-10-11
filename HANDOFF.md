@@ -1797,3 +1797,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证通过：`python3 work/search_protocol_v2/record_t141_forensic_faith_refresh_20261011.py`（70行、重跑不重复主账记录且保留完整侧表）；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（737源文件、738 ZIP成员、CRC及哈希检查）；`python3 -m compileall -q work/search_protocol_v2`；T141七页各10条、结果理由非空、主账/候选/排序身份数检查；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
 - 遗留：高精度英文查询和种子引文链仍未全部闭合；Scholar索引会改变估数/排序；DGR-Net正文访问限制和若干已标路线仍待处理。下一步不要重刷T136、T139/140或重复已有作品身份；优先完成尚未闭合、直接针对图像操纵解释效度的子式/引用链，尤其先处理能核验原始论文的直接候选，再以90/72/172去重。
 - 建议ChatGPT Web下一步：从87中挑选尚未筛且范围直接限于image forgery/tampering/splicing、带faithfulness/grounding/sufficiency/sanity-check终点的英文子式；每次记录唯一新位置和唯一作品身份；对同一offset题录变化时建立刷新快照并明确差异，不把单次动态结果估数当作召回证明。
+
+## 2026-10-11续：合成图像 sanity-check 首屏筛查（T142）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T142数据提交：`e42eb95`（`Log synthetic image XAI sanity-check screening`）。本HANDOFF更新随后单独提交；用户此前已授权推送本分支。
+- Google Scholar式`("synthetic image" OR "generated image") (explanation OR attribution OR saliency) ("sanity checks")`估数约289。本次仅筛start=0的10个卡片，逐条理由记于T142侧表及主账74；候选表90、优先表72、效度表172和路线87同步更新。直接命中`Explaining AI-Image Detection: What the Heatmap Actually Shows`复用已有全文/引文身份，不重复计篇。
+- 新确认`AttributionLab: Faithfulness of Feature Attribution Under Controllable Environments`，已核读arXiv全文并新增为低优先的方法学邻接：作者人工构造网络权重与合成图像oracle，评测归因图并指出扰动类faithfulness指标可能与真值不一致；该研究不是图像伪造/真实性任务，不计入直接强相关篇数。`Quantifying Fidelity: A Decisive Feature Approach...`原摘要确认其研究对象是自动驾驶仿真与真实场景的决策证据一致性，已与图像鉴伪解释效度区分。
+- 首屏直接鉴伪命中率低，故不机械翻约289条；T06-F4-S1保留start=10断点并标记`coverage_complete=false`。这不构成路线闭合或领域穷尽。T142侧表`T142_T06-F4-S1_synthetic_image_sanity_checks_10位置逐项筛查_20261011.csv`已收入阶段ZIP。
+- 更新计数：74主账28,609个位置/观察行；90候选891个唯一标题；72排序322项；172原文/摘要效度核读261条；87路线274条。不同统计口径不等于独立强相关篇数或全领域召回率。阶段包739个ZIP成员（738个来源文件），SHA-256=`16c9924588c39ec066735fbced91117928ddaae59fba1181ce2b34f708b766e6`；包内T142侧表存在且可读取。
+- 测试通过：`python3 work/search_protocol_v2/record_t142_synthetic_image_sanity_checks_20261011.py`重跑后新增主账行0、侧表仍10行；`python3 -m compileall -q work/search_protocol_v2`；T142位置1–10连续、ID唯一、理由非空、路线仍未闭合；阶段ZIP检查；`git -c core.whitespace=cr-at-eol diff --check`。本阶段没有业务源码修改。原有用户未跟踪的`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未改动、未暂存。
+- 遗留：主题检索未完成，不能承诺零遗漏；T06-F4-S1约289结果仅看首页并已因低精度暂停。下一步按唯一身份复用90/72/172，优先从87里尚未执行的直接图像取证式`T04-F4-S1`（`("copy-move" OR "copy move") (explanation OR attribution OR saliency) ("sanity checks")`）开始，核验当前Scholar快照首页并只为未见强相关作品继续原稿与引文链；不要重筛已闭合的T136/139/140/T141位置。
