@@ -2085,3 +2085,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 测试：`python3 work/search_protocol_v2/record_t209_xaivier_thesis_20261012.py`通过并幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过（来源记录、唯一性、计数、825成员ZIP CRC和文件SHA-256）；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码改动。
 - 遗留：XAIVIER学位论文全文及引文待获取；Scholar验证页当前阻断分页查询；T207 ACM正文也仍待找作者稿；整体英文主题式和跨库引文网络未闭合。
 - 建议ChatGPT Web下一步：不要重刷anchor会议论文的既有Scholar位置，也不要把其会议摘要数值当全文证据。若机构库访问恢复，优先核读XAIVIER学位论文中evaluation章节、anchor-affinity公式和人评设计；之后按90/72/172去重，只增补缺失全文证据或未筛的引文位置。
+
+# 2026-10-12 T210：Trustworthy forgery detection with causal inference 全文与参考筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`2baf2bc`；远端为已确认的 `https://github.com/brodyZhao/my-research-project.git`。用户此前明确授权继续检索并推送；两个既有用户未跟踪文件未修改、未暂存。
+- 本轮从作者成果页线索发现并核实 Duan et al., “Trustworthy forgery detection with causal inference,” *Science China Information Sciences* 68(6), 160108 (2025), DOI `10.1007/s11432-024-4347-6`。核读Science China Press官方2页正文和官方4页补充材料，明确将其作为因果可解释鉴伪方法邻接项（72 rank 301）；其检测准确率/AUC、跨域结果、消融与t-SNE不构成解释事实真值、faithfulness或适当依赖验证。完整判断已记入172。
+- 正文参考[1]–[5]与补充参考[1]–[11]共16个位置已逐项题名/主题筛查；Pearl的《Causal Inference in Statistics: A Primer》出现两次，保留两个位置、合并为一个引文身份。逐项日志`T210_TrustworthyForgeryCausalInference全文与16条参考逐项筛查_20261012.csv`已纳入阶段ZIP。全文、参考书目、版本与证据边界追加于阶段报告。
+- 更新后计数：74=30,254个逐位置观察；90=963条候选身份；72=398条优先/邻接排序；172=345条全文/效度核读；87=358条路线。单位口径不同，不可解释为独立强相关论文数、召回率或零遗漏。阶段包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`，SHA-256 `f447e76e87f15542d401a65cb0fa874b3a4e9d0c855dc9b0bb29c5a6e01c0c5f`。
+- 验证：`record_t210_trustworthy_causal_forgery_20261012.py`幂等复跑；`python3 -m compileall -q work/search_protocol_v2`通过；`package_checkpoint_20261012.py`通过台账唯一性、T210 16/16参考连续性、历史检查点和ZIP成员/CRC/源文件SHA断言；`git -c core.whitespace=cr-at-eol diff --check`通过。历史检查点脚本中的固定行数改为下限断言，最终T210检查点保留精确总数断言。
+- 遗留：Google Scholar精确式标签仍显示reCAPTCHA，因此本轮未完成本篇Cited-by链；不要将该路线记成“零引文”或已闭合。下一步验证页面可用后只查本篇前向引用，按90/72/172已知身份去重。主题式检索和前后向引文网仍未完成。建议ChatGPT Web继续从该Cited-by断点开始，不复筛T210 16条书目位置。
