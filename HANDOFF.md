@@ -1,4 +1,14 @@
-﻿# 2026-10-12 T212：XPlainVerse来源限定核读与验证恢复后引文去重
+﻿# 2026-10-12 T213–T214：XPlainVerse全文/70条引文筛查与深伪人类依赖全文核读
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T213数据提交`1140d92a14e378946b1fddcbbf913f5c6a8310d5`、T214最新数据提交`780b18afdddbd91a26c0dcf0d0595b4ba21c39b1`，均已推送到已确认的`origin`。交接文件更新需单独提交并推送。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含831个来源文件+manifest（832项），SHA-256=`49c2d6afe3dff26e23b729f5d019d3fd7c2991e63b1026d9b22f4418804ae921`。
+- T213复用XPlainVerse rank 75既有身份，核读官方arXiv v1完整50页正文与附录；官方References [1]–[70]逐位置题录/主题筛查并与现有身份表交叉核验。70是书目位置初筛，不是70篇全文阅读；未发现新强相关身份。全文记录于`T213_XPlainVerse_arXivv1_全文解释效度核读_20261012.csv`和`T213_XPlainVerse_References70_逐位置相关性与身份复用筛查_20261012.csv`。
+- T214升级rank 106的Zhou等《Effect of AI Performance, Risk Perception, and Trust on Human Dependence in Deepfake Detection AI System》：Penn State确认正式同行评审发表信息为PACM HCI 9(7), CSCW407 (2025)，DOI 10.1145/3757588；官方arXiv v1主文§1–7及附录A–F已读。400人招募、390份有效数据；未展示解释，属于深伪检测人类依赖邻接，不是解释可靠性实证。研究自称FPR的告知值未反映到试验集错误率，且附录例子的分母更像false-discovery proportion；风险操纵检查不显著、信任差异d=.09、中介不显著。旧有59条References逐项筛查复用，没有重刷。证据侧表`T214_Zhou2025_深伪检测人类依赖全文与效度边界核读_20261012.csv`。
+- 本轮核对Chrome的Scholar `T11-F3-S4` 查询页仍显示“Please show you're not a robot”；用户最近的“已恢复”对应SSRN PDF页，不代表Scholar验证已解除。另一个可读的Scholar Cited-by“Model focus improves performance…”页共11条，逐项在74中与T171既有记录匹配，全部已筛，未重复写入。不要重刷T171这11项、XPlainVerse 70条或Zhou 59条参考位置。
+- 更新后台账：74=30,326个观察/引文/全文核验位置；90=963个候选身份；72=398项排序；172=348条效度核读；87=361条路线。单位不同，不能相加为强相关作品数或召回率。阶段主报告为`00_重检阶段报告_未完成.md`。
+- 验证：`record_t214_zhou_fulltext_20261012.py`连续运行两次幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过历史断言、唯一性、归档CRC与源文件SHA核验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。T214数据提交`780b18a`已推送；根目录两份既有用户未跟踪文件保持未修改、未暂存。
+- 遗留：全局主题检索和引文网络仍开放，不声称“一个不漏”。ChatGPT Web下一步按72与172/87差分，优先核读rank靠前、尚无172全文记录且有可访问官方全文的直接相关文献；T11-F3-S4验证码人工解除后从首页续查。Scholar当前验证页用户可能看不到，不要反复请求，先推进不依赖此页的全文和既有未闭合引文链。
+
+# 2026-10-12 T212：XPlainVerse来源限定核读与验证恢复后引文去重
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段提交：`09bc6e1`（`Record source-limited XPlainVerse review`），已推送到已确认的`origin`。阶段归档`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip` SHA-256=`0b0d6ce87a76d147c9ef0f5030607b7c9069d60b9e707206d4141fb20e77ac4b`，827个来源文件+manifest，共828个成员。
 - T212不是新Scholar结果卡：XPlainVerse是已发现的rank 75候选。本轮只核对官方arXiv摘要及作者挑战评测仓库/代码，记为受限来源核读；官方摘要称有2,000对人工标注，但没有足够信息核定标注者人数、流程、IAA或事实校准。伴随代码中的Qwen裁判/语义覆盖分数只是可配置的grounding代理，不能据此声称主论文使用同一流程、独立事实审查或faithfulness有效。XPlainVerse主文和书目尚未核读，不能把摘要+代码标成全文。
