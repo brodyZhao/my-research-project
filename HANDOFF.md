@@ -2053,3 +2053,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：T183录入脚本连续运行两次，五个计数稳定且幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`检查通过（20条Scholar位置、47条引用位置、5条效度核读、归档哈希）；`git -c core.whitespace=cr-at-eol diff --check`通过。两个既有用户未跟踪文件保持原样、未暂存。
 - 遗留：总体英文检索仍未完成；T14-F2-S1仅首页20/约6,220筛查。ICCVW引用[13]与[15]的实际目标仍不确定。参考表其他被判断低相关的书目仅做题名/主题级筛查，不代表通读各篇。不能声称“一个都不漏”。
 - 建议下一步：先从90/72/172复用身份，只延伸ICCVW直接候选及新增强邻接论文的引文链，优先补两条错配引用的规范题名/作者核实；避免重刷本轮47个已筛位置、T161的31条XAGR书目及已核读全文。T14宽式暂不机械翻页，另用英文相邻领域词（synthetic-media forensics、image-authenticity assessment、forensic grounding、explanation faithfulness/hallucination）建立更高信号的分面式后续查询。
+# 2026-10-12 续：T205–T206全文解释效度核读与提交
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`bf829efae84d53e52718e657d2b7a1cbd93fb2f8`；remote：已确认的 `origin`。用户此前明确授权推送当前检索分支。
+- T205将《A Hybrid CLIP-Diffusion Architecture for Transparent Deepfake Detection and Explainability Evaluation》升级为官方CVF 10页全文已读；论文确实做了重要/低重要区域删除、解释图SSIM稳定性、输入噪声敏感性和效率评测，不能概括为“没有解释可靠性测试”。但其代理评测没有独立伪造区域或证据主张真值，尚不能证明解释因果忠实、事实正确或适当依赖。该论文自身参考文献[1]–[37]已全部逐位置题名/主题筛查；这一层不等同逐篇全文核读。
+- T206对《Detecting AI-Generated Images with CNN and Interpretation using Explainable AI》补做作者公开稿全文核读并核对IEEE书目信息。它在StyleGAN/真实人脸分类上展示Grad-CAM与LIME，但未验证解释可靠性，因此仍是低优先邻接文献，不把检测指标或热图展示作为解释效度证据。
+- 账本：74主账30,152条结果/引文/核验位置；90候选961行；72优先记录396行；172全文/效度核读344行；87检索/引文路线353条。它们统计单位不同，不能换算为强相关独立论文总数、召回率或“零遗漏”。本阶段无新增Scholar搜索命中；T11-F3-S4分页查询尚未闭合。用户报告SSRN安全验证恢复；XAGR正文及31条参考已由T182核读，本次按稳定身份复用，没有重复阅读。
+- 主要修改：阶段报告00、manifest112、台账172/72/74/87/90和阶段归档`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`。压缩包含821个源文件与manifest（822个成员），SHA-256=`a5a89115cc06d037338ffb01b0e6569c00bdeacc672d6946f659ecc49ed64f71`。T205/T206逐篇核读表、T205 37条引用筛查表及幂等录入脚本保存在本地忽略的工作目录，并随源文件清单纳入归档。两个既有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`与`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过（计数、已知检查点、ZIP成员、CRC及源文件哈希）；`git -c core.whitespace=cr-at-eol diff --check`通过。复核发现并更正阶段报告中172表计数的单处笔误（345改为344），随后重打包并通过断言。
+- 遗留：整体英文检索和强相关引文图仍未完成；Scholar 当前验证状态没有新增可筛结果，不能宣称该路线覆盖完成。T205参考仅题名/主题初筛。T207《Multimodal Large Models for Image Tampering Detection and Explanation: From Detection to Reasoning》已确认官方元数据/摘要，但ACM全文仍受Cloudflare拦截，不能把摘要当全文效度核读；可在取得作者稿后继续。后续优先以90/72/172稳定身份去重，只追缺失的直接文献全文或尚未闭合的高信号引用边。
+- 建议下一步：若Scholar仍受限，先补T207的作者稿或正式公开全文并核实解释质量协议；否则从T11-F3-S4断点继续逐页筛，但不重扫已筛分页、不重读T182的XAGR及本阶段T205/T206。之后再核对候选与全文表的直接强相关分层，持续保留“已检查范围”与“未闭合范围”的边界。
