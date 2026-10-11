@@ -1914,3 +1914,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：T170各来源书目连续49/46/40且共135项；T171 11/11、T172 29/29连续，逐项理由非空；74结果ID、90标题、172题名、87路线ID唯一；T170/T171及T172记录脚本运行幂等（T172第二次新增主账0行）；`python3 -m compileall -q work/search_protocol_v2`、`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`git -c core.whitespace=cr-at-eol diff --check`通过。用户原有两个未跟踪文件未触碰、未暂存。
 - 遗留：Schöttl全文待取；Notre Dame 2026 dissertation仍只有Scholar片段；整体英文检索与高相关引文网络未完成，不作“零遗漏”声明。下一步先核Schöttl开放PDF具体指标，再从T172发现的输入/模型操纵方法补查图像取证场景中的对应验证研究；按90/72/172唯一身份复用，不重刷TQE 49条或T170/T171/T172已完成位置。
 - 建议 ChatGPT Web 下一步：确认分支含`e3ed8cc`并检查T172表；如果补查操纵方法的Cited-by列表，先用论文规范题名与90/72/172去重，只保留新身份和缺失全文证据。
+
+## 2026-10-12续：DGR-Net官方书目筛查、XAGR来源复核（T181）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T181数据提交：`f95ed01`（`Record T181 DGR-Net reference screen`）；origin为已确认的`https://github.com/brodyZhao/my-research-project.git`。用户此前授权推送当前检索分支。
+- DGR-Net（SSRN 7203638）官方references小组件显示39个位置。[1]–[27]和[29]–[39]共38条可识别书目已逐项主题筛查；[28]仅显示“T.-Y”，留作未决，不猜测题名。筛查侧表`T181_DGRNet_SSRN_39条参考逐项筛查_20261012.csv`与幂等脚本`work/search_protocol_v2/record_t181_dgrnet_refs_20261012.py`在本地ignored工作区，并打包进阶段ZIP。独立精确题名网页搜索未发现除SSRN外的可读正文。AOT-PixelNet来自[38]，仅有ScienceDirect摘要/索引片段，作为可解释图像真实性检测邻接，不是解释faithfulness直接证据；DGR-Net正文仍未读。
+- XAGR访问复核：用户报告恢复后，我检查Chrome仍显示Cloudflare安全等待；SSRN摘要页可读，PDF路径进入账号/下载提示后回到题录页。另查到ResearchGate相同书目及摘要，但全文不可读，打开返回429。XAGR仍是摘要级，原来T161已完成的31条参考没有重复筛查。
+- 发现T173 Dombrowski filtered Cited-by路线已在既有主账完整登记39条，因此本轮没有重扫或重复增加该路线。
+- 当前台账计数：74=29,685个位置，90=944个候选题名，72=376项，172=315条效度核读，87=304条路线。统计单位不同，不能解释为强相关独立论文数或领域召回率。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含783个成员（782个来源文件+manifest），SHA-256=`dfdb2f42404ade6261d0a52c40e513f461de8c432a4046e7041b18b1c441bcd6`。
+- 验证：`record_t181_dgrnet_refs_20261012.py`重复运行两次后7个源台账哈希不变；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过唯一性、39位置、#28未决和ZIP源文件哈希检查；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改。用户原有两个未跟踪文件未改动或暂存。
+- 遗留：DGR-Net正文与参考[28]未解决；XAGR和QuantVisualXAI完整论文仍待取得；其他高精度式与核心引文网络仍有开放项。全局检索未完成，不能承诺“没有遗漏”。
+- 建议ChatGPT Web下一步：不要重复T173的39条或XAGR的31条参考；沿87中未闭合且高信号的路线继续，先对照90/72/172复用作品身份，再只核新候选/缺失全文证据。若遇到作者/出版社可读的独立正文，优先补XAGR、DGR-Net及QuantVisualXAI的全文效度记录。
