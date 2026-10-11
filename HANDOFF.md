@@ -1,3 +1,15 @@
+# 2026-10-12 T192交接：Artifact Magnification引文链与人类解释使用研究
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T192数据提交：`ff8ecad`；origin为已确认的GitHub仓库，用户此前已授权推送当前分支。
+- 本轮逐项筛查Artifact Magnification官方参考文献[1]–[70]，70个位置逐条有主题、处理结论和身份复用说明；逐项表为`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T192_ArtifactMagnification_References70_逐位置主题筛查_20261012.csv`，四篇定向原文核读为同目录下`T192_TargetedFullTextReviews_4篇_20261012.csv`。
+- 新核读Boyd等AAAI 2023合成脸AI指导/CAM人评、Groh等PNAS 2022深伪错误建议对人的影响、FakeET 2020人类注视数据、Lai与Tan FAT* 2019文本欺骗解释/依赖实验。证据类型分别为直接辅助判断、人类依赖风险、注视参照和跨域方法；不将一致性、信任或注意力代替解释事实性与因果faithfulness。Boyd论文摘要与正文的标注数为56,015/56,065不一致，已在记录保留。
+- 纠正Artifact Magnification Study 1参与者数：正式PDF方法部分为913，综述段落概括为900；T191/172记录按方法部分记913并保留差异。`Explainable Deep-Fake Detection Using Visual Interpretability Methods`已由候选90加入优先待核读72，但可访问官方全文仍缺，172没有编造全文核读。
+- 阶段数据：74=30,020观察位置；90=957身份行；72=391排序项；172=335篇效度核读记录；87=336条路线。不同统计单位不可相加成独立强相关论文篇数或检索召回率。ZIP为805个来源文件+manifest（806成员）；本交接前最后生成SHA-256=`04907f25d938c0422411d3c6452e7400040316740f5d143e07c0517ebddb74e0`。打包脚本会重写清单/ZIP元数据，因此重复打包时ZIP哈希可能改变；对外使用时以当前清单和ZIP实际哈希为准。
+- 验证：T192记录脚本幂等复跑后计数不变；`python3 -m compileall -q work/search_protocol_v2`通过；`package_checkpoint_20261012.py`通过全部历史及T192断言；`git -c core.whitespace=cr-at-eol diff --check`通过。T192主数据提交`ff8ecad`已创建。
+- 遗留：全局主题检索和引文网络未闭合，不承诺零遗漏。Scholar某个仍待继续的Cited-by页面实时显示reCAPTCHA；用户最近报告的是XAGR SSRN PDF恢复，该状态不等于Scholar验证码解除。本轮不依赖该页，未声称Scholar已恢复。下一步优先取得Malolan等ICICT 2020全文，然后从72中选一个既未有172记录、官方全文可读的直接核心作品继续核读；严格按90/72/172做身份去重，已筛页与参考位置不重跑。
+- 主要修改：阶段报告00、112 SHA256清单、172效度表、72优先表、74观察主账、87路线表、90候选表、阶段ZIP；逐位置与核读侧表收录在ZIP。根目录原有两个未跟踪文件保持未暂存、未修改。
+- 建议ChatGPT Web下一步：仅当用户明确确认 Scholar CAPTCHA 所在标签确已正常后，继续从保存的Scholar断点；否则先补官方全文核读，不重复已完成的Scholar分页。
+
 # 2026-10-12 T184 检查点：EFR-REF012全文效度补核
 # 2026-10-12 T185 检查点：MGFFD-VLM 精确核验、引文簇与全文效度
 
