@@ -1707,3 +1707,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：`python3 -m compileall -q work/search_protocol_v2`通过；阶段打包脚本通过（709源文件、710 ZIP成员、CRC与清单哈希校验）；主账位置ID唯一/理由非空、候选题名唯一、优先rank唯一、172作品身份唯一、87路线ID唯一；`git -c core.whitespace=cr-at-eol diff --check`通过；推送后本地HEAD与origin分支一致。原有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
 - 遗留与下一步：用户完成ManipShield Cited-by页面验证后，从当前`cites=5005560726217256151`断点逐条筛3项；然后按唯一身份匹配90/72/172。T11-F3-S2仅在结果卡实际加载后从start=0开始。继续未闭合高精度英文路线；整体重检未完成，不作零遗漏声明。
 - 建议ChatGPT Web下一步：先对照`CIT-MANIPSHIELD-FWD-20261011`的当前页，验证后仅新增3个实际可见施引位置；复用已审身份，并复核ManipShield的CSS/reference-target限制，不重复T111或现有宽式页面。
+
+## 2026-10-11继续：T11适当依赖与Trust Calibration检索、AIGI-SHAP引文筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮数据检查点提交：`d1dbae7`（后续单独提交本交接）。
+- T11-F3-S2原式 `(deepfake OR "face forgery" OR "facial manipulation") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("appropriate reliance")`：Google Scholar观察了start=0–130的14页共131张结果卡，并检查start=140为空；页眉估数从约141变131。131个位置均逐项题录初筛，见主账74、T113侧表及87。此为该次快照闭合，不代表领域穷尽。start=60有10张正常卡，无验证码；此前误把标题“Social Robots”判成验证码的提示已更正。
+- T11-F3-S3 trust-calibration式页眉估数约233后变223。T114仅登记start=0–90共100个位置；start=60第5条发现Yawale等的《Design of an integrated model combining vision transformer, multi-modal fusion, and proximal policy optimization for synthetic AI-generated image detection》（*Multimedia Tools and Applications*, 2026, DOI 10.1007/s11042-026-21530-0）。Springer官方摘要证实合成图像检测及对视觉/元数据使用SHAP；全文受订阅限制，未核实解释faithfulness或用户评价。其官方42条References已逐条题名/主题筛查，T115与主账74、87保留全部位置；6条直接/邻接图像伪造或合成来源检测引文待优先跟进。另有一个出版源无法访问的跨模态解释题名只作为待核线索。
+- T11-F3-S3不是闭合路线：start=220有3条、start=230空，但只将前100项计入逐条筛查；后续页面虽浏览过，未形成逐位置日志，不视为已筛。之后不要重复前100项；如继续该宽式，需补100–223/233剩余位置，或优先用细式和引文链推进。ManipShield cited-by reCAPTCHA断点、DGR-Net正文及39条参考文献访问限制仍独立未解决。
+- 另修复主账中的旧假占位arXiv链接，将`Can ChatGPT Detect Deepfakes?`改为arXiv:2403.14077，并保留CVPRW 2024正式信息；该论文原候选与原文审阅已存在，不重复计作品身份。
+- 账本现状：74=27,944位置记录；90=814个唯一候选题名；72=267个优先记录；172=197个唯一原文/摘要效度核读身份；87=256条路线。计数口径不同，不是独立强相关论文数。阶段包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，713成员，SHA-256 `68834d8d7ad1ef01de10e36e29b1dcccd4a33118a9948c299eaafc079c8f0fba`。
+- 修改文件：阶段报告00、包哈希清单112、优先表72、主账74、路线87、候选90、阶段ZIP；忽略目录内T113/T114/T115均已收入ZIP。两个原有用户未跟踪文件保持未修改、未暂存。
+- 检查通过：`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；自定义断言核验T113=131、T114=100、T115=42，位置ID/候选题名/排序名次唯一，路线状态准确，无`XXXX`链接，ZIP CRC与侧表成员通过；`git -c core.whitespace=cr-at-eol diff --check`。
+- 后续建议：从T115中图像伪造/合成图像来源相关引用做身份去重，优先核出版源与原文；先复用90/72/172已有记录，不重读已审论文。随后继续未完成的高精度英文式。总体重检仍未完成，不作“零遗漏”承诺。
