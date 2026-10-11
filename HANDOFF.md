@@ -1720,6 +1720,16 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 检查通过：`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；自定义断言核验T113=131、T114=100、T115=42，位置ID/候选题名/排序名次唯一，路线状态准确，无`XXXX`链接，ZIP CRC与侧表成员通过；`git -c core.whitespace=cr-at-eol diff --check`。
 - 后续建议：从T115中图像伪造/合成图像来源相关引用做身份去重，优先核出版源与原文；先复用90/72/172已有记录，不重读已审论文。随后继续未完成的高精度英文式。总体重检仍未完成，不作“零遗漏”承诺。
 
+## 2026-10-11续：Yoldar前向引文恢复后的7条逐位置筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段文献数据提交：`f0195b1493ad41213fe93b761cdd333eea271550`；目标remote仍为已确认的`origin`。本交接将另作文档提交。
+- 用户完成页面恢复后，Google Scholar的Yoldar（2025）Cited-by页正常显示7条（`cites=6216544667582064725`）；七条均已逐项筛选，主账74和独立侧表`T126_Yoldar_CitedBy_7条逐位置筛查_20261011.csv`记录位置、题录、来源与排除/纳入理由。87中`CIT-YOLDAR-FWD-20261011`现为7/7当前快照闭合；不代表所有版本簇或全局引用网络完整。此前验证阻断是更早的页面状态，此后用户反馈的“没看到验证”已由正常结果页核实，不再作为当前断点。
+- 新增2个唯一候选身份：①Robledo-Moreno等，*Kinematic hallucinations in vision-language models: A study on zero-shot signature verification*，Pattern Recognition Letters，在线发表2026-09-25，DOI `10.1016/j.patrec.2026.09.042`。ScienceDirect官方索引摘要报告45,520次评估、签名伪造VLM语言推理幻觉指数和置信度分析；出版社正文页面本次触发机器人检查，仅摘要级核验。列为高相关法证解释可靠性邻接，不等同自然图像后验显著图faithfulness或人类恰当依赖。②Salunkhe与Satonkar，*Uncertainty-Aware Explainable Deep Neuro-Fuzzy Learning for Multilingual Offline Handwritten Signature Verification*，SSRN 6124389（2026预印本）；摘要称结合签名真伪、不确定性与Grad-CAM，SSRN原页本次显示Cloudflare安全检查，全文及解释可靠性指标待核，排序低于有直接faithfulness或人因结果的论文。
+- 另外5项保留逐位置理由：签名判别特征稳定性不评价解释；生成手写伪造检测论文只报告检测/鲁棒性；中文书写者身份识别SHAP研究未做真伪判定/解释可靠性；糖尿病移动健康与贷款决策解释均属无关任务。
+- 当前记录数：主账74=28,110个位置；候选90=830个唯一题名；优先72=275项；效度核读172=205个唯一身份；路线87=264条。它们是不同口径，不能当成强相关论文篇数。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`含723成员，SHA-256=`9ece0b78ba10d3648455071c922c4f30496d473a3e09f925258420c6431369da`；内含T126侧表及最新总账。
+- 修改文件：阶段报告00、主账74、路线87、候选90、优先72、效度核读172、哈希清单112及阶段ZIP；侧表T126纳入ZIP。验证通过：`python3 work/search_protocol_v2/record_yoldar_citedby_20261011.py`（重复运行行数不变）、`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`python3 -m compileall -q work/search_protocol_v2`、五张核心表唯一性断言、T126 7行连续位置/理由非空、路线7/7断言、ZIP CRC/SHA-256、`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
+- 遗留：Kinematic论文的全文与SSRN预印本正文仍待获取；Katiyar Cited-by 8条仍是另一条独立未完成引文链；总体英文检索和其他高精度路线均未完成，不能宣称零遗漏。ChatGPT Web下一步先检查`CIT-KATIYAR-FWD-20261011`当前页面是否正常加载8条，逐项筛完后复用90/72/172身份；随后核Kinematic全文和SSRN全文，并继续87中未闭合的英文高精度路线。不要重筛T126或重复读取已核身份。
+
 
 ## 2026-10-11续：闭合T11-F3-S3后段并审读Katiyar早期图像鉴伪解释工作
 
