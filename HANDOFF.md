@@ -2094,3 +2094,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 更新后计数：74=30,254个逐位置观察；90=963条候选身份；72=398条优先/邻接排序；172=345条全文/效度核读；87=358条路线。单位口径不同，不可解释为独立强相关论文数、召回率或零遗漏。阶段包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`，SHA-256 `f447e76e87f15542d401a65cb0fa874b3a4e9d0c855dc9b0bb29c5a6e01c0c5f`。
 - 验证：`record_t210_trustworthy_causal_forgery_20261012.py`幂等复跑；`python3 -m compileall -q work/search_protocol_v2`通过；`package_checkpoint_20261012.py`通过台账唯一性、T210 16/16参考连续性、历史检查点和ZIP成员/CRC/源文件SHA断言；`git -c core.whitespace=cr-at-eol diff --check`通过。历史检查点脚本中的固定行数改为下限断言，最终T210检查点保留精确总数断言。
 - 遗留：Google Scholar精确式标签仍显示reCAPTCHA，因此本轮未完成本篇Cited-by链；不要将该路线记成“零引文”或已闭合。下一步验证页面可用后只查本篇前向引用，按90/72/172已知身份去重。主题式检索和前后向引文网仍未完成。建议ChatGPT Web继续从该Cited-by断点开始，不复筛T210 16条书目位置。
+
+# 2026-10-12 T211：将既有Cirillo出版社核读并入172
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`d12c82a`；远端为已确认的 `https://github.com/brodyZhao/my-research-project.git`。用户此前明确授权继续检索并推送。两个原有用户未跟踪文件未修改、未暂存。
+- 差分72/172时发现《Explainability-driven adversarial robustness assessment for generalized deepfake detectors》已有候选90、Scholar V109/V110两个发现位置、72 rank 59、79指标重审和`work/literature_research_20261005/manual_primary_reviews.json`中的既有出版社全文范围评审，但缺失172统一效度表。本轮按原记录把其已知指标与构念边界映射到172，没有重新读论文，也没有新增候选、结果位置或路线。来源原评审范围和SHA记录在`T211_Cirillo既有出版社核读记录并入172_20261012.csv`，该文件已收进阶段ZIP。
+- 该文比较LIME、RISE、Grad-CAM++、GradSAM和LeGrad在top/bottom超像素攻击下表现，并报告Pearson faithfulness estimate及攻击成功率；既有核读指出高强度攻击对top/bottom区域均有较高成功率、proxy会受控制区和攻击强度混淆影响，且依赖解释定位和白盒设置。将它保持为直接相关可靠性代理研究，不把Pearson proxy升级为独立因果faithfulness真值。
+- 最新台账：74=30,254；90=963；72=398；172=346；87=358。只有172因漏列修复增加1项。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含826个来源文件+manifest（827成员），SHA-256=`ddeb40e0392cdf42b9ecd0b144e14fa40b4a499a2f90dca373119f20d2f10aab`。
+- 验证：T211差分脚本幂等复跑；T210脚本幂等复跑；`python3 -m compileall -q work/search_protocol_v2`通过；阶段打包脚本通过T210完整16个参考位置、T211原记录去重和精确计数、ZIP CRC及每个源文件SHA校验；`git -c core.whitespace=cr-at-eol diff --check`通过。未修改业务源码。
+- 遗留：Google Scholar仍有reCAPTCHA拦截，T210前向Cited-by路线尚未闭合；总体主题检索与引文网络继续开放。下一步优先等Scholar可用后仅补T210一条前向引用检查，再回到90/72与172差分，只处理尚未闭合的直接强相关文章，禁止重复核读已登记正文或重复筛已登记页位。
