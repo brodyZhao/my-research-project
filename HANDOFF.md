@@ -1,12 +1,15 @@
 
 ## 当前检查点
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新文献数据提交：`a7c1b1a`（本交接更新将另行提交）。
-- T179沿已筛完的TQE被引位置46/48和Brna Scholar五条版本卡，核读官方VUT 98页论文中实验方法、参与者、结果、用户反馈与讨论/局限关键章节；不是逐页通读。研究204名有效参与者（CWS分析167名）、三组、60张FaceForensics++图像，并特意设置50%检测器错误率。总体准确率/F1组差异不显著；检测器错例上CWS经Holm校正后热图组较分数组显著较好（p=.048），但错例准确率组间事后比较不显著（p=.170）、正确纠错率p=.187；热图组自报对AI依赖更高（p=.0499）。这是强相关人机决策/依赖证据，不验证热图与伪造区域的内在faithfulness。T166官方书目123/123位置沿用，不重筛。
-- T180记录用户报告SSRN安全验证后对XAGR（SSRN 6929302）的PDF访问复核：摘要页恢复可读，但内嵌PDF仍为空白、官方下载未得到可识别文件，新的Chrome落地页仍显示Cloudflare安全检查，直接PDF访问403。XAGR仍是摘要级直接候选，31条参考已由T161逐项筛过，本轮未重复，也未将其升级为全文核读。
-- 更新文件：主账74、候选90、优先72、全文核读172、路线87、阶段报告、哈希清单和新阶段ZIP；新增T179/T180逐项侧表。计数：74=29,646个结果/访问观察位置；90=943个候选行；72=375个优先条目；172=314个唯一作品核读记录；87=303条检索/核读路线。各台账口径不同，不相加为独立论文数。
-- 阶段包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`，781个来源文件、782个ZIP成员，CRC/源文件SHA校验通过；ZIP SHA-256=`d1f5ce5ebfcc897469a5d42439fd8a31669dcfa1a14126c73c3955d0a27d29c7`。T179、T180记录脚本各运行两次后计数稳定；`python3 -m compileall -q work/search_protocol_v2`与`git -c core.whitespace=cr-at-eol diff --check`通过。两个用户未跟踪文件未修改、未暂存。
-- 遗留：XAGR正文仍不可读；QuantVisualXAI六页正文未取得；DGR-Net SSRN PDF先前403/Cloudflare阻断且39条参考未筛。总体检索仍未完成，Scholar动态索引、版本簇和停止的低精度宽式不支持“零遗漏”声明。
-- 建议下一步：若当前Chrome的XAGR安全检查页对用户可见，可由用户本人完成后再打开正文；成功前不要反复重试同一签名PDF或重筛XAGR摘要/31条书目。随后优先推进DGR-Net正文与39条参考，及QuantVisualXAI全文；严格复用既有TQE 49/49、T166五卡、Brna 123/123、T161 XAGR 31/31、T168 QuantVisualXAI 23条参考闭合记录。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T182数据提交：`292378b`（本交接更新单独提交，最终HEAD以`git rev-parse HEAD`为准）；origin仍为已确认的GitHub仓库。
+- T182重开后查阅已恢复的Google Scholar精确引文簇`cites=6092952475222118796`：页面显示1条施引结果《Research on an Excessive Artist Style Mimicry Detection Algorithm for AI-Generated Artworks》。该作此前已在74以`V2E-T02-F3-S5-P10-02`排除为AI艺术家风格模仿/版权检测，本轮只登记一条引文边、复用旧筛选，不新增作品身份。范围只限当日此Scholar页面快照，不表示完整引文图。
+- 用户恢复SSRN后，官方XAGR记录正常，官方16页PDF已在Chrome打开。对正文第1–14页作定向视觉核读，涵盖损失方法、Celeb-DF v2抽帧与划分、分类/一致性结果、可视化、结论和声明；第15–16页参考文献已沿用T161的31/31逐项筛查。XAGR训练时最小化归一化Saliency与Grad-CAM图之间的平均绝对差；在单一Celeb-DF v2实验中alignment error由0.132降至0.055（58.31%）。这证明解释图之间更一致，不证明图像证据真值、因果faithfulness或恰当用户依赖。未见独立伪迹区域真值、参数随机化、删除/插入、反事实或人类评估；作者把跨数据集验证列为未来工作。SSRN将该文明确标为未同行评审预印本。
+- 本轮只新增2个观察位置与2条路线；XAGR的90/72/172既有身份更新，不新建身份。计数：74=29,687个观察位置；90=944个候选身份行；72=376项；172=315条作品效度核读记录；87=306条路线。统计单位不同，不能解释为强相关独立文献数或召回率。
+- 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含784个来源文件和1份manifest（共785个ZIP成员），CRC与归档内文件SHA-256验证通过；ZIP SHA-256=`ea5f5de0c35dc1bf92e13a7a0dacc09a7ea0747c438f623a495d09022f261531`。T182记录脚本连续运行两次后7个CSV哈希一致；`python3 -m compileall -q work/search_protocol_v2`、`package_checkpoint_20261012.py`与CRLF-aware `git diff --check`通过。两个用户原有未跟踪文件未改动、未暂存。
+- 遗留：总体检索仍未完成，不能宣称全领域零遗漏；Scholar页面只是动态索引快照。DGR-Net的39个官方参考位置中38条可识别条目已筛，第28条只显示“T.-Y”仍未决，正文仍未取得；QuantVisualXAI六页正文仍未取得。XAGR是定向正文核读而非逐页/同行评审复核。
+- 建议下一步：优先推进未读的直接强相关作品正文与高信号引文链；跳过本轮已标记复用的Scholar单条引文结果和XAGR的T161 31条参考。继续时先按90/72/172核对唯一身份，再只补新位置或缺失的全文证据。
+
+### T181归档说明更正
+- T181逐项书目侧表已在阶段ZIP内；幂等记录脚本`work/search_protocol_v2/record_t181_dgrnet_refs_20261012.py`保存在本地ignored work目录中，并未打入ZIP。先前交接中“脚本也打包进ZIP”的表述不准确；此处更正。归档检验仍覆盖打包的784个源文件及manifest。
 
 ## 2026-10-10续：TechRxiv综述参考位置与#85全文核读
 - Scholar验证后复核FORGE精确题名查询，正常结果页显示无匹配；既有arXiv:2503.15867身份已覆盖该引文，不新增作品。SIDA Cited-by此前已完成225/225可见位置（23页），当前末页与台账一致，跳过重复页面。
@@ -1918,7 +1921,7 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 ## 2026-10-12续：DGR-Net官方书目筛查、XAGR来源复核（T181）
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T181数据提交：`f95ed01`（`Record T181 DGR-Net reference screen`）；origin为已确认的`https://github.com/brodyZhao/my-research-project.git`。用户此前授权推送当前检索分支。
-- DGR-Net（SSRN 7203638）官方references小组件显示39个位置。[1]–[27]和[29]–[39]共38条可识别书目已逐项主题筛查；[28]仅显示“T.-Y”，留作未决，不猜测题名。筛查侧表`T181_DGRNet_SSRN_39条参考逐项筛查_20261012.csv`与幂等脚本`work/search_protocol_v2/record_t181_dgrnet_refs_20261012.py`在本地ignored工作区，并打包进阶段ZIP。独立精确题名网页搜索未发现除SSRN外的可读正文。AOT-PixelNet来自[38]，仅有ScienceDirect摘要/索引片段，作为可解释图像真实性检测邻接，不是解释faithfulness直接证据；DGR-Net正文仍未读。
+- DGR-Net（SSRN 7203638）官方references小组件显示39个位置。[1]–[27]和[29]–[39]共38条可识别书目已逐项主题筛查；[28]仅显示“T.-Y”，留作未决，不猜测题名。筛查侧表`T181_DGRNet_SSRN_39条参考逐项筛查_20261012.csv`已打入阶段ZIP；幂等脚本`work/search_protocol_v2/record_t181_dgrnet_refs_20261012.py`保存在本地ignored work目录，没有打入ZIP（见上方归档说明更正）。独立精确题名网页搜索未发现除SSRN外的可读正文。AOT-PixelNet来自[38]，仅有ScienceDirect摘要/索引片段，作为可解释图像真实性检测邻接，不是解释faithfulness直接证据；DGR-Net正文仍未读。
 - XAGR访问复核：用户报告恢复后，我检查Chrome仍显示Cloudflare安全等待；SSRN摘要页可读，PDF路径进入账号/下载提示后回到题录页。另查到ResearchGate相同书目及摘要，但全文不可读，打开返回429。XAGR仍是摘要级，原来T161已完成的31条参考没有重复筛查。
 - 发现T173 Dombrowski filtered Cited-by路线已在既有主账完整登记39条，因此本轮没有重扫或重复增加该路线。
 - 当前台账计数：74=29,685个位置，90=944个候选题名，72=376项，172=315条效度核读，87=304条路线。统计单位不同，不能解释为强相关独立论文数或领域召回率。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含783个成员（782个来源文件+manifest），SHA-256=`dfdb2f42404ade6261d0a52c40e513f461de8c432a4046e7041b18b1c441bcd6`。
