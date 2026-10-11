@@ -2063,3 +2063,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过（计数、已知检查点、ZIP成员、CRC及源文件哈希）；`git -c core.whitespace=cr-at-eol diff --check`通过。复核发现并更正阶段报告中172表计数的单处笔误（345改为344），随后重打包并通过断言。
 - 遗留：整体英文检索和强相关引文图仍未完成；Scholar 当前验证状态没有新增可筛结果，不能宣称该路线覆盖完成。T205参考仅题名/主题初筛。T207《Multimodal Large Models for Image Tampering Detection and Explanation: From Detection to Reasoning》已确认官方元数据/摘要，但ACM全文仍受Cloudflare拦截，不能把摘要当全文效度核读；可在取得作者稿后继续。后续优先以90/72/172稳定身份去重，只追缺失的直接文献全文或尚未闭合的高信号引用边。
 - 建议下一步：若Scholar仍受限，先补T207的作者稿或正式公开全文并核实解释质量协议；否则从T11-F3-S4断点继续逐页筛，但不重扫已筛分页、不重读T182的XAGR及本阶段T205/T206。之后再核对候选与全文表的直接强相关分层，持续保留“已检查范围”与“未闭合范围”的边界。
+
+# 2026-10-12续：T208 Morelli主论文全文升级与82条参考逐项筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`67f1dd2`（Review Morelli thesis and 82 references）。已确认`origin`目标仓库；用户此前明确授权推送当前检索分支。本条HANDOFF更新待单独提交并推送。
+- T208复用既有唯一身份N0299 / `L-e514dcda6b00de`，把Morelli论文从T204执行摘要证据升级为POLITesi官方96页PDF的定向全文核读，不新增候选/排序/唯一作品身份，也不重刷原Scholar命中。核读聚焦数据和mask来源、BLIP caption生成、分类结果、BLEU/ROUGE/NV-Embed/LLM judge评价及限制。
+- 实质结论：20,000张图像只涵盖静态splicing；DIS100K mask可提供篡改区域空间位置，但被篡改对象caption由BLIP Large自动生成，没有证明是独立取证事实标注。Llama裁判把“两句都说被篡改、但对象说法不同”的score=1也算正确。因此论文有自动文本解释评价实验，但高分不等于对象识别正确、事实性、因果faithfulness或appropriate reliance；未见独立人评/评分者一致性、参数随机化、删除插入/反事实、claim事实核验。
+- 主论文Bibliography [1]-[82]全部逐位置题名/主题筛查，完整理由与身份复用在`T208_Morelli_Thesis_References82_逐条筛查_20261012.csv`，全文效度侧表在`T208_Morelli_Thesis_全文解释效度核读_20261012.csv`；二者及其哈希清单包含在阶段归档。82条中24条与执行摘要旧书目重合，复用其筛查结论但保留T208来源位置；没有因书目出现自动把通用背景文献升为新候选。TruFor复用已有身份并区分检测置信图与解释faithfulness。
+- 更新账本：74=30,235观察/书目/核验位置；90=961候选身份行；72=396优先项；172=344唯一作品效度核读行；87=355路线。变化为主账+83（1条全文升级观察+82条书目位置）及路线+2；候选/排序/全文核读数不增。行数口径不同，不能当作强相关独立文献数或召回率。
+- 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含823个来源文件及manifest（824个成员），SHA-256=`00b963cd23dcd1600af6dde08d83d967980ea4fa8fedbd6c760e39c4bb7d40c3`。验证：`python3 work/search_protocol_v2/record_t208_morelli_fullthesis_20261012.py`重复运行幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过82位置连续性、唯一性、台账计数、ZIP CRC与哈希；`git -c core.whitespace=cr-at-eol diff --check`通过。两个原有用户未跟踪文件保持未修改/未暂存。
+- 浏览器：当前Google Scholar标签`981694259`的查询`(deepfake OR "face forgery" OR "facial manipulation") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("explanation stability")`显示54个结果估数，但DOM仍停在“Please show you're not a robot”复选框。本轮未操作验证码。用户的“已恢复”对应SSRN恢复，不视为Scholar验证已解除。SSRN标签状态不一致，本轮未重复核读临时链接或重筛XAGR；沿用T182/T161既有记录。
+- 遗留：主题式与前后向引文网络仍未闭合，不能承诺全库零遗漏。下一步先继续未核的直接高优先作品T207《Multimodal Large Models for Image Tampering Detection and Explanation: From Detection to Reasoning》作者稿/全文访问核验；再处理rank 12锚点方法论文的正文缺口；Scholar分页只从实际恢复后的当前式断点继续，不重刷已有结果。另须继续把已完成身份/引文边在90/72/172/87中复用，避免重复工作。
