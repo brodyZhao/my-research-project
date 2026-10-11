@@ -24,7 +24,7 @@
 - ACL ForgeryTalker 官方全文此前已在172核读；当前回到其ACL 2026正式版确认人评为5名独立评审盲评100张随机测试图，Faithfulness/Helpfulness分别4.3/4.4（1–5分）；未报告评分者一致性/分数分布，helpfulness不等于适当依赖。既有作品身份复用，不新增篇数。
 - 当前统计：74=25,272个结果位置；90=708个去重题名；72=218项；172=102个唯一效度核读身份；87=196条路线。T12首页10位置不代表整条宽式闭合。阶段ZIP含631成员，SHA-256 `21fd4f21a6ae9eb5645064c4b773204b21d4bd962c4070934a964a640d5b16a7`。
 - 验证通过：`python3 -m compileall -q work/search_protocol_v2`；主账唯一ID/理由非空、候选题名/排序rank/核读身份/路线ID唯一；T30 18条与T31 10条均连续且逐项理由非空；阶段ZIP CRC与哈希；`git -c core.whitespace=cr-at-eol diff --check`。用户两个未跟踪文件未触碰。
-- 下一步：优先继续T31发现的Shopon et al.可靠性综述/框架原文及其参考链；同步从SSR​​N/TechRxiv直接主题综述中核对177条参考位置，先按90/72/172复用身份。T12其余宽式页暂不机械翻完；总体检索仍未结束，不声称零遗漏。ChatGPT Web先核对T31与T12路线状态再继续。
+- 下一步：优先继续T31发现的Shopon et al.可靠性综述/框架原文及其参考链；同步从SSRN/TechRxiv直接主题综述中核对177条参考位置，先按90/72/172复用身份。T12其余宽式页暂不机械翻完；总体检索仍未结束，不声称零遗漏。ChatGPT Web先核对T31与T12路线状态再继续。
 
 ---
 
@@ -532,13 +532,13 @@
 ## 2026-10-07 SSRN恢复核查与新的Scholar验证断点（重检未完成）
 
 - 仓库 `brodyZhao/my-research-project`，分支 `codex/forensic-explanation-literature`；索引提交 `c9830a42e31410a705125ef23c5b867b2f2d26bf` 已推送。此交接随后单独提交/推送，最终提交见 Git HEAD。用户两个未跟踪文件保留；仅索引/HANDOFF入Git，原稿/网页/outputs留本地。
-- 用户回复“SSRN已恢复”后实际核到SSR​​N6811534正常原页：Addressing the Shortcomings of Spatial-Domain Tools in Explaining Synthetic Image Detection Models；Aditi Ramaswamy、Hana Chockler；Posted2026-05-22、41页、DOI10.2139/ssrn.6811534。题录明确预印本，未核期刊出版。原摘要直接质疑空间后验可视化是否含真假分类决策信息，高度相关，升级为原页复核核心第6；没有把摘要批评推广为所有XAI无效。
+- 用户回复“SSRN已恢复”后实际核到SSRN6811534正常原页：Addressing the Shortcomings of Spatial-Domain Tools in Explaining Synthetic Image Detection Models；Aditi Ramaswamy、Hana Chockler；Posted2026-05-22、41页、DOI10.2139/ssrn.6811534。题录明确预印本，未核期刊出版。原摘要直接质疑空间后验可视化是否含真假分类决策信息，高度相关，升级为原页复核核心第6；没有把摘要批评推广为所有XAI无效。
 - 展开所有公开关联41参考位置，38CSV逐条初筛；这是SSRN关联题录列表，非已取得原稿参考表完整性核验。5 Cochran1977与32 Rosenthal1991没有题名，保留身份待核，不猜题名或加入论文计数；37题名截断待核。部分作者字段混入会议编辑者，保留原串并注明。现在EFR56另计，其他参考位置1179（原1138+41），非独立相关篇数/被引全文全部已读。
 - 原页下载控件名称为“PDF iconDownload This Paper”（DOM无空格）；正常下载等待20秒无文件，浏览器公开PDF入口新临时标签实际回题录，Web同一公开PDF URL403；Downloads定向查所见文件名未找到。不能记为全文已下载/方法已核；题录成功与PDF失败分别保存，正文实验、空间/频域度量和统计协议仍待核。本次无新SSRN验证码；不要再等待SSRN恢复。
 - Google Scholar新GS070完整题名查询真正显示“请进行人机身份验证”，footer=false、rows0，虽然摘要计数显示1；captcha=true，非零命中/终页。已异步请用户完成Google验证回复“学术已恢复”，当前尚无恢复回复。Scholar标签1 resumedScholar保留当前GS070挑战，实际URL不含年份/cites过滤；SSRN原页标签2 englishPrimary正常。临时SSRN PDF标签4已关闭，旧Drive下载标签3取句柄超时未能显式关闭，未再标handoff；不要据下载页存在宣称PDF成功。两有效标签已markHandoff。
 - 当前70原始route编号、69正常范围路线；1136原始观察排除误导航1后1135Scholar观察；10844逐位置日志不变=10819正常+25过滤。66可见终页、56无已观察分页/索引风险，13未决（含GS070当前阻挡）。核心62篇，英文61含迁移基础1/中文1，英文待核335、迁移候选221；候选7743含噪声，旧337本轮重匹配206。2109原页/主题录尝试历史记录不覆盖。27英文排序、38参考表、00/14/30/索引与ZIP已更新，仍标未完成，未进入方案/实验阶段。
-- 来源选择修复：enrich此前按文件名最后覆盖同URL，导致已恢复SSRN在04主目录仍显示历史安全阻挡。现在优先人工明确证据，再选成功题录；所有历史失败仍留15审计。旧阅读evidence_path可能指原始文本而非JSON对象，初次加载失败后已修复按raw_path匹配/仅有效JSON记录读取，兼容旧记录。修复后全流水线成功，SSR​​N当前恢复状态与历史阻挡同时保留的回归断言通过，62核心/EFR首位/GS070非终页/41参考SHA与CSV读回通过。python3 -m compileall -q work/literature_research_20261005、git diff --check通过；41件ZIP testzip及逐字节比较通过（9,527,213字节）。无模型修改，无模型运行测试。
-- 下一步只继续重检：用户恢复Google后先核GS070正常结果，记录题名版本/实际引用入口，再继续原稿与强相关引用链。SSR​​N正文没有取得，不要重跑旧新增脚本覆盖后来升级的阅读范围。流水线顺序仍export→build_research→enrich→build_checkpoint→build_term_coverage→build_english_focus→build_english_partition_audit→refresh_phase_index；输出公开主表去snippet后不能单独enrich。当前安全验证来自Google，与已恢复SSR​​N区分。
+- 来源选择修复：enrich此前按文件名最后覆盖同URL，导致已恢复SSRN在04主目录仍显示历史安全阻挡。现在优先人工明确证据，再选成功题录；所有历史失败仍留15审计。旧阅读evidence_path可能指原始文本而非JSON对象，初次加载失败后已修复按raw_path匹配/仅有效JSON记录读取，兼容旧记录。修复后全流水线成功，SSRN当前恢复状态与历史阻挡同时保留的回归断言通过，62核心/EFR首位/GS070非终页/41参考SHA与CSV读回通过。python3 -m compileall -q work/literature_research_20261005、git diff --check通过；41件ZIP testzip及逐字节比较通过（9,527,213字节）。无模型修改，无模型运行测试。
+- 下一步只继续重检：用户恢复Google后先核GS070正常结果，记录题名版本/实际引用入口，再继续原稿与强相关引用链。SSRN正文没有取得，不要重跑旧新增脚本覆盖后来升级的阅读范围。流水线顺序仍export→build_research→enrich→build_checkpoint→build_term_coverage→build_english_focus→build_english_partition_audit→refresh_phase_index；输出公开主表去snippet后不能单独enrich。当前安全验证来自Google，与已恢复SSRN区分。
 
 ## 2026-10-07 英文优先扩词、评价器与人类实验核查（重检未完成）
 
@@ -1928,3 +1928,17 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：`record_t181_dgrnet_refs_20261012.py`重复运行两次后7个源台账哈希不变；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过唯一性、39位置、#28未决和ZIP源文件哈希检查；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改。用户原有两个未跟踪文件未改动或暂存。
 - 遗留：DGR-Net正文与参考[28]未解决；XAGR和QuantVisualXAI完整论文仍待取得；其他高精度式与核心引文网络仍有开放项。全局检索未完成，不能承诺“没有遗漏”。
 - 建议ChatGPT Web下一步：不要重复T173的39条或XAGR的31条参考；沿87中未闭合且高信号的路线继续，先对照90/72/172复用作品身份，再只核新候选/缺失全文证据。若遇到作者/出版社可读的独立正文，优先补XAGR、DGR-Net及QuantVisualXAI的全文效度记录。
+
+## 2026-10-12续：ICCV低分辨率取证解释论文与T14医疗图像检索首屏（T183）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T183数据提交：`50a66457c80ad0e84a301eff304d266d1bd25f31`。`origin`为已确认的`https://github.com/brodyZhao/my-research-project.git`，用户此前已授权推送本分支。
+- T14-F2-S1查询式：`("medical image" OR "CT volume") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) (grounding) (forgery OR tampering OR fake OR authenticity OR forensics)`。Scholar估数约6,220；仅首屏20个位置完成逐项筛查，完整理由见74及`T183_T14-F2-S1_Page1_20条逐项筛查_20261012.csv`。该宽式噪声高且路线仍开放，不能以首屏结果外推全量覆盖。
+- 对Sharma等ICCVW 2025《Explainable AI-Generated Image Forensics: A Low-Resolution Perspective with Novel Artifact Taxonomy》官方CVF全文定向核读，逐项筛其参考文献47个位置（见`T183_LowResolutionForensics_References47_逐位置核查_20261012.csv`）。该文面向32×32生成图像鉴伪并产生伪影文本/可视解释；作者称缺少伪影标注解释基准，展示主要为定性样例。未报告独立解释真值、人评解释质量/评分者一致性、参数随机化、因果删除/插入/反事实或适当依赖评估，因此它是直接XAI应用论文，但没有验证解释可靠性。
+- 参考文献发现三处书目信息错配：[13]所列arXiv:2303.01815实际为神经外科微导管论文；[15]的arXiv:2310.01630实际为低温量子计算论文；[18]将AEROBLADE作者/题名与arXiv:2403.11181（电磁学论文）错配。更正识别出的真实AEROBLADE为Ricker等CVPR 2024、arXiv:2401.17879；它仅提供重建误差/修补定位的相邻方法线索，精确定位仍为未来工作。前两条目标引文身份仍未解决，未把错引编号对应作品当成所引目标。
+- 新增或更新5条定向全文效度记录：ICCVW低分辨率论文、CIFAKE、SynArtifact、AEROBLADE、Text Over Image。分别保留直接应用、伪影接地方法、重建误差图、合成医学图像多模态鲁棒性的边界；后四者均不构成通用图像篡改解释faithfulness的直接证据。CIFAKE/SynArtifact等现有身份按90/72/172去重。
+- 用户报告SSRN安全验证完成后，现有Chrome XAGR PDF标签可显示第13/16页，页脚摘要号为6929302；正文1–14页的定向核读和T161的31/31参考筛查均沿用既有记录，本次仅更新可访问状态，不重复计数。SSRN页面仍注明预印本未同行评审；此页显示不等于重新下载或逐页复核。
+- 当前计数：74=29,760个结果/书目/观察位置；90=947候选身份行；72=379项优先排序；172=320条全文/效度核读行；87=313条路线。各表统计单位不同，不能相加为强相关唯一文献数、总体召回率或零遗漏保证。T183路线仅新增T14首页20位置；强相关与方法邻接必须分层表述。
+- 主要交付：阶段报告`outputs/图像鉴伪解释可靠性_重检_2026-10-05/00_重检阶段报告_未完成.md`、主账74、候选90、优先表72、全文效度表172、路线87、哈希清单112、T183四张CSV侧表及`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`。归档含788个源文件和manifest（789个成员），SHA-256=`30292c63397c0b8ff1156c52d7de072449430c8bc829fa894fef80acee225dab`。未把SSRN短期签名下载URL写入记录。
+- 验证：T183录入脚本连续运行两次，五个计数稳定且幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`检查通过（20条Scholar位置、47条引用位置、5条效度核读、归档哈希）；`git -c core.whitespace=cr-at-eol diff --check`通过。两个既有用户未跟踪文件保持原样、未暂存。
+- 遗留：总体英文检索仍未完成；T14-F2-S1仅首页20/约6,220筛查。ICCVW引用[13]与[15]的实际目标仍不确定。参考表其他被判断低相关的书目仅做题名/主题级筛查，不代表通读各篇。不能声称“一个都不漏”。
+- 建议下一步：先从90/72/172复用身份，只延伸ICCVW直接候选及新增强邻接论文的引文链，优先补两条错配引用的规范题名/作者核实；避免重刷本轮47个已筛位置、T161的31条XAGR书目及已核读全文。T14宽式暂不机械翻页，另用英文相邻领域词（synthetic-media forensics、image-authenticity assessment、forensic grounding、explanation faithfulness/hallucination）建立更高信号的分面式后续查询。
