@@ -1741,3 +1741,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 主要修改文件：`00_重检阶段报告_未完成.md`、主账74、路线87、候选90、优先72、效度172、SHA清单112、阶段ZIP；T116/T117/T118等忽略文件已打入ZIP。两个原有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。临时脚本位于忽略的`work/search_protocol_v2/`。
 - 验证通过：`python3 work/search_protocol_v2/complete_t114_and_katiyar_chain_20261011.py`；`python3 work/search_protocol_v2/record_katiyar_scholar_anchor_20261011.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；自定义T116连续位置、T117/T118条数、主账ID/理由、90题名、72 rank、172身份、87路线、T115 DOI以及ZIP CRC/成员断言；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
 - 遗留：等待用户本人处理Katiyar的8篇Cited-by页面验证码；全局英文检索及其他未闭合高精度路线未完成，不能承诺零遗漏。下一步只在当前Scholar引用页正常显示8张卡后筛该链，复用已有身份；随后继续未完成路线和新的强种子引用链。
+
+## 2026-10-11续：复核Scholar正常页面并扩展ManipShield/综述引文
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`c6d9cca31f415aa822e71e5de5eb10a430cd9de7`；本交接文档随后单独提交。远端仍是已确认的 `origin`。
+- 用户指出没有看到Scholar验证页后，重新查看当前Chrome标签：ManipShield的Cited-by结果正常显示3张卡、没有reCAPTCHA。T127及主账74已逐条筛完3条当前可见结果；上一轮“当前页验证码阻断”的状态已纠正，不再作为此页面的断点。
+- 沿Scholar可见系统综述《Deepfake Detection Beyond Benchmark Accuracy: Generalization, Robustness, and Reproducibility》扩展参考文献筛选。375条书目中，逐条记录36个解释/XAI/归因/推理题名命中，另加3个正文§3.10.3显式引用；39个位置彼此不同，T128逐项给出主题决定和身份复用方式。其余336条未在本轮逐条筛查，因此此支链仍不完整，不代表该综述或全领域引文穷尽。
+- 新增/升级原稿边界：VIBA（arXiv:2501.16889，IDA 2026正式会议章）用于深伪视频解释稳定性及人类区域对齐；27段假视频上的人类对齐仅中等，且无因果faithfulness/appropriate-reliance终点。TriDF正式CVPR 2026版补录解释幻觉指标及外部LLM映射、人工伪迹taxonomy的构念边界。Deepfake Detective只作为SAE机制解释邻接；Diff-ID、Counterfactual Face Forgery、Faster-Than-Lies也只按已核主题分层，不将定位/差异图/攻击或语言说明误算成已验证解释忠实性。
+- 更新文件：阶段报告00、SHA清单112、效度核读172、优先表72、主账74、路线表87、候选表90和阶段ZIP；ZIP收入T127=3、T128=39两个忽略目录内侧表。两个已有用户未跟踪文件继续保持未修改、未暂存。
+- 当前表计数：主账28,152个结果/参考位置、835个唯一题名候选、280项优先记录、84项原页核心目录、208个原稿/摘要效度核读身份、265条检索路线。计数单位不同，不是强相关独立篇数，且全局检索仍未完成。
+- 验证通过：`python3 work/search_protocol_v2/record_manipshield_review_chain_20261011.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；T127/T128条数、内容非空及唯一性；阶段ZIP 725成员CRC和T127/T128成员断言；`git -c core.whitespace=cr-at-eol diff --check`。ZIP SHA-256为`1c353f240dcc20fc97cbd08c18d6566be2a059876e782e40bb5986bbdbdbc19a`。
+- 后续：继续尚未筛过的高精度英文路线与已识别强相关论文的差分引文链；对已经出现在90/72/172中的唯一论文身份直接复用筛选/核读结果。当前综述剩余336条书目位置未筛，Katiyar被引8条断点和其他路线分别记录在87，不因某个Scholar标签恢复而推定其他页面也恢复。不要宣称“零遗漏”或全领域检索已完成。
