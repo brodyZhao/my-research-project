@@ -1,3 +1,14 @@
+# 2026-10-12 T197–T198 官方来源核验与候选效度补记
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；文献数据提交：d7f63062b9d7b391de945ac81141041dbd903475；GitHub origin已确认；本交接更新需单独提交并推送。
+- T197沿既有TriDF→TRIDENT引文链复用候选唯一身份和rank 46。ACM MM 2026官方技术日程列出TRIDENT挑战报告，官方挑战页给出Image/Video/Audio分轨和任务；ACM日程摘要称21队注册、三轨99次提交，并指出检测准确率不保证解释证据接地。OpenReview索引可见Cover/CHAIR/F0.5的指标片段，但Chrome中OpenReview论坛/PDF仍被浏览器验证挡住；172所加记录明确标记为部分文本核读，不能当作全文审查。
+- T198核正rank 10《Explainability-Guided Deepfake Detection for High-Fidelity Facial Edits》版本/出版元数据：Springer页面为ICPR 2026、LNCS 16815、pp. 496–511，First Online 2026-08-03；卷版权年份显示2027，不应误作首次发表年。出版商摘要描述Side-VLM多视角面部编辑、像素级mask和CAM-mask对齐，全文受订阅限制；172仅登记摘要级证据，未核解释faithfulness量表和实验数值。此前其21条参考文献已在T21逐项筛查，本轮不重复。
+- 记录侧表：T197_TRIDENT_ACMMM2026_官方评测核验_20261012.csv；T198_SideVLM_Springer_ICPR2026_元数据与摘要效度核验_20261012.csv。当前计数：74=30,084个检索/引文观察位置；90=957候选身份行；72=392排序项；172=338条效度记录；87=342条路线。单位不同，不能相加为强相关独立作品总数或召回率。阶段ZIP有811个来源文件和1份manifest（812成员），SHA-256=31ee00ee81b9ff0b73cb5ba691650ccba10434f97cf52a37fa3d78f99a1de6bc。
+- 验证：T197、T198记录脚本分别可重复运行而不重复建行；python3 -m compileall -q work/search_protocol_v2通过；python3 work/search_protocol_v2/package_checkpoint_20261012.py通过全历史断言、唯一性、ZIP CRC与来源SHA校验；git -c core.whitespace=cr-at-eol diff --check通过。数据提交：d7f6306。
+- Chrome现场检查：T11-F3-S4稳定性窄式标签981694259仍实际显示reCAPTCHA，尚无Scholar结果卡，故仍为0筛选位置，不能把用户此前对其他站点/标签的“已恢复”记作此页已通关。ProtoExplorer Cited-by 22项已闭合；Side-VLM 21条参考也已闭合，后续勿重刷。根目录两个原有用户未跟踪文件保持未修改、未暂存。
+- 遗留：全局文献发现和引文网络仍开放，不声称零遗漏；T11-F3-S4从实际首页续查，或先按72排名继续核rank 11–14中官方可读来源；OpenReview/TRIDENT和Springer/Side-VLM的完整正文仍待取得。
+- 建议ChatGPT Web下一步：确认Scholar标签981694259是否已脱离reCAPTCHA；若仍受限，继续核既有优先表中尚未进入172且能读到正式全文的最高排名候选，按90/72/172先去重，不重刷已闭合参考链。
+
 # 2026-10-12 T196 X-AIGD正式出版身份核验与Scholar窄式启动
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T196数据提交：`b93c8c5`；`origin`为已确认GitHub仓库。用户此前已授权推送当前分支；本次交接更新待单独提交并推送。
