@@ -1774,3 +1774,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 遗留：Momin综述的42项纳入研究尚未逐篇差分；XFakeDetect及IDC假脸XAI身份/全文待核；更多未闭合英文高精度检索/引文链仍在，不能宣称零遗漏。下一步先从本轮新增直接XAI候选逐篇核身份与效度，所有旧身份按90/72/172复用，再继续未闭合检索。
 - ChatGPT Web下一步：T130侧表已记录当前Scholar快照所有33项，无需重刷；优先开Springer页`Towards Secure Media Deepfake Detection Using Explainable AI`核可见参考链中直接XAI工作，或继续Momin综述42篇纳入研究的身份差分。
 - 两个既有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`保持未修改、未暂存。
+
+## 2026-10-11续：Secure Media深伪XAI章节参考链逐位置筛查（T131）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`c4b844f`。本交接随后单独提交并推送到已确认的`origin`。
+- 用户指出未看到验证码后，重新核对当前Scholar页面：结果卡正常显示、没有reCAPTCHA；因此撤销“当前页验证阻塞”的误报。只据实际可见状态继续，不再要求用户重复验证。
+- Springer章节《Towards Secure Media Deepfake Detection Using Explainable AI》可见References [1]–[25]已25/25逐位置筛查，T131侧表记录题名、身份校正、每项理由、来源与复用身份，并同步主账74和路线87。闭合仅针对该章节可见25个书目位置，不等于25篇全文核读或全领域穷尽。
+- 发现章节参考表存在多个错误题录/DOI映射：#10 Kumar音频论文 DOI 应为10.4108/eai.28-4-2025.2357808；#12 Momin综述实际DOI为10.1016/j.imavis.2025.105738；#14 Cheng DOI实际指向Frontiers文章但章节列作者/期刊不符；#18动态原型论文为WACV 2021；#19 DOI落在WACV 2022 workshop；#20 Lim论文实际为Applied Sciences 12(8), 3926 (2022)；#24 Mathews同名作品实际为Complex & Intelligent Systems 9 (2023), 4425–4437, DOI 10.1007/s40747-022-00956-7；#25题录仍未能唯一核实。
+- 新确认7个作品身份并登记到90/72/172：Kumar音频XAI、Cheng法证语音XAI、Abir图像深伪LIME、Trinh动态原型、Lim语音XAI、Yoshii可解释视频深伪公平性、Mathews图像深伪Grad-CAM。Mansoor & Iliev已存在于90，只补入72/172。证据与任务边界均逐条标注；尤其Abir作者称LIME验证可靠性，但正文只给定性样例，没有独立伪造区域真值、因果faithfulness或用户验证；Mathews使用Grad-CAM样例图，未评解释可靠性。
+- 当前计数：74主账28,218个结果/书目位置；90为851个唯一规范题名；72有295项优先记录；172有223个唯一效度核读身份；87有267条路线。计数单位不同，不能解释成强相关独立篇数或完整全文数。
+- 阶段包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，728个成员（727个源文件和manifest），SHA-256 `786f67db36473305274a18f188ae881580f4e4ee768714ac35332fe885d00758`。T131逐位置侧表已收入包内；工作区忽略目录中的脚本可重复运行且不增行。
+- 验证通过：`python3 -m compileall -q work/search_protocol_v2`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（ZIP成员/CRC/源文件哈希校验）；T131 1–25连续位置、主账ID、候选/优先/效度身份唯一性和路线状态检查；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。两个既有用户未跟踪文件保持未改动/未暂存。
+- 遗留：Momin综述42项纳入研究还未逐篇做身份差分；XFakeDetect/IDC身份和正文仍待核；英文主题检索与多条引用路线仍未闭合，不能承诺“一个文献都不漏”。下一步优先对Momin综述42项作差分，并继续未闭合高精度英文检索；按90/72/172唯一身份复用既有核查，不重复T131位置。
