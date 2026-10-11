@@ -1,5 +1,16 @@
 # 2026-10-12 T184 检查点：EFR-REF012全文效度补核
+# 2026-10-12 T185 检查点：MGFFD-VLM 精确核验、引文簇与全文效度
 
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`2df01acf3968404b7c724618d5f320d37bea7ba4`。最新交接提交待本次更新后填写；remote `origin` 已配置并确认。
+- 沿EFR-REF004在Chrome中运行Scholar精确题名检索，确认`MGFFD-VLM: Multi-Granularity Prompt Learning for Face Forgery Detection with VLM`的arXiv:2507.12232v1身份及ACM Web Conference 2026/DOI元数据。此前90/72/172缺该身份，现已新增至90、72(rank 63.5)、172。
+- Scholar Cited-by簇显示4项（T185侧表逐项留档）：VERITAS和EFR复用已核身份；《A lightweight dual-branch spatial-frequency framework for joint deepfake detection and localization》新增为直接定位候选，但只核出版社摘要/Highlights，全文仍待取；《Employing Vision-Language Models for Face Image Quality Assessment》复用90身份并补官方arXiv全文。后者的受控退化真值评测揭示约49.1%的干净图被QWEN2.5-32B错误报为有退化，同时其文字/分数内部一致性仍可很高，是方法邻接，不是图像鉴伪实证。
+- MGFFD官方arXiv全文定向核读§§1–5：训练在可用时使用区域mask监督，报告检测与文本重叠指标；未见独立解释主张真值、人评/评分一致性、删除插入/因果faithfulness或适当依赖测试。将其列为直接任务方法，不把训练mask或BLEU/ROUGE类指标说成充分解释验证。
+- 主要更新文件：主账74（增加8条精确查询、4条施引和3篇源审位置）；候选90（新增MGFFD及DBDD两项并升级既有FIQA行）；排序72（新增3项，数值排名有序）；效度表172（新增3条）；路线87（新增5条）；两张T185逐项侧表；阶段报告00、SHA256清单112及ZIP。当前计数：74=29,768；90=949；72=382；172=324；87=318。计数口径不同，不能当独立强相关篇数或召回率。
+- 测试：T185记录脚本重复运行两次不增行；`python3 -m compileall -q work/search_protocol_v2`通过；更新后的`package_checkpoint_20261012.py`通过Scholar位置、五路线、三篇核读唯一身份、rank顺序、EFR 56项及T183/T184历史断言；`git -c core.whitespace=cr-at-eol diff --check`通过。阶段ZIP为792个成员（791个来源文件+manifest），SHA256=`096f3797a8c1f4224dc16ad6b1ee7194eec99804243c93018d0651f8a85a2a0d`。两个原有未跟踪文件保持未暂存。
+- 遗留：DBDD只有摘要证据，全文待取得；总体英文主题检索及跨库引文网络仍未闭合，不声称零遗漏。继续时跳过EFR 56个已筛位置、MGFFD四条已筛施引和本轮已核正文；从90/72中选择尚无172原文记录的直接强相关论文，先核作品身份与当前官方全文可读性。
+- 建议下一步：优先补MGFFD/VERITAS引文链中出现的直接论文全文缺口（如DBDD）；继续时先用90/72/172按题名、DOI和arXiv号去重。Scholar结果页快照4/4已筛，不重开同一页面。
+
+## 当前检查点
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`0ba071702cefd13e3b627ac2731f099269ecb8f2`。最新交接提交待本次更新后填写；remote `origin` 已确认，用户此前授权推送当前检索分支。
 - 本轮更正：EFR官方参考书目为56条，03和T14对照表均为56/56；旧表162有55行，差异是REF019 ROUGE，已在T14补录。修复候选90和排序72中残留的“55条”说明，不重筛这56个已完成位置。
 - 新增T184全文效度记录：EFR-REF012《Can ChatGPT Detect DeepFakes?》原文§§1–5指出部分真假判断正确但支持证据错误，并给出把真实人脸少见特征误解释为伪迹等定性案例。论文主体评价检测AUC/准确率/拒答率，没有独立解释真值、人评一致性、因果faithfulness或appropriate-reliance评测；该工作作为强相关问题动机，不误标成解释效度基准。该作品此前已在EFR引文链及M2F2-Det-REF-28登记，故未计作新发现。
