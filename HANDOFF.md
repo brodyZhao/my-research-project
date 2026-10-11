@@ -1,4 +1,15 @@
-﻿# 2026-10-12 T199–T202 DDL访问审计、RealOrRender报告全文与引文筛查
+﻿# 2026-10-12 T203–T204：恢复历史深伪解释候选并逐条审查Morelli执行摘要引文
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`e60ec0a`（Restore Morelli thesis and screen references）；origin为已确认的`https://github.com/brodyZhao/my-research-project.git`。用户此前明确授权继续检索并推送；HANDOFF更新另作提交，随后推送两个提交。
+- T203沿用历史R001 / `L-0ac29ee7ebca6a`恢复Pino 2019/20论文并把Alongi 2020/21更新为POLITesi官方摘要级；两篇正文均未核读。其身份/摘要/访问状态侧表为`T203_POLITesi_Pino与Alongi深伪解释学位论文身份与摘要核验_20261012.csv`。
+- T204不是新Scholar发现：Morelli的《Leveraging multimodal Large Language Models for explainable deepfake detection》早已记在历史目录N0299 / `L-e514dcda6b00de`，74已有6个Scholar结果位置，但没有进入现活跃候选/排序/效度表。这次复用原身份补入90/72/172，并读完POLITesi官方六页Executive Summary；主论文正文未读。该摘要展示20,000张静态图splicing任务，VLM零/少样本与LoRA微调、caption比较；解释评价结合BLEU/ROUGE、embedding阈值和Llama judge。篡改图“ground-truth captions”由BLIP Large动态生成，摘要未证实其经独立取证事实核验，也未说明LLM裁判标签来源/校准/评分一致性，未见因果faithfulness或appropriate reliance。不得把高caption评分写成解释可靠性证据。详细核读表：`T204_Morelli_ExecutiveSummary_全文核读_20261012.csv`。
+- Morelli执行摘要References [1]–[24]已24/24逐项题名/主题筛查；侧表`T204_Morelli_ExecutiveSummary_References24_逐条筛查_20261012.csv`。它只闭合六页执行摘要显示的书目位置，不代表主论文参考文献或24篇被引作品已全文审查。优先标注了Doshi-Velez & Kim、Rudin和SHAP/LIME/LRP为一般XAI方法邻接；未当作鉴伪实证。原书目把《Attention Is All You Need》年份列作2023，筛查表保留差异并标出规范年份2017。
+- 更新后台账：74=30,113个结果/书目/核验位置（其中Scholar旧命中6条复用，没有新增Scholar结果）；90=961候选身份行；72=396排序项；172=343条摘要/全文效度核读；87=350条路线。计数口径不同，不可相加为独立强相关论文数、召回率或“零遗漏”。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`有818个来源文件+manifest（819成员），SHA-256=`1f0939cd78540aa660fb2e9db93ae823696240c73eacdbd0eb8762784e3f7b23`。
+- 验证：`record_t204_morelli_20261012.py`重复运行，计数稳定且无重复候选/书目位置；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过本阶段和全历史唯一性、计数、24条连续参考位置、ZIP CRC/源文件SHA校验；CRLF-aware `git diff --check`通过。未修改业务源码。根目录两个既有用户未跟踪文件未修改/暂存。
+- 当前未闭合：Google Scholar标签981694259现场仍显示reCAPTCHA；不要重复要求用户处理，继续做不依赖该标签的候选审查。Morelli主论文PDF由官方列为可公开但本轮未读。整体检索/引文网络保持开放，不承诺全领域零遗漏。下一步先从72优先排名中筛“未进入172、且没有已完成References/Cited-by路线”的直接相关候选，避免重复既有链；可访问时核读其全文/书目，随后再核Morelli主论文能否取得。
+- ChatGPT Web建议：先差分72与172/87，选尚未闭合且有可读原文的高相关作品；T201 BSI报告87条、T194 EFR引文36条、T185 MGFFD引文4条、T204 Morelli执行摘要24条，以及Pino/Alongi历史身份不要重刷。
+
+# 2026-10-12 T199–T202 DDL访问审计、RealOrRender报告全文与引文筛查
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮数据提交：`bbdf34a97aaf7c4785b1c423472c25b371e50f6e`；`origin`已确认是`https://github.com/brodyZhao/my-research-project.git`，此前用户明确授权继续检索并推送；本轮数据和交接提交待推送。
 - T199 DDL摘要与全文访问审计现已随数据提交。复用rank 11与已筛的21条Scholar被引、52条IEEE参考；IEEE当前验证阻挡、作者稿未取得，仅保留摘要/既有引言片段证据，不称全文核读完成。
