@@ -1,3 +1,14 @@
+# 2026-10-12 T196 X-AIGD正式出版身份核验与Scholar窄式启动
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T196数据提交：`b93c8c5`；`origin`为已确认GitHub仓库。用户此前已授权推送当前分支；本次交接更新待单独提交并推送。
+- ICLR官方proceedings确认《Unveiling Perceptual Artifacts: A Fine-Grained Benchmark for Interpretable AI-Generated Image Detection》为ICLR 2026正式论文，并公开列出作者。题名、作者首位与arXiv:2601.19430v1相符；只修正90/72/172的既有身份元数据，复用rank 5和已完成全文效度核读，不创建重复论文。证据侧表：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T196_XAIGD_ICLR2026_元数据版本核验_20261012.csv`。
+- 实际启动此前未执行的Scholar路线T11-F3-S4：`(deepfake OR "face forgery" OR "facial manipulation") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("explanation stability")`。Chrome页眉估算约54条，但页面在首个结果卡出现前显示reCAPTCHA；有效结果页=0、筛查位置=0。已请求用户本人恢复验证；断点为首页，路线未完成，不能把估数说成结果数。
+- 计数：74=30,084个实际结果/引文观察位置；90=957候选身份行；72=392排序项；172=336条全文/摘要效度记录；87=340条路线。T196不增加候选或全文核读数。阶段ZIP含809个来源文件+manifest（810项），SHA-256=`b7eb59779a2f1a0f7910325bcbd70cf9a8bc00db1e6bdbea7d87ef520fe947cd`。这些统计口径不同，不等于独立强相关篇数或领域召回率。
+- 本阶段文件：`00_重检阶段报告_未完成.md`、`72`、`87`、`90`、`172`、`112`、T196元数据侧表和2026-10-12阶段ZIP。根目录两个既有用户未跟踪文件未暂存、未修改。
+- 验证：T196记录脚本重复运行两次，未重复追加路由或元数据；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过全历史断言、表唯一性、ZIP CRC与源文件哈希；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。数据提交：`b93c8c5`。
+- 遗留：全局文献检索及引用网络仍未闭合；不承诺零遗漏。下一步在用户完成当前新开Scholar查询标签的人机验证后，从T11-F3-S4首页逐项筛查并交叉90/72/172；如用户尚未回复，可继续审核TRIDENT等已有待核强相关条目。ProtoExplorer 22项Cited-by此前已闭合，不再重筛。`From Pixels to Semantics`的ACM原文页返回403，作者GitHub只提供代码/基准说明，正文尚未核到。
+- ChatGPT Web下一步：先查看T11-F3-S4标签是否实际显示Scholar结果；若正常，从首页开始并逐条去重留理由；若仍是挑战页，继续审查现有可读官方全文候选，不要重复旧页。
+
 # 2026-10-12续：T195 VeriChain参考文献链逐位置筛查
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`245f033eb4ac83c3e61f2490e232bffcb0b5961d`；origin为已确认的GitHub仓库，用户此前授权推送当前分支。本交接文件待单独提交并推送。
