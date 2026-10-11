@@ -1,4 +1,14 @@
+# 2026-10-12 T184 检查点：EFR-REF012全文效度补核
 
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`0ba071702cefd13e3b627ac2731f099269ecb8f2`。最新交接提交待本次更新后填写；remote `origin` 已确认，用户此前授权推送当前检索分支。
+- 本轮更正：EFR官方参考书目为56条，03和T14对照表均为56/56；旧表162有55行，差异是REF019 ROUGE，已在T14补录。修复候选90和排序72中残留的“55条”说明，不重筛这56个已完成位置。
+- 新增T184全文效度记录：EFR-REF012《Can ChatGPT Detect DeepFakes?》原文§§1–5指出部分真假判断正确但支持证据错误，并给出把真实人脸少见特征误解释为伪迹等定性案例。论文主体评价检测AUC/准确率/拒答率，没有独立解释真值、人评一致性、因果faithfulness或appropriate-reliance评测；该工作作为强相关问题动机，不误标成解释效度基准。该作品此前已在EFR引文链及M2F2-Det-REF-28登记，故未计作新发现。
+- 更新文件：阶段报告00、候选表90、优先表72、全文效度表172、T184单篇核读侧表、112 SHA256清单和阶段ZIP。当前账本：74=29,760位置；90=947候选身份行；72=379项；172=321条核读；87=313路线。不同单位不可相加为强相关论文篇数或召回率。
+- 检查命令：`python3 work/search_protocol_v2/record_t184_efr_ref012_fulltext_20261012.py` 连续两次运行，记录不增长；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过（EFR 56条连续位置、T184唯一身份、T183历史记录与归档哈希）；`git -c core.whitespace=cr-at-eol diff --check`通过。阶段包SHA-256=`bbad8e44fe81ae853bcad45544ea92c5ce5fce6defe4cfe2bd8bb11817db3522`，790个ZIP成员（789个来源文件与manifest）。本次只提交上述研究产物；两个用户原有未跟踪文件保持未暂存。
+- 遗留：总体英文检索及引文网络仍未闭合；不承诺零遗漏。继续时跳过EFR已完成的56个参考位置、该论文已核部分和历史Scholar分页；优先从90/72中找尚未出现在172的强相关作品，补真实缺失的原文效度证据，再从未闭合高信号检索式推进。
+- 建议ChatGPT Web下一步：对照90/72/172，选取一篇直接图像鉴伪解释候选中尚无172记录、且可读官方全文的论文；精确题名/arXiv号先去重，再只记录新增全文证据。可从MGFFD-VLM等缺全文条目中选择，不重刷EFR链。
+
+## 当前检查点
 ## 当前检查点
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T182数据提交：`292378b`（本交接更新单独提交，最终HEAD以`git rev-parse HEAD`为准）；origin仍为已确认的GitHub仓库。
 - T182重开后查阅已恢复的Google Scholar精确引文簇`cites=6092952475222118796`：页面显示1条施引结果《Research on an Excessive Artist Style Mimicry Detection Algorithm for AI-Generated Artworks》。该作此前已在74以`V2E-T02-F3-S5-P10-02`排除为AI艺术家风格模仿/版权检测，本轮只登记一条引文边、复用旧筛选，不新增作品身份。范围只限当日此Scholar页面快照，不表示完整引文图。
