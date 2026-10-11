@@ -1901,3 +1901,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：全部 6 个本地 Markdown 链接存在；`git -c core.whitespace=cr-at-eol diff --check -- literature/forensic-explanation-benchmark-review-feasibility-20261011.md` 通过；范围快照的四个 SHA-256 与当前四张台账相符；必审近邻名词覆盖检查通过。文档改动无运行代码，故不适用 import、compileall 或张量 shape 测试。其他并行修改的台账、ZIP 以及两个既有未跟踪文件未纳入本次提交。
 - 遗留问题：V2.1 检索路线仍有开放项，不能宣称零遗漏或系统综述级召回；上述仅摘要论文的具体方法与指标仍待全文确认；实验中的源图恢复正对照曾出现反常方向，不能据现有试点宣称解释忠实或不忠实。下一步先补核心付费论文全文和开放路线，再按综述第 10 节验证配准、编辑效度与同面积匹配控制。
 - 建议 ChatGPT Web 下一步检查：针对 EFR、FORGE、Hopf、Side-VLM、DDL 和 Wiley 比较论文复核新颖性边界，尤其避免把“第一次评测解释可靠性”写进开题；对本综述第 10 节的操作性定义作方法评审，并检查潜在摘要级论文的全文是否已公开。
+
+## 2026-10-11续：DiffGradCAM参考链与解释操纵方法核查（T172）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点：`e3ed8cc`（`Audit DiffGradCAM references and explanation reliability`）；remote：`origin`。此前用户已授权推送该检索分支。
+- Google Scholar恢复后确认TQE Cited-by 49/49在T164已有逐条记录，复用旧位置，不重复筛选。沿T171发现的DiffGradCAM检查官方arXiv v4参考书目[1]–[29]；29个书目位置全部逐项记录到主账74和侧表`T172_DiffGradCAM_OfficialReferences29_逐位置筛查_20261011.csv`。Human-Aided Saliency、HiResCAM和Model Focus复用T170已有作品身份。该29/29闭合仅针对当前官方书目列表，不代表其所有参考文献均已全文审读。
+- 全文核读两篇新的强方法邻接：Dombrowski等NeurIPS 2019以输入微扰操纵解释图而近似保持模型输出；Heo等NeurIPS 2019通过模型微调实现passive/active explanation fooling，以FSR量化。两者均提供可迁移的解释鲁棒性压力测试方法，但不是图像伪造鉴伪研究。Schöttl等2022 CAM fostering因出版社摘要明确提出CAM interpretability measures，新增为较低优先方法线索；目前只核官方摘要，具体指标和结果待读PDF。
+- DiffGradCAM arXiv v4全文已核，和CVPR 2026 Findings版本按arXiv身份合并。研究在七类iris PAD及ImageNet上用SHAM测试CAM对抗操纵；干净模型对标准GradCAM的MSE是地图相似度，不是独立真值，跨清洁/攻击模型的地图MSE只衡量指定SHAM威胁下的易感性。结果跨架构并非一致由同一方法领先；作者明确提出后续做人类研究。PAD属于生物呈现攻击检测，不能与数字图像编辑/篡改鉴伪混为一类。此链未发现新的直接图像篡改解释faithfulness实证。
+- 更新账本：74主位置29,529；90候选926个规范化唯一标题；72排序357项；172效度核读295项；87路线293条。这些是不同统计单位，不代表直接强相关唯一论文数或全量全文阅读数。阶段ZIP为`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，772成员（771来源文件+manifest），SHA-256=`e6ab7a57674364059546f5854fbd274a49610b644d2d0c86107ab965911b5ebb`。
+- 验证：T170各来源书目连续49/46/40且共135项；T171 11/11、T172 29/29连续，逐项理由非空；74结果ID、90标题、172题名、87路线ID唯一；T170/T171及T172记录脚本运行幂等（T172第二次新增主账0行）；`python3 -m compileall -q work/search_protocol_v2`、`python3 work/search_protocol_v2/package_checkpoint_20261010.py`、`git -c core.whitespace=cr-at-eol diff --check`通过。用户原有两个未跟踪文件未触碰、未暂存。
+- 遗留：Schöttl全文待取；Notre Dame 2026 dissertation仍只有Scholar片段；整体英文检索与高相关引文网络未完成，不作“零遗漏”声明。下一步先核Schöttl开放PDF具体指标，再从T172发现的输入/模型操纵方法补查图像取证场景中的对应验证研究；按90/72/172唯一身份复用，不重刷TQE 49条或T170/T171/T172已完成位置。
+- 建议 ChatGPT Web 下一步：确认分支含`e3ed8cc`并检查T172表；如果补查操纵方法的Cited-by列表，先用论文规范题名与90/72/172去重，只保留新身份和缺失全文证据。
