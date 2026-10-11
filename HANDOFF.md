@@ -1879,3 +1879,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 数据提交同步更新00阶段报告、112哈希清单、74位置主账、90候选、72排序、172效度核读、87路线和阶段ZIP，并加入逐条侧表与可复跑脚本。当前计数：74=29,337个位置；90=912唯一候选题名；72=343排序身份；172=281效度记录；87=287路线。ZIP含767成员（766源文件+清单），SHA-256=`232cf28e90fefc5829adf970e10828da200380f37031d8ea62cce5e8ab57c4b6`。
 - 验证：`python3 work/search_protocol_v2/record_t168_quantvisualxai_refs_20261011.py`重复运行幂等（第二次新增主账0行）；`python3 -m compileall -q work/search_protocol_v2`通过；T168位置1–23连续且逐项理由非空；全账ID及90/72/172唯一身份断言通过；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`成功重建767成员归档并验证CRC/源文件哈希；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。未修改业务源码。两个既有用户未跟踪文件保持原样、未暂存。
 - 遗留：SIBGRAPI种子论文完整PDF仍不可读；Anchors、Malolan全文证据缺口仍待补；其他宽式和引文链仍开放，不作“零遗漏”承诺。下一步从新核读的Crum论文Google Scholar Cited-by路线检查新引文身份，并优先补Anchors/Malolan原文缺口；先按74/90/72/172去重，TQE 49条、TQE参考38条、T168的23条都不重刷。
+
+
+## 2026-10-11续：Crum前向引文17条与合成脸显著性邻接论文（T169）
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；检索数据提交：`092c2e5`（`Record Crum citation screening and saliency studies`），已推送至已确认的`origin`。本HANDOFF更新需另行提交并推送。
+- Google Scholar《Explain To Me: Salience-Based Explainability for Synthetic Face Detection Models》页面显示Cited by 17；第一页10条、第二页7条均已逐条筛查，侧表为`T169_Crum_CitedBy17_逐位置筛查_20261011.csv`，主账74与路线87记录同一快照。TQE的49条被引及T168的23条参考没有重复筛查。
+- Cited-by第15项《Quantitative Analysis of Visual XAI for Multiclass DeepFake Detection Based on CNN》精确匹配T168既有直接候选身份，按旧记录复用；第16项Crum学位论文题名复用74既有位置。新增三篇全文核读的强方法邻接研究：MENTOR（2023/2025版本，synthetic-face detection与CAM熵代理）、Grains of Saliency（2024，合成脸显著图训练/粒度/泛化）和SAGE（2025，合成脸检测及显著图反转sanity-check）。三者不是局部篡改解释忠实性的直接证明；各自的结果与效度限制已写入90/72/172。
+- 本快照结论：17/17个被引位置都有独立筛选记录；1篇直接论文身份复用，新增3篇强方法邻接全文核读，新增直接的局部图像伪造解释faithfulness实证为0；其余13个位置保留逐条范围判定。仅对Google Scholar在2026-10-11捕获的17条清单闭合，不代表完整引文网络或领域穷尽。
+- 当前账本计数：74=29,354个位置/观察行；90=915个唯一候选题名；72=346个优先身份；172=284个全文/效度记录；87=288条路线。统计口径不同，不是强相关独立论文数或全量审读篇数。阶段ZIP含769个成员（768源文件+manifest），SHA-256=`467582bc2f4e603239b4aebd9f114592424cfad007db2fdb172a613b021a4f48`。
+- 验证：`python3 work/search_protocol_v2/record_t169_crum_citedby_20261011.py`重复运行幂等，第二次主账新增0；`python3 -m compileall -q work/search_protocol_v2`通过；T169位置1–17连续、逐项理由非空、主账ID唯一，三篇新增论文在90/72/172均唯一；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`通过ZIP成员、CRC和源文件哈希；`git -c core.whitespace=cr-at-eol diff --check`通过。未修改业务源码；原有两个用户未跟踪文件保持原样、未暂存。
+- 遗留：整体检索和强相关引用链仍未结束，不能承诺零遗漏。下一步按90/72/172差分MENTOR、Grains和SAGE的参考文献，重点核对尚未入账的synthetic-face saliency/XAI研究（包括CYBORG、Human-aided saliency maps、Model Focus及Teaching AI to Teach）；仅筛新增书目位置/作品身份，不重筛TQE或T168已闭合位置。
+- 建议ChatGPT Web下一步：从上述三篇原文参考表提取强相关saliency/synthetic-face研究标题，先做规范题名差分，再逐项补录新身份；继续保留“方法邻接”与“解释可靠性直接证据”的区别。
