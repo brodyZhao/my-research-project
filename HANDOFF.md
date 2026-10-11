@@ -1,4 +1,14 @@
-﻿# 2026-10-12 T213–T214：XPlainVerse全文/70条引文筛查与深伪人类依赖全文核读
+﻿# 2026-10-12续：T215 Seeing Before Reasoning / ExplainFake-Bench全文效度核读
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T215数据提交`2a6f56a`已推送到已确认的`origin https://github.com/brodyZhao/my-research-project.git`。本条HANDOFF按仓库约定单独提交并推送。
+- T215复用90/72既有rank 55唯一身份；不新增论文候选、排序身份或Scholar命中。核读官方arXiv v1的研究问题、方法/数据、ExplainFake-Bench结果、结论及附录E.2–E.3。官方OpenReview索引将该题名标为“Published as a conference paper at ICLR 2026”；camera-ready PDF链接已定位，但网页返回browser-verification challenge，因此没有声称已核读最终出版稿。既有65条参考位置及Scholar结果身份全部复用、不重筛。
+- ExplainFake-Bench从Chameleon与GenImage++各随机抽取400张生成图，共800张，随机分配提示措辞；GPT-4o接收图像、真值标签和模型解释，按correctness、specificity、logical consistency、factual accuracy、instruction following五维1–5分评价。Forensic-Chat两阶段结果分别为4.5363、3.9461、4.4048、3.8158、4.4236，平均4.2253。保留为直接强相关的外部解释输出质量评测，不称作因果faithfulness验证。
+- 主要效度限制：样本全为生成图、无真实图样本；仅报告GPT-4o裁判，未报告专家校准、评分者间一致性或重复评分稳定性；误判会将各解释维度压到≤2，检测正确性与解释分数混杂。裁判同时看到图像与标签，提供了比纯文本相似度更直接的视觉一致性检查，但没有独立伪影/篡改区域真值，也未检验解释证据是否因果驱动模型判决。未报告删除/插入、反事实、参数随机化或适当依赖评估。训练对话种子由Gemini-2.5-Pro生成；核读范围未找到独立事实审计。
+- 详细证据在`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T215_SeeingBeforeReasoning_ExplainFakeBench_全文效度核读_20261012.csv`，并已合并至172、更新72/74/87/90、阶段报告00、SHA清单112和阶段ZIP。当前计数：74=30,327条观察位置；90=963候选身份；72=398项排序；172=349条效度核读；87=362条路线。阶段ZIP含832个源文件和manifest（833成员），SHA-256=`e8ba9c2def7c1399afc79a8ab0c30627f78761329cc96196ab2bcf0383de552a`。这些是不同统计单位，不代表独立强相关论文数、全领域召回率或零遗漏。
+- 验证：T215幂等录入脚本连续运行两次；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过历史断言、唯一性、计数、ZIP CRC与源文件哈希；`git -c core.whitespace=cr-at-eol diff --check`及暂存差异检查通过。未改业务源码。根目录原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未修改或暂存。录入脚本在忽略目录`work/search_protocol_v2/`，未加入交付包。
+- 遗留：整体英文检索与强相关前后向引文网络仍开放，不承诺零遗漏。T215最终出版PDF未直接核读；Google Scholar当前仍按最近一次Chrome检查显示自动验证页，本轮没有新增Scholar结果。后续先沿现有未闭合高精度引文路线补新身份/论文全文，复用已处理位置；若OpenReview页面恢复，再对照camera-ready的ExplainFake-Bench协议与arXiv v1有无实质变化。
+
+# 2026-10-12 T213–T214：XPlainVerse全文/70条引文筛查与深伪人类依赖全文核读
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T213数据提交`1140d92a14e378946b1fddcbbf913f5c6a8310d5`、T214最新数据提交`780b18afdddbd91a26c0dcf0d0595b4ba21c39b1`，均已推送到已确认的`origin`。交接文件更新需单独提交并推送。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含831个来源文件+manifest（832项），SHA-256=`49c2d6afe3dff26e23b729f5d019d3fd7c2991e63b1026d9b22f4418804ae921`。
 - T213复用XPlainVerse rank 75既有身份，核读官方arXiv v1完整50页正文与附录；官方References [1]–[70]逐位置题录/主题筛查并与现有身份表交叉核验。70是书目位置初筛，不是70篇全文阅读；未发现新强相关身份。全文记录于`T213_XPlainVerse_arXivv1_全文解释效度核读_20261012.csv`和`T213_XPlainVerse_References70_逐位置相关性与身份复用筛查_20261012.csv`。
