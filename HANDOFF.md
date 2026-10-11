@@ -1841,3 +1841,17 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：记录脚本重复运行后新主账行0（幂等）；`python3 -m compileall -q work/search_protocol_v2`通过；自定义检查确认五个侧表41行、筛选理由非空、主账ID唯一、路线位置数相符、Qasim综述唯一身份未重复；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`通过（ZIP成员/CRC/源哈希）；`git -c core.whitespace=cr-at-eol diff --check`通过。
 - 遗留：主题检索仍未完成，不能声称零遗漏；T149/T150宽式只筛首页并明确未闭合；Qasim & Obaid综述全文与40余项纳入工作/参考文献清单仍需拿到原文后差分；优先继续未检的高精度图像伪造/真实性解释faithfulness、grounding、consistency交叉式和强相关候选尚未闭合的引用边。每次按90/72/172复用身份，已筛位置不重复。
 - 建议ChatGPT Web下一步：先找Qasim & Obaid综述合法可读的作者/会议全文入口，提取纳入研究清单后与90/72/172差分；同时从87选择未检的高精度图像取证解释效度交叉式。若Scholar出现验证，按当页实际可见情况处理；不重刷T148已完成的位置或重读Trustworthy论文/26条参考。
+
+
+## 2026-10-11续：XAGR参考文献审计与非deepfake宽式增量检查（T161–T162）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`bd23513`（`Log XAGR audit and expanded image forensic search`）。本交接将另行提交；目标remote仍为已确认的`origin`。
+- 用户恢复了XAGR的SSRN安全检查。T161已对官方页显示的31条参考逐项筛查，逐条表为`T161_XAGR_31条参考文献逐位置主题筛查_20261011.csv`，收入阶段ZIP并反映到74/87/90/72/172。Bharati、Mathews、Malolan、Pino、Trinh、DFP-Net、Dong、Mansoor、Xu、Silva、Tsigos等直接深伪解释文献都复用已有作品身份；[8]/[16]及[12]/[31]是重复书目位置；[29]题名与作者/期刊/年份疑似错配，[13]题名被截断。参考列表位置完成筛查不等于逐篇阅读31篇引文。
+- XAGR官方摘要记录了Celeb-DF(v2)上的Saliency/Grad-CAM对齐误差下降，但官方PDF在当前内联浏览器未显示可读正文。它仍是预印本摘要级候选；解释器一致性不能直接推出独立伪造区域真值对齐或因果faithfulness。其引文[15]新增Springer《Comparative Evaluation of Explainable AI Techniques for Deep Learning in Image Recognition》作为跨域视觉XAI方法邻接（clarity/completeness/trustworthiness摘要）；非鉴伪直接证据，完整章节未读。
+- T162 Scholar式为`("image manipulation" OR "image tampering" OR "image splicing" OR "copy-move forgery") ("explanation faithfulness" OR "explanation fidelity" OR "explanation evaluation" OR "human evaluation")`。逐项筛查第1–6页60个位置，见T162侧表和74；访问期间估数在约904–926变化。六页没有新增直接作品身份；直接命中均已在其他查询/引文路线登记，编辑任务和非图像取证误命中逐项标注。为避免机械筛重复结果，本查询在零新增身份处按增量饱和暂停，87明确保持`coverage_complete=False`，不能说约900条结果已全量筛完。
+- 这轮补上FakeReasoning已在候选90/排序72但漏在效度表172的缺项。arXiv v4全文报告120K图/378K推理标注；标注审计抽查2000图约7.8K条，由外部专家复核，agreement 94.87%；每个测试集100张真实标签与预测都为fake的样本由文中所称human experts按5级评理由合理性，均分4.19；100轮重复检测的不一致率均值0.80%。论文没有给评审人数和评分一致性，且这些结果不等于解释因果忠实性或appropriate reliance。原文：https://arxiv.org/html/2503.21210。
+- 最新账本口径：74主账29,096个位置/观察行；90候选902个唯一题名；72排序335项；172效度核读276项；87路线281条。不是强相关独立论文数、完成审读数或召回率。阶段ZIP为`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，含759个成员（758个来源文件及manifest），SHA-256=`0382a7f7f707498dcf66b4d3d56ffd0502d63f17fb01a6c5c34b73435132e571`。
+- 主要交付修改：阶段报告00、清单112、效度表172、排序表72、主账74、路线表87、候选表90和阶段ZIP；T161/T162逐项侧表及可重跑脚本在本地ignored输出/工作目录，并已打入ZIP。未改业务源码。两个既有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
+- 验证：四个T161/T162记录脚本重复运行后主账新增0；`python3 -m compileall -q work/search_protocol_v2`通过；T162 60位置连续、ID唯一、理由非空并全部匹配主账，FakeReasoning效度身份唯一、XAGR附注无重复；阶段包759成员、CRC校验通过；`git -c core.whitespace=cr-at-eol diff --check`通过。
+- 遗留与后续：整体英文检索和强相关论文引文链仍未完成，不能作“零遗漏”承诺。T162宽式仅筛60/约900余估算结果，按饱和规则暂停；如将来要求补全该特定查询，断点为start=60。更优先的是沿未闭合的直接图像鉴伪faithfulness/grounding/consistency细式和强相关种子的未核参考/被引链补漏，只核新身份或缺失证据，避免复读已筛位置。
+- 建议ChatGPT Web下一步：检查当前分支和ZIP哈希；从87中选一个此前未做的高精度英文式或强核心论文引文链继续，并复用90/72/172唯一作品身份；不要把T162的前60位置报告成完整召回。
