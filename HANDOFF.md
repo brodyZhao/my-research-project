@@ -1,3 +1,13 @@
+# 2026-10-12续：T194 Evidence-Guided引文链逐位置筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T194数据提交：`ce062d5`；origin为已确认GitHub仓库，用户此前授权推送本分支。此次交接文件待单独提交。
+- 对《Evidence-Guided Detection, Localization and Explanation for Text-Centric Image Forensics》（arXiv:2609.02097v1）官方arXiv HTML列出的36条参考文献逐条做题录/主题筛查；侧表`T194_EvidenceGuided_References36_逐位置主题筛查_20261012.csv`保留位置、题名、主题分类、筛查理由和已有身份复用状态。该工作仅为36条的题录级筛查，不是36篇全文核读。
+- 其中6篇是直接鉴伪解释/推理作品：SIDA、ForgeryGPT、VeriChain、ForgerySleuth、From Pixels to Semantics/TVSIP、FakeShield，均复用90候选表里的既有唯一身份，不重复建篇。VeriChain的全文仍待取得；TVSIP本轮ACM页返回403，全文未核。其余书目位置逐条归为取证检测/定位方法、数据集、通用模型/工具或指标；没有把“trustworthy”标题或像素定位监督本身计作解释可靠性证据。
+- T194新增36个74观察位置和1条87路线；90候选、72优先项、172全文核读均不新增。更新后计数：74=30,057个位置；90=957个候选身份行；72=391项；172=336篇核读记录；87=338条路线。统计单位不可相加为独立强相关篇数或召回率。阶段ZIP含807个来源文件及1份manifest（共808成员），SHA-256=`4af480820d8ae96b0bb143a1b8d4566a2f8619e316772571835bf85fa41873f9`。
+- 验证：T194记录脚本幂等运行两次，结果不增长；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过全历史断言、36个连续参考位置和归档逐文件哈希验证；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。T194数据提交为`ce062d5`；`git add`最初因`.git/index.lock`权限被拒，按项目规则使用已授权的仓库写入流程后成功。两个用户原有未跟踪文件未暂存、未修改。
+- 遗留：总体检索/引文网络未闭合，不承诺零遗漏。Chrome中的一个Google Scholar Cited-by标签仍实际显示reCAPTCHA；用户最近回复“已恢复”对应的是SSRN Cloudflare/PDF，不代表Scholar状态已恢复。当前可读的`forensic "explanation faithfulness"`偏移页此前已在74逐条登记，避免重筛。下一步优先查找VeriChain作者公开全文；若继续Scholar，先仅从真实可读且74无记录的偏移/新式推进，并维持90/72/172唯一身份去重。
+- 建议ChatGPT Web下一步：核实VeriChain是否存在作者机构仓库版；对T194中复用的6篇只补未完成的全文证据，不重复筛其Scholar身份。需继续Google Scholar分页时，先确认目标标签实际显示结果而非验证码/等待页，再从未登记偏移开始。
+
 # 2026-10-12 T193交接：图像真实性解释非可识别性全文核读
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T193数据提交：`4c6fff3`；origin已确认，用户授权继续推送当前分支。
