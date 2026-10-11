@@ -1,3 +1,15 @@
+# 2026-10-12续：T195 VeriChain参考文献链逐位置筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`245f033eb4ac83c3e61f2490e232bffcb0b5961d`；origin为已确认的GitHub仓库，用户此前授权推送当前分支。本交接文件待单独提交并推送。
+- 打开VeriChain官方Springer章节页（DOI 10.1007/978-981-95-4395-3_17），核实正式作者、ACPR 2025会议信息、first online日期、出版社摘要和完整可见References [1]–[27]。27个位置逐条题名/主题筛查见`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T195_VeriChain_SpringerReferences27_逐位置主题筛查_20261012.csv`。它们是引文题录级筛查，不是27篇全文核读。
+- 直接解释作品SIDA、FakeShield、FakeScope均复用90/72/172现有唯一身份；HiFi-Net++、TruFor、universal fake detector和DIRE的重复引用保留为独立书目位置，并按作品身份去重。文档篡改检测/定位、DiffForensics等不作为解释可靠性证据。未新增候选身份或全文核读记录。
+- Springer页标注ACPR 2025，First Online为2025-11-11，引用格式年份为2026；章节正文是订阅内容。摘要称有推理链、空间接地线索、forensic fidelity奖励及DocTruth结果，但没有解释质量评估协议。因此将现有候选90更新为官方题录/摘要已核，将其补入72优先表rank 13.75；172既有记录仍是摘要级审查，不是全文核读。人评、一致性、事实性、faithfulness、解释稳定性、幻觉和用户依赖均未核。
+- 更新计数：74=30,084个观察位置；90=957个候选身份行；72=392项；172=336条核读记录；87=339条路线。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`包含808个来源文件和1份manifest（共809项），SHA-256=`f3d78092349580a9bf38b6a4e6394f5914b7a1657dfaed2cf275408371f33da7`。
+- 验证：T195记录脚本幂等运行两次；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过历史断言、27个连续参考位置、登记唯一性、ZIP CRC及来源文件哈希；CRLF-aware staged diff check通过。主要文件：阶段报告00、SHA256清单112、优先表72、观察主账74、路线87、候选90、T195逐位置侧表及阶段ZIP。
+- 当前实际浏览器状态：Chrome中的Scholar cited-by页显示reCAPTCHA；SSRN XAGR题录页也显示Cloudflare“正在进行安全验证”。用户报告“已恢复”后检查页面仍处于验证中；两者不能混为同一站点/恢复状态。此前XAGR正文已有T182定向核读，因此不重复核读；本轮T195不依赖受阻页面。根目录两个用户原有未跟踪文件保持未暂存、未修改。
+- 遗留：全局检索和引用网络仍未闭合，不声称零遗漏。下一步优先找VeriChain机构仓库版或能访问的全文；若仍不可得，则从72中选择未做172实质全文审查且有官方可读正文的直接候选（Malolan 2020、From Pixels to Semantics等），并严格按90/72/172去重。Google Scholar继续分页前先确认页面真实展示结果，从未登记的新查询/偏移推进。
+- 建议ChatGPT Web下一步：若能经机构订阅或作者仓库取得VeriChain正文，只核其方法、解释质量评价协议与独立证据锚定；否则不再尝试重复打开同一个受订阅正文，转向其他有官方全文的待核候选。Scholar标签如恢复，从保留断点续查，已筛位置不要再刷。
+
 # 2026-10-12续：T194 Evidence-Guided引文链逐位置筛查
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T194数据提交：`ce062d5`；origin为已确认GitHub仓库，用户此前授权推送本分支。此次交接文件待单独提交。
