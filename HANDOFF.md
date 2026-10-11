@@ -2074,3 +2074,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含823个来源文件及manifest（824个成员），SHA-256=`00b963cd23dcd1600af6dde08d83d967980ea4fa8fedbd6c760e39c4bb7d40c3`。验证：`python3 work/search_protocol_v2/record_t208_morelli_fullthesis_20261012.py`重复运行幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过82位置连续性、唯一性、台账计数、ZIP CRC与哈希；`git -c core.whitespace=cr-at-eol diff --check`通过。两个原有用户未跟踪文件保持未修改/未暂存。
 - 浏览器：当前Google Scholar标签`981694259`的查询`(deepfake OR "face forgery" OR "facial manipulation") (explanation OR explainable OR interpretability OR interpretable OR attribution OR saliency OR rationale OR reasoning) ("explanation stability")`显示54个结果估数，但DOM仍停在“Please show you're not a robot”复选框。本轮未操作验证码。用户的“已恢复”对应SSRN恢复，不视为Scholar验证已解除。SSRN标签状态不一致，本轮未重复核读临时链接或重筛XAGR；沿用T182/T161既有记录。
 - 遗留：主题式与前后向引文网络仍未闭合，不能承诺全库零遗漏。下一步先继续未核的直接高优先作品T207《Multimodal Large Models for Image Tampering Detection and Explanation: From Detection to Reasoning》作者稿/全文访问核验；再处理rank 12锚点方法论文的正文缺口；Scholar分页只从实际恢复后的当前式断点继续，不重刷已有结果。另须继续把已完成身份/引文边在90/72/172/87中复用，避免重复工作。
+
+## 2026-10-12续：T209 XAIVIER学位论文身份与机构库全文访问核查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`fbade29`（Record XAIVIER thesis identity and source check）；远端：已确认的 `origin https://github.com/brodyZhao/my-research-project.git`。当前HANDOFF改动待单独提交；此前用户已明确授权推送此文献检索分支。
+- 主要修改：阶段报告00、台账72/74/87/90、清单112和阶段ZIP；详细三行来源/访问审计`T209_XAIVIER_硕士论文与会议版身份核对_20261012.csv`包含在ZIP。两个用户既有未跟踪文件未改动、未暂存。T209记录脚本与更新后的检查点脚本留在本地忽略目录`work/search_protocol_v2/`，不提交。
+- T209核实IIT机构库列有Jayakumar 2022年MSc Dissertation《XAIVIER: A Visually Interpretable Forensic Deepfake Detection Tool Using Anchors》，条目摘要涉及Anchors/EfficientNet和深伪取证解释，并标出257.1 KB文件`20200238.pdf`。University of Moratuwa的正式会议库把同题会议记录标为ICITR 2022 `Conference-Abstract`、p.47、无附件，并报告anchor affinity 70.23%及检测准确率91.92%。因此在90新增一个学位论文载体身份、72以rank 12.1单列，明确可能与rank 12会议作品共享同一研究项目；不把两种载体当作两项独立实证。
+- 机构库元数据/摘要已核，论文PDF未访问：IIT记录及一次按所列文件名构造的直接PDF请求超时。故不新增172全文核读；89.58% fidelity二手摘要说法未从原稿核实。Scholar当前Chrome页面仍显示reCAPTCHA；SSRN XAGR页面刷新后仍为Cloudflare等待页。用户最近“已恢复”针对SSRN，不能据此声称Scholar/SSRN正文已恢复。
+- 最新台账口径：74=30,237位置；90=962文献身份记录；72=397优先项；172=344全文/效度核读；87=356路线。T209 ZIP含824个来源文件+manifest（825成员），SHA-256=`e16ba51caf9fe40d5630133b123c1e97586a099274abe9206b1608f7b1f507a1`。行数口径不同，不能视为强相关独立篇数、覆盖率或零遗漏证明。
+- 测试：`python3 work/search_protocol_v2/record_t209_xaivier_thesis_20261012.py`通过并幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过（来源记录、唯一性、计数、825成员ZIP CRC和文件SHA-256）；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码改动。
+- 遗留：XAIVIER学位论文全文及引文待获取；Scholar验证页当前阻断分页查询；T207 ACM正文也仍待找作者稿；整体英文主题式和跨库引文网络未闭合。
+- 建议ChatGPT Web下一步：不要重刷anchor会议论文的既有Scholar位置，也不要把其会议摘要数值当全文证据。若机构库访问恢复，优先核读XAIVIER学位论文中evaluation章节、anchor-affinity公式和人评设计；之后按90/72/172去重，只增补缺失全文证据或未筛的引文位置。
