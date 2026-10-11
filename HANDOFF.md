@@ -1719,3 +1719,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 修改文件：阶段报告00、包哈希清单112、优先表72、主账74、路线87、候选90、阶段ZIP；忽略目录内T113/T114/T115均已收入ZIP。两个原有用户未跟踪文件保持未修改、未暂存。
 - 检查通过：`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；自定义断言核验T113=131、T114=100、T115=42，位置ID/候选题名/排序名次唯一，路线状态准确，无`XXXX`链接，ZIP CRC与侧表成员通过；`git -c core.whitespace=cr-at-eol diff --check`。
 - 后续建议：从T115中图像伪造/合成图像来源相关引用做身份去重，优先核出版源与原文；先复用90/72/172已有记录，不重读已审论文。随后继续未完成的高精度英文式。总体重检仍未完成，不作“零遗漏”承诺。
+
+
+## 2026-10-11续：闭合T11-F3-S3后段并审读Katiyar早期图像鉴伪解释工作
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`52c7393`。origin仍为已确认目标仓库。
+- T11-F3-S3 trust-calibration路线的前100条沿用T114；本轮由Google Scholar可见Next链接逐页补筛start=100–220共123条，侧表T116并入74。start=220仅3项、start=230正常空页；本次快照的223个可见位置闭合，不代表索引或领域穷尽，也没有把这条宽式误报为验证码。
+- 沿Springer《Image forgery detection: comprehensive review…》#129及Yawale SHAP论文引文检出Katiyar & Bhavsar《Image Forgery Detection with Interpretability》(arXiv:2202.00908v1)。官方全文已核读，列入90/72(rank 6.5)/172。其copy-move与inpainting伪造CNN用Grad-CAM定性展示正确分类样例；未使用已有伪造mask量化解释、无faithfulness干预、人评或appropriate-reliance测试。官方References [1]–[19]已逐位置题名/主题筛查，T117；Springer综述的XAI词项扫描复用Feature Focus并识别Katiyar。T115的6条直接/邻接引文链接已改为各自DOI。
+- Katiyar精确题名Scholar卡与arXiv身份匹配并显示Cited by 8，记录在T118/74；打开实际被引页面后出现明确reCAPTCHA、没有施引卡。`CIT-KATIYAR-FWD-20261011`已记为0可见卡/8条待筛的开放断点，需用户本人恢复后再筛。此前T11-F3-S3分页页本身无验证。
+- 当前计数：74=28,087条结果/书目位置；90=820唯一候选题名；72=268排序条目；172=198唯一全文/摘要效度核读身份；87=260条路线。侧表T116=123、T117=19、T118=2。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`有716成员（715源文件+manifest），SHA-256 `0dd3ab2901b313f09e94797ae0a969c83e1ab529abb82739e5201b31bcba213d`。
+- 主要修改文件：`00_重检阶段报告_未完成.md`、主账74、路线87、候选90、优先72、效度172、SHA清单112、阶段ZIP；T116/T117/T118等忽略文件已打入ZIP。两个原有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。临时脚本位于忽略的`work/search_protocol_v2/`。
+- 验证通过：`python3 work/search_protocol_v2/complete_t114_and_katiyar_chain_20261011.py`；`python3 work/search_protocol_v2/record_katiyar_scholar_anchor_20261011.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；自定义T116连续位置、T117/T118条数、主账ID/理由、90题名、72 rank、172身份、87路线、T115 DOI以及ZIP CRC/成员断言；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
+- 遗留：等待用户本人处理Katiyar的8篇Cited-by页面验证码；全局英文检索及其他未闭合高精度路线未完成，不能承诺零遗漏。下一步只在当前Scholar引用页正常显示8张卡后筛该链，复用已有身份；随后继续未完成路线和新的强种子引用链。
