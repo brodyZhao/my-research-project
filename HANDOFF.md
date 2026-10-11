@@ -1891,3 +1891,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：`python3 work/search_protocol_v2/record_t169_crum_citedby_20261011.py`重复运行幂等，第二次主账新增0；`python3 -m compileall -q work/search_protocol_v2`通过；T169位置1–17连续、逐项理由非空、主账ID唯一，三篇新增论文在90/72/172均唯一；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`通过ZIP成员、CRC和源文件哈希；`git -c core.whitespace=cr-at-eol diff --check`通过。未修改业务源码；原有两个用户未跟踪文件保持原样、未暂存。
 - 遗留：整体检索和强相关引用链仍未结束，不能承诺零遗漏。下一步按90/72/172差分MENTOR、Grains和SAGE的参考文献，重点核对尚未入账的synthetic-face saliency/XAI研究（包括CYBORG、Human-aided saliency maps、Model Focus及Teaching AI to Teach）；仅筛新增书目位置/作品身份，不重筛TQE或T168已闭合位置。
 - 建议ChatGPT Web下一步：从上述三篇原文参考表提取强相关saliency/synthetic-face研究标题，先做规范题名差分，再逐项补录新身份；继续保留“方法邻接”与“解释可靠性直接证据”的区别。
+
+## 2026-10-11：更新图像鉴伪解释可靠性综述与选题可行性分析
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；综述提交：`8635678ed7c53cca01e2f7489dbf64752eeea2ae`。本交接随后单独提交并推送到已确认的 `origin`。
+- 主要修改文件：`literature/forensic-explanation-benchmark-review-feasibility-20261011.md`。全文改为论文式范围性综述，按热图与检测依据、取证特定干预、区域/语义接地、主张事实核查、EFR 结构化证据、自述理由的判决依赖和人类适当依赖展开。给出评测基准的构念、数据单位、干预效度门控、匹配对照、不可判定标签与研究可行性。
+- 文献范围：以 `work/review_20261011/corpus_snapshot.json` 固定本次台账版本，对照 `90` 中 923 条候选、`72` 中 354 条优先记录、`172` 中 292 条原文或摘要效度核读及旧库 `10` 中 337 条。四者重叠，绝不相加为独立论文数。正文不是声称 923 篇均通读全文；根据用户本次允许，仅摘要可得的直接论文在正文明确标为“仅摘要核读”。高影响待补全文包括 Side-VLM、DDL、XAGR、Wiley 的 16 种解释器比较、SGEVL-Forensics 及多类别视觉 XAI 比较。
+- 关键更新：EFR 是结构化证据—判决绑定的最接近工作之一；FORGE 已做主张级事实核查，Hopf 等已遮挡模型自述区域并比较未述区域；HAVE/PAVE、ManipShield、AnomReason、X-AIGD 等构成数据/标注近邻；2026 年深伪图像用户研究直接报告可视解释提高信任和合作准确率，却没有同步改善适当依赖。因而选题的新意须落在事实核查、有效编辑、匹配控制、跨检测器与不可判定覆盖率的组合验证上。
+- 验证：全部 6 个本地 Markdown 链接存在；`git -c core.whitespace=cr-at-eol diff --check -- literature/forensic-explanation-benchmark-review-feasibility-20261011.md` 通过；范围快照的四个 SHA-256 与当前四张台账相符；必审近邻名词覆盖检查通过。文档改动无运行代码，故不适用 import、compileall 或张量 shape 测试。其他并行修改的台账、ZIP 以及两个既有未跟踪文件未纳入本次提交。
+- 遗留问题：V2.1 检索路线仍有开放项，不能宣称零遗漏或系统综述级召回；上述仅摘要论文的具体方法与指标仍待全文确认；实验中的源图恢复正对照曾出现反常方向，不能据现有试点宣称解释忠实或不忠实。下一步先补核心付费论文全文和开放路线，再按综述第 10 节验证配准、编辑效度与同面积匹配控制。
+- 建议 ChatGPT Web 下一步检查：针对 EFR、FORGE、Hopf、Side-VLM、DDL 和 Wiley 比较论文复核新颖性边界，尤其避免把“第一次评测解释可靠性”写进开题；对本综述第 10 节的操作性定义作方法评审，并检查潜在摘要级论文的全文是否已公开。
