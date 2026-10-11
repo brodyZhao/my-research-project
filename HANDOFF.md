@@ -1855,3 +1855,16 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：四个T161/T162记录脚本重复运行后主账新增0；`python3 -m compileall -q work/search_protocol_v2`通过；T162 60位置连续、ID唯一、理由非空并全部匹配主账，FakeReasoning效度身份唯一、XAGR附注无重复；阶段包759成员、CRC校验通过；`git -c core.whitespace=cr-at-eol diff --check`通过。
 - 遗留与后续：整体英文检索和强相关论文引文链仍未完成，不能作“零遗漏”承诺。T162宽式仅筛60/约900余估算结果，按饱和规则暂停；如将来要求补全该特定查询，断点为start=60。更优先的是沿未闭合的直接图像鉴伪faithfulness/grounding/consistency细式和强相关种子的未核参考/被引链补漏，只核新身份或缺失证据，避免复读已筛位置。
 - 建议ChatGPT Web下一步：检查当前分支和ZIP哈希；从87中选一个此前未做的高精度英文式或强核心论文引文链继续，并复用90/72/172唯一作品身份；不要把T162的前60位置报告成完整召回。
+
+
+## 2026-10-11续：T164–T167引文闭环与Brna参考书目筛查
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；检索数据提交：`f1e8aab`（`Record T164-T167 literature audit checkpoint`），已推送至已确认的 `origin`。此前用户已授权推送该分支。
+- 本阶段数据提交包含阶段报告00、manifest112、优先表72、位置主账74、路线表87、候选表90、原文效度核读表172和阶段ZIP。T164–T167逐位置侧表及可重跑记录脚本一并收入ZIP。
+- Google Scholar恢复复核：TQE精确题名页仍显示Cited by 49；T164侧表及主账中已有49/49位置记录，故此次不重筛、不重复添加。TQE官方参考书目38条（T165）也已闭合。Brna 2025学位论文Scholar版本簇5张卡已识别为同一作品（T166），其官方书目123/123条独立题名/题录判定已写入T167。T164–T167均只在其声明的可见快照/来源书目范围内闭合，不构成全领域穷尽。
+- 恢复期间检查了Ypma法证解释/验证章节的Scholar Cited-by三页30条，发现CIT-T02-F3-FORENSIC-VALIDATION-FWD此前已完整记录30/30，因此没有再次写入或重读。该路线首屏低精度；后续优先目标图像/视频解释证据。
+- 新增且核读的邻接文献：Fosco的MIT硕士论文（仅仓储摘要，且与后续ICLR工作有项目重叠）；Tahir等CHI 2021论文（作者公开全文；CAM被用于研究分析与人类培训，不是受试者的解释faithfulness评估）；Lad 2024概念框架（出版社全文，未做验证实验）。这些已在90/72/172分层，不视为直接解释可靠性实证。
+- 最新账本：74有29,314条结果位置；90有911个唯一题名候选；72有342项优先条目；172有279项原文/效度审查记录；87有286条查询/引文路线。它们是不同统计单位，不能当作强相关独立论文数或全量全文审读数。阶段ZIP `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip` 含765成员（764个来源文件+manifest），SHA-256：`c64e3fc55223233e780c45784a64892e4ef86c612c4282a7be86e3a05daa3abe`。
+- 验证：`python3 work/search_protocol_v2/package_checkpoint_20261010.py` 成功，校验ZIP CRC、成员及源文件哈希，也执行账本ID、理由和关键旧位置断言；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。之前T167记录脚本已验证重复运行幂等；本次没有修改业务源码或脚本。工作区原有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`未改动、未暂存。
+- 遗留：检索和引文图仍未完成，不能承诺零遗漏。后续优先处理90中由T164新引入、尚未完成全文核读的直接深伪解释评估候选；每篇只按唯一题名对账并补缺失的原始证据，不重刷T164的49个位置、T165的38条参考或T167的123条参考。
+- 建议下一步：从T164新增直接候选中挑原文可读、尚未核读的一篇，核查实际解释真值、faithfulness/稳定性操作化和人类适当依赖；再依据新发现决定是否扩展其引文链。若继续从Scholar分页检索，先匹配74/90现有身份和位置ID，避免重复筛查。
