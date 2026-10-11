@@ -1752,3 +1752,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 当前表计数：主账28,152个结果/参考位置、835个唯一题名候选、280项优先记录、84项原页核心目录、208个原稿/摘要效度核读身份、265条检索路线。计数单位不同，不是强相关独立篇数，且全局检索仍未完成。
 - 验证通过：`python3 work/search_protocol_v2/record_manipshield_review_chain_20261011.py`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；T127/T128条数、内容非空及唯一性；阶段ZIP 725成员CRC和T127/T128成员断言；`git -c core.whitespace=cr-at-eol diff --check`。ZIP SHA-256为`1c353f240dcc20fc97cbd08c18d6566be2a059876e782e40bb5986bbdbdbc19a`。
 - 后续：继续尚未筛过的高精度英文路线与已识别强相关论文的差分引文链；对已经出现在90/72/172中的唯一论文身份直接复用筛选/核读结果。当前综述剩余336条书目位置未筛，Katiyar被引8条断点和其他路线分别记录在87，不因某个Scholar标签恢复而推定其他页面也恢复。不要宣称“零遗漏”或全领域检索已完成。
+
+## 2026-10-11续：Katiyar前向引文页恢复后筛查8条
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`62281a6330f23203d97cffbccec348fbafdb0769`；本交接随后单独提交。目标remote仍为已确认的`origin`。
+- 用户回复Scholar已恢复后，直接查看 `cites=10655750378400966519`：页面正常显示8张施引结果卡，无验证码。T129和主账74逐项记录8/8；87中的`CIT-KATIYAR-FWD-20261011`已从0卡开放断点改为当前快照8/8完成。当前状态仅适用于此页，不推及其他标签或版本簇。
+- 8条中6条与90/74已有唯一身份合并；另两项首次出现于本轮位置日志，一项是图像篡改检测器（不列解释可靠性候选），一项是Momin等2025年跨模态可解释深伪检测综述。该综述DOI `10.1016/j.imavis.2025.105738`，官方摘要/方法摘录称147项初检、去重19项后纳入42篇，覆盖图像、视频、音频、文本XAI；列为强相关引文地图，不能当作解释忠实性或适当依赖的原始实验。全文逐节核读和42项纳入工作逐篇差分尚未完成。
+- 更新文件：阶段报告00、SHA清单112、效度表172、优先表72、主账74、路线表87、候选表90、阶段ZIP；T129侧表包含8个逐项筛选决定。两个既有用户未跟踪文件未改动、未暂存。
+- 当前计数：74=28,160条结果/引文位置；90=836个唯一候选题名；72=281项排序记录；13原页核心目录=84项；172=209个唯一效度核读身份；87=265条路线。单位不同，不可换算为强相关论文篇数或零遗漏证明。
+- 验证通过：`python3 work/search_protocol_v2/record_katiyar_citedby_20261011.py`重复运行不增行；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`；`python3 -m compileall -q work/search_protocol_v2`；T129连续8位置/筛选理由/身份处理字段、主账ID、路线8/8、90/72/172唯一性、阶段ZIP 726成员CRC及T129侧表成员断言；`git -c core.whitespace=cr-at-eol diff --check`。ZIP SHA-256=`59ddb2c96c3883e78165d3fc634336e850361f548af4ecbf1472f5359707e0aa`。
+- 后续优先：逐篇差分Momin综述的42项纳入研究和解释评测引文，先与90/72/172去重；继续未闭合的英文高精度路线。不重复T129已筛的位置，不把其42项综述纳入项当作已在本轮全文复核。
