@@ -1807,3 +1807,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 更新计数：74主账28,609个位置/观察行；90候选891个唯一标题；72排序322项；172原文/摘要效度核读261条；87路线274条。不同统计口径不等于独立强相关篇数或全领域召回率。阶段包739个ZIP成员（738个来源文件），SHA-256=`16c9924588c39ec066735fbced91117928ddaae59fba1181ce2b34f708b766e6`；包内T142侧表存在且可读取。
 - 测试通过：`python3 work/search_protocol_v2/record_t142_synthetic_image_sanity_checks_20261011.py`重跑后新增主账行0、侧表仍10行；`python3 -m compileall -q work/search_protocol_v2`；T142位置1–10连续、ID唯一、理由非空、路线仍未闭合；阶段ZIP检查；`git -c core.whitespace=cr-at-eol diff --check`。本阶段没有业务源码修改。原有用户未跟踪的`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未改动、未暂存。
 - 遗留：主题检索未完成，不能承诺零遗漏；T06-F4-S1约289结果仅看首页并已因低精度暂停。下一步按唯一身份复用90/72/172，优先从87里尚未执行的直接图像取证式`T04-F4-S1`（`("copy-move" OR "copy move") (explanation OR attribution OR saliency) ("sanity checks")`）开始，核验当前Scholar快照首页并只为未见强相关作品继续原稿与引文链；不要重筛已闭合的T136/139/140/T141位置。
+
+
+## 2026-10-11续：copy-move解释sanity-check窄式（T143）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`17e0a85`（`Log copy-move XAI sanity-check screening`）。HANDOFF更新随后单独提交；用户此前已授权推送此分支。
+- Google Scholar当前快照共11条：第一页10条、第二页1条且Next禁用。11个结果位置逐项记录到T143侧表和74主账；T04-F4-S1在87标为“仅当前快照闭合”，不外推为领域穷尽。
+- 两个直接命中为已知作品：*Beyond Accuracy: Auditing Image Forgery Localization via Scene-Disjoint Evaluation and XAI Faithfulness* 与JECA²，均复用90/72/172已有身份及全文核读，不重复计篇。其余结果是CNN解释方法、GAN来源指纹归属、医学XAI、卷册索引及软件/编译器/编程智能体误命中；未新增强相关或方法邻接候选。
+- 最新计数：74主账28,620个位置/观察行；90候选891个唯一标题；72排序322项；172效度核读261项；87路线274条。不同口径不等于独立强相关篇数。阶段ZIP为`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，740个成员（739个来源文件和manifest），SHA-256=`e0f7ef7d2731a0bc9fb82102ddca704aa18839bb0139b22b8ae88e0236dcf908`；T143侧表已收入。
+- 验证通过：`python3 work/search_protocol_v2/record_t143_copy_move_sanity_checks_20261011.py`（新增11行，按ID幂等）；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（ZIP成员、CRC及源文件哈希）；`python3 -m compileall -q work/search_protocol_v2`；11项连续、理由非空、ID唯一、路线快照闭合检查；`git -c core.whitespace=cr-at-eol diff --check`。未改动业务源码；既有两个用户未跟踪文件保持原样。
+- 遗留：英文主题检索与引用链仍未完成，不声称零遗漏。下一条按87的T04-F4-S2检索copy-move × explanation/attribution/saliency × parameter randomization；只核读本次出现的新作品身份。
