@@ -1827,3 +1827,17 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 本轮新增25个检索位置、0篇新直接强相关、1个新综述身份；另更新保险索赔邻接和深伪综述身份。最新计数：74主账28,645位置/观察行；90候选892唯一标题；72排序325项；172效度核读264项；87路线274条。阶段ZIP含744成员（743来源文件和manifest），SHA-256=`a67263b00fefa55e5f230e49aa18a69628e6cd1913f51d11693d564787dea4cb`。
 - 验证通过：`python3 work/search_protocol_v2/record_t144_t147_copy_move_terms_20261011.py`重跑新增主账行0；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（ZIP CRC/成员/哈希）；`python3 -m compileall -q work/search_protocol_v2`；T144–T147每项位置数、理由、唯一ID及路线闭合/未闭合状态检查；`git -c core.whitespace=cr-at-eol diff --check`。未改业务源码；两份用户未跟踪文件保持原样。
 - 遗留：图像鉴伪解释可靠性英文检索和核心作品引文链仍未完成，不能声称零遗漏。下一步沿87中更高精度的图像操纵 × explanation faithfulness/grounding/causal sufficiency窄式和直接强相关作品尚未检查的引用链继续；不分页刷T146/T147低精度查询，不重复90/72/172已核读身份。
+
+
+## 2026-10-11续：合成图faithfulness、取证对抗评估与Non-Identifiability前向引文（T148–T152）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交为 `04fb102`；本HANDOFF随后单独提交并推送；目标remote为已确认的 `origin`。用户此前明确授权继续推送该检索分支。
+- 按87路线表继续，未重筛旧位置。T148 / T06-F4-S2：`("synthetic image" OR "generated image") (explanation OR attribution OR saliency) ("parameter randomization")`。当前Scholar显示约29，start=0页10项；start=10显示第2页共19项、Next禁用，按可见分页19/19逐项筛查。直接强相关命中是既有*Non-Identifiability of Explanations from Model Behavior in Deep Networks of Image Authenticity Judgments*身份；其余通用XAI方法、跨域及BYO-Eval版本重复。新增位置19，不新增作品身份。
+- T149 / T06-F4-S3：`("synthetic image" OR "generated image") (explanation OR attribution OR saliency) ("adversarial evaluation")`。估算99，仅筛start=0的10项；直接命中INSIGHT已在90/72/172核读，其他主要为生成安全/检测鲁棒性/跨域词项。为减少低精度重复分页，路线保留未闭合、start=10断点。
+- T150：`("image forgery detection" OR "image authenticity") (explainable OR explanation OR saliency OR attribution) ("adversarial evaluation" OR "adversarial robustness")`。估算322，首屏10项逐条筛查；直接的Qian综述、JECA²、低分辨率生成图法证论文均复用既有身份。发现已在90中的Qasim & Obaid 2026系统综述并精确核对其ACDSA题录/DOI：`10.1109/ACDSA67686.2026.11467619`；Scholar摘要称回顾2019–2025年40余项数字图像伪造解释研究并讨论evaluation approaches。IEEE网页索取机器人验证，故全文、纳入研究及参考链均未核，不能当作直接faithfulness实证。宽式保持未闭合。
+- T151精确题名式返回1/1，确认上述综述规范题名、作者/会议和DOI；Scholar摘要范围写回候选90并明确全篇未核。T152顺着该轮命中的图像真实性解释不可识别性论文的Cited-by簇：页面唯一可见施引结果是*Trustworthy Deepfake Detection Through Explainable AI: Evaluating the Consistency of Visual Explanations Across Deepfake Datasets*。该文已在优先表rank 51，全文和26条参考题名均已核，本轮只补录引文边、不复读。
+- 共新增41个结果/引文位置观察；90仍892个规范题名；72排序325项；172效度核读264项；74主账28,686行；87路线277条。差异统计单位不同，不等于强相关唯一篇数、全文完成数或无遗漏证明。当前阶段包含749个成员（748来源文件+manifest），SHA-256=`b7f7fc41b66f8338fa48e4fa5fb4f45764a5a6cb699454a9dbabe81c62e1e279`。
+- 修改内容：阶段报告00、SHA清单112、位置主账74、路线表87、候选表90、阶段ZIP及T148–T152逐条侧表；忽略目录中的重跑脚本为`work/search_protocol_v2/record_t148_t151_synthetic_forensic_xai_20261011.py`。未改业务源码；原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`保持原样/未暂存。
+- 验证：记录脚本重复运行后新主账行0（幂等）；`python3 -m compileall -q work/search_protocol_v2`通过；自定义检查确认五个侧表41行、筛选理由非空、主账ID唯一、路线位置数相符、Qasim综述唯一身份未重复；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`通过（ZIP成员/CRC/源哈希）；`git -c core.whitespace=cr-at-eol diff --check`通过。
+- 遗留：主题检索仍未完成，不能声称零遗漏；T149/T150宽式只筛首页并明确未闭合；Qasim & Obaid综述全文与40余项纳入工作/参考文献清单仍需拿到原文后差分；优先继续未检的高精度图像伪造/真实性解释faithfulness、grounding、consistency交叉式和强相关候选尚未闭合的引用边。每次按90/72/172复用身份，已筛位置不重复。
+- 建议ChatGPT Web下一步：先找Qasim & Obaid综述合法可读的作者/会议全文入口，提取纳入研究清单后与90/72/172差分；同时从87选择未检的高精度图像取证解释效度交叉式。若Scholar出现验证，按当页实际可见情况处理；不重刷T148已完成的位置或重读Trustworthy论文/26条参考。
