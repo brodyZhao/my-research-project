@@ -1868,3 +1868,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：`python3 work/search_protocol_v2/package_checkpoint_20261010.py` 成功，校验ZIP CRC、成员及源文件哈希，也执行账本ID、理由和关键旧位置断言；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。之前T167记录脚本已验证重复运行幂等；本次没有修改业务源码或脚本。工作区原有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`未改动、未暂存。
 - 遗留：检索和引文图仍未完成，不能承诺零遗漏。后续优先处理90中由T164新引入、尚未完成全文核读的直接深伪解释评估候选；每篇只按唯一题名对账并补缺失的原始证据，不重刷T164的49个位置、T165的38条参考或T167的123条参考。
 - 建议下一步：从T164新增直接候选中挑原文可读、尚未核读的一篇，核查实际解释真值、faithfulness/稳定性操作化和人类适当依赖；再依据新发现决定是否扩展其引文链。若继续从Scholar分页检索，先匹配74/90现有身份和位置ID，避免重复筛查。
+
+
+## 2026-10-11续：TQE被引候选QuantVisualXAI参考链与Crum方法核读（T168）
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；本阶段数据提交：`f93a22d`（`Record T168 visual XAI citation audit`），已推送至已确认的 `origin`。本交接按仓库规则单独提交。
+- Google Scholar TQE精确题名页目前正常显示Cited by 49；T164侧表/主账已记录49/49，本次未重复筛选。IEEE Xplore的种子论文《Quantitative Analysis of Visual XAI for Multiclass DeepFake Detection Based on CNN》官方References面板显示[1]–[23]，23个位置均已逐条筛查入T168侧表、主账74与路线87。TQE、Anchors、Malolan及Mansoor身份按已有候选/效度条目复用；未把检测器、伪造生成器、数据集或Captum工具误列为解释可靠性实证。ResearchGate二手页面称“References 25”，与IEEE页面及官方会议PDF索引文本均止于[23]不一致，保留差异，不虚构[24]–[25]。
+- 新发现并核读Crum等《Explain To Me: Salience-Based Explainability for Synthetic Face Detection Models》（2023 arXiv预印本，2024 IEEE TAI）。全文提出/使用五种Grad-CAM统计：熵、加噪响应、几何变换跟随、显著/非显著区域模糊响应、十个训练seed间稳定性；用CYBORG人类显著性监督与普通交叉熵训练作比较。该工作是TQE之前的重要合成脸解释量化前史，但不是局部篡改定位或人类依赖评估；详细效度边界已进入90/72/172。
+- 种子论文的IEEE官方摘要和23条参考列表已读，官方会议PDF索引片段提供了AOS操作和若干结果表。官方PDF下载端点访问超时，因此172将该研究标为“部分原文证据”，未声称完整全文审读。可见片段把删去显著区域后观察预测变化称为“sufficiency”；该操作更接近删除敏感性/必要性检验，且目前未见独立篡改区域真值或恰当依赖证据。T168仅关闭官方页面显示的23个书目位置，不关闭全部引文网络或整个领域检索。
+- 数据提交同步更新00阶段报告、112哈希清单、74位置主账、90候选、72排序、172效度核读、87路线和阶段ZIP，并加入逐条侧表与可复跑脚本。当前计数：74=29,337个位置；90=912唯一候选题名；72=343排序身份；172=281效度记录；87=287路线。ZIP含767成员（766源文件+清单），SHA-256=`232cf28e90fefc5829adf970e10828da200380f37031d8ea62cce5e8ab57c4b6`。
+- 验证：`python3 work/search_protocol_v2/record_t168_quantvisualxai_refs_20261011.py`重复运行幂等（第二次新增主账0行）；`python3 -m compileall -q work/search_protocol_v2`通过；T168位置1–23连续且逐项理由非空；全账ID及90/72/172唯一身份断言通过；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`成功重建767成员归档并验证CRC/源文件哈希；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。未修改业务源码。两个既有用户未跟踪文件保持原样、未暂存。
+- 遗留：SIBGRAPI种子论文完整PDF仍不可读；Anchors、Malolan全文证据缺口仍待补；其他宽式和引文链仍开放，不作“零遗漏”承诺。下一步从新核读的Crum论文Google Scholar Cited-by路线检查新引文身份，并优先补Anchors/Malolan原文缺口；先按74/90/72/172去重，TQE 49条、TQE参考38条、T168的23条都不重刷。
