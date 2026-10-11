@@ -1817,3 +1817,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 最新计数：74主账28,620个位置/观察行；90候选891个唯一标题；72排序322项；172效度核读261项；87路线274条。不同口径不等于独立强相关篇数。阶段ZIP为`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，740个成员（739个来源文件和manifest），SHA-256=`e0f7ef7d2731a0bc9fb82102ddca704aa18839bb0139b22b8ae88e0236dcf908`；T143侧表已收入。
 - 验证通过：`python3 work/search_protocol_v2/record_t143_copy_move_sanity_checks_20261011.py`（新增11行，按ID幂等）；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（ZIP成员、CRC及源文件哈希）；`python3 -m compileall -q work/search_protocol_v2`；11项连续、理由非空、ID唯一、路线快照闭合检查；`git -c core.whitespace=cr-at-eol diff --check`。未改动业务源码；既有两个用户未跟踪文件保持原样。
 - 遗留：英文主题检索与引用链仍未完成，不声称零遗漏。下一条按87的T04-F4-S2检索copy-move × explanation/attribution/saliency × parameter randomization；只核读本次出现的新作品身份。
+
+
+## 2026-10-11续：copy-move扰动评估查询（T144–T147）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`7a8b174`（`Log copy-move adversarial and perturbation searches`）。HANDOFF更新随后单独提交；用户此前已授权推送本分支。
+- T144/S2 parameter randomization当前快照1/1，命中已核读的*Beyond Accuracy*；T145/S3 adversarial evaluation当前快照4/4，INSIGHT复用既有身份，新增/补分层背景邻接为深伪图像检测综述和保险索赔图像认证论文。官方摘要显示后者集成Grad-CAM/SHAP并报告91.6%未定义的“explainability usefulness”，但没有独立解释真值、faithfulness/grounding、稳定性或真人依赖验证，因此不算直接解释可靠性证据。
+- T146/S4 deletion和T147/S5 insertion分别约601/629个动态结果，只筛了首页各10条；大多数命中把deletion/insertion当作篡改操作。两条路线保留start=10断点、不声称完成全文筛查。T147新增copy-move综述作为低优先评估背景：检测标注/数据真实性/稳健性和interpretability未来方向可供场景定位，但不报告XAI效度；该综述125条参考未在本轮逐项审计。
+- 本轮新增25个检索位置、0篇新直接强相关、1个新综述身份；另更新保险索赔邻接和深伪综述身份。最新计数：74主账28,645位置/观察行；90候选892唯一标题；72排序325项；172效度核读264项；87路线274条。阶段ZIP含744成员（743来源文件和manifest），SHA-256=`a67263b00fefa55e5f230e49aa18a69628e6cd1913f51d11693d564787dea4cb`。
+- 验证通过：`python3 work/search_protocol_v2/record_t144_t147_copy_move_terms_20261011.py`重跑新增主账行0；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（ZIP CRC/成员/哈希）；`python3 -m compileall -q work/search_protocol_v2`；T144–T147每项位置数、理由、唯一ID及路线闭合/未闭合状态检查；`git -c core.whitespace=cr-at-eol diff --check`。未改业务源码；两份用户未跟踪文件保持原样。
+- 遗留：图像鉴伪解释可靠性英文检索和核心作品引文链仍未完成，不能声称零遗漏。下一步沿87中更高精度的图像操纵 × explanation faithfulness/grounding/causal sufficiency窄式和直接强相关作品尚未检查的引用链继续；不分页刷T146/T147低精度查询，不重复90/72/172已核读身份。
