@@ -1786,3 +1786,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 阶段包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-10.zip`，728个成员（727个源文件和manifest），SHA-256 `786f67db36473305274a18f188ae881580f4e4ee768714ac35332fe885d00758`。T131逐位置侧表已收入包内；工作区忽略目录中的脚本可重复运行且不增行。
 - 验证通过：`python3 -m compileall -q work/search_protocol_v2`；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（ZIP成员/CRC/源文件哈希校验）；T131 1–25连续位置、主账ID、候选/优先/效度身份唯一性和路线状态检查；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。两个既有用户未跟踪文件保持未改动/未暂存。
 - 遗留：Momin综述42项纳入研究还未逐篇做身份差分；XFakeDetect/IDC身份和正文仍待核；英文主题检索与多条引用路线仍未闭合，不能承诺“一个文献都不漏”。下一步优先对Momin综述42项作差分，并继续未闭合高精度英文检索；按90/72/172唯一身份复用既有核查，不重复T131位置。
+
+## 2026-10-11续：Scholar faithfulness 路线刷新与T141位置筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据阶段提交：`4282fa5`（`Log forensic XAI Scholar refresh and screening`）。origin仍为此前确认的目标仓库；本阶段尚待交接文件提交后推送。
+- 用户完成Baldassarre Cited-by页面验证后，我核对账本发现该簇的7个可见位置此前已由T136逐项完成；没有重复登记。随后继续处理高信号英文路线`forensic "explanation faithfulness"`：旧路线有69条位置行（数值位置1–62与121–127），刷新页眉估数在127–138变化且同一offset结果重排。T141独立记录start=30、60、70、80、90、100、110七页共70张卡；start=120现有7张卡与旧121–127题名完全相同，直接复用；start=130没有结果卡。旧观察和刷新观察分开保存，以保留索引漂移而不覆盖既有理由。
+- T141发现并加入候选/排序邻接层的3个唯一身份：FAME（CVPRW 2026，普通图像分类/人脸识别归因，非鉴伪）、CoPISan（TPAMI 2025，通用CNN概念解释sanity-check方法，非鉴伪）、Human-Centered Explanations for Audio Deepfakes（Springer 2026，音频人因研究，跨模态而非图像）。三者可作方法/用户评价设计参考，但未计入图像鉴伪直接核心篇数。Evidence Fusion仍是直接图像操纵待核候选：Scholar摘要片段称faithfulness/specificity/局部取证一致性尚待验证，出版社全文仍未可读；不把该片段误当成实测可靠性结果。
+- 计数：主账74=28,599位置/观察行；候选90=890唯一标题；排序72=321；172效度核读=260；路线87=274。计数口径不同，不是独立强相关论文数。T141只关闭本次7页70个可见卡，动态查询和全领域检索未闭合，不宣称零遗漏。
+- 主要修改：报告00、哈希清单112、效度表172、排序表72、主账74、路线87、候选表90、阶段ZIP；T141侧表与刷新脚本收入阶段ZIP。用户原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`及`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
+- 验证通过：`python3 work/search_protocol_v2/record_t141_forensic_faith_refresh_20261011.py`（70行、重跑不重复主账记录且保留完整侧表）；`python3 work/search_protocol_v2/package_checkpoint_20261010.py`（737源文件、738 ZIP成员、CRC及哈希检查）；`python3 -m compileall -q work/search_protocol_v2`；T141七页各10条、结果理由非空、主账/候选/排序身份数检查；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
+- 遗留：高精度英文查询和种子引文链仍未全部闭合；Scholar索引会改变估数/排序；DGR-Net正文访问限制和若干已标路线仍待处理。下一步不要重刷T136、T139/140或重复已有作品身份；优先完成尚未闭合、直接针对图像操纵解释效度的子式/引用链，尤其先处理能核验原始论文的直接候选，再以90/72/172去重。
+- 建议ChatGPT Web下一步：从87中挑选尚未筛且范围直接限于image forgery/tampering/splicing、带faithfulness/grounding/sufficiency/sanity-check终点的英文子式；每次记录唯一新位置和唯一作品身份；对同一offset题录变化时建立刷新快照并明确差异，不把单次动态结果估数当作召回证明。
