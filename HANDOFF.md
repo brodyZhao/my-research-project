@@ -1,3 +1,12 @@
+# 2026-10-12 T193交接：图像真实性解释非可识别性全文核读
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T193数据提交：`4c6fff3`；origin已确认，用户授权继续推送当前分支。
+- 对rank 57候选《Non-identifiability of Explanations from Model Behavior in Deep Networks of Image Authenticity Judgments》（arXiv:2604.07254v1）完成官方arXiv HTML全文定向核读。记录侧表：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T193_NonIdentifiability_全文效度核读_20261012.csv`；其Cited-by唯一结果此前已经逐项筛查，本轮复用不重扫。
+- 研究是主观人类图像真实性评分回归，不是客观真假鉴定：AIGCIQA2023中按prompt metadata剔除1,033/2,400后留1,367张AI生成图，六类冻结骨干、10组随机种子/数据划分，比较Grad-CAM、LIME与多尺度像素遮挡。人类评分split-half校正可靠性0.67，噪声上限约0.82；模型预测跨种子相关0.81–0.91，但解释跨架构弱/低中度一致。VGG的预测主要依赖与质量共享的变异，partial r约0.01/0.03。作者明确未做正式sanity/fragility分析；一致性不构成独立真值或因果faithfulness，用户依赖也未测。rank 57不变，保留为方法邻接。
+- 更新阶段报告00、112清单、172全文效度、72、74、87、90及阶段ZIP；本轮不增加候选身份，仅新增一个全文位置/核读/路线。计数：74=30,021；90=957；72=391；172=336；87=337。阶段ZIP为806个来源文件+manifest（807成员），SHA-256=`3e102b54281f227aec21508c6407e91d5b2a9447fbf519d55a5a3a986247d4ad`。
+- 验证：T193记录脚本连续两次运行计数稳定；`python3 -m compileall -q work/search_protocol_v2`通过；`package_checkpoint_20261012.py`通过全历史和T193断言；CRLF-aware `git diff --check`通过。T193数据提交`4c6fff3`已创建。
+- 遗留：整体检索与引文网络没有闭合，不声称零遗漏；Malolan等ICICT 2020论文的官方全文仍未取得。Google Scholar有一个实际验证码页曾被确认，但用户报告恢复的是SSRN PDF；此报告不把两者混记。下轮继续前先检查Scholar页面是否真实可读，已筛页与现有唯一身份不再重复检查。两个用户原有未跟踪文件仍未修改、未暂存。
+
 # 2026-10-12 T192交接：Artifact Magnification引文链与人类解释使用研究
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T192数据提交：`ff8ecad`；origin为已确认的GitHub仓库，用户此前已授权推送当前分支。
