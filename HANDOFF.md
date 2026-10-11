@@ -1,4 +1,13 @@
-﻿# 2026-10-12 T203–T204：恢复历史深伪解释候选并逐条审查Morelli执行摘要引文
+﻿# 2026-10-12 T212：XPlainVerse来源限定核读与验证恢复后引文去重
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段提交：`09bc6e1`（`Record source-limited XPlainVerse review`），已推送到已确认的`origin`。阶段归档`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip` SHA-256=`0b0d6ce87a76d147c9ef0f5030607b7c9069d60b9e707206d4141fb20e77ac4b`，827个来源文件+manifest，共828个成员。
+- T212不是新Scholar结果卡：XPlainVerse是已发现的rank 75候选。本轮只核对官方arXiv摘要及作者挑战评测仓库/代码，记为受限来源核读；官方摘要称有2,000对人工标注，但没有足够信息核定标注者人数、流程、IAA或事实校准。伴随代码中的Qwen裁判/语义覆盖分数只是可配置的grounding代理，不能据此声称主论文使用同一流程、独立事实审查或faithfulness有效。XPlainVerse主文和书目尚未核读，不能把摘要+代码标成全文。
+- 用户完成Scholar人机验证后，Du等《Multimodal Large Models for Image Tampering Detection and Explanation: From Detection to Reasoning》的Cited-by页可正常载入，目前唯一外部结果为《Research on an Excessive Artist Style Mimicry Detection Algorithm for AI-Generated Artworks》。该作品已在T182 / `V2E-T02-F3-S5-P10-02`筛查，本轮复用身份，不重复加位置或筛查。ACM正文站当前仍独立显示Cloudflare安全验证；ACM搜索索引公开摘要及部分参考片段，ResearchGate明确无可下载全文，不能把这当作全文核读完成。
+- 更新后后台账：74=30,255位置；90=963候选观察；72=398排序项；172=347条效度核读；87=359条检索路线。计数单位不同，不能解释为强相关独立作品总量、召回率或领域穷尽率。T212记录侧表：`T212_XPlainVerse_官方摘要与伴随评测代码限定审查_20261012.csv`。
+- 验证：T212脚本连续运行后幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过全部历史/T212断言、ZIP CRC与源文件SHA检查；暂存差异使用`git -c core.whitespace=cr-at-eol diff --cached --check`通过（CSV按项目约定保留CRLF）。未修改业务源码。根目录两份既有未跟踪用户文件未改动、未暂存。
+- 下一步：优先取得XPlainVerse官方论文PDF的可读文本，完成主文效度核读，再逐项筛它的全部参考文献并与90/74/172/87去重；继续寻找Du等ACM论文作者稿/可访问PDF。Scholar引文结果仅有1篇且已筛，勿重复筛T182位置。全局检索和引用网络仍开放，不承诺“零遗漏”。
+
+# 2026-10-12 T203–T204：恢复历史深伪解释候选并逐条审查Morelli执行摘要引文
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`e60ec0a`（Restore Morelli thesis and screen references）；origin为已确认的`https://github.com/brodyZhao/my-research-project.git`。用户此前明确授权继续检索并推送；HANDOFF更新另作提交，随后推送两个提交。
 - T203沿用历史R001 / `L-0ac29ee7ebca6a`恢复Pino 2019/20论文并把Alongi 2020/21更新为POLITesi官方摘要级；两篇正文均未核读。其身份/摘要/访问状态侧表为`T203_POLITesi_Pino与Alongi深伪解释学位论文身份与摘要核验_20261012.csv`。
