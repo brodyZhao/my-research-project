@@ -1,4 +1,13 @@
-﻿# 2026-10-12续：T01-F4第1–2页40位置与Scholar验证码断点
+﻿# 2026-10-12续：T339–T341关闭T01-F4末尾41个位置并推送检查点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T01-F4数据提交 `1766bc8` 已推送至已确认的 `origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF更新待单独提交和推送。根目录既有用户未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md` 与 `literature/forensic-explanation-relevance-20261004.md` 未改动、未暂存。
+- 已按用户完成的验证码从Scholar start=740续查；页38/39分别有20条、末页40有1条且无Next链接。逐项日志T339/T340/T341已写入阶段ZIP，位置741–781连续。74主账当前32,851行，其中该查询781行；90候选1,050行；72优先447行；172效度核读390行；87路线416条；85矩阵174条。这些计数单位不同，不能相加成独立强相关作品数或召回率。
+- 此日期的T01-F4 Scholar快照显示781个结果位置，已全部逐项筛查并闭合该查询快照；它不代表整个领域穷尽。没有新发现直接解释可靠性实证论文。CVPR会议录聚合记录提及的ObjectFormer、HiFi-IFDL、SFLD和CatAID均复用既有作品身份；《OccAM’s Laser》是3D LiDAR扰动归因方法，作为低优先跨域方法线索记入90，不计图像鉴伪核心文献。乌克兰语操纵信息论文经出版方摘要核对后复用既有排除记录，不重复计篇。
+- 检查点包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip` 有956个源文件加1份manifest（957成员），SHA-256=`9f01acead21046bb19de2c4f174afda08a4fd2a4aeba2c9de2bf9a35b48bf635`。主要修改：00阶段报告、72优先表、74逐位置主账、85矩阵、87路线、90候选、112 SHA清单、172核读表、阶段ZIP。逐项CSV T339–T341已收进ZIP。
+- 验证：`python3 -m py_compile work/search_protocol_v2/record_t339_t341_t01_f4_20261012.py work/search_protocol_v2/package_checkpoint_20261012.py`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过历史断言、T01-F4连续781位置、T339–T341侧表连续性、候选唯一性、ZIP CRC和源文件SHA校验；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改。仓库根目录没有README.md。
+- 整体细分类仍未完成：87路线表中106条路线当前标为coverage不完整（包含主动暂停的低精度大查询、Scholar索引漂移或未继续的窄式）。按用户优先细分类要求，建议从已记录首屏但仍未闭合、且直接贴近解释与人类依赖的窄式 `T02-F3-S7-HUMAN-RELIANCE-FAITHFULNESS-20261012` 继续；先确认现页/断点，再只筛尚未落账的位置，候选按74/90/72/172复用。遇到任何访问限制应先立即告诉用户并保存断点；不要宣称零遗漏或全领域穷尽。
+
+# 2026-10-12续：T01-F4第1–2页40位置与Scholar验证码断点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`a2c385eba92d3ce42ce3d49ad4397c993ecb849d`，已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。HANDOFF本次更新待单独提交并推送。根目录两个用户未跟踪文件未修改、未暂存。
 - T01-F4检索式：`("image forgery detection" OR "image manipulation detection" OR "AI-generated image detection") (explanation OR attribution OR saliency) (faithfulness OR fidelity OR reliability) (deletion OR insertion OR perturbation)`。Google Scholar动态估算约796条；当前UI为每页20项，已逐位置筛查1–40。前10项复用T272；新增位置11–40见`T314_T01-F4_扰动解释可靠性交叉式_位置11-40逐项筛查_20261012.csv`，30/30逐项有题名身份去重、个别筛选理由和旧结果ID。
