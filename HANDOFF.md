@@ -1,4 +1,15 @@
-﻿# 2026-10-12续：T278–T300细分类检索批次交接
+﻿# 2026-10-12续：T302静态图像真实性细式与T303 VAAS施引追踪
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索数据提交：`ecca9bdf5b73a060bceedc6f20bcf44403676b61`，已推送到确认的`origin https://github.com/brodyZhao/my-research-project.git`。本条HANDOFF将单独提交并推送；最终HEAD以HANDOFF提交为准。根目录两个既有用户未跟踪文件保持原样、未暂存。
+- T302检索式：`("photo forgery" OR "image alteration detection" OR "image integrity verification") (explanation OR interpretability OR saliency) (faithfulness OR fidelity OR reliability OR "human evaluation")`。Google Scholar三页start=0/10/20各10条，30/约342估算位置逐项筛查；第3页仍有Next，路线coverage为False且保持开放。首屏复用已有LIME拼接解释候选，另增VAAS、TRUSTPIX两个局部证据候选；第2页新增低置信Robust deep learning based system候选，并复用已有Guillaro博士论文候选；第2–3页其余多是完整性水印/加密、医学数据来源校验、检测综述或检测算法。没有新增72优先项或172全文效度核读。
+- T303检查VAAS的Scholar Cited-by快照：可见3项且无下一页，3/3逐项筛查；两篇综述复用既有身份，另一篇Vision Transformer/优化Siamese伪造检测作品为新检测算法身份，但不是解释可靠性候选。只关闭这3条可见施引快照。
+- 当前主账：74=31,569位置；90=1,020候选身份；72=434优先项；172=373解释效度核读；87=399条路线；85=160行拆分矩阵。口径不同，不可相加为独立论文数、召回率或穷尽度。T302新增30位置、3个候选身份；T303新增3个引文位置、0个解释可靠性候选。
+- 主要文件：阶段报告00、主账74、矩阵85、路线87、候选90、manifest112、阶段ZIP；侧表`T302_自然图像真实性与完整性解释可靠性_前三页30位置逐条筛查_20261012.csv`与`T303_VAAS_CitedBy3_逐条筛查_20261012.csv`已放入阶段包。ZIP共909个来源文件+manifest，910成员，SHA-256=`b67187c3e9326da77b523dda2541dfd93490c74d267e4302fbcacbdb2a88a678`。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`通过；T302/T303录入脚本连续运行后位置数不增长；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过所有历史与本批断言、唯一性及ZIP CRC/源文件SHA核验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。记录脚本与包检查脚本位于忽略目录`work/search_protocol_v2/`。
+- 访问与遗留：Google Scholar的T302/T303页面均正常；VAAS的ScienceDirect官方页先前显示真人验证。TRUSTPIX的PDF此前显示无访问权限，本轮重访时浏览器自动访问审查两次超时，停止重试且未绕行。三项新增候选都没有进入172，尤其需要查其正式摘要/正文是否含独立解释真值、忠实度、热图定位误差或人评。其余英文细式和种子前后向引文网络仍开放，不宣称文献检索完成或“一个不漏”。
+- 建议下一步：先定向核查90中VAAS、TRUSTPIX、Robust deep learning based system三条新增候选可合法读取的官方摘要/作者稿；遇到正常访问限制时先告知用户。暂不机械翻阅T302剩余约312个估算位置，优先以解释faithfulness、grounding/hallucination、human evaluation等构念分支建立更窄的静态图像取证式，并按74/90/72/172去重。
+
+# 2026-10-12续：T278–T300细分类检索批次交接
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`00dac97435451dda315836061ed9d9537847cd54`，已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。HANDOFF更新将另行提交和推送。两个根目录既有用户未跟踪文件未修改、未暂存。
 - 完成本批T278–T300，新增220个逐条记录的位置：图像操纵解释稳定性、人工评价与解释正确性/忠实性、医学影像边界、幻觉/接地、适当依赖、信任校准、证据一致性及解释可靠性子式。医学影像路线作为边界邻接处理。本批没有新增直接强相关作品；新增90候选表的14项均标为方法学邻接，不作为鉴伪解释的直接效度证据，也没有新增72优先项或172全文核读身份。
