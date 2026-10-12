@@ -1,4 +1,14 @@
-﻿# 2026-10-12续：T232 M-DRUM多模态操纵推理全文效度核读
+﻿# 2026-10-12续：优先细式分类与状态核账（T245–T254）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`461171d23f9391aad6446b6986cac665cc42afa5`，已推送至此前确认并授权的`origin`。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`为866个来源文件+manifest（867成员），SHA-256=`44846f614df4b2fa31114e31d9522a55d0a05360d2ece494a44fe94310eff78d`。
+- 本轮按唯一身份复用并新增T245–T254分类侧表；T251–T254细化图像伪造删除/插入、AI生成图saliency/grounding、forensic explanation faithfulness和图像操纵grounding/hallucination结果。T254逐项细分200个已物化位置：33个解释质量/grounding/幻觉评价候选、25个已有172原文核读身份、12个复用172效度边界的直接候选位置、4个领域综述/引文枢纽、5个视频邻接等。显式区分题录位置、唯一作品和效度证据；ForgeryGPT/X2-DFD重复版本合并复用。路线coverage仍未闭合时只关闭已记录位置分类。
+- 细式总体状态（87）：142条路线中80条标为当前Scholar快照闭合；13条未执行，2条明确访问受阻，另47条已试检但仍开放。当前Chrome查询`deepfake × explanation/attribution/saliency × parameter randomization`可见6/6位置已筛，但这只闭合该快照。整体主题检索/前后向引文网络未完成，不能声称零遗漏。
+- 当前后台账：74=30,920位置；90=1,001候选身份；72=434优先项；172=373篇解释效度核读记录；87=386条路线。不同表的统计单位不同。
+- 主要文件：阶段报告00、清单112、主筛表74、候选90、排序72、核读172、路线87、T245–T248/T250–T254逐项侧表和阶段ZIP。T249没有侧表文件，不要虚报。
+- 检查：`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过历史断言、T254 200位置/唯一ID/分类数/重复身份/未闭合状态检查、ZIP CRC与源文件SHA；`git -c core.whitespace=cr-at-eol diff --check`通过。分类与数据提交先推送；本次HANDOFF更新按规则另行提交和推送。
+- 未完成与下一步：细式尚未全部检索闭合。优先在Google Scholar可访问时处理剩余高信号细式，按87的未闭合状态续查，按74、90、72、172复用已筛位置和唯一身份，避免重筛；对新命中继续区分解释质量、人类评估、grounding/factuality、因果faithfulness、稳定性和适当依赖。Scholar验证阻塞只记录为阻塞，不将其当零命中。
+
+# 2026-10-12续：T232 M-DRUM多模态操纵推理全文效度核读
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T232数据提交：`0a97a43`（Record M-DRUM explanation reliability review）。阶段归档已重建，856个成员（855个来源文件+manifest），SHA-256=`3eb4161c0bdb4ce416b86c95110470b17b6f70c7a739f977d98846aa33a5e6ae`；T232数据提交已完成，HANDOFF更新需另作提交并推送。`origin`仍为此前确认的GitHub仓库。根目录两份用户既有未跟踪文件未修改、未暂存。
 - 从T162此前可见的Scholar第122位补录《Fake News Detection and Manipulation Reasoning via Large Vision-Language Models》（arXiv:2407.02042v1），复用官方arXiv全HTML完成全文效度核读。HFFN含655组图文新闻，face swap/属性编辑等图像操纵有篡改框；12名独立人评者对随机抽样推理按Exactness、Certainty、Detail评分。属于强相关多模态操纵推理/人评邻接，不是图像单模态鉴伪解释可靠性的直接实证。该HTML中的MM'24 DOI/ISBN字段为占位符且引文年份损坏，最终ACM元数据未核实。
