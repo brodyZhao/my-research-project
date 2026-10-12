@@ -1,4 +1,14 @@
-﻿# 2026-10-12续：GReX-Bench全文与精选引文核查、Scholar续查断点
+﻿# 2026-10-12续：T01-F4第1–2页40位置与Scholar验证码断点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`a2c385eba92d3ce42ce3d49ad4397c993ecb849d`，已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。HANDOFF本次更新待单独提交并推送。根目录两个用户未跟踪文件未修改、未暂存。
+- T01-F4检索式：`("image forgery detection" OR "image manipulation detection" OR "AI-generated image detection") (explanation OR attribution OR saliency) (faithfulness OR fidelity OR reliability) (deletion OR insertion OR perturbation)`。Google Scholar动态估算约796条；当前UI为每页20项，已逐位置筛查1–40。前10项复用T272；新增位置11–40见`T314_T01-F4_扰动解释可靠性交叉式_位置11-40逐项筛查_20261012.csv`，30/30逐项有题名身份去重、个别筛选理由和旧结果ID。
+- 新候选：第14位《Explainability-Driven Analysis of AI-Generated Image Detectors: Insights into Generalization and Failure Modes》。CINECA IRIS摘要称其对AIGI检测器做空间/频谱post-hoc解释并考察压缩对解释的影响；机构页无全文附件，书目数据提示未经大学验证。仅列摘要级方法邻接候选进90/72/04，不计入172全文核读；摘要未证实解释faithfulness或正确性指标。第19位Diao等《Vulnerabilities in AI-generated Image Detection: The Challenge of Adversarial Attacks》只研究检测器抗攻击，非解释图稳健性，因此只保留位置日志，不进解释可靠性候选。
+- **访问断点**：由start=20点“下一页”后，Scholar实际载入`start=40`人机验证页（复选框reCAPTCHA），没有结果卡。已即时通知用户、保留Chrome标签981694352并请求用户本人验证。不要把start=40记为零结果；验证恢复后从start=40继续，避免重筛1–40。路线保持未闭合，不能把动态796估算当作实际已筛数量。
+- 当前台账：74=32,052位置；90=1,038候选身份；72=437优先项；13核心排序表=85篇；172=377条解释效度核读；87=412条路线；85矩阵=172行。各表口径不同，不可合并为独立强相关篇数或召回率。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含928个源文件和manifest（929成员），SHA-256=`012eaed8ad65b44e4d492e456b6c890d26fa5fe019aece0d33c10f030f70035a`；T314逐项表、排序目录04和新的完整manifest均在包内。
+- 修改与验证：本数据提交更新00/72/74/85/87/90/112及ZIP。工作脚本`work/search_protocol_v2/record_t314_t01_f4_20261012.py`连续重跑后新增行数均为0，避免重复。`python3 -m py_compile work/search_protocol_v2/record_t314_t01_f4_20261012.py work/search_protocol_v2/package_checkpoint_20261012.py`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过40位置与验证码断点、候选去重、ZIP CRC和源文件SHA断言；`git -c core.whitespace=cr-at-eol diff --check`通过。没有业务源码修改。
+- 遗留与下一步：T01-F4第3页及start=40之后仍未筛，其他未闭合细式/强相关引文链也未完成。用户恢复后先确认该Chrome Scholar标签出现结果卡，再从第3页逐项筛；按74/90/72/172复用已核身份。遇新访问限制先立即报告并保留准确断点，不重跑已经筛过的位置。
+
+# 2026-10-12续：GReX-Bench全文与精选引文核查、Scholar续查断点
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本轮数据提交 `30f02bc`（Record GReX-Bench full-text audit and access checkpoint）；origin仍为已确认的 `https://github.com/brodyZhao/my-research-project.git`。数据提交待推送；用户此前已明确授权推送。根目录既有两个用户未跟踪文件未修改/暂存。
 - GReX-Bench（ResearchSquare DOI `10.21203/rs.3.rs-8633550/v1`）官方55页静态PDF全文已核；ResearchSquare DOI落地页与SSRN `abstract_id=6032054`记录页仍403。SSRN题名与ResearchSquare稿件的关系基于Scholar题录/摘要片段相似暂列“可能相关”，未找到明确版次声明，因此不声称确认合并或拆分。正文展示Saliency/Grad-CAM、SHAP、Sobol和LLM报告，但未发现解释GT、人评解释正确性、parameter-randomization sanity check、deletion/insertion faithfulness、攻击下解释稳定性或恰当依赖评测。归类为高任务相关的XAI benchmark/method neighbor，不计作直接解释可靠性正向证据。摘要写16 detectors/8 datasets、结论写8 methods/7 datasets；第9页还残留编辑提示句，作为报告一致性问题记录。
