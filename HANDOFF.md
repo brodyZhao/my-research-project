@@ -1,4 +1,14 @@
-﻿# 2026-10-12续：T311快照闭合与Spider-Net候选审查
+﻿# 2026-10-12续：GReX-Bench全文与精选引文核查、Scholar续查断点
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本轮数据提交 `30f02bc`（Record GReX-Bench full-text audit and access checkpoint）；origin仍为已确认的 `https://github.com/brodyZhao/my-research-project.git`。数据提交待推送；用户此前已明确授权推送。根目录既有两个用户未跟踪文件未修改/暂存。
+- GReX-Bench（ResearchSquare DOI `10.21203/rs.3.rs-8633550/v1`）官方55页静态PDF全文已核；ResearchSquare DOI落地页与SSRN `abstract_id=6032054`记录页仍403。SSRN题名与ResearchSquare稿件的关系基于Scholar题录/摘要片段相似暂列“可能相关”，未找到明确版次声明，因此不声称确认合并或拆分。正文展示Saliency/Grad-CAM、SHAP、Sobol和LLM报告，但未发现解释GT、人评解释正确性、parameter-randomization sanity check、deletion/insertion faithfulness、攻击下解释稳定性或恰当依赖评测。归类为高任务相关的XAI benchmark/method neighbor，不计作直接解释可靠性正向证据。摘要写16 detectors/8 datasets、结论写8 methods/7 datasets；第9页还残留编辑提示句，作为报告一致性问题记录。
+- 对引文[48] Simonyan、[49] Grad-CAM、[50] Sobol、[51] CNN+XAI生成图检测、[52] Gaintseva等、[80] AI-generated image detector sanity check共6项逐条筛查并复用现有作品身份；其中[80]是检测器层面的sanity check，不等于解释faithfulness sanity check。参考书目合计143项，其余137项未筛；`T313_GReXBench_解释可靠性全文与六条选引逐项筛查_20261012.csv`与PDF均收在阶段包。T01-F4首屏P05/P07旧记录已更正。
+- Google Scholar细式T01-F4第1页10/10已有记录。2026-10-12通过Chrome请求`start=10`返回`ERR_CONNECTION_CLOSED`（无结果页、无验证码）；已按访问失败保存断点，不当作零命中。该路线约796个动态结果，仍开放。用户要求遇到访问受限先汇报，已即时报告；恢复前不重试该页。
+- 本轮计数：74=32,022个检索/引文/核验位置；90=1,037候选身份行；72=436优先项；13仍85篇；172=377条效度核读；87=412条路线；85=172条矩阵。统计单位不同，不代表独立强相关论文数、召回率或领域穷尽。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`有927个源文件+manifest（928成员），SHA-256=`cf79d842bf0ec066d8f80ea71b29506275a5acea60043934622a1e06aebe6a30`。
+- 主要修改：阶段报告00、清单112、候选90、优先72、主账74、矩阵85、路线87、核读172及阶段ZIP。忽略输出目录中的排序目录04、T272更正侧表和T313精选引文逐条表由ZIP/manifest收录；核心台账及阶段包已纳入提交。录入脚本连续运行两次，计数稳定，无重复追加；验证`python3 -m py_compile work/search_protocol_v2/record_grexbench_20261012.py work/search_protocol_v2/package_checkpoint_20261012.py`通过，`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过T313六条引用、候选身份、开放断点及ZIP CRC/逐文件SHA检查，`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改。
+- 遗留及下一步：英文细分类和强相关引文网络仍未完成。先等T01-F4 `start=10`的Chrome/Scholar访问恢复，再从该页续筛并复用74/90/72/172，不重筛首屏。当前已打开的Spider-Net精确式与T304 confidence/uncertainty式均已有完成记录，不要重复。遇新的访问限制先立即告知用户并记录断点。不要把Google Scholar单一查询分页或文献引用样本称为全域穷尽。
+
+# 2026-10-12续：T311快照闭合与Spider-Net候选审查
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`e3dde87`；目标远端仍为已确认的`origin https://github.com/brodyZhao/my-research-project.git`，本次提交待推送。用户先前已明确要求推送检索工作。根目录的两个用户未跟踪文件未修改/暂存。
 - T311检索式：`("image forgery" OR "image manipulation detection" OR "image tampering") (explanation OR "saliency map" OR "attribution map") ("ground truth mask" OR "ground-truth mask" OR "manipulation mask" OR "localization mask") (IoU OR overlap OR localization OR pointing)`。Google Scholar正常结果页start=0至180共198个实际位置逐条筛选；终页显示198项、第10页18条，额外核查start=200为空，闭合的是当前查询快照而非领域穷尽。逐项侧表`T311_MaskAlignment_IoU_Pointing_逐项筛查_截至start180_20261012.csv`共198行。
