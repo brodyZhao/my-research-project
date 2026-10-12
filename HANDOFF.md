@@ -1,4 +1,15 @@
-﻿# 2026-10-12续：T302静态图像真实性细式与T303 VAAS施引追踪
+﻿# 2026-10-12续：T304置信度/不确定性图细分类检索交接
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮数据提交：`c0e798110c27ede65107ec408f3a7f426d7e86c9`，已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。本条HANDOFF待单独提交并推送。根目录两个既有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
+- T304查询式：`("image forgery" OR "image manipulation detection" OR "image tampering") ("confidence map" OR "uncertainty map" OR "localization uncertainty" OR "pixel-wise uncertainty") (explanation OR interpretation OR reliability)`。Google Scholar start=0至70共8页、74个实际位置均逐项筛查；首页估数约84，终页显示74且无Next。当前可见分页快照闭合，不代表领域穷尽。已逐行记录到主账74和T304侧表；TriFor和SPN重复版本按同一作品身份去重。
+- 90候选表新增10条“任务可靠性邻接”分类记录，其中7个作品身份此前未在74主账出现；另3个（ForgerySpotter、Progressive Decision-Making、PD2Net）已在74主账出现，本轮仅补入候选分类，不是新发现。候选包括uncertainty-guided IMD、uncertainty-aware localization、inpainting uncertainty、SAR-Net、ForgerySpotter、dual-entropy deepfake detection、EGA-Net、Progressive Decision-Making、PD2Net、frequency-attention inpainting forensics。它们多评估检测/定位置信输出；没有因此升入72或172。既有SGEVL-Forensics与MMFusion身份按90/72/172复用。此细式没有新增本轮确认的外显解释faithfulness实证。
+- 页面访问：T304 Scholar分页正常，没有验证码/流量限制。定向核对ScienceDirect的uncertainty-aware localization正式页面返回403，IEEE Xplore的inpainting-uncertainty正式页面返回418；已停止重试并先向用户报告，等待其如能在Chrome恢复后告知。未绕过访问控制。Springer EGA-Net、ScienceDirect SAR-Net和arXiv Progressive Decision-Making公开摘要可读；被限来源仍是摘要级候选，不属于全文核读。
+- 台账：74=31,643个观察/书目/核验位置；90=1,030候选身份行；72=434优先排序行；172=373条效度核读行；87=400条路线；85=161行矩阵。各表单位不同，不可推算独立强相关篇数、召回率或零遗漏。
+- 主要输出：报告00、台账74/85/87/90、manifest112、阶段ZIP`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`。逐项文件`T304_置信度与不确定性图_74位置逐条筛查_20261012.csv`随ZIP交付。ZIP含910个来源文件及manifest（911成员），SHA-256=`a34aa4fd66eac3597bfa102a570c6278a628ada4b26afda5fbdb6956e38e0c61`。T304记录脚本和包检查脚本留在本地忽略目录`work/search_protocol_v2/`，不提交。
+- 验证：`python3 work/search_protocol_v2/record_t304_confidence_uncertainty_20261012.py`连续运行两次，74/10/400/161计数稳定；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过T304逐位置、重复作品、候选去重、terminal快照、历史检查点和ZIP CRC/源SHA校验；`git -c core.whitespace=cr-at-eol diff --check`及暂存差异检查通过。无业务代码改动。
+- 遗留与下一步：英文主题检索及高信号作品前后向引文网仍未闭合，不宣称全域完成。优先继续静态图像操纵/真实性的faithfulness、grounding/hallucination、human evaluation精细词族及未完成的核心论文引文边；不要重刷T304的74个位置或重读既有身份。两处出版社限制恢复后再对其官方摘要/正文核查，并继续在表中区分定位置信度与外显解释可靠性。
+
+# 2026-10-12续：T302静态图像真实性细式与T303 VAAS施引追踪
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索数据提交：`ecca9bdf5b73a060bceedc6f20bcf44403676b61`，已推送到确认的`origin https://github.com/brodyZhao/my-research-project.git`。本条HANDOFF将单独提交并推送；最终HEAD以HANDOFF提交为准。根目录两个既有用户未跟踪文件保持原样、未暂存。
 - T302检索式：`("photo forgery" OR "image alteration detection" OR "image integrity verification") (explanation OR interpretability OR saliency) (faithfulness OR fidelity OR reliability OR "human evaluation")`。Google Scholar三页start=0/10/20各10条，30/约342估算位置逐项筛查；第3页仍有Next，路线coverage为False且保持开放。首屏复用已有LIME拼接解释候选，另增VAAS、TRUSTPIX两个局部证据候选；第2页新增低置信Robust deep learning based system候选，并复用已有Guillaro博士论文候选；第2–3页其余多是完整性水印/加密、医学数据来源校验、检测综述或检测算法。没有新增72优先项或172全文效度核读。
