@@ -1,0 +1,2 @@
+﻿query_id,matrix_status_before,route_status_evidence,valid_pages,valid_positions,visible_terminal,coverage_complete,main_ledger_positions,reconciliation_action,scope_note
+T02-F3-S3,可见末页已记录；原稿筛选待核,可见末页已记录；逐位置筛选完成；估计数63→53波动，原稿筛选待核,6,53,True,True,53,同步85状态为已筛；复用74既有逐位置理由，不重复人工筛查或读取全文。,估数63→53已经记录；仅指该精确查询快照，不表示父任务词族召回完整。
