@@ -1,4 +1,15 @@
-﻿# 2026-10-12续：T228 Addressing the Shortcomings身份恢复与旧筛查差分迁移
+﻿# 2026-10-12续：T230 YO-ReX参考闭环与四篇图像XAI方法邻接全文核读
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新数据提交：`b5d151b2707c647384f5671eee4213596a1ffa44`（Screen YO-ReX references and review image XAI neighbors），已推送到确认的`origin https://github.com/brodyZhao/my-research-project.git`。HANDOFF本条按规则另作提交并推送。两份既有用户未跟踪文件保持未修改、未暂存。
+- 从Safe & Trusted AI机构作者简介追溯到Aditi Ramaswamy合著的《You Only Explain Once》（arXiv:2311.14081v1）。论文提出基于因果责任的目标检测器像素充分解释，全文已核。YO-ReX官方References [1]–[28]已28/28逐条记录题名、主题判断、筛选理由、来源与身份复用；T230参考侧表为`T230_YO-ReX_References28_逐位置筛查_20261012.csv`。新增四个图像XAI方法邻接身份，并全文核读YO-ReX、《Explanations for Occluded Images》、《Multiple Different Black Box Explanations for Image Classifiers》和《One Explanation is Not Enough: Structured Attention Graphs for Image Classification》。后三篇分别提供遮挡区域接地、多解释/模型错误诊断和人类反事实预测任务证据；四篇都没有图像鉴伪真实性任务或独立法证证据真值，不应列为直接鉴伪可靠性实证。详情在`T230_四篇图像XAI方法邻接_全文解释效度核读_20261012.csv`。
+- 修正书目元数据：YO-ReX引文中的“Explaining YOLO”是arXiv:2211.12108及OAGM 2021工作坊DOI 10.3217/978-3-85125-869-1-13；“Explanations for Occluded Images”正式页码1234–1243。作者线索题名/主题筛查在`T230_STAI作者线索_逐项主题筛查_20261012.csv`。
+- 更新后台账：74=30,542个结果/书目/核验位置；90=980条候选身份；72=414项优先排序；172=364条全文/摘要解释效度核读；87=379条检索/引文/访问路线。单位不同，不能相加成强相关独立论文总量、召回率或领域穷尽度。T230新增29条主账位置（一个全文身份+28书目位置）、4个方法邻接身份、4条全文效度核读和1条路线；没有新增Scholar命中。
+- 归档`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含854个来源文件+manifest，共855成员；SHA-256=`ee1b5f5f8cb2d504663b48f67c2cdd54293a9edd4a88b6d40555a6c01285c95f`。主要修改：阶段报告00、台账74/90/72/172/87、manifest112、三个T230侧表和阶段ZIP。
+- 验证：`record_t230_yorex_multirex_20261012.py`连续运行两次后计数稳定；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过历史断言、28个连续参考位置、T230精确计数、ZIP CRC与所有源文件SHA-256核对；`git -c core.whitespace=cr-at-eol diff --check`通过。录入/打包脚本位于忽略目录`work/search_protocol_v2/`，未纳入Git。
+- 浏览器实测：Scholar Cited-by标签981694283仍显示reCAPTCHA，没有新结果卡；SSRN XAGR题录页981694235显示Cloudflare“正在进行安全验证”。本轮未把“已恢复”响应记成页面读取成功，没有重复请求用户处理验证码；通过可读arXiv、NeurIPS、ICCV和SAGE正式来源独立完成上述筛查与全文核读。
+- 遗留：总体英文主题检索、直接鉴伪候选的未核正文、以及高信号作品的前后向引文网络仍开放；不声称“一个不漏”。下一步先按稳定身份差分90/72/172/87，核读未入172且与鉴伪解释评估直接相关的最高优先候选及未闭合引用链。不要重刷YO-ReX References [1]–[28]和四篇T230全文；仅在Scholar实际新结果页可读时继续计录，不把验证码页计入结果。
+
+# 2026-10-12续：T228 Addressing the Shortcomings身份恢复与旧筛查差分迁移
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交`9a2b27b`（Restore SSRN image explanation candidate to V2 ledgers）已推送到已确认的`origin`。本HANDOFF更新仍需独立提交并推送。根目录两份既有用户未跟踪文件未修改/未暂存。
 - 差分发现并修复一处活动台账缺口：`Addressing the Shortcomings of Spatial-Domain Tools in Explaining Synthetic Image Detection Models`原在旧72优先表rank 50、旧稳定身份`L-bc2db555b5f748`及Scholar/SSRN记录中，缺少当前90候选与74逐位置映射。本轮按旧ID恢复，SSRN官方题录/摘要确认作者Aditi Ramaswamy、Hana Chockler，2026-05-22 SSRN预印本，41页，DOI 10.2139/ssrn.6811534。摘要直接讨论合成图检测的空间域解释是否含有与模型决定相关的信息，因此保留高相关性；未把摘要层面的批评写成已证明的faithfulness失败。
