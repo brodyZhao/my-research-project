@@ -1,4 +1,15 @@
-﻿# 2026-10-12续：T231 XAGR公式与书目差分核对、Malolan全文状态复核
+﻿# 2026-10-12续：T232 M-DRUM多模态操纵推理全文效度核读
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T232数据提交：`0a97a43`（Record M-DRUM explanation reliability review）。阶段归档已重建，856个成员（855个来源文件+manifest），SHA-256=`3eb4161c0bdb4ce416b86c95110470b17b6f70c7a739f977d98846aa33a5e6ae`；T232数据提交已完成，HANDOFF更新需另作提交并推送。`origin`仍为此前确认的GitHub仓库。根目录两份用户既有未跟踪文件未修改、未暂存。
+- 从T162此前可见的Scholar第122位补录《Fake News Detection and Manipulation Reasoning via Large Vision-Language Models》（arXiv:2407.02042v1），复用官方arXiv全HTML完成全文效度核读。HFFN含655组图文新闻，face swap/属性编辑等图像操纵有篡改框；12名独立人评者对随机抽样推理按Exactness、Certainty、Detail评分。属于强相关多模态操纵推理/人评邻接，不是图像单模态鉴伪解释可靠性的直接实证。该HTML中的MM'24 DOI/ISBN字段为占位符且引文年份损坏，最终ACM元数据未核实。
+- T162持久化主账只有前60位与孤立位置122（共61项）；之前视觉翻阅过的宽式尾部没有逐位置保存，因此87继续标`coverage_complete=False`，不声称完成。用户当前查看的精确式`(deepfake OR "face forgery" OR "facial manipulation") × (explanation OR attribution OR saliency) × (parameter randomization)`对应`T11-F4-S2`，已逐项筛查当前5/5个位置并闭合该查询快照：2篇直接相关论文复用既有身份，3项按边界排除，不重刷。
+- 当前87路线共379条，其中279标记完成、100未闭合（17条未执行，其余存在部分试检、阻塞、不稳定或待补证状态）。此数是查询/引文/访问路线状态，非论文总数或全域穷尽度。整体检索仍未完成且不能承诺零遗漏。
+- 更新台账：74=30,543位置；90=981候选身份；72=415优先项；172=365篇效度核读；87=379条路线。T232只新增长表位置122、1篇候选/排序身份和1条全文核读；没有新增路线。
+- 主要修改：`00_重检阶段报告_未完成.md`、台账74/72/87/90/172、`112_本次阶段包_SHA256清单.csv`、阶段ZIP。忽略目录录入脚本`work/search_protocol_v2/record_t232_mdrum_full_review_20261012.py`执行两次幂等；打包/历史断言/ZIP CRC及源文件哈希通过，`python3 -m compileall -q work/search_protocol_v2`通过，CRLF-aware `git diff --check`通过。
+- 遗留：全局主题检索/引文网络未闭合，仍有100条路线开放；优先从17条未执行路线中选高召回细式试检，再按新发现直接候选的参考与被引链去重筛查。不要重筛T11-F4-S2、T162的前60个位置、已读M-DRUM全文或已登记位置122。T162先不要机械重刷低精度尾页；若续查，逐项持久化并使用候选身份复用过滤。
+- ChatGPT Web下一步：根据87的`coverage_complete=False`筛出17条未执行细式并按任务族与评价构念排序；已完成路线不重开。优先扩充非deepfake静态图像操纵/图像真实性检索，持续区分直接证据、方法邻接和跨模态媒体推理。
+
+# 2026-10-12续：T231 XAGR公式与书目差分核对、Malolan全文状态复核
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本节数据提交：`174a89e`（Reconcile XAGR explanation metrics and references），已推送到已确认的`origin https://github.com/brodyZhao/my-research-project.git`。两个根目录既有未跟踪用户文件未修改、未暂存。
 - 重新视觉核读XAGR官方16页SSRN预印本的公式和正文：Eq. (2)/算法印刷为`Mean(|S_norm(x)| - |G_norm(x)|)`，没有对两张图的差取绝对值；图2示意则像是绝对图差。因为归一化图非负，按印刷式它是有符号均值差而非像素MAE；未核代码，训练目标有歧义。评估Eq. (4)–(6)另定义绝对逐像素差，EfficientNet-B0误差0.132降到0.055（58.31%），只支持评估时Saliency/Grad-CAM图之间更一致。EfficientNet accuracy .83611→.84028、F1 .83682→.82684（下降）、AUC .9235→.9250，结果并非指标一致改善。24,000个Celeb-DF v2帧被分为16,800/3,600/3,600，但论文未说明源视频级隔离。已修正之前“训练损失是mean absolute pixel difference”的过度断言，更新T182、172、74、90、72。
