@@ -1,4 +1,15 @@
-﻿# 2026-10-12续：T225–T227 Focused LRP引文链核读与ACM全文访问复核
+﻿# 2026-10-12续：T228 Addressing the Shortcomings身份恢复与旧筛查差分迁移
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交`9a2b27b`（Restore SSRN image explanation candidate to V2 ledgers）已推送到已确认的`origin`。本HANDOFF更新仍需独立提交并推送。根目录两份既有用户未跟踪文件未修改/未暂存。
+- 差分发现并修复一处活动台账缺口：`Addressing the Shortcomings of Spatial-Domain Tools in Explaining Synthetic Image Detection Models`原在旧72优先表rank 50、旧稳定身份`L-bc2db555b5f748`及Scholar/SSRN记录中，缺少当前90候选与74逐位置映射。本轮按旧ID恢复，SSRN官方题录/摘要确认作者Aditi Ramaswamy、Hana Chockler，2026-05-22 SSRN预印本，41页，DOI 10.2139/ssrn.6811534。摘要直接讨论合成图检测的空间域解释是否含有与模型决定相关的信息，因此保留高相关性；未把摘要层面的批评写成已证明的faithfulness失败。
+- 6个既有发现位置（V107-8、GS009-0345、GS041-0013、GS042-0001、GS070-0001、GS071-0001）和41个既有SSRN公开关联参考位置都已逐条映射到74，迁移侧表`T228_SSRN6811534_旧Scholar位置与41条公开关联参考位置迁移日志_20261012.csv`随阶段ZIP交付。没有重复搜索或筛查。41条是页面公开关联列表，不能确认等同于未取得PDF的原始参考书目，也没有通读被引作品。
+- 正文边界：SSRN官方题录/摘要可通过官方索引复核；当前Chrome PDF delivery标签仍显示Cloudflare真人验证，因此此轮不补172全文效度表。作品仍为90中的直接强相关候选、rank 50；下一步要找作者/机构稿并核读模型、空间/频域实验、评价真值和协议，再核对正式出版状态。
+- 更新后台账：74=30,511个位置（其中本轮47项为旧位置迁移），90=974候选身份，72=408项优先排序，172=360条全文/摘要/效度核读，87=377条路线。各表计数单位不同，不能解释为强相关独立作品数、召回率或“一个不漏”。Google Scholar当前Chrome查询标签实测仍显示reCAPTCHA；本轮未新增Scholar页面结果。
+- 主要修改：阶段报告00、台账74/90/72/87、manifest112、阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`。ZIP含850个源文件及manifest（851个成员），SHA-256=`c3a5b532176dc2acc3015e7545a689e8e1e9345a72b2e52bc55ff8fe6080e8d9`。T225/T226核读及引文资料、T207摘要访问审计、T228迁移侧表均在归档内。
+- 测试：`record_t228_ssrn_ledger_reconciliation_20261012.py`连续运行两次幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`package_checkpoint_20261012.py`验证历史检查点、47条逐位置记录、41个连续引文位置、6个旧搜索命中复用、身份唯一性、所有表计数、ZIP CRC和源文件哈希；`git -c core.whitespace=cr-at-eol diff --check`通过。代码脚本位于本地忽略目录`work/search_protocol_v2/`，不在Git提交中。
+- 遗留：本篇PDF正文、41页参考书目的原稿对照和前向引用链未完成；T207 ACM正文/书目未闭合；总体英文主题查询和引文网络仍开放。下一步按稳定ID继续找该SSRN稿的可读版本，并按90/72/172差分选择其他缺全文直接候选；Scholar恢复后从真正未筛的新位置继续，复用旧记录。
+
+# 2026-10-12续：T225–T227 Focused LRP引文链核读与ACM全文访问复核
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本节数据提交：`231aa2a`（Review Focused LRP citation chain and audit ACM access），已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF更新按仓库规则另作提交并推送。根目录原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未改动、未暂存。
 - T225《Focused LRP: Explainable AI for Face Morphing Attack Detection》已核读CVF官方WACV Workshops 2021九页全文。像素替换测试给出模型敏感性代理，作者承认没有真实解释ground truth规定要替换哪些区域/比例；因此不能视为解释充分性/必要性或因果faithfulness真值。它与已读的Feature Focus期刊版本按同一研究线去重，不作为独立复制研究。官方参考文献[1]–[30]全数逐位置完成题名/主题筛查；这是30个书目位置筛查，不是30篇全文审查。筛查表、全文效度表和版本/引文交叉表在阶段ZIP内。
