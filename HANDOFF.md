@@ -1,4 +1,23 @@
-﻿# 2026-10-12续：T304置信度/不确定性图细分类检索交接
+﻿# 2026-10-12续：T311空间解释对齐与访问断点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索数据提交：`98bea56`（T311 explanation mask alignment search），已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`；本条HANDOFF更新随后单独提交并推送。根目录既有两个用户未跟踪文件保持未修改、未暂存。
+- T311检索式：`("image forgery" OR "image manipulation detection" OR "image tampering") (explanation OR "saliency map" OR "attribution map") ("ground truth mask" OR "ground-truth mask" OR "manipulation mask" OR "localization mask") (IoU OR overlap OR localization OR pointing)`。正常结果快照显示约208条，首屏10条逐项筛查，侧表`T311_MaskAlignment_IoU_Pointing_首屏10位置逐项筛查_20261012.csv`完整记录；7个既有身份复用，另有版本重复与定位算法邻接。新候选Kumar & Kour (iCoMET 2026, DOI 10.1109/iCoMET69771.2026.11592040)使用IoU、energy concentration和pointing game评估解释定位图与DEFACTO篡改真值空间对齐，直接相关但目前只有摘要级证据；不纳入172全文核读。
+- 访问状态：Kumar & Kour的IEEE Xplore摘要/元数据可读，PDF明确显示无访问权限、正文要求登录且参考文献不可用；已停在摘要层。Google Scholar同式在Chrome显示“Please show you're not a robot”及reCAPTCHA；已将Chrome标签标为handoff并请求用户本人恢复，未继续分页。恢复后从T311 `start=10`开始，首屏10项不要重筛。T307–T310此前已保存，T307/T309宽式首屏已筛但路线开放、T308仅精确式零结果快照、T310仅28卡快照闭合。
+- 当前统计：74=31,801位置；90=1,033候选身份行；72=434优先项；172=373全文效度核读；87=409条路线；85=169行矩阵。单位不同，不等于独立论文数或召回率。阶段ZIP含918个来源文件及manifest（919个成员），SHA-256=`15dd918bce62faf7257cdf6ed884eeff23fad7ac6e7eb07d6e799bc4fdb8cd94`。
+- 主要修改：阶段报告00、清单112、主账74、矩阵85、路线87、候选90、T311逐项侧表和阶段ZIP。验证：`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过历史断言、T311 10位置与开放状态断言、ZIP CRC及源文件SHA核验；`git -c core.whitespace=cr-at-eol diff --check`通过。仅提交目标输出文件；根目录用户文件未暂存。
+- 遗留与建议下一步：优先等Scholar用户验证恢复后续查T311后续页，已筛身份按74/90/72/172复用；若IEEE机构访问未恢复，保留摘要级结论，不尝试绕过限制。整体英文细分类检索及所有强相关引文链仍未完成，不能宣称无遗漏。遇新来源访问限制要先立即告知用户、写入断点，再推进不依赖受限来源的路线。
+
+# 2026-10-12续：T307–T310细分类检索记录
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T305–T310数据提交：`4afb1c927a318d3bc957ab2622a6ea57ba3df44c`，已推送到确认的`origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF更新随后单独提交并推送。根目录两个既有用户未跟踪文件保持未修改、未暂存。
+- T307 inpainting/object-removal宽式首屏10/约2,730结果逐条筛查；只补入TGIF2与inpainting-forensics survey作任务背景，重复率高，路线保持开放且不机械翻页。T308 exact faithfulness/fidelity/reliability式正常返回0条，仅关闭精确措辞快照。T309人评窄式首屏10/约508结果逐条筛查，强相关身份均在既有候选/核读表中，保持开放。T310 evidence-grounding×human evaluation式在start=0/10/20共28个实际位置逐项筛查；终页8条且无Next，关闭当前Scholar快照，不外推领域穷尽。T310未新增唯一直接候选。四条查询与单条理由均记入主账74及T308/T309/T310侧表；不重筛已登记身份。
+- 台账：74=31,791个观察/书目/核验位置；90=1,032候选身份行；72=434优先项；172=373条解释效度核读；87=408条路线；85=168行矩阵。统计单位不同，不可相加成独立强相关篇数、召回率或零遗漏证明。
+- 修改文件：阶段报告00、清单112、台账74/72/85/87/90/172、阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`。T308零结果快照、T309十位置和T310二十八位置逐项CSV随包交付。ZIP含917个来源文件及manifest（共918成员），SHA-256=`82abf4d27b2b21329856f170b024ce5fd48d1cd2e9dacd12879314a2efaa2da5`。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`、`python3 work/search_protocol_v2/package_checkpoint_20261012.py`、`git -c core.whitespace=cr-at-eol diff --cached --check`均通过；包检查确认历史检查点、T307–T310条目、幂等身份去重、ZIP CRC及来源SHA。提交只含9个目标输出文件；两份根目录用户未跟踪文件未暂存。
+- 访问状态：T307–T310的Scholar页面均正常。本批没有新访问限制；此前已报告的MDPI 429及Springer订阅墙保持在原断点，未重试或绕过。
+- 遗留与下一步：整体英文主题发现和全部强相关前后向引文链仍未完成。优先续做尚未闭合的高信号细式与新强相关作品引文差分；按74/90/72/172身份复用已筛结果，避免重复。T307/T309只完成首屏；T308只闭合精确式；T310只关闭28条当前快照。遇到任何新访问限制，立即报告具体来源、页面和状态后暂停该来源操作，同时只推进不依赖它的路线。不得把单个Scholar快照称为全域无遗漏。
+
+# 2026-10-12续：T304置信度/不确定性图细分类检索交接
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮数据提交：`c0e798110c27ede65107ec408f3a7f426d7e86c9`，已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。本条HANDOFF待单独提交并推送。根目录两个既有用户未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
 - T304查询式：`("image forgery" OR "image manipulation detection" OR "image tampering") ("confidence map" OR "uncertainty map" OR "localization uncertainty" OR "pixel-wise uncertainty") (explanation OR interpretation OR reliability)`。Google Scholar start=0至70共8页、74个实际位置均逐项筛查；首页估数约84，终页显示74且无Next。当前可见分页快照闭合，不代表领域穷尽。已逐行记录到主账74和T304侧表；TriFor和SPN重复版本按同一作品身份去重。
