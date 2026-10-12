@@ -1,4 +1,14 @@
-﻿# 2026-10-12续：T311空间解释对齐与访问断点
+﻿# 2026-10-12续：T311快照闭合与Spider-Net候选审查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`e3dde87`；目标远端仍为已确认的`origin https://github.com/brodyZhao/my-research-project.git`，本次提交待推送。用户先前已明确要求推送检索工作。根目录的两个用户未跟踪文件未修改/暂存。
+- T311检索式：`("image forgery" OR "image manipulation detection" OR "image tampering") (explanation OR "saliency map" OR "attribution map") ("ground truth mask" OR "ground-truth mask" OR "manipulation mask" OR "localization mask") (IoU OR overlap OR localization OR pointing)`。Google Scholar正常结果页start=0至180共198个实际位置逐条筛选；终页显示198项、第10页18条，额外核查start=200为空，闭合的是当前查询快照而非领域穷尽。逐项侧表`T311_MaskAlignment_IoU_Pointing_逐项筛查_截至start180_20261012.csv`共198行。
+- Spider-Net《Semantic attention and progressive training for image authenticity assessment and tampered region highlighting》经Scholar精确题名检索1条，确认与T311 position 22同为DOI `10.1016/j.ins.2026.123699`，复用同一作品身份。已列入90候选表、72优先清单rank 66.25、13原页复核排序和172部分效度审阅。ScienceDirect官方摘要/引言明确将semantic attention作为visual explanation，报告遮除高亮区后置信下降约0.11（CAM约0.02–0.03），构成直接扰动响应代理；全文PDF仍需机构登录或购买，协议、mask定量值和其他效度测试未知。出版商页面显示2026-10-25期号日期（晚于当前检索日2026-10-12），online-first日期未核；官方链接的GitHub仓库为空。官网Reference总数50，页面可见25条已逐条筛查；其余25条仍受全文限制。EDSAN身份和之前38条参考筛查复用。
+- 访问状态：Google Scholar T311及精确题名页正常。ScienceDirect人机验证已恢复，但该文全文访问仍有订阅/机构限制；不绕过。Tell-Tale Watermarks的IEEE Xplore网页读取此前遇到机器人验证，结论仅依据可读arXiv v2全文。
+- 统计单位不可相加：74=32,015个检索/引文/核验位置；90=1,037候选身份行；72=435优先项；13=85核心排序项；172=376条效度记录；87=411条路线；85=171行矩阵。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含926个来源文件和1份manifest（927成员），SHA-256=`cd612009830ff276cd04edae9bf85c6f5cd2b1b2cd763d2482f94ae7280b6aa4`。
+- 修改文件：阶段报告00、优先清单72、主账74、矩阵85、路线87、候选90、全文/摘要效度表172、manifest112和阶段ZIP；T311/T312逐项侧表及排序目录04/13收在ZIP中。验证：`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过198位置、Spider-Net单一身份、25条参考和ZIP CRC/SHA断言；记录脚本连续运行未重复追加。没有业务源码改动。
+- 遗留与建议下一步：英文细分类与强相关引文链仍未全部完成；87中仍有104条路线未闭合，其中不少是明确暂停的高噪声宽式。下一步从尚未完成且高信号的英文细式继续，先按74/90/72/172去重，再筛当前分页位置；遇到新访问限制先立即向用户报告。不要重筛T311已完成的198位置或Spider-Net可见参考1–25。
+
+# 2026-10-12续：T311空间解释对齐与访问断点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索数据提交：`98bea56`（T311 explanation mask alignment search），已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`；本条HANDOFF更新随后单独提交并推送。根目录既有两个用户未跟踪文件保持未修改、未暂存。
 - T311检索式：`("image forgery" OR "image manipulation detection" OR "image tampering") (explanation OR "saliency map" OR "attribution map") ("ground truth mask" OR "ground-truth mask" OR "manipulation mask" OR "localization mask") (IoU OR overlap OR localization OR pointing)`。正常结果快照显示约208条，首屏10条逐项筛查，侧表`T311_MaskAlignment_IoU_Pointing_首屏10位置逐项筛查_20261012.csv`完整记录；7个既有身份复用，另有版本重复与定位算法邻接。新候选Kumar & Kour (iCoMET 2026, DOI 10.1109/iCoMET69771.2026.11592040)使用IoU、energy concentration和pointing game评估解释定位图与DEFACTO篡改真值空间对齐，直接相关但目前只有摘要级证据；不纳入172全文核读。
