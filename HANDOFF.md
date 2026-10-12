@@ -1,4 +1,15 @@
-﻿# 2026-10-12 T222–T224：图像主张核查与高信号引文链
+﻿# 2026-10-12续：T225–T227 Focused LRP引文链核读与ACM全文访问复核
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本节数据提交：`231aa2a`（Review Focused LRP citation chain and audit ACM access），已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF更新按仓库规则另作提交并推送。根目录原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`和`literature/forensic-explanation-relevance-20261004.md`未改动、未暂存。
+- T225《Focused LRP: Explainable AI for Face Morphing Attack Detection》已核读CVF官方WACV Workshops 2021九页全文。像素替换测试给出模型敏感性代理，作者承认没有真实解释ground truth规定要替换哪些区域/比例；因此不能视为解释充分性/必要性或因果faithfulness真值。它与已读的Feature Focus期刊版本按同一研究线去重，不作为独立复制研究。官方参考文献[1]–[30]全数逐位置完成题名/主题筛查；这是30个书目位置筛查，不是30篇全文审查。筛查表、全文效度表和版本/引文交叉表在阶段ZIP内。
+- T225参考[25]引出T226 Seibold等2020年JISA《Accurate and robust neural networks for face morphing attack detection》。已读Fraunhofer链接的arXiv:1806.04265v1作者稿，并核对期刊DOI/版本别名；作者使用LRP诊断检测决策与morph局部鲁棒性，不是独立解释器验证。最终期刊版尚未与作者稿逐页比较。
+- T227仅重核原有高优先T207《Multimodal Large Models for Image Tampering Detection and Explanation: From Detection to Reasoning》的官方ACM DOI记录/摘要。确认DFF@MM 2025、作者、页码135–141及摘要方法；Chrome直接访问显示Cloudflare安全页，全文仍未取得。解释排序真值、评分者协议/一致性和参考书目尚未核。复用候选/排名身份，不新增Scholar命中或172全文评审；新增的是一条访问/元数据核查记录。
+- 后台账最新：74=30,464个结果/引文/定向来源位置；90=973条候选作品身份；72=408项优先排序；172=360条全文/摘要/效度核读；87=376条路线。统计单位各异，不能换算为强相关独立作品数、召回率或零遗漏证明。Google Scholar当前Chrome Cited-by标签实测仍显示reCAPTCHA；SSRN PDF标签实测仍显示Cloudflare真人验证页。本轮没有新筛Scholar结果；不重复已处理分页、T225三十个参考位置或既有论文身份。
+- 主要修改文件：阶段报告`outputs/图像鉴伪解释可靠性_重检_2026-10-05/00_重检阶段报告_未完成.md`；台账`172/72/74/87/90`和manifest `112`；阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`。归档含849个源文件与manifest，共850成员；SHA-256=`717e6e787a131e93867a0bc0d43efad541683d03940e5d2fae74c4a5197bd7dc`。T225/T226/T207侧表和逐条书目日志都在ZIP中。生成脚本在本地忽略目录`work/search_protocol_v2/`，未纳入Git提交。
+- 测试：`python3 work/search_protocol_v2/record_t225_t226_focused_lrp_chain_20261012.py`连续两次幂等；`python3 work/search_protocol_v2/record_t227_acm_access_audit_20261012.py`成功；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过全部历史断言、30条参考位置连续性、身份去重、账本计数、ZIP CRC和源文件SHA核验；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码改动。
+- 遗留：T207作者/机构版全文、该文参考书目及前向引文链未完成；T226最终期刊版与预印本差分未核；Scholar主题式及高信号论文前后向引文网络未闭合。整体检索仍在进行，不承诺“一个都不漏”。下一步优先寻找T207可读作者稿，随后按90/72/172稳定身份差分处理仍无全文证据的直接候选；Scholar实际解除限制后只从未筛新位置续查，不复筛旧页。
+
+# 2026-10-12 T222–T224：图像主张核查与高信号引文链
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新数据提交：`6088ca361071d0b585bca606e7726d8b21f9b673`。本条交接随后单独提交；`origin`已确认是`https://github.com/brodyZhao/my-research-project.git`。根目录两个原有未跟踪用户文件未修改、未暂存。
 - T222全篇核读Zlatkova等《Fact-Checking Meets Fauxtography: Verifying Claims About Images》（ACL Anthology官方全文），升级74中两条旧Scholar题名筛查位置，不重复加命中。29条参考文献已逐项做题名/主题初筛并记录旧身份复用；[14] Huh复用T219全文，[28] FauxBuster全篇核读为T223，[23] Where the Truth Lies全篇核读为T224。两篇新引文不是Google Scholar命中。
