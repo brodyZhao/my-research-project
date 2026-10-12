@@ -1,4 +1,14 @@
-﻿# 2026-10-12续：T339–T341关闭T01-F4末尾41个位置并推送检查点
+﻿# 2026-10-13续：T343 VizDefender全文核读与T02-F3-S7浏览器策略断点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`。检索数据提交 `4c40228`（Record VizDefender review and Scholar checkpoint）已推送至已确认的 `origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF更新待单独提交并推送。根目录原有用户未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md` 与 `literature/forensic-explanation-relevance-20261004.md` 未修改、未暂存。
+- 本轮将Scholar全局位置204的VizDefender链接回旧74主账位置T01-F2/111、T02-F2-TAMPER/24、V110/127；只新增一条T343位置复用记录，不重复建作品身份。官方arXiv v1全文核读后补入90候选、72优先低位、172效度核读和04身份目录。该文属于图表/可视化篡改解释质量强邻接，不能外推一般自然图像/视频鉴伪。
+- 原文证据包括篡改方法严格集合准确率82%对直接提示28%、志愿者真值过程/意图嵌入余弦相似度分别0.874对0.836及0.907对0.881、30名研究生/研究人员对5例盲评解释合理性；掩码定位另报IoU 0.7272、F1 0.8259。小样本人评合理性与语义相似度不等同逐条事实正确性、因果faithfulness或用户适当依赖；任务需预嵌水印且限图表。
+- `T02-F3-S7-HUMAN-RELIANCE-FAITHFULNESS-20261012`本次Scholar分页此前可见终端`start=410`（4卡），动态估数约426变至414；可持久逐位置记录为1–10及204，共11项，不能把其他曾浏览页当作已完成逐条日志。Coverage仍为False。当前Chrome标签981694391停在正常start=190；直接跳start=170触发浏览器安全策略拒绝，并明确禁止换用链接点击等方式绕过。无Scholar验证码。需用户手动恢复到目标页面后再继续逐位置转录，否则该路线保持开放。
+- 本轮台账计数：74=32,852行；90=1,051候选行；72=448排序项；172=391条效度核读；87=416条路线；85=174条矩阵。统计单位不同，不能视为独立强相关文献数或召回率。阶段ZIP有958个来源文件与manifest（959成员），SHA-256=`18b2252ceb956c850abf26620c45d4390ad3bee765241d22f1aff2f4269d187a`。
+- 验证：`python3 -m py_compile work/search_protocol_v2/record_t343_vizdefender_t02_20261013.py work/search_protocol_v2/package_checkpoint_20261012.py`通过；T343脚本连续执行幂等；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过历史与T343断言、阶段ZIP CRC及源文件SHA校验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码改动。README.md不存在。工作区只保留根目录上述两个未跟踪用户文件。
+- 下一步：用户能手动恢复Chrome标签981694391到Scholar `start=170`时，再补该页及后续每个位置的逐条日志，优先复用74/90/72/172中的既有身份；对缺失位置不作覆盖完成声明。若浏览器策略仍不允许Codex导航，不尝试绕过，改做其他独立窄式或已读候选引文核查。
+
+# 2026-10-12续：T339–T341关闭T01-F4末尾41个位置并推送检查点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T01-F4数据提交 `1766bc8` 已推送至已确认的 `origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF更新待单独提交和推送。根目录既有用户未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md` 与 `literature/forensic-explanation-relevance-20261004.md` 未改动、未暂存。
 - 已按用户完成的验证码从Scholar start=740续查；页38/39分别有20条、末页40有1条且无Next链接。逐项日志T339/T340/T341已写入阶段ZIP，位置741–781连续。74主账当前32,851行，其中该查询781行；90候选1,050行；72优先447行；172效度核读390行；87路线416条；85矩阵174条。这些计数单位不同，不能相加成独立强相关作品数或召回率。
