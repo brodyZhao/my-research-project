@@ -1,4 +1,14 @@
-﻿# 2026-10-12续：T215 Seeing Before Reasoning / ExplainFake-Bench全文效度核读
+﻿# 2026-10-12 T222–T224：图像主张核查与高信号引文链
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新数据提交：`6088ca361071d0b585bca606e7726d8b21f9b673`。本条交接随后单独提交；`origin`已确认是`https://github.com/brodyZhao/my-research-project.git`。根目录两个原有未跟踪用户文件未修改、未暂存。
+- T222全篇核读Zlatkova等《Fact-Checking Meets Fauxtography: Verifying Claims About Images》（ACL Anthology官方全文），升级74中两条旧Scholar题名筛查位置，不重复加命中。29条参考文献已逐项做题名/主题初筛并记录旧身份复用；[14] Huh复用T219全文，[28] FauxBuster全篇核读为T223，[23] Where the Truth Lies全篇核读为T224。两篇新引文不是Google Scholar命中。
+- T222任务是图像—文字claim对事实核查，含真图错配claim与数字篡改图。其1,233例（838 Snopes +395 Reuters）评估图文对事实分类；论文还报告Huh拼接定位和ELA对某大象/狮子合成图漏检。该失败是法证工具有效性邻接，不是XAI解释评估。T223只用社交帖子评论网络/语言/元数据，不读图像像素；3人/100帖比较评论可否帮助人辨误导，没有AI解释条件。T224从可靠来源文章提取支持/反驳claim的文本片段作为解释，但只评claim分类，无独立解释事实性、因果faithfulness或用户决策实验。三篇都未被归为图像鉴伪解释可靠性的直接实证。
+- 主要输出：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/00_重检阶段报告_未完成.md`、172效度台账、74逐位置筛选表、90候选表、72优先表、87路线表、T222 29条参考位置侧表及T222–T224全文侧表；阶段ZIP为`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`，包含844个来源文件+manifest，共845个成员，SHA-256=`c25ac1be8930c2bdc521bdb2122b5c4ff456a1fb5616941331f397392e0e2b55`。更新后：74=30,431位置；90=971候选身份；72=406排序项；172=358效度核读；87=372路线。统计单位不同，不能换算成独立强相关篇数或召回率。
+- 验证：T222–T224录入脚本连续运行两次后计数幂等；`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过全历史断言、29条参考位置连续性、唯一性、ZIP CRC与SHA核验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。录入/打包脚本在忽略目录`work/search_protocol_v2/`，未纳入交付包。
+- 遗留：Google Scholar实际Chrome标签仍显示reCAPTCHA；用户回复“已恢复”后复查页面依然是挑战页，本轮没有新增Scholar分页。不要重复请求用户处理，先推进不依赖该页的全文与既有引文核查。T218完整书目、T222以外多数参考文献的全文、T223/T224参考文献及后续引用网仍未闭合；整体检索未完成，不声称零遗漏。
+- 建议下一步：复用74/90/172/87与已筛的T222 References 29条；不要重筛T222两条旧Scholar位置、Huh/T219或T223/T224身份。优先从72里选仍未全文核读、直接研究视觉解释输出/grounding/reliability且存在官方全文的候选；同时沿剩余高信号引文而非广泛重复旧分页继续。
+
+# 2026-10-12续：T215 Seeing Before Reasoning / ExplainFake-Bench全文效度核读
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T215数据提交`2a6f56a`已推送到已确认的`origin https://github.com/brodyZhao/my-research-project.git`。本条HANDOFF按仓库约定单独提交并推送。
 - T215复用90/72既有rank 55唯一身份；不新增论文候选、排序身份或Scholar命中。核读官方arXiv v1的研究问题、方法/数据、ExplainFake-Bench结果、结论及附录E.2–E.3。官方OpenReview索引将该题名标为“Published as a conference paper at ICLR 2026”；camera-ready PDF链接已定位，但网页返回browser-verification challenge，因此没有声称已核读最终出版稿。既有65条参考位置及Scholar结果身份全部复用、不重筛。
