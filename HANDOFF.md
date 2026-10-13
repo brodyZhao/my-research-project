@@ -1,6 +1,6 @@
 ﻿# 2026-10-14：T369恢复后逐项筛查与检索断点整理
 
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本次数据检查点提交：`e59c5ed`。远端 `origin https://github.com/brodyZhao/my-research-project.git` 已确认，用户此前明确授权推送；HANDOFF更新待提交/推送。根目录两个原有未跟踪用户文件未修改、未暂存。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交：`e59c5ed`；前一HANDOFF检查点已到达远端，本次推送状态修订待快进推送。远端 `origin https://github.com/brodyZhao/my-research-project.git` 已确认，用户此前明确授权推送。根目录两个原有未跟踪用户文件未修改、未暂存。
 - T369 RSCMQA（arXiv:2412.02575v3）Cited-by页恢复为正常页面，6条/单页全部逐项筛查，日志 `T447_RSCMQA_CitedBy6_逐位置筛查_20261014.csv`；74/85/87均更新。除Omni-IML留作高优先全文待核外，其他结果复用已有身份或按跨任务遥感VQA/检测方法邻接筛除。原验证码事件仍保留，恢复状态另有事件行。
 - T01-F4-S5在用户确认验证后，重新检查start=120/130/540/560/580均没有结果卡；start=120有Next且约441条估算。T443据截图/AX记录为空结果区/索引异常，不计入筛查位置；历史1–540仍为已筛记录，541+未筛并保持开放。T445也确认旧T379所谓131–170缺口已在74主账，禁止重复筛。
 - Spider-Net出版社预览仍只开放参考文献1–25/50；用户之前确认无机构全文权限。T446记录访问复核，26–50保持受限。MDPI《Towards robust chain-of-thought prompting…》出版页返回HTTP 429，当前只按Scholar摘要/题录记录。OpenReview Omni-IML和Google Scholar SIDA精确题名页分别显示浏览器验证/reCAPTCHA；已向用户报告并请求手动恢复，不能绕过。
