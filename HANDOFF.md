@@ -2482,3 +2482,14 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：T456/T457/T458/T459录入脚本与阶段打包脚本`py_compile`通过；T456、T457、T458差分及T459访问事件脚本连续运行两次幂等；阶段包断言通过（T454 31位、T455 1事件、T456 45位、T457重复路线0位、T458受限0位）；CSV逐项结构、ZIP CRC与成员内容SHA校验通过；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。数据提交包括`1b24ac6`、`0e341c8`、`5a993ae`；HANDOFF更新需单独提交后推送。
 - 遗留：英文主题细式与强相关引文网络仍在继续，不能承诺“一个都不漏”。当前需用户本人恢复T458 Scholar页面；确认后从start=0按实际显示结果卡逐条筛查。T01-F4-S5页身空结果与Scholar页码/估数冲突仍未解决。其它开放父查询继续做高信号差分，不重筛已登记身份或分页。
 - 建议ChatGPT Web下一步：收到T458恢复确认后重读首页；若已显示正常结果卡，逐项筛查并与74/90/72/172去重，确认是否有下一页。若仍是验证或空页，保留新断点并即时报告；不要把页眉“21 results”当作21条已筛文献。
+
+
+## 2026-10-14续：T468 TriDF参考筛查与T469 Scholar访问断点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索数据提交：`39194c6`；T469访问日志提交：`7bb3efd`；本HANDOFF同步需另作提交。origin为已确认的`https://github.com/brodyZhao/my-research-project.git`。用户此前明确要求继续检索并按项目流程推送。两个既有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`与`literature/forensic-explanation-relevance-20261004.md`未修改、未暂存。
+- T468：TriDF（arXiv:2512.10652v2）官方参考书目[1]–[145]逐条题名/主题筛查，见`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T468_TriDF_arXiv2512.10652v2_145条参考逐项筛查_20261014.csv`。145项均有筛选理由和可得作者/年份信息；51项复用04目录既有作品身份，54项映射到既有74主账位置；9条直接/解释相关参考全部映射到既有作品，没有重复建篇。FakeBench版本并入既有身份；D³标题已按官方书目纠正。此项只是完整书目题名/主题筛查，不代表145篇全文都已核读，也不关闭前向引文链或主题检索。
+- T469：精确式`("image forgery" OR "image manipulation" OR "AI-generated image detection") (grounded OR grounding OR hallucination) (explanation OR reasoning OR "visual evidence") (faithfulness OR factuality OR "human evaluation")`于Codex内嵌浏览器标签16跳转Google reCAPTCHA，Scholar结果卡0。记录在`T469_T02-F2-GROUND-FAITHFUL-EXACT_Scholar验证访问事件_20261014.csv`。该父式此前首页10个位置仍有效，本次没有新增/重筛位置；用户已收到验证请求，恢复后先比对已记录首页身份，再从新的未筛偏移继续。检索时同时复查Chrome标签981694537（T01-F4-S5 start=540）和981694534（取证图/掩膜一致性）仍显示验证门控；与用户报告“结果页已显示”不一致，已报告，等待用户确认可见结果卡后再记新位置。不得把验证页记作零结果。
+- 更新后口径：74主账36,271行；04目录9,940行；87路线496条；85矩阵251条；阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip`，含1,098个源文件及manifest（1,099成员），SHA-256=`fda43d4d3f7b77446889fd5e2a0cd339e48fc50c8170f058f59ab0a2cd2a5cf2`。不同表单位不等于独立强相关作品数或领域召回率。
+- 验证：T468/T469录入脚本与阶段检查脚本`py_compile`通过；两个录入脚本各连续运行两次幂等；`package_checkpoint_20261014.py`通过（T434/T452/T454/T456等既有断言、T468 145条连续编号/身份复用、T469访问门控、ZIP CRC与全源SHA校验）；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改。
+- 遗留与下一步：英文细分检索和强相关文献引文网仍未完成，不能宣称零遗漏。优先请用户恢复标签16的精确grounding/faithfulness查询、T01 start=540及T458一致性查询；恢复后只比对先前已有位置并继续未筛偏移。随后优先做direct seed的前向引文/作者别名补查及尚未闭合的高精度子式；对宽噪声查询保留开放状态，不机械翻页，不重复筛74已有位置或重读90/172已有核读身份。用户要求任何新访问限制必须第一时间报告。
+- 建议下一位协作者检查：先读取本条T469 event和87中对应父/子路线，确认用户恢复状态及页面实际结果卡；再从T02-F2-GROUND-FAITHFUL-EXACT的新位置继续，并更新本HANDOFF和阶段包。
