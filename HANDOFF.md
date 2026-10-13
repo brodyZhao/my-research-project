@@ -1,4 +1,19 @@
-﻿# 2026-10-13续：T343 VizDefender全文核读与T02-F3-S7浏览器策略断点
+﻿# 2026-10-13续：InfoSurgeon引文审计、医疗图像细式与访问断点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮台账提交 `4fb6e2b7ce87203a3197b5b39f1a843e90f6e232`，阶段包提交 `c93f96f718672b855eff4235a8a67891949c4c34`。远端 `origin https://github.com/brodyZhao/my-research-project.git` 已确认；用户先前明确授权推送检索分支。本HANDOFF更新待单独提交并推送。根目录原有两个用户未跟踪文件未修改、未暂存。
+- T362 已核读 InfoSurgeon 的官方ACL记录和作者实验室托管16页全文；定位为新闻图文/文本跨模态一致性与知识单元解释的方法邻接，不是图像伪造检测。自动生成事实的知识单元F1与16人辨别合成新闻的测试不构成解释正确性、因果faithfulness或适当依赖验证。
+- T363 对InfoSurgeon官方参考书目52个位置逐条完成题名/主题筛查并和作品身份目录、全文核读表去重，侧表 `T363_InfoSurgeon_authorPDF_52条参考逐位置筛查_20261013.csv` 已显式纳入版本库和阶段ZIP。Huh图像拼接、Wang Photoshop人脸及Zlatkova图像主张核查均复用原有身份；没有新发现直接解释可靠性引文。题名筛查不等于52篇全文核读。
+- **访问断点1**：细式 `("medical image forgery" OR "medical image tampering" OR "medical deepfake detection") ("explanation faithfulness" OR "explanation fidelity" OR "explanation consistency" OR hallucination) ("human evaluation" OR "expert evaluation" OR "user study")` 在Chrome标签981694352显示Google Scholar reCAPTCHA；页眉约3项，结果卡未加载，0/3位置可筛。用户已收到即时恢复请求；恢复后先检查页面实际状态并从首条结果逐项筛。
+- **访问断点2**：Codex浏览器标签27是IJSE《AI-Enabled Visual Evidence Intelligence for Detecting Manipulated Digital Media》的Scholar Cited-by页面，实际显示reCAPTCHA；14条前向引文均未加载。用户已收到单独恢复提示。未完成前不得把它记录为零篇相关施引文献。
+- 浏览器复核发现tab28的T356医疗影像appropriate-reliance精确式是已完成的33/33快照（当前start=30最后3条已在74主账）；T351医疗影像explanation-stability是36/36。后续复用日志，不重复筛这两条。T02-F3-S7仍只有11个逐位置条目可持久追溯；直接续页因浏览器策略拒绝而未恢复，按旧记录保持未完成，不尝试变通导航。
+- 最新阶段台账计数：74=33,507位置；04作品目录=9,869行；90候选=1,058行；72优先清单=452行；172全文/摘要效度记录=396行；87路线=434条；85矩阵=192条。计数口径不同，不代表唯一强相关论文总数、召回率或全领域穷尽。
+- 阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`：975个来源文件+manifest（976成员），SHA-256=`69eab66da642fd1e5766d20d4d8abb6fb8ea304058ca1e926bfcbd9f99268345`。核心改动是00阶段报告、112清单、172效度核读、72排序、74逐位置主账、85查询矩阵、87路线、90候选、T363侧表与阶段ZIP。
+- 验证：`python3 -m compileall -q work/search_protocol_v2`通过；`python3 work/search_protocol_v2/package_checkpoint_20261012.py`通过当前行数/唯一性/历史断言、ZIP CRC与来源SHA检查；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码改动。
+- 后续继续用户要求的英文细分类优先：恢复后先处理T364 3条，再处理IJSE 14条前向引用；并从87中选择尚未完成、可明确界定当前查询快照的高精度子式。T356/T351和其他已完成精确子式复用结论。大结果量父式保持拆分状态，不机械翻页，也不对整个Scholar或整个领域作穷尽声明；每遇新的访问限制立即向用户报告并保存断点。
+
+---
+
+# 2026-10-13续：T343 VizDefender全文核读与T02-F3-S7浏览器策略断点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`。检索数据提交 `4c40228`（Record VizDefender review and Scholar checkpoint）已推送至已确认的 `origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF更新待单独提交并推送。根目录原有用户未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md` 与 `literature/forensic-explanation-relevance-20261004.md` 未修改、未暂存。
 - 本轮将Scholar全局位置204的VizDefender链接回旧74主账位置T01-F2/111、T02-F2-TAMPER/24、V110/127；只新增一条T343位置复用记录，不重复建作品身份。官方arXiv v1全文核读后补入90候选、72优先低位、172效度核读和04身份目录。该文属于图表/可视化篡改解释质量强邻接，不能外推一般自然图像/视频鉴伪。
