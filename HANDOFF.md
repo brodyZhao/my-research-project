@@ -1,4 +1,17 @@
-﻿# 2026-10-13续：InfoSurgeon引文审计、医疗图像细式与访问断点
+﻿# 2026-10-13续：T01-F4-S5继续筛查与OMNI-Fake引文审计
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；当前数据检查点提交：`67c61c7`（Log T01-F4-S5 page and audit OMNI-Fake references）。远端仍为已确认的`origin https://github.com/brodyZhao/my-research-project.git`；本次检查点及随后HANDOFF更新待推送。用户先前已明确授权推送。README.md不存在；已按仓库规则检查AGENTS.md与本文件。根目录两个既有未跟踪文件未修改、未暂存。
+- T01-F4-S5英文不限年份Scholar查询本轮完成start=360、位置361–380逐项筛查；74中该route位置1–380连续、无缺号/重复。未发现新的直接解释可靠性研究。位置368论文只在摘要提出未来集成AI解释，沿用04的Tier 4任务邻接身份，没有重复建档。
+- 翻页start=380实际显示“Please show you're not a robot”，0条结果卡。访问事件已记录在`T379_T01-F4-S5中间40位置缺口_GoogleScholar访问验证事件_20261013.csv`的T406行，87/85保留待恢复断点。已通知用户在Chrome标签981694444恢复；恢复后只从start=380继续，不重刷1–380，也不把挑战页计为结果。
+- 对OMNI-Fake官方arXiv HTML的References [1]–[105]逐项做了题名/主题初筛，详见`T405_OMNI-Fake_105条参考文献逐条筛查_20261013.csv`。题名显示直接解释/接地/鉴伪XAI的8项与邻接基准LOKI复用既有身份；已有全文审查沿用172/90记录，其他引文的题名级排除不等于全文阅读。修正了ref. 65的错误映射：仅连到Mansoor & Iliev, *Explainable AI for DeepFake Detection*（DOI 10.3390/app15020725），并将ref. 94连到现有LOKI身份。MDPI论文的network-dissection IoU测量人脸概念对齐，不是伪造证据真值或决策因果faithfulness。
+- 更新后台账：74=34,639位置；04=9,880身份行；90=1,066候选行；72=457排序项；172=411条效度核读；87=460条路线；85=218条矩阵。统计口径不同，不能换算为独立强相关作品数、召回率或零遗漏。
+- 主要交付：00阶段报告、04唯一身份/相关性目录、72优先清单、74逐位置总账、85矩阵、87路线、90候选、112 SHA清单、172效度核读、T404/T405专项日志和阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-13.zip`。阶段包SHA-256=`e63eb5b409bb2b043a1d7fb6f8599d5b6610e6ed6455a37c464501ed8382ca6d`，1,041个来源文件+manifest，共1,042成员。无业务代码改动；本地生成脚本在忽略目录`work/search_protocol_v2/`。
+- 验证：三个本地录入脚本及`package_checkpoint_20261013.py`通过`py_compile`；T405脚本连续两次运行幂等；阶段打包脚本通过路线连续性、参考编号、候选唯一身份、ZIP CRC与来源文件SHA断言；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。数据检查点已提交，HANDOFF仍需单独提交并推送。
+- 后续：先确认用户恢复的Scholar页面是否实际出现结果卡；若恢复，从start=380逐卡筛查并复用既有身份。再按87里尚未关闭的细式/引文门控继续。整体细粒度检索仍未完成，不承诺“一个都不漏”。
+
+---
+
+# 2026-10-13续：InfoSurgeon引文审计、医疗图像细式与访问断点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮台账提交 `4fb6e2b7ce87203a3197b5b39f1a843e90f6e232`，阶段包提交 `c93f96f718672b855eff4235a8a67891949c4c34`。远端 `origin https://github.com/brodyZhao/my-research-project.git` 已确认；用户先前明确授权推送检索分支。本HANDOFF更新待单独提交并推送。根目录原有两个用户未跟踪文件未修改、未暂存。
 - T362 已核读 InfoSurgeon 的官方ACL记录和作者实验室托管16页全文；定位为新闻图文/文本跨模态一致性与知识单元解释的方法邻接，不是图像伪造检测。自动生成事实的知识单元F1与16人辨别合成新闻的测试不构成解释正确性、因果faithfulness或适当依赖验证。
