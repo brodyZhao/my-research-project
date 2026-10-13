@@ -2341,3 +2341,10 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 更新计数：74=34,267位置；90=1,062候选记录；72=452排序记录；172=404效度核读；87=455路线；85=213检索矩阵；目录04=9,873条。单位口径不同，不能解释为独立强相关作品总数或召回率。T372文档取证细式受Scholar reCAPTCHA阻断、当前0条卡片；T369 RSCMQA正向引用也仍为访问门控；T375 ACM作品仅摘要级、全文返回403。T366遥感copy-move QA 42/42已闭合；T02-F4-S1刷新快照、T06-F3-S2适当依赖、既有V109/V110大式分页均已有记录，不重筛。
 - 验证：`python3 -m py_compile work/search_protocol_v2/record_t376_semantic_forensics_ieee_refs_20261013.py work/search_protocol_v2/package_checkpoint_20261013.py`通过；T376录入脚本幂等复跑，主账保持34,267；`python3 work/search_protocol_v2/package_checkpoint_20261013.py`通过15位置连续性、表计数、ZIP 1,023成员CRC与全部文件SHA校验，归档SHA-256=`0f8a9c84acea3e6535d4d8c35c5336696eb86701e6a7bcf89bcb63e089503221`；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码改动。
 - 遗留与下一步：细粒度Scholar子式及直接候选引文链仍未完全闭合，不能宣称“一个都不漏”。优先等待T372门控页由用户恢复后从start=0读取；期间筛查未闭合的高精度查询和强候选参考链，按74/90/72/172去重。对“只试检后转精确子式”的低精度父查询保留开放/范围限制，不再机械翻巨量分页。用户要求一旦遇到新的访问限制立即报告。
+
+# 2026-10-13续：T377补齐HIL-MDF候选/效度表身份
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`d7dc6dd`（`Index HIL-MDF candidate and evidence boundary`），已推送至已确认的origin。此HANDOFF更新需单独提交并推送。两个既有未跟踪文件未修改、未暂存。
+- HIL-MDF（DOI `10.1109/3SCEA68071.2026.11603194`）此前在三个Scholar引用交叉筛选位置出现，但缺90/72/172/04唯一身份。现复用三个旧位置，在90/72/172/04新增各一条唯一身份；74主账不新增位置。IEEE官方摘要与部分Introduction显示三种XAI方法和人工核验界面、报告89.75%检测准确率；看不到解释faithfulness/grounding或用户实验，PDF受订阅限制，References面板不可用。仅摘要/引言级，不当作可靠解释实证。
+- 计数：74=34,267；90=1,063；72=453；172=405；87=456；85=214；目录04=9,874。T377专项审计表已收入阶段归档，T377录入脚本复跑幂等；阶段包1,024成员，SHA-256=`285b6914e76c8f87add33be0193408873d75858b2121c548eda374f7de29f551`。测试含py_compile、T377两次幂等运行、package checkpoint断言、ZIP成员/CRC/全源文件SHA校验及`git -c core.whitespace=cr-at-eol diff --check`。
+- 仍开放：T372文档取证报告grounding细式当前Chrome标签981694432曾显示未勾选reCAPTCHA和0卡；T369 RSCMQA Cited-by仍为访问门控；T375 ACM DFF正文仍403。用户刚被再次具体告知T372状态并请求检查。继续检索时先从可访问高精度路线/候选引文链差分，不重扫已闭合T02-F4/T06-F3/T11-F3等快照。
