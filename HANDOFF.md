@@ -1,4 +1,16 @@
-﻿# 2026-10-13续：T407/T408复核Spot the Fake与LOKI解释评价
+﻿# 2026-10-14：T369恢复后逐项筛查与检索断点整理
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本次数据检查点提交：`e59c5ed`。远端 `origin https://github.com/brodyZhao/my-research-project.git` 已确认，用户此前明确授权推送；HANDOFF更新待提交/推送。根目录两个原有未跟踪用户文件未修改、未暂存。
+- T369 RSCMQA（arXiv:2412.02575v3）Cited-by页恢复为正常页面，6条/单页全部逐项筛查，日志 `T447_RSCMQA_CitedBy6_逐位置筛查_20261014.csv`；74/85/87均更新。除Omni-IML留作高优先全文待核外，其他结果复用已有身份或按跨任务遥感VQA/检测方法邻接筛除。原验证码事件仍保留，恢复状态另有事件行。
+- T01-F4-S5在用户确认验证后，重新检查start=120/130/540/560/580均没有结果卡；start=120有Next且约441条估算。T443据截图/AX记录为空结果区/索引异常，不计入筛查位置；历史1–540仍为已筛记录，541+未筛并保持开放。T445也确认旧T379所谓131–170缺口已在74主账，禁止重复筛。
+- Spider-Net出版社预览仍只开放参考文献1–25/50；用户之前确认无机构全文权限。T446记录访问复核，26–50保持受限。MDPI《Towards robust chain-of-thought prompting…》出版页返回HTTP 429，当前只按Scholar摘要/题录记录。OpenReview Omni-IML和Google Scholar SIDA精确题名页分别显示浏览器验证/reCAPTCHA；已向用户报告并请求手动恢复，不能绕过。
+- 本次修改：阶段报告00、主账74、路线87、拆分矩阵85、候选目录04、优先表72、效度核读172、候选/引文表90、校验清单112；新增T443–T447侧表及T369访问事件；更新阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip`（SHA-256 `83bb9e727194fc6ffe2028ae66bc4b5adb433b19248da4ae2315c7d8d7f83e45`，1076个来源文件+manifest）。数据口径：74=35,783位置、04=9,939目录行、87=481路线、85=236矩阵行；不能解读为唯一强相关论文数或召回率。
+- 验证：`python3 -m py_compile work/search_protocol_v2/record_t443_t01_insertion_blank_pages_20261014.py work/search_protocol_v2/record_t447_rscmqa_citedby6_20261014.py`通过；两录入脚本重复运行幂等；`python3 work/search_protocol_v2/package_checkpoint_20261014.py`通过T434断言、ZIP CRC与逐文件SHA-256核验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务代码改动。
+- 后续检索未完成。待用户恢复后先检查Chrome标签981694444的OpenReview与Codex内嵌浏览器标签8的Scholar页面；若出现正常内容，从Omni-IML全文核读与SIDA结果页续接。不要重复T369六条或T01已记录的1–540位置。随后继续87/85里仍未关闭且能由可靠性构念细分的路线，遇到访问限制先即时告知用户。不得宣称“一个不漏”或全领域穷尽。
+
+---
+
+# 2026-10-13续：T407/T408复核Spot the Fake与LOKI解释评价
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交：`ebd5a64`（Review LOKI and Spot the Fake explanation validity）；待完成HANDOFF提交及推送。目标远端仍为已确认的`origin https://github.com/brodyZhao/my-research-project.git`，用户此前已明确授权推送。根目录原有两个未跟踪文件保留且未修改：`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`。
 - T407依据NeurIPS 2025官方全文核读Spot the Fake §§3–5、附录C/F与checklist，补全既有身份L-71d597ce7a8dfa：其对合成图/DeepFake生成伪影解释，使用CSS/ROUGE-L及图像失真下分数变化；FakeClue标注主要来自多LMM聚合。论文没有人工解释输出评分、因果faithfulness或适当依赖实验。已更新172、90、04及OMNI-Fake ref.86筛查状态。
