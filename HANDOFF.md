@@ -1,4 +1,17 @@
-﻿# 2026-10-14：T369恢复后逐项筛查与检索断点整理
+﻿# 2026-10-14续：T448–T451 ICANN 2024可解释图像检测候选核对
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`7464aca5bde70d0c66b956caaa351ea40de9a486`。远端 `origin https://github.com/brodyZhao/my-research-project.git` 已确认；用户此前明确授权推送，本轮提交待推送。根目录原有两个未跟踪用户文件未修改、未暂存。
+- T448 从INSIGHT参考文献[11]题名扩展得到Scholar首页约403项，20张可见结果卡已逐条筛查。新增高任务邻接候选：Liu & Zhao, *Towards Generalizable and Interpretable AI-Modified Image Detectors*, ICANN 2024, LNCS 15019, pp.246–257, DOI `10.1007/978-3-031-72341-4_17`。精确题名、Springer官方元数据及摘要已核；全文要求机构登录，当前仅作摘要级记录。检测性能不可替代解释可靠性证据。
+- T450官方书目21项、T451 Google Scholar Cited-by 2项均逐条题名/主题筛查；未发现直接验证图像鉴伪解释可靠性的施引/参考文献。T449精确题名身份核验1项。侧表分别为T448–T451，计数20/1/21/2。T448只筛首页，是题名扩展诊断，不能说明该约403项已全筛或领域已穷尽。
+- 用户确认T01-F4-S5人机验证完成后，start=80和540重新载入为普通Scholar页面，但AX中均只有分页控件、没有结果卡；两处均位于既有1–540筛查区间，已在T443记作页面恢复/空结果容器异常，不新增或重复计筛查位置，也不视为零结果查询。
+- 台账更新后：74=35,827个来源位置，04=9,940条身份目录，90=1,109条候选记录，172=424条效度记录，87=485条路线，85=240条矩阵记录。统计单位不同，不代表独立强相关文献数、召回率或零遗漏证明。阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip` SHA-256=`82b8d5619bec27d65534ac56664675808768a744bb27c766d46e0f6ada422504`，含1080个来源文件及manifest。
+- 验证：T448–T451录入脚本重复运行幂等；录入与打包Python脚本通过`py_compile`；`package_checkpoint_20261014.py`通过计数/身份断言、ZIP CRC与逐文件SHA校验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务代码改动。
+- 细粒度检索尚未完成。继续前先按87/85和74核对未关闭路线及已处理位置，优先推进高精度、未筛的细式与高信号引文链；T01-F4-S5仅从真实未筛的新位置续查。待用户恢复的OpenReview Omni-IML全文验证和Scholar SIDA精确题名页仍是独立门控；访问限制出现时即时告知。不要声称全领域穷尽或“一个不漏”。
+- 建议ChatGPT Web下一步：差分选择尚未筛的高相关路线，继续细式并记录每个可见结果与筛选理由；先观察Chrome中已恢复页面是否真正有结果卡，不重复请求用户处理不可见页面。
+
+---
+
+# 2026-10-14：T369恢复后逐项筛查与检索断点整理
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交：`e59c5ed`；前一HANDOFF检查点已到达远端，本次推送状态修订待快进推送。远端 `origin https://github.com/brodyZhao/my-research-project.git` 已确认，用户此前明确授权推送。根目录两个原有未跟踪用户文件未修改、未暂存。
 - T369 RSCMQA（arXiv:2412.02575v3）Cited-by页恢复为正常页面，6条/单页全部逐项筛查，日志 `T447_RSCMQA_CitedBy6_逐位置筛查_20261014.csv`；74/85/87均更新。除Omni-IML留作高优先全文待核外，其他结果复用已有身份或按跨任务遥感VQA/检测方法邻接筛除。原验证码事件仍保留，恢复状态另有事件行。
