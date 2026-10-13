@@ -1,4 +1,17 @@
-﻿# 2026-10-14续：T448–T451 ICANN 2024可解释图像检测候选核对
+﻿# 2026-10-14续：T452/T453文档取证解释可靠性细式
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交：`fe64ed30673bf83efe96bd4de379074f6a917396`。`origin`为已确认的`https://github.com/brodyZhao/my-research-project.git`；数据提交及本HANDOFF更新待推送。根目录两份原有未跟踪用户文件保留且未暂存。
+- T452继续T372“document forgery/tampering × forensic report/grounding”宽式第2页，位置21–40共20条逐项记录；累计40位置，页内多为跨域文档/RAG/金融/法律噪声，仍有Next。父式保留开放但暂停机械翻页；侧表`T452_T372文档取证报告接地查询第2页20位置逐条筛查_20261014.csv`。
+- T453细式为`("document forgery" OR "document tampering" OR "text-centric image forensics") ("explanation faithfulness" OR "explanation fidelity" OR "explanation correctness" OR hallucination OR "evidence grounding" OR "human evaluation")`。Scholar可见四页，位置1–62逐条筛完；第4页start=60为2条且无Next。页眉估数在前两页约72、后两页62，已按动态估数记录；这里只关闭所观察到的分页快照，不代表零遗漏。四个分页面侧表和完整记录已存。
+- T453首屏复用DocShield、Agentic、SEED、GPT4o-Receipt等既有作品身份。第2页重复列出Omni-IML的OpenReview/arXiv两个入口，按同一作品复用既有全文核读。已对目录原有身份`arxiv:2607.28464`《Can Vision-Language Models Reason about AI Edits in Images?》进行官方全文核读：AI编辑图像检测/定位与推理轨迹令其任务高度相关，但GRPO奖励只约束格式、真假标签和边框IoU；未发现推理文字真值评分、独立人工解释评测、因果faithfulness或解释稳定性测试。附录噪声实验衡量的是检测/定位鲁棒性。因此保留为任务高相关候选和效度缺口证据，不当作解释可靠性已获验证的直接证据。来源：[arXiv摘要](https://arxiv.org/abs/2607.28464)、[官方全文](https://arxiv.org/html/2607.28464)。
+- 用户报告T01-F4-S5 start=540验证码处理后已显示结果页。本轮直接重开该URL，当前页面已无验证码，页眉显示第28页/约113项，但结果区没有论文卡、只有分页控件；已在既有T443空结果区异常记录范围内，不新增筛查位置，也不重筛前540项。若下一次能看到真实卡片，从未记录位置续筛；否则维持索引异常状态。
+- 更新后计数：74=35,909个检索/书目/核验位置；04=9,940行作品目录；90=1,109候选/引文复核行；172=425条效度核读；87=486条路线；85=241条矩阵记录。不同台账单位不可相加为独立强相关论文总数或召回率。阶段包含1,085个来源文件+manifest（共1,086个成员），SHA-256=`574d94b349f5e15d89c5d31793e89462891d7c0f0864fe9f3d88413d3276fd5a`。
+- 验证：T452、T453逐页录入脚本和官方全文核读脚本通过`py_compile`；T453页面侧表在74中为连续62个唯一位置且筛选理由非空；全文核读脚本连续运行两次，04/90/172身份和行数稳定；`package_checkpoint_20261014.py`通过T434、T448–T453断言、侧表计数、ZIP CRC及逐文件SHA核验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。录入脚本位于忽略的`work/search_protocol_v2/`，不纳入版本控制。
+- 细粒度总体检索仍未完成。下一步不重开T453分页，不重复T01前540个已记录位置；按87/85选择下一个未闭合、构念更窄的图像取证路线，持续标记唯一身份并利用强相关作品的参考文献/被引链。T372宽式的start=40以后保持未筛；遇到真正验证码或访问拒绝，先立即向用户报告。
+
+---
+
+# 2026-10-14续：T448–T451 ICANN 2024可解释图像检测候选核对
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`7464aca5bde70d0c66b956caaa351ea40de9a486`。远端 `origin https://github.com/brodyZhao/my-research-project.git` 已确认；用户此前明确授权推送，本轮提交待推送。根目录原有两个未跟踪用户文件未修改、未暂存。
 - T448 从INSIGHT参考文献[11]题名扩展得到Scholar首页约403项，20张可见结果卡已逐条筛查。新增高任务邻接候选：Liu & Zhao, *Towards Generalizable and Interpretable AI-Modified Image Detectors*, ICANN 2024, LNCS 15019, pp.246–257, DOI `10.1007/978-3-031-72341-4_17`。精确题名、Springer官方元数据及摘要已核；全文要求机构登录，当前仅作摘要级记录。检测性能不可替代解释可靠性证据。
