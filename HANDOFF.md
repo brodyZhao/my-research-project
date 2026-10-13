@@ -1,4 +1,15 @@
-﻿# 2026-10-14续：T463状态一致性修正与FakeWorld访问复核
+﻿# 2026-10-14续：T464访问状态差分与归档
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新数据提交a62491e，前序072c0b4。数据已推送至已确认origin https://github.com/brodyZhao/my-research-project.git；HANDOFF本条随后单独提交。
+- 将T463校正扩展到两个已解决但85矩阵仍陈旧的访问状态：GenText OpenReview access 已由87、172和T425支持；Semantic Forensics 的ResearchGate门控已由官方IEEE References端点和T376（15项）解决。只同步状态，不新增Scholar位置、候选身份或重复筛查。
+- 阶段包outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip含1,094个来源文件+manifest，共1,095成员；SHA-256=3daf1faf5d3ed8cc8bc31283ae1a55502bf3221d2a1b8cc5f90203c73d445fa1。台账74=35,997位置，04=9,940，90=1,109，172=425，87=492路线，85=247矩阵；各表计数不可当作独立论文数、召回率或穷尽证明。
+- 测试：reconcile_t463_gentext_stale_status_20261014.py连续运行两次幂等；package_checkpoint_20261014.py通过全部历史/新增断言、ZIP CRC和源文件SHA；git diff --check通过。无业务源码改动；根目录两份旧的用户未跟踪文件未修改。
+- 访问状态仍需用户处理：T01-F4-S5 start=540在标签981694537显示验证码；T458窄式在标签981694534显示reCAPTCHA；FakeWorld官方OpenReview标签981694543显示Verifying your browser，PMLR下载PDF标签981694540报ERR_BLOCKED_BY_CLIENT。前述状态均已即时向用户报告。T375已完成12条ACM索引书目题名筛查，但全文仍403；T460不因此升级为全文核读。
+- 细粒度检索仍未完成。恢复后优先读取真实可见的T458结果和FakeWorld最终版PDF/参考文献；T01只处理未筛位置，旧1–540全部复用，不重筛。新访问门控继续先报告，再保存断点。
+
+---
+
+# 2026-10-14续：T463状态一致性修正与FakeWorld访问复核
 
 - 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新数据提交：072c0b4，前序检查点33b011c与71e9eee均在本分支。数据提交已推送至已确认origin https://github.com/brodyZhao/my-research-project.git。HANDOFF更新随后单独提交。
 - T463发现并修正85中FTXT-GENTEXT-OPENREVIEW-ACCESS-20261013陈旧的“待用户验证/0页”状态。87已记录用户恢复后官方PDF 7/7页可见、172全文构念核读完成；T425已筛官方书目14/14。只同步状态并添加打包断言，没有新增位置或重复筛选；未来不得再次询问恢复该旧页面。
