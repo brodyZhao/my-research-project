@@ -1,4 +1,17 @@
-﻿# 2026-10-13续：T01-F4-S5继续筛查与OMNI-Fake引文审计
+﻿# 2026-10-13续：T407/T408复核Spot the Fake与LOKI解释评价
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交：`ebd5a64`（Review LOKI and Spot the Fake explanation validity）；待完成HANDOFF提交及推送。目标远端仍为已确认的`origin https://github.com/brodyZhao/my-research-project.git`，用户此前已明确授权推送。根目录原有两个未跟踪文件保留且未修改：`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`。
+- T407依据NeurIPS 2025官方全文核读Spot the Fake §§3–5、附录C/F与checklist，补全既有身份L-71d597ce7a8dfa：其对合成图/DeepFake生成伪影解释，使用CSS/ROUGE-L及图像失真下分数变化；FakeClue标注主要来自多LMM聚合。论文没有人工解释输出评分、因果faithfulness或适当依赖实验。已更新172、90、04及OMNI-Fake ref.86筛查状态。
+- T408依据LOKI官方ICLR 2025版/arXiv v2核读附录C.2与B.2–B.3，补全既有身份L-9f1381fe6db36f：开放解释由GPT-4按照异常识别、与人工标注理由一致性、合理性评分；20名人员两轮质检GPT生成的问题，50余名用户做人类检测/选择判断，并非解释输出人评。没有评委校准、评分者一致性、因果faithfulness或适当依赖验证。已更新172、04及OMNI-Fake ref.94状态。
+- 本次复用既有作品身份与位置；未增加重复身份。当前计数：74=34,639位置、90=1,066候选记录、72=457优先项、172=412核读记录、87=460路线、85=218矩阵、04=9,880身份行、T405=105项引文题名/主题筛查。计数单位不同，非唯一强相关文献篇数。
+- 阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-13.zip`：1,041个来源文件+manifest（1,042成员），SHA-256=`c3687bed4c2f1161679a998d5c0d5a900b98141fdc2545def00e417b6a0a43dc`。
+- 验证：T407/T408录入脚本分别连续两次运行幂等；相关Python脚本通过`py_compile`；阶段打包脚本通过位置/身份/引文断言、ZIP CRC及源文件SHA校验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。
+- 遗留：Google Scholar标签981694444在start=380仍实际显示`Please show you're not a robot`且0张结果卡。尽管用户回复“全部已恢复”，重新检查后该页仍被挑战门控；已再次把具体标签状态发给用户并等其恢复。T01-F4-S5位置1–380连续完成；解除后只从start=380继续。其他细粒度式、引文边仍未闭合，整体检索未完成。
+- 建议ChatGPT Web下一步：确认Chrome标签981694444实际出现结果卡；继续T01-F4-S5未筛位置并按87/85未闭合高精度路线和候选引文差分推进。沿用04/90/172与74已有身份/位置，避免重筛；参考文献题名筛查不得写成全文核读。
+
+---
+
+# 2026-10-13续：T01-F4-S5继续筛查与OMNI-Fake引文审计
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；当前数据检查点提交：`67c61c7`（Log T01-F4-S5 page and audit OMNI-Fake references）。远端仍为已确认的`origin https://github.com/brodyZhao/my-research-project.git`；本次检查点及随后HANDOFF更新待推送。用户先前已明确授权推送。README.md不存在；已按仓库规则检查AGENTS.md与本文件。根目录两个既有未跟踪文件未修改、未暂存。
 - T01-F4-S5英文不限年份Scholar查询本轮完成start=360、位置361–380逐项筛查；74中该route位置1–380连续、无缺号/重复。未发现新的直接解释可靠性研究。位置368论文只在摘要提出未来集成AI解释，沿用04的Tier 4任务邻接身份，没有重复建档。
