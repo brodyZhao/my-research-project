@@ -1,4 +1,16 @@
-﻿# 2026-10-14续：T460/T461引文筛查与Scholar访问断点
+﻿# 2026-10-14续：T463状态一致性修正与FakeWorld访问复核
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新数据提交：072c0b4，前序检查点33b011c与71e9eee均在本分支。数据提交已推送至已确认origin https://github.com/brodyZhao/my-research-project.git。HANDOFF更新随后单独提交。
+- T463发现并修正85中FTXT-GENTEXT-OPENREVIEW-ACCESS-20261013陈旧的“待用户验证/0页”状态。87已记录用户恢复后官方PDF 7/7页可见、172全文构念核读完成；T425已筛官方书目14/14。只同步状态并添加打包断言，没有新增位置或重复筛选；未来不得再次询问恢复该旧页面。
+- FakeWorld 1.0：PMLR官方元数据/摘要可读；本轮在Chrome标签981694540打开其官方Download PDF所链raw GitHub PDF，浏览器报ERR_BLOCKED_BY_CLIENT。PMLR官方链接的OpenReview页在Chrome标签981694543显示Verifying your browser。此前T01-F4-RELIABILITY-PERTURB的781条Google Scholar快照已筛，FakeWorld公开reviews/rebuttals已读；最终出版PDF及其先前标记的参考文献清单尚未核读，本轮没有增加位置。已向用户即时报告并请求处理OpenReview验证。
+- T01-F4-S5：最新直接打开start=540在Chrome标签981694537显示验证码、0卡；用户先报告结果页已恢复，但本次实测访问门控再次出现。T458图像伪造区域/定位图一致性细式在标签981694534仍显示验证码、0位置。两处均已即时报告并请求用户恢复；不把门控当作零命中、不复筛旧位置。
+- 当前阶段包outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip含1,094个来源文件+manifest，共1,095成员；SHA-256=fcf1332e8372316f5d853b81a7110235750169d656a657bfe441c28a2c81411d。台账74=35,997位置，04=9,940作品目录，90=1,109候选，172=425效度核读，87=492路线，85=247矩阵。不同计数不能解释成独立强相关作品数、召回率或穷尽证明。
+- 验证：T463修正脚本幂等运行两次；package_checkpoint_20261014.py通过T434、T448–T463相关历史/新增断言、ZIP CRC和来源文件SHA核验；git -c core.whitespace=cr-at-eol diff --cached --check通过。无业务源码改动；根目录两份既有未跟踪用户文件未修改。
+- 细粒度检索仍未完成。下一步先等待并核实三个可见门控：981694537（T01 start=540）、981694534（T458 start=0）、981694543（FakeWorld OpenReview）。验证后只筛真实可见的新结果/书目条目；对FakeWorld优先完成最终论文PDF和其书目，不重读已处理的781个Scholar位置或reviews/rebuttals。若T01的旧offset持续只出现验证/空容器，从当前位置不造记录；若索引变化后需重看首页，先按标题与74/04去重再计新增项。
+
+---
+
+# 2026-10-14续：T460/T461引文筛查与Scholar访问断点
 
 - 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新数据提交：33b011c；前一数据提交：71e9eee。二者均已推送至已确认的origin https://github.com/brodyZhao/my-research-project.git。此前确认允许推送。根目录两个既有未跟踪用户文件保持未修改、未暂存。
 - T460 对种子作品L-cb3acad70c7df8《Multimodal Large Models for Image Tampering Detection and Explanation: From Detection to Reasoning》的官方ACM索引页中References [1]–[12]逐项做题名/主题筛查，并交叉匹配04与74已有身份/位置。12条均留下理由；8条对应已有74位置，既有TruFor、MVSS-Net、CASIA、AutoSplice、Noiseprint等身份复用，没有新建直接解释可靠性身份。结果只关闭当前可见的12条书目筛查，不代表12篇全文均已读。ACM DOI直取返回403；种子正文方法、实验和其引用排序指标的实际用法仍未核。
