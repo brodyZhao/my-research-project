@@ -1,0 +1,2 @@
+﻿reconciliation_id,source_event,query_id,covered_positions,existing_rows,existing_page_starts,source_recorded_at,decision,evidence
+T445-R1,T379-T01-F4-S5-GAP-ACCESS-20261013,T01-F4-S5,131-170,40,"130,150",2026-10-13,Resolved without rescreening; all 40 positions already exist in master 74.,"Master 74 has continuous result_position 131..170, 20 rows at start=130 and 20 rows at start=150, source page URLs for the exact insertion query, each captured 2026-10-13."
