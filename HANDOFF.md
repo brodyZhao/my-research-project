@@ -2412,3 +2412,16 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - HIL-MDF（DOI `10.1109/3SCEA68071.2026.11603194`）此前在三个Scholar引用交叉筛选位置出现，但缺90/72/172/04唯一身份。现复用三个旧位置，在90/72/172/04新增各一条唯一身份；74主账不新增位置。IEEE官方摘要与部分Introduction显示三种XAI方法和人工核验界面、报告89.75%检测准确率；看不到解释faithfulness/grounding或用户实验，PDF受订阅限制，References面板不可用。仅摘要/引言级，不当作可靠解释实证。
 - 计数：74=34,267；90=1,063；72=453；172=405；87=456；85=214；目录04=9,874。T377专项审计表已收入阶段归档，T377录入脚本复跑幂等；阶段包1,024成员，SHA-256=`285b6914e76c8f87add33be0193408873d75858b2121c548eda374f7de29f551`。测试含py_compile、T377两次幂等运行、package checkpoint断言、ZIP成员/CRC/全源文件SHA校验及`git -c core.whitespace=cr-at-eol diff --check`。
 - 仍开放：T372文档取证报告grounding细式当前Chrome标签981694432曾显示未勾选reCAPTCHA和0卡；T369 RSCMQA Cited-by仍为访问门控；T375 ACM DFF正文仍403。用户刚被再次具体告知T372状态并请求检查。继续检索时先从可访问高精度路线/候选引文链差分，不重扫已闭合T02-F4/T06-F3/T11-F3等快照。
+
+# 2026-10-14续：T454–T457 图像取证解释质量/忠实度细检索
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`1b24ac6`（`Record forensic explanation search checkpoint 2026-10-14`）；origin为已确认的`https://github.com/brodyZhao/my-research-project.git`。用户此前明确要求完成检索并推送；HANDOFF需单独提交后推送。两个原有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`及`literature/forensic-explanation-relevance-20261004.md`保持原样、未暂存。
+- T454检索式：`("image forgery detection" OR "image manipulation detection" OR "image tampering detection") ("human evaluation" OR "expert evaluation" OR "user study") ("explanation quality" OR "rationale correctness" OR "explanation faithfulness" OR "explanation fidelity" OR "grounded explanation")`。20+11张实际结果卡已逐项筛；Scholar页估数从约41变为31，start=40页3无结果卡，空页事件单列。无新直接作品身份，复用已核书目/全文。侧表为T454三张CSV，主账74、矩阵85、路线87、阶段报告00已更新。
+- 用户确认T01-F4-S5 start=540已恢复后复查：Scholar显示正常“Page 28 of 90”及分页，但0张结果卡、无验证码。记录在T455；不虚记541–560、不重筛此前1–540，也不把该路线标成闭合。
+- T456检索式：`("image forgery" OR "image manipulation" OR "image tampering" OR "image authenticity" OR "AI-generated image detection") ("explanation faithfulness" OR "causal faithfulness" OR "explanation fidelity" OR "explanation correctness")`。start=0/20/40共45个可见结果卡（20/20/5）均逐项记录；Scholar估数由约55漂移至45，终端页无Next。REVEAL、LaP-Forensics、SGEVL-Forensics、Explainability-Guided Deepfake Detection、《Beyond Accuracy》等均复用已有稳定作品身份及172核读结论；未发现新直接作品身份。T456侧表、主账74、矩阵85、路线87、报告00均更新。
+- T457细式为图像伪造/操纵/拼接词 × explanation/saliency/attribution stability/consistency。Chrome标签981694534出现Google Scholar明确CAPTCHA容器`gs_captcha_f`，无任何结果卡。已即时告知用户并请求本人恢复；路线断点为start=0、已筛位置0。访问事件CSV、路线87、矩阵85及报告00均有记录。收到用户确认后从首页继续。
+- 最新阶段包为`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip`，含1,091个源文件及manifest（1,092成员），SHA-256=`815fc71f16b7e364e87c0583143d9717fdaa9b7e98493f4d8c4dbc83e3bcbdeb`。更新台账口径：74=35,985个结果/引文/核验位置；87=489条路线；85=244个拆分矩阵条目；04候选目录=9,940条。各表单位不同，不代表强相关唯一文献数、召回率或零遗漏。
+- 主要修改：报告00、主账74、查询矩阵85、路线87、阶段哈希清单112、T454逐条与空页CSV、T455恢复后复查CSV、T456 45位置CSV、T457访问事件CSV及阶段ZIP。记录脚本及检查点脚本在本地忽略的`work/search_protocol_v2/`中；没有业务源码修改。
+- 验证：T456与T457录入脚本及阶段打包脚本`py_compile`通过；T456和T457脚本各连续运行两次且幂等；阶段包断言通过（T454 31位、T455 1事件、T456 45位、T457 0位受限）；CSV连续位置与ZIP CRC、成员内容SHA校验通过；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。数据提交后，HANDOFF更新待独立提交。
+- 遗留：英文主题细式与强相关引文网络仍在继续，不能承诺“一个都不漏”。当前用户动作待办是本人完成T457 Scholar CAPTCHA；未恢复前不尝试自动绕过，不把0位置记为检索结果。T01-F4-S5的页身空结果与Scholar页码/估数冲突仍未解决。其它开放父查询按已有记录继续做高信号细分，不机械重筛已登记身份或分页。
+- 建议ChatGPT Web下一步：验证T457首页正常后，按显示的实际结果卡逐项记录，再检查分页终端/估数冲突；随后对照87/85挑选未覆盖且精度高的解释稳定性、因果评价、人评/适当依赖子式。命中已在04/90/72/172记录的作品时复用唯一身份及原文结论，避免重复筛查。
