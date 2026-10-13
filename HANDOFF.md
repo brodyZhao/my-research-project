@@ -1,4 +1,15 @@
-﻿# 2026-10-14续：T452/T453文档取证解释可靠性细式
+﻿# 2026-10-14续：T460/T461引文筛查与Scholar访问断点
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新数据提交：33b011c；前一数据提交：71e9eee。二者均已推送至已确认的origin https://github.com/brodyZhao/my-research-project.git。此前确认允许推送。根目录两个既有未跟踪用户文件保持未修改、未暂存。
+- T460 对种子作品L-cb3acad70c7df8《Multimodal Large Models for Image Tampering Detection and Explanation: From Detection to Reasoning》的官方ACM索引页中References [1]–[12]逐项做题名/主题筛查，并交叉匹配04与74已有身份/位置。12条均留下理由；8条对应已有74位置，既有TruFor、MVSS-Net、CASIA、AutoSplice、Noiseprint等身份复用，没有新建直接解释可靠性身份。结果只关闭当前可见的12条书目筛查，不代表12篇全文均已读。ACM DOI直取返回403；种子正文方法、实验和其引用排序指标的实际用法仍未核。
+- T461：用户报告T01-F4-S5 start=540完成验证且显示结果后，我重新打开确切查询。Chrome标签981694537页眉为Page 28 of 140 results，结果区实际再次显示Google Scholar验证码，0张卡。访问事件已保存；不新增位置、不复筛历史1–540。用户已收到当前标签和状态并被请求本人恢复。另有独立细式T458的Scholar验证码断点，当前tab 981694534，0位置，未声称完成。
+- 更新后：74=35,997条位置（本轮T460新增12条书目位置；T461无位置）；04=9,940；90=1,109；172=425；87=492条路线；85=247条矩阵。阶段包 outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip 含1,094个来源文件+manifest，共1,095成员；SHA-256=1839115c95b47b112d4d953cbe9641a4f6878b125a2026006977109701d9ec57。各台账计数口径不同，不能当成独立强相关论文总数、召回率或穷尽证明。
+- 验证：T460与T461录入脚本通过py_compile并各连续运行两次幂等；package_checkpoint_20261014.py通过所有历史与新增断言、位置连续性、ZIP CRC和源文件SHA校验；git -c core.whitespace=cr-at-eol diff --cached --check通过。无业务源码修改。录入脚本位于忽略目录work/search_protocol_v2/。
+- 细粒度总体检索仍未完成。下一步先检查Chrome标签981694537是否真的加载结果卡；只处理未记录的新位置，不能重筛1–540。用户恢复T458（tab 981694534）后，从其start=0逐卡筛，不要重复被撤销的T457。若访问门控持续，继续核查已有高相关种子的其他可读参考/被引链；保持T375正文为摘要级，直至获取全文。新访问限制须立即向用户报告。
+
+---
+
+# 2026-10-14续：T452/T453文档取证解释可靠性细式
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交：`fe64ed30673bf83efe96bd4de379074f6a917396`，HANDOFF提交：`414cd5783a95bdee13e509a3b519a435fbb32148`。二者均已推送到已确认的`origin https://github.com/brodyZhao/my-research-project.git`，分支同步。根目录两份原有未跟踪用户文件保留且未暂存。
 - T452继续T372“document forgery/tampering × forensic report/grounding”宽式第2页，位置21–40共20条逐项记录；累计40位置，页内多为跨域文档/RAG/金融/法律噪声，仍有Next。父式保留开放但暂停机械翻页；侧表`T452_T372文档取证报告接地查询第2页20位置逐条筛查_20261014.csv`。
