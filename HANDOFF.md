@@ -1,4 +1,15 @@
-﻿# 2026-10-14续：T464访问状态差分与归档
+﻿# 2026-10-14续：T465 SGEFusion书目筛查与访问门控复核
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`c5500a5`（Screen SGEFusion reference bibliography）。已确认origin为`https://github.com/brodyZhao/my-research-project.git`，用户此前明确授权推送此检索分支。HANDOFF将另行提交。根目录两份既有未跟踪用户文件保持原样且未暂存。
+- T462对优先级较高的直接候选《Specialist-Generalist Fusion with Outcome-Supervised Rationales for Deepfake Detection》（arXiv:2605.31192v2）官方HTML列出的73条参考逐条做题名/主题筛查；73/73均有单独理由。50条对应已有候选身份，53条标题在主账74有既有Scholar位置；直接解释/推理相关引文全部能复用目录，不新增候选。书目只做题名/主题初筛，不代表73篇全文均已读。种子全文和172效度核读此前已完成，本轮未重复。
+- 主要修改：T462侧表、74主账、85矩阵、87路线、00阶段报告、112哈希清单和2026-10-14阶段ZIP。ZIP含1,095个来源文件及manifest（1,096成员），SHA-256=`21f2dfbeeb5e395625c032a197394be989a1b3bdd417102fc48f891b8bde6d99`。口径为74=36,070个结果/引文位置，04=9,940个候选目录条目，90=1,109候选记录，72=463优先项，172=425效度核读，87=493路线，85=248矩阵；各数单位不同，不能解释为强相关独立作品数或零遗漏证明。
+- 验证：`record_t462_sgefusion_references_20261014.py`两次运行幂等；两支记录/打包脚本`py_compile`通过；`package_checkpoint_20261014.py`通过历史与T462 73/73连续性、非空筛选理由、已有身份交叉匹配、ZIP CRC和源文件SHA校验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码修改。
+- 访问门控需继续处理：Chrome标签981694537（T01-F4-S5 start=540）仍显示Scholar验证码、0卡；标签981694534（T458图像伪造区域/定位图一致性式）仍显示验证码；标签981694543（FakeWorld OpenReview）仍显示浏览器验证。用户报告“结果页已显示”后，我复核到精确T01标签仍受限；标签981694444实际是另一个OpenReview challenge，并非该Scholar查询。已把标签对应关系发给用户并等待确认。FakeWorld本地`file://`PDF页触发浏览器安全策略拒绝；不通过其他接口绕开该限制。以上均未增加筛选位置。
+- 细粒度检索未完成。下一步等用户确认可见的确切页面；T01正常后只筛未审的541–560位置，T458正常后从start=0按卡片逐条筛，均按74/90/72/172去重。若验证码或无卡片继续存在，记为访问门控/空页，不计作零命中文献。FakeWorld PDF及其59条计划核查书目仍待取得合规可读的官方全文材料。
+
+---
+
+# 2026-10-14续：T464访问状态差分与归档
 
 - 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新数据提交a62491e，前序072c0b4。数据已推送至已确认origin https://github.com/brodyZhao/my-research-project.git；HANDOFF本条随后单独提交。
 - 将T463校正扩展到两个已解决但85矩阵仍陈旧的访问状态：GenText OpenReview access 已由87、172和T425支持；Semantic Forensics 的ResearchGate门控已由官方IEEE References端点和T376（15项）解决。只同步状态，不新增Scholar位置、候选身份或重复筛查。
