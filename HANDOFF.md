@@ -2333,3 +2333,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 最新台账：74=30,254；90=963；72=398；172=346；87=358。只有172因漏列修复增加1项。阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-12.zip`含826个来源文件+manifest（827成员），SHA-256=`ddeb40e0392cdf42b9ecd0b144e14fa40b4a499a2f90dca373119f20d2f10aab`。
 - 验证：T211差分脚本幂等复跑；T210脚本幂等复跑；`python3 -m compileall -q work/search_protocol_v2`通过；阶段打包脚本通过T210完整16个参考位置、T211原记录去重和精确计数、ZIP CRC及每个源文件SHA校验；`git -c core.whitespace=cr-at-eol diff --check`通过。未修改业务源码。
 - 遗留：Google Scholar仍有reCAPTCHA拦截，T210前向Cited-by路线尚未闭合；总体主题检索与引文网络继续开放。下一步优先等Scholar可用后仅补T210一条前向引用检查，再回到90/72与172差分，只处理尚未闭合的直接强相关文章，禁止重复核读已登记正文或重复筛已登记页位。
+
+# 2026-10-13续：T376 Semantic Forensics 官方参考书目与检索断点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`8712981`（`Record IEEE forensic explanation reference audit`），已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF改动需单独提交并推送。两个既有未跟踪文件未修改、未暂存。
+- 主要修改：阶段报告00、清单112、主账74、候选90、排序72、效度172、路线87、检索矩阵85、旧阶段包2026-10-12及新增归档`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-13.zip`。官方IEEE Xplore References端点为《Semantic Forensics with Explainable AI for Multimodal Deepfake and Media Manipulation Detection》显示编号[1]–[15]；15/15位置逐条筛查在主账及T376专项表登记。ResearchGate此前显示14条的访问事件保留，官方来源纠正为15条；候选身份复用，未新增作品身份或重复全文核读。该论文PDF仍需订阅，摘要中的分析员用户研究不作为解释事实正确性/faithfulness证据。
+- 更新计数：74=34,267位置；90=1,062候选记录；72=452排序记录；172=404效度核读；87=455路线；85=213检索矩阵；目录04=9,873条。单位口径不同，不能解释为独立强相关作品总数或召回率。T372文档取证细式受Scholar reCAPTCHA阻断、当前0条卡片；T369 RSCMQA正向引用也仍为访问门控；T375 ACM作品仅摘要级、全文返回403。T366遥感copy-move QA 42/42已闭合；T02-F4-S1刷新快照、T06-F3-S2适当依赖、既有V109/V110大式分页均已有记录，不重筛。
+- 验证：`python3 -m py_compile work/search_protocol_v2/record_t376_semantic_forensics_ieee_refs_20261013.py work/search_protocol_v2/package_checkpoint_20261013.py`通过；T376录入脚本幂等复跑，主账保持34,267；`python3 work/search_protocol_v2/package_checkpoint_20261013.py`通过15位置连续性、表计数、ZIP 1,023成员CRC与全部文件SHA校验，归档SHA-256=`0f8a9c84acea3e6535d4d8c35c5336696eb86701e6a7bcf89bcb63e089503221`；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码改动。
+- 遗留与下一步：细粒度Scholar子式及直接候选引文链仍未完全闭合，不能宣称“一个都不漏”。优先等待T372门控页由用户恢复后从start=0读取；期间筛查未闭合的高精度查询和强候选参考链，按74/90/72/172去重。对“只试检后转精确子式”的低精度父查询保留开放/范围限制，不再机械翻巨量分页。用户要求一旦遇到新的访问限制立即报告。
