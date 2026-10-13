@@ -1,6 +1,6 @@
 ﻿# 2026-10-14续：T452/T453文档取证解释可靠性细式
 
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交：`fe64ed30673bf83efe96bd4de379074f6a917396`。`origin`为已确认的`https://github.com/brodyZhao/my-research-project.git`；数据提交及本HANDOFF更新待推送。根目录两份原有未跟踪用户文件保留且未暂存。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交：`fe64ed30673bf83efe96bd4de379074f6a917396`，HANDOFF提交：`414cd5783a95bdee13e509a3b519a435fbb32148`。二者均已推送到已确认的`origin https://github.com/brodyZhao/my-research-project.git`，分支同步。根目录两份原有未跟踪用户文件保留且未暂存。
 - T452继续T372“document forgery/tampering × forensic report/grounding”宽式第2页，位置21–40共20条逐项记录；累计40位置，页内多为跨域文档/RAG/金融/法律噪声，仍有Next。父式保留开放但暂停机械翻页；侧表`T452_T372文档取证报告接地查询第2页20位置逐条筛查_20261014.csv`。
 - T453细式为`("document forgery" OR "document tampering" OR "text-centric image forensics") ("explanation faithfulness" OR "explanation fidelity" OR "explanation correctness" OR hallucination OR "evidence grounding" OR "human evaluation")`。Scholar可见四页，位置1–62逐条筛完；第4页start=60为2条且无Next。页眉估数在前两页约72、后两页62，已按动态估数记录；这里只关闭所观察到的分页快照，不代表零遗漏。四个分页面侧表和完整记录已存。
 - T453首屏复用DocShield、Agentic、SEED、GPT4o-Receipt等既有作品身份。第2页重复列出Omni-IML的OpenReview/arXiv两个入口，按同一作品复用既有全文核读。已对目录原有身份`arxiv:2607.28464`《Can Vision-Language Models Reason about AI Edits in Images?》进行官方全文核读：AI编辑图像检测/定位与推理轨迹令其任务高度相关，但GRPO奖励只约束格式、真假标签和边框IoU；未发现推理文字真值评分、独立人工解释评测、因果faithfulness或解释稳定性测试。附录噪声实验衡量的是检测/定位鲁棒性。因此保留为任务高相关候选和效度缺口证据，不当作解释可靠性已获验证的直接证据。来源：[arXiv摘要](https://arxiv.org/abs/2607.28464)、[官方全文](https://arxiv.org/html/2607.28464)。
