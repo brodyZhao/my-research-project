@@ -1,4 +1,15 @@
-﻿# 2026-10-14续：T465 SGEFusion书目筛查与访问门控复核
+﻿# 2026-10-14续：T466 EFR书目逐条筛查与访问门控复核
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮数据提交：`1dfef39`（Screen EFR reference bibliography），目标远端为已确认的`origin https://github.com/brodyZhao/my-research-project.git`。用户此前已授权推送检索分支。根目录两个原有用户未跟踪文件未修改、未暂存。
+- 对直接高相关种子《Evidence-Grounded Forensic Reasoning for Detecting and Grounding Multi-Modal Media Manipulation》（arXiv:2608.08009v1）的官方arXiv HTML References表逐条筛查，共56/56项；位置和单条理由在`T466_EFR_arXiv2608.08009v1_56条参考逐项筛查_20261014.csv`，同步至74主账、87路线、85矩阵和阶段报告/ZIP。56项均通过精确规范化题名或arXiv标识匹配至现有04候选身份；40项有既有74主账的题名/URL结果位置。直接鉴伪解释/推理/幻觉评估、定位/检测方法邻接、通用评价指标和模型/数据/RL背景分别标记；书目题名筛查不代表56篇引用全文均已阅读。此前已完成的《Pixels Don’t Lie》55条引文不重复筛。
+- 本轮阶段包`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip`含1,096个来源文件及manifest（1,097成员），SHA-256=`45c901cb051635190535a0f6d29a44901f5d3e1eac8ab9702d4788a3c8aa78f4`。台账口径：74=36,126结果/引文位置；04=9,940候选目录记录；90=1,109候选；72=463优先项；172=425效度核读；87=494路线；85=249矩阵。它们是不同计数单位，不能合并解释为独立强相关论文数、召回率或全领域零遗漏。
+- 验证：`record_t466_efr_references_20261014.py`两次运行幂等；该脚本和`package_checkpoint_20261014.py`均通过`py_compile`；打包检查通过T466 56/56连续位置、逐条非空理由、所有身份映射、历史断言、ZIP CRC和来源SHA校验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码修改。
+- Scholar访问复核：用户回复T01-F4-S5 start=540及一致性细式验证后显示结果；随后直接检查Chrome实际tag 981694537和981694534，两页仍显示“Please show you're not a robot”、结果卡为0；tag 981694444实际是OpenReview challenge。已向用户说明差异并等待准确状态。Chrome tag 981694519（同插入式start=80）页眉约114条且有分页，但页面结果区无卡片；记录为异常空结果区，不计零结果或筛查覆盖。T458与T01不得继续把验证码页当作结果页。
+- 下一步：等用户确认当前可见的准确Scholar标签/结果状态；如果start=80恢复为正常卡片页，只筛查尚未入账的81–100位置，复用已完成的历史身份；如果T458恢复，从首页开始只筛真实显示卡片。其他英文细分类继续优先已开放、能真实呈现卡片的窄式；继续先查74/04去重，逐条留理由，遇新访问限制即时报告。FakeWorld最终出版全文/59条引文核查仍需合规可读的官方材料；不得绕过浏览器策略。
+
+---
+
+# 2026-10-14续：T465 SGEFusion书目筛查与访问门控复核
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`c5500a5`（Screen SGEFusion reference bibliography）。已确认origin为`https://github.com/brodyZhao/my-research-project.git`，用户此前明确授权推送此检索分支。HANDOFF将另行提交。根目录两份既有未跟踪用户文件保持原样且未暂存。
 - T462对优先级较高的直接候选《Specialist-Generalist Fusion with Outcome-Supervised Rationales for Deepfake Detection》（arXiv:2605.31192v2）官方HTML列出的73条参考逐条做题名/主题筛查；73/73均有单独理由。50条对应已有候选身份，53条标题在主账74有既有Scholar位置；直接解释/推理相关引文全部能复用目录，不新增候选。书目只做题名/主题初筛，不代表73篇全文均已读。种子全文和172效度核读此前已完成，本轮未重复。
