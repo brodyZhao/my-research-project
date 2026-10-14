@@ -1,4 +1,13 @@
-﻿# 2026-10-14续：确认 EFR 锚点与郭志清论文检索
+﻿# 2026-10-14续：导师人因论文候选线索
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交 `7bc17ec` 已推送至已确认 origin。本 HANDOFF 更新随后单独提交并推送。
+- 新线索：Xiaowei Chen 公开学术简历（https://chenetal.github.io/cv.pdf）“Papers under Review”列出 `Zhiqing Guo, Lixin Jia, Luning Sun, Xiaowei Chen, et al. David Stillwell, Thorsten Holz, Shujun Li. From GANs to GPT-5: A Taxonomy-Guided Study of Human Deepfake Detection`。这是作者级题名线索，尚无公开正文或正式会议题录；不能据此确认志愿者培训设计或已发表 CCS。已写入导师讨论稿。
+- 测试：仅讨论稿单文件 `git -c core.whitespace=cr-at-eol diff --check` 通过，无代码测试。原有未提交文件未触动。
+- 遗留：用户被询问该题名是否像导师所指；若确认，优先获取合法可读正文或作者提供稿件，再比较人因实验设计。若不确认，继续按作者群与培训实验追查；不得将该候选强行认作导师论文。
+
+---
+
+# 2026-10-14续：确认 EFR 锚点与郭志清论文检索
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；讨论稿修订提交：`41afe84`，已推送至已确认的 origin；本条 HANDOFF 随后另交另推。
 - 用户澄清：上次漏检的高度相似论文是 EFR，已在当前仓库；所有已有文献材料均在当前仓库。导师是新疆大学郭志清，会议可能记错。
