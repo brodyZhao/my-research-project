@@ -1,4 +1,13 @@
-﻿# 2026-10-14续：英国合作者线索确认导师论文身份
+﻿# 2026-10-14续：导师讨论稿改写为研究综述与理论框架
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；正文提交 `de71ab0`，已推送至已确认 origin。本交接随后独立提交并推送。
+- 主要修改：重写 `outputs/图像鉴伪解释可靠性_导师讨论稿_2026-10-14.md`，按摘要、研究问题、相关工作、竞争边界、理论框架、基准设计、实施路径、结论与参考文献组织。明确结论：已有 Hopf、Kuturin、EFR、TriDF 等直接或高度相邻研究；原始遮挡/成对数据选题创新性不足；以干预有效性可审计、不可判定率和分层解释可靠性为核心的 benchmark 建议立项，先做仪器校准。
+- 验证：正文 `git -c core.whitespace=cr-at-eol diff --check` 通过；章节、来源与结论已检查。无业务代码变更，无代码测试。既有未提交 CSV/报告/ZIP 和两个未跟踪用户文件未修改、未暂存。
+- 遗留问题：郭志清等 IEEE S&P 2027 论文正文尚未取得，FakeWorld 最终全文及少量新论文仍待核；首轮校准尚未开展，依赖性测量可用率未知。建议 ChatGPT Web 下一步按新稿检查核心论文贡献是否足够集中，并在作者全文可得后补入人因方法对照。
+
+---
+
+# 2026-10-14续：英国合作者线索确认导师论文身份
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；讨论稿数据提交 `d7815c1` 已推送至已确认 origin，本 HANDOFF 更新随后另交另推。
 - 用户补充导师与英国老师合作。Shujun Li 作者维护的发表列表（https://www.hooklee.com/pub.html）列出郭志清等人的《From GAN-Based Models to GPT-5: A Taxonomy-Guided Study of Human Performance in Detecting Deepfake Face Images》，注明 2026-09 获 IEEE S&P 2027 接收、in press。郭志清本人主页（https://www.guozhiqing.cn/）2026-09-14 消息独立印证 IEEE S&P 2027 接收；Shujun Li 是英国肯特大学教授，另一合作者 David Stillwell 在英国剑桥。旧 Xiaowei Chen CV 中同作者组旧题名/under review 状态已被更新记录取代。故导师论文身份高度可信，会议应记 IEEE S&P 2027 而非 CCS。
