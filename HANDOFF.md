@@ -2561,3 +2561,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 当前台账记录数：74主账38,348行；04候选目录10,111行；90候选/引文审计1,287行；72优先清单依原台账；172效度核读458行；87路线513行；85查询矩阵269行。各表单位不同，不可换算为强相关独立作品数或召回率。
 - 阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip` 含1,153个源文件及manifest（共1,154成员），SHA-256=`ad495ad03b997aef24f50392f1b0a90988e83df254fbf66af62930832262cbb6`。验证：`python3 -m py_compile work/search_protocol_v2/package_checkpoint_20261014.py`通过；`python3 work/search_protocol_v2/package_checkpoint_20261014.py`通过既有断言、T477重复项及访问断点、T483恢复状态、ZIP CRC和源文件SHA；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务代码修改、无代码测试适用。
 - 遗留与建议下一步：细粒度英文检索与强相关引文网络仍未完成，不能宣称零遗漏。先核对 T477 `start=998` 的实际结果卡；若用户验证后有卡，只筛新的未处理位置，并先按74/90/72/172复用身份，避免重复。若仍受限，向用户报告后转做不依赖该 Scholar 页的已开放高信号细式；不要以估数推断所有分页都需穷尽，也不要重筛已处理卡片。
+
+# 2026-10-14续：T516人评依赖细式旧偏移再次受验证门控
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据检查点提交 `5972852`（`Record Scholar access gate for reliance query gap`）已推送至已确认的origin；本 HANDOFF 更新随后单独提交并推送。两个既有根目录未跟踪文件未修改、未暂存。
+- T516精确复查 T02-F3-S7 查询之前不可见的 p137–140 缺口。Chrome 标签 `981694671`，start=136，Google Scholar显示约126结果及明确reCAPTCHA提示，结果卡为0。已立即向用户报告并以完整标签号/查询类型请求本人恢复。此状态独立记入 `T516_T02-F3-S7_start136_Scholar验证访问事件_20261014.csv`；87路线保留“此前空白无验证、当前复查出现验证”的先后变化，主账74不增加结果位置。T516没有被误标为零结果。
+- 路线当前仍有357个已筛结果位置；p137–140、p322–330和后续偏移未闭合。T477的另一独立Scholar断点也仍是 start=998 reCAPTCHA。用户只确认 UniForge 的 OpenReview PDF 标签 `981694661` 已恢复；该作品全文早已核读，验证恢复不视作上述任何 Scholar 路线恢复。
+- 复核已登记作品以避免重复：ACL 2026《Generating Attribution Reports for Manipulated Facial Images》已在172按正式全文记录5人盲评 Faithfulness/Helpfulness，并有 `101_GeneratingAttributionReports原文64条参考文献逐条筛查.csv`；LMFR-SID/Research Square 的版本与65条参考书目已合并在既有作品身份。两者均不新建重复条目或重读已完成内容。
+- 最新阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip` 含1,154个源文件及manifest（共1,155成员），SHA-256=`2933780909fa208a56b8c40c070d7e476a8b1a38c2796141398b97b34871537c`。验证：检查脚本 `py_compile` 通过；`python3 work/search_protocol_v2/package_checkpoint_20261014.py` 的T516、T477、T468、T483及历史连续性断言全部通过，并校验ZIP CRC和源文件SHA；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务代码改动。
+- 建议下一步：先处理用户已收到的两个具名恢复请求。任一恢复后只读取真正显示的未筛结果卡，以74/90/72/172复用身份，遇到重复曝光仅记边界链接；另一页若仍受限，就保留断点并转回可访问的独立高信号路线。细分类检索仍未完成，不能宣称全域零遗漏。
