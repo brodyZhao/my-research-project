@@ -1,4 +1,13 @@
-﻿# 2026-10-14续：导师人因论文候选线索
+﻿# 2026-10-14续：未公开题名线索降级
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；讨论稿修订提交 `550db02` 已推送到 origin。本 HANDOFF 更新随后单独提交并推送。
+- 用户表示无法搜到且不能确认 `From GANs to GPT-5: A Taxonomy-Guided Study of Human Deepfake Detection`。该题名只有合作者公开简历“under review”一条线索，正文与正式发表未取得；讨论稿现明确将其排除在已核文献与新颖性对照外。导师所指已发表的人类鉴伪培训论文仍未定位，不把该题名或其他作者的 CCS 论文代入。
+- 主要修改：仅 `outputs/图像鉴伪解释可靠性_导师讨论稿_2026-10-14.md` 与本交接；单文件 `git -c core.whitespace=cr-at-eol diff --check` 通过。无业务代码测试，原有未提交文件未动。
+- 遗留及建议 ChatGPT Web 下一步：导师论文需作者给出题名、DOI、年份或正文才能核对，继续保留未确认。EFR 等已核竞争研究的边界与理论方案可先供导师讨论；不得据未公开题名补造培训实验细节。
+
+---
+
+# 2026-10-14续：导师人因论文候选线索
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交 `7bc17ec` 已推送至已确认 origin。本 HANDOFF 更新随后单独提交并推送。
 - 新线索：Xiaowei Chen 公开学术简历（https://chenetal.github.io/cv.pdf）“Papers under Review”列出 `Zhiqing Guo, Lixin Jia, Luning Sun, Xiaowei Chen, et al. David Stillwell, Thorsten Holz, Shujun Li. From GANs to GPT-5: A Taxonomy-Guided Study of Human Deepfake Detection`。这是作者级题名线索，尚无公开正文或正式会议题录；不能据此确认志愿者培训设计或已发表 CCS。已写入导师讨论稿。
