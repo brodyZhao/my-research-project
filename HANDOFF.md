@@ -1,3 +1,15 @@
+# 2026-10-14续：T519图像拼接/copy-move解释效度精确式筛查
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；T519数据提交：847eab1（Screen copy-move explanation validity query）；本HANDOFF需作为独立提交，再推送到已确认的origin。
+- 用户询问此前提及的页面位置。此前T477页已放到Codex右侧内嵌浏览器；本次继续检索的T519当前页也在Codex内嵌浏览器tab6并设为可见/交接页，不是隐藏Chrome标签。T519直达URL：https://scholar.google.com/scholar?q=(%22image+splicing%22+OR+%22copy-move+forgery%22)+(%22explanation+faithfulness%22+OR+%22explanation+fidelity%22+OR+%22explanation+reliability%22+OR+%22explanation+stability%22)&hl=en&as_sdt=0,5
+- 查询式：("image splicing" OR "copy-move forgery") ("explanation faithfulness" OR "explanation fidelity" OR "explanation reliability" OR "explanation stability")。Google Scholar单页共8卡，8/8逐项核对、全有既有身份，0个新作品身份；具体卡片、匹配旧结果ID、理由、来源限制见T519专项表，并逐项加入74，路线87和检索矩阵85记为仅该精确式关闭。
+- 此式的直接核心是Aoudi等2026年IEEE Access《Beyond Accuracy》，其原文、限制和33条参考筛查已在既有90/72/172中，复用N0061，不重复全文核读。Srinivasan等2026图像拼接解释系统沿用官方全文核读：作者承认没有既有faithfulness指标。Yawale等合成图SHAP系统官方Springer摘要已核，Scholar摘录的“explanation fidelity 0.88”未获出版社摘要支持，全文需订阅。Aliabadi等《Evidence Fusion for Analyzing Multimodal Image Manipulation》仍属直接任务待核候选；Scholar摘要词语不能代替效度协议。其余卡为图像伪造综述/背景、通用决策支持、语音deepfake，按具体范围分层或排除。
+- 访问限制已报告并入T519记录：IEEE Xplore页面当前工具不可读，MDPI返回429，World Scientific页面不可访问。本轮Scholar查询页正常；受限只指出版方交叉核验。
+- 验证：package_checkpoint_20261014.py语法检查通过；阶段打包断言/ZIP CRC/源文件SHA通过。ZIP含1,157个源文件与manifest（1,158成员），74主账38,377行，路线514条、矩阵270行；SHA-256 10fc7c30b192beb8e2e095cf30f30cc4a7e6eded4b8038dc8f2b9fa30fb33317。git -c core.whitespace=cr-at-eol diff --check通过。无业务源码修改。
+- 遗留：此精确式关闭不代表全部细检索完成。需要继续细分类中尚未完成的grounding/factuality、人评适当依赖、稳定性、删除/插入、传统篡改与AIGI等分支，以及强相关核心文献中未闭合的前向引用；按74/90/72/172复用身份，不重复筛卡或全文。继续遇到访问限制时立即报告。用户无法定位隐藏Chrome标签；页面应留在Codex可见内嵌浏览器并提供直达链接。
+
+---
+
 # 2026-10-14续：T518恢复可见Scholar页面并核对T477分页上限
 
 - 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；本次数据提交：a034461（Log T477 visible page-cap checkpoint），待本HANDOFF单独提交后推送。
