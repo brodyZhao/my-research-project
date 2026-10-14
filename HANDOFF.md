@@ -1,4 +1,14 @@
-﻿# 2026-10-14续：T466 EFR书目逐条筛查与访问门控复核
+﻿# 2026-10-14：导师讨论稿与阶段性选题判断
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；讨论稿提交：`3329c0e`，已推送至已确认的 origin。HANDOFF 本条提交后将再次推送。
+- 主要修改：新增 `outputs/图像鉴伪解释可靠性_导师讨论稿_2026-10-14.md`。依据现有文献台账与官方论文页面，明确已有 Hopf 自述区域遮挡、Kuturin 源图替换与仪器审计、EFR 证据绑定、FORGE/TriDF/FakeWorld 事实评价及 EDCT 反事实邻接；提出事实支持、条件性判决依赖、干预效度和人因效果分层的 benchmark 理论方案。
+- 结论状态：这是阶段性讨论稿，不声称文献零遗漏或已确认首创。用户被询问导师 CCS 论文、上次漏掉的高度相似论文的准确题名，以及是否有仓库外 Zotero/PDF 清单；收到后须逐篇原文核查并改稿。Side-VLM、DDL、FakeWorld 最终 PDF 和开放检索路线仍是遗留工作。
+- 测试：新稿文件存在、章节与链接结构检查通过；仅针对新稿的 `git -c core.whitespace=cr-at-eol diff --check` 通过。仓库已有未提交 CSV/报告/ZIP 改动，普通全仓 `git diff --check` 因那些既有 CRLF CSV 行报 trailing whitespace；本轮没有更改或暂存它们。无业务代码更动，因此无需 import/compileall。
+- 建议 ChatGPT Web 下一步：先以用户提供的两篇锚点做逐项竞争矩阵，核对是否已有相同的数据配对、编辑效度门槛和人因终点；再更新讨论稿的新颖性边界。不要把一万条候选目录记录当作一万篇全文阅读。
+
+---
+
+# 2026-10-14续：T466 EFR书目逐条筛查与访问门控复核
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮数据提交：`1dfef39`（Screen EFR reference bibliography），目标远端为已确认的`origin https://github.com/brodyZhao/my-research-project.git`。用户此前已授权推送检索分支。根目录两个原有用户未跟踪文件未修改、未暂存。
 - 对直接高相关种子《Evidence-Grounded Forensic Reasoning for Detecting and Grounding Multi-Modal Media Manipulation》（arXiv:2608.08009v1）的官方arXiv HTML References表逐条筛查，共56/56项；位置和单条理由在`T466_EFR_arXiv2608.08009v1_56条参考逐项筛查_20261014.csv`，同步至74主账、87路线、85矩阵和阶段报告/ZIP。56项均通过精确规范化题名或arXiv标识匹配至现有04候选身份；40项有既有74主账的题名/URL结果位置。直接鉴伪解释/推理/幻觉评估、定位/检测方法邻接、通用评价指标和模型/数据/RL背景分别标记；书目题名筛查不代表56篇引用全文均已阅读。此前已完成的《Pixels Don’t Lie》55条引文不重复筛。
