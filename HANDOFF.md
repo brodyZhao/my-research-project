@@ -1,3 +1,15 @@
+# 2026-10-14续：T520补查T467空白分页断点
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；T520数据提交：c4e8689（Log T520 empty T467 offset checkpoint）；本HANDOFF需独立提交并推送到已确认的origin。
+- 页面位置已改为可直接访问：T477第100页的[Google Scholar直达链接](<https://scholar.google.com/scholar?start=997&q=(%22image+forgery%22+OR+%22image+splicing%22+OR+%22copy-move+forgery%22+OR+%22image+manipulation+detection%22)+(SHAP+OR+LIME+OR+Grad-CAM+OR+saliency+OR+%22visual+explanation%22)+(faithfulness+OR+fidelity+OR+sanity+OR+reliability+OR+evaluation)&hl=en&as_sdt=0,5>)已在Codex右侧内嵌浏览器打开；页眉显示Page 100 of 2,110，1张卡、Next禁用、无验证码。卡片已筛过，不重筛。用户不应被要求寻找后台Chrome编号。
+- T520重查T467精确细式的`start=110`：Scholar显示Page 12 of about 120，只有分页导航、0张结果卡、无验证码。新增筛选位置0；这是索引/分页空档，不是零结果。T467此前109张结果卡仍复用原筛选，未物化rank 110–120仍开放。事件记录在`T520_T467_start110_空页断点复核_20261014.csv`，路线87及矩阵85已注明未闭合。
+- 当轮已打开的T307、T310及T04-F4-S5页面均与旧账中已逐项筛查的结果位置相同，未重复筛查或增加候选；T308仍是既有0卡精确短语快照，不推断主题不存在。
+- 阶段包：1,158个源文件、ZIP共1,159成员；74主账38,377行，路线514条，矩阵270行。ZIP SHA-256=`beefe700d2892b1bc5245a4845443349573ea14bc9526512bcdb41934d267afc`。
+- 验证：`python3 -m py_compile work/search_protocol_v2/record_t520_t467_blank_offset_20261014.py work/search_protocol_v2/package_checkpoint_20261014.py`通过；`python3 work/search_protocol_v2/package_checkpoint_20261014.py`通过（全部断言、ZIP CRC和逐源文件SHA核验）；`git -c core.whitespace=cr-at-eol diff --check`通过。仅检索证据/打包清单更新，无业务代码改动。
+- 遗留：T467 rank 110–120仍是Scholar索引/分页缺口；整体英文细粒度检索及强相关作品引文链仍未闭合。下一步优先换词汇/前后向引文路线补足T467空档，复用74/90/72/172中已有身份；出现真实访问限制时先报告。本轮空页无验证码，不要求用户处理。建议ChatGPT Web优先检查T467替代式是否补回未物化区间，并继续剩余高信号细式。
+
+---
+
 # 2026-10-14续：T519图像拼接/copy-move解释效度精确式筛查
 
 - 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；T519数据提交：847eab1（Screen copy-move explanation validity query）；本HANDOFF需作为独立提交，再推送到已确认的origin。
