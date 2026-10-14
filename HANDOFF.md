@@ -1,3 +1,13 @@
+﻿# 2026-10-14续：T521证据充分性/完整性 × 人评精确式
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；T521数据检查点提交：`88967af`（Screen evidence sufficiency human evaluation query），已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF需独立提交并推送。
+- T521查询式：`("image forgery" OR "image tampering" OR "image splicing" OR "copy-move forgery") ("evidence sufficiency" OR "explanation sufficiency" OR "evidence completeness") ("human evaluation" OR expert OR annotator OR "grounded explanation")`。Codex右侧内嵌Google Scholar单页显示7条，无验证/访问限制；7/7逐项筛查，均映射至已登记作品身份、0个新作品身份。详细理由见`T521_图像取证证据充分性与人评精确式7卡逐条筛查_20261014.csv`，位置同步到74，路线87与矩阵85只关闭本精确快照。
+- 结果边界：PAVE（arXiv:2606.26552）和ForensicZoom（arXiv:2609.31661）为直接/高度相关候选，复用既有172全文效度结论；OmniVL-Guard Pro和IJSE视觉证据智能为证据质量/框架邻接；SSRN为通用多模态事实核查背景；剑桥文本核查论文和金融审计记录排除。不得把证据充分/完整自动当作因果faithfulness或人评解释可靠性。
+- 阶段包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip`，1,159个源文件+manifest（1,160成员），SHA-256=`58bbbfc02b8c9c15fb3abc197133f111dc763c033d27a3d174f1e8b5454f32f3`；74主账38,384行，路线515条，矩阵271条。台账行数不等于独立论文数、召回率或领域穷尽证据。
+- 验证：`python3 -m py_compile work/search_protocol_v2/record_t521_evidence_sufficiency_human_20261014.py work/search_protocol_v2/package_checkpoint_20261014.py`通过；T521录入脚本运行后，`python3 work/search_protocol_v2/package_checkpoint_20261014.py`全部历史与T521断言、ZIP CRC和源文件SHA校验通过；暂存文件`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码变更。根目录两个原有用户未跟踪文件未修改、未暂存：`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`、`literature/forensic-explanation-relevance-20261004.md`。
+- 细粒度检索**仍未完成**。T477传统图像鉴伪×SHAP/Grad-CAM忠实性路线已筛到可见Scholar第100页（997个去重排名位置），但Google页眉估约2,110、下一页不可用，不能声称全量。T467人评/解释正确性路线109张可见卡已筛，但rank 110–120仍为空页/索引缺口。T469 grounding×faithfulness查询曾在结果前遇到reCAPTCHA；其他parent宽式也仍保持开放。后续只从真实未筛卡片/候选身份差集续查，按74/04/90/172去重，不重复读已核作品；若新遇访问限制，先告知用户并说明可见页面/查询/断点。
+- 建议下一步：继续一个尚未覆盖的高精度细式，优先把传统静态图像篡改的`artifact-description correctness/factuality × human/expert assessment`与未闭合引文边分开；在Codex可见内嵌浏览器打开页面并保留直达链接，避免让用户寻找隐藏Chrome标签。下次报告明确分开“精确快照已闭合”“路线仍开放”“整体仍未完成”。
+
 # 2026-10-14续：已有解释基准专项复核与选题修正
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；专项报告提交 `7962ac9`，已推送至已确认 origin。本交接随后独立提交并推送。
