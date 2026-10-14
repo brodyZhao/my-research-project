@@ -1,4 +1,15 @@
-﻿# 2026-10-14：导师讨论稿与阶段性选题判断
+﻿# 2026-10-14续：确认 EFR 锚点与郭志清论文检索
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；讨论稿修订提交：`41afe84`，已推送至已确认的 origin；本条 HANDOFF 随后另交另推。
+- 用户澄清：上次漏检的高度相似论文是 EFR，已在当前仓库；所有已有文献材料均在当前仓库。导师是新疆大学郭志清，会议可能记错。
+- 对 EFR 官方 arXiv 2608.08009v1 再核：50K DGM4 派生推理数据、预测锚点与证据绑定、可验证奖励和 §4.4 仅正确预测篡改样本的 NLI/重复度/多样性/ROUGE；未在原文看到经验证的自述视觉证据恢复与匹配区域对照行为实验。更新讨论稿，明确 EFR 是首要直接竞争者，不能宣称首次做证据接地/解释数据。TriDF 官方项目页明确真假配对和细粒度伪迹标注，不能宣称首次用配对数据评测解释。
+- 郭志清培训人类鉴别 AI 图像论文：交叉检索英文/中文作者名与 CCS、human/participant/volunteer、training、AI-generated image/deepfake，核个人主页可见发表列表；未确认同时满足作者与人类培训研究的论文。CCS 2024《Organic or Diffused》作者无郭志清，不代入。当前保留未确认状态，不猜会议或论文身份。
+- 修改文件：仅 `outputs/图像鉴伪解释可靠性_导师讨论稿_2026-10-14.md` 与本 HANDOFF。讨论稿单文件 `git -c core.whitespace=cr-at-eol diff --check` 通过；无业务源码及对应测试。原有未提交文献台账和用户文件未修改、未暂存。
+- 遗留：导师论文需更具体线索或导师直接提供题名；文献总体仍有开放检索路线与受阻全文，不能声称零遗漏。建议 ChatGPT Web 按讨论稿 EFR 对比审查新颖性，继续 Side-VLM/DDL/FakeWorld 原文门控复核。
+
+---
+
+# 2026-10-14：导师讨论稿与阶段性选题判断
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；讨论稿提交：`3329c0e`，已推送至已确认的 origin。HANDOFF 本条提交后将再次推送。
 - 主要修改：新增 `outputs/图像鉴伪解释可靠性_导师讨论稿_2026-10-14.md`。依据现有文献台账与官方论文页面，明确已有 Hopf 自述区域遮挡、Kuturin 源图替换与仪器审计、EFR 证据绑定、FORGE/TriDF/FakeWorld 事实评价及 EDCT 反事实邻接；提出事实支持、条件性判决依赖、干预效度和人因效果分层的 benchmark 理论方案。
