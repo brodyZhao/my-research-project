@@ -2551,3 +2551,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：T468/T469录入脚本与阶段检查脚本`py_compile`通过；两个录入脚本各连续运行两次幂等；`package_checkpoint_20261014.py`通过（T434/T452/T454/T456等既有断言、T468 145条连续编号/身份复用、T469访问门控、ZIP CRC与全源SHA校验）；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改。
 - 遗留与下一步：英文细分检索和强相关文献引文网仍未完成，不能宣称零遗漏。优先请用户恢复标签16的精确grounding/faithfulness查询、T01 start=540及T458一致性查询；恢复后只比对先前已有位置并继续未筛偏移。随后优先做direct seed的前向引文/作者别名补查及尚未闭合的高精度子式；对宽噪声查询保留开放状态，不机械翻页，不重复筛74已有位置或重读90/172已有核读身份。用户要求任何新访问限制必须第一时间报告。
 - 建议下一位协作者检查：先读取本条T469 event和87中对应父/子路线，确认用户恢复状态及页面实际结果卡；再从T02-F2-GROUND-FAITHFUL-EXACT的新位置继续，并更新本HANDOFF和阶段包。
+
+# 2026-10-14续：T477断点复核、候选纠偏与阶段提交
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本次检索数据提交：`8245f750a449e4f31c1f68162d0589167cdff255`，已推送至已确认的 `origin`。本 HANDOFF 更新随后单独提交并推送。根目录已有未跟踪文件 `faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md` 与 `literature/forensic-explanation-relevance-20261004.md` 未修改、未暂存。
+- T477（传统图像取证 XAI 忠实性细式）start=980 的18卡与 start=979 第2–19卡逐项重叠，已保存在 `T515_T477_start980_page50_18条重复结果核对_20261014.csv`，只链接既有身份和筛查结论，不重筛。累计观察1,016个卡片实例，扣除该18项重复曝光后仍为997个边界调整位置。随后实时复核 Chrome 标签 `981694607`、网址含 `start=998`：页面明确显示“Please show you're not a robot”，无结果卡。用户只确认 UniForge OpenReview 标签 `981694661` 已恢复；这不表示 Scholar 同步恢复。已再次向用户指出 Scholar 标签号、查询断点和页面状态，请其完成后确认结果卡。路线保持开放，不把验证页记为零结果。
+- 新候选与纠偏：Kumar & Kour, *Analyzing the Classification-Localization Gap Between Convolutional Neural Networks and Vision Transformers for Image Manipulation Detection*（iCoMET 2026，DOI `10.1109/iCoMET69771.2026.11592040`）依据 IEEE 官方摘要升级为强相关空间定位/接地效度候选，纳入172；目前只达到摘要证据层，IEEE PDF无访问权限。空间 IoU、energy concentration、pointing game 不能替代因果忠实、文本事实性、稳定性或适当依赖评价。Scholar片段误配的 `arXiv:2005.13635`（*Towards AI Forensics: Did the Artificial Intelligence System Do It?*）以及乌克兰语 CLMAF 论文已按官方来源纠正身份并降出图像解释效度范围；IJIE artifact-guided detector也降为检测任务邻接，不把检测鲁棒性或被引Grad-CAM片段当作XAI效度。T311刷新约208的估数首屏10卡全部映射至已筛身份，复用旧快照，不重筛或扩大旧快照结论。
+- 用户确认 UniForge PDF（Chrome 标签 `981694661`）已通过OpenReview验证；其全文此前已完成核读，因此本轮没有重复读取。
+- 当前台账记录数：74主账38,348行；04候选目录10,111行；90候选/引文审计1,287行；72优先清单依原台账；172效度核读458行；87路线513行；85查询矩阵269行。各表单位不同，不可换算为强相关独立作品数或召回率。
+- 阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip` 含1,153个源文件及manifest（共1,154成员），SHA-256=`ad495ad03b997aef24f50392f1b0a90988e83df254fbf66af62930832262cbb6`。验证：`python3 -m py_compile work/search_protocol_v2/package_checkpoint_20261014.py`通过；`python3 work/search_protocol_v2/package_checkpoint_20261014.py`通过既有断言、T477重复项及访问断点、T483恢复状态、ZIP CRC和源文件SHA；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务代码修改、无代码测试适用。
+- 遗留与建议下一步：细粒度英文检索与强相关引文网络仍未完成，不能宣称零遗漏。先核对 T477 `start=998` 的实际结果卡；若用户验证后有卡，只筛新的未处理位置，并先按74/90/72/172复用身份，避免重复。若仍受限，向用户报告后转做不依赖该 Scholar 页的已开放高信号细式；不要以估数推断所有分页都需穷尽，也不要重筛已处理卡片。
