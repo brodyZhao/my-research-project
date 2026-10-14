@@ -1,6 +1,14 @@
-﻿# 2026-10-14续：T521证据充分性/完整性 × 人评精确式
+﻿# 2026-10-14续：T522伪迹描述正确性 × 人评细式访问断点
 
-- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；T521数据检查点提交：`88967af`（Screen evidence sufficiency human evaluation query），已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`。本HANDOFF需独立提交并推送。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本地数据提交：`a1c4d55`（Log T522 artifact correctness search and CAPTCHA gap）。T522只记录到访问门控位置；Scholar start=20需用户手动恢复后续筛。按此前自动审批拒绝，当前不推送此数据提交或HANDOFF更新。
+- 检索式：`("image manipulation localization" OR "image forgery detection" OR "image tampering detection") ("artifact description" OR "explanation correctness" OR "rationale correctness" OR factuality OR hallucination) ("human evaluation" OR "expert evaluation" OR "annotator agreement")`。Google Scholar start=0与10各显示10卡，20/20逐条筛查并全部匹配已存在候选/作品身份，新增作品身份0。Scholar动态估数约146。尝试start=20后异常流量reCAPTCHA出现，0张后续结果卡；事件在`T522_start20_Scholar_reCAPTCHA_访问事件_20261014.csv`，不能当作零结果或末页。用户已被提示在Codex右侧内嵌浏览器tab22完成验证，恢复后从rank 21续查。
+- 强相关复用命中包括ForgeryGPT、Toward Generalizable、XPlainVerse、ACL Attribution Reports、ForgerySleuth、Agentic、HierForge和From Prediction to Explanation；它们的身份/原文结论均沿用既有04/90/172记录，不重复全文核读。其余直接任务邻接、评测边界及单位置理由见`T522_伪迹描述正确性与人评细式_前20位置筛查及start20验证码断点_20261014.csv`。
+- 阶段包：1,161个源文件+manifest（1,162 ZIP成员），SHA-256=`a225342eda28acda4b0926b5de24b04f726f328e0990304f853d56feefd9e205`；74=38,404行，路线516条，矩阵272条。验证：T522录入及打包脚本`py_compile`通过；打包断言通过，包括20个连续位置、每项理由、start=20访问事件、ZIP CRC与逐文件SHA；暂存记录`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务代码修改。
+- Google Scholar访问限制已即时报告，等用户完成验证/确认结果卡。此记录仅表示前20卡筛完；T522、其父细式和整个细粒度检索都未完成。
+
+# 2026-10-14续：T521证据充分性/完整性 × 人评精确式
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；T521数据检查点提交：`88967af`（Screen evidence sufficiency human evaluation query），已推送至已确认的`origin https://github.com/brodyZhao/my-research-project.git`；HANDOFF已本地独立提交`2f35da2`。自动审批拒绝的是HANDOFF推送，称敏感项目记录的GitHub目标所有权/信任与具体授权未获确认；未重试或规避。
 - T521查询式：`("image forgery" OR "image tampering" OR "image splicing" OR "copy-move forgery") ("evidence sufficiency" OR "explanation sufficiency" OR "evidence completeness") ("human evaluation" OR expert OR annotator OR "grounded explanation")`。Codex右侧内嵌Google Scholar单页显示7条，无验证/访问限制；7/7逐项筛查，均映射至已登记作品身份、0个新作品身份。详细理由见`T521_图像取证证据充分性与人评精确式7卡逐条筛查_20261014.csv`，位置同步到74，路线87与矩阵85只关闭本精确快照。
 - 结果边界：PAVE（arXiv:2606.26552）和ForensicZoom（arXiv:2609.31661）为直接/高度相关候选，复用既有172全文效度结论；OmniVL-Guard Pro和IJSE视觉证据智能为证据质量/框架邻接；SSRN为通用多模态事实核查背景；剑桥文本核查论文和金融审计记录排除。不得把证据充分/完整自动当作因果faithfulness或人评解释可靠性。
 - 阶段包：`outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip`，1,159个源文件+manifest（1,160成员），SHA-256=`58bbbfc02b8c9c15fb3abc197133f111dc763c033d27a3d174f1e8b5454f32f3`；74主账38,384行，路线515条，矩阵271条。台账行数不等于独立论文数、召回率或领域穷尽证据。
