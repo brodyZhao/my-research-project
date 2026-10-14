@@ -1,4 +1,16 @@
-﻿# 2026-10-14续：导师讨论稿改写为研究综述与理论框架
+# 2026-10-14续：T518恢复可见Scholar页面并核对T477分页上限
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；本次数据提交：a034461（Log T477 visible page-cap checkpoint），待本HANDOFF单独提交后推送。
+- 页面可见性：用户看不到此前称为自动化Chrome标签的页面；当前Chrome扩展标签清单中不存在T477 start=998页，原生Chrome控制也被系统权限拒绝。已将T477同一查询打开在Codex右侧内嵌浏览器可见tab16。当前页URL含start=997，页眉为“Page 100 of 2,110 results”，只显示一张Sensors Portal 2013目录卡，无验证码/空白结果区，Next箭头禁用。用户可通过当前任务中Codex右侧内嵌浏览器或Scholar直达链接访问该页。
+- 逐卡去重：start=307（第31页）与start=347（第35页）各10张卡，逐项映射到已筛rank 308–317、348–357；start=997单卡匹配已筛rank 998的Sensors Portal目录引文。21次重复曝光登记在T518侧表和74主账，不增加唯一文献。T477总计1,037次可见卡曝光、40次重复曝光、997个去重排名位置。早期隐藏Chrome start=998 reCAPTCHA只保留为历史观察，不覆盖为当前页状态。
+- T477未完成：Scholar第100页的Next禁用只反映显示分页上限；页眉仍估约2,110条，估算尾部不可由当前分页读取。此路线保持coverage_complete=False，不宣称全量或零遗漏。PIDSNet官方摘要边界核读也一并入包。
+- 主要文件：阶段报告00、逐卡主账74、路线台账87、解释效度表172、SHA清单112、T517/T518逐条核查CSV及阶段ZIP。
+- 验证：python3 -m py_compile work/search_protocol_v2/package_checkpoint_20261014.py通过；python3 work/search_protocol_v2/package_checkpoint_20261014.py通过（源文件1,156个、ZIP成员1,157个、74主账38,369行、路线513条、矩阵269行；SHA-256 5e935c89fdf7f840ce0bbbf6d974aca92f7698037f7688249d9545dc66c68eb0）；git -c core.whitespace=cr-at-eol diff --check通过。无业务源码或代码测试适用。
+- 遗留：英文细粒度检索和核心论文前/后向引文网络仍未闭合；不能承诺绝对零遗漏。下一步继续已开放的高信号细式和直接强相关文献引文链，仅筛新卡并按74/90/72/172复用既有身份；遇到新访问限制时立即报告。用户已指出自动化Chrome标签不可见，后续优先使用Codex可见内嵌浏览器或提供可直达链接，不要求用户按隐藏标签编号寻找。建议ChatGPT Web检查T477查询是否转用更窄的未闭合子式替代page100之后不可访问的估算尾部。
+
+---
+
+# 2026-10-14续：导师讨论稿改写为研究综述与理论框架
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；正文提交 `de71ab0`，已推送至已确认 origin。本交接随后独立提交并推送。
 - 主要修改：重写 `outputs/图像鉴伪解释可靠性_导师讨论稿_2026-10-14.md`，按摘要、研究问题、相关工作、竞争边界、理论框架、基准设计、实施路径、结论与参考文献组织。明确结论：已有 Hopf、Kuturin、EFR、TriDF 等直接或高度相邻研究；原始遮挡/成对数据选题创新性不足；以干预有效性可审计、不可判定率和分层解释可靠性为核心的 benchmark 建议立项，先做仪器校准。
