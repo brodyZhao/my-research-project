@@ -1,3 +1,12 @@
+# 2026-10-14续：已有解释基准专项复核与选题修正
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；专项报告提交 `7962ac9`，已推送至已确认 origin。本交接随后独立提交并推送。
+- 主要修改：新增 `outputs/图像鉴伪解释可靠性基准_现有工作复核_2026-10-14.md`；在原导师讨论稿顶部加入修正提示。官方来源核对 XPlainVerse／ACM MM 2026 Challenge、X-AIGD、Kuturin、Hopf、Defake-o3、REVEAL、XAIGID-RewardBench、FakeArti 等。明确已有多个直接图像鉴伪解释基准；原稿遗漏 XPlainVerse、X-AIGD、XAIGID-RewardBench 并低估 Kuturin 是实质性错误。仅“样本级干预效度门控＋模型自述证据移除＋原检测器响应＋不可判定率”的窄组合暂未见同篇完整实现，需先做先导实验比较现有基线。
+- 验证：报告来源链接和方法对应逐项核查；`git -c core.whitespace=cr-at-eol diff --cached --check` 通过。无业务代码变更、无代码测试。用户既有未跟踪文件未修改、未暂存。
+- 遗留问题：XPlainVerse 原论文 PDF 在本轮在线阅读端体积超限；FakeArti 仅取得出版社摘要。建议 ChatGPT Web 下一步优先核 XPlainVerse 全文、复现 Kuturin/Hopf 基线并验证恢复算子的新增价值；未经校准不建议扩库。
+
+---
+
 # 2026-10-14续：T520补查T467空白分页断点
 
 - 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；T520数据提交：c4e8689（Log T520 empty T467 offset checkpoint）；本HANDOFF需独立提交并推送到已确认的origin。
