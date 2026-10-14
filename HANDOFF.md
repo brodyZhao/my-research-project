@@ -1,4 +1,14 @@
-﻿# 2026-10-14续：未公开题名线索降级
+﻿# 2026-10-14续：英国合作者线索确认导师论文身份
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；讨论稿数据提交 `d7815c1` 已推送至已确认 origin，本 HANDOFF 更新随后另交另推。
+- 用户补充导师与英国老师合作。Shujun Li 作者维护的发表列表（https://www.hooklee.com/pub.html）列出郭志清等人的《From GAN-Based Models to GPT-5: A Taxonomy-Guided Study of Human Performance in Detecting Deepfake Face Images》，注明 2026-09 获 IEEE S&P 2027 接收、in press。郭志清本人主页（https://www.guozhiqing.cn/）2026-09-14 消息独立印证 IEEE S&P 2027 接收；Shujun Li 是英国肯特大学教授，另一合作者 David Stillwell 在英国剑桥。旧 Xiaowei Chen CV 中同作者组旧题名/under review 状态已被更新记录取代。故导师论文身份高度可信，会议应记 IEEE S&P 2027 而非 CCS。
+- 研究细节门槛：目前仍未取得论文正文/DOI，不能据题名推断志愿者数量、培训条件和效果，也未将其计入全文方法对照。讨论稿已更新这些边界和链接。
+- 修改文件：仅 `outputs/图像鉴伪解释可靠性_导师讨论稿_2026-10-14.md` 与本 HANDOFF。讨论稿单文件 `git -c core.whitespace=cr-at-eol diff --check` 通过，无代码测试；既有未提交文件未动。
+- 下一步 ChatGPT Web：若作者发布预印本/正式版，核全文的人因设计与本项目的独立使用效果赛道；在取得前仅可引用作者页的题名、作者、会议接收状态。EFR 竞争边界和检索开放路线仍依既有台账继续。
+
+---
+
+# 2026-10-14续：未公开题名线索降级
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；讨论稿修订提交 `550db02` 已推送到 origin。本 HANDOFF 更新随后单独提交并推送。
 - 用户表示无法搜到且不能确认 `From GANs to GPT-5: A Taxonomy-Guided Study of Human Deepfake Detection`。该题名只有合作者公开简历“under review”一条线索，正文与正式发表未取得；讨论稿现明确将其排除在已核文献与新颖性对照外。导师所指已发表的人类鉴伪培训论文仍未定位，不把该题名或其他作者的 CCS 论文代入。
