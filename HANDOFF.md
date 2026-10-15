@@ -2878,3 +2878,15 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - Aleem全文显示用Grad-CAM/SHAP，且只在正确分类样本上分析；作者明确说未做正确/错误预测之间系统热图对照。论文把XAI前后分类置信度变化称作解释量化，但未给出独立解释效度标准；未见外部篡改mask、faithfulness/因果干预、参数随机化、解释稳定性或人评。FGSM是检测器而非解释鲁棒性测试。DeFaX全文提供跨数据集误分类的定性LIME关注区域变化；Dataset B总体准确率82.5%、伪造类65%、漏检21/120，但无独立ground truth、faithfulness/perturbation/sanity或人评。
 - 验证：T580 38项位置完整，74主账result_id唯一；04中N5372、N3318各一条；90两篇对应身份各一条；172每篇全文评审唯一；T573两条IEEE出版商访问门保留，T580 sidecar升级为作者稿全文已读；三个记录脚本`py_compile`通过、T580/T581/T582脚本幂等；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码测试适用。
 - 检索仍未完成：T11-F4-S5至80个位置、下一个Scholar偏移start=80；其余细式、历史验证码/空白页重试和分页上限路线仍有开放项。当前唯一可见Codex内嵌页仍停在SSRN 6949158 Cloudflare验证，用户已承诺完成后回复；后续先检查该同一页面是否真实显示论文，再从未处理细式/访问断点继续。两份原有根目录未跟踪用户文件保持未修改。
+
+## 2026-10-15续：T583–T586 ARC-Net、Mahmud与Sugiantoro细查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；文献台账提交：`2a56c12`，已推送至`origin`；本HANDOFF更新随后单独提交并推送。根目录两个用户原有未跟踪文件保持未修改、未暂存。
+- T583对 *Seeing through Deepfakes* 的43条官方参考文献逐项筛查，43/43有独立判断；31条映射到已有身份。沿引文链全文核读Mahmud et al. (2023) *Unmasking Deepfake Faces from Videos Using An Explainable Cost-Sensitive Deep Learning Approach*（arXiv:2312.10740）：全文只展示SmoothGrad、Grad-CAM、Grad-CAM++与Score-CAM热图并报告检测分类指标，未见解释faithfulness、人工区域真值对照、sanity/randomization、解释稳定性或人评。沿用既有身份，不重复计篇。
+- T584从PLOS官方全文新发现ARC-Net（Reza et al., 2026, DOI `10.1371/journal.pone.0340099`），按单一身份加入04/90/172。论文将阈值化Grad-CAM与人工二值区域比较（N=200），报告IoU .8396、Dice .9121、ROI峰值命中88.9%，属于直接定位一致性证据；但标注对象、标注协议/人员和样本与主训练/测试集的隔离关系交代不足。该结果不等于因果faithfulness、sanity、稳定性或适当依赖验证。
+- T585对ARC-Net官方文末参考文献[1]–[50]逐项记录，50个编号位置齐全；11条与目录既有作品身份匹配并复用审查。#33在出版社列表缺失题名，标为无法识别，不猜测身份。T585侧表新增到outputs，T583侧表一并纳入版本控制。
+- T586候选Sugiantoro, *Deepfake Face Images: Explainable Detection using Deep Neural Networks and Class Activation Mapping*（IEEE ISCT 2024, DOI `10.1109/ISCT62336.2024.10791156`）的IEEE官方页面返回HTTP 418；学校作者页与会议目录核实了题名、作者、会议和页码86–90，未核全文，按题录级记录且没有把解释方法描述当成可靠性证据。限制状态已写入访问日志。
+- 主要修改：阶段报告00、候选目录04、位置主账74、路线表85/87、候选复核表90、效度核读表172、T583/T585逐条参考侧表。`work/search_protocol_v2/`三份T584–T586记录脚本留在本地，不提交。
+- 验证：三份脚本`python3 -m py_compile`通过；T585参考编号1–50完整唯一；74的40,237个`result_id`唯一，85/87的`query_id`唯一；ARC-Net、Mahmud、Sugiantoro在候选/核读表按身份单列；输出目录1,188个CSV均可解析；`git -c core.whitespace=cr-at-eol diff --check`通过。没有业务代码变更。
+- 当前计数（各表单位不同，不能当作独立强相关作品数）：04=10,140；74=40,237；85=327；87=572；90=1,318；172=484。
+- **任务仍未完成**：T11-F4-S5下一个Scholar偏移为start=80；ARC-Net精确题名式未补查；T573中多条空白、验证和页数上限路线仍未全部重试。当前Codex唯一可见内嵌页仍是SSRN 6949158验证页，用户表示正本人处理；确认完成前不切换或刷新该页。下一步收到用户确认后，先在该页检查论文正文是否实际显示；若页面仍受限，立即按用户要求报告具体URL和状态，再继续尚未筛的细式。复用已核身份，不重复筛已记录位置。
