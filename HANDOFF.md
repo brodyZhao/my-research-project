@@ -1,3 +1,14 @@
+## 2026-10-15：EFR 按 kelip-paper-reading 精读，第①站
+
+- 仓库：brodyZhao/my-research-project；分支 codex/forensic-explanation-literature；当前HEAD 86f4951。
+- 新增交付：outputs/EFR_2608.08009_精读/精读笔记.md。材料在work/paper_reading/efr_2608.08009（不提交）：官方PDF10页、LaTeX源码、正文文本、meta、4张从原始矢量图转出的PNG及拼图。
+- 技能目录缺下载脚本及两个参考模板，已以官方源码/PDF完成同等准备；未运行论文代码。官方代码、权重和新50K标注发布入口尚未找到。
+- 已读摘要、引言、完整方法、实验设置和解释评估，已查看四图拼图。第①站讲动机，后续等待用户继续第②站；精读笔记保留路线和原文7B/表1 8B不一致问题。
+- 验证：PDF可用PyMuPDF打开且10页，源文件解包成功，4图可读取；文档阶段，无业务代码测试。沿用此前Git审批阻塞，本轮不再自动提交/推送，不触碰其他检索台账修改。
+- 建议下一步：按图1/3讲输出结构与训练结构，明确“模态隔离”是输出格式要求；不把坐标一致性解释成证据依赖已验证。
+
+---
+
 ﻿## 2026-10-15续：历史细粒度检索访问/空白页复试
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；结果台账提交：`d677819`（本交接更新随后单独提交）。
@@ -2840,3 +2851,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 文件：04、85、87、90、00；新增`T572_AAFS文档取证XAI及引文链逐条筛查_20261015.csv`与`T572_AAFS_C32_5条参考逐篇主题筛查_20261015.csv`；临时脚本`work/search_protocol_v2/record_t572_aafs_forensic_xai_20261015.py`不提交。
 - T568 Scholar细式仍有访问障碍：当前标签显示机器人验证，用户在Scholar/Codex界面都看不到；start=0仅历史首页10条已筛，后续未筛。总体检索继续OPEN，不能将阻断页当零结果，也不再让用户找隐藏标签。
 - 验证：`python3 -m py_compile work/search_protocol_v2/record_t572_aafs_forensic_xai_20261015.py`通过；脚本连续运行2次，19条T572来源/访问记录及5条参考保持不增行；全部输出CSV解析通过。目录rank无倒序；3个新身份各出现1次，N2520使用题名键且数字链接ID标为未核。目录原有11组identity_key别名重复，本阶段前后数量不变。`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码变更。
+
+
+## 2026-10-15续：T577–T579深伪解释插入式续筛
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；开始阶段时HEAD为 `86f4951d2849c353eed7a336b3103d6f1fc90614`（提交前需核验最终hash）。
+- 修改：阶段报告00；候选目录04；逐位置主账74；查询矩阵85；查询状态87；强相关候选表90；全文核读表172；T573访问事件；新增T577/T578/T579三张逐位置表。未修改根目录既有未跟踪用户文件。
+- T11-F4-S5从Scholar start=50/60/70筛查30个位置，总计80个可见位置，Next仍开，路线保持OPEN，下个断点start=80。无Scholar验证码。
+- 新登记直接强相关论文N-T577-AYYAPPAN-001：Ayyappan与Thiyagarajan (2026), *Comparative evaluation of lightweight CNN architectures for efficient and explainable deepfake detection*, DOI `10.1007/s44584-026-00002-z`。Springer开放全文报告Deletion/Insertion AUC与组合XAI Score；单数据集、单次运行且无统计区间，未见人工/独立掩码真值/sanity/稳定性验证，按单一扰动代理证据限制结论。N0307的SSRN论文在T579重复命中，不重复登记；其官方页现在显示Cloudflare真人验证，用户已在当前Codex内嵌页面收到本人完成验证请求并答复会处理，需待用户报告恢复后继续读取。
+- 主要计数：74=40,104位置；04=10,138记录；90=1,315；172=480；85=322；87=567；T573=41项；T577/T578/T579各10条。CSV解析、位置连续性、74唯一ID、Springer跨表唯一性检查通过；本轮记录脚本`python3 -m py_compile`通过；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码测试适用。
+- 整体检索未完成。建议下一步：用户完成SSRN验证后，在同一当前页面读N0307的官方摘要/全文可访问部分；随后返回Scholar单一内嵌标签，从T11-F4-S5 start=80继续，或选更高精度的开放细式；不可把验证码页/空白索引页当零结果。
