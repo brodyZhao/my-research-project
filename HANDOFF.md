@@ -2810,7 +2810,7 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 
 ## 2026-10-15续：T567/T568文档细式断点、T570目录补录与引文筛查
 
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段起点HEAD：`6ba8267`。根目录两个既有未跟踪用户文件保持未修改、未暂存。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段起点HEAD：`6ba8267`；本阶段检索记录提交：`cb241ef`。根目录两个既有未跟踪用户文件保持未修改、未暂存。
 - T567精确文档解释事实性快照1/1已筛；T568文档图像取证解释可靠性首屏历史位置10/10已筛（页眉约139、Next仍开）。本轮把同一T568精确式放入现有Chrome Scholar标签，实际观察到“Please show you’re not a robot”，无结果卡。访问事件写入`T568_start0_Scholar_reCAPTCHA_访问事件_20261015.csv`；不能把它记为零结果。用户已收到针对当前这一页的验证请求；验证后须以结果卡确实出现为续查条件。T568后续约129个位置尚未筛。
 - 官方全文核读了文档篡改MLLM论文的置信度/错误推理分析，作为任务邻接而非解释效度核心；报告中保留原文样本数/日期不一致。修正GPT4o-Receipt作者身份。
 - *Not Every Cue Is Evidence* 早先已存在于HANDOFF研究笔记，但漏进04排序目录和172全文核读表；本轮补齐目录遗漏，并完成官方参考文献67/67题名/主题筛查，复用旧身份和全文核读；不能表述为新发现。ATAR 76条参考沿用已完成的T36台账。
