@@ -1,4 +1,16 @@
-﻿## 2026-10-15续：T609/T610图像解释接地全文与引文筛查
+﻿## 2026-10-15续：T614–T624细式断点复试
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索数据提交：`cad9ade`（本 HANDOFF 更新随后单独提交）。
+- 复用一张现有 Chrome Scholar 标签，无新开标签。T568 的 start=120 实际显示正常终页（Page 7/129，9条卡片），逐标题与已筛rank 121–129一致；用户报告的另一页面仍受限，作为不同表面状态保留，不重复加位。EFR “Cited by”实时页显示1篇 MAD-Guard（arXiv:2609.33683），与候选 N0003 及原前向引文记录一致；官方 arXiv 全文只测多模态取证分类概率校准与决策接口，没有人类解释忠实性实验，维持方法邻接级。
+- 复试 T02-F3-S7 start=130/136、T01-F4-S4 start=180、T01-F4-S5 start=540、T05 attribution start=90、T467 correctness start=120、T477 start=997、V109 start=470。除 T467 的 `start=120&num=20` 实际出现 reCAPTCHA 外，所见均是无卡片空白页且没有验证码控件，均记为索引/分页冲突，非零命中。T467 页面保留在现有 Chrome 标签并已标记 handoff，等待用户本人完成人机验证。
+- 主要修改：阶段报告00、路线矩阵85、子式状态87、访问重试日志T573；新增事件T614–T624，无重复候选或逐位置记录。复核脚本 `work/search_protocol_v2/record_t614_t625_live_retries_20261015.py` 位于忽略目录，不提交。
+- 验证：脚本 `py_compile` 通过、连续运行两次无新增重复事件；74共40,538行且 `result_id` 唯一；85为343条、87为589条且 `query_id` 唯一；T573为75行，11个新事件ID各出现一次；CSV解析及 `git -c core.whitespace=cr-at-eol diff --cached --check` 均通过。无业务源码修改，无代码测试。
+- 未解决：T467验证码页需要用户完成后才能读取结果卡；若恢复后仍空白，记录为未读索引位置继续下一条独立检索。T02/T01/T05/T477/V109若干页当前仍为结果体空白或分页计数冲突；细粒度检索整体仍未完成，不能宣称“无一遗漏”。T568 用户报告的受限页面与当前 Chrome 实际可读标签不一致，保留两边观察。根目录两份既有未跟踪用户文件未修改。
+- 建议 ChatGPT Web 下一步：用户完成当前 Chrome Scholar 的 T467 验证并确认结果卡后，只筛未见过的卡片、按既有身份复用；当前状态见 T622/T467 路线记录。避免要求用户寻找其他隐藏标签。
+
+---
+
+## 2026-10-15续：T609/T610图像解释接地全文与引文筛查
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索台账数据提交：`94091fc`（本交接更新随后单独提交）。
 - Google Scholar：用户确认 T568（document image forensics / document forgery × XAI × reliability）仍受限或验证服务无法连接。本次没有新卡；T568既有129卡快照保留为已筛快照，但全领域路线仍开放，不将验证门控记作零结果。
