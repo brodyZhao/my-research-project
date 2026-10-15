@@ -2861,3 +2861,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 新登记直接强相关论文N-T577-AYYAPPAN-001：Ayyappan与Thiyagarajan (2026), *Comparative evaluation of lightweight CNN architectures for efficient and explainable deepfake detection*, DOI `10.1007/s44584-026-00002-z`。Springer开放全文报告Deletion/Insertion AUC与组合XAI Score；单数据集、单次运行且无统计区间，未见人工/独立掩码真值/sanity/稳定性验证，按单一扰动代理证据限制结论。N0307的SSRN论文在T579重复命中，不重复登记；其官方页现在显示Cloudflare真人验证，用户已在当前Codex内嵌页面收到本人完成验证请求并答复会处理，需待用户报告恢复后继续读取。
 - 主要计数：74=40,104位置；04=10,138记录；90=1,315；172=480；85=322；87=567；T573=41项；T577/T578/T579各10条。CSV解析、位置连续性、74唯一ID、Springer跨表唯一性检查通过；本轮记录脚本`python3 -m py_compile`通过；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码测试适用。
 - 整体检索未完成。建议下一步：用户完成SSRN验证后，在同一当前页面读N0307的官方摘要/全文可访问部分；随后返回Scholar单一内嵌标签，从T11-F4-S5 start=80继续，或选更高精度的开放细式；不可把验证码页/空白索引页当零结果。
+
+## 2026-10-15续：T580种子论文38条参考文献筛查与T581 IEEE摘要访问核验
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新数据提交：`034a51bb9d4d7c0b99c9a3357a8124fc98f7ef20`（前一条T580数据提交`7b7ab77`）；两条数据提交均已推送到已确认的origin。HANDOFF自身更新待单独提交/推送。
+- 主要修改：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T580_Ayyappan_Springer参考文献38项逐条筛查_20261015.csv`（38/38逐项结果、身份复用和理由）；主账74新增38个引文位置；候选表04修复遗漏的TAENet DOI身份，并更新Ayyappan种子与Aleem/DeFaX的来源状态；T573新增两条IEEE官方页访问事件；阶段报告00更新。`work/search_protocol_v2/record_t580_ayyappan_references_20261015.py`和`record_t581_ieee_abstract_followup_20261015.py`保留为本地工作脚本，不纳入Git。
+- 新核查：Ayyappan官方参考文献[1]–[38]全部做标题/主题筛查；#8 Aleem与#29 DeFaX复用候选身份，#10 Bharati、#26 TAENet、#30 Mansoor复用既有全文核读。TAENet此前虽在90/172中已有全文评审、却遗漏04主目录，本轮以 DOI 单一身份补入。T581从IEEE官方索引读取Aleem与DeFaX摘要；直开Aleem IEEE页面返回418，DeFaX页面需要JavaScript/机器人验证。摘要级信息仅支持方法/检测描述，未显示独立解释忠实性或人类依赖验证；两篇全文仍待核，受限URL和响应状态保存在T573。
+- 验证命令/结果：两条记录脚本均`python3 -m py_compile`通过；T580脚本重复运行两次幂等；T581脚本重复运行两次幂等；38条书目位置和74全局唯一`result_id`、TAENet单一DOI候选、T573两条受限事件及T580状态同步断言通过；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码测试适用。
+- 任务未完成：T11-F4-S5已有80个可见位置，下一页start=80仍未查；不少其他开放细式、Scholar空白索引/分页冲突和第100页显示上限仍未闭合，不能宣称领域穷尽。当前唯一可见Codex内嵌页面停在SSRN 6949158 Cloudflare复选框，用户表示会在该页本人完成验证并随后回复；验证前不切换该标签。验证结果到达后，先检查该同一可见页是否实际显示SSRN论文内容；若仍受限，及时向用户报告准确标题、URL及状态，并按摘要级证据记录。随后优先继续高精度子式和待核的核心引文链，复用既有作品身份，不重复筛已处理位置。
+- 未触碰根目录两个既有未跟踪文件：`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`与`literature/forensic-explanation-relevance-20261004.md`。
