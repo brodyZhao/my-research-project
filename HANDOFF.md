@@ -1,4 +1,17 @@
-﻿
+﻿## 2026-10-15续：历史细粒度检索访问/空白页复试
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；结果台账提交：`d677819`（本交接更新随后单独提交）。
+- 复试统一使用一个可见的 Codex 内嵌 Scholar 标签，避免要求用户寻找隐藏 Chrome 标签。SIDA 精确题名显示1条最佳匹配；ProtoExplorer Cited-by 当前快照22/22（start=0/10/20）；RAIDX Cited-by 当前快照18/18（start=0/10）。三者无验证码，均与已有逐条日志/论文身份吻合，未重复筛查或增加身份。
+- T516 start=136/128、T01-F4-S4 start=180、T01-F4-S5 start=540、T05 attribution start=90、T467 start=120/130、T477 start=997、V109 start=470均已重新打开。当前没有实际验证码；结果区空白或页数上限仍在，故不将其记为零命中。T467 ranks 121–130、T516 ranks 137–140仍不能读取；T477停在Scholar第100页，V109 start=470为Page 48/about 1,910但零卡。Codex 内嵌浏览器当前保留V109 start=470，用户可见为空白页且无验证码。
+- 修正T568第11位置 ForensicDocAI 身份复用为主目录N5191，并修正记录脚本映射/Scholar参数名。T568本次可见快照共129卡，positions 1–129逐条记录；不能据此声称全领域完整。
+- 主要修改：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/00_重检阶段报告_未完成.md`、85/87状态表、T567/T568逐位置表、T568访问事件、`T190_ProtoExplorer_CitedBy22_逐位置筛查_20261012.csv`（22条复核状态）、新增`T573_细检索受限断点重试记录_20261015.csv`（28个检索式/偏移状态）。
+- 验证：重跑T568和复试记录脚本；检查T573 28条(query_id, offset)唯一、T568 129个位置连续且N5191映射正确、T190 22个位置均有本次复核说明、85/87 query_id唯一；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码改动，无代码测试。
+- 未解决：整体细粒度检索仍未完成；动态空白页与Google Scholar第100页限制需要之后在有结果卡的可见页面继续。仅当实际验证码出现在当前可见页时才请用户协助；不要求用户找隐藏标签。两个既有根目录未跟踪用户文件未触碰。
+- 建议下一步：保持单一可见Codex Scholar页，按T573/87列明的空白断点再做一次不同分页入口检查；一旦卡片出现，只处理缺失rank并按04/74/90/172身份去重；若仍空白，留存索引冲突而不重复消耗用户时间。
+
+---
+
+
 ## 2026-10-15：T558/T559 RAIDX 与 MARE 引文筛查
 
 - 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；开始时HEAD `961ec6c342ad5134f8cf0ea0ea5043150b718bce`。本阶段只处理已授权的图像取证解释可靠性检索，不触碰根目录两份既有未跟踪用户文件。
