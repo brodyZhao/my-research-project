@@ -2809,10 +2809,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 
 ## 2026-10-15续：T567–T571断点、交叉来源补查与候选修订
 
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段文献数据与报告提交：`f00ddca4d22cd224782ab7c8e4b076dd70b87fd3`。已推送到`origin`。根目录既有未跟踪文件`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`与`literature/forensic-explanation-relevance-20261004.md`保持未修改、未暂存。
 - **T568 Google Scholar 状态**：检索式为 `("document image forensics" OR "document forgery detection") (explainable OR interpretable OR "forensic explanation" OR "report generation") (faithfulness OR hallucination OR "human evaluation" OR reliability)`。历史首页10条逐条已筛，页眉曾估约139条且Next可用。随后直接读取和同页刷新均显示机器人验证页、没有结果卡；用户现确认在 Google Scholar 和 Codex 都看不到该页面。事件日志保留两种此前互相矛盾的页面报告；不把验证页/不可见页面计作零结果，也不再要求用户定位隐藏标签。start=10 onward未筛，路线仍为OPEN。
-- **补充交叉来源**：Google Scholar不可见期间，执行4条英语宽式网络索引检索和2条精确书目/来源核查；所有捕获的论文类结果、重复元数据页、未确认引文线索和明显非学术结果逐条记入`T571_补充网络索引结果逐条筛查_20261015.csv`。该路只完成了已捕获结果的去重和筛分，不等于Scholar分页检索完成，也不宣称全网穷尽。
+- **补充交叉来源**：Google Scholar不可见期间，执行4条英语宽式网络索引检索和2条精确书目/来源核查；捕获到的69条论文/书目/非学术结果记录均逐条筛分，并在`T571_补充网络索引结果逐条筛查_20261015.csv`中保留来源引用、去重映射、判断和证据深度。该路仅关闭已捕获的搜索快照，不等于Scholar分页检索完成，也不宣称全网穷尽。
 - **新纳入的重点证据**：*Beyond the Probability Score* 是University of Twente 2026机构库论文/essay条目，摘要报告51人被试内研究：热图条件决策正确率提高16个百分点且信任提高，但三种取证模型Pixel-F1近零；这提示热图可能改善表现/信任，却不能据此推断解释可靠。官方PDF链接当前无法由检索器取回，因此04/90仅作摘要级强相关记录，学位层级和全文待核。*AI as a Decision Support Tool in Forensic Image Analysis* 是Farber的2025年《Journal of Forensic Sciences》论文，10名法证专家评审30张现场图片的三种模型报告，平均可靠性评分7.4/10，并报告证据遗漏/错误及确认偏误顾虑；列强邻接，不将现场场景理解等同图像伪造检测或受控依赖实验。
 - **新增任务邻接记录**：CVIU 2026 *EXACT* 只报告检测/归因/定位和LMM报告，跨域检测性能不验证报告事实性；ForenXAI 2026含SHAP图但筛查的27页原文未见解释faithfulness、人评或稳定性端点；Busitema 2026 dissertation目前仅库摘要提到Grad-CAM。后二者列低优先邻接，不作为强可靠性证据。ForgerySleuth、ForenX、XAIGID-RewardBench、HAVE、EFR及已核候选均复用既有身份，不重复全文核读。
-- 产物：更新04/85/87/90/172及T568访问事件，新增T571逐结果侧表；04仍按相关性排序。未改74的Scholar位置账，因为补充网络搜索不产生Google Scholar页内位置。
-- 验证：重跑T571脚本验证幂等；检查CSV解析、身份唯一、候选排序、位置账不变、T568/ T571路线状态、`py_compile`及`git diff --check`。无业务源码修改。
-- **遗留**：细粒度检索未完成。T568 start=10 onward仍待结果页可见后续筛；T477页数上限/空白冲突和其他开放细式依旧未闭合。后续只处理可见可读页面，并向用户报告阻塞，不让用户在多标签中寻找页面。
+- 主要文件：阶段报告`00`、按相关性排序的目录`04`（新增5个身份）、路线矩阵`85/87`、候选/复核表`90`、原文效度表`172`、T568事件表和T571逐结果侧表。没有向74写入Scholar位置，因为补充搜索没有Google Scholar页内位置。临时运行脚本位于`work/search_protocol_v2/record_t571_supplementary_web_20261015.py`，遵循`work/`不提交规则。
+- 验证：`python3 -m py_compile work/search_protocol_v2/record_t571_supplementary_web_20261015.py`通过；该脚本连续运行两次，T571均为69条且第二次新增0行；所有输出CSV可解析。检查新增身份唯一、目录rank无倒序、T568在74仍为历史10条、T571未误写成Scholar位置、85/87路线状态一致；`git -c core.whitespace=cr-at-eol diff --check`通过。计数：04=10,134；74=39,942（本阶段不变）；85=321；87=566；90=1,309；172=479。无业务源码修改。
+- **遗留**：细粒度检索未完成。T568只有首页历史10条已筛，后续约129个估计位置未筛；该页目前用户在Google Scholar和Codex中都看不到。后续若结果页可见，从start=10续筛；其他开放细式、T477页数上限/空白冲突仍未闭合。不可访问页面要记录具体式和断点并向用户汇报，不让用户在多标签中寻找页面。
+- 建议下一步：复用既有身份继续尚未关闭的英文细式；T568恢复可见后从start=10续，不重复前10条及已核文献。继续时优先核实University of Twente论文的PDF和学位类型，再决定是否把其摘要级候选升级为全文审读。
