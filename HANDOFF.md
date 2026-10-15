@@ -2818,3 +2818,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：`python3 -m py_compile work/search_protocol_v2/record_t571_supplementary_web_20261015.py`通过；该脚本连续运行两次，T571均为69条且第二次新增0行；所有输出CSV可解析。检查新增身份唯一、目录rank无倒序、T568在74仍为历史10条、T571未误写成Scholar位置、85/87路线状态一致；`git -c core.whitespace=cr-at-eol diff --check`通过。计数：04=10,134；74=39,942（本阶段不变）；85=321；87=566；90=1,309；172=479。无业务源码修改。
 - **遗留**：细粒度检索未完成。T568只有首页历史10条已筛，后续约129个估计位置未筛；该页目前用户在Google Scholar和Codex中都看不到。后续若结果页可见，从start=10续筛；其他开放细式、T477页数上限/空白冲突仍未闭合。不可访问页面要记录具体式和断点并向用户汇报，不让用户在多标签中寻找页面。
 - 建议下一步：复用既有身份继续尚未关闭的英文细式；T568恢复可见后从start=10续，不重复前10条及已核文献。继续时优先核实University of Twente论文的PDF和学位类型，再决定是否把其摘要级候选升级为全文审读。
+
+## 2026-10-15续：T572 AAFS文档取证XAI摘要及5条引文逐项筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`7921119`（已推送）。根目录两个用户未跟踪文件继续保持未修改、未暂存。
+- T572核查AAFS 2026 C32会议摘要*Can AI Explain Fraud?*及参考文献1–5。摘要以IDNet/SHAP演示身份文件鉴伪解释，但没有解释效度/用户依赖实证。5条参考全部做题名/主题筛查；新增Solanke (2022)与Khalid et al. (2024)两篇数字取证XAI概念/框架邻接，非图像解释可靠性实验；Arrieta、IDNet和SHAP沿用已有身份/背景。
+- 修订已存在的N2520 ISNCC 2026 Grad-CAM++论文元数据（官方会议程序确认题名/作者；IEEE全文尚未读取），没有重复建篇。GPT4o-Receipt、When the Forger Is the Judge、AIForge-Doc等均复用既有记录。
+- 文件：04、85、87、90、00；新增`T572_AAFS文档取证XAI及引文链逐条筛查_20261015.csv`与`T572_AAFS_C32_5条参考逐篇主题筛查_20261015.csv`；临时脚本`work/search_protocol_v2/record_t572_aafs_forensic_xai_20261015.py`不提交。
+- T568 Scholar细式仍有访问障碍：当前标签显示机器人验证，用户在Scholar/Codex界面都看不到；start=0仅历史首页10条已筛，后续未筛。总体检索继续OPEN，不能将阻断页当零结果，也不再让用户找隐藏标签。
+- 验证：`python3 -m py_compile work/search_protocol_v2/record_t572_aafs_forensic_xai_20261015.py`通过；脚本连续运行2次，16条T572来源记录及5条参考保持不增行；全部输出CSV解析通过。目录rank无倒序；新增4个身份各出现1次。目录原有11组identity_key别名重复，本阶段前后数量不变。`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码变更。
