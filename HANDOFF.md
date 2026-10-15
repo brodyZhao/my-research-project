@@ -2796,3 +2796,34 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 测试：T561/T562/T563记录脚本均重复运行保持幂等；T561 66条、T562 28条、T563 2条唯一记录断言通过；74共39,662个唯一`result_id`；85共315个唯一`query_id`；87共560个唯一`query_id`；04/90/172分别10,124/1,298/474行；N1933/N1939/N8505与T563关联通过；`git -c core.whitespace=cr-at-eol diff --check`通过。无源码测试适用。脚本保存在本地忽略的`work/`中，不纳入提交。
 - 主要修改文件：阶段报告、HANDOFF、候选目录04、路由矩阵85/87、候选/效度表90/172、新增T561/T562/T563逐项CSV和记录脚本。保留根目录既有两个用户未跟踪文件，不纳入提交。
 - 任务仍未完成：T467索引漂移、T477 Scholar约100页上限、T551宽式及其他开放子式仍未闭合。继续细粒度检索时先用窄式与种子引文，命中已知身份时复用先前审查；实际页面打不开则直接报告检索式和状态，不要求用户在多标签中查找。建议下一步针对T467与T477衍生窄式的未覆盖词项做一条可复核的高精度检索，并只处理新可见位置。
+
+## 2026-10-15续：T565当前快照、Mandela-Bench引文链及目录状态修正
+
+- T565细式：`("AI-generated image detection" OR "synthetic image detection") (explanation OR "attribution map" OR "saliency map" OR Grad-CAM) ("sanity check" OR "parameter randomization" OR "model randomization")`。单个现有 Scholar 标签按可见分页从 start=0 到140顺序筛查；当前快照147/147张卡逐条写入74与`T565_AIgenerated_image_explanation_sanity_147位置逐条筛查_20261015.csv`，末页7张且Next禁用。页眉估数在检索中漂移约147–158；结论仅为当前可见快照完成，不是领域穷尽证明。没有验证码或空页。
+- T565新增一篇强相关全文证据《Mandela-Bench: Multimodal Models Remember Canonical Images Instead of Seeing Them》（arXiv:2609.32763v1），并复用N1029既有身份；另新增3篇方法邻接记录：When Eyes Betray AI、DejAIvu、WorldFact-Bench，不计入强相关核心。其余已登记作品复用原身份和原核读；同一作品的标题变体按重复曝光记录。逐条标题筛查原因均在T565边车表。
+- Mandela-Bench官方HTML全文核读：1,507项知识冲突/控制编辑与474张真实图，评测36个多模态模型；E0–E4解释接地等级对照每图记录的具体事实矛盾；210条人工盲标与模型评审器配对后 exact agreement 82.5%、quadratic-weighted κ=.89、within-one-level 96.1%、E3+阈值一致率95.2%。这是直接的事实性/接地及自动评审器人类校准证据；不等于检测器因果faithfulness，也没有用户appropriate-reliance实验。构念边界已入172/90。
+- 对Mandela-Bench参考文献表逐项筛查55/55，新增`T566_MandelaBench_55条参考文献逐项主题筛查_20261015.csv`并写入74/85/87。筛查单位是题名/主题；对已核读的SPARED、Pixels Don’t Lie、FakeBench、EditSleuth、REVEAL等复用既有ID与全文结论，不重复读全文。
+- 目录状态修正：EditSleuth、N0513 Explainable Deepfake Detection、Grounding and Explaining Visual Evidence、Nitu Bharati等正式论文的04状态改为与已存在的172全文核读一致；不新增重复全文审读。新计数：74=39,864行；04=10,127行；90=1,302行；172=475行；T565=147张卡；T566=55条参考。台账行数不是独立强相关作品数。
+- 访问问题：现有内嵌Scholar标签上的“image inpainting / object removal / content removal × forgery detection × explanation × faithfulness/reliability”路线自动化读取连续超时，没有显示结果卡或验证码；已向用户报告为访问未核。不得按零命中结案。其他未闭合细式、分页漂移、Scholar显示上限与部分出版商全文限制仍存在，因此整体文献检索仍未完成。
+- 本批脚本：`work/search_protocol_v2/record_t565_t566_closeout_20261015.py`。应复跑两次确认幂等，再验证表间ID/位置唯一、55/55引用、147/147位置和`git -c core.whitespace=cr-at-eol diff --check`。无业务源码改动。
+
+
+## 2026-10-15续：T567/T568文档细式断点、T570目录补录与引文筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段起点HEAD：`6ba8267`。根目录两个既有未跟踪用户文件保持未修改、未暂存。
+- T567精确文档解释事实性快照1/1已筛；T568文档图像取证解释可靠性首屏历史位置10/10已筛（页眉约139、Next仍开）。本轮把同一T568精确式放入现有Chrome Scholar标签，实际观察到“Please show you’re not a robot”，无结果卡。访问事件写入`T568_start0_Scholar_reCAPTCHA_访问事件_20261015.csv`；不能把它记为零结果。用户已收到针对当前这一页的验证请求；验证后须以结果卡确实出现为续查条件。T568后续约129个位置尚未筛。
+- 官方全文核读了文档篡改MLLM论文的置信度/错误推理分析，作为任务邻接而非解释效度核心；报告中保留原文样本数/日期不一致。修正GPT4o-Receipt作者身份。
+- *Not Every Cue Is Evidence* 早先已存在于HANDOFF研究笔记，但漏进04排序目录和172全文核读表；本轮补齐目录遗漏，并完成官方参考文献67/67题名/主题筛查，复用旧身份和全文核读；不能表述为新发现。ATAR 76条参考沿用已完成的T36台账。
+- 文件：更新阶段报告00、候选目录04、位置账74、矩阵85、路线87、候选复核90、全文效度172；新增T567/T568/T570理由侧表、T568访问事件、T570 67条参考表和全文核读侧表；脚本`work/search_protocol_v2/record_t567_t570_closeout_20261015.py`。
+- 验证命令：`python3 -m py_compile work/search_protocol_v2/record_t567_t570_closeout_20261015.py`；脚本连续运行两次确认幂等；解析所有CSV并断言T567=1、T568=10、T570引文=67连续位置、身份去重及04/90/172关联；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
+- 遗留：文献检索**未完成**。T568被当前可见Scholar验证码页阻断；T477有Scholar页100显示上限和动态索引冲突，其他开放细式仍须按真实可见卡片续查。不要要求用户找大量隐藏标签；只报告当前确实需要处理的单一页面。
+
+
+## 2026-10-15续：T567/T568文档图像细式、T570新核心及67条书目筛查
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；本阶段起点HEAD核验为`6ba8267`。保留根目录两个既有未跟踪用户文件，不纳入提交。
+- 新增强相关核心：Zhou et al., *Not Every Cue Is Evidence: Cue Supportability for Forensic Distillation in Face Forgery Detection*, arXiv:2610.16452v1, 2026-10-12。官方全文核读方法、CAWE、自动评审与人评校准、限制；官方参考文献67/67逐条题名/主题筛查，复用已审论文身份及172记录。
+- T567精确文档解释事实性查询1/1可见卡已筛；T568文档图像鉴伪解释可靠性式首屏10/10逐卡筛，首屏约139、Next仍开，状态OPEN。尝试连接现有Codex内嵌标签6超时；页面内容和验证码均未观察到，故标为自动化页面连接失败，不误报为reCAPTCHA/零结果。T36的ATAR参考76项已在先前完成，本轮不重复。
+- 修改：阶段报告00；候选04；逐位置74；检索式矩阵85、实际试检87；强候选90；全文核读172；新增T567/T568侧表、T570 67条书目侧表和T570全文核读侧表；脚本`work/search_protocol_v2/record_t567_t570_closeout_20261015.py`。
+- 验证：运行脚本两次检查幂等；全部CSV解析；T567/T568位置数与偏移、T570 67个连续书目位置、master_id/identity_key唯一性及04/90/172关联断言；`git -c core.whitespace=cr-at-eol diff --check`。无源码修改，无代码测试。结束阶段前依仓库规则提交并推送当前分支；先确认对既有修改仅暂存本任务文件。
+- 遗留：总体细粒度检索仍未完成。T568约129个结果未筛；已打开的image splicing/copy-move细式标签6连接超时，未能读取；T477 Scholar页100/索引冲突和其他宽式/构念细式仍有断点。建议继续复用已审身份，优先能实际显示卡片的窄式，并汇报具体无法打开的查询和位置。
