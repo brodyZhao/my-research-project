@@ -1,4 +1,14 @@
-﻿## 2026-10-16续：T654目录状态去重与Scholar单页验证交接
+﻿## 2026-10-16续：T636当前可见验证码页重试日志（T655）
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T655数据提交：`9a7cc93`。远端`origin`仍为已确认的目标仓库。
+- 在既有Codex Scholar标签76重新核对T636 `start=110&num=20`；CUA无障碍树确认Google `/sorry` 异常流量页和“进行人机身份验证”复选框，结果卡为0（访问门控，不是零命中）。重新请求在Codex右侧呈现该页并向用户发出单页状态选项。把最新重试状态写回T573和87原记录，不新增重复位置、查询或访问事件。
+- 修改文件：输出目录`87_V2细查询子式实际试检状态.csv`、`T573_细检索受限断点重试记录_20261015.csv`；辅助脚本`work/search_protocol_v2/record_t655_t636_codex_visible_retry_20261016.py`留在gitignored工作目录。
+- 验证：脚本`py_compile`通过并连续运行两次幂等；断言确认T573保留两个历史事件并只更新最新一项、87中T636只有一条路线且状态仍为门控；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改，无源码测试适用；根目录两份用户已有未跟踪文件未触碰。
+- **检索仍OPEN**：唯一待用户协助的页面已在Codex右侧明确呈现；问题选项为“已完成且结果卡可见 / 仍显示验证或空白 / 看不到这个Codex页面”。ScienceDirect页面不可见的回复针对PFF-WM DOI `10.1016/j.iswa.2026.200684`，不是T636；PFF-WM作者稿已核读。T636恢复后从第111位继续，受限或不可见时记明状态并转下个未完成细式。
+
+---
+
+## 2026-10-16续：T654目录状态去重与Scholar单页验证交接
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T654数据提交：`f510baa`。目标远端 `origin` 为 `https://github.com/brodyZhao/my-research-project.git`。
 - 将候选表中N0509、N0539、N0510、N0506的过时“检索失败/身份未核”状态与172已有的作者稿全文核读记录对齐，补全作者、出版身份、全文来源与筛选依据，避免重复核读。N0517（CDTS）保留为唯一规范身份；N0546的ADS别名及发现位置转入T654交叉表，并从候选目录去掉重复行。
