@@ -2870,3 +2870,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证命令/结果：两条记录脚本均`python3 -m py_compile`通过；T580脚本重复运行两次幂等；T581脚本重复运行两次幂等；38条书目位置和74全局唯一`result_id`、TAENet单一DOI候选、T573两条受限事件及T580状态同步断言通过；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码测试适用。
 - 任务未完成：T11-F4-S5已有80个可见位置，下一页start=80仍未查；不少其他开放细式、Scholar空白索引/分页冲突和第100页显示上限仍未闭合，不能宣称领域穷尽。当前唯一可见Codex内嵌页面停在SSRN 6949158 Cloudflare复选框，用户表示会在该页本人完成验证并随后回复；验证前不切换该标签。验证结果到达后，先检查该同一可见页是否实际显示SSRN论文内容；若仍受限，及时向用户报告准确标题、URL及状态，并按摘要级证据记录。随后优先继续高精度子式和待核的核心引文链，复用既有作品身份，不重复筛已处理位置。
 - 未触碰根目录两个既有未跟踪文件：`faithfulness_pilot_EXPERIMENT_LOG_2026-09-27.md`与`literature/forensic-explanation-relevance-20261004.md`。
+
+## 2026-10-15续：T582 Aleem/DeFaX作者稿全文核读
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段数据提交：`2d44134`，已包含此前`7b7ab77`、`034a51b`；提交推送状态将在HANDOFF提交后核验。
+- 用户协助验证仍待回复时，未切换当前Codex内嵌SSRN 6949158页面。并行通过ResearchGate公开作者稿读取两篇IEEE全文，论文身份均与DOI相符；IEEE直页限制继续原样保存在T573：Aleem返回418，DeFaX需要浏览器/机器人验证。公开全文来源与核读结论同步到04/74/90/172和T580参考文献表。
+- Aleem全文显示用Grad-CAM/SHAP，且只在正确分类样本上分析；作者明确说未做正确/错误预测之间系统热图对照。论文把XAI前后分类置信度变化称作解释量化，但未给出独立解释效度标准；未见外部篡改mask、faithfulness/因果干预、参数随机化、解释稳定性或人评。FGSM是检测器而非解释鲁棒性测试。DeFaX全文提供跨数据集误分类的定性LIME关注区域变化；Dataset B总体准确率82.5%、伪造类65%、漏检21/120，但无独立ground truth、faithfulness/perturbation/sanity或人评。
+- 验证：T580 38项位置完整，74主账result_id唯一；04中N5372、N3318各一条；90两篇对应身份各一条；172每篇全文评审唯一；T573两条IEEE出版商访问门保留，T580 sidecar升级为作者稿全文已读；三个记录脚本`py_compile`通过、T580/T581/T582脚本幂等；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码测试适用。
+- 检索仍未完成：T11-F4-S5至80个位置、下一个Scholar偏移start=80；其余细式、历史验证码/空白页重试和分页上限路线仍有开放项。当前唯一可见Codex内嵌页仍停在SSRN 6949158 Cloudflare验证，用户已承诺完成后回复；后续先检查该同一页面是否真实显示论文，再从未处理细式/访问断点继续。两份原有根目录未跟踪用户文件保持未修改。
