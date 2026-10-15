@@ -2789,10 +2789,10 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 遗留：细粒度英文文献检索仍未整体闭合；T05刷新、T01-F4-S4、T554等Scholar分页矛盾待索引恢复；T477受页面上限约束；Trusting the Detector等出版商全文不可读。继续只推进明确未筛且能正常显示卡片的高精度路线，复用74/04/90/172身份；新阻断及时报告。建议ChatGPT Web先检查最新阶段报告及T05空页状态，按登录态可访问的Scholar分页/论文全文恢复具体断点后再继续，不要重筛已经逐项记录的位置。
 ## 2026-10-15续：T561–T563细式和引文核读
 
-- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`。本交接提交后将记录最新commit。
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；阶段提交：`8b57692730f1333338229c5767803a57fc01fe13`。本HANDOFF更新随后单独提交。
 - 本轮新增T561的66张解释质量×人评Scholar卡逐项日志、T562的ForgeReason参考文献28/28筛查，以及T563的SIDA/LEGION两篇全文解释效度核读；同步更新阶段报告及04/85/87/90/172台账。SIDA的N1939/N8505标为同一CVPR论文版本入口，LEGION复用N1933，没有新增独立作品身份。
 - 官方CVPR/ICCV页面与 arXiv 全文可读。SIDA专家审核3,000条参考解释文本（准确性/清晰度/一致性），不等于最终模型输出的独立忠实性验证；LEGION使用人工标注mask/文本、mIoU/F1与ROUGE-L/CSS，但没有模型解释的人评、因果faithfulness或appropriate-reliance实验。
 - Scholar现有内嵌标签 `image splicing/copy-move forgery × explanation faithfulness/fidelity/reliability/stability` 两次自动化连接超时；未观察到验证码或结果。查87确认T306/T519已对同一窄式8/8筛查，该连接失败不留下未筛位置，无需用户定位标签。
-- 测试：`python3 -m py_compile work/search_protocol_v2/record_t563_sida_legion_primary_20261015.py`通过；T561/T562/T563各脚本重复执行保持幂等；需完成CSV结构/唯一性检查与`git -c core.whitespace=cr-at-eol diff --check`。无源码测试适用。
+- 测试：T561/T562/T563记录脚本均重复运行保持幂等；T561 66条、T562 28条、T563 2条唯一记录断言通过；74共39,662个唯一`result_id`；85共315个唯一`query_id`；87共560个唯一`query_id`；04/90/172分别10,124/1,298/474行；N1933/N1939/N8505与T563关联通过；`git -c core.whitespace=cr-at-eol diff --check`通过。无源码测试适用。脚本保存在本地忽略的`work/`中，不纳入提交。
 - 主要修改文件：阶段报告、HANDOFF、候选目录04、路由矩阵85/87、候选/效度表90/172、新增T561/T562/T563逐项CSV和记录脚本。保留根目录既有两个用户未跟踪文件，不纳入提交。
 - 任务仍未完成：T467索引漂移、T477 Scholar约100页上限、T551宽式及其他开放子式仍未闭合。继续细粒度检索时先用窄式与种子引文，命中已知身份时复用先前审查；实际页面打不开则直接报告检索式和状态，不要求用户在多标签中查找。建议下一步针对T467与T477衍生窄式的未覆盖词项做一条可复核的高精度检索，并只处理新可见位置。
