@@ -1,3 +1,164 @@
+﻿## 2026-10-16：T636细检索补充快照、来源去重与断点
+
+- 在不重复 Google Scholar 已筛位置的前提下，围绕图像伪造定位/篡改检测 × faithfulness/human evaluation/evidence grounding 做了4条聚焦的外部来源补充检索。20个可见结果逐条写入74，均明确标为普通网页搜索快照而非Scholar排名；18个与目录既有作品交叉复用或排除，新增Tier 1直接实证核心为0。
+- 新补2个不同层级身份：Munawar & Oussalah, *Deployable image forgery detection and localization: A comprehensive review and practitioner’s guide*（ESWA 2026, DOI 10.1016/j.eswa.2026.131347）列为Tier 2领域综述。官方开放全文回顾2016–2025研究，将explainability/evidentiary utility明确列为缺口；报告120篇全文纳入，但作者说明是PRISMA-style、非完全预注册的系统综述，且不是解释效度实证。SUMI-IFL（AAAI 2025, DOI 10.1609/aaai.v39i1.32054）列为Tier 3构念邻接：研究伪造特征表征的充分性/最小性，不是模型解释评价。
+- 再次确认搜索结果里的Beyond Accuracy、ACL 2026 attribution reports、FakeShield和TRIDENT都已有身份，复用而未重复计篇。TRIDENT挑战提案主题直接相关，但提案本身不等于实证可靠性结果。
+- T636 Scholar依旧是唯一已确认的当前验证断点：Chrome tab 981694705，`start=110&num=20`，Google异常流量验证页、0结果卡；前110个位置已逐条筛，必须从111接续。T14医学图像式start=10仍因读取器不支持Scholar而未观察结果，不作零命中解释。PFF-WM作者稿的61条可辨参考已筛，ResearchGate显示67的六条计数差异及表11样本口径问题继续保留。
+- 本轮新增记录：74 +20个补充结果位置、87 +1条补充路线、90 +2个分层候选、04 +2个不同身份、172 +1条综述全文核读。所有条目写明来源层级与是否全文阅读，普通网页快照未冒充Scholar分页。
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新HEAD：9344828（本次尚未提交）。主要文件为 HANDOFF、00、04、74、87、90、172；85和T573仅保留前序检索日志，本轮未改动。根目录两份用户未跟踪文件未修改。
+- 校验：CSV解析通过；当前行数04/74/87/90/172/T573 = 10,183/41,381/614/1,357/528/107；74的result_id与87的query_id均唯一；04稳定ID重复组为7，与HEAD基线相同，本轮增加冲突0组；git -c core.whitespace=cr-at-eol diff --check通过。无业务源码测试适用。
+- 遗留：T636 Scholar当前Chrome标签981694705的start=110仍为Google访问验证页、无结果卡；前110个位置已筛。T14医学影像式start=10未能从网页读取器取得页面内容。整体细粒度检索未完成，不能标为complete。
+- 建议下一步：只在同一T636页显示结果卡后从rank 111继续；若仍受限，明确报告并转向另一个已保存且尚未闭合的细式，不重筛现有位置。PFF-WM依作者稿处理完成，不要求用户找ScienceDirect页。
+
+## 2026-10-16：PFF-WM书目筛查交接与校验
+
+- 新增访问记录：尝试从外部网页读取器抓取医学图像专式 T14 的 Scholar 下一页（start=10），工具报告该 Scholar URL 不可访问，未取得结果卡；不按零结果处理，也不重复相同抓取。事件记录在T573，路线仍OPEN。
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；HEAD `9344828`，工作区尚未提交。本阶段更新：`04_重检候选目录_暂按相关性排列.csv`、`74_V2完整分页逐位置初筛.csv`、`87_V2细查询子式实际试检状态.csv`、`90_本轮新增强相关候选与引文复核.csv`、`172_强相关核心及邻接论文原文解释可靠性效度核读.csv`、`T573_细检索受限断点重试记录_20261015.csv`、阶段报告与本交接。无业务源码改动。
+- 校验：Python CSV解析及列数检查通过；当前行数04/74/87/90/172/T573 = 10,181/41,361/613/1,356/527/106；74的41,361个result_id唯一，PFF书目61条位置唯一；87 query_id唯一。04共有7组stable_id重复，与HEAD基线完全相同，本轮新增冲突0组。`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码测试适用。根目录两份用户未跟踪文件未修改。
+- 未完成：整体细粒度Scholar检索仍OPEN。T636英文细式当前Chrome tab 981694705 的 `start=110&num=20` 是Google访问限制页、0结果卡；rank 1–110已筛，恢复结果卡后从rank 111继续。PFF-WM的ScienceDirect页面无需用户再找，作者稿正文和61条可见书目已核；ResearchGate显示67而可见正式书目61，6条计数差异未解。PFF表11说明“lesion insertion”与方法中100例插入/移除各50的口径冲突，指标样本范围未明。
+- 建议 ChatGPT Web 下一步：不重复筛rank 1–110或这61条书目；继续处理87中仍未闭合的细式。只在T636出现结果卡后从start=110续筛；访问仍受限时记录确切状态并换到可读路线。引用PFF的0.78/4.3指标时保留表11样本口径不一致。当前没有提交或推送，直至整体检索任务按既定工作流结束。
+
+---
+
+## 2026-10-16续：PFF-WM解释评测样本口径差异
+
+重新核对作者稿§4.1.3/§4.5及表11后，发现需要限定既有指标解释：方法文字称两位放射科医生盲评100例（病灶插入50、扩散移除50），但表11标题将100例解释指标写为“lesion insertion”。论文未解释两者是否为同一批样本，因此0.78相关与4.3/5评分具体对应全体混合样本还是仅插入案例不确定。已在172全文评测行加上这一内部口径冲突；引用时不能隐去。双评审κ=.81及评估边界仍按正文记录：临床相关性/图间对齐证据，不等于因果faithfulness或用户适当依赖。
+
+---
+
+## 2026-10-16：PFF-WM参考文献逐条筛查及T636状态复核
+
+- 用户表示看不到PFF-WM的ScienceDirect页面。改用可读作者稿完成正文证据复核，并逐条筛查其书目：61条可辨认的正式参考文献逐条做题名/主题初筛，逐行写入74，路线汇总写入87；ResearchGate页面另显示“References (67)”，与稿件中可辨认的61条相差6条，明确保留为未解数量差异。逐条筛查仅覆盖引文身份/主题，不表示阅读全文。
+- 由书目确认并补入6条尚未在04目录匹配到的邻接作品（DeepMark、Lai等proactive watermark综述/TFPDD、Focus on Finding Deepfakes、ConMark、Zhao semi-fragile watermark），均标为任务/方法邻接而非解释可靠性正证据。Lin等cross-image watermark与Yuan等ASFW复用04已有身份；未重复建档。来源及证据边界见04、90、74。
+- 当前Chrome状态另行确认：T636“鉴伪 × 人评/人机交互 × 解释/视觉证据 × 信任/依赖”查询在tab 981694705、start=110显示Google访问限制页、无结果卡。它不是用户看不到的PFF ScienceDirect页。T636累计已筛110个位置，下一断点start=110；无卡片不当作零结果。
+- 本轮CSV解析、主键检查与diff校验在阶段结束前执行。工作区未提交；根目录两份用户未跟踪文件保持不变。细粒度Scholar检索仍OPEN。
+
+---
+
+## 2026-10-16：PFF-WM 全文替代来源复核、目录去重与 T636 断点
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；HEAD `9344828`。工作区包含本任务及既有修改；没有提交或推送。
+- 用户看不到 PFF-WM 的 ScienceDirect 页。我用可读作者稿全文副本及出版社索引正文片段复核了既有全文评价：2名认证放射科医师盲评100张CheXpert篡改图（插入50/移除50），1–5临床相关性评分，Cohen κ=.81；预测mask与医学DenseNet-121 Grad-CAM r=.78、均分4.3/5；ImageNet-only DenseNet降至.43/2.2，通用ResNet-50特征为.38/2.0。已把旧记录中错误的“仅摘要/人评未核”临时状态更正。证据支持临床相关性/模型域依赖，不能推出解释因果faithfulness或用户适当依赖。访问/复核过程见 `T573_细检索受限断点重试记录_20261015.csv` 最新事件。
+- 交叉表修正：HCXAI 2026 论文补入04主目录（已有90/172/T106核读）；`Trusting the Detector` 两个04条目并为旧稳定身份；90中同DOI的PFF-WM重复候选并为单条；T636 rank104筛选理由更新。新增Lau假图注意力论文并逐条筛其17条参考、XFaceMark水印解释方法邻接、An & Joe通用图像XAI方法邻接；解释热图可视化均未当作可靠性验证。SSRN综述的TechRxiv同题24页非同行评审作者稿替代全文已并回旧候选身份。
+- 文件：更新阶段报告00、候选目录04、逐位置账本74、路线矩阵87、候选复核90、全文效度表172、访问日志T573；没有源码文件变化。行数04/74/85/87/90/172/T573=10,175/41,300/358/612/1,350/527/104。CSV解析通过，74的41,300个result_id唯一，目标身份去重通过，`git -c core.whitespace=cr-at-eol diff --check`通过。04存在7组历史stable_id冲突且基线已有，本轮未增加；两份根目录用户未跟踪文件保持未修改。
+- **未完成项**：T636 Scholar细式已筛110/约169位置，Chrome的 `start=110&num=20` 仍为验证码、没有结果卡，尚未收到该页用户状态。用户刚确认看不到的是ScienceDirect页面；该文已由作者稿补读。整体细粒度检索保持OPEN。下一步收到T636实际状态后，只筛新卡；如页不可见/仍受限，记录后继续其他未闭合细式，避免重复查已筛身份。
+
+---
+
+## 2026-10-16续：T642视觉提示人因引文边界核查
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；基线HEAD `9344828`；细检索仍未完成，本阶段未提交。
+- 沿Springer官方参考文献[209]跟进Josephs et al. (2024), *Effects of Browsing Conditions and Visual Alert Design on Human Susceptibility to Deepfakes*, DOI `10.54501/jots.v2i2.144`。官方期刊记录和25页PDF可访问，Study 2（n=298）比较文字真假提示与视觉伪迹增强；提示标签直接按ground truth设置，故不是模型错误下的依赖校准实验。列为Tier 2视频人因/视觉提示邻接，不计XAI解释可靠性核心。
+- 新增记录到 `04`、`74`、`87`、`90`、`172` 及阶段报告。T636 Scholar `start=110` 在Chrome现有标签981694705仍显示验证码无卡，已向用户提交单一状态确认；PFF-WM ScienceDirect页面用户报告不可见，暂保留为门控，不再要求用户寻找隐藏页。
+- 检查：04/74/87/90/172均通过CSV解析和列数校验（依次10,171/41,281/607/1,348/524行，结构错误0）；T642 DOI身份1条、结果ID和查询ID唯一；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码改动。根目录两份用户未跟踪文件未触碰。无GitHub推送。
+- 下一步：用户若确认验证码后结果卡已显示，继续T636 rank 111起逐条筛；若仍受限，记录访问状态并转到下一条可读细式，不将验证页当零结果。
+
+---
+
+## 2026-10-16续：T636 start=110 验证门控
+
+- 仓库 brodyZhao/my-research-project；分支 `codex/forensic-explanation-literature`；当前基线 HEAD `9344828`，本轮尚未提交。
+- T636在start=100已完成逐卡筛查（累计110/约169，路线未完）。复用现有Chrome标签981694705打开start=110后，Scholar显示实际验证码且无结果卡；已请求用户本人处理，页面状态待回复。没有新增结果或候选。
+- Codex内嵌浏览器tab 8连接超时；Scholar URL经web读取也不可访问。ScienceDirect PFF-WM验证页用户报告不可见，保留为访问门控；不要再要求用户寻找隐藏标签。
+- 为重试已知引文访问问题，现有Chrome的T627和T629 cited-by页恢复正常，分别1条、2条，全部匹配既有74/87记录；0条新位置、0个新作品。
+- 补充跨引擎核查复用3个既有强相关作品；新增DOI核验的Tier 2英文邻接《Is this real? Susceptibility to deepfakes in machines and humans》，已更新04/90/172/87。它研究人机信心与偏差，不研究模型解释；不计Google Scholar覆盖。
+- 访问事件追加到T573；87记录保留110/110有效筛查数量并写入等待验证状态；00阶段报告追加断点。没有业务代码修改，CSV解析和结构校验待本阶段结束时运行；根目录两个用户未跟踪文件未触碰。
+- 下一步：收到用户验证结果后检查同一精确页是否出现结果卡；若显示，从rank 111起筛且复用候选身份。若仍受限，记录受限状态后继续下一条可访问细式，不把验证码视为零结果。
+
+---
+
+## 2026-10-16：T636第11页逐条筛查及PFF-WM全文访问门槛
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；本轮没有创建提交。
+- Codex内嵌Scholar tab 10 的T636 start=100正常显示10卡，rank101–110逐项写入74。路线累计110/约169；下一页start=110，细粒度检索未完成。
+- 更新04/74/90/172/85/87/T573和阶段报告。新增PFF-WM医学图像取证解释候选；Veritas官方全文质量评价设计核读并合并重复候选身份；MMMMM作为人类标签可靠性方法邻接；其它7卡逐项记录理由。
+- PFF-WM ScienceDirect官方页在当前tab 10显示“Are you a robot?”，无正文。标签已标记handoff并已向用户发送确切页面状态/验证请求。ResearchGate索引PDF片段提及两名放射科医生，但文章方法仍待核；Scholar结果页自身正常。
+- 检查计划：74新增10个连续位置；04 Veritas只保留一个活动身份和一个重复别名；172新增行无重复；CSV解析与diff --check。没有业务源码修改；根目录两个用户未跟踪文件未触碰。
+- 下一步：按用户验证回复核查当前ScienceDirect页；能访问则阅读全文的人评方法，仍受限则按摘要/索引片段级证据标记并回到Scholar start=110。不要让用户寻找旧Chrome标签号。
+
+---
+
+## 2026-10-16：EFR第⑦站实验评估，精读主线完成
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；HEAD 9344828。
+- 用户确认Obsidian格式修复正常。追加第⑦站，核对官方LaTeX表1–4：检测定位、文本解释指标、MDA及一致性消融；区分性能证据与自述证据依赖，标出正确样本筛选、NLI实施细节及小幅差距无方差报告的边界。
+- 实际文库文献阅读笔记/2026.9.30-2026.10./EFR.md、outputs备份及精读笔记已更新；读回一致，代码围栏配对、diff --check。无业务代码测试，未提交推送，保护其它任务修改。
+- 七站已完成。后续按用户问题深入或将EFR映射到自己的受控版本评测；注意图文与纯图像任务差异，不直接宣称新颖性已完成核查。
+
+---
+
+## 2026-10-16：修复EFR Obsidian第四部分起的格式
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；HEAD 9344828。
+- 实际文库EFR.md从④起：两处双中括号坐标加行内代码，防止Obsidian双链识别；裸<FAKE>改行内代码；7处加粗结尾补中文前空格。保留用户已有标题、属性及正文修改，写入前比对并发变化。
+- 已更新实际文库及outputs/EFR_2608.08009_精读/EFR_精读_Obsidian.md。work/obsidian_format_fix保存修前/后备份。20个代码围栏配对，读回字节一致。CUA未授予电脑使用权限，无法确认Obsidian实际渲染；未声称视觉验收完成。
+- 无业务代码测试；未提交推送，保留其它任务修改。下一步若用户仍反馈显示问题，依据截图定位具体渲染。
+
+---
+
+## 2026-10-16：EFR动机的发现过程与普遍性证据核对
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；HEAD 9344828。
+- 核读引言、表3/4、§4.4，区分缺少显式绑定机制与实际错位普遍；公开主文没有系统发现过程或多模型错位发生率。修正之前左/右人物例子仅为教学示意；图4零样本空证据、SFT漏文字不能算实际位置错位证据。
+- 问答已追加Obsidian文献阅读笔记/2026.9.30-2026.10./EFR.md，工作区备份与精读笔记同步；读回字节一致，diff --check。无业务代码测试，未提交推送，保留并行工作。
+- 给用户研究建议：先导测量、按频率影响限定主张；保留伪造B时移除A仍判假，需区分冗余与未使用A。后续可继续⑦实验评估。
+
+---
+
+## 2026-10-15：EFR精读第⑥站真实案例
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；HEAD 9344828。
+- 六站主线已讲完；第⑥站依照官方图4/§4.4逐步分析真实图文输出，区分分类/位置正确、证据描述真实性与预测依赖。指出bad负面评价与平静人物不必然构成强冲突，原图文缺失使原始属性推测不能直接核验；此为阅读分析，不当成作者实验结论。坐标复算IoU约0.91标为连续xyxy假设下自算。
+- 已追加实际Obsidian的文献阅读笔记/2026.9.30-2026.10./EFR.md，图4存附件；工作区备份和精读笔记同步。读回字节一致，diff --check；无业务代码测试。未提交推送，保护并行任务修改。
+- 下一步：用户继续时进入可选⑦实验与解释质量评估，核对哪些指标实际支撑可靠性；无官方代码不编代码细节。
+
+---
+
+## 2026-10-15：EFR精读第⑤站信息流
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；HEAD 9344828。
+- 已将DGM4已有数据集问答及⑤测试信息流完整追加至实际Obsidian文库文献阅读笔记/2026.9.30-2026.10./EFR.md；工作区备份与精读笔记同步。
+- 来源§3.2.1/4.1及已查看图1/4；区分逐token先结论后解释、输出内容隔离与上下文隔离、训练验证奖励与未报告的测试外部验证器。张量尺寸、完整提示及测试八选一协议未报告，不猜测。
+- 验证：文库读回与备份字节一致、图1附件存在、diff --check；无业务代码测试。未提交推送，保留并行任务修改。下一站⑥按论文真实图4样本走一遍，无官方代码不伪造代码说明。
+
+---
+
+## 2026-10-15：EFR精读第④站数据
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；HEAD 9344828。
+- 第④站完整讲解已追加实际Obsidian文库的文献阅读笔记/2026.9.30-2026.10./EFR.md；工作区备份和精读笔记同步。复制图2与图4顶部真实样本截图到文库附件。
+- 来源：官方LaTeX§3.2.2、4.1、4.4及图2/4。区分真值指导模型生成解释、针对性人工检查、数据规模不同用途；保留[9,10]与[9,9]索引表述及230K/208K划分未充分交代问题。没有将展示样本误称下载到的训练数据记录。
+- 校验：文库与备份字节一致，两附件存在且图片已检查；diff --check通过。文档修改，无业务代码测试；未提交推送，保留其他任务修改。下一站⑤信息流。
+
+---
+
+## 2026-10-15：EFR精读第③站训练
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；HEAD 9344828。
+- 已追加③训练：SFT、五项规则奖励、GRPO相对优势示意、MDA及训练参数。来源为本地官方LaTeX §3.2.3/3.3/4.1；保留一致性完整分解需补充材料的限制。
+- 用户将Obsidian笔记改名为EFR.md，后续沿用实际路径：/Users/zhaomengchen/Documents/Obsidian Vault/文献阅读笔记/2026.9.30-2026.10./EFR.md。已保留现有文字并替换③占位；工作区备份及精读笔记同步。图3附件存在，读回验证通过。
+- 无业务代码改动，文档校验diff --check；未提交推送，保留其他任务工作区修改。下一步④数据，一条样本如何构造与标注。
+
+---
+
+## 2026-10-15：EFR精读同步到用户指定Obsidian文件夹
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；HEAD 9344828。
+- 用户明确要求前两站及后续讲解以Markdown保存在Obsidian的2026.9.30-2026.10.文件夹。实际路径：/Users/zhaomengchen/Documents/Obsidian Vault/文献阅读笔记/2026.9.30-2026.10./EFR_精读_动机与架构.md。前两站讲解与站间问答已写入，省略流程性收尾；后续必须继续追加实际文库。图1/3已复制到同目录附件，使用相对链接。
+- 工作区备份outputs/EFR_2608.08009_精读/EFR_精读_Obsidian.md；更新精读笔记保存约定。已验证文库与备份字节一致，两图存在。无业务代码测试；未提交推送，保留并行任务修改。
+- 下一步：继续③训练时同步更新文库正文、工作区备份和精读记录。
+
+---
+
+## 2026-10-15：EFR精读第②站架构
+
+- 仓库brodyZhao/my-research-project；分支codex/forensic-explanation-literature；HEAD 9344828。
+- 仅更新outputs/EFR_2608.08009_精读/精读笔记.md及本交接。已复看原图3、§4.1，讲清单模型结构化输出、两阶段训练、Controller/MDA作用；记录用户关于相似研究的问答。
+- 明确原文7B/8B表述差异、模态隔离是输出要求、未确认视觉编码器冻结范围。下一步用户同意后讲③奖励与训练。
+- 验证：图3已读取；文档内容对照本地官方LaTeX；diff --check。无业务代码修改，不运行代码测试。保留其他任务修改；沿用本精读先前记录的Git操作阻塞，本轮未提交/推送。
+
+---
+
 ﻿## 2026-10-15续：T614–T624细式断点复试
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索数据提交：`cad9ade`（本 HANDOFF 更新随后单独提交）。
