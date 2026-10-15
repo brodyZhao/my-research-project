@@ -1,3 +1,15 @@
+﻿## 2026-10-15续：T609/T610图像解释接地全文与引文筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；检索台账数据提交：`94091fc`（本交接更新随后单独提交）。
+- Google Scholar：用户确认 T568（document image forensics / document forgery × XAI × reliability）仍受限或验证服务无法连接。本次没有新卡；T568既有129卡快照保留为已筛快照，但全领域路线仍开放，不将验证门控记作零结果。
+- 完成跨源官方全文复核：既有候选N1069《Explainable Deepfake Detection Challenge》提升为rank 16.25，32/32条参考逐题名/主题筛查；新增身份`ADD-T610-MSU-2610.09952`（Filippov et al., ACM MM 2026 forthcoming, DOI 10.1145/3767308.3838609），rank 17.5，全文复核；其28/28条参考逐篇筛查。参考中的既有作品按主目录身份复用，不重复核读。
+- 主要文件：输出目录的阶段报告00、候选目录04、逐位置日志74、路线矩阵85/87、候选证据90、全文效度表172、访问事件T573；新增T611挑战论文32条参考表、T612 MSU论文28条参考表。脚本在`work/search_protocol_v2/record_t609_t613_challenge_msu_20261015.py`（不提交）。
+- 验证：脚本`py_compile`通过；记录脚本连续运行两次无重复；所有CSV可解析；74共40,538条且`result_id`唯一；T611/T612分别32/28条且位置连续；04身份唯一；T568范围声明仍为快照而非全领域完成；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码改动，无代码测试。
+- 证据边界：挑战分数使用BERTScore、SLE和LLM文本实体/证据匹配，不等于独立图像事实核验或因果faithfulness。MSU使用描述生成的Grounding-DINO伪mask训练证据图，未报告独立真值篡改mask IoU；内部文本指标只对正确分类的10K样本评估，未做真人适当依赖检验。
+- 未解决：英文细粒度检索整体仍未完成，T568当前服务端门控且T477等路线仍有索引空白/页数限制；不可声称文献“一个不漏”或完成。两份根目录既有用户未跟踪文件未触碰。建议下一步先从T612直接引出的N0048 ForenDeX做官方论文身份/全文核验（当前唯一可用线索是OpenReview索引和二手摘要，不能据此写全文结论），再在Scholar正常结果卡恢复后只续筛未读页。
+
+---
+
 ## 2026-10-15：EFR 按 kelip-paper-reading 精读，第①站
 
 - 仓库：brodyZhao/my-research-project；分支 codex/forensic-explanation-literature；当前HEAD 86f4951。
