@@ -3116,3 +3116,11 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - **验证**：T597、T600和打包脚本均`py_compile`通过；T597/T600记录脚本重复运行两次保持幂等；输出目录1,194个CSV全部解析成功；74共40,365行且result_id唯一；85/87分别332/578条且query_id唯一；N6454在04/90/172单一身份、N6451标为重复版本；T597四卡、T598 42条连续完整；ZIP成员与原文件哈希一致；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码改动，因此不适用源码测试。
 - **遗留问题**：整体细粒度检索仍未完成。T11-F4-S5仅筛到90个可见位置后因低精度暂停；若干高信号Scholar路线仍有验证码服务不可用、动态空白页或第100页上限。用户确认SSRN 6949158 PDF正文已显示，但当前Codex PDF视图黑/空且无可提取文本，本轮未记作可独立核读全文。不要将这些问题当作零结果，也不要声称“无遗漏”。
 - **建议下一步**：优先尝试未重复筛查的窄式与强相关种子前向/反向引文；每次只复查新的位置，先复用04/90/172身份。若当前可见Scholar页面再遇真实验证门控，立即报告确切查询和页面状态；用户协助后确认结果卡实际恢复再继续。随后评估T11-F4-S5是否有新的细粒度词族可拆分，避免重复扫描低精度大分页。
+
+
+## 2026-10-16续：PATE-Forensics解释rubric核读及参考链
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`。本阶段在既有N0520身份上更新04/90/172，并新增PATE-Forensics官方参考书目侧表；逐项位置写入74，有限书目路线写入87。
+- 核读官方作者稿`https://arxiv.org/html/2608.18573v1`及组织方规范`https://ai-safety-workshop-ijcai2026.github.io/Track3.html`。八项加权rubric明确评价视觉事实、grounding、区域特异性、标签忠实、文本-框一致、环境幻觉等。材料未报告评分者身份/人数或评审一致性，也无因果faithfulness、稳定性或适当依赖实验。25条引用逐条题名/主题筛查，SIDA/LEGION/FakeShield等复用现有身份；见`CIT-PATE-Forensics-arXiv2608.18573_25条参考逐项筛查_20261016.csv`。
+- **未完成与页面状态**：T636 Scholar精确查询`("image forgery" OR "image manipulation detection" OR "image authenticity") ("human evaluation" OR "user study" OR "human-AI interaction") (explanation OR "visual evidence" OR "evidence attribution" OR rationale) (trust OR reliance OR confidence OR correctness OR reliability)`的`start=110&num=20`在Chrome tab 981694705仍是Google异常流量页、0结果卡。现已选中该单一Chrome标签并向用户确认状态；若用户看不到/页面仍受限，不继续反复让其找隐藏标签，记录阻断后继续其他未闭合高精度路线。ScienceDirect PFF-WM“页面不可见”不是Scholar状态，作者稿已核读。整体细粒度检索保持OPEN。
+- 更新脚本`work/search_protocol_v2/update_pate_forensics_review_20261016.py`；提交前执行全表CSV解析/主键和引用编号连续性检查、git diff check。根目录用户已有未跟踪文件未触碰。
