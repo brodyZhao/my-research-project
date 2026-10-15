@@ -2890,3 +2890,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：三份脚本`python3 -m py_compile`通过；T585参考编号1–50完整唯一；74的40,237个`result_id`唯一，85/87的`query_id`唯一；ARC-Net、Mahmud、Sugiantoro在候选/核读表按身份单列；输出目录1,188个CSV均可解析；`git -c core.whitespace=cr-at-eol diff --check`通过。没有业务代码变更。
 - 当前计数（各表单位不同，不能当作独立强相关作品数）：04=10,140；74=40,237；85=327；87=572；90=1,318；172=484。
 - **任务仍未完成**：T11-F4-S5下一个Scholar偏移为start=80；ARC-Net精确题名式未补查；T573中多条空白、验证和页数上限路线仍未全部重试。当前Codex唯一可见内嵌页仍是SSRN 6949158验证页，用户表示正本人处理；确认完成前不切换或刷新该页。下一步收到用户确认后，先在该页检查论文正文是否实际显示；若页面仍受限，立即按用户要求报告具体URL和状态，再继续尚未筛的细式。复用已核身份，不重复筛已记录位置。
+
+## 2026-10-15续：T586替代来源重试与T587 MMTT参考链
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T587文献记录提交：`d7914bf`，已推送至origin。本HANDOFF更新单独提交。根目录原有两个未跟踪用户文件保持未修改、未暂存。
+- 对T586 Sugiantoro（DOI `10.1109/ISCT62336.2024.10791156`）做精确题名/DOI替代来源重试。ResearchGate公开书目页明确写明“No full-text available”，仅提供“Request full-text PDF”；没有可读论文内容。事件追加到T573；不重复尝试同一条路径，论文仍按题录级证据边界记录。
+- 对ACL 2026强相关种子 *Generating Attribution Reports for Manipulated Facial Images: A Dataset and Baseline* 的官方arXiv v3参考文献[1]–[64]完成逐条题名/主题筛查，保存在T587侧表和74主账。33项规范化精确题名命中已有目录身份，复用旧审查；FFAA、LEGION、FakeShield等直接解释型作品不重复计篇/全文核读。此次书目筛查没有新增强相关独立作品，也没有将引用条目误作全文已读。
+- 修改文件：阶段报告00；74、85、87；新增T587 64项书目侧表。临时脚本`work/search_protocol_v2/record_t587_mtt_acl_references_20261015.py`留在本地，不提交。脚本通过`py_compile`并重复运行两次幂等；T587编号1–64唯一连续，所有CSV可解析，`git -c core.whitespace=cr-at-eol diff --check`通过。
+- 当前主表计数：04=10,140；74=40,301；85=328；87=573；90=1,318；172=484。根目录既有两个用户未跟踪文件不在提交中。
+- **整体细粒度检索仍开放**：T11-F4-S5 Scholar下个偏移start=80；T01-F4-S5有历史起点空白/索引冲突；T477到Scholar第100页显示上限；其他T573记载的查询/出版商访问问题需针对有望恢复且尚未核实的路线重试。当前Codex内嵌SSRN 6949158页面仍待用户确认本人验证完成；收到确认后先核对该页正文是否真实显示，再决定摘要级或全文级处理。只筛新位置并复用已有身份，新的访问限制及时报告。
