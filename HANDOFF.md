@@ -1,4 +1,14 @@
-﻿## 2026-10-16续：MAD-Guard参考链筛查与Scholar断点交接
+﻿## 2026-10-16续：Forensics-Bench 全文筛选与 Scholar 人机验证断点
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本次文献记录提交 `f426236`；`origin` 已确认是目标 GitHub 仓库。
+- 对 MAD-Guard 书目[20]对应的 *Forensics-Bench* 完成作者稿全文核读：arXiv:2503.15024v2；CVPR 2025，页4233–4245；DOI 10.1109/CVPR52734.2025.00400。IEEE Xplore原地址 `11094699` 经官方摘要确认正确，保留。
+- 修订 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/04_重检候选目录_暂按相关性排列.csv` 中N1003身份与层级（tier 1→2）；更新90候选核查行；172新增全文构念评估；74的T651书目位置和T651侧表补入全文结果；00阶段报告记录本次结论。Forensics-Bench覆盖63,292个问答、112类伪造，检测扰动稳健和来源模型分类属于检测/任务表现；只报告accuracy，不能作为解释事实性、grounding、faithfulness、解释稳定性或appropriate reliance实证。未新建论文身份。
+- 验证：五表CSV逐行解析与列宽一致；04/90/172/74/T651的N1003跨表各唯一；74 `result_id`唯一；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无源码变更，无源码测试适用。脚本位于gitignored `work/search_protocol_v2/update_forensics_bench_review_20261016.py`。
+- **尚未完成**：整体细粒度检索保持OPEN。Chrome标签981694705当前显示Google Scholar异常流量验证页，实际查询为 `("image forgery" OR "image manipulation detection" OR "image authenticity") ("human evaluation" OR "user study" OR "human-AI interaction") (explanation OR "visual evidence" OR "evidence attribution" OR rationale) (trust OR reliance OR confidence OR correctness OR reliability)`，`start=110&num=20`；CUA已确认0结果卡。该标签已选到前台并向用户询问状态，恢复后只续筛第111位。用户最新“页面不可见”对应PFF-WM ScienceDirect页，不是此Scholar页；作者稿已核读。
+- 用户要求遇到打不开/结果卡不显示时明确报告；若验证后结果出现，从断点继续；若仍受限或不可见，记录并报告后处理其他未闭合高精度子式，不重复问用户定位大量隐藏标签。根目录两个已有用户未跟踪文件未触碰。
+- 建议下一步：先读取用户对当前前台Scholar标签的状态；结果卡可见则只筛新位置111–129（约169条总估数）并复用已登记论文身份；若验证服务仍不可用，暂停这一页，不把它计为零命中，转向87中尚未闭合的具体高精度子式。
+
+## 2026-10-16续：MAD-Guard参考链筛查与Scholar断点交接
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段研究/数据提交 `e310310`，MAD-Guard构念分类校正提交 `a68dc9d`（本交接更新随后单独提交）；已确认 `origin` 为 `https://github.com/brodyZhao/my-research-project.git`。
 - 沿EFR的唯一Scholar Cited-by论文MAD-Guard（arXiv:2609.33683）完成官方arXiv书目[1]–[37]的37/37条题名/主题筛查。逐条侧表位于 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/T651_MADGuard_arXiv2609.33683_37条参考逐项主题筛查_20261016.csv`，逐位置记录已并入74，T651状态并入87，候选反向引文位置补入04；共16个确定的旧身份映射，新增作品身份0。EFR、PRPO、Spot the Fake、VIGIL既有全文评价复用，不重复核读。Forensics-Bench的目录出版身份仍待核。MAD-Guard的04候选层级已依据已有172/90全文核读从tier 2修正为tier 3：ECE是检测判决置信度校准，全文无解释质量/faithfulness/grounding/依赖评估。重跑脚本为 `work/search_protocol_v2/record_t651_madguard_refs_20261016.py`。
