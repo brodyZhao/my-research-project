@@ -7,7 +7,7 @@
 - 验证：脚本 `py_compile` 通过、连续运行两次无新增重复事件；74共40,538行且 `result_id` 唯一；85为343条、87为589条且 `query_id` 唯一；T573为75行，11个新事件ID各出现一次；CSV解析及 `git -c core.whitespace=cr-at-eol diff --cached --check` 均通过。无业务源码修改，无代码测试。
 - 未解决：T467验证码页需要用户完成后才能读取结果卡；若恢复后仍空白，记录为未读索引位置继续下一条独立检索。T02/T01/T05/T477/V109若干页当前仍为结果体空白或分页计数冲突；细粒度检索整体仍未完成，不能宣称“无一遗漏”。T568 用户报告的受限页面与当前 Chrome 实际可读标签不一致，保留两边观察。根目录两份既有未跟踪用户文件未修改。
 - 建议 ChatGPT Web 下一步：用户完成当前 Chrome Scholar 的 T467 验证并确认结果卡后，只筛未见过的卡片、按既有身份复用；当前状态见 T622/T467 路线记录。避免要求用户寻找其他隐藏标签。
-- 推送状态：两个提交已在本地 `codex/forensic-explanation-literature`；本轮 `git push origin codex/forensic-explanation-literature` 因到 `github.com:443` 的 SSL 连接失败而未完成，需网络恢复后再推。
+- 推送状态：首次 `git push` 遇到 GitHub SSL 连接错误；重试成功，`df8d473..0f8bf9d` 已推送到确认过的 origin。该阶段数据提交为 `cad9ade`，后续交接与推送状态记录均已一并推送。
 
 ---
 
