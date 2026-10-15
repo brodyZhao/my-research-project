@@ -1,4 +1,15 @@
-﻿## 2026-10-16续：REFORM正式全文与44条书目链（T652）
+﻿## 2026-10-16续：Coherence Trap 全文核读与重复身份合并（T653）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；研究数据提交 `f557a64`；已确认 `origin` 为目标 GitHub 仓库，HANDOFF更新待单独提交与推送。
+- 核读 EFR-REF050、REFORM ACL参考[42]对应的 *The Coherence Trap: When MLLM-Crafted Narratives Exploit Manipulated Visual Contexts*（arXiv:2505.17476v4；CVPR 2026主会）。CVF正式HTML本轮返回403，方法判断依据arXiv作者全文§§3.3、4.1、8.3。论文的ACC/mAP/mIoU测检测、操纵类别和图像框定位；mIoU仅支持定位子任务，未检验文本解释事实性、证据充分性、因果faithfulness、稳定性或用户适当依赖。候选由tier 1修订为tier 2任务邻接，直接解释可靠性实证计数不增加。
+- 合并同一作品的重复目录身份：保留N0902 / L-884e78f46321e1为规范身份，N8534 / L-86ab02e475e128作为别名移入T653交叉表。EFR-REF050、REFORM参考[42]、T466参考[50]及Scholar位置V110-0480仍逐条保留；04主目录重复候选行已合并，不丢发现位置。更新输出目录04、12、74、90、172、T466、T652、T653和阶段报告00；同时在本地既有03/15文件同步更新了全文状态。辅助脚本 `work/search_protocol_v2/record_t653_coherence_trap_fulltext_20261016.py` 在gitignored work目录。
+- 校验：辅助脚本 `py_compile`通过；脚本连续运行两次无重复；涉及输出CSV均可解析且列数一致；04只留一个arXiv:2505.17476规范候选，172仅一条全文评估，74保留3个历史发现位置，T653保留两ID别名映射；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码改动，无代码测试适用。提交时根目录两份既有未跟踪用户文件保持不动。
+- **检索未完成**：当前唯一明确呈现给用户的Codex Scholar页面是T636（`start=110&num=20`），CUA再次确认Google异常流量页/reCAPTCHA复选框、0结果卡；已向用户发出针对该页面的状态选择，并将标签标记为handoff。不要把它算作零命中。用户最新“页面不可见”针对ScienceDirect的PFF-WM（DOI `10.1016/j.iswa.2026.200684`），与T636不同；作者稿此前已核读。细粒度Scholar路线及总体检索仍OPEN。
+- ChatGPT Web下一步：只处理当前已说明的T636页面。若用户确认结果卡可见，从第111位开始筛，复用现有文献身份；若仍受限/不可见，记录状态后用同一可见标签复查87中优先级最高的下一个未完成细式。继续重试旧验证断点时一次只呈现一个具体页面，不要求用户寻找隐藏Chrome标签；旧路线/重复页依照74、85、87和T573复用记录。
+
+---
+
+## 2026-10-16续：REFORM正式全文与44条书目链（T652）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段研究数据提交 `fb4863e8fc10871c9d773f68a2b19fa306175e21`；`origin`仍为已确认的目标仓库。
 - REFORM（N0009）ACL 2026正式全文核读：350条teacher rationales盲法审计，视觉/文本真值证据召回83.7%/82.2%；arXiv v1另有18人、193条输出的说服力/信任评分，但不是ACL终稿结果，也不测适当依赖。候选升至tier 1、核心排序第3；人数、rubric、一致性及teacher rationale与最终输出范围等局限写入172。
