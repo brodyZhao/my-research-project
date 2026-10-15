@@ -1,4 +1,100 @@
-﻿# 2026-10-14续：T522伪迹描述正确性 × 人评细式访问断点
+﻿
+## 2026-10-15：T558/T559 RAIDX 与 MARE 引文筛查
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；开始时HEAD `961ec6c342ad5134f8cf0ea0ea5043150b718bce`。本阶段只处理已授权的图像取证解释可靠性检索，不触碰根目录两份既有未跟踪用户文件。
+- 完成T558 RAIDX Cited-by历史快照18/18、T559 MARE Cited-by 6/6逐条筛选；增补74/85/87与两个独立逐项侧表。RAIDX当前重开链接`https://scholar.google.com/scholar?cites=16524654058180488076&as_sdt=2005&sciodt=0,5&hl=en`触发Google Scholar“Please show you're not a robot”，无卡；此前记录的可见18项快照保留，本轮未新增结果。MARE页正常，6项已逐条核对。
+- 纠正ForensicZoom（N0027）04候选主表“未核读”与172既有全文评审相冲突；统一为三专家/200样本、κ=.71，保留事实正确性和因果faithfulness边界。补入MARE官方arXiv v5全文核读；将REVEAL Springer DOI行N5851并入N0002同作品版本别名，不重复计篇。
+- 主要修改：`04_重检候选目录_暂按相关性排列.csv`、`74_V2完整分页逐位置初筛.csv`、`85_V2细检索大查询与索引异常拆分矩阵.csv`、`87_V2细查询子式实际试检状态.csv`、`90_本轮新增强相关候选与引文复核.csv`、`172_强相关核心及邻接论文原文解释可靠性效度核读.csv`、T558/T559逐项筛查侧表、阶段报告、本文件；脚本在`work/search_protocol_v2/record_t558_t559_citations_20261015.py`。
+- 当前验证：脚本须两次运行幂等；24条位置及result_id连续唯一；MARE 6项、RAIDX 18项，ForensicZoom/MARE的04/90/172一致性和REVEAL别名关系断言；`git -c core.whitespace=cr-at-eol diff --check`。无源码测试。
+- 仍未完成整体细粒度文献检索；T557宽式及若干索引空页/分页冲突路线未闭合。下一步复用已处理论文身份，优先一个可访问的高精度图像伪造faithfulness/掩码核验细式；遇到空页/访问门控即记断点并及时报告，不让用户辨认隐藏页面。
+
+# 2026-10-15续：T542 图像真实性同义词、T543 新深伪解释论文、T544 LLM评审细式
+
+- **T542** 英文检索式：`("image authentication" OR "photo authenticity" OR "image integrity verification" OR "photo forgery") (explanation OR rationale OR attribution OR "evidence grounding") ("human evaluation" OR "trust calibration" OR faithfulness OR stability)`。Google Scholar 首屏报告约856条、Next仍可用；10/10卡逐条写入74。8条映射既有身份（N0013、N0016、N1968、N1918、N0033、N0525、N5264、N6070），另有Willie社会技术真实性综述和RDIAS鉴真系统作范围邻接，均未误纳入解释可靠性核心。宽式没有机械翻页，状态保持OPEN；只关闭/筛完本轮实际可见10个位置。
+- **N1918** 通过PubMed官方摘要补足作者、DOI、PMID、样本与任务：普通用户调查N=120；媒体与图像专家重复测量N=5+5；后续在线调查N=301。研究评价的是图像验证工具如何影响人的真实性判断，不是模型生成解释的faithfulness。PMC全文页面本次仍遇reCAPTCHA，故目录标为摘要级，不声称全文审读。
+- **T543** 新增发现 *Seeing through Deepfakes: An Explainable Multi-Task Detection Framework with Deep Learning and Large Language Models*，Park et al., *Computers, Materials & Continua* 89(1), article 18 (2026-08-13), DOI `10.32604/cmc.2026.081091`。精确题名Scholar快照1/1；TechScience出版社开放全文已核读，身份与评测细节写入04/90/172。文章用Grad-CAM ROI统计提示LLM生成文本理由，按ROI激活做定性一致性检查；另在60个正确分类视频上用Llama3与GPT-4o做成对偏好评价，评价标准含证据faithfulness。作者明确说没有真人受试验证，也没有量化解释一致性指标；因此它是直接相关的新身份，但证据仅支持LLM偏好与定性一致性，不等于可靠性已证实。
+- **T544** 窄式：`("deepfake detection" OR "image forgery detection" OR "synthetic image detection") ("LLM judge" OR "LLM-as-a-judge" OR "pairwise preference") (explanation OR rationale)`。首屏约122条、Next仍可用；10/10逐卡记录，全部复用既有身份，无新论文身份。其中N0506 *Pixels Don’t Lie* 与N6616 Ivy-Fake是高信号重复命中；N0506此前已全文核读和做引文链筛查，没有重复审阅。该高复用首屏诊断后暂停分页，父路线仍开放。
+- 用户本轮回复：SSRN原文页验证已完成、原文显示。Codex当前绑定的IAB PDF delivery标签快照仍显示Cloudflare验证页；可能对应另一个浏览器/原文标签。记录用户确认，但本轮没有从该PDF端点取得可供我独立核读的文本，因而不把它记作我已完成的全文核读。
+- **文件与校验**：新增74共21个逐位置记录；更新85/87三条路线状态；同步04中已知候选的T542/T544 occurrence、N1918 DOI/摘要级边界；T543新身份排在候选相关性rank 9.5并进入90/172。当前CSV：74共39,107行且result_id唯一；85共295条、87共540条且query_id分别唯一；T542 10/10、T543 1/1、T544 10/10位置连续；T543与N1918 DOI各唯一，04/90/172交叉对应通过。`git -c core.whitespace=cr-at-eol diff --check`通过。无源码修改，因此无代码测试。
+- **任务仍未完成**：T542/T544为非终页首屏诊断；T477传统图像SHAP/Grad-CAM忠实性、T467动态索引以及其它可靠性构念路线仍有未覆盖位置。不能宣称全部文献无遗漏。下一步按“先筛新词汇子式与既有强候选引文，再处理非终页中的新身份”推进，命中已知身份只记录新检索位置，不重复全文核读。未提交/推送；分支`codex/forensic-explanation-literature`，HEAD `961ec6c`。
+
+---
+
+## 2026-10-15：T540 稳定性×人评与 T541 出版社引文链
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；最新提交/当前 HEAD：`961ec6c`。
+- 完成 Scholar 细式 T540：7/7位置逐项筛查，候选 N3338 复用；6条按任务边界排除/归为方法背景。Springer官方摘要已核、全文需机构登录，摘要不足以证明解释稳定性或信任校准。
+- 完成 T541 Springer官方书目25/25题名主题筛查；17条映射到既有候选，Mathews et al. 2023已在172全文核读但缺04主目录，已按 DOI 同步到04/90并复用原评审。参考书目中的若干 DOI/题名疑似错链，未作为身份依据。
+- 完成 T539 GenShield 单卡快照，复用 N2119 和172全文审读；0新作品身份。T522、T310、T309等当前可见页均命中已记录位置，没有重复筛查。
+- 主要修改文件：`00_重检阶段报告_未完成.md`、`04_重检候选目录_暂按相关性排列.csv`、`74_V2完整分页逐位置初筛.csv`、`85_V2细检索大查询与索引异常拆分矩阵.csv`、`87_V2细查询子式实际试检状态.csv`、`90_本轮新增强相关候选与引文复核.csv`、`T541_SecureMediaDeepfake_Springer_25条参考逐项题录筛查_20261015.csv` 和本文件。
+- 验证：无源码改动；运行CSV解析、位置/ID唯一性及目录交叉检查和 `git -c core.whitespace=cr-at-eol diff --check`。验证已通过：CSV全表解析，74共39,107个result_id唯一；T539/T540/T541位置分别1/1、7/7、25/25且连续；85与87 query_id唯一；N3338 DOI、Mathews DOI身份检查通过；`git -c core.whitespace=cr-at-eol diff --check`通过。总体细粒度检索未完成；尚有 Scholar 宽查询分页上限/动态索引断点及高相关窄式待处理，不能声称全领域无遗漏。
+- Git：本轮不提交/推送；此前提交/推送自动审批被拒后未重试。根目录两个既有用户未跟踪文件未触碰。
+- 建议下一步：先从 T477 的高精度后代继续（复用已处理候选，只核查分页上限之外的新身份），再收敛 T467/T01 动态索引缺口；优先查有潜在新身份的窄式，并及时报告真实访问门控。
+
+---
+
+# 2026-10-15续：T536人类注意/标注×显著性图细式闭合
+
+# 2026-10-15续：高信号细式续筛与动态索引复核
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；HEAD/最新已提交哈希仍为 `961ec6c`。本轮继续保护已有工作区修改；不提交/推送（此前自动审批曾拒绝，未重试）。
+- 恢复 `T02-F2-GROUND-FAITHFUL-EXACT-20261012` 第2页（start=10）：页面正常，共10卡；连同既筛首页为20个可见位置。所有十卡均映射到04/90/172中既有身份（ThinkFake、TruthLens/FORGE、图像鉴伪综述、Agentic、REVEAL、证据接地深伪检测、人体场景生成图接地、可靠性框架、SGEVL-Forensics、Zooming in on Fakes）；新增作品身份0。分页记录和候选 `occurrences` 已同步。估算约4,320且Next仍开，父路线保持未完成；暂停机械翻页，继续更窄的可靠性构念和引文链。
+- 刷新 `T05-F2-AIGEN-ATTR` 的动态快照：start=110显示Page 12 of 71、无卡；随后start=70显示Page 8 of about 246、9卡且有Next，结果计数/排名明显冲突。9卡逐条新增日志到 `74_V2完整分页逐位置初筛.csv` 的独立刷新查询 `T05-F2-AIGEN-ATTR-RECHECK-20261015`，不与旧110位置快照合并。3卡复用Trustworthy Image Authentication/FKG、CLIP分离、Spot the Fake身份；发现2篇低层次邻接材料进入04：Sobieraj 2026本科论文（仅 Scholar 摘要，PDF预览空白）及Huang et al. 2025 IEEE Access“Which Visual Features Influence Perceived Authenticity…”（IEEE官方摘要，508参与者；是人类真实性判断研究，不评测检测解释）；其他卡为检测偏差/检测器/生成器基准背景或排除。未新增直接解释可靠性实证论文。
+- T467 深伪×人评×解释正确性路线上重新检查start=120仍无结果卡但Next可用；下一页start=130为无卡片、无分页的Scholar壳页。改为start=120&num=20后，Scholar触发异常流量reCAPTCHA，未处理；用户已收到明确页面和请求，待其确认。121–130名次缺口保留为未解决，不记零结果。
+- SSRN TrustGuard 7416943摘要/参考文献页用户已表示可见；本轮再读PDF交付端仍显示Cloudflare“正在进行安全验证”，没有正文。因此继续按摘要级记录，全文效度结论仍未知，已请用户确认其当前PDF页面状态。
+- 修改：HANDOFF、阶段报告、候选目录04、路线矩阵85/87、逐位置总日志74。CSV校验覆盖本轮9+10个新增结果位、身份去重与查询状态一致性；同时修正74中T478的40条FakeArti参考记录ID，使其与Insights参考清单不再冲突（原来30个ID碰撞）；当前总结果ID无重复。`git -c core.whitespace=cr-at-eol diff --check`通过；无源码修改，无代码测试。总体细粒度检索仍未完成，不能声称全领域零遗漏。
+
+---
+
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；最新 commit/当前 HEAD `961ec6c`。保护了原有工作区修改及根目录两个用户未跟踪文件；本阶段不提交、不推送，之前的自动审批拒绝后未再次尝试。
+- Google Scholar 英文细式：`("image forgery detection" OR "image manipulation localization" OR "image tampering") ("human attention" OR "human annotated" OR "human annotation") ("saliency map" OR attribution OR "explanation map")`。按实际分页读取 start=0–70 共8页，逐卡记录72/72个可见位置；末页2条、无Next链接。页眉估算从约84波动到约72，故只声明覆盖本次返回的实时页集，不宣称 Scholar 全库穷尽。查询无验证门控或空白页。
+- 72个位置按标题/片段筛查并与04、90、172交叉去重：新发现1篇强邻接文献、0篇此前未见的直接核心作品。新邻接文献为Krinsky et al., “Exploring Saliency Bias in Manipulation Detection,” IEEE ICIP 2024, DOI 10.1109/ICIP51287.2024.10648063 / arXiv:2402.07338v4。官方全文报告65人标注130张真实拼接图共650次响应；人工注意/篡改定位随篡改显著性而变化（人类定位AuROC约0.62至0.89），可用来说明“热图符合人类注意”会受可见性偏差影响。它不是XAI解释或faithfulness测试，作为方法邻接而不计入直接可靠性实证数。该身份已入04、90、172；逐位置记录在 `T536_图像鉴伪_人类注意标注与显著图细式_逐位置筛查_20261015.csv`。
+- 本式重复命中FakeXplain、Where and Why、Explaining AI-Image Detection、XPlainVerse、RewardBench、X2-DFD、FakeScope、FakeArti相关等既有身份，沿用既有全文/摘要核读，不新增重复作品。2012年“Saliency detection as a support for image forensics”经IEEE摘要确认是显著性辅助篡改检测方法，不评估XAI解释可靠性。
+- 访问限制已记录：上述IEEE 2012论文摘要可读，但PDF明确要求访问权限；按摘要级即可判定其作用为方法背景。SSRN TrustGuard 7416943摘要页已按用户确认恢复；PDF Delivery此前仍显示Cloudflare验证，全文状态不因摘要页恢复而改变。
+- 修改文件：HANDOFF、阶段报告、候选目录04、路线矩阵85/87、强候选90、全文核读172，以及T536逐位置日志。CSV核验：72行位置唯一且连续；分页偏移与位置对应；日志中的所有已匹配master ID均存在于04；新 arXiv:2402.07338 身份在04唯一、90/172各一条。`git -c core.whitespace=cr-at-eol diff --check`通过。无代码变更，无代码测试。
+- 总体细粒度检索仍在进行。下一步优先续查尚未闭合的高信号细式与Scholar索引缺口，先复用已登记身份；遇到访问限制先告知用户，不把空白页当作零结果。
+
+---
+
+# 2026-10-15续：T534/T535人类信任细式、正式来源核实与去重
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本轮基准 HEAD `961ec6c`。工作区原有修改与两个根目录用户未跟踪文件均保留。本轮不提交、不推送；此前自动审批对提交/推送曾拒绝，按先前状态不重试。
+- 新增 T534 深伪解释×信任校准/适当依赖式，Scholar首页9卡逐项筛查；新增T535 非deepfake传统图像伪造/篡改/拼接/搬移×解释×人信任式，首页10卡逐项筛查。两页均非终页，分别约435/193条；20/20可见卡均映射到既有候选身份，0篇新增论文身份。已知核心不重复全文核读，后续不机械翻宽页。逐项记录在 `T534_深伪检测解释信任校准_首页逐位置筛查_20261015.csv` 与 `T535_传统图像鉴伪解释信任_首页逐位置筛查_20261015.csv`；查询状态入85/87。
+- T535命中并复用已有强相关的FKG（ECCV 2026）、Domain-Tag（Future Internet 2026）、Generating Attribution Reports（ACL 2026）、FakeBench、So-fake、From Prediction to Explanation及既有图像鉴伪综述。结果卡虽重复，均作为本次词汇覆盖证据，不新增篇数。修正04中FKG和Domain-Tag过时的摘要/失败状态，使其与既有90/172全文核读一致。
+- ViT-Xplain IEEE官方摘要和书目已核（DOI 10.1109/TCE.2025.3643884）：报告attention-to-face平均重合0.575等代理，但PDF访问受限；摘要不能证明伪迹证据正确、因果faithfulness或真人信任校准。
+- 跨模态信任框架 DOI 10.70593/deepsci.0203011 的官方17页PDF已选读pp.1–8、13、17。其检测/faithfulness/trust结果全来自合成数据与30个模拟条件；faithfulness是通道归因命中人工生成样本的已知伪造通道，trust index由accuracy、1-ECE、F加权，不含真人受试。保留为主题直接的低证据仿真/概念工作，不作为实证信任或真实解释可靠性证据。该文[3],[60],[61]题名检查显示为深伪综述/检测工作，并非其自述的独立解释可靠性验证来源。
+- 新复核IEEE系统综述 *Explainable Deep Learning for Digital Image Forgery Detection: A Systematic and Critical Review*，DOI 10.1109/ACDSA67686.2026.11467619：官方摘要称回顾2019–2025年40余项研究；PDF无访问权限，按摘要级记录，不推断其实际覆盖faithfulness/grounding。
+- SSRN TrustGuard 7416943原摘要页已按用户确认恢复；本轮直接检查的PDF Delivery页面仍显示Cloudflare“正在进行安全验证”。已单独向用户询问该PDF页是否可见；若未恢复，正文继续按摘要级。
+- 主要修改：阶段报告、HANDOFF、04候选、85/87矩阵、90证据复核与T534/T535逐位置CSV。待执行CSV结构/稳定ID核验和 `git -c core.whitespace=cr-at-eol diff --check`。无源码变更，无代码测试。剩余开放路线包括T477页100显示上限、T02-F3-S7动态索引、T01-F4-S5分页索引冲突及其它宽式；细粒度主题快照大量已闭合，但总体检索未穷尽。
+
+---
+
+# 2026-10-15续：EFR引文链交叉核对与TrustGuard引文消歧
+
+- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；本轮起点HEAD `961ec6c`。工作区已有本任务未提交修改；根目录两个既有用户未跟踪文件未触碰。本轮不提交/推送，细粒度检索仍在继续。
+- EFR（arXiv:2608.08009v1）官方书目56项此前均已逐条题名/主题筛查。新建`T528_EFR强相关参考文献既有全文核读交叉表_20261015.csv`，将14个高信号参考位置映射到90/169/172/T184已有全文效度记录；14项都复用既有审读，不重复读文，不新增独立作品。ACL Attribution Reports 的引用[14] FFAA、[17] LEGION、[53] FakeShield、[61] Common Sense也已在101侧表加稳定ID和全文核读回链。
+- TrustGuard SSRN 7416943官方摘要/26条参考文献可见；页面注明42页、2026-09-05、未经同行评审。点击PDF后出现Cloudflare“请验证您是真人”页面；未读到正文。已向用户即时报告并请求其在当前Codex内嵌页面本人处理。当前全文状态仍为未核，不从摘要推断正文无相应实验。
+- T526核查其参考[11]作者主题式`"T. Q. Nguyen" deepfake SHAP Grad-CAM 2022`；Scholar 0篇，引用未独立验证。T527核查参考[16]作者/刊物/主题式，2个可见结果（TrustGuard种子重复+作者/年份/期刊不匹配的2025 Journal of Innovation & Knowledge卡片），无独立匹配；另有先前精确题名查询结果已记在T525。查询记录同步85/87，零结果仅关闭相应精确快照。
+- 细粒度检索仍未完成。优先复用现有唯一身份、只推进仍开放的高信号细式；不重筛T522的135/135、T01-F3的83卡等已关闭快照。重点开放路线：T477有997个去重排名位置但遇Scholar第100页显示上限（页眉估约2,110）；T02-F3-S7有357个持久位置及索引缺口；T01-F4-S5历史1–540已筛，最近偏移只有空结果区。新验证码/Cloudflare需先立即报告，且不得把空页当成零命中。
+- 本轮修改：`101_GeneratingAttributionReports原文64条参考文献逐条筛查.csv`、04候选目录、85/87矩阵、T526、T527、T528、阶段报告及HANDOFF。待验证：所有新增CSV可解析、计数与路由ID唯一，`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改、无代码测试。
+- 建议下一步：优先处理SSRN当前Cloudflare验证状态（若用户恢复，再核PDF是否含正文方法/结果及其参考文献，不复筛26条已记位置）；同时从可访问且未筛的英文细式继续，严格按74/04/90/72/172去重。不要声称“一个不漏”或全领域穷尽。
+
+---
+
+# 2026-10-14续：按用户明确的预构建受控版本设计重新核查文献
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；交接时最新 HEAD：`961ec6c`。本轮研究文件已保存，尚未提交。仅本地提交的自动审批首次及唯一一次重试均因审批未在期限内完成而失败；没有继续重试，没有推送。
+- 用户明确的研究：预先保存同源原图和可独立保留／撤销局部修改的对应版本；获得模型自述证据后，选择已有对应版本检验原判决依赖。不能因已有真假配对或解释 benchmark 就判断该协议已经做过，亦不把事后生成修补当作用户方案。
+- 主要修改文件：新增 `outputs/预构建受控版本检验鉴伪自述证据_文献复核_2026-10-14.md` 和 `outputs/预构建受控版本_已有核读记录筛选_2026-10-14.json`；修订导师讨论稿的摘要、RQ、理论、版本数据、干预和结论；在旧专项报告中注明其宽泛选题判断已被取代。
+- 核查证据：37 条真实网页检索式；459 条既有核读记录按相关词分流，保存 101 条候选快照与源表 hash；重新核最相近数据／干预论文方法章节并复用既有读文记录。INP-X／TGIF 是源图控制先例，PIXAR／Seq-DeepFake 是多步编辑先例，Hopf 是自述区域遮挡测试先例。EDCT／Menzat 为通用视觉方法邻接；2026-10-12《Not Every Cue Is Evidence》带版本 HTML 已取得，§3.3 是视觉 token 置零与 cue 似然对照，非预构建图像版本测试。XPlainVerse 本地官方 PDF 提取文本可读，旧报告“无全文材料”说法已修正。
+- 当前判断：已核原文中未确认同时满足“同源预构建修改版本＋其他修改固定的对应版本＋原检测器自述证据与判决响应”的直接重复；建议继续具体研究方案，不宣称全领域无人做过。Side-VLM、DDL、FakeArti 的全文方法仍未决。最终复取 Gowrisankar–Thing 页面时网络工具连续两次连接失败，沿用已保存的 11 页正文核读和 Tsigos 引文说明，没有假装新读到页面。
+- 检查：任务文件 `git -c core.whitespace=cr-at-eol diff --check` 通过；Python 检查新报告 C1–C3/关键种子、局部链接、空白、JSON 101 条记录与 37 条查询及导师稿新结论一致性通过。无业务代码变更，无代码测试。根目录两个用户文件及其他任务的检索台账未由本轮修改／暂存。
+- 下一步 ChatGPT Web：以新报告标准核 Side-VLM／DDL／FakeArti；如继续方案，定义固定局部修改内容和版本对应关系，验证区域外逐像素一致，不以两个版本都仍判假直接判定解释不忠实。Git 本地提交待审批可用后完成；分支还含先前自动审批拒绝推送的其他任务记录，勿自动重推该祖先链。
+
+---
+
+# 2026-10-14续：T522伪迹描述正确性 × 人评细式访问断点
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本地数据提交：`a1c4d55`（Log T522 artifact correctness search and CAPTCHA gap）。T522只记录到访问门控位置；Scholar start=20需用户手动恢复后续筛。按此前自动审批拒绝，当前不推送此数据提交或HANDOFF更新。
 - 检索式：`("image manipulation localization" OR "image forgery detection" OR "image tampering detection") ("artifact description" OR "explanation correctness" OR "rationale correctness" OR factuality OR hallucination) ("human evaluation" OR "expert evaluation" OR "annotator agreement")`。Google Scholar start=0与10各显示10卡，20/20逐条筛查并全部匹配已存在候选/作品身份，新增作品身份0。Scholar动态估数约146。尝试start=20后异常流量reCAPTCHA出现，0张后续结果卡；事件在`T522_start20_Scholar_reCAPTCHA_访问事件_20261014.csv`，不能当作零结果或末页。用户已被提示在Codex右侧内嵌浏览器tab22完成验证，恢复后从rank 21续查。
@@ -2633,3 +2729,70 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 复核已登记作品以避免重复：ACL 2026《Generating Attribution Reports for Manipulated Facial Images》已在172按正式全文记录5人盲评 Faithfulness/Helpfulness，并有 `101_GeneratingAttributionReports原文64条参考文献逐条筛查.csv`；LMFR-SID/Research Square 的版本与65条参考书目已合并在既有作品身份。两者均不新建重复条目或重读已完成内容。
 - 最新阶段包 `outputs/图像鉴伪解释可靠性_重检阶段结果_2026-10-14.zip` 含1,154个源文件及manifest（共1,155成员），SHA-256=`2933780909fa208a56b8c40c070d7e476a8b1a38c2796141398b97b34871537c`。验证：检查脚本 `py_compile` 通过；`python3 work/search_protocol_v2/package_checkpoint_20261014.py` 的T516、T477、T468、T483及历史连续性断言全部通过，并校验ZIP CRC和源文件SHA；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务代码改动。
 - 建议下一步：先处理用户已收到的两个具名恢复请求。任一恢复后只读取真正显示的未筛结果卡，以74/90/72/172复用身份，遇到重复曝光仅记边界链接；另一页若仍受限，就保留断点并转回可访问的独立高信号路线。细分类检索仍未完成，不能宣称全域零遗漏。
+
+# 2026-10-15续：卫星遥感解释可靠性细式与引文核查
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；本轮起始HEAD：`961ec6c342ad5134f8cf0ea0ea5043150b718bce`。本轮未提交/推送；既有工作区修改和用户未跟踪文件均保留。
+- 主要修改：阶段报告 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/00_重检阶段报告_未完成.md`；追加维护 `74_V2完整分页逐位置初筛.csv`、`85_V2细检索大查询与索引异常拆分矩阵.csv`、`87_V2细查询子式实际试检状态.csv`、`04_重检候选目录_暂按相关性排列.csv`、`90_本轮新增强相关候选与引文复核.csv`。172全文表复用既有记录，本轮未改动。新增卫星方法邻接身份为《Deepfake Satellite Imagery Detection with Multi-Attention and Super Resolution》，不属于直接解释可靠性证据。
+- 本轮新增检索/引文证据：T550精确交集式0卡；T551遥感合成图XAI有效性宽式首屏10卡逐项筛完，估数约2,490、Next可用，未出现新直接可靠性作品身份，保持低精度开放；Deepfake Geography官方arXiv参考文献[1]–[23]全部题名/主题筛查，新增1篇任务/方法邻接论文。该种子的Google Scholar Cited-by 页被实际reCAPTCHA挡住，0条引文卡片；已切至Codex右侧内嵌浏览器并报告用户，待恢复后再筛。SSRN 5991194用户报告原文显示，但当前自动化标签仍显示Cloudflare interstitial；保留分端状态，全文未核读。
+- 测试/校验：对74结果ID唯一性、T551 10卡、CIT-DGEO 23项、85/87路线唯一状态行和新身份去重运行Python断言，全部通过；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码修改，因此没有代码测试。
+- 台账口径：74=39,239条结果/引文位置，85=305条拆分记录，87=550条路线状态，04=10,123条目录记录，90=1,294条候选/引文核查，172=470条效度核读；计数单位不同，不能解释为独立强相关论文数或领域穷尽证明。
+- 遗留：整个细粒度检索仍未完成。T551宽式暂停机械翻页，改由精确子式和种子引文链补足；T552待Scholar引文结果卡；其他动态或冲突路线见87（尤其T02-F3-S7、T467、T477）仍要按可见结果与去重规则续检。低精度大查询不逐页机械扫，需先用更精确子式及核心作品引文网覆盖。
+- 建议ChatGPT Web下一步：先确认Deepfake Geography Cited-by 页是否已出现正常结果卡；若已恢复，从首个可见引文位置起筛并复用74/04/90/172身份。若没有结果卡，不要把空白页记作零命中；继续选择一个仍有清晰断点的强相关窄式，并将页面保持在Codex内嵌浏览器可见位置。
+
+
+## 2026-10-15续：T552被引页已恢复；简化页面交接
+
+- 用户完成 Scholar 验证并确认结果卡出现。该页显示4条被引结果、无下一页入口；4/4逐条筛查已入 `74_V2完整分页逐位置初筛.csv`，85/87中的 `T552-DGEO-CITEDBY-ACCESS-20261015` 已从等待验证更新为“当前4卡快照已筛完”。仅限当前Scholar快照，不宣称全局引文穷尽。
+- 4条卡片都在04候选目录中有稳定身份；0个新作品身份。卫星操纵全息检测为取证任务背景；两篇生成图/深伪检测热图论文为XAI应用邻接，可靠性协议证据未确认；检测评价系统综述不属于解释可靠性综述。没有重复全文审读。
+- 页面交互约束：用户表示页面太多、难以区分。继续检索时仅使用明确当前可见的页面；不要新开多页或要求按隐藏标签号定位。若当前页仍打不开/空白/被验证页拦截，立即报告具体页面、查询式、状态及未筛位置，并停止该访问路径。SSRN、TrustGuard等用户表示不可见/打不开的PDF继续按摘要级/全文不可得记录，不再让用户寻找这些页面。
+- 验证：74增加4条T552逐位置记录，检查结果ID唯一；85/87各只有一个T552状态行；4条题名均与04已有稳定身份匹配；`git -c core.whitespace=cr-at-eol diff --check`结果见本轮记录。无业务代码改动，无代码测试适用。
+- 当前HEAD仍为 `961ec6c342ad5134f8cf0ea0ea5043150b718bce`（本轮文档/检索台账变更未提交）；主检索仍未完成，T551宽式和T02-F3-S7、T467、T477等动态/高噪声断点不能据此宣称闭合。
+
+## 2026-10-15续：当前 Scholar 页为已闭合路线，无需重筛
+
+- 当前 IAB 现有 Scholar 页面是 T06-F4-S6（合成图检测 × 删除/插入 × 人评），start=10、5张卡。74已登记位置11–15，87已记录该精确查询15/15并关闭；本次确认页面正常，没有验证码或空白，但不重复添加同一位置。
+- 此轮没有新出现的访问受限页面。用户要求如果页面仍打不开就直接报告；后续遇到受限时准确报告题名/检索式、当前页面状态和未筛位置，不再要求用户在多标签中寻找页面。
+
+
+## 2026-10-15续：T554动态分页冲突；继续细式检索
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本轮工作起始HEAD：`961ec6c342ad5134f8cf0ea0ea5043150b718bce`。本轮尚未提交/推送；保留已有工作区修改和根目录未跟踪文件。
+- 主要修改：重检阶段报告；74逐位置台账（T554可见结果位置1–90）；85/87查询拆分矩阵与子式状态；04候选目录中的MIC身份字段纠正（此前主标题/作者/年份误继承到SEED）。
+- Scholar证据：T554同一细式、单个既有IAB标签。第1–9页共90张结果卡已逐条写入74，并复用已存在身份/全文审读；第8/9页显示121条。start=90两次均显示空白且无验证码/Next，页数分别突变到72、77；路线状态标为动态索引冲突，未宣称完成。用户已即时收到具体路径和页面状态；未要求其搜索隐藏标签。
+- 检查：T554可见位置1–90齐全；74 `result_id`唯一；85/87仅各有一个T554状态行；MIC更正字段与既有172原文核读一致；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码修改。
+- 遗留与建议：整体细粒度英文文献检索仍未完成，T554当前快照的尾部不可确认；其他细式/引文链有未闭合项。继续用一个现有Scholar标签，按查询路线记录每页结果；遇到空白/受限先报告具体页和断点，不把空页算作零命中，再转向其他未完成窄式。
+
+
+## 2026-10-15续：T555诊断、So-Fake全文核读与ForgeryGPT版本冲突
+
+- 单个既有IAB Scholar标签检索 `("image forgery" OR "image manipulation" OR "image tampering" OR "image authenticity" OR "image integrity") (explanation OR explainable OR interpretability OR attribution OR saliency OR rationale OR reasoning) ("human evaluation" OR "expert evaluation" OR "user study" OR trust OR reliance OR faithfulness OR reliability)`。首页约19,400结果、Next可用，10个可见位置逐条加入74；路线T555列为宽式诊断/未完成，不机械翻宽噪声页面。
+- So-Fake arXiv:2505.18660v5官方全文已完整核读并写入04/90/172：500例解释-图像证据偏好研究，5名评审分摊、每例仅1评审，So-Fake-R1获55%；另有人工核验参考理由。归类为强相关直接证据，明确其并不证明因果faithfulness/适当依赖。原候选N3108已纠正元数据和相关性。
+- ForgeryGPT IEEE document 11709464：Scholar显示“All 2 versions”和新指标snippet；官方IEEE endpoint返回HTTP 418。当前与arXiv N0988的版本关系记为很可能同一作品簇但未核实，不重复计篇；v4可读全文及publisher snippet之间的差异留待IEEE恢复后核实。详细日志见74/85/87/90/172。
+- 本轮未提交/推送；未改代码。下一步继续用户已授权的高精度英文检索，复用已审身份，只新增实际显示卡片并记录访问断点。
+
+
+## 2026-10-15续：T557信任/依赖细式，RAIDX及ForgeryVCR原文核读
+
+- 查询 `("image forgery detection" OR "image tampering detection" OR "deepfake detection") ("appropriate reliance" OR "reliance calibration" OR overreliance) (explanation OR rationale OR "visual explanation")`，Scholar首页约414条、10张结果卡逐条记入74；路线T557仍未完成分页。
+- RAIDX官方arXiv全文核读：10名盲评领域专家对100张合成图解释评分，属解释质量直接人评邻接；评分细则/IRR缺失，非逐claim事实性或appropriate reliance。修订04/90/172，publisher/arXiv作为同一作品版本簇。
+- ForgeryVCR官方arXiv v2全文核读：25,588样本；Qwen3-VL judge的三项理由接地/正确性/一致性标准及35.2% correction rate写入04/90/172，标记为自动评估。其ACM MM 2026时间在未来，不能提前写作已正式发表。
+- 用户已看到T01-F4-S4 start=180空白/索引矛盾报告；该页没有验证码，旧180张结果仍保留，路线开放。Trusting the Detector PDF及Discerning Truth全文仍不可获取；没有让用户寻找标签。
+
+## 2026-10-15续：T560掩码接地检索与T05 Scholar分页冲突
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；工作阶段起始HEAD：`961ec6c342ad5134f8cf0ea0ea5043150b718bce`；本阶段文件尚待提交/推送。目标remote仍是已配置的`origin https://github.com/brodyZhao/my-research-project.git`；用户此前已授权推送检索分支。
+- 主要修改：新增可幂等的`work/search_protocol_v2/record_t560_mask_grounding_20261015.py`和T05刷新记录脚本；新增T560 199条逐项筛查、T05 start=80十项逐项筛查和start=90空页事件CSV；同步74主账、04候选目录、85/87路线矩阵、90候选与172全文效度表，并更新阶段报告。仓库根目录既有两个未跟踪用户文件保持未修改、未暂存。
+- T560查询式为`("image forgery" OR "image manipulation detection" OR "image tampering") (explanation OR "saliency map" OR "attribution map") ("ground truth mask" OR "ground-truth mask" OR "manipulation mask" OR "localization mask") (IoU OR overlap OR localization OR pointing)`；20页共199张可见卡，逐条筛完并复用已知作品身份。仅代表当前Scholar快照闭合，不代表全领域穷尽。补核Tell-Tale Watermarks全文及PATE-Forensics/MMFusion效度边界；VAAS官方页面403，按摘要级保留。N3122《Is Attention Mechanism Enough…》按Scholar snippet记录Grad-CAM/真值mask重叠的空间代理证据；IEEE全文打不开，未做全文效度结论。
+- T05新快照start=80页9的10张结果已逐项登记，均为低相关词共现；下一页start=90显示“Page 10 of 84 results”、0卡、Next禁用、无验证码，上一页页眉约98，start=110也空白。保留为动态索引冲突，不视为末页或零结果；用户已收到具体检索式和状态，未要求其寻找页面。
+- 检查：两份记录脚本各连续运行两次均幂等；T560严格199条，T05 start=80严格10条；74全表39,596个`result_id`唯一；`python3 -m py_compile`通过，`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改。
+- 遗留：细粒度英文文献检索仍未整体闭合；T05刷新、T01-F4-S4、T554等Scholar分页矛盾待索引恢复；T477受页面上限约束；Trusting the Detector等出版商全文不可读。继续只推进明确未筛且能正常显示卡片的高精度路线，复用74/04/90/172身份；新阻断及时报告。建议ChatGPT Web先检查最新阶段报告及T05空页状态，按登录态可访问的Scholar分页/论文全文恢复具体断点后再继续，不要重筛已经逐项记录的位置。
+## 2026-10-15续：T561–T563细式和引文核读
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`。本交接提交后将记录最新commit。
+- 本轮新增T561的66张解释质量×人评Scholar卡逐项日志、T562的ForgeReason参考文献28/28筛查，以及T563的SIDA/LEGION两篇全文解释效度核读；同步更新阶段报告及04/85/87/90/172台账。SIDA的N1939/N8505标为同一CVPR论文版本入口，LEGION复用N1933，没有新增独立作品身份。
+- 官方CVPR/ICCV页面与 arXiv 全文可读。SIDA专家审核3,000条参考解释文本（准确性/清晰度/一致性），不等于最终模型输出的独立忠实性验证；LEGION使用人工标注mask/文本、mIoU/F1与ROUGE-L/CSS，但没有模型解释的人评、因果faithfulness或appropriate-reliance实验。
+- Scholar现有内嵌标签 `image splicing/copy-move forgery × explanation faithfulness/fidelity/reliability/stability` 两次自动化连接超时；未观察到验证码或结果。查87确认T306/T519已对同一窄式8/8筛查，该连接失败不留下未筛位置，无需用户定位标签。
+- 测试：`python3 -m py_compile work/search_protocol_v2/record_t563_sida_legion_primary_20261015.py`通过；T561/T562/T563各脚本重复执行保持幂等；需完成CSV结构/唯一性检查与`git -c core.whitespace=cr-at-eol diff --check`。无源码测试适用。
+- 主要修改文件：阶段报告、HANDOFF、候选目录04、路由矩阵85/87、候选/效度表90/172、新增T561/T562/T563逐项CSV和记录脚本。保留根目录既有两个用户未跟踪文件，不纳入提交。
+- 任务仍未完成：T467索引漂移、T477 Scholar约100页上限、T551宽式及其他开放子式仍未闭合。继续细粒度检索时先用窄式与种子引文，命中已知身份时复用先前审查；实际页面打不开则直接报告检索式和状态，不要求用户在多标签中查找。建议下一步针对T467与T477衍生窄式的未覆盖词项做一条可复核的高精度检索，并只处理新可见位置。
