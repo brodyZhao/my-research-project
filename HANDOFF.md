@@ -2855,7 +2855,7 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 
 ## 2026-10-15续：T577–T579深伪解释插入式续筛
 
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；开始阶段时HEAD为 `86f4951d2849c353eed7a336b3103d6f1fc90614`（提交前需核验最终hash）。
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段结果/文献台账提交：`ecf1dae`（已推送；本HANDOFF更新作为随后独立提交）。
 - 修改：阶段报告00；候选目录04；逐位置主账74；查询矩阵85；查询状态87；强相关候选表90；全文核读表172；T573访问事件；新增T577/T578/T579三张逐位置表。未修改根目录既有未跟踪用户文件。
 - T11-F4-S5从Scholar start=50/60/70筛查30个位置，总计80个可见位置，Next仍开，路线保持OPEN，下个断点start=80。无Scholar验证码。
 - 新登记直接强相关论文N-T577-AYYAPPAN-001：Ayyappan与Thiyagarajan (2026), *Comparative evaluation of lightweight CNN architectures for efficient and explainable deepfake detection*, DOI `10.1007/s44584-026-00002-z`。Springer开放全文报告Deletion/Insertion AUC与组合XAI Score；单数据集、单次运行且无统计区间，未见人工/独立掩码真值/sanity/稳定性验证，按单一扰动代理证据限制结论。N0307的SSRN论文在T579重复命中，不重复登记；其官方页现在显示Cloudflare真人验证，用户已在当前Codex内嵌页面收到本人完成验证请求并答复会处理，需待用户报告恢复后继续读取。
