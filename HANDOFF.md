@@ -1,4 +1,15 @@
-﻿## 2026-10-16续：Coherence Trap 全文核读与重复身份合并（T653）
+﻿## 2026-10-16续：T654目录状态去重与Scholar单页验证交接
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T654数据提交：`f510baa`。目标远端 `origin` 为 `https://github.com/brodyZhao/my-research-project.git`。
+- 将候选表中N0509、N0539、N0510、N0506的过时“检索失败/身份未核”状态与172已有的作者稿全文核读记录对齐，补全作者、出版身份、全文来源与筛选依据，避免重复核读。N0517（CDTS）保留为唯一规范身份；N0546的ADS别名及发现位置转入T654交叉表，并从候选目录去掉重复行。
+- 修改文件：输出目录`00_重检阶段报告_未完成.md`、`04_重检候选目录_暂按相关性排列.csv`及新建`T654_CDTS_arXiv2606.29484_重复身份核对.csv`。辅助脚本`work/search_protocol_v2/reconcile_existing_fulltext_identities_t654_20261016.py`留在gitignored工作目录。
+- 验证：辅助脚本`py_compile`通过且重复运行幂等；断言确认四篇状态均对应172现存唯一全文评审、CDTS在04仅留N0517并在T654留一条别名映射；`git -c core.whitespace=cr-at-eol diff --check`通过。没有业务源码改动，无源码测试适用。根目录原有两份未跟踪用户文件未修改、未暂存。
+- **细粒度检索仍未完成**：当前唯一呈现给用户的Scholar页是T636 `start=110&num=20`，CUA核实仍显示Google人机验证且没有结果卡。本轮已将它重新打开在Codex右侧，并再次询问用户实际页面状态；待结果卡可见后从第111位续筛，不能将验证页计为零命中。用户刚回复“页面不可见”的ScienceDirect页面是PFF-WM（DOI `10.1016/j.iswa.2026.200684`），作者稿已读，不能与T636混淆。
+- 建议ChatGPT Web下一步：一次只呈现一个确切的Scholar页面，等待T636结果；如恢复，从新位置续筛并复用04/74/90/172已有身份。如仍受限或看不到，记录后转向87中下一条未完成高精度细式；避免重复扫描已筛位置或要求用户寻找隐藏标签。
+
+---
+
+## 2026-10-16续：Coherence Trap 全文核读与重复身份合并（T653）
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；研究数据提交 `f557a64`；已确认 `origin` 为目标 GitHub 仓库，HANDOFF更新待单独提交与推送。
 - 核读 EFR-REF050、REFORM ACL参考[42]对应的 *The Coherence Trap: When MLLM-Crafted Narratives Exploit Manipulated Visual Contexts*（arXiv:2505.17476v4；CVPR 2026主会）。CVF正式HTML本轮返回403，方法判断依据arXiv作者全文§§3.3、4.1、8.3。论文的ACC/mAP/mIoU测检测、操纵类别和图像框定位；mIoU仅支持定位子任务，未检验文本解释事实性、证据充分性、因果faithfulness、稳定性或用户适当依赖。候选由tier 1修订为tier 2任务邻接，直接解释可靠性实证计数不增加。
