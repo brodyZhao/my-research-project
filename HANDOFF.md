@@ -1,4 +1,15 @@
-﻿## 2026-10-16续：DXAI跨领域XAI方法邻接的官方摘要核验
+﻿## 2026-10-16续：REFORM正式全文与44条书目链（T652）
+
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；HEAD将在本次研究提交后补记。`origin`仍为已确认的目标仓库。
+- REFORM（N0009）ACL 2026正式全文核读：350条teacher rationales盲法审计，视觉/文本真值证据召回83.7%/82.2%；arXiv v1另有18人、193条输出的说服力/信任评分，但不是ACL终稿结果，也不测适当依赖。候选升至tier 1、核心排序第3；人数、rubric、一致性及teacher rationale与最终输出范围等局限写入172。
+- 该正式ACL论文的44条参考文献已44/44逐条做题名/主题筛查；侧表 `T652_REFORM_ACL2026_44条参考逐条主题筛查_20261016.csv`，同步到74/87。#7/#8为重复InstructBLIP位置，一篇作品；目录旧身份复用，没有新增论文身份。TRUST-VL（N0925）全文通过arXiv HTML核读后登记172：98.5%为人工筛训练指令子集通过率，不是最终解释可靠性评测，维持邻接级。
+- 用户报告目前不可见的ScienceDirect页是医疗脆弱水印论文 DOI `10.1016/j.iswa.2026.200684`；作者稿和该篇既有全文记录可用。它与T636 Scholar验证页是不同页面。T636先前断点 `start=110&num=20` 曾显示访问限制、无结果卡；用户当前没有确认该页是否已恢复。不要要求用户寻找旧标签，也不要将其算作零命中。细粒度Scholar检索仍OPEN。
+- 主改动：输出目录04、12、74、87、90、172、00，以及T652侧表；脚本 `work/search_protocol_v2/record_t652_reform_acl2026_review_20261016.py`。提交/推送后回填commit hash。根目录两份未跟踪用户文件保持不动。无业务源码测试适用。
+- ChatGPT Web下一步：复用本次书目身份表；若继续T636，应使用一张明确可见的现存Scholar页面并先确认结果卡状态，后续只从rank 111起筛。不能因用户看不到旧隐藏标签就反复要求其定位。
+
+---
+
+## 2026-10-16续：DXAI跨领域XAI方法邻接的官方摘要核验
 
 - 在T06-F4-S4已记录的DXAI首屏结果基础上，检查UWA官方机构记录。身份为Nima Mirnateghi、Syed Mohammed Shamsul Islam、Syed Afaq Ali Shah；同行评审会议论文，ACRA 2025 proceedings，出版于2026。官方摘要说明其用100,000组synthetic image–heatmap、100类家居物体数据和IoU/Pointing Game/Insertion-Deletion AUC评估XAI归因方法。
 - 该任务属于机器人感知解释评价，不是伪造/篡改检测；仅摘要级审查，全文未取。更正74位置P08、90候选判断、87路线状态和00报告；没有加进04取证候选主目录，避免把跨域方法邻接当作强相关直接证据。Broad Scholar路线仅首页10/10完成，约2,800估数，仍开放且不机械分页。
