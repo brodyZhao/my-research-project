@@ -1,24 +1,13 @@
-﻿## 2026-10-16：T636细检索补充快照、来源去重与断点
+﻿## 2026-10-16续：三篇强相关工作的书目逆向筛查（T648–T650）
 
-- 在不重复 Google Scholar 已筛位置的前提下，围绕图像伪造定位/篡改检测 × faithfulness/human evaluation/evidence grounding 做了4条聚焦的外部来源补充检索。20个可见结果逐条写入74，均明确标为普通网页搜索快照而非Scholar排名；18个与目录既有作品交叉复用或排除，新增Tier 1直接实证核心为0。
-- 新补2个不同层级身份：Munawar & Oussalah, *Deployable image forgery detection and localization: A comprehensive review and practitioner’s guide*（ESWA 2026, DOI 10.1016/j.eswa.2026.131347）列为Tier 2领域综述。官方开放全文回顾2016–2025研究，将explainability/evidentiary utility明确列为缺口；报告120篇全文纳入，但作者说明是PRISMA-style、非完全预注册的系统综述，且不是解释效度实证。SUMI-IFL（AAAI 2025, DOI 10.1609/aaai.v39i1.32054）列为Tier 3构念邻接：研究伪造特征表征的充分性/最小性，不是模型解释评价。
-- 再次确认搜索结果里的Beyond Accuracy、ACL 2026 attribution reports、FakeShield和TRIDENT都已有身份，复用而未重复计篇。TRIDENT挑战提案主题直接相关，但提案本身不等于实证可靠性结果。
-- T636 Scholar依旧是唯一已确认的当前验证断点：Chrome tab 981694705，`start=110&num=20`，Google异常流量验证页、0结果卡；前110个位置已逐条筛，必须从111接续。T14医学图像式start=10仍因读取器不支持Scholar而未观察结果，不作零命中解释。PFF-WM作者稿的61条可辨参考已筛，ResearchGate显示67的六条计数差异及表11样本口径问题继续保留。
-- 本轮新增记录：74 +20个补充结果位置、87 +1条补充路线、90 +2个分层候选、04 +2个不同身份、172 +1条综述全文核读。所有条目写明来源层级与是否全文阅读，普通网页快照未冒充Scholar分页。
-- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新研究阶段提交：e989ebf（当前交接更新将在单独提交中记录）。主要文件为 HANDOFF、00、04、74、87、90、172；85和T573仅保留前序检索日志，本轮未改动。根目录两份用户未跟踪文件未修改。
-- 校验：CSV解析通过；当前行数04/74/87/90/172/T573 = 10,183/41,381/614/1,357/528/107；74的result_id与87的query_id均唯一；04稳定ID重复组为7，与HEAD基线相同，本轮增加冲突0组；git -c core.whitespace=cr-at-eol diff --check通过。无业务源码测试适用。
-- 遗留：T636 Scholar当前Chrome标签981694705的start=110仍为Google访问验证页、无结果卡；前110个位置已筛。T14医学影像式start=10未能从网页读取器取得页面内容。整体细粒度检索未完成，不能标为complete。
-- 建议下一步：只在同一T636页显示结果卡后从rank 111继续；若仍受限，明确报告并转向另一个已保存且尚未闭合的细式，不重筛现有位置。PFF-WM依作者稿处理完成，不要求用户找ScienceDirect页。
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；最新研究提交 `c003a96`（本交接更新随后单独提交）。已配置并核实 `origin` 指向该仓库。
+- 完成三条有限书目链的逐项题名/主题筛查：TriDF 157/157、FakeBench 101/101、Rethinking VLM in Face Forensics 97/97，共355个引文位置。逐条记录在输出目录的T648、T649、T650侧表，同时登记到74和87；这表示书目初筛完毕，不表示355篇全文已读。
+- 主要直接候选均复用既有身份：TriDF书目9条、FakeBench书目3条、Rethinking VLM书目2条直接涉及鉴伪解释/推理或接地。Rethinking VLM的#28 Can ChatGPT Detect DeepFakes及#86 Common Sense Reasoning已有172全文评估；FakeBench旧版本题名由arXiv:2404.13306确认同一身份。没有重复建论文身份。
+- 方法边界保留在172和00：参考文本相似、LLM评审、区域定位和检测预测一致性分别记录，未混同为因果faithfulness、独立人工解释验证或用户适当依赖。PFF-WM出版社页用户看不到；作者稿已核读，不再要求用户寻找该页。
+- 当前Google Scholar阻断为Chrome现存标签981694705：T636查询 `("image forgery" OR "image manipulation detection" OR "image authenticity") ("human evaluation" OR "user study" OR "human-AI interaction") (explanation OR "visual evidence" OR "evidence attribution" OR rationale) (trust OR reliance OR confidence OR correctness OR reliability)`，`start=110&num=20`，CUA确认异常流量验证页、无结果卡。1–110位已筛，恢复后从111继续；已把确切查询发给用户确认恢复状态，未将验证码视作零结果。整体细粒度检索仍未完成。
+- 本阶段主要文件：00阶段报告、04候选目录、74逐位置账本、87子式状态、90候选核验，以及T648/T649/T650三份逐条书目侧表。行数04/74/87/90/172/T573为10,183/41,750/618/1,357/529/107；三侧表为157/101/97。CSV解析、列宽、引文位置连续性、74结果ID和87路线ID唯一检查通过；04 stable_id重复组与基线相同，没有新增组；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码修改、无源码测试适用。根目录两个原有用户未跟踪文件保持不变。
+- ChatGPT Web下一步：若T636结果卡出现，只筛rank 111以后并复用既有身份；继续87中尚未闭合的窄式，明确记录空白/异常流量，不重复筛已处理结果，也不把有限书目链称为领域穷尽。
 
-## 2026-10-16：PFF-WM书目筛查交接与校验
-
-- 新增访问记录：尝试从外部网页读取器抓取医学图像专式 T14 的 Scholar 下一页（start=10），工具报告该 Scholar URL 不可访问，未取得结果卡；不按零结果处理，也不重复相同抓取。事件记录在T573，路线仍OPEN。
-- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；HEAD `9344828`，工作区尚未提交。本阶段更新：`04_重检候选目录_暂按相关性排列.csv`、`74_V2完整分页逐位置初筛.csv`、`87_V2细查询子式实际试检状态.csv`、`90_本轮新增强相关候选与引文复核.csv`、`172_强相关核心及邻接论文原文解释可靠性效度核读.csv`、`T573_细检索受限断点重试记录_20261015.csv`、阶段报告与本交接。无业务源码改动。
-- 校验：Python CSV解析及列数检查通过；当前行数04/74/87/90/172/T573 = 10,181/41,361/613/1,356/527/106；74的41,361个result_id唯一，PFF书目61条位置唯一；87 query_id唯一。04共有7组stable_id重复，与HEAD基线完全相同，本轮新增冲突0组。`git -c core.whitespace=cr-at-eol diff --check`通过。无业务代码测试适用。根目录两份用户未跟踪文件未修改。
-- 未完成：整体细粒度Scholar检索仍OPEN。T636英文细式当前Chrome tab 981694705 的 `start=110&num=20` 是Google访问限制页、0结果卡；rank 1–110已筛，恢复结果卡后从rank 111继续。PFF-WM的ScienceDirect页面无需用户再找，作者稿正文和61条可见书目已核；ResearchGate显示67而可见正式书目61，6条计数差异未解。PFF表11说明“lesion insertion”与方法中100例插入/移除各50的口径冲突，指标样本范围未明。
-- 建议 ChatGPT Web 下一步：不重复筛rank 1–110或这61条书目；继续处理87中仍未闭合的细式。只在T636出现结果卡后从start=110续筛；访问仍受限时记录确切状态并换到可读路线。引用PFF的0.78/4.3指标时保留表11样本口径不一致。当前没有提交或推送，直至整体检索任务按既定工作流结束。
-
----
 
 ## 2026-10-16续：PFF-WM解释评测样本口径差异
 
