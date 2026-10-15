@@ -1,4 +1,11 @@
-﻿## 2026-10-16续：Forensics-Bench 全文筛选与 Scholar 人机验证断点
+﻿## 2026-10-16续：DXAI跨领域XAI方法邻接的官方摘要核验
+
+- 在T06-F4-S4已记录的DXAI首屏结果基础上，检查UWA官方机构记录。身份为Nima Mirnateghi、Syed Mohammed Shamsul Islam、Syed Afaq Ali Shah；同行评审会议论文，ACRA 2025 proceedings，出版于2026。官方摘要说明其用100,000组synthetic image–heatmap、100类家居物体数据和IoU/Pointing Game/Insertion-Deletion AUC评估XAI归因方法。
+- 该任务属于机器人感知解释评价，不是伪造/篡改检测；仅摘要级审查，全文未取。更正74位置P08、90候选判断、87路线状态和00报告；没有加进04取证候选主目录，避免把跨域方法邻接当作强相关直接证据。Broad Scholar路线仅首页10/10完成，约2,800估数，仍开放且不机械分页。
+- 当前研究/数据提交：`e362715`；前次 Forensics-Bench 全文筛选提交 `f426236`，上一交接提交 `f3b082f`。
+- T636 Scholar准确断点仍为Chrome标签981694705的start=110验证页；CUA确认页面有reCAPTCHA且0卡。向用户询问此Chrome前台页的状态后继续；ScienceDirect PFF-WM“页面不可见”不属于这个断点。
+
+## 2026-10-16续：Forensics-Bench 全文筛选与 Scholar 人机验证断点
 
 - 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本次文献记录提交 `f426236`；`origin` 已确认是目标 GitHub 仓库。
 - 对 MAD-Guard 书目[20]对应的 *Forensics-Bench* 完成作者稿全文核读：arXiv:2503.15024v2；CVPR 2025，页4233–4245；DOI 10.1109/CVPR52734.2025.00400。IEEE Xplore原地址 `11094699` 经官方摘要确认正确，保留。
