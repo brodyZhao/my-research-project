@@ -5,7 +5,7 @@
 - 再次确认搜索结果里的Beyond Accuracy、ACL 2026 attribution reports、FakeShield和TRIDENT都已有身份，复用而未重复计篇。TRIDENT挑战提案主题直接相关，但提案本身不等于实证可靠性结果。
 - T636 Scholar依旧是唯一已确认的当前验证断点：Chrome tab 981694705，`start=110&num=20`，Google异常流量验证页、0结果卡；前110个位置已逐条筛，必须从111接续。T14医学图像式start=10仍因读取器不支持Scholar而未观察结果，不作零命中解释。PFF-WM作者稿的61条可辨参考已筛，ResearchGate显示67的六条计数差异及表11样本口径问题继续保留。
 - 本轮新增记录：74 +20个补充结果位置、87 +1条补充路线、90 +2个分层候选、04 +2个不同身份、172 +1条综述全文核读。所有条目写明来源层级与是否全文阅读，普通网页快照未冒充Scholar分页。
-- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新HEAD：9344828（本次尚未提交）。主要文件为 HANDOFF、00、04、74、87、90、172；85和T573仅保留前序检索日志，本轮未改动。根目录两份用户未跟踪文件未修改。
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；最新研究阶段提交：e989ebf（当前交接更新将在单独提交中记录）。主要文件为 HANDOFF、00、04、74、87、90、172；85和T573仅保留前序检索日志，本轮未改动。根目录两份用户未跟踪文件未修改。
 - 校验：CSV解析通过；当前行数04/74/87/90/172/T573 = 10,183/41,381/614/1,357/528/107；74的result_id与87的query_id均唯一；04稳定ID重复组为7，与HEAD基线相同，本轮增加冲突0组；git -c core.whitespace=cr-at-eol diff --check通过。无业务源码测试适用。
 - 遗留：T636 Scholar当前Chrome标签981694705的start=110仍为Google访问验证页、无结果卡；前110个位置已筛。T14医学影像式start=10未能从网页读取器取得页面内容。整体细粒度检索未完成，不能标为complete。
 - 建议下一步：只在同一T636页显示结果卡后从rank 111继续；若仍受限，明确报告并转向另一个已保存且尚未闭合的细式，不重筛现有位置。PFF-WM依作者稿处理完成，不要求用户找ScienceDirect页。
