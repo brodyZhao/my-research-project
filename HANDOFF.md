@@ -2807,23 +2807,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 访问问题：现有内嵌Scholar标签上的“image inpainting / object removal / content removal × forgery detection × explanation × faithfulness/reliability”路线自动化读取连续超时，没有显示结果卡或验证码；已向用户报告为访问未核。不得按零命中结案。其他未闭合细式、分页漂移、Scholar显示上限与部分出版商全文限制仍存在，因此整体文献检索仍未完成。
 - 本批脚本：`work/search_protocol_v2/record_t565_t566_closeout_20261015.py`。应复跑两次确认幂等，再验证表间ID/位置唯一、55/55引用、147/147位置和`git -c core.whitespace=cr-at-eol diff --check`。无业务源码改动。
 
+## 2026-10-15续：T567–T571断点、交叉来源补查与候选修订
 
-## 2026-10-15续：T567/T568文档细式断点、T570目录补录与引文筛查
-
-- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；本阶段起点HEAD：`6ba8267`；本阶段检索记录提交：`cb241ef`。根目录两个既有未跟踪用户文件保持未修改、未暂存。
-- T567精确文档解释事实性快照1/1已筛；T568文档图像取证解释可靠性首屏历史位置10/10已筛（页眉约139、Next仍开）。本轮把同一T568精确式放入现有Chrome Scholar标签，实际观察到“Please show you’re not a robot”，无结果卡。访问事件写入`T568_start0_Scholar_reCAPTCHA_访问事件_20261015.csv`；不能把它记为零结果。用户已收到针对当前这一页的验证请求；验证后须以结果卡确实出现为续查条件。T568后续约129个位置尚未筛。
-- 官方全文核读了文档篡改MLLM论文的置信度/错误推理分析，作为任务邻接而非解释效度核心；报告中保留原文样本数/日期不一致。修正GPT4o-Receipt作者身份。
-- *Not Every Cue Is Evidence* 早先已存在于HANDOFF研究笔记，但漏进04排序目录和172全文核读表；本轮补齐目录遗漏，并完成官方参考文献67/67题名/主题筛查，复用旧身份和全文核读；不能表述为新发现。ATAR 76条参考沿用已完成的T36台账。
-- 文件：更新阶段报告00、候选目录04、位置账74、矩阵85、路线87、候选复核90、全文效度172；新增T567/T568/T570理由侧表、T568访问事件、T570 67条参考表和全文核读侧表；脚本`work/search_protocol_v2/record_t567_t570_closeout_20261015.py`。
-- 验证命令：`python3 -m py_compile work/search_protocol_v2/record_t567_t570_closeout_20261015.py`；脚本连续运行两次确认幂等；解析所有CSV并断言T567=1、T568=10、T570引文=67连续位置、身份去重及04/90/172关联；`git -c core.whitespace=cr-at-eol diff --check`。无业务源码修改。
-- 遗留：文献检索**未完成**。T568被当前可见Scholar验证码页阻断；T477有Scholar页100显示上限和动态索引冲突，其他开放细式仍须按真实可见卡片续查。不要要求用户找大量隐藏标签；只报告当前确实需要处理的单一页面。
-
-
-## 2026-10-15续：T567/T568文档图像细式、T570新核心及67条书目筛查
-
-- 仓库`brodyZhao/my-research-project`；分支`codex/forensic-explanation-literature`；本阶段起点HEAD核验为`6ba8267`。保留根目录两个既有未跟踪用户文件，不纳入提交。
-- 新增强相关核心：Zhou et al., *Not Every Cue Is Evidence: Cue Supportability for Forensic Distillation in Face Forgery Detection*, arXiv:2610.16452v1, 2026-10-12。官方全文核读方法、CAWE、自动评审与人评校准、限制；官方参考文献67/67逐条题名/主题筛查，复用已审论文身份及172记录。
-- T567精确文档解释事实性查询1/1可见卡已筛；T568文档图像鉴伪解释可靠性式首屏10/10逐卡筛，首屏约139、Next仍开，状态OPEN。尝试连接现有Codex内嵌标签6超时；页面内容和验证码均未观察到，故标为自动化页面连接失败，不误报为reCAPTCHA/零结果。T36的ATAR参考76项已在先前完成，本轮不重复。
-- 修改：阶段报告00；候选04；逐位置74；检索式矩阵85、实际试检87；强候选90；全文核读172；新增T567/T568侧表、T570 67条书目侧表和T570全文核读侧表；脚本`work/search_protocol_v2/record_t567_t570_closeout_20261015.py`。
-- 验证：运行脚本两次检查幂等；全部CSV解析；T567/T568位置数与偏移、T570 67个连续书目位置、master_id/identity_key唯一性及04/90/172关联断言；`git -c core.whitespace=cr-at-eol diff --check`。无源码修改，无代码测试。结束阶段前依仓库规则提交并推送当前分支；先确认对既有修改仅暂存本任务文件。
-- 遗留：总体细粒度检索仍未完成。T568约129个结果未筛；已打开的image splicing/copy-move细式标签6连接超时，未能读取；T477 Scholar页100/索引冲突和其他宽式/构念细式仍有断点。建议继续复用已审身份，优先能实际显示卡片的窄式，并汇报具体无法打开的查询和位置。
+- **T568 Google Scholar 状态**：检索式为 `("document image forensics" OR "document forgery detection") (explainable OR interpretable OR "forensic explanation" OR "report generation") (faithfulness OR hallucination OR "human evaluation" OR reliability)`。历史首页10条逐条已筛，页眉曾估约139条且Next可用。随后直接读取和同页刷新均显示机器人验证页、没有结果卡；用户现确认在 Google Scholar 和 Codex 都看不到该页面。事件日志保留两种此前互相矛盾的页面报告；不把验证页/不可见页面计作零结果，也不再要求用户定位隐藏标签。start=10 onward未筛，路线仍为OPEN。
+- **补充交叉来源**：Google Scholar不可见期间，执行4条英语宽式网络索引检索和2条精确书目/来源核查；所有捕获的论文类结果、重复元数据页、未确认引文线索和明显非学术结果逐条记入`T571_补充网络索引结果逐条筛查_20261015.csv`。该路只完成了已捕获结果的去重和筛分，不等于Scholar分页检索完成，也不宣称全网穷尽。
+- **新纳入的重点证据**：*Beyond the Probability Score* 是University of Twente 2026机构库论文/essay条目，摘要报告51人被试内研究：热图条件决策正确率提高16个百分点且信任提高，但三种取证模型Pixel-F1近零；这提示热图可能改善表现/信任，却不能据此推断解释可靠。官方PDF链接当前无法由检索器取回，因此04/90仅作摘要级强相关记录，学位层级和全文待核。*AI as a Decision Support Tool in Forensic Image Analysis* 是Farber的2025年《Journal of Forensic Sciences》论文，10名法证专家评审30张现场图片的三种模型报告，平均可靠性评分7.4/10，并报告证据遗漏/错误及确认偏误顾虑；列强邻接，不将现场场景理解等同图像伪造检测或受控依赖实验。
+- **新增任务邻接记录**：CVIU 2026 *EXACT* 只报告检测/归因/定位和LMM报告，跨域检测性能不验证报告事实性；ForenXAI 2026含SHAP图但筛查的27页原文未见解释faithfulness、人评或稳定性端点；Busitema 2026 dissertation目前仅库摘要提到Grad-CAM。后二者列低优先邻接，不作为强可靠性证据。ForgerySleuth、ForenX、XAIGID-RewardBench、HAVE、EFR及已核候选均复用既有身份，不重复全文核读。
+- 产物：更新04/85/87/90/172及T568访问事件，新增T571逐结果侧表；04仍按相关性排序。未改74的Scholar位置账，因为补充网络搜索不产生Google Scholar页内位置。
+- 验证：重跑T571脚本验证幂等；检查CSV解析、身份唯一、候选排序、位置账不变、T568/ T571路线状态、`py_compile`及`git diff --check`。无业务源码修改。
+- **遗留**：细粒度检索未完成。T568 start=10 onward仍待结果页可见后续筛；T477页数上限/空白冲突和其他开放细式依旧未闭合。后续只处理可见可读页面，并向用户报告阻塞，不让用户在多标签中寻找页面。
