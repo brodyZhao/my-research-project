@@ -1,10 +1,10 @@
 ﻿## 2026-10-16续：REFORM正式全文与44条书目链（T652）
 
-- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；HEAD将在本次研究提交后补记。`origin`仍为已确认的目标仓库。
+- 仓库 `brodyZhao/my-research-project`；分支 `codex/forensic-explanation-literature`；本阶段研究数据提交 `fb4863e8fc10871c9d773f68a2b19fa306175e21`；`origin`仍为已确认的目标仓库。
 - REFORM（N0009）ACL 2026正式全文核读：350条teacher rationales盲法审计，视觉/文本真值证据召回83.7%/82.2%；arXiv v1另有18人、193条输出的说服力/信任评分，但不是ACL终稿结果，也不测适当依赖。候选升至tier 1、核心排序第3；人数、rubric、一致性及teacher rationale与最终输出范围等局限写入172。
 - 该正式ACL论文的44条参考文献已44/44逐条做题名/主题筛查；侧表 `T652_REFORM_ACL2026_44条参考逐条主题筛查_20261016.csv`，同步到74/87。#7/#8为重复InstructBLIP位置，一篇作品；目录旧身份复用，没有新增论文身份。TRUST-VL（N0925）全文通过arXiv HTML核读后登记172：98.5%为人工筛训练指令子集通过率，不是最终解释可靠性评测，维持邻接级。
 - 用户报告目前不可见的ScienceDirect页是医疗脆弱水印论文 DOI `10.1016/j.iswa.2026.200684`；作者稿和该篇既有全文记录可用。它与T636 Scholar验证页是不同页面。T636先前断点 `start=110&num=20` 曾显示访问限制、无结果卡；用户当前没有确认该页是否已恢复。不要要求用户寻找旧标签，也不要将其算作零命中。细粒度Scholar检索仍OPEN。
-- 主改动：输出目录04、12、74、87、90、172、00，以及T652侧表；脚本 `work/search_protocol_v2/record_t652_reform_acl2026_review_20261016.py`。提交/推送后回填commit hash。根目录两份未跟踪用户文件保持不动。无业务源码测试适用。
+- 主改动：输出目录04、12、74、87、90、172、00，以及T652侧表；脚本 `work/search_protocol_v2/record_t652_reform_acl2026_review_20261016.py`。验证：`py_compile`通过；04/74/87/90/172/T652 CSV解析与列数检查通过；74 result_id和87 query_id唯一；T652序号1–44连续；N0009、TRUST-VL各一条全文效度记录；`git diff --check`通过。无业务源码修改，无源码测试适用。根目录两份未跟踪用户文件保持不动。
 - ChatGPT Web下一步：复用本次书目身份表；若继续T636，应使用一张明确可见的现存Scholar页面并先确认结果卡状态，后续只从rank 111起筛。不能因用户看不到旧隐藏标签就反复要求其定位。
 
 ---
