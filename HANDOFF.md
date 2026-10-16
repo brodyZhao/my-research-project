@@ -3189,3 +3189,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 本轮在线核实原始来源摘要：EDCT https://arxiv.org/abs/2510.00047 、EDCT-Bench https://arxiv.org/abs/2609.17953 及ROAR官方研究页 https://research.google/pubs/evaluating-feature-importance-estimates/ 。已有概念定向编辑相关工作，尚不能宣称方法首创或完成全面新颖性检索。
 - 验证：文档diff检查；无代码测试适用，尚无实证可行性结果。遗留：检测器类型、真实性任务范围、可读取分数及线索生成方式待明确。
 - 建议ChatGPT Web下一步：收敛图像鉴伪专属编辑混杂控制与小规模pilot设计，先检验干预有效性，再扩展benchmark。
+
+## 2026-10-16续：T663自述证据定向移除与配对基准强相关文献审查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；研究成果提交：`50a8952`。本HANDOFF需按项目规则另行提交；目标远端仍为已确认的`origin`。
+- 新增方案导向报告 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/T663_受控证据移除与配对图像Benchmark强相关文献核查_20261016.md` 和逐位置日志 `T663_受控证据移除强相关检索逐条筛查_20261016.csv`。更新04既有候选N2437（Yang et al. ICASSP 2025，元数据已核、全文待核）与N2440（Peng et al. PRCV 2022，正式摘要核、全文未核）；更新路线矩阵87、候选复核90、全文效度表172和阶段报告00。根目录两份原有用户未跟踪文件未触碰。
+- 本轮Google Scholar四式筛查：高精度Q1“counterfactual explanations × face forgery detection”21个可见位置、Q2“source image × edited image × image forensics dataset”28个可见位置到终页；低精度Q3/Q4各约1,910/219条，只筛首屏10项。报告明确不宣称全球穷尽。69位置有逐条决策，但现有交接记录只留下15条完整卡片题名，其余54条以主题简记标注；不能将这份日志当作69条完整可导入题录。核心候选的题名、来源、方法和边界已核实。
+- 强相关判断：EDCT/EDCT-Bench最接近“模型自述证据→定向局部编辑→检查响应”的方法；Li 2024与Peng 2022是面/脸伪造反事实线；AI-image detection heatmap审计与ACL 2026 MMTT分别提供解释可靠性和取证解释数据/人评先例。没有在本轮范围发现包含所有四要素的已核benchmark，但该结果仅为暂定研究缺口，不是绝对新颖性证明。Li 2024的Scholar Cited-by 6当前仍是Google验证页，没结果卡；等待用户对已呈现页面状态回复，不计为0条。
+- 验证：04/87/90/172及T663日志均CSV可解析、列宽一致；T663路由行数21/28/10/10且87路线ID唯一；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无源码改动、无源码测试适用；没有改动两份用户已有未跟踪文件。
+- 未完成：宽式Q3/Q4仍是首屏抽查；Yang 2025只核到出版元数据；Li被引6篇仍受Scholar验证门控；总体V2细粒度检索继续OPEN。
+- 建议ChatGPT Web下一步：若用户能在已经呈现的Li 2024 Cited-by 6页完成验证且结果卡可见，只筛这6个引文位置并复用既有身份；如果仍受限/看不到，记下访问状态，不反复让用户寻找页面。若用户要求题录级完整审计，再只恢复Q1/Q2原有结果标题，不重筛已经完成的69个筛选判断。
