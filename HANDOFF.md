@@ -3208,3 +3208,12 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 验证：04/87/90/172及T663日志均CSV可解析、列宽一致；T663路由行数21/28/10/10且87路线ID唯一；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无源码改动、无源码测试适用；没有改动两份用户已有未跟踪文件。
 - 未完成：宽式Q3/Q4仍是首屏抽查；Yang 2025只核到出版元数据；Li被引6篇仍受Scholar验证门控；总体V2细粒度检索继续OPEN。
 - 建议ChatGPT Web下一步：若用户能在已经呈现的Li 2024 Cited-by 6页完成验证且结果卡可见，只筛这6个引文位置并复用既有身份；如果仍受限/看不到，记下访问状态，不反复让用户寻找页面。若用户要求题录级完整审计，再只恢复Q1/Q2原有结果标题，不重筛已经完成的69个筛选判断。
+
+## 2026-10-16续：T665视觉反事实解释引文链筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；研究记录提交：`6062576`，已推送到`origin`。本HANDOFF另行提交并推送。
+- 完成：Google Scholar 中 Bender et al. “Towards desiderata-driven design of visual counterfactual explainers” 当前 Cited-by 9页已9/9逐条筛查。9篇均为通用视觉反事实、分类器捷径、图XAI或XAI desiderata，没有新增图像鉴伪解释可靠性直接工作。逐位置写入74，路线闭合范围写入87；新建T665逐项CSV和报告，更新T663方案核查中EDCT-Bench答案可保持不变但新解释须停止引用已删除证据的关键界定。
+- 主要文件：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/T665_VCE视觉反事实论文前向引文9条逐项筛查_20261016.csv`、`T665_VCE视觉反事实论文前向引文链筛查报告_20261016.md`、更新后的T663报告、阶段报告00、位置日志74、路线表87。输出目录被.gitignore忽略，新T665文件已按意图强制纳入版本控制。根目录两份原有用户未跟踪文件未触碰。
+- 验证：三个CSV均可解析；T665侧表9条、结果位置1–9连续；74新增9条且result_id唯一；87新增唯一T665路线；`git -c core.whitespace=cr-at-eol diff --cached --check`通过；无业务源码改动，代码测试不适用。
+- 结论边界：EDCT/EDCT-Bench仍是“模型自述证据→验证局部编辑→评估答案/解释一致性”的最近方法先例，但其基准是通用VLM，不是取证鉴伪。Li 2024是鉴伪伪迹移除先例，Yang 2025目前摘要级。未发现把鉴伪模型自述证据、局部最小移除、同源配对与独立可靠性核验全组合的基准；这只是当前范围内暂定缺口。整体细粒度检索仍OPEN；T656的start=130、T636的start=110及其它未闭合窄式仍待续查。Yang论文IEEE全文访问验证限制仍未解除。
+- 建议下一步：继续尚未筛过的新高精度Scholar位置和已确认强相关种子的前/后向引用；先复用04/90/172身份，只记录新结果位置。遇到实际访问门控或空白页，先报告具体页面和断点，不把受限等同零命中。
