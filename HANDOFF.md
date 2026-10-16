@@ -1,4 +1,17 @@
-﻿## 2026-10-16续：T667补齐研究构想强相关先例与Scholar空白确认
+﻿## 2026-10-16续：T669交叉补查、强先例补齐与身份纠正
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`1266468`（`Refine focused forensic explanation prior art`），已推送至已确认的`origin`。本HANDOFF按规则另行提交。
+- 两批、八个窄式网页检索变体；16个学术记录逐项筛选并写入74。专题T666对照表增至29篇可核验作品。复用主账既有身份，将HAVE/PAVE、AEGIS和图像取证解释综述加入专题对照；未新增主目录论文身份。
+- 正式身份纠正：DF2023-XAI对应 *Beyond Accuracy: Auditing Image Forgery Localization via Scene-Disjoint Evaluation and XAI Faithfulness*，IEEE Access 14 (2026), 53101–53115, DOI 10.1109/ACCESS.2026.3680143。它是直接的图像伪造定位XAI审计；复用N0061既有全文及33条引文筛查，不重读。
+- 研究缺口进一步收窄：现有工作已包括归因图faithfulness审计、鉴伪解释人评、区域接地基准、局部取证特征消融、文本理由证据完整性优化。当前未闭合的窄组合仍为“检测器自身可定位claim → 同源原图像素恢复 → 匹配sham控制 → 独立claim事实判定与模型响应测量”；这是有限检索结论，不是绝对新颖性证明。
+- Scholar状态：用户确认 `"AI-generated image detection" attribution grounding` 的 `start=150` 页面仍空白；新读到的Scholar结果卡为0，T656仍OPEN。T636 `start=110` 也是独立OPEN路线。总体细粒度检索未完成；网页补查不关闭Scholar断点。
+- 修改文件：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/00_重检阶段报告_未完成.md`、`74_V2完整分页逐位置初筛.csv`、`87_V2细查询子式实际试检状态.csv`、`T663_受控证据移除与配对图像Benchmark强相关文献核查_20261016.md`、`T666_研究构想强相关先例与差异核查_20261016.md`及配套CSV。
+- 验证：所有相关CSV解析且列宽一致；74 result_id与87 query_id唯一；T666优先级连续1–29；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码修改，代码测试不适用。根目录两份既有未跟踪用户文件保持未修改、未暂存。
+- 下一步：若 Scholar start=150 实际结果卡出现，从未筛位置开始；若仍空白，向用户直接报告并继续其他已可读的窄式/官方引文链。复用已经核读的身份与引文位置，勿重复阅读或计数。不要把空白页当作零结果，也不要声称总体检索完成。
+
+---
+
+## 2026-10-16续：T667补齐研究构想强相关先例与Scholar空白确认
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`da5b955`（`Expand focused forensic explanation prior-art review`），已推送到已确认的`origin`。本HANDOFF按仓库规则另行提交。
 - 对照表增至26个作品/线索（25篇可核验论文、1条未确认正式身份的仓库线索），按既有身份去重。新增到本专题对照（但均已在候选总账中存在）：*Pixels Don’t Lie*、VIGIL、XPlainVerse、EDD、Explainable Deepfake Detection Challenge、MSU Team；复核并保留Not Every Cue、ManipShield v4、ATAR、MMTT等先例。T666/T667定向搜索累计16批、56个查询变体；路线细节写入87。
