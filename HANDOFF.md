@@ -1,4 +1,27 @@
-﻿## 2026-10-16续：T664完成Li et al. (2024)前向引文快照筛查
+﻿## 2026-10-16续：T667补齐研究构想强相关先例与Scholar空白确认
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`da5b955`（`Expand focused forensic explanation prior-art review`），已推送到已确认的`origin`。本HANDOFF按仓库规则另行提交。
+- 对照表增至26个作品/线索（25篇可核验论文、1条未确认正式身份的仓库线索），按既有身份去重。新增到本专题对照（但均已在候选总账中存在）：*Pixels Don’t Lie*、VIGIL、XPlainVerse、EDD、Explainable Deepfake Detection Challenge、MSU Team；复核并保留Not Every Cue、ManipShield v4、ATAR、MMTT等先例。T666/T667定向搜索累计16批、56个查询变体；路线细节写入87。
+- 研究边界已收紧：不能声称首次深伪解释benchmark、首次人评、首次接地或首次文本证据完整性优化。当前待直接验证的差异组合是检测器先输出自身可定位claim、再从同源真图恢复该区域原像素，以匹配sham/同流程编辑控制，并独立评测claim与模型响应。该结论仍是有限检索下的暂定差异，不是绝对新颖性证明。
+- Scholar状态：用户确认 Google Scholar 查询 `"AI-generated image detection" attribution grounding` 的 `start=150` 页面仍为空白。无结果卡，因此新增可筛位置为0；T656保持OPEN。T636 `start=110` 仍为独立未解决路线。总体细粒度检索未完成。
+- 修改文件：`outputs/图像鉴伪解释可靠性_重检_2026-10-05/00_重检阶段报告_未完成.md`、`04_重检候选目录_暂按相关性排列.csv`、`87_V2细查询子式实际试检状态.csv`、`90_本轮新增强相关候选与引文复核.csv`、`172_强相关核心及邻接论文原文解释可靠性效度核读.csv`、`T663_受控证据移除与配对图像Benchmark强相关文献核查_20261016.md`、`T666_研究构想强相关先例与差异核查_20261016.md`及配套CSV。
+- 验证：相关CSV解析与列宽检查通过；T666对照表26行、priority连续1–26；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码修改，代码测试不适用。根目录两份既有未跟踪用户文件未修改、未暂存。
+- 遗留/下一步：等 start=150 页面真正出现论文卡片后，从未筛位置续查；如仍空白，按用户偏好直接报告并切换到另一条可见的窄式或官方来源。继续复用已核身份，不重复全文阅读、引文计数或已经逐条筛过的位置。不要把空白页算作零结果，也不要声称总体检索完成。
+
+---
+
+## 2026-10-16续：T666研究构想强相关先例核查与Scholar空白断点
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；研究数据提交：`35a2c8e`，已推送到已确认的`origin`。本HANDOFF将按规则另行提交。
+- 本轮围绕“同源原图+局部编辑变体；恢复检测器自述证据；解释可靠性benchmark”做7批网页检索、25个查询变体；新增14条逐篇先例对照。核实MMTT/ForgeryTalker已有5人、100图的Faithfulness/Helpfulness评分，但ACL附录C明确真实原图不属于发布的MMTT数据；FakeShield、LEGION、So-Fake、ForgeReason均为鉴伪解释/评测强相关。SAFE-FORGE是配对pristine camera-original与多类伪造、保存编辑元数据的强数据构建先例；EDCT-Bench是通用VLM自述概念最小编辑测试；MSFRNet/Li 2024已有取证反事实/伪迹移除方法。差异与每篇证据边界见T666 CSV/报告。
+- 更新输出目录的00、04、87、90、172、T573，新增T666逐篇CSV与分析报告。04中合并MMTT旧标题、FakeShield错误题录变体、AutoSplice重复身份，保留别名/位置；修订TGIF/AutoSplice题录；添加SAFE-FORGE和MSFRNet。确认没有增加stable_id/master_id重复组，保留的重复组数与HEAD基线相同。
+- 访问状态：用户完成T656 start=150验证后，Scholar仍显示空白结果区，页面壳称约115条；此前曾称约246条；没有结果卡、没有验证码控件，用户确认“当前仍为空白”。本次新增筛查0条，不能当作零结果，不能猜偏移继续。T636 start=110仍为独立未解决路线。总体细粒度检索仍OPEN。
+- 验证：6个CSV均可解析且列宽一致；T666 14条/14个题名唯一；87 query_id唯一；候选目录中本轮合并的别名均不再重复，stable_id与master_id重复组数没有高于HEAD基线；`python3 -m py_compile /private/tmp/record_t666_focused_review.py`通过；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务代码修改，代码测试不适用。根目录两份用户既有未跟踪文件未动、未暂存。
+- 建议下一步：不重复筛rank71–150或已核的MMTT/FakeShield/LEGION等身份。等待用户已有的start=150页面恢复为有结果卡的正常Scholar页后，从首个未筛位置续查；如果仍空白，明确记录并切到另一个可用的单一细式/官方索引。不要声称整体检索完成或全域无遗漏。
+
+---
+
+## 2026-10-16续：T664完成Li et al. (2024)前向引文快照筛查
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；研究数据提交：`3814d04`，已推送至已确认的`origin`。HANDOFF按规则在研究数据提交后另行提交。
 - 用户完成Google验证后，Codex内嵌Scholar tab 78显示Li et al. 2024“Cited by 6”页的6张结果卡；6/6逐条筛查。唯一直接交叉“深伪检测+反事实解释”的工作是Yang et al. (2025) *Unveiling Deepfakes with Latent Diffusion Counterfactual Explanations*，更新为摘要级强方法先例；IEEE全文仍要求验证，未将其当成解释可靠性benchmark。其余结果为通用因果XAI、检测可信/稳健综述、对抗规避或视频检测邻接/背景。该有限引文快照闭合不代表全领域检索完成。
