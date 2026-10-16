@@ -3179,3 +3179,13 @@ git --git-dir=work/git-metadata --work-tree=. remote -v
 - 核读官方作者稿`https://arxiv.org/html/2608.18573v1`及组织方规范`https://ai-safety-workshop-ijcai2026.github.io/Track3.html`。八项加权rubric明确评价视觉事实、grounding、区域特异性、标签忠实、文本-框一致、环境幻觉等。材料未报告评分者身份/人数或评审一致性，也无因果faithfulness、稳定性或适当依赖实验。25条引用逐条题名/主题筛查，SIDA/LEGION/FakeShield等复用现有身份；见`CIT-PATE-Forensics-arXiv2608.18573_25条参考逐项筛查_20261016.csv`。
 - **未完成与页面状态**：T636 Scholar精确查询`("image forgery" OR "image manipulation detection" OR "image authenticity") ("human evaluation" OR "user study" OR "human-AI interaction") (explanation OR "visual evidence" OR "evidence attribution" OR rationale) (trust OR reliance OR confidence OR correctness OR reliability)`的`start=110&num=20`在Chrome tab 981694705仍是Google异常流量页、0结果卡。现已选中该单一Chrome标签并向用户确认状态；若用户看不到/页面仍受限，不继续反复让其找隐藏标签，记录阻断后继续其他未闭合高精度路线。ScienceDirect PFF-WM“页面不可见”不是Scholar状态，作者稿已核读。整体细粒度检索保持OPEN。
 - 更新脚本`work/search_protocol_v2/update_pate_forensics_review_20261016.py`；数据提交`8cb58eb`。验证：脚本`py_compile`通过；04/74/87/90/172与新侧表均可解析且列宽一致；PATE引用编号1–25连续；74的result_id与87的query_id唯一；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无源码改动，源码测试不适用。根目录两份用户已有未跟踪文件未触碰。HANDOFF按规则另行提交。
+
+
+## 2026-10-16：受控配对鉴伪解释评测可行性讨论
+
+- 仓库：brodyZhao/my-research-project；分支：codex/forensic-explanation-literature；讨论前最新提交：e906db9。本条交接单独提交，提交后hash由git log查询，避免自引用。
+- 本次仅讨论研究设计，未构建数据集、修改源码或继续既有文献分页检索；主要修改文件仅HANDOFF.md。用户原有两份未跟踪文件未触碰。
+- 结论：从同一底图构造可控线索开关和匹配假干预有可行性，但不能声称零混杂；区分篡改位置、视觉线索与模型实际依据。建议先验证单线索、多线索冗余、非证据编辑对照、解释随证据更新与连续检测分数变化。预建数据集须报告模型自述可干预覆盖率，不能强行映射未覆盖解释。
+- 本轮在线核实原始来源摘要：EDCT https://arxiv.org/abs/2510.00047 、EDCT-Bench https://arxiv.org/abs/2609.17953 及ROAR官方研究页 https://research.google/pubs/evaluating-feature-importance-estimates/ 。已有概念定向编辑相关工作，尚不能宣称方法首创或完成全面新颖性检索。
+- 验证：文档diff检查；无代码测试适用，尚无实证可行性结果。遗留：检测器类型、真实性任务范围、可读取分数及线索生成方式待明确。
+- 建议ChatGPT Web下一步：收敛图像鉴伪专属编辑混杂控制与小规模pilot设计，先检验干预有效性，再扩展benchmark。
