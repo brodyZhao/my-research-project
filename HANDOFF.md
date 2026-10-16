@@ -1,4 +1,16 @@
-﻿## 2026-10-16续：T636当前可见验证码页重试日志（T655）
+﻿## 2026-10-16续：T656恢复start=130并记录start=150验证断点
+
+- 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；本阶段文献数据提交：`2385e51`，已推送到已确认的`origin`。本HANDOFF变更按规则单独提交。
+- 用户完成T656 Scholar `"AI-generated image detection" attribution grounding` 的start=130验证后，CUA确认第7页约246条、20张卡（rank131–150）。20条题录逐条筛查并记入74；当前动态刷新累计80个可见位置（rank71–150）。start=150导航后立即再次出现Google `/sorry` 人机验证，复选框可见、无结果卡，不视为零命中。Codex右侧内嵌tab 78已保留，并已向用户发出当前页单页状态选项；等待结果卡确认后从rank151续筛。
+- 重点全文核读：*ForensicZoom*（arXiv:2609.31661）三专家评价200例解释的证据完整性、逻辑连贯性与可操作性，报告Fleiss κ=.71；作为强相关核心前列。它不证明claim事实正确、因果faithfulness、扰动稳定或适当依赖。*Rethinking Vision-Language Model in Face Forensics*（CVPR 2025）报告DD-VQA参考答案NLG指标（BLEU-4/CIDEr/ROUGE-L/METEOR/SPICE）；保留为直接相关方法，但这些相似度指标不等同解释可靠性。其余18条均按可见题录逐条给出方法邻接/背景或排除理由。
+- 修改文件：输出目录`00`、`04`、`74`、`87`、`90`、`172`及`T573_细检索受限断点重试记录_20261015.csv`。临时记录脚本`work/search_protocol_v2/record_t656_aigen_attr_page130_20261016.py`在gitignored `work/`。
+- 验证：脚本`py_compile`通过；所有相关CSV解析并列宽一致；页面start=130新增20条（rank131–150）全部有筛选决定和理由、result_id唯一；阶段累计位置80；`git -c core.whitespace=cr-at-eol diff --check`通过。无业务源码改动，无源码测试适用。根目录两份用户原有未跟踪文件未动、未暂存。
+- 遗留：总细粒度检索继续OPEN。Google Scholar当前断点`start=150&num=20`有人机验证，已向用户报告并等待结果卡状态。用户回复“结果卡已显示”后先读取当前tab 78，无需用户找其他标签；确认20卡可见后筛rank151–170，复用04/74/90/172规范身份；仍受限则记录状态，不把验证码当0命中，并继续其余不依赖该页的路线。继续处理T573内未闭合细式时逐项标记已检查位置，不重复筛查。
+- 检查及交接：`00_重检阶段报告_未完成.md`已记录本次80位置进度及start=150限制。下一步优先回到当前单一可见Scholar标签，不并开多个页面。
+
+---
+
+## 2026-10-16续：T636当前可见验证码页重试日志（T655）
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；T655数据提交：`9a7cc93`。远端`origin`仍为已确认的目标仓库。
 - 在既有Codex Scholar标签76重新核对T636 `start=110&num=20`；CUA无障碍树确认Google `/sorry` 异常流量页和“进行人机身份验证”复选框，结果卡为0（访问门控，不是零命中）。重新请求在Codex右侧呈现该页并向用户发出单页状态选项。把最新重试状态写回T573和87原记录，不新增重复位置、查询或访问事件。
