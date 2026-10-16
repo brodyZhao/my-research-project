@@ -1,4 +1,13 @@
-﻿## 2026-10-16续：T656恢复start=130并记录start=150验证断点
+﻿## 2026-10-16续：T664完成Li et al. (2024)前向引文快照筛查
+
+- 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；研究数据提交：`3814d04`，已推送至已确认的`origin`。HANDOFF按规则在研究数据提交后另行提交。
+- 用户完成Google验证后，Codex内嵌Scholar tab 78显示Li et al. 2024“Cited by 6”页的6张结果卡；6/6逐条筛查。唯一直接交叉“深伪检测+反事实解释”的工作是Yang et al. (2025) *Unveiling Deepfakes with Latent Diffusion Counterfactual Explanations*，更新为摘要级强方法先例；IEEE全文仍要求验证，未将其当成解释可靠性benchmark。其余结果为通用因果XAI、检测可信/稳健综述、对抗规避或视频检测邻接/背景。该有限引文快照闭合不代表全领域检索完成。
+- 新增 `outputs/图像鉴伪解释可靠性_重检_2026-10-05/T664_Li2024前向引文链筛查报告_20261016.md` 与6行逐条CSV侧表；6个结果位置写入74，有限路线写入87。更新00阶段报告、T663报告、候选04、90及全文效度表172。按身份复用N2437、N0357及TAO-DFN的既有记录，并将N0357“检索失败”状态纠正为已基于Preprints.org全文核读。记录辅助脚本位于忽略目录 `work/search_protocol_v2/record_t664_li_citedby.py`。
+- 验证：脚本 `py_compile` 通过；T664侧表为1–6连续且6个题名唯一；74新增6个唯一result_id，87只有一条T664状态且限定为当前六卡快照；04中的N2437/N0357引文位置已交叉核验；`git -c core.whitespace=cr-at-eol diff --cached --check`通过。无业务源码修改、无源码测试适用。根目录两份既有用户未跟踪文件未修改、未暂存。
+- 遗留：总体细粒度检索仍OPEN；T663宽式Q3/Q4只筛首屏，T656/T636等其他未闭合路线不受T664影响；Yang et al. 的方法细节和评测仍需全文才能核实。不得把访问受限页计为零结果或声称全领域“无一遗漏”。
+- 建议下一步：从87中挑选下一个未完成且高信号的细式/引文链，先复用04/74/90/172既有身份，跳过T664已筛的6个位置。再次遇到实际访问限制时，立即报告唯一可见页面的查询与状态；用户恢复后确认结果卡，再从准确断点继续。
+
+## 2026-10-16续：T656恢复start=130并记录start=150验证断点
 
 - 仓库：`brodyZhao/my-research-project`；当前分支：`codex/forensic-explanation-literature`；本阶段文献数据提交：`2385e51`，已推送到已确认的`origin`。本HANDOFF变更按规则单独提交。
 - 用户完成T656 Scholar `"AI-generated image detection" attribution grounding` 的start=130验证后，CUA确认第7页约246条、20张卡（rank131–150）。20条题录逐条筛查并记入74；当前动态刷新累计80个可见位置（rank71–150）。start=150导航后立即再次出现Google `/sorry` 人机验证，复选框可见、无结果卡，不视为零命中。Codex右侧内嵌tab 78已保留，并已向用户发出当前页单页状态选项；等待结果卡确认后从rank151续筛。
