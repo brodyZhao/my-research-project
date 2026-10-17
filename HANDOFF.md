@@ -1,3 +1,13 @@
+## 2026-10-17续：Obsidian保存与GitHub推送成功
+
+- 仓库：brodyZhao/my-research-project；分支：`codex/explanation-novelty-human-study`；本阶段前最新提交：`53cf8c8`，本交接另行提交，最终HEAD以git log为准。
+- 用户明确要求将报告保存至Obsidian并重试GitHub推送。实际知识库由obsidian_vault.py detect确认，保存路径：`/Users/zhaomengchen/Documents/Obsidian Vault/文献阅读笔记/2026.9.30-2026.10./选题查新与研究路线建议.md`。
+- 验证：目标目录存在，目标笔记与报告备份逐字节一致；SHA256为`bc3ad847cdb604a47d7108b736b50fa5c199582df8d3f42a49d041094e93de1d`。仅复制既有报告，无内容或模型代码修改。
+- GitHub本次推送成功，报告及先前交接已到origin同名分支，已建立upstream；先前TLS推送故障已解除。本交接随后提交并推送。
+- 遗留研究问题不变；下一步检查报告的近邻对照与小规模混杂控制设计。Obsidian未复制配套CSV，用户本轮仅要求保存报告。
+
+---
+
 ## 2026-10-17：选题查新与人因研究路线
 
 - 仓库：brodyZhao/my-research-project；独立工作树分支：`codex/explanation-novelty-human-study`；报告提交：`d4c19fd`。本交接另行提交，最终HEAD以git log为准。
