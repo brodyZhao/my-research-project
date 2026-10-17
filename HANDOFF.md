@@ -1,3 +1,16 @@
+## 2026-10-18：自述证据可靠性benchmark深入查新
+
+- 仓库：brodyZhao/my-research-project；分支：`codex/explanation-novelty-human-study`；研究交付提交：`42d364f`，已推送origin；本交接另行提交，最终HEAD见git log。
+- 按用户要求对“自述文字主张、同源核验图像组、匹配操作控制、事实/真假响应分离、多模型审计”定向证伪查新；60条去重实际查询、24次返回调用（含原文跟进），逐条请求保存JSON；不是60篇新论文或完整引文普查。
+- 输出：`outputs/自述证据可靠性_深入查新_2026-10-18/`下报告、24项证据矩阵、符号说明和检索请求；上份报告加入补正提示。核心补正：既有N0628《Explaining AI-Image Detection》此前未在专题重点对照，本轮已补；附录A源图替换与E/I blur/mean描述不一致，关键执行算子仍待消歧，不武断排除或认定。
+- 结论：仍未确认完整同构公开工作，不能确认不存在。Hopf已有鉴伪自述区域匹配遮挡；CCT已有预建配对/no-op控制/多模型；EDCT已有自述概念核验编辑。创新应落到鉴伪测量有效性，不能靠条件堆叠宣称空白。MedForge、TriDF、DF-CBM、Why Fake等也纳入方法核读。
+- 验证：CSV24项字段齐全，状态仅Y/P/N/U；JSON实计60个不同查询、24次返回；`git diff --cached --check`通过。纯文档，无模型实验或源码测试。
+- Obsidian新报告保存并验证于`/Users/zhaomengchen/Documents/Obsidian Vault/文献阅读笔记/2026.9.30-2026.10./自述证据可靠性benchmark_深入查新_20261018.md`。旧笔记《选题查新与研究路线建议.md》当前已不在知识库，本轮未恢复或另行覆盖；仓库备份的补正已保存。
+- 遗留：Side-VLM/IndicSideFace-V2、DDL等全文未知，旧Scholar受限断点未关闭；公开代码只查看可访问说明和相关片段，不宣称已重跑或全库审计。REVEAL方法判断复用既有核读，不伪报本轮通读。
+- 建议下一步：优先解决热图论文源图替换执行矛盾与受限直接邻居全文；随后小规模对比遮挡/语义编辑/源恢复/操作对照，验证协议是否确实改变可信结论。勿写“全领域真的不存在”。
+
+---
+
 ## 2026-10-17续：Obsidian保存与GitHub推送成功
 
 - 仓库：brodyZhao/my-research-project；分支：`codex/explanation-novelty-human-study`；本阶段前最新提交：`53cf8c8`，本交接另行提交，最终HEAD以git log为准。
