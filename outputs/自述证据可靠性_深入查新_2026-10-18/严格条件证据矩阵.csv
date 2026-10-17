@@ -1,0 +1,25 @@
+﻿paper,source,evidence_location,A_forensic_task,B_own_text_claim,C_verified_source_cue_pairs,D_matched_operation_control,E_fact_and_verdict_response,F1_multiple_detectors_same_audit,F2_domain_generator_shift,reason,reading_scope
+Hopf et al. Specialist-Generalist Fusion,https://arxiv.org/html/2605.31192v2,§4.3 Causal grounding,Y,Y,P,P,P,U,U,自述框与匹配区域遮挡；无源图语义开关；N=50作者模型,本轮相关正文
+CCT-VLM,https://arxiv.org/html/2609.06704,§3.2–3.6;§4.3;Limitations;官方DATA.md/generator.py,N,P,Y,Y,P,Y,P,no-op主分析限部分模型条件；选择对象不是每模型自述,本轮正文+官方构造代码片段
+EDCT-Bench,https://arxiv.org/html/2609.17953,§3.1–3.5;§4,N,Y,Y,U,P,Y,P,局部编辑核验不等于匹配操作对照；新理由一致不等于原主张逐项事实审计,本轮相关正文及附录结构
+EDCT,https://arxiv.org/html/2510.00047,§3–5；复用先前正文记录,N,Y,P,U,P,Y,U,同一研究谱系，不当独立新设计,既有正文复用
+Explaining AI-Image Detection,https://arxiv.org/html/2607.29581,§4.1/4.3;App.A/E/I/L,Y,N,P,P,P,P,P,附录A称源图替换；E/I实际写blur/mean，关键结果算子待消歧,本轮相关正文/附录；既有N0628，不是新身份
+Not Every Cue Is Evidence,https://arxiv.org/html/2610.16452,§3.1–3.4;App.C/D,Y,P,N,P,P,P,P,等数量高低归因token置零，因变量线索文本似然；非真假响应,本轮方法附录
+ManipShield / ManipBench,https://arxiv.org/html/2511.14259,§3/5;App.10/13.4,Y,P,P,U,P,P,Y,源图+专家事实评价+跨模型检测；无自述证据定向审计确认,本轮正文/人评附录；仓库仅README可见
+MedForge,https://arxiv.org/html/2603.18577,§3/5;App.B.1/C/D.3,Y,P,P,U,P,P,Y,病灶删除用于制造伪造，不是删除被测模型原先声称证据；Cross-Model指生成器,本轮方法结果附录
+DF-CBM,https://arxiv.org/html/2609.35096,§3;§4.6,Y,P,N,N,P,U,Y,干预概念logit而非输入图像；固定词表非自由理由,本轮相关正文和官方仓库说明
+Why Fake,https://openaccess.thecvf.com/content/CVPR2026W/XAI4CV/papers/Vanian_Why_Fake_Unveiling_the_Semantic_Vocabulary_of_Deepfake_Detectors_CVPRW_2026_paper.pdf,§7及局限,Y,P,N,P,P,U,U,潜在概念方向干预；非源图组；作者说明方向依赖模型/数据,本轮工作坊PDF相关章节
+TriDF,https://arxiv.org/html/2512.10652v2,§3.1–3.4;实验,Y,Y,P,U,P,P,P,同源真伪数据与人工伪迹，评价覆盖/幻觉；未确认理由驱动输入干预,本轮相关正文
+DeFacto,https://arxiv.org/html/2509.20912,§3.2,N,P,P,Y,P,P,P,按问题定位证据，目标/无关遮挡三组；非检测器原自述,本轮相关方法
+INP-X,https://arxiv.org/html/2602.00192,§3–4;App.A,Y,N,Y,P,P,P,Y,源像素交换评多检测器判断依赖，无文字证据事实性,本轮相关正文
+Physical consistency counterfactual benchmark,https://arxiv.org/html/2610.09205,§4–6,N,P,Y,P,P,P,Y,非真实性，渲染异常；未对原主张做决策依赖审计,本轮相关正文
+SPARED,https://arxiv.org/html/2608.12876,Method;Data Construction,Y,Y,P,U,P,P,Y,同源对抗编辑训练，未确认原自述证据审计,本轮方法正文
+EDD,https://arxiv.org/html/2608.20913,§3.3,Y,Y,N,N,P,U,P,删参考理由文本而非图像证据,本轮方法正文
+DeepfakeJudge,https://arxiv.org/html/2602.19715,§4,Y,Y,U,U,P,P,Y,解释裁判及人类对齐，非像素干预测试,本轮评价正文
+EFR,https://arxiv.org/html/2608.08009,§3–4,Y,Y,U,U,P,P,P,核证接地取证理由，无上述图像证据开关协议确认,本轮原文与既有核读复用
+REVEAL,https://arxiv.org/html/2511.23158,方法/评测,Y,Y,U,U,P,P,P,工具证据链，不从无关键词直接排除实验,本轮原页打开；方法判断复用既有核读
+Explainability-driven adversarial robustness assessment,https://link.springer.com/article/10.1186/s13635-025-00211-9,Table5;Top/flop攻击,Y,N,N,P,P,P,Y,显著区域攻击与faithfulness相关，非原文字主张受控语义变化,本轮相关正文
+DAC / Discriminative Attribution from Counterfactuals,https://dac-method.github.io/,官方项目说明；arXiv2109.13412摘要,N,N,P,U,P,P,U,原文PDF/HTML未取到；不能按摘要完整排除,仅摘要/官方说明
+Side-VLM / IndicSideFace-V2,https://doi.org/10.1007/978-3-032-31663-9_33,作者主页摘要；出版页,Y,U,P,U,U,U,P,最小编辑+mask+CAM对齐；全文未知；别名不增身份,仅摘要/作者主页；PDF入口失败
+DDL: Effective and Comprehensible Interpretation Framework,https://doi.org/10.1109/TIFS.2025.3553803,既有摘要记录；本轮题录补查,Y,U,U,U,U,U,U,不可据未获全文排除细节,仅摘要/题录
+Wiley multi-explainer comparison,https://onlinelibrary.wiley.com/doi/10.1111/exsy.70222,既有摘要记录,Y,U,U,U,U,U,U,全文边界保持，不虚报本轮重读,既有摘要复用

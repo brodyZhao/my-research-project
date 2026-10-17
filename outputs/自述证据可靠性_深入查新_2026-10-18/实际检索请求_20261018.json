@@ -1,0 +1,1340 @@
+{
+  "date": "2026-10-18",
+  "scope": "targeted falsification search; not systematic review",
+  "successful_calls": 24,
+  "query_count": 60,
+  "failed_calls_not_in_count": [
+    {
+      "type": "transport error",
+      "action": "first search call retried unchanged"
+    }
+  ],
+  "calls": [
+    {
+      "index": 1,
+      "request": {
+        "system2_search_query": [
+          {
+            "q": "deepfake explanation faithfulness counterfactual evidence removal original image benchmark"
+          },
+          {
+            "q": "forgery detector rationale causal faithfulness paired images sham control"
+          },
+          {
+            "q": "\"deepfake\" \"explanation\" \"restoration\""
+          },
+          {
+            "q": "\"forensic\" \"self-reported\" evidence counterfactual"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://github.com/neuralisa/cct-vlm",
+        "https://arxiv.org/abs/2609.17953",
+        "https://proceedings.mlr.press/v306/xu26x.html",
+        "https://github.com/gulnazaki/counterfactual-benchmark",
+        "https://www.alphaxiv.org/abs/2609.17953",
+        "https://arxiv.org/abs/2109.01962",
+        "https://www.alphaxiv.org/abs/2609.06704",
+        "https://aidaslab.github.io/RFEval/",
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Kumar_Measuring_the_UnFaithfulness_of_Concept-Based_Explanations_CVPR_2026_paper.html",
+        "https://www.aimodels.fyi/papers/arxiv/edct-bench-uncovering-faithfulness-gaps-vlms-via",
+        "https://www.roboticscenter.ai/research/papers/edct-bench-uncovering-faithfulness-gaps-in-vlms-via-explanation-driven-counterfactual-test-2609",
+        "https://openaccess.thecvf.com/content/CVPR2026/html/Kuckreja_Pixels_Dont_Lie_But_Your_Detector_Might_Bootstrapping_MLLM-as-a-Judge_for_CVPR_2026_paper.html",
+        "https://github.com/KjAeRsTuIsK/DeepfakeJudge",
+        "https://www.alphaxiv.org/de/abs/2609.17953",
+        "https://pubmed.ncbi.nlm.nih.gov/9354256/",
+        "https://www.openaccess.thecvf.com/content/ICCV2025/papers/Chowdhury_Looking_in_the_Mirror_A_Faithful_Counterfactual_Explanation_Method_for_ICCV_2025_paper.pdf",
+        "https://openreview.net/attachment?id=TcICHju9Mo&name=originally_submitted_PDF",
+        "https://link.springer.com/article/10.1007/s42452-026-08675-1",
+        "https://pubmed.ncbi.nlm.nih.gov/8969087/",
+        "https://www.mdpi.com/2078-2489/17/9/819",
+        "https://pubmed.ncbi.nlm.nih.gov/41886323/",
+        "https://zendy.io/title/10.1109%2Faccess.2026.3680143",
+        "https://openaccess.thecvf.com/content/WACV2023/papers/Li_A_Continual_Deepfake_Detection_Benchmark_Dataset_Methods_and_Essentials_WACV_2023_paper.pdf",
+        "https://openreview.net/pdf?id=hFDdSd6hSM",
+        "https://arxiv.org/abs/2203.11433",
+        "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1877102/full",
+        "https://openaccess.thecvf.com/content/CVPR2026/papers/Huang_ReAlign_Generalizable_Image_Forgery_Detection_via_Reasoning-Aligned_Representation_CVPR_2026_paper.pdf",
+        "https://github.com/saksham-dev07/Deepfake-Forensics-with-Explainable-AI/blob/main/backend/documentation/voice_spoofing.md",
+        "https://www.ojp.gov/ncjrs/virtual-library/abstracts/use-bayes-coefficients-assess-racial-bias-hair-analysis-conjecture",
+        "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2019.00168/full",
+        "https://www.alphaxiv.org/abs/2603.07515",
+        "https://pubmed.ncbi.nlm.nih.gov/31254262/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7773588/",
+        "https://pubmed.ncbi.nlm.nih.gov/15818605/",
+        "https://borowiecki.dev/abs/2610.16452",
+        "https://arxiv.org/abs/2207.09679",
+        "https://openalex.org/W2035060606",
+        "https://www.annualreviews.org/doi/10.1146/annurev-vision-091718-014827",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13218547/",
+        "https://link.springer.com/article/10.1186/s41235-017-0067-2",
+        "https://doi.org/10.1016%2Fj.iswa.2026.200684",
+        "https://aivideoupscale.com/knowledge/how_should_you_run_a_deepfake_stress_test_before_publishing_ai-restored_video.php",
+        "https://rohit-kundu.github.io/FORGE/",
+        "https://openalex.org/W2171460063"
+      ]
+    },
+    {
+      "index": 2,
+      "request": {
+        "system2_search_query": [
+          {
+            "q": "\"deepfake\" \"explanation\" \"counterfactual\" benchmark dataset"
+          },
+          {
+            "q": "\"forgery\" \"faithfulness\" \"control\" explanations"
+          },
+          {
+            "q": "\"image\" \"rationale\" \"sham\" counterfactual"
+          },
+          {
+            "q": "\"deepfake\" \"evidence\" \"removal\" explanation benchmark"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://discovery.ucl.ac.uk/id/eprint/10173213/",
+        "https://arxiv.org/abs/2603.18577",
+        "https://doi.org/10.1371/journal.pone.0335330",
+        "https://www.researchgate.net/publication/397315823_Metascientific_replication_project_with_the_advanced_meta-experimental_protocol_of_the_transparent_psi_project_procedures_for_testing_the_precognitive_effect_claimed_by_Bem",
+        "https://pubmed.ncbi.nlm.nih.gov/31404020/",
+        "https://wikipedia.classicistranieri.com/en/articles/s/h/a/Image~Sham_e_akhar.jpg_fd5b.html",
+        "https://github.com/VectorInstitute/deepfakes-survey-2026",
+        "https://esc365.escardio.org/journal/95869",
+        "https://www.oaepublish.com/articles/2574-1209.2021.149/image/fig4",
+        "https://www.alphaxiv.org/abs/2603.18577v1",
+        "https://unfinishablemap.org/topics/sham-controlled-neurofeedback-and-the-consciousness-comparator/",
+        "https://pubmed.ncbi.nlm.nih.gov/41614522/",
+        "https://www.sciencedirect.com/science/article/pii/S2772374726003686",
+        "https://journals.plos.org/plosmedicine/article/comment?id=10.1371%2Fannotation%2F18d1347b-1f0f-4f30-b355-cad573659193",
+        "https://doi.org/10.3389/fneur.2025.1605157",
+        "https://www.researchgate.net/publication/410930848_LaP-Forensics_Latent-Pixel_Consistency_Guided_Multimodal_Reasoning_for_Deepfake_Detection",
+        "https://www.uscourts.gov/sites/default/files/document/2025-11_evidence_rules_commitee_agenda_book_final.pdf",
+        "https://www.preprints.org/manuscript/202608.1870",
+        "https://razaib-tariq.github.io/xai-guidelines/paper-explorer/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13279904/",
+        "https://www.ofcom.org.uk/online-safety/illegal-and-harmful-content/how-can-tech-firms-help-users-spot-deepfakes",
+        "https://hongsong-wang.github.io/TPAMI2026/",
+        "https://www.sciencedirect.com/org/science/article/pii/S1546221826007678",
+        "https://pith.science/paper/2609.39066",
+        "https://www.sciencedirect.com/science/article/pii/S2949882126000848",
+        "https://huggingface.co/datasets/RichardChenZH/MedForge-90K/blob/af259910ae2d634ae396f1eea14f17a77346d1fa/README.md",
+        "https://link.springer.com/article/10.1007/s10462-026-11608-4",
+        "https://doi.org/10.3389/frai.2026.1810912",
+        "https://www.ofcom.org.uk/siteassets/resources/documents/online-safety/information-for-industry/deepfake-defences-2/deepfake-defences-2---the-attribution-toolkit.pdf?v=402066",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13194494/",
+        "https://thelatestinai.com/papers/2610.16452",
+        "https://zendy.io/title/10.1109%2Faccess.2026.3680143",
+        "https://pith.science/paper/2506.00868",
+        "https://tongliang-liu.github.io/atml/atml_fellow_2025.pdf",
+        "https://douglasvandergraph.com/2026/09/24/2-thessalonians-complete-guide-part-12-chapters-100-108/",
+        "https://researchconnect.buffalo.edu/en/publications/counterfactual-image-enhancement-forexplanation-offace-swap-deepf/",
+        "https://aclanthology.org/2026.acl-long.1177.pdf",
+        "https://aclanthology.org/events/findings-2026/",
+        "https://researchconnect.suny.edu/en/publications/counterfactual-image-enhancement-for-explanation-of-face-swap-dee/",
+        "https://www.researchgate.net/publication/396458161_DREAM_A_Benchmark_Study_for_Deepfake_REalism_AssessMent",
+        "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf",
+        "https://www.researchgate.net/publication/408235973_The_Calibrated_Deepfake_Trust_Score_CDTS_Competence-Coupled_Trust_Degradation_Across_Deepfake_Detectors",
+        "https://github.com/qiqitao77/Awesome-Comprehensive-Deepfake-Detection",
+        "https://www.scribd.com/document/812154343/7",
+        "https://arxiv.deeppaper.ai/papers/2609.35096v1?locale=en",
+        "https://www.researchgate.net/publication/390019338_LEGION_Learning_to_Ground_and_Explain_for_Synthetic_Image_Detection",
+        "https://github.com/dxhou/AI-Generated-Video-Detection",
+        "https://link.springer.com/chapter/10.1007/978-3-032-08333-3_17",
+        "https://dblp.uni-trier.de/pid/297/4695.html",
+        "https://www.mdpi.com/2673-2688/7/3/114",
+        "https://www.wired.com/story/facebook-deepfake-ban-disinformation",
+        "https://ae.linkedin.com/in/dr-samer-aoudi"
+      ]
+    },
+    {
+      "index": 3,
+      "request": {
+        "system2_search_query": [
+          {
+            "q": "\"deepfake\" \"counterfactual\" \"rationale\" dataset"
+          },
+          {
+            "q": "\"forgery\" \"explanation\" \"insertion\" \"deletion\""
+          },
+          {
+            "q": "\"deepfake\" \"evidence\" \"paired\" \"faithfulness\""
+          },
+          {
+            "q": "\"synthetic image\" \"explanation\" \"negative control\""
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2609.35096"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2603.18577"
+          },
+          {
+            "ref_id": "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://aclanthology.org/2026.acl-long.976.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10567685/",
+        "https://github.com/oceanflowlab/EDD",
+        "https://openreview.net/pdf?id=xls4ud4jsV",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8321313/",
+        "https://www.marxists.org/history/etol/newspape/ni/vol15/no08/v15n08-dec-1949-new-int.pdf",
+        "https://ojs.imeti.org/index.php/PETI/article/view/10290/1332",
+        "https://patents.google.com/patent/US20070147929A1/en",
+        "https://openjurist.org/217/calapp3d/379/lewis-v-superior-court-2125483",
+        "https://www.mdpi.com/2313-433X/7/3/47",
+        "https://www.researchgate.net/publication/408316104_Semantic_Enrichment_of_Forensic_Artifacts_Using_XAI-Generated_Feature_Attributions_to_Enhance_Cognitive_AI_Knowledge_Graphs",
+        "https://ccs.korea.ac.kr/pds/JSCI16.pdf",
+        "https://freederia.com/self-validating-benchmarking-for-crispr-cas9-delivery-by-microfluidic-electroporation-formal-verification-and-bayesian-uncertainty-quantification-on-arm-cortex-m7-edge-platfo/",
+        "https://freederia.com/high-throughput-microfluidic-single-cell-gel-electrophoresis-for-quantifying-low-frequency-electromagnetic-field-induced-dna-strand-breaks-in-human-lymphocytes/",
+        "https://fileserver-az.core.ac.uk/download/pdf/76522980.pdf",
+        "https://www.ijert.org/an-efficient-technique-for-detection-and-localization-of-the-forgery-in-digital-videos-ijertv15is052733",
+        "https://www.mdpi.com/2227-7080/14/9/545",
+        "https://www.researchgate.net/publication/400967542_THE_CRIME_OF_OFFICIAL_GOVERNMENT_DOCUMENTS_FORGERY",
+        "https://www.nature.com/articles/s41598-026-69134-w",
+        "https://www.scribd.com/document/812154343/7",
+        "https://www.nature.com/articles/s41467-023-42124-6",
+        "https://www.researchgate.net/publication/408235973_The_Calibrated_Deepfake_Trust_Score_CDTS_Competence-Coupled_Trust_Degradation_Across_Deepfake_Detectors",
+        "https://freederia.com/a-modular-evaluation-framework-for-safety-margin-fidelity-of-synthetic-magnetic-resonance-imaging-in-radiation-oncology-planning/",
+        "https://patents.google.com/patent/US7738143B2/en",
+        "https://arxiv.org/html/2609.35096",
+        "https://arxiv.org/html/2609.35096\",\"lineno\":null}",
+        "https://github.com/GeorgeTsoumplekas/DF-CBM†github.com",
+        "https://arxiv.org/html/2603.18577",
+        "https://arxiv.org/html/2603.18577\",\"lineno\":null}",
+        "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf",
+        "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf\",\"lineno\":null}"
+      ]
+    },
+    {
+      "index": 4,
+      "request": {
+        "find": [
+          {
+            "ref_id": "https://arxiv.org/html/2609.35096",
+            "pattern": "Intervention mechanism"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2603.18577",
+            "pattern": "counterfactual"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2603.18577",
+            "pattern": "faithfulness"
+          },
+          {
+            "ref_id": "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf",
+            "pattern": "counterfactual"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://arxiv.org/html/2609.35096",
+        "https://arxiv.org/html/2609.35096\",\"pattern\":\"Intervention",
+        "https://arxiv.org/html/2603.18577",
+        "https://arxiv.org/html/2603.18577\",\"pattern\":\"counterfactual\"}",
+        "https://arxiv.org/html/2603.18577\",\"pattern\":\"faithfulness\"}",
+        "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf",
+        "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf\",\"pattern\":\"counterfactual\"}"
+      ]
+    },
+    {
+      "index": 5,
+      "request": {
+        "system2_search_query": [
+          {
+            "q": "\"deepfake\" \"explanation\" \"faithfulness\" benchmark causal"
+          },
+          {
+            "q": "\"image forgery\" \"rationale\" \"intervention\""
+          },
+          {
+            "q": "\"forensic\" \"explanations\" \"counterfactual\" dataset benchmark"
+          },
+          {
+            "q": "\"deepfake\" \"explanation\" \"matched\" regions"
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2605.31192v2"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2610.16452"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2511.14259"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://xzpku.github.io/edd.github.io/",
+        "https://www.researchgate.net/publication/408235973_The_Calibrated_Deepfake_Trust_Score_CDTS_Competence-Coupled_Trust_Degradation_Across_Deepfake_Detectors",
+        "https://arxiv.org/abs/2606.16137",
+        "https://www.researchgate.net/publication/364290413_Quantitative_Metrics_for_Evaluating_Explanations_of_Video_DeepFake_Detectors",
+        "https://github.com/Ishaangor/Deepfake-AI-Image-Detector",
+        "https://openaccess.thecvf.com/content/CVPR2026W/XAI4CV/papers/Vanian_Why_Fake_Unveiling_the_Semantic_Vocabulary_of_Deepfake_Detectors_CVPRW_2026_paper.pdf",
+        "https://www.scribd.com/document/812154343/7",
+        "https://www.sciencedirect.com/science/article/abs/pii/S187249732100168X",
+        "https://www.sciencedirect.com/science/article/pii/S187249732100168X",
+        "https://www.sciencedirect.com/org/science/article/pii/S1546221826007678",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0167404823005941",
+        "https://link.springer.com/article/10.1186/s13635-025-00211-9",
+        "https://freederia.com/privacy-preserving-explainable-polygenic-risk-score-framework-for-forensic-profiling-in-gene-based-criminal-investigations/",
+        "https://www.researchgate.net/publication/408622979_Why_Fake_Unveiling_the_Semantic_Vocabulary_of_Deepfake_Detectors",
+        "https://aclanthology.org/2026.acl-long.1177.pdf",
+        "https://link.springer.com/article/10.1007/s44163-026-02209-9",
+        "https://www.researchgate.net/publication/364290413_Quantitative_Metrics_for_Evaluating_Explanations_of_Video_DeepFake_Detectors?_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJzY2llbnRpZmljQ29udHJpYnV0aW9ucyIsInByZXZpb3VzUGFnZSI6bnVsbCwic3ViUGFnZSI6bnVsbH19",
+        "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf",
+        "https://arxiv.org/abs/2606.29484",
+        "https://research.tudelft.nl/en/publications/explainable-artificial-intelligence-in-forensics-realistic-explan/",
+        "https://researchconnect.suny.edu/en/publications/explainability-guided-deepfake-detection-for-high-fidelity-facial/",
+        "https://freederia.com/hyper-specific-sub-field-selection-counterfactual-explanation-generation-for-forensic-ai-evidence-admissibility/",
+        "https://bmvc2022.mpi-inf.mpg.de/0972_poster.pdf",
+        "https://pubmed.ncbi.nlm.nih.gov/34839075/",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7773588/",
+        "https://arxiv.org/html/2605.31192v2",
+        "https://arxiv.org/html/2605.31192v2\",\"lineno\":null}",
+        "https://arxiv.org/html/2610.16452",
+        "https://arxiv.org/html/2610.16452\",\"lineno\":null}",
+        "https://arxiv.org/html/2511.14259",
+        "https://arxiv.org/html/2511.14259\",\"lineno\":null}"
+      ]
+    },
+    {
+      "index": 6,
+      "request": {
+        "find": [
+          {
+            "ref_id": "https://arxiv.org/html/2605.31192v2",
+            "pattern": "grounding"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2605.31192v2",
+            "pattern": "mask"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2511.14259",
+            "pattern": "counterfactual"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2511.14259",
+            "pattern": "expert"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2610.16452",
+            "pattern": "Visual Supportability"
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2609.06704",
+            "lineno": 135
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2609.17953",
+            "lineno": 110
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://arxiv.org/html/2609.06704",
+        "https://arxiv.org/html/2609.06704\",\"lineno\":135}",
+        "https://arxiv.org/html/2609.17953",
+        "https://arxiv.org/html/2609.17953\",\"lineno\":110}",
+        "https://arxiv.org/html/2605.31192v2",
+        "https://arxiv.org/html/2605.31192v2\",\"pattern\":\"grounding\"}",
+        "https://arxiv.org/html/2605.31192v2\",\"pattern\":\"mask\"}",
+        "https://arxiv.org/html/2511.14259",
+        "https://arxiv.org/html/2511.14259\",\"pattern\":\"counterfactual\"}",
+        "https://arxiv.org/html/2511.14259\",\"pattern\":\"expert\"}",
+        "https://arxiv.org/html/2610.16452",
+        "https://arxiv.org/html/2610.16452\",\"pattern\":\"Visual"
+      ]
+    },
+    {
+      "index": 7,
+      "request": {
+        "system2_search_query": [
+          {
+            "q": "\"deepfake\" \"explanation\" \"minimal pairs\""
+          },
+          {
+            "q": "\"forgery\" \"rationale\" \"counterfactual\" benchmark -site:freederia.com"
+          },
+          {
+            "q": "\"AI-generated image\" \"faithfulness\" \"intervention\""
+          },
+          {
+            "q": "\"deepfake\" \"evidence removal\""
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://github.com/neuralisa/cct-vlm"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2609.17953",
+            "lineno": 210
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2610.16452",
+            "lineno": 145
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://pith.science/paper/2607.19442",
+        "https://deepban.com/features/takedowns",
+        "https://www.uscourts.gov/sites/default/files/document/2025-11_evidence_rules_commitee_agenda_book_final.pdf?lctg=66d1f2fe24743bf74209f146",
+        "https://en.papernotes.org/ECCV2026/llm_safety/cognicred_a_dataset_and_benchmark_for_cognitive_credential_forgery_detection/",
+        "https://paperium.net/article/en/13288/project-ariadne-a-structural-causal-framework-for-auditing-faithfulness-in-llmagents",
+        "https://journal.privietlab.org/index.php/IJLGR/article/view/2300",
+        "https://paperium.net/article/library/2401/measuring-faithfulness-in-chain-of-thought-reasoning-analysis-review-summary-paperium",
+        "https://www.newx.sg/paper/detail/5c272a10-966f-11f1-b84c-00163e10baa7",
+        "https://thelatestinai.com/topics/visual-evidence?density=cards",
+        "https://nihrc.org/assets/uploads/publications/NIHRC-Annual-Statement-2025-Tagged_2025-12-12-171604_rtmo.pdf",
+        "https://clipforensics.com/investigations/deepfake-investigation-workflow",
+        "https://medium.com/rooted-in-reason/the-power-of-prayer-27bcf35e48d2",
+        "https://pith.science/paper/2505.12620",
+        "https://ase.md/files/publicatii/economica/ec_2013_2.pdf",
+        "https://pith.science/paper/2603.18577",
+        "https://link.springer.com/article/10.1007/s10994-023-06333-w",
+        "https://clothoff.ai/blog/deepfake-nudes-what-to-do/",
+        "https://scirate.com/?date=2026-07-30&page=125&range=7",
+        "https://scirate.com/?date=2026-07-29&page=103&range=7",
+        "https://ibn.idsi.md/sites/default/files/imag_file/Luciditatea%20epistemica%20in%20economie%20leacul%20originar%20contra%20turbulentelor.pdf",
+        "https://www.cs.newpaltz.edu/~lik/publications/Yilong-Tan-CSR-2026.pdf",
+        "https://www.nationpress.com/national/delhi-hc-to-hear-deepfake-image-plea-vs-cjp",
+        "https://www.mdpi.com/2079-9292/15/13/2891",
+        "https://scirate.com/?date=2026-08-03&page=187&range=31",
+        "https://github.com/neuralisa/cct-vlm",
+        "https://github.com/neuralisa/cct-vlm\",\"lineno\":null}",
+        "https://arxiv.org/html/2609.17953",
+        "https://arxiv.org/html/2609.17953\",\"lineno\":210}",
+        "https://arxiv.org/html/2610.16452",
+        "https://arxiv.org/html/2610.16452\",\"lineno\":145}"
+      ]
+    },
+    {
+      "index": 8,
+      "request": {
+        "system2_search_query": [
+          {
+            "q": "image authenticity detector explanation causal benchmark controlled edits evidence"
+          },
+          {
+            "q": "deepfake rationale faithfulness paired pristine restored image dataset"
+          },
+          {
+            "q": "\"deepfake\" \"explanation\" \"counterfactual\" \"dataset\" site:arxiv.org"
+          },
+          {
+            "q": "\"鉴伪\" \"解释\" \"反事实\" 数据集"
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2602.00192"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2610.09205"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2509.20912"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S0957417426002605",
+        "https://arxiv.org/abs/2609.37783",
+        "https://pith.science/paper/2607.29581",
+        "https://dsri.org/blog/the-image-edit-detection-and-localization-challenge/",
+        "https://research.google/pubs/editinspector-a-benchmark-for-evaluation-of-text-guided-image-edits/",
+        "https://photoradar.io/blog/ai-image-detector-guide",
+        "https://doi.org/10.1146/annurev-vision-091718-014827",
+        "https://www.itechguides.com/can-ai-detectors-prove-an-image-is-authentic-faqs-on-verification-and-provenance/",
+        "https://arxiv.org/abs/2610.05870",
+        "https://www.reuters.com/business/meta-ai-image-detector-fails-identify-some-its-own-cropped-ai-images-reuters-2026-07-10/",
+        "https://openaccess.thecvf.com/content/WACV2026W/SynRDinBAS/papers/Nguyen_The_SAFE_Image_Authenticity_Challenge_Detecting_and_Localizing_Partial_and_WACVW_2026_paper.pdf",
+        "https://www.itechguides.com/how-to-check-whether-an-image-was-altered-or-generated-by-ai/",
+        "https://research.google/pubs/beyond-real-or-fake-a-dual-channel-authenticity-and-reasoning-protocol-for-photographic-assessment/",
+        "https://imageevidence.com/detector/chatgpt",
+        "https://arxivlens.com/paperview/details/explaining-ai-image-detection-what-the-heatmap-actually-shows-4456-2745fe82",
+        "https://www.nist.gov/publications/media-forensics-challenge-image-provenance-evaluation-and-state-art-analysis-large",
+        "https://doi.org/10.6028/NIST.IR.8325",
+        "https://arxiv.org/abs/2602.01854",
+        "https://arxiv.org/abs/2101.07951",
+        "https://www.theverge.com/2024/8/21/24223932/c2pa-standard-verify-ai-generated-images-content-credentials",
+        "https://mfc.nist.gov/",
+        "https://www.tomsguide.com/phones/iphones/iphone-18-pros-reference-image-mode-helps-verify-if-an-image-has-been-altered-by-ai-heres-how-it-works",
+        "https://zenodo.org/records/11186584",
+        "https://huggingface.co/datasets/MBZUAI/DeepfakeJudge-Dataset",
+        "https://arxiv.org/html/2602.00192",
+        "https://arxiv.org/html/2602.00192\",\"lineno\":null}",
+        "https://github.com/emirhanbilgic/INP-X†github.com",
+        "https://arxiv.org/html/2610.09205",
+        "https://arxiv.org/html/2610.09205\",\"lineno\":null}",
+        "https://arxiv.org/html/2509.20912",
+        "https://arxiv.org/html/2509.20912\",\"lineno\":null}"
+      ]
+    },
+    {
+      "index": 9,
+      "request": {
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2607.29581"
+          },
+          {
+            "ref_id": "https://aidaslab.github.io/RFEval/"
+          },
+          {
+            "ref_id": "https://link.springer.com/article/10.1186/s13635-025-00211-9"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2312.06627"
+          }
+        ],
+        "system2_search_query": [
+          {
+            "q": "\"deepfake\" \"explanation\" \"placebo\""
+          },
+          {
+            "q": "\"image forgery\" \"explanation faithfulness\" dataset"
+          },
+          {
+            "q": "\"synthetic\" \"forensic\" \"rationale\" \"intervention\" benchmark"
+          },
+          {
+            "q": "\"counterfactual\" \"deepfake\" \"textual explanations\""
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2026W/XAI4CV/html/Vanian_Why_Fake_Unveiling_the_Semantic_Vocabulary_of_Deepfake_Detectors_CVPRW_2026_paper.html",
+        "https://arxiv.org/abs/2607.07216",
+        "https://www.alphaxiv.org/abs/2607.07216",
+        "https://arxiv.org/abs/2607.07216},",
+        "https://vcl.iti.gr/publications/why-fake-unveiling-the-semantic-vocabulary-of-deepfake-detectors/",
+        "https://www.legislation.gov.uk/ukia/2013/1009/pdfs/ukia_20131009_en.pdf",
+        "https://www.roboticscenter.ai/research/papers/why-fake-unveiling-the-semantic-vocabulary-of-deepfake-detectors-2607",
+        "https://docshare.wps.com/document/why-fake-unveiling-the-semantic-vocabulary-of-deepfake-detectors/83205/",
+        "https://tri.uams.edu/wp-content/uploads/2024/08/Combined-CTR-Core-Facilities-and-Resources-TRI.pdf",
+        "https://zenodo.org/records/21133793",
+        "https://deepfake-demo.aisec.fraunhofer.de/related_work/2607.07216",
+        "https://thelatestinai.com/papers/2607.07216",
+        "https://www.researchgate.net/publication/390537973_Unveiling_Deepfakes_with_Latent_Diffusion_Counterfactual_Explanations",
+        "https://www.researchgate.net/publication/410930848_LaP-Forensics_Latent-Pixel_Consistency_Guided_Multimodal_Reasoning_for_Deepfake_Detection",
+        "https://www.samhsa.gov/sites/default/files/meeting/minutes/dtab-meeting-minutes-12032024.pdf",
+        "https://www.researchgate.net/publication/408622979_Why_Fake_Unveiling_the_Semantic_Vocabulary_of_Deepfake_Detectors",
+        "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf",
+        "https://arxiv.org/abs/2610.16452",
+        "https://sjcj.nuaa.edu.cn/sjcjyclen/home",
+        "https://pith.science/paper/2507.10066",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0379073825001860",
+        "https://www.drugsandalcohol.ie/43620/1/EUDA_threat-assessment-report-on-synthetic-opioids-in-the-baltic-countries.pdf",
+        "https://arxiv.org/html/2607.29581",
+        "https://arxiv.org/html/2607.29581\",\"lineno\":null}",
+        "https://aidaslab.github.io/RFEval/",
+        "https://aidaslab.github.io/RFEval/\",\"lineno\":null}",
+        "https://link.springer.com/article/10.1186/s13635-025-00211-9",
+        "https://link.springer.com/article/10.1186/s13635-025-00211-9\",\"lineno\":null}",
+        "https://arxiv.org/html/2312.06627\",\"lineno\":null}"
+      ]
+    },
+    {
+      "index": 10,
+      "request": {
+        "find": [
+          {
+            "ref_id": "https://arxiv.org/html/2607.29581",
+            "pattern": "replacement"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2607.29581",
+            "pattern": "paired"
+          },
+          {
+            "ref_id": "https://link.springer.com/article/10.1186/s13635-025-00211-9",
+            "pattern": "faithfulness"
+          },
+          {
+            "ref_id": "https://aidaslab.github.io/RFEval/",
+            "pattern": "arxiv"
+          }
+        ],
+        "system2_search_query": [
+          {
+            "q": "\"deepfake\" \"counterfactual\" \"original pixels\""
+          },
+          {
+            "q": "\"forgery\" \"explanations\" \"same-source\""
+          },
+          {
+            "q": "\"deepfake\" \"rationale\" \"sufficiency\""
+          },
+          {
+            "q": "\"deepfake\" \"explanation\" \"necessity\""
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://enfsi.eu/wp-content/uploads/2023/02/BPM-Handwriting-Ed.-4.pdf",
+        "https://enfsi.eu/wp-content/uploads/2022/12/4.-BPM-Edition-4-Draft-20220822-3-1.pdf",
+        "https://eschatialabs.com/research/ubmk-2026/",
+        "https://razaib-tariq.github.io/xai-guidelines/paper-explorer/",
+        "https://doi.org/10.3390%2Fjimaging10020046",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC10889995/",
+        "https://doi.org/10.18653/v1/2025.ijcnlp-long",
+        "https://en.bladi.net/moroccan-pjd-adviser-arrested-border-alleged-passport-forgery%2C65142.html",
+        "https://bmva-archive.org.uk/bmvc/2025/assets/workshops/MAAAI/Paper_9/paper.pdf",
+        "https://onlinelibrary.wiley.com/doi/full/10.1002/poi3.435",
+        "https://www.nature.com/articles/s41598-026-46086-9",
+        "https://enfsi.eu/wp-content/uploads/2022/04/BPM-Edition-4-Draft.pdf",
+        "https://www.researchgate.net/publication/395916361_From_Black_Boxes_to_Glass_Boxes_Explainable_AI_for_Trustworthy_Deepfake_Forensics",
+        "https://www.respicio.ph/dear-attorney/understanding-evidences-for-filing-a-forgery-case-in-the-philippines",
+        "https://eschatialabs.com/es/research/ubmk-2026/",
+        "https://blog.defake.app/wp-content/uploads/2025/02/Clean_Understanding_and_Empowering_Intelligence_Analysts.pdf",
+        "https://www.emergentmind.com/topics/paragraph-level-relevance-annotation",
+        "https://umu.diva-portal.org/smash/get/diva2%3A1567855/FULLTEXT01.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC12624122/",
+        "https://www.mdpi.com/2410-387X/9/4/61",
+        "https://rt.http3.lol/index.php?q=aHR0cHM6Ly9hcnhpdi5vcmcvaHRtbC8yNjA4LjEyODc2djEjU3gxLnA1LjE",
+        "https://doi.org/10.1007/s11229-026-05491-3",
+        "https://www.themoonlight.io/en/review/towards-quantitative-evaluation-of-explainable-ai-methods-for-deepfake-detection",
+        "https://forum.effectivealtruism.org/posts/AiCdZF9YDQmnhwA3G/watching-the-wrong-thing-an-interpretability-audit-of-two",
+        "https://github.com/gavin-keli/deepfake-detector-audit/blob/main/docs/EXPERIMENTS.md",
+        "https://link.springer.com/article/10.1007/s42452-026-08402-w",
+        "https://sramakvvl.be/sowing-eagles-200-years-of-forging-waterloo-battlefield-relics/",
+        "https://arxiv.org/html/2607.29581",
+        "https://arxiv.org/html/2607.29581\",\"pattern\":\"replacement\"}",
+        "https://arxiv.org/html/2607.29581\",\"pattern\":\"paired\"}",
+        "https://link.springer.com/article/10.1186/s13635-025-00211-9",
+        "https://link.springer.com/article/10.1186/s13635-025-00211-9\",\"pattern\":\"faithfulness\"}",
+        "https://aidaslab.github.io/RFEval/",
+        "https://aidaslab.github.io/RFEval/\",\"pattern\":\"arxiv\"}"
+      ]
+    },
+    {
+      "index": 11,
+      "request": {
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2607.29581",
+            "lineno": 356
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2607.29581",
+            "lineno": 535
+          }
+        ],
+        "system2_search_query": [
+          {
+            "q": "\"SPARED\" \"Reasoning-Based\" \"Image\""
+          },
+          {
+            "q": "\"explanation\" \"forgery\" \"counterfactual\" \"benchmark\" -site:freederia.com -site:researchgate.net -site:pith.science -site:thelatestinai.com"
+          },
+          {
+            "q": "\"deepfake\" \"rationale\" \"restored\" evidence"
+          },
+          {
+            "q": "\"deepfake\" \"explanation\" \"evidence ablation\""
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://arxiv.org/abs/2608.12876",
+        "https://doi.org/10.48550/arXiv.2608.12876",
+        "https://huggingface.co/papers/2608.12876",
+        "https://www.alphaxiv.org/abs/2608.12876",
+        "https://www.aimodels.fyi/papers/arxiv/spared-reasoning-based-ai-generated-image-detection",
+        "https://www.researchgate.net/publication/412247802_SPARED_Reasoning-Based_AI-Generated_Image_Detection_via_Adversarially_Edited_Data",
+        "https://www.catalyzex.com/s/D2%20Pit%20Of%20Heresy%20Armor",
+        "https://www.roboticscenter.ai/research/papers/spared-reasoning-based-ai-generated-image-detection-via-adversarially-edited-data-2608",
+        "https://arxiv.deeppaper.ai/papers/2608.12876v1?locale=en",
+        "https://arxivlens.com/paperview/details/spared-reasoning-based-ai-generated-image-detection-via-adversarially-edited-data-7208-1a4aaf90",
+        "https://www.alphaxiv.org/%40xiahui-guo",
+        "https://www.catalyzex.com/s/Mosh%20Pit%20Significado",
+        "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602219894508570",
+        "https://link.springer.com/article/10.1007/s10044-021-01055-y",
+        "https://www.techscience.com/cmc/v89n1/68372/html",
+        "https://link.springer.com/article/10.1007/s10994-023-06333-w",
+        "https://lacuna.tiptreesystems.com/author/bo-peng-0002/aut_0d39233adadb44f2a1141deb07ba5847",
+        "https://www.nature.com/articles/s41598-026-46086-9",
+        "https://www.deepfake-total.com/related_work/",
+        "https://huggingface.co/papers?q=forgery+bias",
+        "https://blog.lishuyu.app/posts/compass_artifact_wf-cf7bc4bc-302b-467a-86a8-254eed131651_text_markdown/",
+        "https://huggingface.co/papers?q=Counterfactual+explanations",
+        "https://huggingface.co/papers?q=COUNTERFACT",
+        "https://doi.org/10.1007/s42452-026-08675-1",
+        "https://www.alphaxiv.org/?custom-categories=%5B%22attention-mechanisms%22%2C%22explainable-ai%22%5D&organizations=%5B%22Tsinghua+University%22%2C%22Shanghai+Jiao+Tong+University%22%2C%22ShengShu%22%2C%22National+University+of+Singapore%22%2C%22Princeton+AI+Lab%22%2C%22Zhipu+AI%22%2C%22Pazhou+Laboratory%22%2C%22DeepSeek%22%2C%22UCLA%22%2C%22Singapore+Management+University%22%2C%22Chinese+Academy+of+Sciences%22%2C%22Shanghai+AI+Laboratory%22%2C%22Shanghai+AI+Lab%22%2C%22Stanford+University%22%2C%22University+of+Science+and+Technology+of+China%22%2C%22CZ+Biohub%22%2C%22NVIDIA%22%2C%22MIT%22%2C%22Letta%22%2C%22Max+Planck+Institute+for+Intelligent+Systems%22%2C%22Meta%22%2C%22ETH+Zurich%22%2C%22Apple%22%2C%22University+of+Birmingham%22%2C%22Sorbonne+University%22%2C%22Northwestern+University%22%2C%22Intesa+Sanpaolo%22%2C%22University+of+Illinois+at+Urbana-Champaign%22%2C%22Universit%C3%A9+de+Montr%C3%A9al%22%2C%22Microsoft%22%2C%22Renmin+University+of+China%22%2C%22Google+Research%22%5D&sort=Likes",
+        "https://www.aimodels.fyi/papers/arxiv/do-vision-models-learn-physical-constraints-or",
+        "https://www.aimodels.fyi/papers/arxiv/deep-image-restoration-image-anti-forensics",
+        "https://arxiv.org/html/2607.29581",
+        "https://arxiv.org/html/2607.29581\",\"lineno\":356}",
+        "https://arxiv.org/html/2607.29581\",\"lineno\":535}"
+      ]
+    },
+    {
+      "index": 12,
+      "request": {
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2607.29581",
+            "lineno": 370
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2608.12876"
+          }
+        ],
+        "system2_search_query": [
+          {
+            "q": "\"faithfulness\" \"deepfake\" \"source image\""
+          },
+          {
+            "q": "\"explanations\" \"forgery\" \"restoring\""
+          },
+          {
+            "q": "\"deepfake\" \"natural language\" \"causal\" benchmark evidence"
+          },
+          {
+            "q": "\"counterfactual\" \"forgery\" \"paired\" explanations"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://opennovelty.org/pdf/novelty_report_lightweight_Mixing_Mechanisms_How_Language_Models_Retrieve_Bou_20251227.pdf",
+        "https://www.sciencestack.ai/paper/2210.05559v2",
+        "https://hudoc.echr.coe.int/app/conversion/pdf/?TID=wchamsesyv&filename=001-57501.pdf&id=001-57501&library=ECHR",
+        "https://link.springer.com/article/10.1007/s44336-026-00034-3",
+        "https://en.papernotes.org/ECCV2026/llm_safety/cognicred_a_dataset_and_benchmark_for_cognitive_credential_forgery_detection/",
+        "https://upload.wikimedia.org/wikipedia/commons/b/b1/Thucydides%3B_%28IA_thucydides02thuciala%29.pdf",
+        "https://ntnuopen.ntnu.no/ntnu-xmlui/bitstream/handle/11250/3062658/1-s2.0-S0262885622001640-main.pdf?sequence=2",
+        "https://huggingface.co/datasets/SEAR-benchmark/SEAR",
+        "https://www.gutenberg.org/files/14003/14003-h/14003-h.htm",
+        "https://www.researchgate.net/publication/384478015_Counterfactual_Explanations_for_Face_Forgery_Detection_via_Adversarial_Removal_of_Artifacts",
+        "https://www.sciencedirect.com/science/article/pii/S0957417426013060",
+        "https://aclanthology.org/events/findings-2026/",
+        "https://www.utica.edu/academic/institutes/ecii/publications/articles/B4A163F6-0AE6-1C11-14CBB310F7E43F08.pdf",
+        "https://www.researchgate.net/publication/410930848_LaP-Forensics_Latent-Pixel_Consistency_Guided_Multimodal_Reasoning_for_Deepfake_Detection",
+        "https://www.studocu.com/ph/document/university-of-iloilo-phinma/bs-criminology/questioned-document-examination-bs-criminology-midterm-exam/168836183",
+        "https://huggingface.co/papers?q=counterfactual",
+        "https://www.gutenberg.org/cache/epub/14003/pg14003-images.html",
+        "https://lacuna.tiptreesystems.com/hypothesis/paired-counterfactual-edits-for-out-of-context-misinformation-detection-347c7a8a7bd82917",
+        "https://api-inference.huggingface.co/papers?q=forgery+subspace",
+        "https://huggingface.co/papers?q=Counterfactual+explanations",
+        "https://www.aimodels.fyi/papers/arxiv/deep-image-restoration-image-anti-forensics",
+        "https://www.nature.com/articles/s41467-025-67145-1",
+        "https://api-inference.huggingface.co/papers?q=deepfake+model",
+        "https://arxiv.org/html/2607.29581",
+        "https://arxiv.org/html/2607.29581\",\"lineno\":370}",
+        "https://arxiv.org/html/2608.12876",
+        "https://arxiv.org/html/2608.12876\",\"lineno\":null}"
+      ]
+    },
+    {
+      "index": 13,
+      "request": {
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2607.29581",
+            "lineno": 171
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2607.29581",
+            "lineno": 288
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2608.12876",
+            "lineno": 90
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://arxiv.org/html/2607.29581",
+        "https://arxiv.org/html/2607.29581\",\"lineno\":171}",
+        "https://arxiv.org/html/2607.29581\",\"lineno\":288}",
+        "https://arxiv.org/html/2608.12876",
+        "https://arxiv.org/html/2608.12876\",\"lineno\":90}"
+      ]
+    },
+    {
+      "index": 14,
+      "request": {
+        "find": [
+          {
+            "ref_id": "https://arxiv.org/html/2607.29581",
+            "pattern": "github"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2609.17953",
+            "pattern": "github"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2605.31192v2",
+            "pattern": "github"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2610.16452",
+            "pattern": "github"
+          }
+        ],
+        "system2_search_query": [
+          {
+            "q": "\"Discriminative attribution from counterfactuals\" evaluation image source"
+          },
+          {
+            "q": "\"deepfake\" \"claim\" \"counterfactual\" explanation"
+          },
+          {
+            "q": "\"image forgery\" \"evidence\" \"null\" explanation"
+          },
+          {
+            "q": "\"forgery\" \"explanation\" \"controlled\" dataset benchmark"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://dac-method.github.io/",
+        "https://arxiv.org/abs/2109.13412",
+        "https://www.researchgate.net/publication/354950003_Discriminative_Attribution_from_Counterfactuals",
+        "https://dac-method.github.io.",
+        "https://www.csauthors.net/nils-eckstein/",
+        "https://explainableairesearch.github.io/papers.html",
+        "https://www.csauthors.net/gregory-s-x-e-jefferis/",
+        "https://www.catalyzex.com/paper/discriminative-attribution-from",
+        "https://github.com/MaheepChaudhary/Causality-in-Trustworthy-Machine-Learning/blob/main/citation.md",
+        "http://dx.doi.org/10.1145/3447548.3467333},",
+        "https://github.com/MaheepChaudhary/Causality-in-Trustworthy-Machine-Learning",
+        "https://www.csauthors.net/jan-funke/",
+        "https://www.catalyzex.com/author/Jan%20Funke",
+        "https://openreview.net/pdf?id=KdAbuKGN2m",
+        "https://www.mdpi.com/2076-3417/15/8/4319",
+        "https://dblp1.uni-trier.de/pid/60/9677.html",
+        "https://dblp.org/pid/60/9514.html",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13372767/",
+        "https://gentext-forensics-acm-mm-2026.github.io/challenge.html",
+        "https://patents.google.com/patent/CN119540659A/en",
+        "https://d197for5662m48.cloudfront.net/documents/publicationstatus/252196/preprint_pdf/c6f7f5f080b0c2a063542160121a9fdd.pdf",
+        "https://patents.google.com/patent/CN119540659B/en",
+        "https://www.themoonlight.io/de/review/busterx-mllm-powered-ai-generated-video-forgery-detection-and-explanation/",
+        "https://www.aimodels.fyi/papers/arxiv/docforge-bench-comprehensive-benchmark-document-forgery-detection",
+        "https://www.researchgate.net/publication/401469940_DOCFORGE-BENCH_A_Comprehensive_Benchmark_for_Document_Forgery_Detection_and_Analysis",
+        "https://lacuna.tiptreesystems.com/hypothesis/separating-memorization-from-crop-drift-in-contamination-audits-of-face-0a75a4d056a66062",
+        "https://www.znakschoola.ru/?_=%2Fpdf%2F2602.01854%23UE7DkG0PaBHZOakR54g1Wl8%3D",
+        "https://www.themoonlight.io/fr/review/busterx-mllm-powered-ai-generated-video-forgery-detection-and-explanation",
+        "https://rt.http3.lol/index.php?q=aHR0cHM6Ly9hcnhpdi5vcmcvaHRtbC8yNjA5LjAxNTExdjE",
+        "https://arxiv.org/html/2607.29581",
+        "https://arxiv.org/html/2607.29581\",\"pattern\":\"github\"}",
+        "https://arxiv.org/html/2609.17953",
+        "https://arxiv.org/html/2609.17953\",\"pattern\":\"github\"}",
+        "https://arxiv.org/html/2605.31192v2",
+        "https://arxiv.org/html/2605.31192v2\",\"pattern\":\"github\"}",
+        "https://arxiv.org/html/2610.16452",
+        "https://arxiv.org/html/2610.16452\",\"pattern\":\"github\"}"
+      ]
+    },
+    {
+      "index": 15,
+      "request": {
+        "open": [
+          {
+            "ref_id": "https://github.com/neuralisa/cct-vlm",
+            "lineno": 160
+          },
+          {
+            "ref_id": "https://dac-method.github.io/"
+          }
+        ],
+        "system2_search_query": [
+          {
+            "q": "\"Explaining AI-Image Detection\" github"
+          },
+          {
+            "q": "\"EDCT-Bench\" github"
+          },
+          {
+            "q": "\"Discriminative Attribution from Counterfactuals\" \"evaluation\""
+          },
+          {
+            "q": "\"forgery\" \"faithfulness\" \"counterfactual\" -site:freederia.com -site:researchgate.net -site:pith.science -site:thelatestinai.com -site:alphaxiv.org"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://www.researchgate.net/publication/354950003_Discriminative_Attribution_from_Counterfactuals",
+        "https://arxiv.org/abs/2607.29581",
+        "https://www.catalyzex.com/paper/explaining-ai-image-detection-what-the",
+        "https://www.researchgate.net/profile/Jan-Funke",
+        "https://github.com/Zhangyr2022",
+        "https://yanran-zhang.github.io/",
+        "https://www.ebooksacces.com/?id=142981968",
+        "https://www.catalyzex.com/author/Jan%20Funke",
+        "https://scirate.com/search?q=au%3AFunke_J+in%3Acs",
+        "https://github.com/MaheepChaudhary/Causality-in-Trustworthy-Machine-Learning",
+        "https://www.researchgate.net/publication/335707891_The_Unreliability_of_Saliency_Methods",
+        "https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202602206211091151",
+        "https://explainableairesearch.github.io/papers.html",
+        "https://arxiv.org/abs/2609.17953",
+        "https://thelatestinai.com/papers/2607.29581",
+        "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602206211091151",
+        "https://dblp.org/pid/60/9514.html",
+        "https://www.catalyzex.com/author/Sihao%20Ding",
+        "https://chatpaper.com/chatpaper/paper/316163",
+        "https://xai4cv-workshop.github.io/xai4cv2026/assets/papers/PP08.pdf",
+        "https://www.catalyzex.com/paper/edct-bench-uncovering-faithfulness-gaps-in",
+        "https://scirate.com/search?q=au%3ABates_A+in%3Acs",
+        "https://thelatestinai.com/research?paper=arxiv%3A2607.29581",
+        "https://pith.science/paper/2607.29581",
+        "https://pith.science/paper/DH2YWXNB",
+        "https://www.csauthors.net/jan-funke/",
+        "https://arxivlens.com/paperview/details/explaining-ai-image-detection-what-the-heatmap-actually-shows-4456-2745fe82",
+        "https://www.catalyzex.com/s/Natural%20Questions",
+        "https://fugumt.com/fugumt/paper_check/2303.08866v1_enmode",
+        "https://arxiv.deeppaper.ai/papers/2011.04917v3/similar?locale=en",
+        "https://buttondown.com/theguardrail/archive/the-guardrail-weekly-digest-2026-08-03-2026-08-09/",
+        "https://eurekamag.com/research/110/931/110931007.php",
+        "https://lacuna.tiptreesystems.com/author/jun-feng-vwg6",
+        "https://scholarbro.com/a/fei-shen-2393925192",
+        "https://www.catalyzex.com/s/Ok%20Vqa",
+        "https://github.com/cqu-student/CC-VQA.",
+        "https://theguardrail.net/editors-choice/2026-W32/",
+        "https://github.com/neuralisa/cct-vlm",
+        "https://github.com/neuralisa/cct-vlm\",\"lineno\":160}",
+        "https://dac-method.github.io/",
+        "https://dac-method.github.io/\",\"lineno\":null}",
+        "https://github.com/DAC-Method/DAC.git"
+      ]
+    },
+    {
+      "index": 16,
+      "request": {
+        "open": [
+          {
+            "ref_id": "https://github.com/neuralisa/cct-vlm/blob/main/DATA.md"
+          },
+          {
+            "ref_id": "https://github.com/neuralisa/cct-vlm/blob/main/generator.py"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2109.13412"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2603.18577",
+            "lineno": 213
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://github.com/neuralisa/cct-vlm/blob/main/DATA.md",
+        "https://github.com/neuralisa/cct-vlm/blob/main/DATA.md\",\"lineno\":null}",
+        "https://github.com/neuralisa/cct-vlm/blob/main/generator.py",
+        "https://github.com/neuralisa/cct-vlm/blob/main/generator.py\",\"lineno\":null}",
+        "https://arxiv.org/html/2109.13412\",\"lineno\":null}",
+        "https://arxiv.org/html/2603.18577",
+        "https://arxiv.org/html/2603.18577\",\"lineno\":213}"
+      ]
+    },
+    {
+      "index": 17,
+      "request": {
+        "find": [
+          {
+            "ref_id": "https://arxiv.org/html/2603.18577",
+            "pattern": "single-blind"
+          },
+          {
+            "ref_id": "https://github.com/neuralisa/cct-vlm/blob/main/DATA.md",
+            "pattern": "image_path"
+          },
+          {
+            "ref_id": "https://github.com/neuralisa/cct-vlm/blob/main/generator.py",
+            "pattern": "object"
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/pdf/2109.13412"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2608.08009"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://arxiv.org/pdf/2109.13412\",\"lineno\":null}",
+        "https://arxiv.org/html/2608.08009",
+        "https://arxiv.org/html/2608.08009\",\"lineno\":null}",
+        "https://arxiv.org/html/2603.18577",
+        "https://arxiv.org/html/2603.18577\",\"pattern\":\"single-blind\"}",
+        "https://github.com/neuralisa/cct-vlm/blob/main/DATA.md",
+        "https://github.com/neuralisa/cct-vlm/blob/main/DATA.md\",\"pattern\":\"image_path\"}",
+        "https://github.com/neuralisa/cct-vlm/blob/main/generator.py",
+        "https://github.com/neuralisa/cct-vlm/blob/main/generator.py\",\"pattern\":\"object\"}"
+      ]
+    },
+    {
+      "index": 18,
+      "request": {
+        "system2_search_query": [
+          {
+            "q": "\"DDL\" \"Effective and Comprehensible\" fidelity deepfake"
+          },
+          {
+            "q": "\"Explainability-Guided Deepfake Detection for High-Fidelity Facial Edits\" paper pdf"
+          },
+          {
+            "q": "\"forgery\" \"self-cited\" evidence"
+          },
+          {
+            "q": "\"deepfake\" \"evidence\" \"counterfactual benchmark\""
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2609.06704",
+            "lineno": 248
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2610.09205",
+            "lineno": 167
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2511.14259",
+            "lineno": 850
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://jglobal.jst.go.jp/detail?JGLOBAL_ID=202502246263622268",
+        "https://dspace.iiti.ac.in/handle/123456789/18996",
+        "https://www.researchgate.net/publication/390076538_DDL_Effective_and_Comprehensible_Interpretation_Framework_for_Diverse_Deepfake_Detectors",
+        "https://soumyadutta-cse.github.io/publications/",
+        "https://www.researchgate.net/publication/411132292_Explainability-Guided_Deepfake_Detection_for_High-Fidelity_Facial_Edits",
+        "https://researchconnect.suny.edu/en/publications/explainability-guided-deepfake-detection-for-high-fidelity-facial/",
+        "https://jglobal.jst.go.jp/public/202502246263622268",
+        "https://dblp.org/db/journals/tifs/tifs20.html",
+        "https://cs.sjtu.edu.cn/~naruan/",
+        "https://link.springer.com/book/10.1007/978-3-032-31663-9?page=2",
+        "https://icpr2026.org/acceptedPapersTrack.html",
+        "https://dspace.iiti.ac.in/handle/123456789/3641?subject_page=2",
+        "https://dblp.dagstuhl.de/pid/289/7324.html",
+        "https://dblp.org/pid/93/3389-1.html",
+        "https://dblp.org/pid/93/3389-1",
+        "https://vidwan.inflibnet.ac.in/profile/139135",
+        "https://dblp.dagstuhl.de/pid/93/3389-1.html?view=by-type",
+        "https://dblp.dagstuhl.de/pid/93/3389-1.html",
+        "https://www.cs.sjtu.edu.cn/en/jiaoshiml/ruanna.html",
+        "https://www.csauthors.net/na-ruan/",
+        "https://cse.iitk.ac.in/pages/index.html",
+        "https://static.cse.iitk.ac.in/index.html",
+        "https://icpr2026.org/acceptedPapers.html",
+        "https://www.cse.iitk.ac.in/pages/",
+        "https://opus.bibliothek.uni-augsburg.de/opus4/files/129376/129376.pdf",
+        "https://lauraknightjadczyk.substack.com/p/the-phantom-temple-of-solomon-and",
+        "https://ulii.org/en/akn/ug/judgment/ughc/2025/1517/eng%402025-12-19",
+        "https://aclanthology.org/events/findings-2026/",
+        "https://www.gutenberg.org/files/13172/13172-h/13172-h.htm",
+        "https://arxiv.org/html/2609.06704",
+        "https://arxiv.org/html/2609.06704\",\"lineno\":248}",
+        "https://arxiv.org/html/2610.09205",
+        "https://arxiv.org/html/2610.09205\",\"lineno\":167}",
+        "https://arxiv.org/html/2511.14259",
+        "https://arxiv.org/html/2511.14259\",\"lineno\":850}"
+      ]
+    },
+    {
+      "index": 19,
+      "request": {
+        "open": [
+          {
+            "ref_id": "https://soumyadutta-cse.github.io/publications/"
+          },
+          {
+            "ref_id": "https://dspace.iiti.ac.in/handle/123456789/18996"
+          },
+          {
+            "ref_id": "https://ieeexplore.ieee.org/document/10934616"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2609.06704",
+            "lineno": 318
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://soumyadutta-cse.github.io/publications/",
+        "https://soumyadutta-cse.github.io/publications/\",\"lineno\":null}",
+        "https://dspace.iiti.ac.in/handle/123456789/18996\",\"lineno\":null}",
+        "https://ieeexplore.ieee.org/document/10934616",
+        "https://ieeexplore.ieee.org/document/10934616\",\"lineno\":null}",
+        "https://arxiv.org/html/2609.06704",
+        "https://arxiv.org/html/2609.06704\",\"lineno\":318}"
+      ]
+    },
+    {
+      "index": 20,
+      "request": {
+        "system2_search_query": [
+          {
+            "q": "\"2609.06704\" \"forgery\""
+          },
+          {
+            "q": "\"2609.17953\" \"deepfake\""
+          },
+          {
+            "q": "\"2610.16452\" benchmark counterfactual"
+          },
+          {
+            "q": "\"2607.29581\" \"explanation\" \"source\""
+          }
+        ],
+        "find": [
+          {
+            "ref_id": "https://soumyadutta-cse.github.io/publications/",
+            "pattern": "C21"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2511.14259",
+            "pattern": "13.4"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://arxivlens.com/paperview/details/explaining-ai-image-detection-what-the-heatmap-actually-shows-4456-2745fe82",
+        "https://pith.science/paper/2607.29581",
+        "https://pith.science/paper/DH2YWXNB",
+        "https://borowiecki.dev/abs/2610.16452",
+        "https://scirate.com/?date=2026-08-05&page=102&range=31",
+        "https://scirate.com/?date=2026-08-05&page=86&range=7",
+        "https://scirate.com/?date=2026-08-07&page=162&range=56",
+        "https://pith.science/paper/2610.16452",
+        "https://pith.science/paper/PIQOUOA6",
+        "https://slimjectvitamins.com/accel-vitamin-b-complex-capsules/?_=%2Fabs%2F2610.16452%23CD3DgejCa2b3OIySVEszRQc%3D",
+        "https://thelatestinai.com/papers/2610.16452",
+        "https://huggingface.co/datasets/taesiri/ArXivSignals/viewer/papers/corpus?p=445",
+        "https://rt.http3.lol/index.php?q=aHR0cHM6Ly9hcnhpdi5vcmcvc2VhcmNoL2NzP3NlYXJjaHR5cGU9YXV0aG9yJnF1ZXJ5PUFkaXRp",
+        "https://slimjectvitamins.com/accel-vitamin-b-complex-capsules/?_=%2Fsearch%2Fcs%23CD3DgejCa2b3OIySVEszRQc%3D&query=Zhou%2C+B&searchtype=author",
+        "https://owu.terracat.net/search/?__owu_origin_v1=aHR0cHM6Ly9hcnhpdi5vcmc&query=Lei%2C+J&searchtype=author",
+        "https://arxiv-troller.com/?q=paper%3A+2603.26052",
+        "https://arxiv-troller.com/?q=paper%3A+2609.26037",
+        "https://arxiv-troller.com/?q=paper%3A+2605.00592",
+        "https://arxiv-troller.com/?q=paper%3A+2605.28780",
+        "https://arxiv-troller.com/?q=paper%3A+2603.22716",
+        "https://arxiv-troller.com/?q=paper%3A+2603.05899",
+        "https://paperreading.club/category?cate=Object_Detection&page=35",
+        "https://arxiv.org/abs/2607.29581",
+        "https://scirate.com/?date=2026-08-03&page=8&range=7",
+        "https://scirate.com/?date=2026-08-05&page=117&range=56",
+        "https://soumyadutta-cse.github.io/publications/",
+        "https://soumyadutta-cse.github.io/publications/\",\"pattern\":\"C21\"}",
+        "https://arxiv.org/html/2511.14259",
+        "https://arxiv.org/html/2511.14259\",\"pattern\":\"13.4\"}",
+        "https://github.com/IntMeGroup/ManipShield."
+      ]
+    },
+    {
+      "index": 21,
+      "request": {
+        "click": [
+          {
+            "ref_id": "https://soumyadutta-cse.github.io/publications/",
+            "id": 20
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://github.com/IntMeGroup/ManipShield"
+          },
+          {
+            "ref_id": "https://github.com/GeorgeTsoumplekas/DF-CBM"
+          },
+          {
+            "ref_id": "https://github.com/neuralisa/cct-vlm/blob/main/DATA.md",
+            "lineno": 180
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://github.com/IntMeGroup/ManipShield",
+        "https://github.com/IntMeGroup/ManipShield\",\"lineno\":null}",
+        "https://github.com/GeorgeTsoumplekas/DF-CBM",
+        "https://github.com/GeorgeTsoumplekas/DF-CBM\",\"lineno\":null}",
+        "https://github.com/neuralisa/cct-vlm/blob/main/DATA.md",
+        "https://github.com/neuralisa/cct-vlm/blob/main/DATA.md\",\"lineno\":180}"
+      ]
+    },
+    {
+      "index": 22,
+      "request": {
+        "system2_search_query": [
+          {
+            "q": "图像 鉴伪 解释 忠实性 证据 移除 数据集"
+          },
+          {
+            "q": "深度伪造 可解释 反事实 评测 数据集"
+          },
+          {
+            "q": "explainable image forensics benchmark controlled evidence intervention natural language"
+          },
+          {
+            "q": "deepfake detector explanation fidelity evidence erasure paired benchmark"
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2509.20912",
+            "lineno": 100
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2602.19715",
+            "lineno": 200
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://arxiv.org/abs/2606.26384",
+        "https://github.com/oceanflowlab/EDD",
+        "https://arxiv.org/abs/2608.20913",
+        "https://ictp.caict.ac.cn/CN/abstract/abstract1486.shtml",
+        "https://www.alphaxiv.org/zh/abs/2510.16442v1",
+        "https://www.nature.com/articles/s41598-026-72389-y",
+        "https://deepfakecheck.io/zh-CN/blog/deepfake-benchmark-results-interpretation/",
+        "https://arxiv.org/abs/2602.01854",
+        "https://www.alphaxiv.org/zh/abs/2411.19537",
+        "https://arxiv.org/abs/2602.19715",
+        "https://www.alphaxiv.org/zh/abs/2508.07596",
+        "https://arxiv.deeppaper.ai/papers/2610.07939v1",
+        "https://www.sciencedirect.com/science/article/abs/pii/S1077314226002389",
+        "https://www.arxivdaily.com/papers/2608.04840",
+        "https://arxiv.science/abs/2511.23158",
+        "https://eschatialabs.com/research/ubmk-2026/",
+        "https://huggingface.co/papers/2511.23158",
+        "https://www.alphaxiv.org/zh/abs/2512.10652v2",
+        "https://github.com/nightli110/iclr2026-all-paper-analysis/blob/main/paper_mind/Content_Moderation/A%20Rich%20Knowledge%20Space%20for%20Scalable%20Deepfake%20Detec_report.md",
+        "https://www.ebiotrade.com/newsf/2026-3/20260305001026949.htm",
+        "https://arxiv.org/html/2509.20912",
+        "https://arxiv.org/html/2509.20912\",\"lineno\":100}",
+        "https://arxiv.org/html/2602.19715",
+        "https://arxiv.org/html/2602.19715\",\"lineno\":200}"
+      ]
+    },
+    {
+      "index": 23,
+      "request": {
+        "open": [
+          {
+            "ref_id": "https://arxiv.org/html/2512.10652v2"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2511.23158"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2608.20913"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://arxiv.org/html/2512.10652v2",
+        "https://arxiv.org/html/2512.10652v2\",\"lineno\":null}",
+        "https://arxiv.org/html/2511.23158",
+        "https://arxiv.org/html/2511.23158\",\"lineno\":null}",
+        "https://arxiv.org/html/2608.20913",
+        "https://arxiv.org/html/2608.20913\",\"lineno\":null}"
+      ]
+    },
+    {
+      "index": 24,
+      "request": {
+        "find": [
+          {
+            "ref_id": "https://arxiv.org/html/2512.10652v2",
+            "pattern": "FFTG"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2512.10652v2",
+            "pattern": "[97]"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2511.23158",
+            "pattern": "counterfactual"
+          },
+          {
+            "ref_id": "https://arxiv.org/html/2608.20913",
+            "pattern": "rejected"
+          }
+        ],
+        "response_length": "long"
+      },
+      "return_type": "returned",
+      "source_urls": [
+        "https://arxiv.org/html/2512.10652v2",
+        "https://arxiv.org/html/2512.10652v2\",\"pattern\":\"FFTG\"}",
+        "https://arxiv.org/html/2512.10652v2\",\"pattern\":\"[97]\"}",
+        "https://arxiv.org/html/2511.23158",
+        "https://arxiv.org/html/2511.23158\",\"pattern\":\"counterfactual\"}",
+        "https://arxiv.org/html/2608.20913",
+        "https://arxiv.org/html/2608.20913\",\"pattern\":\"rejected\"}",
+        "https://github.com/oceanflowlab/EDD.git†github.com"
+      ]
+    }
+  ],
+  "limitations": [
+    "Returned pages may individually contain access errors; return_type does not mean every requested source succeeded.",
+    "Search results are not independent papers. No all-result full-text reading claimed.",
+    "Queries using title IDs for forward discovery are not a complete cited-by census."
+  ]
+}
