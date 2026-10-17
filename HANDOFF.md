@@ -1,4 +1,17 @@
-﻿## 2026-10-16续：T669交叉补查、强先例补齐与身份纠正
+## 2026-10-17：选题查新与人因研究路线
+
+- 仓库：brodyZhao/my-research-project；独立工作树分支：`codex/explanation-novelty-human-study`；报告提交：`d4c19fd`。本交接另行提交，最终HEAD以git log为准。
+- 原工作区存在其他任务与未提交修改，未覆盖。仓库没有main/master，故以既有`codex/forensic-explanation-literature`建立独立工作树和新分支。
+- 交付：`outputs/选题查新与人因研究_2026-10-17/`下报告、63项关键文献CSV及检索边界说明。29项复用T666，其余为本次方法/人因邻居；不是63项全部新发现，也不是全部重新通读。
+- 关键判断：预建图像配对、合成XAI真值、按自述理由干预及鉴伪解释benchmark分别已有强先例。EDCT/CCT-VLM、FunnyBirds、物理一致性反事实benchmark、ManipShield、Not Every Cue、EFR等均纳入。建议先验证操作混杂控制，再做benchmark；人因方向优先核证解释的无辅助迁移及误导代价。
+- 检查：CSV解析63行且字段非空；报告52个来源链接结构、关键论文与阅读边界检查；`git diff --cached --check`通过。纯文档，无模型代码测试，不宣称实验验证。
+- 阅读限制：既有核读复用与本轮阅读分别标注；DDL、Side-VLM、Wiley比较以及ACM CI2026海报等保留摘要限制；原Scholar T656/T636等断点仍OPEN。本次不修改候选主账，防止并行重复计数。
+- Push受阻：自动审批明确拒绝将可能包含未公开研究构想的完整报告推送至外部GitHub，理由是现有证据不足以确认目的地归属及具体载荷外发授权。仅本地保存提交，未绕过拒绝。需用户明确确认是否授权将本次三个交付文件及交接推送到`https://github.com/brodyZhao/my-research-project.git`的此分支；未获得确认前不重试push。
+- 建议ChatGPT Web下一步：先看报告第三节直接近邻和第五/六节人因设计；核实导师论文公开范围后再比较，不猜测未公开身份。优先验证一小组线索开关和sham控制，不提前宣称无混杂或内部因果真值。
+
+---
+
+## 2026-10-16续：T669交叉补查、强先例补齐与身份纠正
 
 - 仓库：`brodyZhao/my-research-project`；分支：`codex/forensic-explanation-literature`；数据提交：`1266468`（`Refine focused forensic explanation prior art`），已推送至已确认的`origin`。本HANDOFF按规则另行提交。
 - 两批、八个窄式网页检索变体；16个学术记录逐项筛选并写入74。专题T666对照表增至29篇可核验作品。复用主账既有身份，将HAVE/PAVE、AEGIS和图像取证解释综述加入专题对照；未新增主目录论文身份。
