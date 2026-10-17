@@ -6,7 +6,7 @@
 - 关键判断：预建图像配对、合成XAI真值、按自述理由干预及鉴伪解释benchmark分别已有强先例。EDCT/CCT-VLM、FunnyBirds、物理一致性反事实benchmark、ManipShield、Not Every Cue、EFR等均纳入。建议先验证操作混杂控制，再做benchmark；人因方向优先核证解释的无辅助迁移及误导代价。
 - 检查：CSV解析63行且字段非空；报告52个来源链接结构、关键论文与阅读边界检查；`git diff --cached --check`通过。纯文档，无模型代码测试，不宣称实验验证。
 - 阅读限制：既有核读复用与本轮阅读分别标注；DDL、Side-VLM、Wiley比较以及ACM CI2026海报等保留摘要限制；原Scholar T656/T636等断点仍OPEN。本次不修改候选主账，防止并行重复计数。
-- Push受阻：自动审批明确拒绝将可能包含未公开研究构想的完整报告推送至外部GitHub，理由是现有证据不足以确认目的地归属及具体载荷外发授权。仅本地保存提交，未绕过拒绝。需用户明确确认是否授权将本次三个交付文件及交接推送到`https://github.com/brodyZhao/my-research-project.git`的此分支；未获得确认前不重试push。
+- Push状态：最初自动审批因未公开构想外发授权不足而拒绝。随后用户明确回复“授权推送到该仓库分支”，授权已具备；两次真实push均因`LibreSSL SSL_connect: SSL_ERROR_SYSCALL`连接github.com:443失败（exit 128），因此尚未推送成功。网络恢复后可直接按现有授权重试指定分支，无需再询问外发许可。
 - 建议ChatGPT Web下一步：先看报告第三节直接近邻和第五/六节人因设计；核实导师论文公开范围后再比较，不猜测未公开身份。优先验证一小组线索开关和sham控制，不提前宣称无混杂或内部因果真值。
 
 ---
