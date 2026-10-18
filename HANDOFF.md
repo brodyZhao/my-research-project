@@ -1,3 +1,13 @@
+## 2026-10-18续：AttributionLab动机解释
+
+- 仓库：brodyZhao/my-research-project；分支：`codex/explanation-novelty-human-study`；阶段前HEAD：`db7599a`，最终HEAD见git log。
+- 核读AttributionLab §2–3、§5与局限；输出`outputs/AttributionLab_2310.06514/精读笔记.md`及PDF原图3裁图。重点区分标签机制与已训练模型依据；未进行模型实验，不宣称已经完整带读。
+- 技能fetch脚本缺失，检索未找到；使用官方HTML及公开PDF替代，源码/官方仓库未确认，记录材料限制。
+- 验证：PyMuPDF实际打开PDF并裁图，已目视检查；git diff --check；纯文档无代码测试。PDF临时保留不提交。
+- 下一步：若用户继续，详细讲人工颜色检测/像素计数网络与已知依赖真值；勿将该合成归因检查称为鉴伪文字解释benchmark或真实模型因果真值。
+
+---
+
 ## 2026-10-18续：逐篇核对用户对直接近邻的理解
 
 - 仓库：brodyZhao/my-research-project；分支：`codex/explanation-novelty-human-study`；阶段前HEAD：`bb8cd7a`，本交接提交后以git log为准。
