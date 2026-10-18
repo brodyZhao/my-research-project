@@ -1,3 +1,14 @@
+## 2026-10-18续：逐篇核对用户对直接近邻的理解
+
+- 仓库：brodyZhao/my-research-project；分支：`codex/explanation-novelty-human-study`；阶段前HEAD：`bb8cd7a`，本交接提交后以git log为准。
+- 本轮重新打开物理一致性论文、EFR、ManipShield、Hopf v2、EDCT-Bench、CCT-VLM原文相关章节，回答理解校正；没有新增检索篇数或声称全篇重读。
+- 核对要点：物理一致性论文§2明确区别authenticity detection，§6/8把解释faithfulness放在范围外；ManipShield §4.2及附录§12.1将真实—编辑配对用于对比训练，§13.4另用于专家解释评价，故不能说仅供专家使用；EFR §4.4有NLI/重复率/Distinct/ROUGE及定性分析，§4.3有奖励消融，但没有直接测试真假判断对自述证据的因果依赖；其缺少显式反馈指结论锚点与证据空间一致性，不是完全没有监督。
+- 对Hopf的评价应限定为遮挡与匹配区域比较提供初步区域依赖证据，不能排除遮挡伪迹或区域内其他特征，不能直接验证具体文字语义证据；不可误写成作者毫无控制。
+- 测试：纯解释/交接更新，无业务源码；git diff --check通过。无新Obsidian笔记，原深入查新报告路径不变。
+- 遗留及下一步：保持任务相似与方法相似的区分，勿将非鉴伪通用方法称为直接任务雷同；也勿将其方法贡献排除。若继续更新正式报告，应采用上述更窄表述，不称EFR完全跳过验证或ManipBench不评解释可靠性。
+
+---
+
 ## 2026-10-18：自述证据可靠性benchmark深入查新
 
 - 仓库：brodyZhao/my-research-project；分支：`codex/explanation-novelty-human-study`；研究交付提交：`42d364f`，已推送origin；本交接另行提交，最终HEAD见git log。
